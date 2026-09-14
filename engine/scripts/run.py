@@ -15,6 +15,8 @@
   python run.py verify                    # 回归验证闭环：backfill→corpus→trend(断言)→calibrate→ablate
   python run.py learn [联赛...]           # 本地赛果联赛增量采集+拟合+版本发布（日职/沙特/瑞超）
   python run.py snapshot [--insight 周日004,周一002]  # 情报时序手动补拍（odds全量快照+可选情报）
+  python run.py f2-snapshot [联赛] [轮次]       # 保存 f2 赛前预测，供赛后融合校准
+  python run.py f2-calibrate                   # f2+f3 时间切分校准（样本不足自动保持权重0）
   python run.py all                       # update + fit --auto + learn 一条龙（预测日跑这个）
 
 联赛代码（football-data.co.uk）：SP1 西甲 F1 法甲 F2 法乙 E0 英超 D1 德甲 I1 意甲 ...
@@ -113,6 +115,7 @@ def main() -> None:
         sh("attribute.py")          # 规则归因（设计 §6 判别树 → attribution.json）
         sh("trend_report.py")
         sh("calibrate.py")
+        sh("f2_fusion.py", "calibrate")
         sh("ablate.py")
         sh("temperature.py", "--check")   # 温度状态断言（T/CI/fittedAt 自检，缺文件警告不阻断）
         sh("recalibrate.py")       # 轨道C校准曲线(幂等: 增量<10跳过)
@@ -150,6 +153,10 @@ def main() -> None:
                     sh("sporttery_fetch.py", "insight", str(mid))
                 else:
                     log("run", f"{code} 不在售/无 matchId，跳过")
+    elif cmd == "f2-snapshot":
+        sh("f2_fusion.py", "snapshot", *rest)
+    elif cmd == "f2-calibrate":
+        sh("f2_fusion.py", "calibrate")
     elif cmd == "all":
         sh("odds_fetch.py", "--season", "2526", *PIN_CODES)
         sh("odds_fetch.py", "--season", CURRENT_SEASON, *PIN_CODES)

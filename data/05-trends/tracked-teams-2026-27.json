@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-14",
+  "competitionId": "premier-league",
+  "seasonId": "premier-league-2026",
+  "strategy": "track_every_match_bet_selectively",
+  "objective": "Build a comparable f2+f3 sample across four distinct Premier League team profiles without forcing a wager on every match.",
+  "teams": [
+    {
+      "teamId": "359",
+      "canonicalId": "arsenal",
+      "name": "Arsenal",
+      "abbreviation": "ARS",
+      "profile": "elite_favourite_defensive_baseline",
+      "primaryMarkets": ["HAD", "HHAD", "TTG"],
+      "selectionReason": "Use a stable title-level side to measure favourite pricing, handicap coverage and defensive-score calibration."
+    },
+    {
+      "teamId": "331",
+      "canonicalId": "brighton",
+      "name": "Brighton & Hove Albion",
+      "abbreviation": "BHA",
+      "profile": "high_event_attack_and_totals",
+      "primaryMarkets": ["TTG", "CRS", "HAD"],
+      "selectionReason": "Use an attack-led, higher-event profile to test goal-total and score-distribution forecasts."
+    },
+    {
+      "teamId": "349",
+      "canonicalId": "bournemouth",
+      "name": "AFC Bournemouth",
+      "abbreviation": "BOU",
+      "profile": "draw_and_european_congestion",
+      "primaryMarkets": ["HAD", "HHAD", "TTG"],
+      "selectionReason": "Use a strong recent draw profile and European schedule to test draw probability and fatigue adjustments."
+    },
+    {
+      "teamId": "360",
+      "canonicalId": "man-united",
+      "name": "Manchester United",
+      "abbreviation": "MAN",
+      "profile": "high_attention_transition_volatility",
+      "primaryMarkets": ["HAD", "HHAD", "TTG"],
+      "selectionReason": "Use a heavily followed Champions League side in a new-cycle season to measure price/model disagreement and lineup sensitivity."
+    }
+  ],
+  "operatingRules": {
+    "trackAllMatches": true,
+    "betEveryMatch": false,
+    "requirePositiveExpectedValue": true,
+    "allowedEvidenceGrades": ["A", "B"],
+    "requirePrematchReview": true,
+    "requireLineupReviewWhenAvailable": true,
+    "skipWhenF2F3ConflictIsUnresolved": true,
+    "flatStakeUnits": 1,
+    "maxBetsPerMatch": 1,
+    "noAccumulatorForCalibrationSample": true
+  },
+  "evaluation": {
+    "firstReviewAfterTeamMatches": 10,
+    "formalFusionReviewAfterMatchedBets": 100,
+    "primaryMetrics": ["ROI", "closing_line_value", "RPS", "Brier_score"],
+    "secondaryMetrics": ["hit_rate", "max_drawdown"],
+    "f2WeightRule": "Keep f2 weight at zero until at least 100 chronologically matched predictions show at least 1% holdout RPS improvement."
+  }
+}
