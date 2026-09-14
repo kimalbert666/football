@@ -8,6 +8,9 @@ on:
     - cron: "23 23 * * *"
   workflow_dispatch:
 
+env:
+  TZ: Asia/Hong_Kong
+
 permissions:
   contents: write
   issues: write
@@ -64,12 +67,12 @@ jobs:
                   subprocess.run([sys.executable, 'engine/scripts/sporttery_fetch.py', 'insight', str(row['matchId'])], check=False)
           PY
 
-      - name: Generate deterministic f3 card
+      - name: Refresh and fit Premier League model
         if: steps.check.outputs.notify == 'true'
-        shell: bash
         run: |
-          python -u engine/scripts/boldplay.py
-          test -f "data/03-predictions/$(date -u +%F)-boldplay.json"
+          python -u engine/scripts/odds_fetch.py --season 2526 E0
+          python -u engine/scripts/odds_fetch.py --season 2627 E0
+          python -u engine/scripts/dc_fit.py england-premier 2526,2627 --auto
 
       - name: Build tracked-team report
         if: steps.check.outputs.notify == 'true'
@@ -96,7 +99,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A data/04-summaries/four-team-latest.md data/05-trends engine/cache/four_team_monitor_state.json engine/cache/f2_fusion.json engine/cache/sporttery_matches.json
+          git add -A data/02-results data/04-summaries/four-team-latest.md data/05-trends engine/cache/four_team_monitor_state.json engine/cache/f2_fusion.json engine/cache/sporttery_matches.json engine/cache/england-premier_dc.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "chore(monitor): update four-team review"
           git pull --rebase origin main

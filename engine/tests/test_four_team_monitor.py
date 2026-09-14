@@ -56,9 +56,12 @@ def test_report_combines_same_day_f2_and_f3(tmp_path, monkeypatch):
     context = tmp_path / "context.json"
     state = tmp_path / "state.json"
     report = tmp_path / "report.md"
-    predictions = tmp_path / "predictions"
+    results = tmp_path / "results"
     f2_dir = tmp_path / "f2"
-    predictions.mkdir()
+    cache = tmp_path / "engine" / "cache"
+    cache.mkdir(parents=True)
+    (cache / "sporttery_insight_9.json").write_text("{}", encoding="utf-8")
+    results.mkdir()
     f2_dir.mkdir()
     context.write_text("""{
       "matches": [{
@@ -66,12 +69,6 @@ def test_report_combines_same_day_f2_and_f3(tmp_path, monkeypatch):
         "home": "阿森纳", "away": "曼联", "matchDate": "2026-09-20", "matchTime": "20:00:00",
         "had": {"h": "1.80", "d": "3.60", "a": "4.20"}
       }]
-    }""", encoding="utf-8")
-    (predictions / "2026-09-20-boldplay.json").write_text("""{
-      "tiers": {"base": {"legs": [{
-        "matchNumStr": "周日001", "match": "阿森纳-曼联", "play": "had",
-        "pick": "主胜", "odds": 1.80, "p": 0.60
-      }]}}
     }""", encoding="utf-8")
     (f2_dir / "2026-09-20T100000Z-premier_league.json").write_text("""{
       "capturedAt": "2026-09-20T10:00:00+00:00",
@@ -84,11 +81,20 @@ def test_report_combines_same_day_f2_and_f3(tmp_path, monkeypatch):
     monkeypatch.setattr(monitor, "CONTEXT", context)
     monkeypatch.setattr(monitor, "STATE", state)
     monkeypatch.setattr(monitor, "REPORT", report)
-    monkeypatch.setattr(monitor, "PREDICTIONS", predictions)
+    monkeypatch.setattr(monitor, "RESULTS_DIR", results)
     monkeypatch.setattr(monitor, "F2_DIR", f2_dir)
+    monkeypatch.setattr(monitor, "F2_CONFIG", tmp_path / "f2-config.json")
+    monkeypatch.setattr(monitor, "ROOT", tmp_path)
     monkeypatch.setattr(monitor, "_alias_index", lambda: {
         "阿森纳": "arsenal", "arsenal": "arsenal",
         "曼联": "man-united", "manchesterunited": "man-united",
+    })
+    monkeypatch.setattr(monitor, "_run_dc", lambda *_: {
+        "p_dc": [0.62, 0.23, 0.15],
+        "p_fused": [0.60, 0.24, 0.16],
+        "lambdaHome": 1.8,
+        "lambdaAway": 0.9,
+        "top_scores": [{"score": "2-1", "prob": 0.12}],
     })
 
     monitor.report(datetime(2026, 9, 20, 19, 15, tzinfo=TZ))
@@ -99,3 +105,6 @@ def test_report_combines_same_day_f2_and_f3(tmp_path, monkeypatch):
     assert "最低赔率：1.67" in text
     assert "可选" in text
     assert "final" in state.read_text(encoding="utf-8")
+    saved = (results / "2026-09-20-four-team.json").read_text(encoding="utf-8")
+    assert '"f2Score": "2:1"' in saved
+    assert '"inPlan": "four-team-cloud-candidate"' in saved

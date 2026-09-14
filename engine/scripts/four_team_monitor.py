@@ -15,9 +15,10 @@ from __future__ import annotations
 
 import argparse
 import json
-import math
 import os
 import re
+import subprocess
+import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -29,8 +30,10 @@ SPORTTERY = ROOT / "engine" / "cache" / "sporttery_matches.json"
 STATE = ROOT / "engine" / "cache" / "four_team_monitor_state.json"
 CONTEXT = ROOT / ".github" / "run-logs" / "four-team-context.json"
 REPORT = ROOT / "data" / "04-summaries" / "four-team-latest.md"
+RESULTS_DIR = ROOT / "data" / "02-results"
 F2_DIR = ROOT / "data" / "05-trends" / "f2"
-PREDICTIONS = ROOT / "data" / "03-predictions"
+F2_CONFIG = ROOT / "engine" / "cache" / "f2_fusion.json"
+DC_PREDICT = ROOT / "engine" / "scripts" / "dc_predict.py"
 
 EARLY_MINUTES = 180
 FINAL_MINUTES = 75
@@ -127,22 +130,6 @@ def check(now: datetime) -> list[dict]:
     return due
 
 
-def _walk_legs(value):
-    if isinstance(value, dict):
-        if value.get("matchNumStr") and value.get("pick"):
-            yield value
-        for child in value.values():
-            yield from _walk_legs(child)
-    elif isinstance(value, list):
-        for child in value:
-            yield from _walk_legs(child)
-
-
-def _latest_card() -> dict:
-    cards = sorted(PREDICTIONS.glob("*-boldplay.json"), reverse=True)
-    return _read(cards[0], {}) if cards else {}
-
-
 def _score(value: str | None) -> tuple[int, int] | None:
     match = re.search(r"(\d+)\s*[:\-]\s*(\d+)", str(value or ""))
     return (int(match.group(1)), int(match.group(2))) if match else None
@@ -197,22 +184,153 @@ def _format_odds(row: dict) -> str:
     return f"主 {had.get('h', '—')} / 平 {had.get('d', '—')} / 客 {had.get('a', '—')}"
 
 
-def _best_leg(legs: list[dict]) -> dict | None:
-    if not legs:
+def _market(row: dict) -> tuple[list[float], list[float]] | None:
+    had = row.get("had") or {}
+    try:
+        odds = [float(had[key]) for key in ("h", "d", "a")]
+    except (KeyError, TypeError, ValueError):
         return None
-    def value(leg: dict) -> float:
-        if leg.get("ev") is not None:
-            return float(leg["ev"])
-        p, odds = leg.get("p"), leg.get("odds")
-        return float(p) * float(odds) - 1 if p and odds else -math.inf
-    return max(legs, key=value)
+    raw = [1 / value for value in odds]
+    total = sum(raw)
+    return odds, [value / total for value in raw]
+
+
+def _fd_name(canonical: str) -> str | None:
+    aliases = load_aliases().get(canonical) or {}
+    return aliases.get("fd") or aliases.get("espn")
+
+
+def _run_dc(row: dict, home_id: str, away_id: str) -> dict | None:
+    if str(row.get("league") or "") != "英超":
+        return None
+    market = _market(row)
+    home, away = _fd_name(home_id), _fd_name(away_id)
+    if not market or not home or not away:
+        return None
+    odds, _ = market
+    command = [
+        sys.executable, str(DC_PREDICT), "england-premier", home, away,
+        "--market", ",".join(str(value) for value in odds),
+    ]
+    completed = subprocess.run(command, cwd=str(DC_PREDICT.parent), capture_output=True, text=True, encoding="utf-8")
+    if completed.returncode:
+        log("four-team", f"DC failed for {home} vs {away}: {completed.stderr.strip()}")
+        return None
+    start = completed.stdout.find("{")
+    if start < 0:
+        return None
+    try:
+        return json.loads(completed.stdout[start:])
+    except json.JSONDecodeError:
+        return None
+
+
+def _combine_f2(probs: list[float], f2_score: str | None, weight: float) -> list[float]:
+    score = _score(f2_score)
+    if not score or weight <= 0:
+        return probs
+    index = 0 if score[0] > score[1] else (1 if score[0] == score[1] else 2)
+    logits = [__import__("math").log(max(float(p), 1e-12)) for p in probs]
+    logits[index] += weight
+    peak = max(logits)
+    values = [__import__("math").exp(value - peak) for value in logits]
+    total = sum(values)
+    return [value / total for value in values]
+
+
+def _build_record(row: dict, f2_item: tuple[str, str] | None, now: datetime) -> dict:
+    aliases = _alias_index()
+    home_id = aliases.get(_norm(row.get("home")), _norm(row.get("home")))
+    away_id = aliases.get(_norm(row.get("away")), _norm(row.get("away")))
+    market = _market(row)
+    dc = _run_dc(row, home_id, away_id)
+    odds, market_probs = market if market else ([None, None, None], [1 / 3, 1 / 3, 1 / 3])
+    base = [float(v) for v in (dc.get("p_fused") if dc and dc.get("p_fused") else market_probs)]
+    f2_score, f2_at = f2_item if f2_item else (None, None)
+    f2_config = _read(F2_CONFIG, {})
+    weight = float(f2_config.get("weight") or 0.0)
+    final_probs = _combine_f2(base, f2_score, weight)
+    pick_index = max(range(3), key=final_probs.__getitem__)
+    pick_names = ["主胜", "平", "客胜"]
+    pick = pick_names[pick_index]
+    selected_odds = odds[pick_index]
+    ev = final_probs[pick_index] * selected_odds - 1 if selected_odds else None
+    f2_direction = _outcome(_score(f2_score))
+    conflict = bool(f2_direction and f2_direction != pick)
+    insight = ROOT / "engine" / "cache" / f"sporttery_insight_{row.get('matchId')}.json"
+    grade = "B" if dc and market and insight.exists() else "C"
+    eligible = grade == "B" and ev is not None and ev >= 0.03 and not conflict
+    reason = (
+        "positive EV and no f2/f3 direction conflict" if eligible else
+        "f2/f3 direction conflict" if conflict else
+        "evidence below B" if grade != "B" else
+        "EV below 3% safety margin"
+    )
+    return {
+        "code": row.get("code"),
+        "matchId": row.get("matchId"),
+        "league": row.get("league"),
+        "match": f"{row.get('home')} vs {row.get('away')}",
+        "kickoff": f"{row.get('matchDate')} {row.get('matchTime')}",
+        "pick": f"HAD {pick}",
+        "odds": selected_odds,
+        "star": 3 if eligible else 1,
+        "grade": grade,
+        "dc": dc.get("p_dc") if dc else None,
+        "market": [round(v, 6) for v in market_probs] if market else None,
+        "fusedPre": [round(v, 6) for v in base],
+        "fused": [round(v, 6) for v in final_probs],
+        "final": round(final_probs[pick_index], 6),
+        "ev": round(ev, 6) if ev is not None else None,
+        "lambdaHome": dc.get("lambdaHome") if dc else None,
+        "lambdaAway": dc.get("lambdaAway") if dc else None,
+        "topScores": dc.get("top_scores") if dc else None,
+        "f2Score": f2_score,
+        "f2CapturedAt": f2_at,
+        "f2Weight": weight,
+        "f2Conflict": conflict,
+        "stage": row.get("stage"),
+        "predictionAt": now.isoformat(),
+        "inPlan": "four-team-cloud-candidate" if eligible else "excluded",
+        "note": f"four-team deterministic f3 rules: {reason}; no automatic wagering",
+        "result": None,
+        "directionHit": None,
+        "scoreHit": None,
+        "preSnapshots": {"matchId": row.get("matchId")},
+    }
+
+
+def _upsert_record(record: dict, match_date: str, now: datetime) -> Path:
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    path = RESULTS_DIR / f"{match_date}-four-team.json"
+    data = _read(path, {
+        "date": match_date,
+        "version": "four-team-cloud-v1",
+        "generatedAt": now.isoformat(),
+        "mode": "四队自动跟踪",
+        "matches": [],
+    })
+    matches = data.setdefault("matches", [])
+    key = (record.get("code"), str(record.get("pick") or "").split(" ", 1)[0])
+    for index, old in enumerate(matches):
+        old_key = (old.get("code"), str(old.get("pick") or "").split(" ", 1)[0])
+        if old_key == key:
+            # Preserve any settlement fields if a delayed rerun touches an old match.
+            for field in ("result", "directionHit", "scoreHit", "half", "clv", "pinClose", "pinSource"):
+                if old.get(field) is not None:
+                    record[field] = old[field]
+            matches[index] = record
+            break
+    else:
+        matches.append(record)
+    data["generatedAt"] = now.isoformat()
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return path
 
 
 def report(now: datetime) -> Path:
     context = _read(CONTEXT, {})
     matches = context.get("matches") or []
-    card = _latest_card()
-    all_legs = list(_walk_legs(card.get("tiers") or {}))
     f2 = _latest_f2_predictions()
     aliases = _alias_index()
     state = _read(STATE, {})
@@ -224,28 +342,20 @@ def report(now: datetime) -> Path:
     ]
     for row in matches:
         code = str(row.get("code") or "")
-        relevant = [leg for leg in all_legs if str(leg.get("matchNumStr") or "") == code]
-        leg = _best_leg(relevant)
         home_id = aliases.get(_norm(row.get("home")), _norm(row.get("home")))
         away_id = aliases.get(_norm(row.get("away")), _norm(row.get("away")))
         f2_item = f2.get((str(row.get("matchDate") or ""), home_id, away_id))
+        record = _build_record(row, f2_item, now)
+        _upsert_record(record, str(row.get("matchDate")), now)
         f2_score, f2_at = f2_item if f2_item else (None, None)
-        conflict = bool(
-            leg and str(leg.get("play", "")).casefold() == "had" and f2_score
-            and _outcome(_score(f2_score)) != str(leg.get("pick"))
-        )
-        if leg and not conflict:
-            probability = leg.get("p") if leg.get("p") is not None else leg.get("q")
-            threshold = round(1 / float(probability), 2) if probability else None
+        probability = record.get("final")
+        threshold = round(1 / float(probability), 2) if probability else None
+        if record.get("inPlan") == "four-team-cloud-candidate":
             verdict = "可选（B级证据，仍以票面赔率不低于门槛为条件）"
-        elif conflict:
-            probability = None
-            threshold = None
+        elif record.get("f2Conflict"):
             verdict = "跳过：f2 与 f3 方向冲突"
         else:
-            probability = None
-            threshold = None
-            verdict = "跳过：f3 本轮没有选中该场"
+            verdict = "跳过：证据或EV未达到门槛"
         kickoff = _kickoff(row)
         lines.extend([
             f"## {row.get('home')} vs {row.get('away')}",
@@ -253,7 +363,7 @@ def report(now: datetime) -> Path:
             f"- 场次：{code}；开赛：{kickoff.strftime('%Y-%m-%d %H:%M') if kickoff else '未知'}（香港时间）",
             f"- 当前胜平负：{_format_odds(row)}",
             f"- f2：{f2_score or '本次未返回预测'}" + (f"（快照 {f2_at}）" if f2_score and f2_at else ""),
-            f"- f3：{leg.get('play', '').upper()} {leg.get('pick')} @ {leg.get('odds')}" if leg else "- f3：无合格选项",
+            f"- f3：{record.get('pick')} @ {record.get('odds')}；证据 {record.get('grade')}；EV {record.get('ev'):+.1%}" if record.get("ev") is not None else f"- f3：{record.get('pick')}；证据 {record.get('grade')}；无可用赔率",
             f"- 模型概率：{float(probability):.1%}；最低赔率：{threshold}" if probability else "- 模型概率／最低赔率：无合格值",
             f"- 结论：**{verdict}**",
             "",
