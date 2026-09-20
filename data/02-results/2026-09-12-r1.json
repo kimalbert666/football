@@ -107,12 +107,17 @@
    "half": "1:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041415,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": "2026-09-12T11:28:39+08:00"
-   }
+   },
+   "pinClose": [
+    0.4325,
+    0.2447,
+    0.3228
+   ]
   },
   {
    "idx": 2,
@@ -359,12 +364,19 @@
    "half": "2:0",
    "directionHit": true,
    "scoreHit": true,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041443,
     "lastOddsAt": "2026-09-13T20:57:19+08:00",
     "lastIntelAt": "2026-09-13T17:38:07+08:00"
-   }
+   },
+   "pinClose": [
+    0.6751,
+    0.1836,
+    0.1413
+   ],
+   "clv": -0.1426,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 7,
@@ -470,12 +482,19 @@
    "half": "2:1",
    "directionHit": false,
    "scoreHit": false,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041470,
     "lastOddsAt": "2026-09-13T20:47:51+08:00",
     "lastIntelAt": "2026-09-12T11:28:45+08:00"
-   }
+   },
+   "pinClose": [
+    0.1953,
+    0.232,
+    0.5727
+   ],
+   "clv": -0.1352,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 9,
@@ -530,12 +549,17 @@
    "half": "0:0",
    "directionHit": null,
    "scoreHit": false,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041446,
     "lastOddsAt": "2026-09-13T20:47:51+08:00",
     "lastIntelAt": "2026-09-12T11:28:46+08:00"
-   }
+   },
+   "pinClose": [
+    0.3128,
+    0.2607,
+    0.4265
+   ]
   },
   {
    "idx": 10,
@@ -581,12 +605,17 @@
    "half": "0:1",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041447,
     "lastOddsAt": "2026-09-13T20:47:51+08:00",
     "lastIntelAt": "2026-09-12T11:28:47+08:00"
-   }
+   },
+   "pinClose": [
+    0.0768,
+    0.1152,
+    0.8081
+   ]
   },
   {
    "idx": 11,

@@ -504,12 +504,17 @@
    "half": "1:1",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041388,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T17:55:37+08:00"
-   }
+   },
+   "pinClose": [
+    0.3776,
+    0.2449,
+    0.3776
+   ]
   },
   {
    "idx": 4,
@@ -688,12 +693,17 @@
    "half": "1:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041390,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T11:34:41+08:00"
-   }
+   },
+   "pinClose": [
+    0.8223,
+    0.1131,
+    0.0646
+   ]
   },
   {
    "idx": 6,
@@ -861,12 +871,17 @@
    "half": "0:1",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041392,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T11:34:44+08:00"
-   }
+   },
+   "pinClose": [
+    0.4094,
+    0.2835,
+    0.3071
+   ]
   },
   {
    "idx": 8,
@@ -958,12 +973,17 @@
    "half": "1:2",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041393,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T12:40:32+08:00"
-   }
+   },
+   "pinClose": [
+    0.3328,
+    0.2868,
+    0.3804
+   ]
   },
   {
    "idx": 9,
@@ -1055,12 +1075,17 @@
    "half": "0:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041394,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T11:34:46+08:00"
-   }
+   },
+   "pinClose": [
+    0.4777,
+    0.2484,
+    0.274
+   ]
   },
   {
    "idx": 10,
@@ -1143,12 +1168,19 @@
    "half": "2:0",
    "directionHit": true,
    "scoreHit": true,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041395,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T11:34:47+08:00"
-   }
+   },
+   "pinClose": [
+    0.6381,
+    0.2088,
+    0.1531
+   ],
+   "clv": -0.0748,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 11,
@@ -1231,12 +1263,19 @@
    "half": "0:0",
    "directionHit": true,
    "scoreHit": true,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041396,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T11:34:48+08:00"
-   }
+   },
+   "pinClose": [
+    0.531,
+    0.2733,
+    0.1956
+   ],
+   "clv": 0.0036,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 12,
@@ -1756,12 +1795,17 @@
    "half": "1:1",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041409,
     "lastOddsAt": "2026-09-12T11:25:23+08:00",
     "lastIntelAt": "2026-09-11T11:34:55+08:00"
-   }
+   },
+   "pinClose": [
+    0.351,
+    0.2797,
+    0.3693
+   ]
   },
   {
    "idx": 18,
@@ -1844,12 +1888,17 @@
    "half": "0:1",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041410,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": "2026-09-11T11:34:57+08:00"
-   }
+   },
+   "pinClose": [
+    0.4208,
+    0.2986,
+    0.2805
+   ]
   },
   {
    "idx": 19,
@@ -1941,12 +1990,17 @@
    "half": "2:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041411,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": "2026-09-11T17:55:36+08:00"
-   }
+   },
+   "pinClose": [
+    0.5621,
+    0.2319,
+    0.2061
+   ]
   },
   {
    "idx": 20,
@@ -2038,12 +2092,19 @@
    "half": "0:2",
    "directionHit": false,
    "scoreHit": false,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041412,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": "2026-09-11T11:35:00+08:00"
-   }
+   },
+   "pinClose": [
+    0.5356,
+    0.2438,
+    0.2206
+   ],
+   "clv": -0.0091,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 21,
@@ -2143,12 +2204,17 @@
    "half": "1:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041413,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": "2026-09-11T17:55:25+08:00"
-   }
+   },
+   "pinClose": [
+    0.7545,
+    0.1534,
+    0.0921
+   ]
   },
   {
    "idx": 22,
@@ -2240,12 +2306,17 @@
    "half": "0:1",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041414,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": "2026-09-11T17:55:38+08:00"
-   }
+   },
+   "pinClose": [
+    0.2491,
+    0.2459,
+    0.505
+   ]
   },
   {
    "idx": 23,
@@ -2328,12 +2399,19 @@
    "half": "1:2",
    "directionHit": false,
    "scoreHit": false,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041416,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": "2026-09-11T17:53:02+08:00"
-   }
+   },
+   "pinClose": [
+    0.7893,
+    0.1331,
+    0.0776
+   ],
+   "clv": -0.116,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 24,
@@ -2425,12 +2503,17 @@
    "half": "1:1",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041417,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": "2026-09-11T11:35:05+08:00"
-   }
+   },
+   "pinClose": [
+    0.4072,
+    0.2676,
+    0.3252
+   ]
   },
   {
    "idx": 25,
@@ -2513,12 +2596,17 @@
    "half": "0:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041418,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": "2026-09-11T11:35:06+08:00"
-   }
+   },
+   "pinClose": [
+    0.4267,
+    0.2845,
+    0.2888
+   ]
   },
   {
    "idx": 26,
@@ -2601,12 +2689,19 @@
    "half": "1:2",
    "directionHit": false,
    "scoreHit": false,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041419,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": "2026-09-11T11:35:07+08:00"
-   }
+   },
+   "pinClose": [
+    0.4437,
+    0.274,
+    0.2823
+   ],
+   "clv": -0.2501,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 27,
@@ -2689,12 +2784,19 @@
    "half": "0:0",
    "directionHit": false,
    "scoreHit": false,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041420,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": "2026-09-11T18:02:20+08:00"
-   }
+   },
+   "pinClose": [
+    0.6316,
+    0.2105,
+    0.1579
+   ],
+   "clv": -0.1347,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 28,
@@ -2786,12 +2888,17 @@
    "half": "0:2",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041421,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": "2026-09-11T11:35:09+08:00"
-   }
+   },
+   "pinClose": [
+    0.4201,
+    0.3081,
+    0.2718
+   ]
   },
   {
    "idx": 29,
@@ -2891,12 +2998,17 @@
    "half": "0:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041422,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": "2026-09-11T17:55:32+08:00"
-   }
+   },
+   "pinClose": [
+    0.3105,
+    0.2661,
+    0.4234
+   ]
   },
   {
    "idx": 30,
@@ -2979,12 +3091,17 @@
    "half": "2:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041424,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": null
-   }
+   },
+   "pinClose": [
+    0.2451,
+    0.3005,
+    0.4544
+   ]
   },
   {
    "idx": 31,
@@ -3067,12 +3184,19 @@
    "half": "0:0",
    "directionHit": true,
    "scoreHit": true,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041426,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": null
-   }
+   },
+   "pinClose": [
+    0.4765,
+    0.2655,
+    0.2581
+   ],
+   "clv": -0.1106,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 32,
@@ -3164,12 +3288,17 @@
    "half": "1:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041427,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": null
-   }
+   },
+   "pinClose": [
+    0.4626,
+    0.257,
+    0.2804
+   ]
   },
   {
    "idx": 33,
@@ -3252,12 +3381,19 @@
    "half": "0:0",
    "directionHit": false,
    "scoreHit": false,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041428,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": null
-   }
+   },
+   "pinClose": [
+    0.6814,
+    0.1951,
+    0.1236
+   ],
+   "clv": -0.0801,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 34,
@@ -3340,12 +3476,17 @@
    "half": "1:1",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041429,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": null
-   }
+   },
+   "pinClose": [
+    0.0613,
+    0.1315,
+    0.8072
+   ]
   },
   {
    "idx": 35,
@@ -3428,12 +3569,19 @@
    "half": "0:1",
    "directionHit": true,
    "scoreHit": true,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041430,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": null
-   }
+   },
+   "pinClose": [
+    0.1378,
+    0.1886,
+    0.6736
+   ],
+   "clv": -0.1311,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 36,
@@ -3516,12 +3664,19 @@
    "half": "1:1",
    "directionHit": false,
    "scoreHit": false,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041431,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": null
-   }
+   },
+   "pinClose": [
+    0.5601,
+    0.2528,
+    0.1871
+   ],
+   "clv": -0.1935,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 37,
@@ -3604,12 +3759,17 @@
    "half": "0:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041432,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": null
-   }
+   },
+   "pinClose": [
+    0.38,
+    0.266,
+    0.354
+   ]
   },
   {
    "idx": 38,
@@ -3692,12 +3852,19 @@
    "half": "0:0",
    "directionHit": true,
    "scoreHit": true,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041433,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": null
-   }
+   },
+   "pinClose": [
+    0.157,
+    0.2616,
+    0.5814
+   ],
+   "clv": -0.186,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 39,
@@ -3779,12 +3946,17 @@
    "half": "3:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041434,
     "lastOddsAt": "2026-09-12T20:28:09+08:00",
     "lastIntelAt": null
-   }
+   },
+   "pinClose": [
+    0.8362,
+    0.1092,
+    0.0546
+   ]
   },
   {
    "idx": 40,
@@ -4031,12 +4203,19 @@
    "half": "1:0",
    "directionHit": false,
    "scoreHit": false,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041437,
     "lastOddsAt": "2026-09-13T17:36:27+08:00",
     "lastIntelAt": null
-   }
+   },
+   "pinClose": [
+    0.6814,
+    0.1951,
+    0.1236
+   ],
+   "clv": 0.063,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 43,
@@ -4558,12 +4737,17 @@
    "half": "0:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041449,
     "lastOddsAt": "2026-09-13T20:47:51+08:00",
     "lastIntelAt": null
-   }
+   },
+   "pinClose": [
+    0.6814,
+    0.1951,
+    0.1236
+   ]
   },
   {
    "idx": 49,

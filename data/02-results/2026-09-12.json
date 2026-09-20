@@ -194,12 +194,17 @@
    "half": "1:1",
    "directionHit": null,
    "scoreHit": false,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041388,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T17:55:37+08:00"
-   }
+   },
+   "pinClose": [
+    0.3776,
+    0.2449,
+    0.3776
+   ]
   },
   {
    "idx": 4,
@@ -293,12 +298,17 @@
    "half": "1:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041390,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T11:34:41+08:00"
-   }
+   },
+   "pinClose": [
+    0.8223,
+    0.1131,
+    0.0646
+   ]
   },
   {
    "idx": 6,
@@ -406,12 +416,17 @@
    "half": "0:1",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041392,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T11:34:44+08:00"
-   }
+   },
+   "pinClose": [
+    0.4094,
+    0.2835,
+    0.3071
+   ]
   },
   {
    "idx": 8,
@@ -462,12 +477,17 @@
    "half": "1:2",
    "directionHit": null,
    "scoreHit": false,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041393,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T12:40:32+08:00"
-   }
+   },
+   "pinClose": [
+    0.3328,
+    0.2868,
+    0.3804
+   ]
   },
   {
    "idx": 9,
@@ -518,12 +538,17 @@
    "half": "0:0",
    "directionHit": null,
    "scoreHit": false,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041394,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T11:34:46+08:00"
-   }
+   },
+   "pinClose": [
+    0.4777,
+    0.2484,
+    0.274
+   ]
   },
   {
    "idx": 10,
@@ -569,12 +594,19 @@
    "half": "2:0",
    "directionHit": true,
    "scoreHit": true,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041395,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T11:34:47+08:00"
-   }
+   },
+   "pinClose": [
+    0.6381,
+    0.2088,
+    0.1531
+   ],
+   "clv": -0.0365,
+   "clv_note": "pinClose精确口径(v2四键)"
   },
   {
    "idx": 11,
@@ -625,12 +657,17 @@
    "half": "0:0",
    "directionHit": null,
    "scoreHit": null,
-   "pinSource": "none",
+   "pinSource": "fd",
    "preSnapshots": {
     "matchId": 2041396,
     "lastOddsAt": "2026-09-11T17:31:33+08:00",
     "lastIntelAt": "2026-09-11T11:34:48+08:00"
-   }
+   },
+   "pinClose": [
+    0.531,
+    0.2733,
+    0.1956
+   ]
   },
   {
    "idx": 12,
