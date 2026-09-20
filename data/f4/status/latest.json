@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-20T17:47:00.039502Z",
+  "checked_at": "2026-09-20T18:23:43.957967Z",
   "command": "capture",
   "mode": "shadow",
   "new_predictions": 0,
@@ -28,21 +28,21 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260920",
-        "captured_at": "2026-09-20T17:46:58.922500Z",
+        "captured_at": "2026-09-20T18:23:42.046143Z",
         "content_sha256": "f40150b5124a55c7cbacc7ce4c45391295056c872c4227d4deb1edd85cf7d709"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260921",
-        "captured_at": "2026-09-20T17:46:58.964777Z",
+        "captured_at": "2026-09-20T18:23:42.166361Z",
         "content_sha256": "63afae2229560da8f17f1201dac7f7975c7b27b60d69d933306d149dad40ace8"
       },
       {
         "name": "sporttery",
         "status": "error",
         "url": "https://webapi.sporttery.cn/gateway/uniform/football/getMatchCalculatorV1.qry?channel=c",
-        "captured_at": "2026-09-20T17:47:00.038038Z",
+        "captured_at": "2026-09-20T18:23:43.863962Z",
         "content_sha256": null
       }
     ]
