@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "evaluated_at": "2026-09-20T15:51:35.977715Z",
+  "mode": "shadow",
+  "candidate_weight": 0,
+  "automatic_promotion": false,
+  "certified_edge": false,
+  "training_independently_verified": false,
+  "snapshot_policy": "earliest eligible baseline; candidate availability locked to that snapshot",
+  "score_policy": {
+    "probability_order": [
+      "H",
+      "D",
+      "A"
+    ],
+    "tie_order": [
+      "H",
+      "D",
+      "A"
+    ],
+    "rps_divisor": 2,
+    "brier_scaled": false,
+    "log_loss_base": "natural",
+    "log_loss_floor": 1e-15
+  },
+  "counts": {
+    "raw_snapshots": 0,
+    "effective_valid": 0,
+    "missing_baseline": 0,
+    "missing_baseline_groups": 0,
+    "redundant_snapshots": 0,
+    "pending": 0,
+    "settled": 0,
+    "paired": 0,
+    "missing_candidate": 0,
+    "excluded_rescheduled": 0,
+    "excluded_cancelled": 0,
+    "excluded_postponed": 0,
+    "excluded_identity": 0,
+    "excluded_future": 0,
+    "distinct_match_count": 0,
+    "known_tracked_fixtures": 9,
+    "closed_windows": 0,
+    "covered_windows": 0,
+    "missing_windows": 0,
+    "late_discovered_windows": 18
+  },
+  "baseline": {
+    "n": 0,
+    "correct": 0,
+    "accuracy": null,
+    "rps": null,
+    "brier": null,
+    "log_loss": null
+  },
+  "paired_baseline": {
+    "n": 0,
+    "correct": 0,
+    "accuracy": null,
+    "rps": null,
+    "brier": null,
+    "log_loss": null
+  },
+  "candidate": {
+    "n": 0,
+    "correct": 0,
+    "accuracy": null,
+    "rps": null,
+    "brier": null,
+    "log_loss": null
+  },
+  "f2": {
+    "n": 0,
+    "correct": 0,
+    "accuracy": null
+  },
+  "f2_paired_baseline": {
+    "n": 0,
+    "correct": 0,
+    "accuracy": null
+  },
+  "pending_statuses": {},
+  "groups": [],
+  "training_evidence": [],
+  "coverage": {
+    "scope": "locally discovered target fixtures only; source completeness is not established",
+    "known_tracked_fixtures": 9,
+    "unresolved_fixtures": 0,
+    "closed_windows": 0,
+    "covered_windows": 0,
+    "missing_windows": 0,
+    "missing_baseline_windows": 0,
+    "late_discovered_windows": 18,
+    "unknown_discovery_windows": 0,
+    "excluded_cancelled_or_postponed_fixtures": 0
+  }
+}
