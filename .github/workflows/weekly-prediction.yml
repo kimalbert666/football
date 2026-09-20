@@ -112,7 +112,7 @@ jobs:
           latest=$(find data/03-predictions -maxdepth 1 -name '*-boldplay.json' -type f -printf '%T@ %p\n' | sort -nr | head -1 | cut -d' ' -f2-)
           test -n "$latest"
           test "$(basename "$latest")" = "$(date -u +%F)-boldplay.json"
-          python - "$latest" "${{ steps.freshness.outputs.stale }}" <<'PY
+          python - "$latest" "${{ steps.freshness.outputs.stale }}" <<'PY'
           import json, sys
           from pathlib import Path
           p = Path(sys.argv[1])
