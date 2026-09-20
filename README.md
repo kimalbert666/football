@@ -3,6 +3,10 @@
 本地足球知识图谱 + Dixon-Coles/Elo 统计模型 + 检索增强预测（Agentic RAG）+ 趋势挖掘引擎。
 设计文档：`docs/2026-08-21-rag-design.html`
 
+## f4 并行验证
+
+新增 f4 覆盖整个英超，与原四队任务并行，自动保存真实赛前快照、赛果修订和同场对照评分。当前候选权重为 0，不自动训练或下注。使用方法与部署验收见 [f4 云端说明](docs/f4-cloud.md)，运行后看 [最新报告](data/f4/reports/latest.md) 和 [F4 Shadow Monitor](https://github.com/kimalbert666/football/actions/workflows/f4-shadow.yml)。模型可读的流程在 [skills/f4/SKILL.md](skills/f4/SKILL.md)。
+
 ## 快速开始（新环境安装）
 
 ```powershell

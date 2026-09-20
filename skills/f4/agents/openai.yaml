@@ -1,0 +1,4 @@
+interface:
+  display_name: "f4 足球预测与验证"
+  short_description: "综合市场、Elo、xG和外部预测，用同场前向记录检验命中率改进"
+  default_prompt: "使用 $f4 综合可验证来源分析比赛，给出胜平负概率并保存赛后可比较的记录。"

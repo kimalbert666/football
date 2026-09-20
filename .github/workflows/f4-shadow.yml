@@ -1,0 +1,99 @@
+name: F4 Shadow Monitor
+
+on:
+  schedule:
+    - cron: '11,41 * * * *'
+    # 07:43 Hong Kong: outcomes and fixture coverage, without training.
+    - cron: '43 23 * * *'
+    # Tuesday 10:13 Hong Kong: fixed-model score review, without an LLM.
+    - cron: '13 2 * * 2'
+  workflow_dispatch:
+    inputs:
+      command:
+        description: 'F4 parallel observation task'
+        required: true
+        default: all
+        type: choice
+        options: [all, capture, daily, review]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: f4-shadow-monitor
+  cancel-in-progress: false
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONUNBUFFERED: '1'
+      PYTHONUTF8: '1'
+      TZ: UTC
+      GH_TOKEN: ${{ github.token }}
+      F4_COMMAND: ${{ inputs.command || (github.event.schedule == '43 23 * * *' && 'daily') || (github.event.schedule == '13 2 * * 2' && 'review') || 'capture' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: engine/requirements.txt
+      - name: Install dependencies
+        run: python -m pip install -r engine/requirements.txt
+      - name: Record or evaluate f4 observations
+        id: observe
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .github/run-logs
+          python -u engine/scripts/f4_cloud.py "$F4_COMMAND" 2>&1 | tee .github/run-logs/f4.log
+      - name: Publish meaningful f4 update
+        if: steps.observe.outputs.notify == 'true'
+        env:
+          F4_MARKER: ${{ steps.observe.outputs.notification_marker }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          issue=$(gh issue list --state open --search '[f4] 英超并行验证 in:title' --json number,title --jq '[.[] | select(.title == "[f4] 英超并行验证")] | .[0].number // empty')
+          if [ -n "$issue" ]; then
+            gh issue view "$issue" --json body,comments --jq '.body, .comments[].body' > .github/run-logs/f4-existing-notices.txt
+            if ! grep -Fq "$F4_MARKER" .github/run-logs/f4-existing-notices.txt; then
+              gh issue comment "$issue" --body-file .github/run-logs/f4-issue.md
+            fi
+          else
+            gh issue create --title '[f4] 英超并行验证' --body-file .github/run-logs/f4-issue.md --assignee "$GITHUB_REPOSITORY_OWNER"
+          fi
+          python engine/scripts/f4_cloud.py notify-ack
+      - name: Save f4 records
+        if: always() && steps.observe.outcome != 'skipped'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- data/f4
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'chore(f4): save forward observations and score review'
+          for attempt in 1 2 3; do
+            git pull --rebase origin main
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          echo 'Could not persist f4 records after three attempts.' >&2
+          exit 1
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: f4-shadow-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .github/run-logs/
+          if-no-files-found: ignore
+          retention-days: 14
+      - name: Propagate observation failures
+        if: always() && steps.observe.outcome == 'failure'
+        run: exit 1

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "mode": "shadow",
+  "experiment_id": "f4-forward-epl-v1",
+  "league": "england-premier",
+  "market": "90min_1x2",
+  "tracked_teams_path": "data/05-trends/tracked-teams-2026-27.json",
+  "horizons_minutes": [
+    180,
+    60
+  ],
+  "horizon_tolerance_minutes": 20,
+  "max_capture_age_minutes": 15,
+  "candidate_model_path": "data/f4/models/dc-initial-20260920.json",
+  "candidate_model_sha256": "1b8ce1365a84ab420298e06911a82af83ce9d79125616b9adb53befda4ac7f42",
+  "champion": "market_reference",
+  "candidate_weight": 0,
+  "automatic_promotion": false,
+  "automatic_wagering": false,
+  "snapshot_policy": "earliest eligible baseline per match, kickoff and horizon; missing baseline can retry; missing candidate stays unpaired",
+  "source_policy": "ESPN fixture universe; Sporttery single-source market; f2 point forecasts optional; no opaque point-to-probability conversion",
+  "league_scope_note": "All Premier League fixtures; cups excluded. Existing four-team monitor remains independent.",
+  "probability_order": [
+    "H",
+    "D",
+    "A"
+  ],
+  "tie_order": [
+    "H",
+    "D",
+    "A"
+  ],
+  "review_policy": "Weekly fixed-version scoring and source health review only; no automated research reading, fitting or weight selection",
+  "scope": "league"
+}
