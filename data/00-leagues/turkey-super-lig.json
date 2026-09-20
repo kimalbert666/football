@@ -1,23 +1,23 @@
 {
   "league": "turkey-super-lig",
   "season": "2026-27",
-  "generatedAt": "2026-09-14",
-  "roundsPlayed": 55,
+  "generatedAt": "2026-09-20",
+  "roundsPlayed": 56,
   "standings": [
     {
       "pos": 1,
       "team": "Galatasaray",
-      "played": 55,
-      "won": 46,
+      "played": 56,
+      "won": 47,
       "drawn": 8,
       "lost": 1,
-      "gf": 142,
+      "gf": 143,
       "ga": 48,
-      "gd": 94,
-      "pts": 146,
-      "form": "WDWWW",
+      "gd": 95,
+      "pts": 149,
+      "form": "DWWWW",
       "homeRecord": {
-        "w": 23,
+        "w": 24,
         "d": 5,
         "l": 0
       },
@@ -30,15 +30,15 @@
     {
       "pos": 2,
       "team": "Fenerbahce",
-      "played": 55,
+      "played": 56,
       "won": 37,
-      "drawn": 12,
+      "drawn": 13,
       "lost": 6,
       "gf": 130,
       "ga": 55,
       "gd": 75,
-      "pts": 123,
-      "form": "WLWWL",
+      "pts": 124,
+      "form": "LWWLD",
       "homeRecord": {
         "w": 20,
         "d": 4,
@@ -46,24 +46,24 @@
       },
       "awayRecord": {
         "w": 17,
-        "d": 8,
+        "d": 9,
         "l": 3
       }
     },
     {
       "pos": 3,
       "team": "Besiktas",
-      "played": 54,
-      "won": 26,
+      "played": 55,
+      "won": 27,
       "drawn": 16,
       "lost": 12,
-      "gf": 87,
+      "gf": 90,
       "ga": 56,
-      "gd": 31,
-      "pts": 94,
-      "form": "DWWLW",
+      "gd": 34,
+      "pts": 97,
+      "form": "WWLWW",
       "homeRecord": {
-        "w": 16,
+        "w": 17,
         "d": 4,
         "l": 6
       },
@@ -76,15 +76,15 @@
     {
       "pos": 4,
       "team": "Trabzonspor",
-      "played": 55,
+      "played": 56,
       "won": 25,
       "drawn": 16,
-      "lost": 14,
+      "lost": 15,
       "gf": 99,
-      "ga": 68,
-      "gd": 31,
+      "ga": 69,
+      "gd": 30,
       "pts": 91,
-      "form": "LDWLW",
+      "form": "DWLWL",
       "homeRecord": {
         "w": 17,
         "d": 8,
@@ -93,25 +93,25 @@
       "awayRecord": {
         "w": 8,
         "d": 8,
-        "l": 11
+        "l": 12
       }
     },
     {
       "pos": 5,
       "team": "Samsunspor",
-      "played": 54,
+      "played": 55,
       "won": 24,
       "drawn": 15,
-      "lost": 15,
-      "gf": 78,
-      "ga": 63,
-      "gd": 15,
+      "lost": 16,
+      "gf": 79,
+      "ga": 68,
+      "gd": 11,
       "pts": 87,
-      "form": "LDWLL",
+      "form": "DWLLL",
       "homeRecord": {
         "w": 13,
         "d": 7,
-        "l": 8
+        "l": 9
       },
       "awayRecord": {
         "w": 11,
@@ -121,16 +121,39 @@
     },
     {
       "pos": 6,
+      "team": "Goztep",
+      "played": 56,
+      "won": 20,
+      "drawn": 18,
+      "lost": 18,
+      "gf": 86,
+      "ga": 72,
+      "gd": 14,
+      "pts": 78,
+      "form": "DLLLD",
+      "homeRecord": {
+        "w": 13,
+        "d": 9,
+        "l": 5
+      },
+      "awayRecord": {
+        "w": 7,
+        "d": 9,
+        "l": 13
+      }
+    },
+    {
+      "pos": 7,
       "team": "Buyuksehyr",
-      "played": 55,
+      "played": 56,
       "won": 22,
       "drawn": 12,
-      "lost": 21,
+      "lost": 22,
       "gf": 91,
-      "ga": 78,
-      "gd": 13,
+      "ga": 83,
+      "gd": 8,
       "pts": 78,
-      "form": "WWLDL",
+      "form": "WLDLL",
       "homeRecord": {
         "w": 11,
         "d": 9,
@@ -139,47 +162,24 @@
       "awayRecord": {
         "w": 11,
         "d": 3,
-        "l": 13
-      }
-    },
-    {
-      "pos": 7,
-      "team": "Goztep",
-      "played": 55,
-      "won": 20,
-      "drawn": 17,
-      "lost": 18,
-      "gf": 84,
-      "ga": 70,
-      "gd": 14,
-      "pts": 77,
-      "form": "WDLLL",
-      "homeRecord": {
-        "w": 13,
-        "d": 9,
-        "l": 5
-      },
-      "awayRecord": {
-        "w": 7,
-        "d": 8,
-        "l": 13
+        "l": 14
       }
     },
     {
       "pos": 8,
       "team": "Alanyaspor",
-      "played": 54,
+      "played": 55,
       "won": 18,
-      "drawn": 17,
+      "drawn": 18,
       "lost": 19,
-      "gf": 62,
-      "ga": 65,
+      "gf": 64,
+      "ga": 67,
       "gd": -3,
-      "pts": 71,
-      "form": "WDWLW",
+      "pts": 72,
+      "form": "DWLWD",
       "homeRecord": {
         "w": 12,
-        "d": 7,
+        "d": 8,
         "l": 7
       },
       "awayRecord": {
@@ -190,19 +190,42 @@
     },
     {
       "pos": 9,
+      "team": "Kasimpasa",
+      "played": 56,
+      "won": 16,
+      "drawn": 23,
+      "lost": 17,
+      "gf": 81,
+      "ga": 87,
+      "gd": -6,
+      "pts": 71,
+      "form": "DWDDW",
+      "homeRecord": {
+        "w": 5,
+        "d": 13,
+        "l": 9
+      },
+      "awayRecord": {
+        "w": 11,
+        "d": 10,
+        "l": 8
+      }
+    },
+    {
+      "pos": 10,
       "team": "Gaziantep",
-      "played": 54,
+      "played": 55,
       "won": 19,
-      "drawn": 13,
+      "drawn": 14,
       "lost": 22,
       "gf": 71,
       "ga": 83,
       "gd": -12,
-      "pts": 70,
-      "form": "LDWLW",
+      "pts": 71,
+      "form": "DWLWD",
       "homeRecord": {
         "w": 13,
-        "d": 6,
+        "d": 7,
         "l": 9
       },
       "awayRecord": {
@@ -212,88 +235,42 @@
       }
     },
     {
-      "pos": 10,
-      "team": "Kasimpasa",
-      "played": 55,
-      "won": 15,
-      "drawn": 23,
-      "lost": 17,
-      "gf": 79,
-      "ga": 86,
-      "gd": -7,
-      "pts": 68,
-      "form": "LDWDD",
-      "homeRecord": {
-        "w": 5,
-        "d": 13,
-        "l": 9
-      },
-      "awayRecord": {
-        "w": 10,
-        "d": 10,
-        "l": 8
-      }
-    },
-    {
       "pos": 11,
       "team": "Rizespor",
-      "played": 54,
-      "won": 19,
+      "played": 55,
+      "won": 20,
       "drawn": 9,
       "lost": 26,
-      "gf": 67,
+      "gf": 69,
       "ga": 82,
-      "gd": -15,
-      "pts": 66,
-      "form": "LWLWL",
+      "gd": -13,
+      "pts": 69,
+      "form": "WLWLW",
       "homeRecord": {
         "w": 11,
         "d": 5,
         "l": 12
       },
       "awayRecord": {
-        "w": 8,
+        "w": 9,
         "d": 4,
         "l": 14
       }
     },
     {
       "pos": 12,
-      "team": "Eyupspor",
-      "played": 53,
-      "won": 18,
-      "drawn": 11,
-      "lost": 24,
-      "gf": 60,
-      "ga": 74,
-      "gd": -14,
-      "pts": 65,
-      "form": "LLLWL",
-      "homeRecord": {
-        "w": 12,
-        "d": 5,
-        "l": 9
-      },
-      "awayRecord": {
-        "w": 6,
-        "d": 6,
-        "l": 15
-      }
-    },
-    {
-      "pos": 13,
       "team": "Konyaspor",
-      "played": 55,
-      "won": 17,
+      "played": 56,
+      "won": 18,
       "drawn": 12,
       "lost": 26,
-      "gf": 68,
+      "gf": 69,
       "ga": 82,
-      "gd": -14,
-      "pts": 63,
-      "form": "DLLLL",
+      "gd": -13,
+      "pts": 66,
+      "form": "LLLLW",
       "homeRecord": {
-        "w": 11,
+        "w": 12,
         "d": 8,
         "l": 9
       },
@@ -301,6 +278,29 @@
         "w": 6,
         "d": 4,
         "l": 17
+      }
+    },
+    {
+      "pos": 13,
+      "team": "Eyupspor",
+      "played": 54,
+      "won": 18,
+      "drawn": 11,
+      "lost": 25,
+      "gf": 60,
+      "ga": 76,
+      "gd": -16,
+      "pts": 65,
+      "form": "LLWLL",
+      "homeRecord": {
+        "w": 12,
+        "d": 5,
+        "l": 10
+      },
+      "awayRecord": {
+        "w": 6,
+        "d": 6,
+        "l": 15
       }
     },
     {
@@ -398,15 +398,15 @@
     {
       "pos": 18,
       "team": "Kocaelispor",
-      "played": 19,
+      "played": 20,
       "won": 8,
       "drawn": 5,
-      "lost": 6,
+      "lost": 7,
       "gf": 19,
-      "ga": 19,
-      "gd": 0,
+      "ga": 20,
+      "gd": -1,
       "pts": 29,
-      "form": "WLWWW",
+      "form": "LWWWL",
       "homeRecord": {
         "w": 6,
         "d": 3,
@@ -415,7 +415,7 @@
       "awayRecord": {
         "w": 2,
         "d": 2,
-        "l": 5
+        "l": 6
       }
     },
     {
@@ -444,19 +444,19 @@
     {
       "pos": 20,
       "team": "Genclerbirligi",
-      "played": 19,
+      "played": 20,
       "won": 6,
       "drawn": 4,
-      "lost": 9,
-      "gf": 23,
-      "ga": 29,
-      "gd": -6,
+      "lost": 10,
+      "gf": 24,
+      "ga": 31,
+      "gd": -7,
       "pts": 22,
-      "form": "WWWDL",
+      "form": "WWDLL",
       "homeRecord": {
         "w": 4,
         "d": 2,
-        "l": 3
+        "l": 4
       },
       "awayRecord": {
         "w": 2,
@@ -490,17 +490,17 @@
     {
       "pos": 22,
       "team": "Amedspor",
-      "played": 4,
-      "won": 2,
+      "played": 5,
+      "won": 3,
       "drawn": 1,
       "lost": 1,
-      "gf": 7,
+      "gf": 12,
       "ga": 5,
-      "gd": 2,
-      "pts": 7,
-      "form": "WLWD",
+      "gd": 7,
+      "pts": 10,
+      "form": "WLWDW",
       "homeRecord": {
-        "w": 2,
+        "w": 3,
         "d": 0,
         "l": 0
       },
@@ -512,6 +512,29 @@
     },
     {
       "pos": 23,
+      "team": "Corum",
+      "played": 4,
+      "won": 2,
+      "drawn": 1,
+      "lost": 1,
+      "gf": 10,
+      "ga": 4,
+      "gd": 6,
+      "pts": 7,
+      "form": "DLWW",
+      "homeRecord": {
+        "w": 1,
+        "d": 0,
+        "l": 1
+      },
+      "awayRecord": {
+        "w": 1,
+        "d": 1,
+        "l": 0
+      }
+    },
+    {
+      "pos": 24,
       "team": "Karagumruk",
       "played": 14,
       "won": 1,
@@ -534,40 +557,17 @@
       }
     },
     {
-      "pos": 24,
-      "team": "Corum",
-      "played": 3,
-      "won": 1,
-      "drawn": 1,
-      "lost": 1,
-      "gf": 5,
-      "ga": 3,
-      "gd": 2,
-      "pts": 4,
-      "form": "DLW",
-      "homeRecord": {
-        "w": 1,
-        "d": 0,
-        "l": 1
-      },
-      "awayRecord": {
-        "w": 0,
-        "d": 1,
-        "l": 0
-      }
-    },
-    {
       "pos": 25,
       "team": "Erzurumspor",
-      "played": 4,
+      "played": 5,
       "won": 1,
       "drawn": 1,
-      "lost": 2,
+      "lost": 3,
       "gf": 2,
-      "ga": 8,
-      "gd": -6,
+      "ga": 11,
+      "gd": -9,
       "pts": 4,
-      "form": "LLDW",
+      "form": "LLDWL",
       "homeRecord": {
         "w": 1,
         "d": 0,
@@ -576,15 +576,15 @@
       "awayRecord": {
         "w": 0,
         "d": 1,
-        "l": 1
+        "l": 2
       }
     }
   ],
   "leagueStats": {
-    "avgGoals": 2.838,
+    "avgGoals": 2.837,
     "homeWinRate": 0.446,
     "drawRate": 0.254,
-    "upsetRate": 0.213,
+    "upsetRate": 0.215,
     "topScores": [
       {
         "score": "1-1",
@@ -596,11 +596,11 @@
       },
       {
         "score": "1-0",
-        "count": 44
+        "count": 46
       }
     ],
     "computedFrom": "fd",
-    "matchesUsed": 507,
+    "matchesUsed": 516,
     "seasonsMerged": [
       "2425",
       "2526",
@@ -610,7 +610,7 @@
   "context": {
     "titleRace": {
       "leader": "Galatasaray",
-      "gap": 23
+      "gap": 25
     },
     "relegationZone": [
       23,

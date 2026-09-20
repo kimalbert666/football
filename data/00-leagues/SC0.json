@@ -1,7 +1,7 @@
 {
   "league": "SC0",
   "season": "2026-27",
-  "generatedAt": "2026-09-14",
+  "generatedAt": "2026-09-20",
   "roundsPlayed": 54,
   "standings": [
     {
@@ -53,15 +53,15 @@
     {
       "pos": 3,
       "team": "Hearts",
-      "played": 52,
+      "played": 53,
       "won": 27,
       "drawn": 8,
-      "lost": 17,
-      "gf": 86,
-      "ga": 59,
-      "gd": 27,
+      "lost": 18,
+      "gf": 87,
+      "ga": 61,
+      "gd": 26,
       "pts": 89,
-      "form": "LWWWW",
+      "form": "WWWWL",
       "homeRecord": {
         "w": 16,
         "d": 4,
@@ -70,25 +70,25 @@
       "awayRecord": {
         "w": 11,
         "d": 4,
-        "l": 10
+        "l": 11
       }
     },
     {
       "pos": 4,
       "team": "Hibernian",
-      "played": 52,
+      "played": 53,
       "won": 20,
       "drawn": 18,
-      "lost": 14,
+      "lost": 15,
       "gf": 85,
-      "ga": 70,
-      "gd": 15,
+      "ga": 71,
+      "gd": 14,
       "pts": 78,
-      "form": "LWWLL",
+      "form": "WWLLL",
       "homeRecord": {
         "w": 11,
         "d": 9,
-        "l": 5
+        "l": 6
       },
       "awayRecord": {
         "w": 9,
@@ -145,19 +145,19 @@
     {
       "pos": 7,
       "team": "Motherwell",
-      "played": 52,
+      "played": 53,
       "won": 18,
       "drawn": 14,
-      "lost": 20,
+      "lost": 21,
       "gf": 68,
-      "ga": 81,
-      "gd": -13,
+      "ga": 85,
+      "gd": -17,
       "pts": 68,
-      "form": "WDDWL",
+      "form": "DDWLL",
       "homeRecord": {
         "w": 10,
         "d": 8,
-        "l": 6
+        "l": 7
       },
       "awayRecord": {
         "w": 8,
@@ -168,28 +168,51 @@
     {
       "pos": 8,
       "team": "Aberdeen",
-      "played": 52,
-      "won": 18,
+      "played": 53,
+      "won": 19,
       "drawn": 10,
       "lost": 24,
-      "gf": 56,
+      "gf": 60,
       "ga": 79,
-      "gd": -23,
-      "pts": 64,
-      "form": "WLLLD",
+      "gd": -19,
+      "pts": 67,
+      "form": "LLLDW",
       "homeRecord": {
         "w": 12,
         "d": 6,
         "l": 9
       },
       "awayRecord": {
-        "w": 6,
+        "w": 7,
         "d": 4,
         "l": 15
       }
     },
     {
       "pos": 9,
+      "team": "Kilmarnock",
+      "played": 53,
+      "won": 15,
+      "drawn": 13,
+      "lost": 25,
+      "gf": 62,
+      "ga": 92,
+      "gd": -30,
+      "pts": 58,
+      "form": "LLLDW",
+      "homeRecord": {
+        "w": 10,
+        "d": 7,
+        "l": 10
+      },
+      "awayRecord": {
+        "w": 5,
+        "d": 6,
+        "l": 15
+      }
+    },
+    {
+      "pos": 10,
       "team": "Dundee",
       "played": 54,
       "won": 15,
@@ -208,29 +231,6 @@
       "awayRecord": {
         "w": 7,
         "d": 5,
-        "l": 15
-      }
-    },
-    {
-      "pos": 10,
-      "team": "Kilmarnock",
-      "played": 52,
-      "won": 14,
-      "drawn": 13,
-      "lost": 25,
-      "gf": 61,
-      "ga": 92,
-      "gd": -31,
-      "pts": 55,
-      "form": "LLLLD",
-      "homeRecord": {
-        "w": 10,
-        "d": 7,
-        "l": 10
-      },
-      "awayRecord": {
-        "w": 4,
-        "d": 6,
         "l": 15
       }
     },
@@ -283,17 +283,17 @@
     {
       "pos": 13,
       "team": "Falkirk",
-      "played": 14,
-      "won": 3,
+      "played": 15,
+      "won": 4,
       "drawn": 5,
       "lost": 6,
-      "gf": 15,
-      "ga": 22,
-      "gd": -7,
-      "pts": 14,
-      "form": "LDLLD",
+      "gf": 17,
+      "ga": 23,
+      "gd": -6,
+      "pts": 17,
+      "form": "DLLDW",
       "homeRecord": {
-        "w": 1,
+        "w": 2,
         "d": 3,
         "l": 3
       },
@@ -328,10 +328,10 @@
     }
   ],
   "leagueStats": {
-    "avgGoals": 2.877,
-    "homeWinRate": 0.446,
-    "drawRate": 0.234,
-    "upsetRate": 0.278,
+    "avgGoals": 2.875,
+    "homeWinRate": 0.445,
+    "drawRate": 0.232,
+    "upsetRate": 0.285,
     "topScores": [
       {
         "score": "1-2",
@@ -342,12 +342,12 @@
         "count": 30
       },
       {
-        "score": "1-0",
+        "score": "2-1",
         "count": 26
       }
     ],
     "computedFrom": "fd",
-    "matchesUsed": 316,
+    "matchesUsed": 319,
     "seasonsMerged": [
       "2425",
       "2526",
