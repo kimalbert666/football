@@ -1,29 +1,161 @@
 {
-  "captured_at": "2026-09-20T23:46:47.816676Z",
+  "captured_at": "2026-09-20T23:49:04.067387Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260919",
+      "captured_at": "2026-09-20T23:49:03.369223Z",
+      "content_sha256": "15199cb51ab57e36dd7aa4a9b2bba5b9b632cdf376804af0e3d82f4fed34cfd8"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260920",
-      "captured_at": "2026-09-20T23:46:46.069142Z",
+      "captured_at": "2026-09-20T23:49:03.445138Z",
       "content_sha256": "fa6d662d6cd1e7e1bd44fc50c33d7e32cbbdf13b5c8acfd26eda15da573cf608"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260921",
-      "captured_at": "2026-09-20T23:46:46.126346Z",
+      "captured_at": "2026-09-20T23:49:03.513936Z",
       "content_sha256": "63afae2229560da8f17f1201dac7f7975c7b27b60d69d933306d149dad40ace8"
     },
     {
-      "name": "sporttery",
-      "status": "error",
-      "url": "https://webapi.sporttery.cn/gateway/uniform/football/getMatchCalculatorV1.qry?channel=c",
-      "captured_at": "2026-09-20T23:46:47.816630Z",
-      "content_sha256": null
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260922",
+      "captured_at": "2026-09-20T23:49:03.647761Z",
+      "content_sha256": "63afae2229560da8f17f1201dac7f7975c7b27b60d69d933306d149dad40ace8"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260923",
+      "captured_at": "2026-09-20T23:49:03.717518Z",
+      "content_sha256": "63afae2229560da8f17f1201dac7f7975c7b27b60d69d933306d149dad40ace8"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260924",
+      "captured_at": "2026-09-20T23:49:03.772570Z",
+      "content_sha256": "63afae2229560da8f17f1201dac7f7975c7b27b60d69d933306d149dad40ace8"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260925",
+      "captured_at": "2026-09-20T23:49:03.955866Z",
+      "content_sha256": "63afae2229560da8f17f1201dac7f7975c7b27b60d69d933306d149dad40ace8"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260926",
+      "captured_at": "2026-09-20T23:49:04.011868Z",
+      "content_sha256": "63afae2229560da8f17f1201dac7f7975c7b27b60d69d933306d149dad40ace8"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260927",
+      "captured_at": "2026-09-20T23:49:04.067058Z",
+      "content_sha256": "63afae2229560da8f17f1201dac7f7975c7b27b60d69d933306d149dad40ace8"
     }
   ],
   "fixtures": [
+    {
+      "match_id": "espn:401879269",
+      "source_event_id": "401879269",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "tottenham",
+      "away_id": "aston-villa",
+      "home": "Tottenham Hotspur",
+      "away": "Aston Villa",
+      "kickoff_at": "2026-09-19T11:30:00Z",
+      "status": "completed",
+      "score": [
+        2,
+        3
+      ],
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401878778",
+      "source_event_id": "401878778",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "everton",
+      "away_id": "ipswich",
+      "home": "Everton",
+      "away": "Ipswich Town",
+      "kickoff_at": "2026-09-19T14:00:00Z",
+      "status": "completed",
+      "score": [
+        1,
+        0
+      ],
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401879271",
+      "source_event_id": "401879271",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "newcastle",
+      "away_id": "hull-city",
+      "home": "Newcastle United",
+      "away": "Hull City",
+      "kickoff_at": "2026-09-19T14:00:00Z",
+      "status": "completed",
+      "score": [
+        2,
+        1
+      ],
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401879274",
+      "source_event_id": "401879274",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "brighton",
+      "away_id": "arsenal",
+      "home": "Brighton & Hove Albion",
+      "away": "Arsenal",
+      "kickoff_at": "2026-09-19T14:00:00Z",
+      "status": "completed",
+      "score": [
+        3,
+        0
+      ],
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401879270",
+      "source_event_id": "401879270",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "nottingham-forest",
+      "away_id": "coventry",
+      "home": "Nottingham Forest",
+      "away": "Coventry City",
+      "kickoff_at": "2026-09-19T16:30:00Z",
+      "status": "completed",
+      "score": [
+        0,
+        1
+      ],
+      "market": null,
+      "problems": []
+    },
     {
       "match_id": "espn:401879272",
       "source_event_id": "401879272",
@@ -101,14 +233,12 @@
     "complete": true,
     "scope": {
       "league": "england-premier",
-      "from": "2026-09-20",
-      "through": "2026-09-21",
+      "from": "2026-09-19",
+      "through": "2026-09-27",
       "provider": "espn",
       "pending_lookup_limit": 20
     },
     "reason": "Independent daily EPL calendar verified"
   },
-  "problems": [
-    "sporttery: unavailable or malformed (HTTPError)"
-  ]
+  "problems": []
 }
