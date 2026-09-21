@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "mode": "shadow",
-  "experiment_id": "f4-forward-epl-v1",
+  "experiment_id": "f4-forward-epl-crown-v1",
   "league": "england-premier",
   "market": "90min_1x2",
   "tracked_teams_path": "data/05-trends/tracked-teams-2026-27.json",
@@ -18,7 +18,7 @@
   "automatic_promotion": false,
   "automatic_wagering": false,
   "snapshot_policy": "earliest eligible baseline per match, kickoff and horizon; missing baseline can retry; missing candidate stays unpaired",
-  "source_policy": "ESPN fixture universe; Sporttery single-source market; f2 point forecasts optional; no opaque point-to-probability conversion",
+  "source_policy": "ESPN fixture universe; Titan007 public Crown 1X2 quotes; f2 point forecasts optional; no Sporttery fallback",
   "league_scope_note": "All Premier League fixtures; cups excluded. Existing four-team monitor remains independent.",
   "probability_order": [
     "H",
@@ -31,5 +31,9 @@
     "A"
   ],
   "review_policy": "Weekly fixed-version scoring and source health review only; no automated research reading, fitting or weight selection",
-  "scope": "league"
+  "scope": "league",
+  "odds_source": "crown",
+  "required_bookmaker": "crown",
+  "baseline_version": "titan007-crown-1x2-inverse-normalized-v1",
+  "market_reference_note": "赔率使用球探公开页面转载的皇冠90分钟胜平负报价；并非皇冠官方API，页面不提供独立受注状态，不能保证可成交。"
 }

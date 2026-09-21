@@ -256,3 +256,110 @@ def test_market_failure_does_not_erase_calendar_coverage(root, now):
     assert result['coverage']['complete']
     assert result['sources'][-1]['status'] == 'error'
     assert 'must not persist' not in json.dumps(result)
+
+
+def http_response(status, payload=None):
+    import requests
+    response = requests.Response()
+    response.status_code = status
+    response.url = sources.SPORTTERY_URL
+    response.headers['X-Private'] = 'private-header-marker'
+    response._content = json.dumps(payload or {'private': 'private-body-marker'}).encode()
+    return response
+
+
+@pytest.mark.parametrize('status', [429, 500, 502, 503, 504, 567])
+def test_http_transient_retries_then_succeeds(monkeypatch, status):
+    import requests
+    from sporttery_fetch import HEADERS
+    responses = [http_response(status), http_response(200, {'success': True})]
+    calls, waits = [], []
+    def get(url, **kwargs):
+        calls.append((url, kwargs))
+        return responses.pop(0)
+    monkeypatch.setattr(requests, 'get', get)
+    monkeypatch.setattr(sources.time, 'sleep', waits.append)
+    assert sources._fetch(sources.SPORTTERY_URL) == {'success': True}
+    assert len(calls) == 2
+    assert calls[0][1]['headers'] == HEADERS
+    assert waits == [1]
+
+
+@pytest.mark.parametrize('status', [401, 403])
+def test_http_auth_refusal_is_not_retried_and_status_is_preserved(root, now, monkeypatch, status):
+    import requests
+    calls, waits = [], []
+    original = transport(now, [event(now)])
+    def get(url, **kwargs):
+        calls.append(url)
+        return http_response(status)
+    def fetch(url):
+        return sources._fetch(url) if 'sporttery' in url else original(url)
+    monkeypatch.setattr(requests, 'get', get)
+    monkeypatch.setattr(sources.time, 'sleep', waits.append)
+    result = sources.collect(root, now, fetch=fetch)
+    assert len(calls) == 1
+    assert waits == []
+    assert result['sources'][-1]['http_status'] == status
+    assert any(f'HTTP {status}' in problem for problem in result['problems'])
+    assert 'private-body-marker' not in json.dumps(result)
+    assert 'private-header-marker' not in json.dumps(result)
+    assert result['coverage']['complete']
+
+
+@pytest.mark.parametrize('failure', ['http', 'connection', 'timeout'])
+def test_transport_retries_are_bounded_and_exhaustion_keeps_safe_metadata(root, now, monkeypatch, failure):
+    import requests
+    calls, waits = [], []
+    original = transport(now, [event(now)])
+    def get(url, **kwargs):
+        calls.append(url)
+        if failure == 'connection':
+            raise requests.exceptions.ConnectionError('private-body-marker')
+        if failure == 'timeout':
+            raise requests.exceptions.Timeout('private-header-marker')
+        return http_response(567)
+    def fetch(url):
+        return sources._fetch(url) if 'sporttery' in url else original(url)
+    monkeypatch.setattr(requests, 'get', get)
+    monkeypatch.setattr(sources.time, 'sleep', waits.append)
+    result = sources.collect(root, now, fetch=fetch)
+    assert len(calls) == 3
+    assert waits == [1, 2]
+    assert result['sources'][-1]['status'] == 'error'
+    if failure == 'http':
+        assert result['sources'][-1]['http_status'] == 567
+        assert any('HTTP 567' in problem for problem in result['problems'])
+    else:
+        assert 'http_status' not in result['sources'][-1]
+    assert 'private-body-marker' not in json.dumps(result)
+    assert 'private-header-marker' not in json.dumps(result)
+
+
+def test_crown_mode_never_requests_sporttery(root, now, monkeypatch):
+    from unittest.mock import Mock
+    config = root / 'data/f4/config.json'
+    config.parent.mkdir(parents=True, exist_ok=True)
+    config.write_text(json.dumps({'odds_source': 'crown'}), encoding='utf-8')
+    item = event(now + timedelta(hours=1))
+    market = {'bookmaker': 'crown', 'odds': [2.0, 3.2, 4.0]}
+    attach = Mock(return_value={'markets': {'espn:101': market}, 'sources': [], 'problems': []})
+    monkeypatch.setattr('f4_crown.attach_crown', attach)
+    fetch = transport(now, [item])
+    result = sources.collect(root, now, fetch=fetch)
+    assert all('sporttery' not in url for url in fetch.calls)
+    assert len(attach.call_args.args[1]) == 1
+    assert result['fixtures'][0]['market'] == market
+
+
+def test_crown_daily_settlement_does_not_fetch_any_odds(root, now, monkeypatch):
+    from unittest.mock import Mock
+    config = root / 'data/f4/config.json'
+    config.parent.mkdir(parents=True, exist_ok=True)
+    config.write_text(json.dumps({'odds_source': 'crown'}), encoding='utf-8')
+    attach = Mock(side_effect=AssertionError('daily must not request quotes'))
+    monkeypatch.setattr('f4_crown.attach_crown', attach)
+    fetch = transport(now, [event(now)])
+    sources.collect(root, now, False, fetch=fetch)
+    attach.assert_not_called()
+    assert all('sporttery' not in url for url in fetch.calls)

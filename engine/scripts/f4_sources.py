@@ -9,6 +9,7 @@ from __future__ import annotations
 import hashlib
 import json
 import math
+import time
 import unicodedata
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -19,6 +20,7 @@ SPORTTERY_URL = 'https://webapi.sporttery.cn/gateway/uniform/football/getMatchCa
 LEAGUE = 'england-premier'
 CHINA = timezone(timedelta(hours=8))
 MAX_PENDING = 20
+TRANSIENT_HTTP_STATUSES = {429, 500, 502, 503, 504, 567}
 
 
 def _stamp(value):
@@ -42,14 +44,20 @@ def _fetch(url):
     if url.startswith(SPORTTERY_URL.split('?')[0]):
         from sporttery_fetch import HEADERS
         headers = HEADERS
-    for attempt in range(2):
+    # Three total attempts with bounded waits; authentication refusals are final.
+    for attempt in range(3):
         try:
             response = requests.get(url, headers=headers, timeout=30)
             response.raise_for_status()
             return response.json()
-        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout):
-            if attempt:
+        except requests.exceptions.HTTPError as exc:
+            status = getattr(exc.response, 'status_code', None)
+            if status not in TRANSIENT_HTTP_STATUSES or attempt == 2:
                 raise
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout):
+            if attempt == 2:
+                raise
+        time.sleep(attempt + 1)
 
 
 def _name(value):
@@ -278,7 +286,12 @@ def collect(root, now, include_market=True, *, pending=None, fetch=None,
             return result
         except Exception as exc:
             # Do not persist raw bodies, credentials, or provider error messages.
-            problems.append(f'{name}: unavailable or malformed ({type(exc).__name__})')
+            status = getattr(getattr(exc, 'response', None), 'status_code', None)
+            detail = type(exc).__name__
+            if type(status) is int and 100 <= status <= 599:
+                source['http_status'] = status
+                detail += f'; HTTP {status}'
+            problems.append(f'{name}: unavailable or malformed ({detail})')
             return None
         finally:
             source['captured_at'] = source['captured_at'] or _stamp(datetime.now(timezone.utc))
@@ -348,7 +361,29 @@ def collect(root, now, include_market=True, *, pending=None, fetch=None,
             merge(row)
 
     calendar_complete = complete
-    if include_market:
+    config_path = Path(root) / 'data/f4/config.json'
+    config = json.loads(config_path.read_text(encoding='utf-8')) if config_path.exists() else {}
+    odds_source = config.get('odds_source', 'sporttery')
+    if odds_source not in ('sporttery', 'crown'):
+        raise ValueError('Unsupported fixed odds source')
+    if include_market and odds_source == 'crown':
+        from f4_crown import attach_crown
+        queried_at = datetime.now(timezone.utc)
+        due = []
+        for row in fixtures.values():
+            if row['status'] != 'scheduled' or not row['kickoff_at'] or not row['home_id'] or not row['away_id']:
+                continue
+            minutes = (_instant(row['kickoff_at']) - queried_at).total_seconds() / 60
+            if any(abs(minutes - h) <= config.get('horizon_tolerance_minutes', 20)
+                   for h in config.get('horizons_minutes', [180, 60])):
+                due.append(row)
+        crown = attach_crown(root, due, queried_at)
+        sources.extend(crown.get('sources', []))
+        problems.extend(crown.get('problems', []))
+        for match_id, market in crown.get('markets', {}).items():
+            if match_id in fixtures and fixtures[match_id]['status'] == 'scheduled':
+                fixtures[match_id]['market'] = market
+    elif include_market:
         quotes = get('sporttery', SPORTTERY_URL,
                      lambda payload, captured: ([_sporttery_fixture(r, aliases, captured)
                          for r in _sporttery_rows(payload)

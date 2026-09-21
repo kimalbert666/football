@@ -115,6 +115,13 @@ class CloudTests(unittest.TestCase):
             row = copy.deepcopy(self.fixture)
             row['market'][field] = cloud.stamp(self.now + timedelta(seconds=1))
             self.assertIsNone(cloud.market_probability(row, self.now, config)[0])
+
+    def test_crown_experiment_never_accepts_sporttery_as_crown(self):
+        config = cloud.read_json(self.root / 'data/f4/config.json', {})
+        config['required_bookmaker'] = 'crown'
+        self.assertIsNone(cloud.market_probability(self.fixture, self.now, config)[0])
+        self.fixture['market']['bookmaker'] = 'crown'
+        self.assertIsNotNone(cloud.market_probability(self.fixture, self.now, config)[0])
         for odds in ([True, 3, 4], [1, 3, 4], [float('nan'), 3, 4], [2, 3]):
             row = copy.deepcopy(self.fixture)
             row['market']['odds'] = odds

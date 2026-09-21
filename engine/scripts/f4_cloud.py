@@ -10,7 +10,7 @@ import hashlib
 import json
 import math
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from f4_sources import collect
@@ -55,8 +55,10 @@ def outputs(**values):
 def market_probability(fixture, decision_at, config):
     market = fixture.get('market')
     if not market:
-        return None, '缺少匹配的在售胜平负赔率'
+        return None, '缺少匹配的赛前胜平负报价'
     try:
+        if config.get('required_bookmaker') and market.get('bookmaker') != config['required_bookmaker']:
+            raise ValueError('quote bookmaker does not match the fixed experiment')
         captured = instant(market['captured_at'])
         age = (decision_at - captured).total_seconds() / 60
         if not 0 <= age <= config['max_capture_age_minutes']:
@@ -186,7 +188,8 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
             'trained_through': dc.get('trained_through'), 'candidate_training_evidence': dc.get('training_evidence'),
             'rejected_candidate_cutoff': rejected_cutoff,
             'candidate_source_sha256': dc.get('source_sha256'), 'candidate_reason': dc.get('reason'),
-            'baseline_version': 'sporttery-had-inverse-normalized-v1', 'champion_version': 'market-reference-v1',
+            'baseline_version': config.get('baseline_version', 'sporttery-had-inverse-normalized-v1'),
+            'champion_version': 'market-reference-v1',
             'selected': False, 'candidate_weight': 0,
             'reason': reason or '仅作单源市场参考，候选尚未验证优势，不输出投注建议',
             'quote': fixture.get('market'), 'f2': point,
@@ -223,7 +226,19 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
               'automatic_promotion': False, 'automatic_wagering': False}
     write_json(root / 'data/f4/status/latest.json', status)
     write_json(root / 'data/f4/evaluations/latest.json', summary)
-    report = render_report(summary)
+    title = 'f4 英超每周复审' if command == 'review' else 'f4 英超跟踪更新'
+    hk_time = completed_at.astimezone(timezone(timedelta(hours=8))).strftime('%Y-%m-%d %H:%M')
+    counts = summary['counts']
+    report = f'# {title}\n\n更新时间：{hk_time}（香港时间）。\n\n'
+    report += (f"本次新增赛前记录 **{new_valid}** 条，补充赛果／状态 **{new_outcomes}** 条。"
+               f"累计有效赛前记录涉及 **{counts.get('distinct_match_count', 0)}** 场比赛。\n\n")
+    if not counts['effective_valid']:
+        report += '**目前还没有有效赛前预测，暂时不能比较命中率。已有赛果不会倒填成预测。**\n\n'
+    if capture and not due:
+        report += '本次没有已识别的英超比赛进入预定赛前记录窗口。\n\n'
+    if bundle.get('problems'):
+        report += '**数据源有提醒，见下方“本次运行”；程序完成不等于输入齐全。**\n\n'
+    report += render_report(summary).split('\n', 1)[1]
     report += '\n\n## 本次运行\n\n'
     scope_label = '全英超' if league_scope else '配置中的英超球队'
     report += f"- 核对时间：{stamp(completed_at)}（UTC）。\n- 范围：{scope_label}，杯赛尚未接入。\n"
@@ -231,7 +246,7 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
     report += '- 赛前窗口：T−180分与T−60分，各允许±20分；实际时间保存在每条记录中。\n'
     report += '- f4与原任务并行；候选权重为0，不自动下注、不自动读论文或改权重。\n'
     report += '- 当前候选：冻结的旧DC参数，仅用于前向对照；其历史训练资料尚未独立认证。\n'
-    report += '- 赔率为体彩单源；抓取时间和上次价格变化时间不能单独证明提供商内部数据最新。\n'
+    report += '- ' + config.get('market_reference_note', '单源市场报价；抓取时间不能单独证明提供商内部数据最新。') + '\n'
     if not fixtures:
         report += '- 本次数据范围未识别到目标赛程；这不代表目标联赛一定没有比赛。\n'
     for issue in [*bundle.get('problems', []), *f2.get('problems', []), *skipped][:20]:

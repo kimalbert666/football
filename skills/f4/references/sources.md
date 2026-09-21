@@ -39,3 +39,9 @@ f1的ClubElo W/D/L可能是查询球队视角，查询客队时转换为主队H/
 - [时间切分](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html)与[泄漏风险](https://scikit-learn.org/stable/common_pitfalls.html)：避免未来数据进入训练、选参或预处理。足球赛事不是等间距序列，按比赛周/时间块构建分组，不能机械套行号切分。
 
 新论文优先原文/作者代码/可复现数据。只读到摘要就明确这一限制，不把搜索片段当已复现结论。准确率数字只有在目标、联赛、时点、测试时间、覆盖率及基准一致时才能比较。
+
+## 2026-09-21：f4 云端改用皇冠参考
+
+用户指定皇冠，使用[球探公开欧赔索引](https://1x2.titan007.com/index_vip.aspx)及其页面引用的独立数据子域。三向表中公司ID为545，必须同时核实公司名Crown；不能套用另一个亚洲盘口表的ID3。初盘与即时H/D/A字段分开；索引展示时区UTC+8，比赛JS时间为UTC，按已核验模板解析而不执行提供商JavaScript。保存有限引用字段、真实抓取时间、报价变化时间、URL与响应哈希，不上传原始页面或整份JS。
+
+这是球探转载，不是皇冠官方API；没有独立受注状态，不保证可成交。只对身份和时间唯一匹配的赛前赛事使用，缺失明确报告，不以体彩价格冒充皇冠。当前部署及验收以[runtime.md](runtime.md)所指仓库报告为准。

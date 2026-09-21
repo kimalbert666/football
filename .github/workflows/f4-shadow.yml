@@ -45,6 +45,9 @@ jobs:
           cache-dependency-path: engine/requirements.txt
       - name: Install dependencies
         run: python -m pip install -r engine/requirements.txt
+      - name: Verify f4 on manual acceptance runs
+        if: github.event_name == 'workflow_dispatch'
+        run: python -m pytest engine/tests/test_f4_cloud.py engine/tests/test_f4_candidates.py engine/tests/test_f4_sources.py engine/tests/test_f4_ledger.py engine/tests/test_f4_crown.py -q
       - name: Record or evaluate f4 observations
         id: observe
         continue-on-error: true
