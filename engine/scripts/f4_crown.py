@@ -184,13 +184,19 @@ def attach_crown(root, fixtures, now, *, fetch=None):
         result['problems'].append('Crown team aliases are unavailable or malformed')
         return result
     eligible = []
+    config_path = Path(root) / 'data/f4/config.json'
+    config = json.loads(config_path.read_text(encoding='utf-8')) if config_path.exists() else {}
+    windows = {180: 20, 60: 20}
+    ah = config.get('asian_handicap', {})
+    if ah.get('enabled'):
+        windows.update({int(h): tolerance for h, tolerance in ah.get('windows', {}).items()})
     for fixture in fixtures:
         try:
             remaining = (_instant(fixture.get('kickoff_at')) - now).total_seconds() / 60
             if (fixture.get('provider') == 'espn' and fixture.get('league') == 'england-premier'
                     and fixture.get('status') == 'scheduled' and fixture.get('home_id')
                     and fixture.get('away_id') and fixture['home_id'] != fixture['away_id']
-                    and any(abs(remaining - window) <= 20 for window in (180, 60))):
+                    and remaining > 0 and any(abs(remaining - window) <= tolerance for window, tolerance in windows.items())):
                 eligible.append(fixture)
         except (ValueError, TypeError):
             continue

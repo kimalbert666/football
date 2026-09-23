@@ -2,11 +2,11 @@ name: F4 Shadow Monitor
 
 on:
   schedule:
-    - cron: '11,41 * * * *'
+    - cron: '7,17,27,37,47,57 * * * *'
     # 07:43 Hong Kong: outcomes and fixture coverage, without training.
     - cron: '43 23 * * *'
-    # Tuesday 10:13 Hong Kong: fixed-model score review, without an LLM.
-    - cron: '13 2 * * 2'
+    # First day 10:13 Hong Kong: previous month research report.
+    - cron: '13 2 1 * *'
   workflow_dispatch:
     inputs:
       command:
@@ -14,7 +14,7 @@ on:
         required: true
         default: all
         type: choice
-        options: [all, capture, daily, review]
+        options: [all, capture, daily, review, monthly]
 
 permissions:
   contents: write
@@ -33,7 +33,7 @@ jobs:
       PYTHONUTF8: '1'
       TZ: UTC
       GH_TOKEN: ${{ github.token }}
-      F4_COMMAND: ${{ inputs.command || (github.event.schedule == '43 23 * * *' && 'daily') || (github.event.schedule == '13 2 * * 2' && 'review') || 'capture' }}
+      F4_COMMAND: ${{ inputs.command || (github.event.schedule == '43 23 * * *' && 'daily') || (github.event.schedule == '13 2 1 * *' && 'monthly') || 'capture' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -47,7 +47,7 @@ jobs:
         run: python -m pip install -r engine/requirements.txt
       - name: Verify f4 on manual acceptance runs
         if: github.event_name == 'workflow_dispatch'
-        run: python -m pytest engine/tests/test_f4_cloud.py engine/tests/test_f4_candidates.py engine/tests/test_f4_sources.py engine/tests/test_f4_ledger.py engine/tests/test_f4_crown.py -q
+        run: python -m pytest engine/tests/test_f4*.py -q
       - name: Record or evaluate f4 observations
         id: observe
         continue-on-error: true

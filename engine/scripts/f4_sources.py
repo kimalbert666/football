@@ -374,8 +374,12 @@ def collect(root, now, include_market=True, *, pending=None, fetch=None,
             if row['status'] != 'scheduled' or not row['kickoff_at'] or not row['home_id'] or not row['away_id']:
                 continue
             minutes = (_instant(row['kickoff_at']) - queried_at).total_seconds() / 60
-            if any(abs(minutes - h) <= config.get('horizon_tolerance_minutes', 20)
-                   for h in config.get('horizons_minutes', [180, 60])):
+            old_due = any(abs(minutes - h) <= config.get('horizon_tolerance_minutes', 20)
+                          for h in config.get('horizons_minutes', [180, 60]))
+            ah_cfg = config.get('asian_handicap', {})
+            ah_due = ah_cfg.get('enabled') and any(abs(minutes - int(h)) <= tolerance
+                                                 for h, tolerance in ah_cfg.get('windows', {}).items())
+            if minutes > 0 and (old_due or ah_due):
                 due.append(row)
         crown = attach_crown(root, due, queried_at)
         sources.extend(crown.get('sources', []))

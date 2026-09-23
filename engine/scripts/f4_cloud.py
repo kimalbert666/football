@@ -94,7 +94,7 @@ def prediction_key(row):
     return (row['match_id'], stamp(instant(row['kickoff_at'])), row['horizon'], row['experiment_id'])
 
 
-def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=capture_f2,
+def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=capture_f2, ah_source=None,
         clock=lambda: datetime.now(timezone.utc)):
     config = read_json(root / 'data/f4/config.json', None)
     if not config or config['mode'] != 'shadow' or config['candidate_weight'] != 0:
@@ -107,12 +107,16 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
     if not league_scope and not tracked:
         raise ValueError('Tracked team configuration is empty')
     capture = command in ('capture', 'all')
-    settle = command in ('daily', 'all')
-    review = command in ('review', 'all')
+    settle = command in ('daily', 'all', 'monthly')
+    review = command in ('review', 'all', 'monthly')
     pending = {}
     if settle:
         outcomes = load_latest_outcomes(root)
-        for record in old:
+        ah_old = []
+        if config.get('asian_handicap', {}).get('enabled'):
+            from f4_ah import load_observations
+            ah_old = load_observations(root)
+        for record in [*old, *ah_old]:
             if (instant(record['kickoff_at']) < now
                     and outcomes.get(record['match_id'], {}).get('status') not in ('completed', 'cancelled')):
                 pending[record['match_id']] = record
@@ -215,6 +219,10 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
             score = fixture.get('score') or [None, None]
             outcome = {**fixture, 'home_score': score[0], 'away_score': score[1]}
             new_outcomes += int(save_outcome(root, outcome, observed))
+    ah_summary = None
+    if config.get('asian_handicap', {}).get('enabled'):
+        from f4_ah import run_ah
+        ah_summary = run_ah(root, fixtures, command, clock=clock, source=ah_source)
     completed_at = clock()
     summary = evaluate_ledger(root, completed_at)
     source_health = {'coverage': bundle.get('coverage', {}), 'problems': bundle.get('problems', []),
@@ -223,7 +231,9 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
               'new_predictions': new_predictions, 'new_valid_predictions': new_valid,
               'new_outcomes': new_outcomes, 'due_fixtures': len(due), 'tracked_fixtures_seen': len(fixtures),
               'skipped': skipped, 'source_health': source_health, 'f2_problems': f2.get('problems', []),
-              'automatic_promotion': False, 'automatic_wagering': False}
+              'automatic_promotion': False, 'automatic_wagering': False,
+              'asian_handicap': {k: v for k, v in (ah_summary or {}).items()
+                                 if k in ('new_valid', 'new_attempts', 'distinct_matches', 'paired_matches', 'problems')}}
     write_json(root / 'data/f4/status/latest.json', status)
     write_json(root / 'data/f4/evaluations/latest.json', summary)
     title = 'f4 英超每周复审' if command == 'review' else 'f4 英超跟踪更新'
@@ -263,6 +273,9 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
             point_text = f'{point[0]}:{point[1]}' if point else '未取得可匹配预测'
             label = f"{row.get('home')} — {row.get('away')}"
             report += f"| {label} | {row['horizon']} | {probability_text} | {point_text} | 仅记录／无投注建议 |\n"
+    if ah_summary:
+        from f4_ah import render_ah
+        report += render_ah(ah_summary)
     report_path = root / 'data/f4/reports/latest.md'
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(report.rstrip() + '\n', encoding='utf-8')
@@ -287,6 +300,34 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
     write_json(logdir / 'f4-notify-token.json', notice)
     write_json(root / 'data/f4/status/notification-latest.json', notice)
     (logdir / 'f4-issue.md').write_text(report + f'\n<!-- f4-notification:{token} -->\n', encoding='utf-8')
+    if config.get('notifications', {}).get('policy') == 'monthly_and_critical_only':
+        from f4_notices import build_notice_policy
+        from f4_ah import archive_month
+        incidents = []
+        if not bundle.get('coverage', {}).get('complete', False):
+            incidents.append({'code': 'calendar_unverified', 'source': 'espn', 'detail': '英超赛程覆盖未核验'})
+        for problem in bundle.get('problems', []):
+            incidents.append({'code': 'source_unavailable', 'source': 'f4-primary', 'detail': str(problem)})
+        if ah_summary and ah_summary.get('problems'):
+            incidents.append({'code': 'ah_source_unavailable', 'source': 'crown-asian-handicap',
+                              'detail': '; '.join(ah_summary['problems'])[:1000]})
+        archives = archive_month(root, completed_at, ah_summary)
+        policy = build_notice_policy(config, completed_at, {'critical_incidents': incidents}, last_notice,
+                                     archives, state=read_json(root / 'data/f4/status/notice-policy.json', {}))
+        write_json(root / 'data/f4/status/notice-policy.json', policy['state'])
+        notify = policy['notify']
+        token = policy.get('token') or 'research-silent'
+        if notify:
+            write_json(logdir / 'f4-notify-token.json', policy['notice'])
+            if policy['notice'].get('type') == 'monthly_report':
+                notice_report = (root / 'data/f4/reports' / ('monthly-' + policy['month'] + '.md')).read_text(encoding='utf-8')
+            else:
+                notice_report = '# f4 研究数据故障提醒\n\n'
+                notice_report += '研究期的试验方向不发送；本次是影响数据采集的故障，不能解释为没有合格比赛。\n\n'
+                for incident in policy['notice'].get('incidents', []):
+                    notice_report += f"- {incident.get('detail', incident.get('code', '数据故障'))}\n"
+                notice_report += '\n已保存的记录保留；后续任务继续检查。\n'
+            (logdir / 'f4-issue.md').write_text(notice_report + f'\n<!-- f4-notification:{token} -->\n', encoding='utf-8')
     outputs(notify=notify, notification_marker=f'f4-notification:{token}',
             report='.github/run-logs/f4-issue.md')
     if os.getenv('GITHUB_STEP_SUMMARY'):
@@ -300,7 +341,7 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('command', choices=('capture', 'daily', 'review', 'all', 'notify-ack'))
+    parser.add_argument('command', choices=('capture', 'daily', 'review', 'monthly', 'all', 'notify-ack'))
     parser.add_argument('--root', type=Path, default=ROOT)
     args = parser.parse_args()
     if args.command == 'notify-ack':
