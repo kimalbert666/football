@@ -1,0 +1,208 @@
+{
+  "evaluated_at": "2026-09-23T09:46:00.987007Z",
+  "new_valid": 0,
+  "new_attempts": 0,
+  "valid_observations": 0,
+  "distinct_matches": 0,
+  "paired_matches": 0,
+  "pairing_issues": {},
+  "line_groups": {},
+  "prospective_scores": {},
+  "research": {
+    "schema_version": "f4-ah-research-v1",
+    "status": "insufficient_data",
+    "created_at": "2026-09-23T09:46:00.986331+00:00",
+    "weight": 0,
+    "auto_promote": false,
+    "input_rows": 0,
+    "accepted_matches": 0,
+    "rejected_rows": [],
+    "duplicate_snapshots_removed": 0,
+    "data_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "minimum_samples": {
+      "train": 120,
+      "validation": 40,
+      "test": 40
+    },
+    "split": {
+      "purged": {
+        "train": 0,
+        "validation": 0
+      },
+      "train": {
+        "count": 0,
+        "match_ids": [],
+        "kickoff_from": null,
+        "kickoff_to": null
+      },
+      "validation": {
+        "count": 0,
+        "match_ids": [],
+        "kickoff_from": null,
+        "kickoff_to": null
+      },
+      "test": {
+        "count": 0,
+        "match_ids": [],
+        "kickoff_from": null,
+        "kickoff_to": null
+      }
+    },
+    "candidates": {
+      "M1": {
+        "status": "insufficient_data",
+        "weight": 0,
+        "reason": "insufficient chronological samples with required features",
+        "counts": {
+          "train": 0,
+          "validation": 0,
+          "test": 0
+        },
+        "feature_names": [
+          "home_handicap",
+          "absolute_handicap",
+          "quarter_fraction",
+          "home_log_price",
+          "away_log_price",
+          "ah_implied_home",
+          "ah_overround",
+          "log_p_home",
+          "log_p_draw",
+          "log_p_away",
+          "handicap_x_log_home_away",
+          "book_crown",
+          "book_macau",
+          "book_hkjc",
+          "book_sbobet"
+        ],
+        "missing_features": {
+          "train": [],
+          "validation": [],
+          "test": []
+        },
+        "model": null,
+        "validation": null,
+        "test": null
+      },
+      "M2": {
+        "status": "insufficient_data",
+        "weight": 0,
+        "reason": "insufficient chronological samples with required features",
+        "counts": {
+          "train": 0,
+          "validation": 0,
+          "test": 0
+        },
+        "feature_names": [
+          "home_handicap",
+          "absolute_handicap",
+          "quarter_fraction",
+          "home_log_price",
+          "away_log_price",
+          "ah_implied_home",
+          "ah_overround",
+          "log_p_home",
+          "log_p_draw",
+          "log_p_away",
+          "handicap_x_log_home_away",
+          "book_crown",
+          "book_macau",
+          "book_hkjc",
+          "book_sbobet",
+          "rating_difference"
+        ],
+        "missing_features": {
+          "train": [],
+          "validation": [],
+          "test": []
+        },
+        "model": null,
+        "validation": null,
+        "test": null
+      },
+      "M3": {
+        "status": "insufficient_data",
+        "weight": 0,
+        "reason": "insufficient chronological samples with required features",
+        "counts": {
+          "train": 0,
+          "validation": 0,
+          "test": 0
+        },
+        "feature_names": [
+          "home_handicap",
+          "absolute_handicap",
+          "quarter_fraction",
+          "home_log_price",
+          "away_log_price",
+          "ah_implied_home",
+          "ah_overround",
+          "log_p_home",
+          "log_p_draw",
+          "log_p_away",
+          "handicap_x_log_home_away",
+          "book_crown",
+          "book_macau",
+          "book_hkjc",
+          "book_sbobet",
+          "early_handicap",
+          "handicap_change",
+          "home_log_price_change",
+          "away_log_price_change",
+          "elapsed_quote_hours"
+        ],
+        "missing_features": {
+          "train": [],
+          "validation": [],
+          "test": []
+        },
+        "model": null,
+        "validation": null,
+        "test": null
+      }
+    },
+    "limitations": [
+      "provenance and availability declarations require independent audit",
+      "historical evaluation is not a saved prospective forecast",
+      "repeated testing of the same holdout cannot establish a fresh improvement",
+      "candidates remain zero-weight; no automatic promotion"
+    ],
+    "selection_metric": "validation_settlement_log_loss",
+    "regularization_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "evaluated_at": "2026-09-23T09:46:00.986547Z",
+    "research_month": "2026-09",
+    "prospective_evidence": false,
+    "automatic_promotion": false,
+    "note": "Rolling retrospective model development, not proof of a prospective advantage"
+  },
+  "by_bookmaker": {},
+  "problems": [],
+  "sources": [
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/bookmakers",
+      "status": "ok",
+      "captured_at": "2026-09-23T09:46:00.420309Z",
+      "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
+    },
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/health",
+      "status": "ok",
+      "captured_at": "2026-09-23T09:46:00.982863Z",
+      "content_sha256": "526f1529a153e8751992e024c4e1794b6481902f5ecf33357356594a260c885c"
+    },
+    {
+      "name": "infersports-crown-ah-quotes",
+      "status": "not_requested",
+      "reason": "no confirmed EPL fixture in capture window"
+    }
+  ],
+  "research_only": true,
+  "automatic_promotion": false,
+  "automatic_wagering": false
+}
