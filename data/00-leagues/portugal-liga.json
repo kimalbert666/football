@@ -1,46 +1,23 @@
 {
   "league": "portugal-liga",
   "season": "2026-27",
-  "generatedAt": "2026-09-20",
-  "roundsPlayed": 57,
+  "generatedAt": "2026-09-26",
+  "roundsPlayed": 58,
   "standings": [
     {
       "pos": 1,
-      "team": "Sp Lisbon",
-      "played": 57,
-      "won": 42,
-      "drawn": 12,
-      "lost": 3,
-      "gf": 150,
-      "ga": 42,
-      "gd": 108,
-      "pts": 138,
-      "form": "WWWWD",
-      "homeRecord": {
-        "w": 23,
-        "d": 3,
-        "l": 2
-      },
-      "awayRecord": {
-        "w": 19,
-        "d": 9,
-        "l": 1
-      }
-    },
-    {
-      "pos": 2,
       "team": "Porto",
-      "played": 57,
-      "won": 44,
+      "played": 58,
+      "won": 45,
       "drawn": 6,
       "lost": 7,
-      "gf": 116,
-      "ga": 36,
-      "gd": 80,
-      "pts": 138,
+      "gf": 119,
+      "ga": 37,
+      "gd": 82,
+      "pts": 141,
       "form": "WWWWW",
       "homeRecord": {
-        "w": 23,
+        "w": 24,
         "d": 4,
         "l": 1
       },
@@ -51,17 +28,40 @@
       }
     },
     {
+      "pos": 2,
+      "team": "Sp Lisbon",
+      "played": 58,
+      "won": 42,
+      "drawn": 13,
+      "lost": 3,
+      "gf": 152,
+      "ga": 44,
+      "gd": 108,
+      "pts": 139,
+      "form": "WWWDD",
+      "homeRecord": {
+        "w": 23,
+        "d": 4,
+        "l": 2
+      },
+      "awayRecord": {
+        "w": 19,
+        "d": 9,
+        "l": 1
+      }
+    },
+    {
       "pos": 3,
       "team": "Benfica",
-      "played": 57,
+      "played": 58,
       "won": 41,
       "drawn": 12,
-      "lost": 4,
-      "gf": 141,
-      "ga": 43,
-      "gd": 98,
+      "lost": 5,
+      "gf": 142,
+      "ga": 46,
+      "gd": 96,
       "pts": 135,
-      "form": "WWWWW",
+      "form": "WWWWL",
       "homeRecord": {
         "w": 21,
         "d": 7,
@@ -70,21 +70,21 @@
       "awayRecord": {
         "w": 20,
         "d": 5,
-        "l": 3
+        "l": 4
       }
     },
     {
       "pos": 4,
       "team": "Sp Braga",
-      "played": 56,
+      "played": 57,
       "won": 29,
-      "drawn": 16,
+      "drawn": 17,
       "lost": 11,
       "gf": 93,
       "ga": 53,
       "gd": 40,
-      "pts": 103,
-      "form": "DWWLW",
+      "pts": 104,
+      "form": "WWLWD",
       "homeRecord": {
         "w": 15,
         "d": 7,
@@ -92,25 +92,25 @@
       },
       "awayRecord": {
         "w": 14,
-        "d": 9,
+        "d": 10,
         "l": 6
       }
     },
     {
       "pos": 5,
       "team": "Santa Clara",
-      "played": 57,
+      "played": 58,
       "won": 25,
-      "drawn": 13,
+      "drawn": 14,
       "lost": 19,
       "gf": 61,
       "ga": 55,
       "gd": 6,
-      "pts": 88,
-      "form": "WWDWW",
+      "pts": 89,
+      "form": "WDWWD",
       "homeRecord": {
         "w": 15,
-        "d": 5,
+        "d": 6,
         "l": 9
       },
       "awayRecord": {
@@ -122,18 +122,18 @@
     {
       "pos": 6,
       "team": "Guimaraes",
-      "played": 57,
+      "played": 58,
       "won": 22,
-      "drawn": 17,
+      "drawn": 18,
       "lost": 18,
-      "gf": 69,
-      "ga": 66,
+      "gf": 70,
+      "ga": 67,
       "gd": 3,
-      "pts": 83,
-      "form": "LWLDL",
+      "pts": 84,
+      "form": "WLDLD",
       "homeRecord": {
         "w": 14,
-        "d": 9,
+        "d": 10,
         "l": 6
       },
       "awayRecord": {
@@ -145,22 +145,22 @@
     {
       "pos": 7,
       "team": "Famalicao",
-      "played": 57,
-      "won": 18,
+      "played": 58,
+      "won": 19,
       "drawn": 20,
       "lost": 19,
-      "gf": 69,
+      "gf": 73,
       "ga": 60,
-      "gd": 9,
-      "pts": 74,
-      "form": "LLDDD",
+      "gd": 13,
+      "pts": 77,
+      "form": "LDDDW",
       "homeRecord": {
         "w": 10,
         "d": 11,
         "l": 8
       },
       "awayRecord": {
-        "w": 8,
+        "w": 9,
         "d": 9,
         "l": 11
       }
@@ -168,15 +168,15 @@
     {
       "pos": 8,
       "team": "Moreirense",
-      "played": 57,
+      "played": 58,
       "won": 20,
-      "drawn": 14,
+      "drawn": 15,
       "lost": 23,
-      "gf": 73,
-      "ga": 87,
+      "gf": 74,
+      "ga": 88,
       "gd": -14,
-      "pts": 74,
-      "form": "LWLLW",
+      "pts": 75,
+      "form": "WLLWD",
       "homeRecord": {
         "w": 12,
         "d": 10,
@@ -184,25 +184,25 @@
       },
       "awayRecord": {
         "w": 8,
-        "d": 4,
+        "d": 5,
         "l": 17
       }
     },
     {
       "pos": 9,
       "team": "Gil Vicente",
-      "played": 56,
+      "played": 57,
       "won": 17,
-      "drawn": 18,
+      "drawn": 19,
       "lost": 21,
-      "gf": 60,
-      "ga": 63,
+      "gf": 61,
+      "ga": 64,
       "gd": -3,
-      "pts": 69,
-      "form": "WWDLL",
+      "pts": 70,
+      "form": "WDLLD",
       "homeRecord": {
         "w": 11,
-        "d": 7,
+        "d": 8,
         "l": 10
       },
       "awayRecord": {
@@ -214,19 +214,19 @@
     {
       "pos": 10,
       "team": "Estoril",
-      "played": 57,
+      "played": 58,
       "won": 17,
       "drawn": 17,
-      "lost": 23,
-      "gf": 78,
-      "ga": 90,
-      "gd": -12,
+      "lost": 24,
+      "gf": 79,
+      "ga": 92,
+      "gd": -13,
       "pts": 68,
-      "form": "LLLDL",
+      "form": "LLDLL",
       "homeRecord": {
         "w": 11,
         "d": 9,
-        "l": 9
+        "l": 10
       },
       "awayRecord": {
         "w": 6,
@@ -236,16 +236,62 @@
     },
     {
       "pos": 11,
+      "team": "Casa Pia",
+      "played": 58,
+      "won": 16,
+      "drawn": 15,
+      "lost": 27,
+      "gf": 59,
+      "ga": 92,
+      "gd": -33,
+      "pts": 63,
+      "form": "LLDLW",
+      "homeRecord": {
+        "w": 8,
+        "d": 8,
+        "l": 12
+      },
+      "awayRecord": {
+        "w": 8,
+        "d": 7,
+        "l": 15
+      }
+    },
+    {
+      "pos": 12,
+      "team": "Arouca",
+      "played": 58,
+      "won": 15,
+      "drawn": 18,
+      "lost": 25,
+      "gf": 63,
+      "ga": 98,
+      "gd": -35,
+      "pts": 63,
+      "form": "LWDLD",
+      "homeRecord": {
+        "w": 9,
+        "d": 9,
+        "l": 11
+      },
+      "awayRecord": {
+        "w": 6,
+        "d": 9,
+        "l": 14
+      }
+    },
+    {
+      "pos": 13,
       "team": "Rio Ave",
-      "played": 57,
+      "played": 58,
       "won": 14,
       "drawn": 20,
-      "lost": 23,
+      "lost": 24,
       "gf": 66,
-      "ga": 98,
-      "gd": -32,
+      "ga": 99,
+      "gd": -33,
       "pts": 62,
-      "form": "LWLLD",
+      "form": "WLLDL",
       "homeRecord": {
         "w": 8,
         "d": 12,
@@ -254,71 +300,25 @@
       "awayRecord": {
         "w": 6,
         "d": 8,
-        "l": 15
-      }
-    },
-    {
-      "pos": 12,
-      "team": "Arouca",
-      "played": 57,
-      "won": 15,
-      "drawn": 17,
-      "lost": 25,
-      "gf": 61,
-      "ga": 96,
-      "gd": -35,
-      "pts": 62,
-      "form": "WLWDL",
-      "homeRecord": {
-        "w": 9,
-        "d": 9,
-        "l": 11
-      },
-      "awayRecord": {
-        "w": 6,
-        "d": 8,
-        "l": 14
-      }
-    },
-    {
-      "pos": 13,
-      "team": "Casa Pia",
-      "played": 57,
-      "won": 15,
-      "drawn": 15,
-      "lost": 27,
-      "gf": 57,
-      "ga": 91,
-      "gd": -34,
-      "pts": 60,
-      "form": "LLLDL",
-      "homeRecord": {
-        "w": 8,
-        "d": 8,
-        "l": 12
-      },
-      "awayRecord": {
-        "w": 7,
-        "d": 7,
-        "l": 15
+        "l": 16
       }
     },
     {
       "pos": 14,
       "team": "Estrela",
-      "played": 57,
+      "played": 58,
       "won": 13,
       "drawn": 19,
-      "lost": 25,
+      "lost": 26,
       "gf": 61,
-      "ga": 89,
-      "gd": -28,
+      "ga": 91,
+      "gd": -30,
       "pts": 58,
-      "form": "DWDWD",
+      "form": "WDWDL",
       "homeRecord": {
         "w": 8,
         "d": 10,
-        "l": 11
+        "l": 12
       },
       "awayRecord": {
         "w": 5,
@@ -329,19 +329,19 @@
     {
       "pos": 15,
       "team": "Nacional",
-      "played": 57,
+      "played": 58,
       "won": 14,
       "drawn": 13,
-      "lost": 30,
+      "lost": 31,
       "gf": 60,
-      "ga": 87,
-      "gd": -27,
+      "ga": 91,
+      "gd": -31,
       "pts": 55,
-      "form": "WLLLL",
+      "form": "LLLLL",
       "homeRecord": {
         "w": 10,
         "d": 4,
-        "l": 14
+        "l": 15
       },
       "awayRecord": {
         "w": 4,
@@ -374,6 +374,29 @@
     },
     {
       "pos": 17,
+      "team": "Alverca",
+      "played": 24,
+      "won": 8,
+      "drawn": 4,
+      "lost": 12,
+      "gf": 26,
+      "ga": 38,
+      "gd": -12,
+      "pts": 28,
+      "form": "LDLWW",
+      "homeRecord": {
+        "w": 5,
+        "d": 3,
+        "l": 5
+      },
+      "awayRecord": {
+        "w": 3,
+        "d": 1,
+        "l": 7
+      }
+    },
+    {
+      "pos": 18,
       "team": "Farense",
       "played": 34,
       "won": 6,
@@ -392,29 +415,6 @@
       "awayRecord": {
         "w": 3,
         "d": 7,
-        "l": 7
-      }
-    },
-    {
-      "pos": 18,
-      "team": "Alverca",
-      "played": 23,
-      "won": 7,
-      "drawn": 4,
-      "lost": 12,
-      "gf": 25,
-      "ga": 38,
-      "gd": -13,
-      "pts": 25,
-      "form": "DLDLW",
-      "homeRecord": {
-        "w": 4,
-        "d": 3,
-        "l": 5
-      },
-      "awayRecord": {
-        "w": 3,
-        "d": 1,
         "l": 7
       }
     },
@@ -467,22 +467,22 @@
     {
       "pos": 21,
       "team": "Academico Viseu",
-      "played": 6,
-      "won": 2,
+      "played": 7,
+      "won": 3,
       "drawn": 2,
       "lost": 2,
-      "gf": 7,
+      "gf": 9,
       "ga": 9,
-      "gd": -2,
-      "pts": 8,
-      "form": "LDLWW",
+      "gd": 0,
+      "pts": 11,
+      "form": "DLWWW",
       "homeRecord": {
         "w": 1,
         "d": 0,
         "l": 2
       },
       "awayRecord": {
-        "w": 1,
+        "w": 2,
         "d": 2,
         "l": 0
       }
@@ -490,15 +490,15 @@
     {
       "pos": 22,
       "team": "Maritimo",
-      "played": 6,
+      "played": 7,
       "won": 2,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 3,
-      "gf": 7,
-      "ga": 11,
+      "gf": 8,
+      "ga": 12,
       "gd": -4,
-      "pts": 7,
-      "form": "WDLLL",
+      "pts": 8,
+      "form": "DLLLD",
       "homeRecord": {
         "w": 1,
         "d": 1,
@@ -506,24 +506,24 @@
       },
       "awayRecord": {
         "w": 1,
-        "d": 0,
+        "d": 1,
         "l": 2
       }
     }
   ],
   "leagueStats": {
-    "avgGoals": 2.639,
-    "homeWinRate": 0.414,
-    "drawRate": 0.264,
-    "upsetRate": 0.223,
+    "avgGoals": 2.635,
+    "homeWinRate": 0.411,
+    "drawRate": 0.267,
+    "upsetRate": 0.225,
     "topScores": [
       {
         "score": "1-1",
-        "count": 57
+        "count": 59
       },
       {
         "score": "1-0",
-        "count": 55
+        "count": 56
       },
       {
         "score": "0-1",
@@ -531,7 +531,7 @@
       }
     ],
     "computedFrom": "fd",
-    "matchesUsed": 512,
+    "matchesUsed": 521,
     "seasonsMerged": [
       "2425",
       "2526",
@@ -540,8 +540,8 @@
   },
   "context": {
     "titleRace": {
-      "leader": "Sp Lisbon",
-      "gap": 0
+      "leader": "Porto",
+      "gap": 2
     },
     "relegationZone": [
       20,

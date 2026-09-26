@@ -1,0 +1,526 @@
+{
+ "structure": "new",
+ "date": "2026-09-26",
+ "seq": 22,
+ "tiers": {
+  "base": {
+   "cost": 0,
+   "legs": [
+    {
+     "matchNumStr": "周一008",
+     "match": "国际米兰-乌迪内斯",
+     "play": "had",
+     "pick": "主胜",
+     "odds": 1.15,
+     "p": 0.7845,
+     "tier": "dan"
+    },
+    {
+     "matchNumStr": "周一003",
+     "match": "科莫-帕尔马",
+     "play": "had",
+     "pick": "主胜",
+     "odds": 1.14,
+     "p": 0.7453,
+     "tier": "std"
+    },
+    {
+     "matchNumStr": "周一012",
+     "match": "布拉加-埃斯托里",
+     "play": "had",
+     "pick": "主胜",
+     "odds": 1.35,
+     "p": 0.6535,
+     "tier": "std"
+    },
+    {
+     "matchNumStr": "周一004",
+     "match": "都灵-罗马",
+     "play": "had",
+     "pick": "客胜",
+     "odds": 1.47,
+     "p": 0.6354,
+     "tier": "std"
+    }
+   ],
+   "play": "had-3*4*5",
+   "note": "保底关档（合格腿4<5，不硬凑）",
+   "coverGate": null
+  },
+  "upset": {
+   "shape": "pool-4x1",
+   "cost": 2,
+   "legs": [
+    {
+     "matchNumStr": "周一010",
+     "match": "利兹联 vs 纽卡斯尔",
+     "play": "crs",
+     "pick": "2:0",
+     "odds": 12.0,
+     "q": 0.1007,
+     "ev": 0.2084
+    },
+    {
+     "matchNumStr": "周一011",
+     "match": "比利亚雷 vs 贝蒂斯",
+     "play": "crs",
+     "pick": "1:2",
+     "odds": 12.0,
+     "q": 0.0974,
+     "ev": 0.1688
+    },
+    {
+     "matchNumStr": "周一002",
+     "match": "国际图尔 vs 瓦萨",
+     "play": "crs",
+     "pick": "0:1",
+     "odds": 13.0,
+     "q": 0.0753,
+     "ev": -0.0211
+    },
+    {
+     "matchNumStr": "周一009",
+     "match": "圣旺红星 vs 梅斯",
+     "play": "hafu",
+     "pick": "aa",
+     "odds": 4.5,
+     "q": 0.2107,
+     "ev": -0.0518
+    }
+   ],
+   "multiplier": 1,
+   "bets": [
+    {
+     "legs": [
+      0,
+      1,
+      2,
+      3
+     ],
+     "multiplier": 1
+    }
+   ],
+   "note": "跨池4串1(木桶≤4关)"
+  },
+  "lottery": {
+   "shape": "lottery-7x1",
+   "cost": 2,
+   "legs": [
+    {
+     "matchNumStr": "周一004",
+     "match": "都灵-罗马",
+     "play": "had",
+     "pick": "客胜",
+     "odds": 1.47,
+     "p": 0.6354,
+     "ev": -0.066
+    },
+    {
+     "matchNumStr": "周一009",
+     "match": "圣旺红星-梅斯",
+     "play": "hhad",
+     "pick": "让球客胜",
+     "odds": 1.43,
+     "p": 0.6339,
+     "ev": -0.0935,
+     "goalLine": -1.0
+    },
+    {
+     "matchNumStr": "周一008",
+     "match": "国际米兰-乌迪内斯",
+     "play": "had",
+     "pick": "主胜",
+     "odds": 1.15,
+     "p": 0.7845,
+     "ev": -0.0978
+    },
+    {
+     "matchNumStr": "周一012",
+     "match": "布拉加-埃斯托里",
+     "play": "had",
+     "pick": "主胜",
+     "odds": 1.35,
+     "p": 0.6535,
+     "ev": -0.1178
+    },
+    {
+     "matchNumStr": "周一005",
+     "match": "佐加顿斯-盖斯",
+     "play": "had",
+     "pick": "主胜",
+     "odds": 1.46,
+     "p": 0.5826,
+     "ev": -0.1493
+    },
+    {
+     "matchNumStr": "周一003",
+     "match": "科莫-帕尔马",
+     "play": "had",
+     "pick": "主胜",
+     "odds": 1.14,
+     "p": 0.7453,
+     "ev": -0.1504
+    },
+    {
+     "matchNumStr": "周一010",
+     "match": "利兹联-纽卡斯尔",
+     "play": "hhad",
+     "pick": "让球客胜",
+     "odds": 1.52,
+     "p": 0.5543,
+     "ev": -0.1574,
+     "goalLine": -1.0
+    }
+   ],
+   "bets": [
+    {
+     "legs": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+     ],
+     "multiplier": 1
+    }
+   ],
+   "expOdds": 8.3,
+   "winIfHit": 17.0,
+   "note": "7串1×1倍=2元 · 全中≈17元 · 无预算管理(设计§四红线废除)",
+   "divergenceBlocked": [
+    {
+     "matchNumStr": "周一003",
+     "match": "科莫-帕尔马",
+     "play": "hhad",
+     "pick": "让球主胜",
+     "p_fused": 0.2687,
+     "p_mkt": 0.3209,
+     "diff_pp": 5.2
+    },
+    {
+     "matchNumStr": "周一003",
+     "match": "科莫-帕尔马",
+     "play": "hhad",
+     "pick": "让球客胜",
+     "p_fused": 0.5065,
+     "p_mkt": 0.4519,
+     "diff_pp": 5.5
+    }
+   ]
+  }
+ },
+ "totalCost": 4,
+ "cards": [
+  {
+   "code": "周一002",
+   "match": "国际图尔 vs 瓦萨",
+   "candidates": [
+    {
+     "code": "周一002",
+     "match": "国际图尔 vs 瓦萨",
+     "pool": "crs",
+     "pick": "0:1",
+     "q": 0.0753,
+     "odds": 13.0,
+     "ev": -0.0211
+    },
+    {
+     "code": "周一002",
+     "match": "国际图尔 vs 瓦萨",
+     "pool": "ttg",
+     "pick": "s2",
+     "q": 0.2337,
+     "odds": 3.5,
+     "ev": -0.1821
+    },
+    {
+     "code": "周一002",
+     "match": "国际图尔 vs 瓦萨",
+     "pool": "ttg",
+     "pick": "s3",
+     "q": 0.2257,
+     "odds": 3.55,
+     "ev": -0.1988
+    },
+    {
+     "code": "周一002",
+     "match": "国际图尔 vs 瓦萨",
+     "pool": "hafu",
+     "pick": "hh",
+     "q": 0.2494,
+     "odds": 2.37,
+     "ev": -0.4089
+    },
+    {
+     "code": "周一002",
+     "match": "国际图尔 vs 瓦萨",
+     "pool": "hafu",
+     "pick": "aa",
+     "q": 0.1726,
+     "odds": 8.7,
+     "ev": 0.5016,
+     "divergent": true
+    }
+   ],
+   "rec_base": {
+    "code": "周一002",
+    "match": "国际图尔 vs 瓦萨",
+    "pool": "hafu",
+    "pick": "aa",
+    "q": 0.1726,
+    "odds": 8.7,
+    "ev": 0.5016,
+    "divergent": true
+   },
+   "rec_upset": {
+    "code": "周一002",
+    "match": "国际图尔 vs 瓦萨",
+    "pool": "crs",
+    "pick": "0:1",
+    "q": 0.0753,
+    "odds": 13.0,
+    "ev": -0.0211
+   },
+   "flags": [
+    "low_conf",
+    "pure_template",
+    "divergence"
+   ]
+  },
+  {
+   "code": "周一009",
+   "match": "圣旺红星 vs 梅斯",
+   "candidates": [
+    {
+     "code": "周一009",
+     "match": "圣旺红星 vs 梅斯",
+     "pool": "ttg",
+     "pick": "s2",
+     "q": 0.2291,
+     "odds": 3.2,
+     "ev": -0.2669
+    },
+    {
+     "code": "周一009",
+     "match": "圣旺红星 vs 梅斯",
+     "pool": "hafu",
+     "pick": "aa",
+     "q": 0.2107,
+     "odds": 4.5,
+     "ev": -0.0518
+    },
+    {
+     "code": "周一009",
+     "match": "圣旺红星 vs 梅斯",
+     "pool": "hafu",
+     "pick": "hh",
+     "q": 0.1896,
+     "odds": 4.2,
+     "ev": -0.2037
+    },
+    {
+     "code": "周一009",
+     "match": "圣旺红星 vs 梅斯",
+     "pool": "crs",
+     "pick": "0:0",
+     "q": 0.1271,
+     "odds": 11.0,
+     "ev": 0.3981,
+     "divergent": true
+    },
+    {
+     "code": "周一009",
+     "match": "圣旺红星 vs 梅斯",
+     "pool": "ttg",
+     "pick": "s1",
+     "q": 0.2537,
+     "odds": 4.8,
+     "ev": 0.2178,
+     "divergent": true
+    }
+   ],
+   "rec_base": {
+    "code": "周一009",
+    "match": "圣旺红星 vs 梅斯",
+    "pool": "crs",
+    "pick": "0:0",
+    "q": 0.1271,
+    "odds": 11.0,
+    "ev": 0.3981,
+    "divergent": true
+   },
+   "rec_upset": {
+    "code": "周一009",
+    "match": "圣旺红星 vs 梅斯",
+    "pool": "hafu",
+    "pick": "aa",
+    "q": 0.2107,
+    "odds": 4.5,
+    "ev": -0.0518
+   },
+   "flags": [
+    "divergence"
+   ]
+  },
+  {
+   "code": "周一010",
+   "match": "利兹联 vs 纽卡斯尔",
+   "candidates": [
+    {
+     "code": "周一010",
+     "match": "利兹联 vs 纽卡斯尔",
+     "pool": "crs",
+     "pick": "2:0",
+     "q": 0.1007,
+     "odds": 12.0,
+     "ev": 0.2084
+    },
+    {
+     "code": "周一010",
+     "match": "利兹联 vs 纽卡斯尔",
+     "pool": "ttg",
+     "pick": "s2",
+     "q": 0.2533,
+     "odds": 3.75,
+     "ev": -0.0501
+    },
+    {
+     "code": "周一010",
+     "match": "利兹联 vs 纽卡斯尔",
+     "pool": "ttg",
+     "pick": "s3",
+     "q": 0.2236,
+     "odds": 3.65,
+     "ev": -0.1839
+    },
+    {
+     "code": "周一010",
+     "match": "利兹联 vs 纽卡斯尔",
+     "pool": "hafu",
+     "pick": "hh",
+     "q": 0.3135,
+     "odds": 3.7,
+     "ev": 0.16,
+     "divergent": true
+    },
+    {
+     "code": "周一010",
+     "match": "利兹联 vs 纽卡斯尔",
+     "pool": "hafu",
+     "pick": "dh",
+     "q": 0.2119,
+     "odds": 5.5,
+     "ev": 0.1655,
+     "divergent": true
+    }
+   ],
+   "rec_base": {
+    "code": "周一010",
+    "match": "利兹联 vs 纽卡斯尔",
+    "pool": "hafu",
+    "pick": "hh",
+    "q": 0.3135,
+    "odds": 3.7,
+    "ev": 0.16,
+    "divergent": true
+   },
+   "rec_upset": {
+    "code": "周一010",
+    "match": "利兹联 vs 纽卡斯尔",
+    "pool": "crs",
+    "pick": "2:0",
+    "q": 0.1007,
+    "odds": 12.0,
+    "ev": 0.2084
+   },
+   "flags": [
+    "divergence"
+   ]
+  },
+  {
+   "code": "周一011",
+   "match": "比利亚雷 vs 贝蒂斯",
+   "candidates": [
+    {
+     "code": "周一011",
+     "match": "比利亚雷 vs 贝蒂斯",
+     "pool": "crs",
+     "pick": "1:2",
+     "q": 0.0974,
+     "odds": 12.0,
+     "ev": 0.1688
+    },
+    {
+     "code": "周一011",
+     "match": "比利亚雷 vs 贝蒂斯",
+     "pool": "ttg",
+     "pick": "s3",
+     "q": 0.2425,
+     "odds": 3.6,
+     "ev": -0.127
+    },
+    {
+     "code": "周一011",
+     "match": "比利亚雷 vs 贝蒂斯",
+     "pool": "ttg",
+     "pick": "s2",
+     "q": 0.2234,
+     "odds": 4.1,
+     "ev": -0.0841
+    },
+    {
+     "code": "周一011",
+     "match": "比利亚雷 vs 贝蒂斯",
+     "pool": "hafu",
+     "pick": "hh",
+     "q": 0.1855,
+     "odds": 2.85,
+     "ev": -0.4713
+    },
+    {
+     "code": "周一011",
+     "match": "比利亚雷 vs 贝蒂斯",
+     "pool": "hafu",
+     "pick": "aa",
+     "q": 0.2529,
+     "odds": 6.0,
+     "ev": 0.5174,
+     "divergent": true
+    }
+   ],
+   "rec_base": {
+    "code": "周一011",
+    "match": "比利亚雷 vs 贝蒂斯",
+    "pool": "hafu",
+    "pick": "aa",
+    "q": 0.2529,
+    "odds": 6.0,
+    "ev": 0.5174,
+    "divergent": true
+   },
+   "rec_upset": {
+    "code": "周一011",
+    "match": "比利亚雷 vs 贝蒂斯",
+    "pool": "crs",
+    "pick": "1:2",
+    "q": 0.0974,
+    "odds": 12.0,
+    "ev": 0.1688
+   },
+   "flags": [
+    "divergence"
+   ]
+  }
+ ],
+ "ranAt": "2026-09-26",
+ "approved": false,
+ "warnings": [
+  "dc_divergence_blocked: 彩票档熔断2选项(|p_fused−p_mkt|≥5%)——周一003让球主胜5.2pp、周一003让球客胜5.5pp",
+  "stale_live: sporttery_matches fetchedAt=2026-09-14 非当日，建议先 run.py update",
+  "stale_live: sporttery_matches fetchedAt older than 7 days"
+ ],
+ "method": "freq",
+ "dataAsOf": "2026-09-14"
+}

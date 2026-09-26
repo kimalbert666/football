@@ -1,8 +1,8 @@
 {
   "league": "italy-serie-b",
   "season": "2026-27",
-  "generatedAt": "2026-09-20",
-  "roundsPlayed": 51,
+  "generatedAt": "2026-09-26",
+  "roundsPlayed": 52,
   "standings": [
     {
       "pos": 1,
@@ -30,15 +30,15 @@
     {
       "pos": 2,
       "team": "Pisa",
-      "played": 42,
+      "played": 43,
       "won": 24,
-      "drawn": 8,
+      "drawn": 9,
       "lost": 10,
-      "gf": 68,
-      "ga": 43,
+      "gf": 70,
+      "ga": 45,
       "gd": 25,
-      "pts": 80,
-      "form": "WLWWL",
+      "pts": 81,
+      "form": "LWWLD",
       "homeRecord": {
         "w": 14,
         "d": 4,
@@ -46,24 +46,24 @@
       },
       "awayRecord": {
         "w": 10,
-        "d": 4,
+        "d": 5,
         "l": 6
       }
     },
     {
       "pos": 3,
       "team": "Palermo",
-      "played": 51,
-      "won": 21,
+      "played": 52,
+      "won": 22,
       "drawn": 15,
       "lost": 15,
-      "gf": 70,
-      "ga": 52,
-      "gd": 18,
-      "pts": 78,
-      "form": "LWWWD",
+      "gf": 72,
+      "ga": 53,
+      "gd": 19,
+      "pts": 81,
+      "form": "WWWDW",
       "homeRecord": {
-        "w": 12,
+        "w": 13,
         "d": 8,
         "l": 6
       },
@@ -76,15 +76,15 @@
     {
       "pos": 4,
       "team": "Cesena",
-      "played": 51,
+      "played": 52,
       "won": 20,
-      "drawn": 16,
+      "drawn": 17,
       "lost": 15,
-      "gf": 66,
-      "ga": 63,
+      "gf": 67,
+      "ga": 64,
       "gd": 3,
-      "pts": 76,
-      "form": "WDWDD",
+      "pts": 77,
+      "form": "DWDDD",
       "homeRecord": {
         "w": 8,
         "d": 12,
@@ -92,24 +92,24 @@
       },
       "awayRecord": {
         "w": 12,
-        "d": 4,
+        "d": 5,
         "l": 10
       }
     },
     {
       "pos": 5,
       "team": "Modena",
-      "played": 51,
-      "won": 18,
+      "played": 52,
+      "won": 19,
       "drawn": 19,
       "lost": 14,
-      "gf": 70,
-      "ga": 58,
-      "gd": 12,
-      "pts": 73,
-      "form": "WWWLD",
+      "gf": 72,
+      "ga": 59,
+      "gd": 13,
+      "pts": 76,
+      "form": "WWLDW",
       "homeRecord": {
-        "w": 10,
+        "w": 11,
         "d": 9,
         "l": 6
       },
@@ -122,18 +122,18 @@
     {
       "pos": 6,
       "team": "Juve Stabia",
-      "played": 51,
+      "played": 52,
       "won": 18,
-      "drawn": 19,
+      "drawn": 20,
       "lost": 14,
-      "gf": 57,
-      "ga": 57,
+      "gf": 58,
+      "ga": 58,
       "gd": 0,
-      "pts": 73,
-      "form": "DLWLD",
+      "pts": 74,
+      "form": "LWLDD",
       "homeRecord": {
         "w": 12,
-        "d": 6,
+        "d": 7,
         "l": 6
       },
       "awayRecord": {
@@ -167,19 +167,42 @@
     },
     {
       "pos": 8,
-      "team": "Cremonese",
-      "played": 42,
+      "team": "Sudtirol",
+      "played": 52,
       "won": 17,
-      "drawn": 14,
+      "drawn": 16,
+      "lost": 19,
+      "gf": 71,
+      "ga": 72,
+      "gd": -1,
+      "pts": 67,
+      "form": "WDWDW",
+      "homeRecord": {
+        "w": 10,
+        "d": 8,
+        "l": 9
+      },
+      "awayRecord": {
+        "w": 7,
+        "d": 8,
+        "l": 10
+      }
+    },
+    {
+      "pos": 9,
+      "team": "Cremonese",
+      "played": 43,
+      "won": 17,
+      "drawn": 15,
       "lost": 11,
       "gf": 67,
       "ga": 51,
       "gd": 16,
-      "pts": 65,
-      "form": "LLLWD",
+      "pts": 66,
+      "form": "LLWDD",
       "homeRecord": {
         "w": 8,
-        "d": 8,
+        "d": 9,
         "l": 5
       },
       "awayRecord": {
@@ -189,17 +212,17 @@
       }
     },
     {
-      "pos": 9,
+      "pos": 10,
       "team": "Catanzaro",
-      "played": 51,
+      "played": 52,
       "won": 13,
       "drawn": 26,
-      "lost": 12,
-      "gf": 63,
-      "ga": 61,
-      "gd": 2,
+      "lost": 13,
+      "gf": 64,
+      "ga": 63,
+      "gd": 1,
       "pts": 65,
-      "form": "WLLLW",
+      "form": "LLLWL",
       "homeRecord": {
         "w": 9,
         "d": 12,
@@ -208,48 +231,25 @@
       "awayRecord": {
         "w": 4,
         "d": 14,
-        "l": 8
-      }
-    },
-    {
-      "pos": 10,
-      "team": "Sudtirol",
-      "played": 51,
-      "won": 16,
-      "drawn": 16,
-      "lost": 19,
-      "gf": 67,
-      "ga": 71,
-      "gd": -4,
-      "pts": 64,
-      "form": "LWDWD",
-      "homeRecord": {
-        "w": 10,
-        "d": 8,
         "l": 9
-      },
-      "awayRecord": {
-        "w": 6,
-        "d": 8,
-        "l": 10
       }
     },
     {
       "pos": 11,
       "team": "Carrarese",
-      "played": 51,
+      "played": 52,
       "won": 14,
       "drawn": 18,
-      "lost": 19,
+      "lost": 20,
       "gf": 57,
-      "ga": 65,
-      "gd": -8,
+      "ga": 66,
+      "gd": -9,
       "pts": 60,
-      "form": "WLDLL",
+      "form": "LDLLL",
       "homeRecord": {
         "w": 12,
         "d": 7,
-        "l": 7
+        "l": 8
       },
       "awayRecord": {
         "w": 2,
@@ -260,18 +260,18 @@
     {
       "pos": 12,
       "team": "Mantova",
-      "played": 51,
+      "played": 52,
       "won": 14,
-      "drawn": 17,
+      "drawn": 18,
       "lost": 20,
-      "gf": 61,
-      "ga": 74,
+      "gf": 63,
+      "ga": 76,
       "gd": -13,
-      "pts": 59,
-      "form": "LWWDW",
+      "pts": 60,
+      "form": "WWDWD",
       "homeRecord": {
         "w": 11,
-        "d": 8,
+        "d": 9,
         "l": 6
       },
       "awayRecord": {
@@ -352,17 +352,17 @@
     {
       "pos": 16,
       "team": "Sampdoria",
-      "played": 51,
-      "won": 9,
+      "played": 52,
+      "won": 10,
       "drawn": 21,
       "lost": 21,
-      "gf": 50,
-      "ga": 71,
-      "gd": -21,
-      "pts": 48,
-      "form": "DDLLL",
+      "gf": 52,
+      "ga": 72,
+      "gd": -20,
+      "pts": 51,
+      "form": "DLLLW",
       "homeRecord": {
-        "w": 7,
+        "w": 8,
         "d": 9,
         "l": 9
       },
@@ -467,15 +467,15 @@
     {
       "pos": 21,
       "team": "Padova",
-      "played": 13,
+      "played": 14,
       "won": 5,
       "drawn": 4,
-      "lost": 4,
-      "gf": 14,
-      "ga": 15,
-      "gd": -1,
+      "lost": 5,
+      "gf": 15,
+      "ga": 17,
+      "gd": -2,
       "pts": 19,
-      "form": "DWDLW",
+      "form": "WDLWL",
       "homeRecord": {
         "w": 2,
         "d": 3,
@@ -484,21 +484,21 @@
       "awayRecord": {
         "w": 3,
         "d": 1,
-        "l": 3
+        "l": 4
       }
     },
     {
       "pos": 22,
       "team": "Avellino",
-      "played": 13,
+      "played": 14,
       "won": 5,
       "drawn": 4,
-      "lost": 4,
-      "gf": 17,
-      "ga": 18,
-      "gd": -1,
+      "lost": 5,
+      "gf": 18,
+      "ga": 21,
+      "gd": -3,
       "pts": 19,
-      "form": "LLWWD",
+      "form": "LWWDL",
       "homeRecord": {
         "w": 3,
         "d": 2,
@@ -507,7 +507,7 @@
       "awayRecord": {
         "w": 2,
         "d": 2,
-        "l": 2
+        "l": 3
       }
     },
     {
@@ -536,15 +536,15 @@
     {
       "pos": 24,
       "team": "Empoli",
-      "played": 13,
+      "played": 14,
       "won": 4,
       "drawn": 4,
-      "lost": 5,
-      "gf": 15,
-      "ga": 20,
-      "gd": -5,
+      "lost": 6,
+      "gf": 16,
+      "ga": 22,
+      "gd": -6,
       "pts": 16,
-      "form": "LWLWL",
+      "form": "WLWLL",
       "homeRecord": {
         "w": 2,
         "d": 4,
@@ -553,21 +553,21 @@
       "awayRecord": {
         "w": 2,
         "d": 0,
-        "l": 4
+        "l": 5
       }
     },
     {
       "pos": 25,
       "team": "Virtus Entella",
-      "played": 13,
+      "played": 14,
       "won": 3,
-      "drawn": 5,
+      "drawn": 6,
       "lost": 5,
       "gf": 17,
       "ga": 18,
       "gd": -1,
-      "pts": 14,
-      "form": "DLLDW",
+      "pts": 15,
+      "form": "LLDWD",
       "homeRecord": {
         "w": 2,
         "d": 4,
@@ -575,7 +575,7 @@
       },
       "awayRecord": {
         "w": 1,
-        "d": 1,
+        "d": 2,
         "l": 4
       }
     },
@@ -605,17 +605,17 @@
     {
       "pos": 27,
       "team": "Ascoli",
-      "played": 4,
-      "won": 2,
+      "played": 5,
+      "won": 3,
       "drawn": 1,
       "lost": 1,
-      "gf": 4,
-      "ga": 3,
-      "gd": 1,
-      "pts": 7,
-      "form": "WDWL",
+      "gf": 7,
+      "ga": 4,
+      "gd": 3,
+      "pts": 10,
+      "form": "WDWLW",
       "homeRecord": {
-        "w": 1,
+        "w": 2,
         "d": 1,
         "l": 0
       },
@@ -627,6 +627,52 @@
     },
     {
       "pos": 28,
+      "team": "Verona",
+      "played": 5,
+      "won": 2,
+      "drawn": 1,
+      "lost": 2,
+      "gf": 10,
+      "ga": 7,
+      "gd": 3,
+      "pts": 7,
+      "form": "LDWLW",
+      "homeRecord": {
+        "w": 2,
+        "d": 0,
+        "l": 1
+      },
+      "awayRecord": {
+        "w": 0,
+        "d": 1,
+        "l": 1
+      }
+    },
+    {
+      "pos": 29,
+      "team": "Benevento",
+      "played": 5,
+      "won": 2,
+      "drawn": 1,
+      "lost": 2,
+      "gf": 6,
+      "ga": 5,
+      "gd": 1,
+      "pts": 7,
+      "form": "LDLWW",
+      "homeRecord": {
+        "w": 1,
+        "d": 1,
+        "l": 1
+      },
+      "awayRecord": {
+        "w": 1,
+        "d": 0,
+        "l": 1
+      }
+    },
+    {
+      "pos": 30,
       "team": "Pescara",
       "played": 9,
       "won": 1,
@@ -649,21 +695,21 @@
       }
     },
     {
-      "pos": 29,
+      "pos": 31,
       "team": "Arezzo",
-      "played": 4,
+      "played": 5,
       "won": 2,
       "drawn": 0,
-      "lost": 2,
-      "gf": 5,
-      "ga": 9,
-      "gd": -4,
+      "lost": 3,
+      "gf": 6,
+      "ga": 13,
+      "gd": -7,
       "pts": 6,
-      "form": "WLLW",
+      "form": "WLLWL",
       "homeRecord": {
         "w": 0,
         "d": 0,
-        "l": 1
+        "l": 2
       },
       "awayRecord": {
         "w": 2,
@@ -672,17 +718,17 @@
       }
     },
     {
-      "pos": 30,
+      "pos": 32,
       "team": "Vicenza",
-      "played": 4,
+      "played": 5,
       "won": 1,
       "drawn": 2,
-      "lost": 1,
-      "gf": 6,
-      "ga": 8,
-      "gd": -2,
+      "lost": 2,
+      "gf": 7,
+      "ga": 10,
+      "gd": -3,
       "pts": 5,
-      "form": "WLDD",
+      "form": "WLDDL",
       "homeRecord": {
         "w": 1,
         "d": 1,
@@ -691,77 +737,31 @@
       "awayRecord": {
         "w": 0,
         "d": 1,
-        "l": 1
-      }
-    },
-    {
-      "pos": 31,
-      "team": "Verona",
-      "played": 4,
-      "won": 1,
-      "drawn": 1,
-      "lost": 2,
-      "gf": 8,
-      "ga": 6,
-      "gd": 2,
-      "pts": 4,
-      "form": "LDWL",
-      "homeRecord": {
-        "w": 1,
-        "d": 0,
-        "l": 1
-      },
-      "awayRecord": {
-        "w": 0,
-        "d": 1,
-        "l": 1
-      }
-    },
-    {
-      "pos": 32,
-      "team": "Benevento",
-      "played": 4,
-      "won": 1,
-      "drawn": 1,
-      "lost": 2,
-      "gf": 5,
-      "ga": 5,
-      "gd": 0,
-      "pts": 4,
-      "form": "LDLW",
-      "homeRecord": {
-        "w": 1,
-        "d": 1,
-        "l": 1
-      },
-      "awayRecord": {
-        "w": 0,
-        "d": 0,
-        "l": 1
+        "l": 2
       }
     }
   ],
   "leagueStats": {
-    "avgGoals": 2.49,
-    "homeWinRate": 0.4,
-    "drawRate": 0.341,
-    "upsetRate": 0.325,
+    "avgGoals": 2.496,
+    "homeWinRate": 0.402,
+    "drawRate": 0.34,
+    "upsetRate": 0.321,
     "topScores": [
       {
         "score": "1-1",
-        "count": 79
+        "count": 80
+      },
+      {
+        "score": "2-1",
+        "count": 55
       },
       {
         "score": "1-0",
         "count": 51
-      },
-      {
-        "score": "2-1",
-        "count": 51
       }
     ],
     "computedFrom": "fd",
-    "matchesUsed": 510,
+    "matchesUsed": 520,
     "seasonsMerged": [
       "2425",
       "2526",
@@ -771,7 +771,7 @@
   "context": {
     "titleRace": {
       "leader": "Sassuolo",
-      "gap": 2
+      "gap": 1
     },
     "relegationZone": [
       30,

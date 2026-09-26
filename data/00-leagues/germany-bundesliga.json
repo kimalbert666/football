@@ -1,23 +1,23 @@
 {
   "league": "germany-bundesliga",
   "season": "2026-27",
-  "generatedAt": "2026-09-20",
-  "roundsPlayed": 54,
+  "generatedAt": "2026-09-26",
+  "roundsPlayed": 55,
   "standings": [
     {
       "pos": 1,
       "team": "Bayern Munich",
-      "played": 54,
-      "won": 42,
+      "played": 55,
+      "won": 43,
       "drawn": 10,
       "lost": 2,
-      "gf": 172,
+      "gf": 179,
       "ga": 47,
-      "gd": 125,
-      "pts": 136,
-      "form": "WWWDW",
+      "gd": 132,
+      "pts": 139,
+      "form": "WWDWW",
       "homeRecord": {
-        "w": 23,
+        "w": 24,
         "d": 3,
         "l": 1
       },
@@ -29,41 +29,18 @@
     },
     {
       "pos": 2,
-      "team": "Dortmund",
+      "team": "Leverkusen",
       "played": 54,
       "won": 30,
-      "drawn": 12,
-      "lost": 12,
-      "gf": 111,
-      "ga": 68,
-      "gd": 43,
-      "pts": 102,
-      "form": "DWWWW",
-      "homeRecord": {
-        "w": 19,
-        "d": 5,
-        "l": 3
-      },
-      "awayRecord": {
-        "w": 11,
-        "d": 7,
-        "l": 9
-      }
-    },
-    {
-      "pos": 3,
-      "team": "Leverkusen",
-      "played": 53,
-      "won": 29,
       "drawn": 15,
       "lost": 9,
-      "gf": 114,
+      "gf": 116,
       "ga": 72,
-      "gd": 42,
-      "pts": 102,
-      "form": "WLLWD",
+      "gd": 44,
+      "pts": 105,
+      "form": "LLWDW",
       "homeRecord": {
-        "w": 16,
+        "w": 17,
         "d": 5,
         "l": 6
       },
@@ -74,20 +51,43 @@
       }
     },
     {
+      "pos": 3,
+      "team": "Dortmund",
+      "played": 55,
+      "won": 31,
+      "drawn": 12,
+      "lost": 12,
+      "gf": 112,
+      "ga": 68,
+      "gd": 44,
+      "pts": 105,
+      "form": "WWWWW",
+      "homeRecord": {
+        "w": 19,
+        "d": 5,
+        "l": 3
+      },
+      "awayRecord": {
+        "w": 12,
+        "d": 7,
+        "l": 9
+      }
+    },
+    {
       "pos": 4,
       "team": "Ein Frankfurt",
-      "played": 54,
+      "played": 55,
       "won": 25,
-      "drawn": 15,
+      "drawn": 16,
       "lost": 14,
-      "gf": 110,
-      "ga": 90,
+      "gf": 112,
+      "ga": 92,
       "gd": 20,
-      "pts": 90,
-      "form": "DLDLW",
+      "pts": 91,
+      "form": "LDLWD",
       "homeRecord": {
         "w": 14,
-        "d": 6,
+        "d": 7,
         "l": 6
       },
       "awayRecord": {
@@ -99,15 +99,15 @@
     {
       "pos": 5,
       "team": "RB Leipzig",
-      "played": 53,
+      "played": 54,
       "won": 25,
       "drawn": 14,
-      "lost": 14,
+      "lost": 15,
       "gf": 94,
-      "ga": 70,
-      "gd": 24,
+      "ga": 72,
+      "gd": 22,
       "pts": 89,
-      "form": "LWWLW",
+      "form": "WWLWL",
       "homeRecord": {
         "w": 17,
         "d": 6,
@@ -116,21 +116,21 @@
       "awayRecord": {
         "w": 8,
         "d": 8,
-        "l": 10
+        "l": 11
       }
     },
     {
       "pos": 6,
       "team": "Freiburg",
-      "played": 54,
+      "played": 55,
       "won": 25,
-      "drawn": 12,
+      "drawn": 13,
       "lost": 17,
-      "gf": 86,
-      "ga": 83,
+      "gf": 88,
+      "ga": 85,
       "gd": 3,
-      "pts": 87,
-      "form": "WLWWW",
+      "pts": 88,
+      "form": "LWWWD",
       "homeRecord": {
         "w": 15,
         "d": 6,
@@ -138,26 +138,26 @@
       },
       "awayRecord": {
         "w": 10,
-        "d": 6,
+        "d": 7,
         "l": 11
       }
     },
     {
       "pos": 7,
       "team": "Stuttgart",
-      "played": 54,
+      "played": 55,
       "won": 25,
       "drawn": 10,
-      "lost": 19,
+      "lost": 20,
       "gf": 102,
-      "ga": 86,
-      "gd": 16,
+      "ga": 87,
+      "gd": 15,
       "pts": 85,
-      "form": "WWLWL",
+      "form": "WLWLL",
       "homeRecord": {
         "w": 14,
         "d": 3,
-        "l": 9
+        "l": 10
       },
       "awayRecord": {
         "w": 11,
@@ -168,17 +168,17 @@
     {
       "pos": 8,
       "team": "Werder Bremen",
-      "played": 53,
-      "won": 19,
+      "played": 54,
+      "won": 20,
       "drawn": 15,
       "lost": 19,
-      "gf": 77,
-      "ga": 94,
-      "gd": -17,
-      "pts": 72,
-      "form": "DLLWD",
+      "gf": 80,
+      "ga": 96,
+      "gd": -16,
+      "pts": 75,
+      "form": "LLWDW",
       "homeRecord": {
-        "w": 9,
+        "w": 10,
         "d": 8,
         "l": 8
       },
@@ -191,22 +191,22 @@
     {
       "pos": 9,
       "team": "Mainz",
-      "played": 54,
-      "won": 17,
+      "played": 55,
+      "won": 18,
       "drawn": 17,
       "lost": 20,
-      "gf": 78,
-      "ga": 75,
-      "gd": 3,
-      "pts": 68,
-      "form": "DWDWL",
+      "gf": 82,
+      "ga": 78,
+      "gd": 4,
+      "pts": 71,
+      "form": "WDWLW",
       "homeRecord": {
         "w": 7,
         "d": 12,
         "l": 9
       },
       "awayRecord": {
-        "w": 10,
+        "w": 11,
         "d": 5,
         "l": 11
       }
@@ -214,15 +214,15 @@
     {
       "pos": 10,
       "team": "Hoffenheim",
-      "played": 53,
+      "played": 54,
       "won": 17,
       "drawn": 14,
-      "lost": 22,
-      "gf": 86,
-      "ga": 96,
-      "gd": -10,
+      "lost": 23,
+      "gf": 87,
+      "ga": 99,
+      "gd": -12,
       "pts": 65,
-      "form": "DWLLW",
+      "form": "WLLWL",
       "homeRecord": {
         "w": 10,
         "d": 5,
@@ -231,21 +231,21 @@
       "awayRecord": {
         "w": 7,
         "d": 9,
-        "l": 10
+        "l": 11
       }
     },
     {
       "pos": 11,
       "team": "Augsburg",
-      "played": 54,
+      "played": 55,
       "won": 17,
       "drawn": 14,
-      "lost": 23,
-      "gf": 62,
-      "ga": 87,
-      "gd": -25,
+      "lost": 24,
+      "gf": 64,
+      "ga": 90,
+      "gd": -26,
       "pts": 65,
-      "form": "LDWWD",
+      "form": "DWWDL",
       "homeRecord": {
         "w": 10,
         "d": 8,
@@ -254,25 +254,25 @@
       "awayRecord": {
         "w": 7,
         "d": 6,
-        "l": 13
+        "l": 14
       }
     },
     {
       "pos": 12,
       "team": "M'gladbach",
-      "played": 54,
+      "played": 55,
       "won": 18,
       "drawn": 10,
-      "lost": 26,
-      "gf": 81,
-      "ga": 98,
-      "gd": -17,
+      "lost": 27,
+      "gf": 84,
+      "ga": 102,
+      "gd": -18,
       "pts": 64,
-      "form": "WLLLL",
+      "form": "LLLLL",
       "homeRecord": {
         "w": 9,
         "d": 6,
-        "l": 12
+        "l": 13
       },
       "awayRecord": {
         "w": 9,
@@ -283,15 +283,15 @@
     {
       "pos": 13,
       "team": "Union Berlin",
-      "played": 54,
+      "played": 55,
       "won": 16,
       "drawn": 16,
-      "lost": 22,
+      "lost": 23,
       "gf": 62,
-      "ga": 87,
-      "gd": -25,
+      "ga": 94,
+      "gd": -32,
       "pts": 64,
-      "form": "DDDLL",
+      "form": "DDLLL",
       "homeRecord": {
         "w": 8,
         "d": 11,
@@ -300,7 +300,7 @@
       "awayRecord": {
         "w": 8,
         "d": 5,
-        "l": 13
+        "l": 14
       }
     },
     {
@@ -421,15 +421,15 @@
     {
       "pos": 19,
       "team": "FC Koln",
-      "played": 20,
+      "played": 21,
       "won": 5,
       "drawn": 6,
-      "lost": 9,
-      "gf": 30,
-      "ga": 36,
-      "gd": -6,
+      "lost": 10,
+      "gf": 31,
+      "ga": 38,
+      "gd": -7,
       "pts": 21,
-      "form": "DLWLD",
+      "form": "LWLDL",
       "homeRecord": {
         "w": 3,
         "d": 3,
@@ -438,23 +438,23 @@
       "awayRecord": {
         "w": 2,
         "d": 3,
-        "l": 5
+        "l": 6
       }
     },
     {
       "pos": 20,
       "team": "Hamburg",
-      "played": 19,
-      "won": 4,
+      "played": 20,
+      "won": 5,
       "drawn": 4,
       "lost": 11,
-      "gf": 17,
-      "ga": 39,
-      "gd": -22,
-      "pts": 16,
-      "form": "DLLLL",
+      "gf": 19,
+      "ga": 40,
+      "gd": -21,
+      "pts": 19,
+      "form": "LLLLW",
       "homeRecord": {
-        "w": 4,
+        "w": 5,
         "d": 2,
         "l": 3
       },
@@ -467,15 +467,15 @@
     {
       "pos": 21,
       "team": "Elversberg",
-      "played": 3,
+      "played": 4,
       "won": 2,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 1,
       "gf": 8,
       "ga": 7,
       "gd": 1,
-      "pts": 6,
-      "form": "WWL",
+      "pts": 7,
+      "form": "WWLD",
       "homeRecord": {
         "w": 1,
         "d": 0,
@@ -483,25 +483,25 @@
       },
       "awayRecord": {
         "w": 1,
-        "d": 0,
+        "d": 1,
         "l": 0
       }
     },
     {
       "pos": 22,
       "team": "Schalke 04",
-      "played": 3,
+      "played": 4,
       "won": 1,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 1,
       "gf": 3,
       "ga": 4,
       "gd": -1,
-      "pts": 4,
-      "form": "LDW",
+      "pts": 5,
+      "form": "LDWD",
       "homeRecord": {
         "w": 0,
-        "d": 1,
+        "d": 2,
         "l": 0
       },
       "awayRecord": {
@@ -513,17 +513,17 @@
     {
       "pos": 23,
       "team": "Paderborn",
-      "played": 3,
-      "won": 0,
+      "played": 4,
+      "won": 1,
       "drawn": 1,
       "lost": 2,
-      "gf": 0,
-      "ga": 4,
-      "gd": -4,
-      "pts": 1,
-      "form": "DLL",
+      "gf": 3,
+      "ga": 5,
+      "gd": -2,
+      "pts": 4,
+      "form": "DLLW",
       "homeRecord": {
-        "w": 0,
+        "w": 1,
         "d": 0,
         "l": 1
       },
@@ -535,10 +535,10 @@
     }
   ],
   "leagueStats": {
-    "avgGoals": 3.213,
-    "homeWinRate": 0.416,
+    "avgGoals": 3.222,
+    "homeWinRate": 0.419,
     "drawRate": 0.24,
-    "upsetRate": 0.265,
+    "upsetRate": 0.266,
     "topScores": [
       {
         "score": "1-1",
@@ -546,15 +546,15 @@
       },
       {
         "score": "0-0",
-        "count": 32
+        "count": 33
       },
       {
         "score": "2-1",
-        "count": 32
+        "count": 33
       }
     ],
     "computedFrom": "fd",
-    "matchesUsed": 483,
+    "matchesUsed": 492,
     "seasonsMerged": [
       "2425",
       "2526",
@@ -578,8 +578,8 @@
     ]
   },
   "dcParams": {
-    "homeAdv": 0.2856,
-    "rho": -0.1018,
+    "homeAdv": 0.3339,
+    "rho": -0.2,
     "xi": 0.005
   },
   "freshness": {
