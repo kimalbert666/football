@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-09-27T23:46:21.712782Z",
-  "command": "capture",
+  "checked_at": "2026-09-27T23:50:16.673261Z",
+  "command": "daily",
   "mode": "shadow",
   "new_predictions": 0,
   "new_valid_predictions": 0,
@@ -13,8 +13,8 @@
       "complete": true,
       "scope": {
         "league": "england-premier",
-        "from": "2026-09-27",
-        "through": "2026-09-28",
+        "from": "2026-09-26",
+        "through": "2026-10-04",
         "provider": "espn",
         "pending_lookup_limit": 20
       },
@@ -25,35 +25,65 @@
       {
         "name": "espn-calendar",
         "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260926",
+        "captured_at": "2026-09-27T23:50:09.195064Z",
+        "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260927",
-        "captured_at": "2026-09-27T23:46:18.953671Z",
+        "captured_at": "2026-09-27T23:50:09.241416Z",
         "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260928",
-        "captured_at": "2026-09-27T23:46:19.015595Z",
+        "captured_at": "2026-09-27T23:50:09.298085Z",
         "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
       },
       {
-        "name": "titan007-crown",
-        "url": "https://1x2.titan007.com/Company.js",
+        "name": "espn-calendar",
         "status": "ok",
-        "captured_at": "2026-09-27T23:46:19.826045Z",
-        "content_sha256": "dc3fe95cc1987c07c5ccda09933a5beda8ba336d34e1f4ef9ffc0d67b0229a51"
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260929",
+        "captured_at": "2026-09-27T23:50:09.385647Z",
+        "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
       },
       {
-        "name": "titan007-crown",
-        "url": "https://1x2.titan007.com/index_vip.aspx",
+        "name": "espn-calendar",
         "status": "ok",
-        "captured_at": "2026-09-27T23:46:21.219494Z",
-        "content_sha256": "ccc69341c8098a0747f0472ab1d1b605a9489673d513924b6895a1c633c96d1f"
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260930",
+        "captured_at": "2026-09-27T23:50:09.440009Z",
+        "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
       },
       {
-        "name": "titan007-crown-quotes",
-        "status": "not_requested",
-        "reason": "No confirmed EPL fixture in a capture window"
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261001",
+        "captured_at": "2026-09-27T23:50:09.523572Z",
+        "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261002",
+        "captured_at": "2026-09-27T23:50:09.609961Z",
+        "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261003",
+        "captured_at": "2026-09-27T23:50:14.719747Z",
+        "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261004",
+        "captured_at": "2026-09-27T23:50:14.767764Z",
+        "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
       }
     ]
   },
