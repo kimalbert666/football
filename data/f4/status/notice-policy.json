@@ -3,32 +3,18 @@
   "incidents": {
     "f5c4e13bbd491a564ea48f3a": {
       "episode": 1,
-      "active": true,
+      "active": false,
       "first_seen_at": "2026-09-28T09:40:50.825586Z",
       "code": "source_unavailable",
       "source": "f4-primary",
       "detail": "Crown source unavailable: RuntimeError: ReadTimeout",
-      "last_seen_at": "2026-09-28T09:40:50.825586Z"
+      "last_seen_at": "2026-09-28T09:40:50.825586Z",
+      "acknowledged_episode": 1,
+      "last_notified_at": "2026-09-28T09:56:32.893740Z",
+      "recovered_at": "2026-09-28T09:56:32.893740Z"
     }
   },
-  "pending": [
-    {
-      "type": "critical_incident",
-      "month": "2026-09",
-      "created_at": "2026-09-28T09:40:50.825586Z",
-      "incidents": [
-        {
-          "code": "source_unavailable",
-          "source": "f4-primary",
-          "detail": "Crown source unavailable: RuntimeError: ReadTimeout",
-          "key": "f5c4e13bbd491a564ea48f3a",
-          "episode": 1,
-          "first_seen_at": "2026-09-28T09:40:50.825586Z"
-        }
-      ],
-      "token": "023e8b5dc8a8e3d104784ab67eb14e793e15da1a5a8c511085c9b23843d325ad"
-    }
-  ],
+  "pending": [],
   "acknowledged_months": [],
-  "updated_at": "2026-09-28T09:40:50.825586Z"
+  "updated_at": "2026-09-28T09:56:32.893740Z"
 }
