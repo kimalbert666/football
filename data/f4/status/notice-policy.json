@@ -12,11 +12,37 @@
       "acknowledged_episode": 1,
       "last_notified_at": "2026-09-28T09:56:32.893740Z",
       "recovered_at": "2026-09-28T09:56:32.893740Z"
+    },
+    "9dc1747c93d5868d2b0d8753": {
+      "episode": 1,
+      "active": true,
+      "first_seen_at": "2026-10-02T23:51:39.371872Z",
+      "code": "ah_source_unavailable",
+      "source": "crown-asian-handicap",
+      "detail": "Crown AH source unavailable (ValueError: provider feed health unavailable or stale)",
+      "last_seen_at": "2026-10-02T23:51:39.371872Z"
     }
   },
-  "pending": [],
+  "pending": [
+    {
+      "type": "critical_incident",
+      "month": "2026-10",
+      "created_at": "2026-10-02T23:51:39.371872Z",
+      "incidents": [
+        {
+          "code": "ah_source_unavailable",
+          "source": "crown-asian-handicap",
+          "detail": "Crown AH source unavailable (ValueError: provider feed health unavailable or stale)",
+          "key": "9dc1747c93d5868d2b0d8753",
+          "episode": 1,
+          "first_seen_at": "2026-10-02T23:51:39.371872Z"
+        }
+      ],
+      "token": "0435b5f9d0100179dc745731900901cfc0e2310572a2394c62d0b3fc9fd98fb4"
+    }
+  ],
   "acknowledged_months": [
     "2026-09"
   ],
-  "updated_at": "2026-10-02T23:45:00.825445Z"
+  "updated_at": "2026-10-02T23:51:39.371872Z"
 }
