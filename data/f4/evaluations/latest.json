@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluated_at": "2026-10-04T02:17:54.699286Z",
+  "evaluated_at": "2026-10-04T03:01:10.321347Z",
   "mode": "shadow",
   "candidate_weight": 0,
   "automatic_promotion": false,
@@ -39,7 +39,7 @@
     "excluded_identity": 0,
     "excluded_future": 0,
     "distinct_match_count": 0,
-    "known_tracked_fixtures": 9,
+    "known_tracked_fixtures": 18,
     "closed_windows": 0,
     "covered_windows": 0,
     "missing_windows": 0,
@@ -84,7 +84,7 @@
   "training_evidence": [],
   "coverage": {
     "scope": "locally discovered target fixtures only; source completeness is not established",
-    "known_tracked_fixtures": 9,
+    "known_tracked_fixtures": 18,
     "unresolved_fixtures": 0,
     "closed_windows": 0,
     "covered_windows": 0,
