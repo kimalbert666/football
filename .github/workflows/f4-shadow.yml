@@ -14,11 +14,12 @@ on:
         required: true
         default: all
         type: choice
-        options: [all, capture, daily, review, monthly]
+        options: [all, capture, watch, daily, review, monthly]
 
 permissions:
   contents: write
   issues: write
+  actions: write
 
 concurrency:
   group: f4-shadow-monitor
@@ -27,7 +28,7 @@ concurrency:
 jobs:
   observe:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 350
     env:
       PYTHONUNBUFFERED: '1'
       PYTHONUTF8: '1'
@@ -37,6 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
@@ -55,24 +57,14 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p .github/run-logs
-          python -u engine/scripts/f4_cloud.py "$F4_COMMAND" 2>&1 | tee .github/run-logs/f4.log
+          if [ "$F4_COMMAND" = capture ] || [ "$F4_COMMAND" = watch ]; then
+            python -u engine/scripts/f4_watch.py 2>&1 | tee .github/run-logs/f4.log
+          else
+            python -u engine/scripts/f4_cloud.py "$F4_COMMAND" 2>&1 | tee .github/run-logs/f4.log
+          fi
       - name: Publish meaningful f4 update
         if: steps.observe.outputs.notify == 'true'
-        env:
-          F4_MARKER: ${{ steps.observe.outputs.notification_marker }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          issue=$(gh issue list --state open --search '[f4] 英超并行验证 in:title' --json number,title --jq '[.[] | select(.title == "[f4] 英超并行验证")] | .[0].number // empty')
-          if [ -n "$issue" ]; then
-            gh issue view "$issue" --json body,comments --jq '.body, .comments[].body' > .github/run-logs/f4-existing-notices.txt
-            if ! grep -Fq "$F4_MARKER" .github/run-logs/f4-existing-notices.txt; then
-              gh issue comment "$issue" --body-file .github/run-logs/f4-issue.md
-            fi
-          else
-            gh issue create --title '[f4] 英超并行验证' --body-file .github/run-logs/f4-issue.md --assignee "$GITHUB_REPOSITORY_OWNER"
-          fi
-          python engine/scripts/f4_cloud.py notify-ack
+        run: python engine/scripts/f4_publish.py
       - name: Save f4 records
         if: always() && steps.observe.outcome != 'skipped'
         shell: bash

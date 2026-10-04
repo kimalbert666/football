@@ -250,6 +250,14 @@ def render_ah(summary):
              '- 候选M1盘口与水位、M2实力与盘口差异、M3盘口变化；缺样本或特征时不训练、不虚构命中率。\n')
     for key, item in summary.get('research', {}).get('candidates', {}).items():
         text += f"- {key}：{item.get('status', 'unknown')}。\n"
+    availability = summary.get('quote_availability')
+    if availability == 'not_tested_no_due_matches':
+        text += '- 本次无比赛进入采集窗口；仅探测接口健康，尚未验证本轮英超报价。\n'
+    elif availability:
+        text += f"- 本次所需比赛报价覆盖：{availability}；独立备用源补齐{len(summary.get('fallback_matches', []))}场。\n"
+    for item in summary.get('sources', []):
+        if item.get('name') == 'hkjc-direct-ah':
+            text += f"- 香港赛马会独立接口：{item.get('status')}；返回英超赛事{item.get('epl_match_count', '未确认')}场。\n"
     for problem in summary.get('problems', []):
         text += f'- 亚盘数据提醒：{problem}\n'
     return text
@@ -262,9 +270,9 @@ def run_ah(root, fixtures, command, *, clock, source=None):
         return None
     if not cfg.get('research_only') or cfg.get('automatic_promotion') or cfg.get('automatic_wagering'):
         raise ValueError('AH research requires research-only, no promotion and no wagering')
-    from f4_ah_source import attach_crown_ah
+    from f4_ah_source import attach_asian_handicap
     from f4_ah_research import research, predict
-    source = source or attach_crown_ah
+    source = source or attach_asian_handicap
     now, old = clock(), load_observations(root)
     valid_keys = {identity(r) for r in old if r.get('quote')}
     due = []
@@ -275,7 +283,9 @@ def run_ah(root, fixtures, command, *, clock, source=None):
                     and (fixture['match_id'], stamp(fixture['kickoff_at']), horizon, cfg['experiment_id']) not in valid_keys):
                 due.append(fixture)
     previous_source = read(root / 'data/f4/ah/source-health.json', {})
-    should_probe = command in ('daily', 'all', 'monthly')
+    retry_failed_source = bool(previous_source.get('problems')) and (
+        not previous_source.get('checked_at') or now - instant(previous_source['checked_at']) >= timedelta(hours=1))
+    should_probe = command in ('daily', 'all', 'monthly') or retry_failed_source
     if due or should_probe:
         bundle = source(root, due, now, probe=should_probe)
         write(root / 'data/f4/ah/source-health.json', {'checked_at': stamp(clock()), **bundle})
@@ -295,11 +305,17 @@ def run_ah(root, fixtures, command, *, clock, source=None):
         except (KeyError, TypeError, ValueError) as exc:
             quote, reason = None, str(exc)
         early = next((r for r in old if r['match_id'] == fixture['match_id']
-                      and r['kickoff_at'] == fixture['kickoff_at'] and r.get('quote') and quote
+                      and stamp(r['kickoff_at']) == stamp(fixture['kickoff_at']) and r.get('quote') and quote
+                      and r.get('experiment_id') == cfg['experiment_id']
                       and r['quote']['bookmaker'] == quote['bookmaker']
+                      and r['quote'].get('source') == quote.get('source')
+                      and r['quote'].get('url', '').split('/')[2:3] == quote.get('url', '').split('/')[2:3]
+                      and r['quote'].get('line_selection') == quote.get('line_selection')
                       and instant(r['observed_at']) < decision), None)
         early_quote = ({'observed_at': early['observed_at'], 'home_handicap': early['quote']['home_handicap'],
                         'odds': early['quote']['odds'], 'bookmaker': early['quote']['bookmaker'],
+                        'source': early['quote'].get('source'),
+                        'line_selection': early['quote'].get('line_selection'),
                         'provenance': early['provenance']} if early else None)
         row = {key: fixture.get(key) for key in ('match_id', 'provider', 'source_event_id', 'home_id', 'away_id', 'home', 'away', 'kickoff_at', 'league')}
         joint_market = (quote or {}).get('market_1x2') or fixture.get('market')
@@ -356,9 +372,66 @@ def run_ah(root, fixtures, command, *, clock, source=None):
                'by_bookmaker': {book: grouped_results([r for r in paired if r['quote']['bookmaker'] == book])
                                for book in sorted({r['quote']['bookmaker'] for r in paired})},
                'problems': bundle.get('problems', []), 'sources': bundle.get('sources', []),
+               'provider_faults': bundle.get('provider_faults', {}),
+               'primary_provider_health': bundle.get('primary_provider_health', {}),
+               'fallback_matches': bundle.get('fallback_matches', []),
+               'quote_availability': bundle.get('quote_availability'),
                'research_only': True, 'automatic_promotion': False, 'automatic_wagering': False}
     write(root / 'data/f4/ah/latest.json', summary)
     return summary
+
+
+def monthly_coverage(root, month, observations=None):
+    """Separate launch/discovery exclusions from actual missing capture windows."""
+    config = read(root / 'data/f4/config.json', {})
+    cfg = config.get('asian_handicap', {})
+    started = instant(cfg.get('started_at') or config['notifications']['started_at'])
+    tolerance = float(cfg.get('windows', {}).get('15', 5))
+    observations = load_observations(root) if observations is None else observations
+    fixtures = {}
+    for path in (root / 'data/f4/fixtures').glob('*.json'):
+        row = read(path)
+        if row.get('kickoff_at') and row.get('league') == 'england-premier':
+            fixtures[(row['match_id'], stamp(row['kickoff_at']))] = row
+    valid, attempts = set(), set()
+    for row in observations:
+        if row.get('horizon') != 'T-15m' or row.get('experiment_id') != cfg.get('experiment_id'):
+            continue
+        key = (row['match_id'], stamp(row['kickoff_at']))
+        fixtures.setdefault(key, {**row, 'first_seen_at': row['observed_at'], 'status': 'scheduled'})
+        attempts.add(key)
+        if row.get('quote'):
+            valid.add(key)
+    counts = Counter()
+    for key, row in fixtures.items():
+        kickoff = instant(row['kickoff_at'])
+        if kickoff.astimezone(HK).strftime('%Y-%m') != month:
+            continue
+        counts['known_fixtures'] += 1
+        closes = kickoff - timedelta(minutes=15 - tolerance)
+        if closes < started:
+            counts['before_launch'] += 1
+        elif row.get('status') in ('cancelled', 'postponed'):
+            counts['cancelled_or_postponed'] += 1
+        elif not row.get('first_seen_at'):
+            counts['discovery_time_unknown'] += 1
+        elif instant(row['first_seen_at']) > closes:
+            counts['discovered_after_window'] += 1
+        else:
+            counts['eligible_fixtures'] += 1
+            counts['recorded' if key in valid else ('quote_missing' if key in attempts else 'missed_window')] += 1
+    return {key: counts[key] for key in (
+        'known_fixtures', 'before_launch', 'cancelled_or_postponed', 'discovery_time_unknown',
+        'discovered_after_window', 'eligible_fixtures', 'recorded', 'quote_missing', 'missed_window')}
+
+
+def render_month_coverage(counts):
+    return (f"已识别当月赛程：{counts['known_fixtures']}场；其中上线前窗口已结束：{counts['before_launch']}场；"
+            f"取消／延期：{counts['cancelled_or_postponed']}场；窗口结束后才发现：{counts['discovered_after_window']}场；"
+            f"发现时间未知：{counts['discovery_time_unknown']}场。以上分别列示，不计作运行期间漏采。\n\n"
+            f"上线后且及时发现、应采集的比赛：{counts['eligible_fixtures']}场；有效T−15报价：{counts['recorded']}场；"
+            f"尝试后缺报价：{counts['quote_missing']}场；未留下采集尝试的漏窗：{counts['missed_window']}场。"
+            '这是已观察赛程的覆盖统计，不代表赛程来源绝对完整。\n\n')
 
 
 def archive_month(root, now, ah_summary):
@@ -376,18 +449,14 @@ def archive_month(root, now, ah_summary):
         observations = [r for r in load_observations(root)
                         if instant(r['kickoff_at']).astimezone(HK).strftime('%Y-%m') == month]
         paired, issues = paired_rows(root, observations, now)
-        fixtures = [read(p) for p in (root / 'data/f4/fixtures').glob('*.json')]
-        fixture_ids = {r['match_id'] for r in fixtures if r.get('kickoff_at')
-                       and instant(r['kickoff_at']).astimezone(HK).strftime('%Y-%m') == month}
-        fixture_ids.update(r['match_id'] for r in observations)
-        recorded_ids = {r['match_id'] for r in observations if r.get('quote') and r['horizon'] == 'T-15m'}
+        coverage = monthly_coverage(root, month, observations)
         groups = grouped_results(paired)
         text = f'# f4 英超亚洲让球月报：{month}\n\n'
         text += f"生成时间：{now.astimezone(HK):%Y-%m-%d %H:%M}（香港时间）。\n\n"
         text += ('研究范围为所有实际出现的让球盘；目前为研究期，不发试验方向。'
                  '以下上下盘收益是按当时价格分别全选的市场对照，不是模型命中成绩。\n\n')
         text += f'当月有效亚盘记录：{sum(r.get("quote") is not None for r in observations)}条；T−15分钟赛果配对：{len(paired)}场。\n\n'
-        text += f'已识别当月赛程：{len(fixture_ids)}场；具有有效T−15报价：{len(recorded_ids)}场；缺报价／漏窗：{len(fixture_ids - recorded_ids)}场。赛程自身未必完整，以上为已观察覆盖。\n\n'
+        text += render_month_coverage(coverage)
         text += '| 主队视角盘口 | 比赛数 | 主队全／半赢／走／半输／全输 | 客队对应结算 | 主队模拟净收益 | 客队模拟净收益 |\n|---|---|---|---|---|---|\n'
         classes = ('full_win', 'half_win', 'push', 'half_loss', 'full_loss')
         for line, item in sorted(groups.items(), key=lambda pair: float(pair[0])):

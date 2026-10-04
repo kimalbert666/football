@@ -224,6 +224,9 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
         from f4_ah import run_ah
         ah_summary = run_ah(root, fixtures, command, clock=clock, source=ah_source)
     completed_at = clock()
+    if settle and bundle.get('coverage', {}).get('complete') and not bundle.get('problems'):
+        write_json(root / 'data/f4/status/last-settlement.json', {
+            'checked_at': stamp(completed_at), 'command': command, 'new_outcomes': new_outcomes})
     summary = evaluate_ledger(root, completed_at)
     source_health = {'coverage': bundle.get('coverage', {}), 'problems': bundle.get('problems', []),
                      'sources': bundle.get('sources', [])}
@@ -233,7 +236,8 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
               'skipped': skipped, 'source_health': source_health, 'f2_problems': f2.get('problems', []),
               'automatic_promotion': False, 'automatic_wagering': False,
               'asian_handicap': {k: v for k, v in (ah_summary or {}).items()
-                                 if k in ('new_valid', 'new_attempts', 'distinct_matches', 'paired_matches', 'problems')}}
+                                 if k in ('new_valid', 'new_attempts', 'distinct_matches', 'paired_matches', 'problems',
+                                          'provider_faults', 'quote_availability', 'fallback_matches')}}
     write_json(root / 'data/f4/status/latest.json', status)
     write_json(root / 'data/f4/evaluations/latest.json', summary)
     title = 'f4 英超每周复审' if command == 'review' else 'f4 英超跟踪更新'
@@ -328,6 +332,7 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
                     notice_report += f"- {incident.get('detail', incident.get('code', '数据故障'))}\n"
                 notice_report += '\n已保存的记录保留；后续任务继续检查。\n'
             (logdir / 'f4-issue.md').write_text(notice_report + f'\n<!-- f4-notification:{token} -->\n', encoding='utf-8')
+    write_json(logdir / 'f4-delivery.json', {'notify': notify, 'marker': f'f4-notification:{token}'})
     outputs(notify=notify, notification_marker=f'f4-notification:{token}',
             report='.github/run-logs/f4-issue.md')
     if os.getenv('GITHUB_STEP_SUMMARY'):

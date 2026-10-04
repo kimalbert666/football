@@ -103,6 +103,21 @@ class CloudTests(unittest.TestCase):
         self.assertEqual(original, cloud.load_predictions(self.root))
         self.assertEqual(len(list((self.root / 'data/f4/outcomes').rglob('*.json'))), 2)
 
+    def test_settlement_checkpoint_only_advances_for_verified_calendar(self):
+        path = self.root / 'data/f4/status/last-settlement.json'
+        self.run_cloud('capture')
+        self.assertFalse(path.exists())
+        self.run_cloud('daily')
+        original = cloud.read_json(path, {})
+        self.assertEqual(original['checked_at'], cloud.stamp(self.now))
+        self.now += timedelta(days=1)
+        def unavailable(*args, **kwargs):
+            return {'captured_at': cloud.stamp(self.now), 'fixtures': [], 'sources': [],
+                    'coverage': {'complete': False}, 'problems': ['synthetic unavailable calendar']}
+        cloud.run(self.root, 'daily', collector=unavailable, candidate=self.candidate,
+                  f2_fetcher=self.f2, clock=lambda: self.now)
+        self.assertEqual(cloud.read_json(path, {}), original)
+
     def test_unresolved_fixture_does_not_crash_or_invent_probabilities(self):
         self.fixture.update(kickoff_at=None, away_id=None)
         result = self.run_cloud('capture')

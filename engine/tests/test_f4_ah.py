@@ -107,6 +107,29 @@ class AHIntegrationTests(unittest.TestCase):
         self.assertFalse(batch['all_no_selection'])
         self.assertFalse(batch['direction_notification_enabled'])
 
+    def test_coverage_distinguishes_prelaunch_late_discovery_and_real_missing(self):
+        rows = [
+            ('prelaunch', '2026-09-20T12:00:00Z', '2026-09-20T14:00:00Z', 'completed'),
+            ('late', '2026-09-25T12:00:00Z', '2026-09-25T14:00:00Z', 'completed'),
+            ('missed', '2026-09-26T12:00:00Z', '2026-09-25T00:00:00Z', 'completed'),
+            ('cancelled', '2026-09-27T12:00:00Z', '2026-09-25T00:00:00Z', 'cancelled'),
+            ('unknown', '2026-09-28T12:00:00Z', None, 'completed'),
+        ]
+        for match, kickoff, first, status in rows:
+            ah.write(self.root / f'data/f4/fixtures/{match}.json',
+                     {**self.fixture, 'match_id': match, 'kickoff_at': kickoff, 'first_seen_at': first, 'status': status})
+        counts = ah.monthly_coverage(self.root, '2026-09')
+        self.assertEqual(counts['known_fixtures'], 5)
+        for key in ('before_launch', 'discovered_after_window', 'cancelled_or_postponed',
+                    'discovery_time_unknown', 'eligible_fixtures', 'missed_window'):
+            self.assertEqual(counts[key], 1, key)
+        self.assertEqual(counts['quote_missing'], 0)
+        path = self.root / 'data/f4/reports/monthly-2026-09.md'
+        ah.write(path, {'original_archive': True})
+        before = path.read_bytes()
+        ah.archive_month(self.root, self.now, None)
+        self.assertEqual(path.read_bytes(), before)
+
     def test_cloud_critical_notice_does_not_read_current_month_archive(self):
         config = {**self.config, 'mode': 'shadow', 'candidate_weight': 0, 'experiment_id': 'synthetic',
                   'scope': 'league', 'league': 'england-premier', 'tracked_teams_path': 'teams.json',
@@ -139,6 +162,40 @@ class AHIntegrationTests(unittest.TestCase):
         last = ah.load_observations(self.root)[-1]
         self.assertEqual(last['bookmaker'], 'macau')
         self.assertIsNone(last['early_quote'])
+
+    def test_movement_requires_same_provider_selection_and_experiment(self):
+        self.now -= timedelta(minutes=45)
+        self.quote.update(captured_at=ah.stamp(self.now), published_at=ah.stamp(self.now),
+                          source='synthetic-a', line_selection='provider_main')
+        self.run_capture()
+        self.now += timedelta(minutes=45)
+        self.quote.update(captured_at=ah.stamp(self.now), published_at=ah.stamp(self.now))
+        for change in ({'source': 'synthetic-b'}, {'line_selection': 'balance'},
+                       {'url': 'https://different.invalid/synthetic'}):
+            with self.subTest(change=change):
+                trial = copy.deepcopy(self.quote)
+                trial.update(change)
+                def source(*args, **kwargs):
+                    return {'markets': {self.fixture['match_id']: trial}, 'sources': [], 'problems': []}
+                with patch.object(ah, 'write') as writer:
+                    self.run_capture(source)
+                    saved = [call.args[1] for call in writer.call_args_list
+                             if isinstance(call.args[1], dict) and 'observation_id' in call.args[1]]
+                self.assertIsNone(saved[0]['early_quote'])
+        self.run_capture()
+        self.assertIsNotNone(ah.load_observations(self.root)[-1]['early_quote'])
+
+    def test_primary_fault_rechecked_hourly_during_break(self):
+        self.fixture['kickoff_at'] = '2026-10-10T11:00:00Z'
+        ah.write(self.root / 'data/f4/ah/source-health.json', {
+            'checked_at': ah.stamp(self.now), 'problems': ['synthetic provider outage']})
+        with patch('f4_ah_source.attach_asian_handicap', return_value={
+                'markets': {}, 'sources': [], 'problems': ['synthetic provider outage']}) as source:
+            ah.run_ah(self.root, [self.fixture], 'capture', clock=lambda: self.now)
+            source.assert_not_called()
+            self.now += timedelta(hours=1)
+            ah.run_ah(self.root, [self.fixture], 'capture', clock=lambda: self.now)
+            source.assert_called_once()
 
 
 if __name__ == '__main__':

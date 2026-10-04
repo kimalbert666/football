@@ -45,6 +45,7 @@
   },
   "asian_handicap": {
     "enabled": true,
+    "started_at": "2026-09-23T00:00:00+08:00",
     "experiment_id": "f4-epl-ah-research-v1",
     "bookmaker_priority": ["crown", "macau", "hkjc", "sbobet"],
     "bookmaker_policy": "Prefer Crown; other explicitly identified companies allowed; never compare different bookmakers as a line move",

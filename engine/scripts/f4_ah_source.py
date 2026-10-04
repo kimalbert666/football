@@ -198,6 +198,8 @@ def attach_crown_ah(root, fixtures, now, fetch=None, *, probe=False):
         if not allowed:
             raise ValueError('allowed bookmaker mapping unverified')
         health, health_captured, _ = get('https://api.infersports.dev/health')
+        result['provider_health'] = {key: health.get(key) for key in ('status', 'feed_live', 'as_of', 'as_of_stale')}
+        result['provider_health']['checked_at'] = health_captured
         if (health.get('feed_live') is not True or health.get('as_of_stale') is not False
                 or not 0 <= (_instant(health_captured) - _instant(health['as_of'])).total_seconds() <= MAX_FEED_AGE_SECONDS):
             raise ValueError('provider feed health unavailable or stale')
@@ -252,3 +254,29 @@ def attach_crown_ah(root, fixtures, now, fetch=None, *, probe=False):
     except Exception as exc:
         result['problems'].append(f'Crown AH source unavailable ({type(exc).__name__}: {str(exc)[:160]})')
     return result
+
+
+def attach_asian_handicap(root, fixtures, now, *, probe=False, primary=None, fallback=None):
+    """Keep per-provider faults visible; fallback only missing, verified fixtures."""
+    from f4_hkjc import attach_hkjc
+    first = (primary or attach_crown_ah)(root, fixtures, now, probe=probe)
+    missing = [f for f in fixtures if f['match_id'] not in first.get('markets', {})]
+    config_path = root / 'data/f4/config.json'
+    config = json.loads(config_path.read_text(encoding='utf-8')) if config_path.exists() else {}
+    allowed = config.get('asian_handicap', {}).get('bookmaker_priority', ['crown'])
+    use_fallback = 'hkjc' in allowed
+    second = (fallback or attach_hkjc)(root, missing, now, probe=probe) if use_fallback and (missing or probe) else {
+        'markets': {}, 'sources': [], 'problems': []}
+    if not use_fallback:
+        second['sources'].append({'name': 'hkjc-direct-ah', 'status': 'disabled',
+                                  'reason': 'bookmaker not allowed by experiment configuration'})
+    markets = {**first.get('markets', {}), **second.get('markets', {})}
+    unresolved = [f['match_id'] for f in fixtures if f['match_id'] not in markets]
+    faults = {'infersports': first.get('problems', []), 'hkjc-direct': second.get('problems', [])}
+    return {'markets': markets, 'sources': first.get('sources', []) + second.get('sources', []),
+            # Do not hide loss of the primary provider merely because the backup responds.
+            'problems': [*faults['infersports'], *faults['hkjc-direct']],
+            'provider_faults': faults, 'primary_provider_health': first.get('provider_health', {}),
+            'fallback_matches': sorted(second.get('markets', {})), 'unresolved_matches': unresolved,
+            'quote_availability': 'not_tested_no_due_matches' if not fixtures else (
+                'complete' if not unresolved else 'incomplete')}
