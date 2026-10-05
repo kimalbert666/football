@@ -11,21 +11,26 @@ import hashlib
 import json
 import math
 from collections import Counter, defaultdict
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+from itertools import combinations
 from pathlib import Path
+from urllib.parse import urlsplit
 
 import numpy as np
 from scipy.optimize import minimize
 from scipy.special import logsumexp
 
 
-SCHEMA_VERSION = "f4-ah-research-v1"
+SCHEMA_VERSION = "f4-ah-research-v2"
 CLASSES = ("full_win", "half_win", "push", "half_loss", "full_loss")
 CANDIDATES = ("M1", "M2", "M3")
 REGULARIZATION_GRID = (0.1, 1.0, 10.0)
+LOG_LOSS_GUARDRAIL = .01
+BRIER_GUARDRAIL = .02
+RPS_GUARDRAIL = .005
 BASE_FEATURES = (
     "home_handicap", "absolute_handicap", "quarter_fraction", "home_log_price",
-    "away_log_price", "ah_implied_home", "ah_overround", "log_p_home",
+    "away_log_price", "ah_price_share_home", "ah_reciprocal_sum_minus_one", "log_p_home",
     "log_p_draw", "log_p_away", "handicap_x_log_home_away",
     "book_crown", "book_macau", "book_hkjc", "book_sbobet",
 )
@@ -33,7 +38,8 @@ FEATURES = {
     "M1": BASE_FEATURES,
     "M2": BASE_FEATURES + ("rating_difference",),
     "M3": BASE_FEATURES + (
-        "early_handicap", "handicap_change", "home_log_price_change",
+        "fixed_line_home_handicap", "certified_main_handicap_change",
+        "certified_main_movement_available", "home_log_price_change",
         "away_log_price_change", "elapsed_quote_hours",
     ),
 }
@@ -143,6 +149,9 @@ def _validate_base(row, *, settled=False, now=None):
     observed, kickoff = _time(row.get("observed_at")), _time(row.get("kickoff_at"))
     if observed >= kickoff:
         raise ValueError("observation must precede kickoff")
+    if row.get("horizon") is not None and (row["horizon"] != "T-15m"
+            or not 10 <= (kickoff - observed).total_seconds() / 60 <= 20):
+        raise ValueError("research requires the declared T-15 window")
     _line(row.get("home_handicap"))
     _pair(row.get("odds"), price=True)
     _probabilities(row.get("p_1x2"))
@@ -176,6 +185,10 @@ def _features(row, candidate):
         if _time(ratings.get("observed_at")) > observed:
             raise ValueError("ratings newer than observation")
         _provenance(ratings.get("source"))
+        counts = ratings.get("prior_games")
+        if (not isinstance(counts, (list, tuple)) or len(counts) != 2
+                or any(type(n) is not int or n < 5 for n in counts)):
+            raise ValueError("ratings require at least five known results per team")
         home, away = _pair(ratings)
         values.append((home - away) / 400)
     if candidate == "M3":
@@ -186,11 +199,30 @@ def _features(row, candidate):
         if when >= observed:
             raise ValueError("early quote must be strictly earlier")
         _provenance(early.get("provenance"))
-        if row.get('bookmaker') and early.get('bookmaker') != row['bookmaker']:
-            raise ValueError('line movement requires the same bookmaker')
-        early_line = _line(early.get("home_handicap"))
-        eh, ea = _pair(early.get("odds"), price=True)
-        values.extend([early_line, h - early_line, math.log(oh / eh),
+        current = row.get("quote")
+        if not isinstance(current, dict):
+            raise ValueError("current quote lineage required for movement")
+        for key in ("bookmaker", "source", "line_selection"):
+            if not early.get(key) or early[key] != current.get(key):
+                raise ValueError("movement requires the same company, source and selection policy")
+        hosts = [urlsplit(q.get("url", "")) for q in (early, current)]
+        if any(q.scheme not in ("http", "https") or not q.hostname for q in hosts) or (
+                hosts[0].hostname.casefold(), hosts[0].port) != (hosts[1].hostname.casefold(), hosts[1].port):
+            raise ValueError("movement requires the same source URL host")
+        early_line = _line(early.get("fixed_line_home_handicap"))
+        if not math.isclose(early_line, h, abs_tol=1e-9, rel_tol=0):
+            raise ValueError("movement prices must describe the same handicap contract")
+        eh, ea = _pair(early.get("fixed_line_odds"), price=True)
+        available = early.get("main_handicap_change_available") is True
+        main_change = _line(early.get("main_handicap_change")) if available else 0.0
+        if available and (early["line_selection"] != "provider_main"
+                          or early.get("provider_main") is not True
+                          or current.get("provider_main") is not True):
+            raise ValueError("main handicap movement requires certified main lines")
+        if available and not math.isclose(main_change, h - _line(early.get("home_handicap")),
+                                           abs_tol=1e-9, rel_tol=0):
+            raise ValueError("main handicap movement magnitude conflicts with certified lines")
+        values.extend([early_line, main_change, float(available), math.log(oh / eh),
                        math.log(oa / ea), (observed - when).total_seconds() / 3600])
     if not all(math.isfinite(x) for x in values):
         raise ValueError("non-finite feature")
@@ -284,6 +316,7 @@ def predict(model, row):
 
 
 def _score(model, rows):
+    from f4_ah_metrics import direction_metrics, paired_week_bootstrap
     probabilities = _probability_matrix(model, rows)
     labels = _labels(rows)
     one_hot = np.eye(len(CLASSES))[labels]
@@ -292,6 +325,7 @@ def _score(model, rows):
         "prospective_evidence": False,
         "log_loss": float(-np.log(np.maximum(probabilities[np.arange(len(rows)), labels], 1e-15)).mean()),
         "brier": float(np.square(probabilities - one_hot).sum(axis=1).mean()),
+        "settlement_rps": float(np.square(np.cumsum(probabilities - one_hot, axis=1)[:, :-1]).mean()),
         "settlement_accuracy": float(np.mean(probabilities.argmax(axis=1) == labels)),
         "settlement_counts": dict(Counter(CLASSES[i] for i in labels)),
     }
@@ -321,6 +355,9 @@ def _score(model, rows):
         "same_subset_lower_price_baseline_roi": sum(price_baseline) / len(selected) if selected else None,
         "records": records, "actionable": False,
     }
+    metric["direction_metrics"] = direction_metrics(rows, probabilities)
+    metric["direction_metrics"]["paired_week_uncertainty"] = paired_week_bootstrap(
+        metric["direction_metrics"]["all_rows"]["records"])
     return metric
 
 
@@ -332,9 +369,11 @@ def _digest(value):
 def _split(rows):
     groups = defaultdict(list)
     for row in rows:
-        groups[_time(row["kickoff_at"])].append(row)
+        kickoff = _time(row["kickoff_at"])
+        week = kickoff.date() - timedelta(days=kickoff.weekday())
+        groups[week].append(row)
     times = sorted(groups)
-    # Whole UTC kickoff batches stay together.  Boundaries are set before any
+    # Whole UTC weeks stay together. Boundaries are set before any
     # candidate eligibility, feature scaling, outcome inspection or tuning.
     a, b = max(1, int(len(times) * .6)), max(2, int(len(times) * .8))
     parts = {"train": [row for t in times[:a] for row in groups[t]],
@@ -354,8 +393,9 @@ def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, 
     """Fit M1 market, M2 market+ratings, M3 market+real earlier-price movement.
 
     Requires one 90-minute result per match and strict availability timestamps.
-    Uses chronological 60/20/20 kickoff batches, training-only feature scaling,
-    validation-only regularization choice, then untouched final-test evaluation.
+    Uses chronological 60/20/20 UTC weeks, training-only feature scaling,
+    validation-only hit-rate choice with a fixed log-loss guardrail, then an
+    untouched final test. This is exploratory development, not promotion.
     Model creation time is the actual supplied research clock, not backdated.
     """
     now = _time(now) if now is not None else datetime.now(timezone.utc)
@@ -379,8 +419,8 @@ def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, 
         if len(signatures) > 1:
             rejected.append({"match_id": match_id, "reason": "conflicting duplicate fixture/result"})
             continue
-        latest = max(_time(r["observed_at"]) for r in snapshots)
-        tied = [r for r in snapshots if _time(r["observed_at"]) == latest]
+        earliest = min(_time(r["observed_at"]) for r in snapshots)
+        tied = [r for r in snapshots if _time(r["observed_at"]) == earliest]
         if len({_digest(r) for r in tied}) > 1:
             rejected.append({"match_id": match_id, "reason": "conflicting simultaneous snapshots"})
             continue
@@ -398,13 +438,25 @@ def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, 
                         "historical evaluation is not a saved prospective forecast",
                         "repeated testing of the same holdout cannot establish a fresh improvement",
                         "candidates remain zero-weight; no automatic promotion"],
-        "selection_metric": "validation_settlement_log_loss",
+        "selection_metric": "validation_positive_return_direction_hit_rate",
+        "selection_policy": {
+            "version": "positive-return-hit-v1", "tie_rule": "log_loss_then_grid_order",
+            "log_loss_guardrail": LOG_LOSS_GUARDRAIL,
+            "brier_guardrail": BRIER_GUARDRAIL, "settlement_rps_guardrail": RPS_GUARDRAIL,
+            "guardrail_unit": "absolute_score_difference; exploratory_predeclared_tolerances",
+            "guardrail_reference": "lowest_validation_log_loss_in_the_same_regularization_grid",
+            "training_objective": "regularized_settlement_log_loss",
+            "pushes_in_denominator": True,
+            "split_unit": "UTC_Monday_week", "snapshot_policy": "earliest_eligible_per_fixture",
+            "ah_price_share_is_not_win_probability": True,
+        },
         "regularization_grid": list(REGULARIZATION_GRID),
     }
     for name, part in parts.items():
         report["split"][name] = {"count": len(part), "match_ids": [r["match_id"] for r in part],
                                    "kickoff_from": part[0]["kickoff_at"] if part else None,
                                    "kickoff_to": part[-1]["kickoff_at"] if part else None}
+    candidate_rows = {}
     for candidate in CANDIDATES:
         eligible, missing = {}, {}
         for name, part in parts.items():
@@ -420,6 +472,7 @@ def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, 
                   "feature_names": list(FEATURES[candidate]), "missing_features": missing,
                   "model": None, "validation": None, "test": None}
         report["candidates"][candidate] = result
+        candidate_rows[candidate] = eligible
         if any(len(eligible[name]) < minimum for name, minimum in minimums.items()):
             result["reason"] = "insufficient chronological samples with required features"
             continue
@@ -430,7 +483,15 @@ def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, 
             models = [_fit(eligible["train"], candidate, regularization)
                       for regularization in REGULARIZATION_GRID]
             validation = [_score(model, eligible["validation"]) for model in models]
-            best = min(range(len(models)), key=lambda index: validation[index]["log_loss"])
+            reference = min(validation, key=lambda score: score["log_loss"])
+            minimum_loss = reference["log_loss"]
+            allowed = [i for i, score in enumerate(validation)
+                       if score["log_loss"] <= minimum_loss + LOG_LOSS_GUARDRAIL
+                       and score["brier"] <= reference["brier"] + BRIER_GUARDRAIL
+                       and score["settlement_rps"] <= reference["settlement_rps"] + RPS_GUARDRAIL]
+            best = min(allowed, key=lambda index: (
+                -validation[index]["direction_metrics"]["all_rows"]["model_direction"]["positive_return_hit_rate"],
+                validation[index]["log_loss"], index))
             model = models[best]
             used = eligible["train"] + eligible["validation"]
             model.update({"schema_version": SCHEMA_VERSION, "created_at": now.isoformat(),
@@ -441,11 +502,16 @@ def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, 
             model["model_version"] = candidate + "-" + _digest(model)[:16]
             result.update({"status": "trained_shadow", "model": model,
                            "validation": validation[best], "test": _score(model, eligible["test"]),
-                           "regularization_search": [{"regularization": reg, "log_loss": score["log_loss"]}
-                                                     for reg, score in zip(REGULARIZATION_GRID, validation)]})
+                           "regularization_search": [{"regularization": reg, "log_loss": score["log_loss"],
+                               "brier": score["brier"], "settlement_rps": score["settlement_rps"],
+                               "positive_return_hit_rate": score["direction_metrics"]["all_rows"]["model_direction"]["positive_return_hit_rate"],
+                               "passes_log_loss_guardrail": score["log_loss"] <= minimum_loss + LOG_LOSS_GUARDRAIL,
+                               "passes_probability_guardrails": i in allowed}
+                               for i, (reg, score) in enumerate(zip(REGULARIZATION_GRID, validation))]})
             report["status"] = "trained_shadow"
         except (ValueError, FloatingPointError, OverflowError) as exc:
             result.update({"status": "fit_failed", "reason": str(exc)})
+    report["common_test_comparisons"] = _common_test_comparisons(report, candidate_rows, parts["test"])
     # Serialize strictly before writing: NaN/Infinity cannot silently enter a ledger.
     serialized = json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
     if output_dir is not None:
@@ -453,3 +519,33 @@ def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, 
         destination.mkdir(parents=True, exist_ok=False)
         (destination / "report.json").write_text(serialized, encoding="utf-8")
     return report
+
+
+def _common_test_comparisons(report, candidate_rows, test_rows):
+    """Evaluate fitted candidates on identical test fixtures, never select here."""
+    from f4_ah_metrics import paired_week_bootstrap
+    fitted = [key for key in CANDIDATES if report["candidates"][key]["model"]]
+    sets = list(combinations(fitted, 2))
+    if len(fitted) > 2:
+        sets.append(tuple(fitted))
+    comparisons = {}
+    for names in sets:
+        ids = set.intersection(*(set(r["match_id"] for r in candidate_rows[key]["test"]) for key in names))
+        rows = [r for r in test_rows if r["match_id"] in ids]
+        comparison = {"candidate_ids": list(names), "count": len(rows),
+                      "full_test_count": len(test_rows), "match_ids": [r["match_id"] for r in rows],
+                      "common_test_coverage": len(rows) / len(test_rows) if test_rows else None,
+                      "scores": {}, "paired_differences": {}, "actionable": False}
+        if rows:
+            comparison["scores"] = {key: _score(report["candidates"][key]["model"], rows) for key in names}
+            for left, right in combinations(names, 2):
+                lhs = comparison["scores"][left]["direction_metrics"]["all_rows"]["records"]
+                rhs = comparison["scores"][right]["direction_metrics"]["all_rows"]["records"]
+                paired = [{**a, "lower_price_heuristic_baseline": b["model_direction"]}
+                          for a, b in zip(lhs, rhs)]
+                comparison["paired_differences"][left + "-" + right] = {
+                    **paired_week_bootstrap(paired), "left": left, "right": right,
+                    "reference_definition": "same_fixture_other_candidate_direction",
+                    "log_loss_delta": comparison["scores"][left]["log_loss"] - comparison["scores"][right]["log_loss"]}
+        comparisons["+".join(names)] = comparison
+    return comparisons

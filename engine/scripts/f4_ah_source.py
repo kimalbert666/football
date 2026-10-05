@@ -91,7 +91,8 @@ def parse_quotes(payload, event, fixture, aliases, captured_at, url, content_sha
                 raise ValueError('ambiguous Crown 1X2')
             market_1x2 = {'bookmaker': bookmaker, 'market': '90min_1x2', 'odds': prices,
                           'captured_at': captured_at, 'published_at': _stamp(changed), 'source': 'infersports-' + bookmaker,
-                          'url': url, 'provider_event_id': event['id'], 'snapshot_at': _stamp(snapshot)}
+                          'url': url, 'provider_event_id': event['id'], 'snapshot_at': _stamp(snapshot),
+                          'content_sha256': content_sha256, 'provider_kickoff_at': event['scheduled_at']}
         elif quote.get('market_type') == 'asian_handicap':
             line = _valid_line(quote['line'])
             prices = [_valid_price(quote['prices'][s]) for s in ('home', 'away')]

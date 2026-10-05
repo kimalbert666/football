@@ -91,11 +91,13 @@ def validate_quote(quote, fixture, decision, max_age, allowed_books=('crown',)):
 
 def probability_1x2(market, decision, max_age, bookmaker='crown'):
     try:
-        if market.get('bookmaker') != bookmaker:
+        if market.get('bookmaker') != bookmaker or market.get('market') != '90min_1x2':
+            return None
+        if not all(market.get(key) for key in ('url', 'provider_event_id', 'content_sha256')):
             return None
         if not 0 <= (decision - instant(market['captured_at'])).total_seconds() <= max_age * 60:
             return None
-        if market.get('published_at') and instant(market['published_at']) > decision:
+        if market.get('published_at') and instant(market['published_at']) > instant(market['captured_at']):
             return None
         odds = market['odds']
         if len(odds) != 3 or any(isinstance(o, bool) or not math.isfinite(o) or o <= 1 for o in odds):
@@ -176,40 +178,97 @@ def grouped_results(rows):
 
 def prospective_scores(rows):
     """Score only model outputs actually stored before kickoff, by fixed version."""
-    from f4_ah_research import settle_asian_handicap
+    from f4_ah_research import settle_asian_handicap, _pair
+    from f4_ah_metrics import direction_metrics, paired_week_bootstrap
+    from f4_ah_saved import validate_saved_prediction
     groups = {}
     for row in sorted(rows, key=lambda r: (r['kickoff_at'], r['match_id'])):
         for candidate_id, record in row.get('candidates', {}).items():
+            if not isinstance(record, dict):
+                continue
             prediction = record.get('prediction')
             if not prediction:
                 continue
-            key = candidate_id + ':' + record['model_version']
+            key = str(row.get('experiment_id', 'unspecified')) + ':' + candidate_id + ':' + str(record.get('model_version', 'missing'))
             group = groups.setdefault(key, {'predicted_matches': 0, 'shadow_selections': 0,
                                            'settlements': Counter(), 'net_profit': 0.0,
                                            'same_subset_lower_price_profit': 0.0, 'max_drawdown': 0.0,
-                                           'log_loss_sum': 0.0, '_peak': 0.0})
+                                           'log_loss_sum': 0.0, '_peak': 0.0,
+                                           '_rows': [], '_probabilities': [], '_pnl': defaultdict(float),
+                                           '_ids': set(), '_contracts': [], 'rejected_records': [], 'stored_hit_policy_matches': 0,
+                                           'experiment_id': row.get('experiment_id', 'unspecified'),
+                                           'candidate_id': candidate_id, 'model_version': record.get('model_version')})
+            try:
+                prediction, home_p = validate_saved_prediction(row, record)
+                fixture_key = (row['match_id'], stamp(row['kickoff_at']))
+                if fixture_key in group['_ids']:
+                    raise ValueError('duplicate saved fixture within fixed experiment/model')
+            except (ValueError, KeyError, TypeError) as exc:
+                group['rejected_records'].append({'match_id': row.get('match_id'), 'reason': str(exc)})
+                continue
+            group['_ids'].add(fixture_key)
+            group['_rows'].append(row)
+            group['_probabilities'].append(home_p)
+            prices = _pair(row['odds'], price=True)
+            score = _pair(row['final_score'], score=True)
+            group['_contracts'].append(digest([row['match_id'], stamp(row['kickoff_at']),
+                stamp(row['observed_at']), row.get('horizon'), row['home_handicap'], prices,
+                row.get('bookmaker'), (row.get('quote') or {}).get('source'), score]))
+            group['stored_hit_policy_matches'] += int(record.get('hit_rate_direction') in ('home', 'away')
+                                                     and record.get('hit_rate_policy_version') == 'positive-return-hit-v1')
             group['predicted_matches'] += 1
-            home_result = settle_asian_handicap(*row['final_score'], row['home_handicap'], 'home', row['odds'][0])
+            home_result = settle_asian_handicap(*score, row['home_handicap'], 'home', prices[0])
             group['log_loss_sum'] -= math.log(max(prediction['home']['probabilities'][home_result['settlement']], 1e-15))
             side = record.get('shadow_direction')
             if side not in ('home', 'away'):
                 continue
-            result = settle_asian_handicap(*row['final_score'], row['home_handicap'], side,
-                                           row['odds'][0 if side == 'home' else 1])
-            reference = 'home' if row['odds'][0] <= row['odds'][1] else 'away'
-            baseline = settle_asian_handicap(*row['final_score'], row['home_handicap'], reference,
-                                             row['odds'][0 if reference == 'home' else 1])
+            result = settle_asian_handicap(*score, row['home_handicap'], side,
+                                           prices[0 if side == 'home' else 1])
+            reference = 'home' if prices[0] <= prices[1] else 'away'
+            baseline = settle_asian_handicap(*score, row['home_handicap'], reference,
+                                             prices[0 if reference == 'home' else 1])
             group['shadow_selections'] += 1
             group['settlements'][result['settlement']] += 1
             group['net_profit'] += result['net_profit']
             group['same_subset_lower_price_profit'] += baseline['net_profit']
-            group['_peak'] = max(group['_peak'], group['net_profit'])
-            group['max_drawdown'] = max(group['max_drawdown'], group['_peak'] - group['net_profit'])
+            group['_pnl'][stamp(row['kickoff_at'])] += result['net_profit']
     for group in groups.values():
-        group['log_loss'] = group.pop('log_loss_sum') / group['predicted_matches']
-        group['coverage'] = group['shadow_selections'] / group['predicted_matches']
+        group['log_loss'] = group.pop('log_loss_sum') / group['predicted_matches'] if group['predicted_matches'] else None
+        group['coverage'] = group['shadow_selections'] / group['predicted_matches'] if group['predicted_matches'] else None
         group['roi'] = group['net_profit'] / group['shadow_selections'] if group['shadow_selections'] else None
+        group['direction_metrics'] = direction_metrics(group.pop('_rows'), group.pop('_probabilities'))
+        for record, contract in zip(group['direction_metrics']['all_rows']['records'], group.pop('_contracts')):
+            record['comparison_contract'] = contract
+        group['direction_metrics']['evaluation_kind'] = 'saved_probability_diagnostics'
+        group['direction_metrics']['policy_prospectively_stored_for_all_rows'] = bool(group['predicted_matches']) and (
+            group['stored_hit_policy_matches'] == group['predicted_matches'])
+        group['direction_metrics']['paired_week_uncertainty'] = paired_week_bootstrap(
+            group['direction_metrics']['all_rows']['records'])
+        equity = 0.0
+        for kickoff, profit in sorted(group.pop('_pnl').items()):
+            equity += profit
+            group['_peak'] = max(group['_peak'], equity)
+            group['max_drawdown'] = max(group['max_drawdown'], group['_peak'] - equity)
+        group['drawdown_unit'] = 'complete_UTC_kickoff_batch'
+        group.pop('_ids')
         group.pop('_peak')
+    for key, group in groups.items():
+        common = {}
+        own_records = {r['comparison_contract']: r for r in group['direction_metrics']['all_rows']['records']}
+        for other_key, other in groups.items():
+            if other_key == key or other['experiment_id'] != group['experiment_id'] or other['candidate_id'] == group['candidate_id']:
+                continue
+            other_records = {r['comparison_contract']: r for r in other['direction_metrics']['all_rows']['records']}
+            shared = [r for contract, r in own_records.items() if contract in other_records]
+            pairs = [{**r, 'lower_price_heuristic_baseline': other_records[r['comparison_contract']]['model_direction']}
+                     for r in shared]
+            common[other_key] = {**paired_week_bootstrap(pairs),
+                'reference_definition': 'other_saved_candidate_on_identical_fixture_quote_and_window',
+                'own_valid_predictions': group['predicted_matches'], 'other_valid_predictions': other['predicted_matches'],
+                'own_hit_rate': sum(r['model_direction']['positive_return_hit'] for r in pairs) / len(pairs) if pairs else None,
+                'other_hit_rate': sum(r['lower_price_heuristic_baseline']['positive_return_hit'] for r in pairs) / len(pairs) if pairs else None,
+                'actionable': False}
+        group['same_fixture_comparisons'] = common
     return groups
 
 
@@ -247,6 +306,7 @@ def render_ah(summary):
     text += (f"- 有效亚盘记录：{summary['valid_observations']}；涉及{summary['distinct_matches']}场比赛。\n"
              f"- T−15分钟已有赛果配对：{summary['paired_matches']}场。\n"
              '- 全赢、半赢、走盘、半输、全输分开；按赛前保存的价格结算。\n'
+             '- 方向命中率以全赢或半赢计命中，走盘留在分母；同时报告全赢率、价格、收益和覆盖率。\n'
              '- 候选M1盘口与水位、M2实力与盘口差异、M3盘口变化；缺样本或特征时不训练、不虚构命中率。\n')
     for key, item in summary.get('research', {}).get('candidates', {}).items():
         text += f"- {key}：{item.get('status', 'unknown')}。\n"
@@ -271,7 +331,8 @@ def run_ah(root, fixtures, command, *, clock, source=None):
     if not cfg.get('research_only') or cfg.get('automatic_promotion') or cfg.get('automatic_wagering'):
         raise ValueError('AH research requires research-only, no promotion and no wagering')
     from f4_ah_source import attach_asian_handicap
-    from f4_ah_research import research, predict
+    from f4_ah_research import research, predict, SCHEMA_VERSION
+    from f4_ah_movement import aligned_early_quote
     source = source or attach_asian_handicap
     now, old = clock(), load_observations(root)
     valid_keys = {identity(r) for r in old if r.get('quote')}
@@ -304,19 +365,12 @@ def run_ah(root, fixtures, command, *, clock, source=None):
             quote = validate_quote(quote, fixture, decision, cfg['max_capture_age_minutes'], cfg.get('bookmaker_priority', ['crown']))
         except (KeyError, TypeError, ValueError) as exc:
             quote, reason = None, str(exc)
-        early = next((r for r in old if r['match_id'] == fixture['match_id']
+        predecessors = (r for r in old if r['match_id'] == fixture['match_id']
                       and stamp(r['kickoff_at']) == stamp(fixture['kickoff_at']) and r.get('quote') and quote
                       and r.get('experiment_id') == cfg['experiment_id']
-                      and r['quote']['bookmaker'] == quote['bookmaker']
-                      and r['quote'].get('source') == quote.get('source')
-                      and r['quote'].get('url', '').split('/')[2:3] == quote.get('url', '').split('/')[2:3]
-                      and r['quote'].get('line_selection') == quote.get('line_selection')
-                      and instant(r['observed_at']) < decision), None)
-        early_quote = ({'observed_at': early['observed_at'], 'home_handicap': early['quote']['home_handicap'],
-                        'odds': early['quote']['odds'], 'bookmaker': early['quote']['bookmaker'],
-                        'source': early['quote'].get('source'),
-                        'line_selection': early['quote'].get('line_selection'),
-                        'provenance': early['provenance']} if early else None)
+                      and instant(r['observed_at']) < decision)
+        early_quote = next((aligned for r in predecessors
+                            if (aligned := aligned_early_quote(r, quote)) is not None), None)
         row = {key: fixture.get(key) for key in ('match_id', 'provider', 'source_event_id', 'home_id', 'away_id', 'home', 'away', 'kickoff_at', 'league')}
         joint_market = (quote or {}).get('market_1x2') or fixture.get('market')
         row.update(schema_version=1, experiment_id=cfg['experiment_id'], observed_at=stamp(decision),
@@ -338,6 +392,8 @@ def run_ah(root, fixtures, command, *, clock, source=None):
                     side = max(('home', 'away'), key=lambda s: prediction[s]['ev'])
                     row['candidates'][key] = {'model_version': model['model_version'], 'prediction': prediction,
                                               'shadow_direction': side if prediction[side]['ev'] >= .02 else None,
+                                              'hit_rate_direction': max(('home', 'away'), key=lambda s: prediction[s]['positive_return_probability']),
+                                              'hit_rate_policy_version': 'positive-return-hit-v1',
                                               'diagnostic_ev_threshold': .02}
                 except (ValueError, KeyError, TypeError) as exc:
                     row['candidates'][key] = {'unavailable': type(exc).__name__}
@@ -354,7 +410,7 @@ def run_ah(root, fixtures, command, *, clock, source=None):
     # One new research version per calendar month. Reused retrospective tests
     # are exploratory; only stored future predictions are prospective evidence.
     month = clock().astimezone(HK).strftime('%Y-%m')
-    research_path = root / 'data/f4/ah/research' / (month + '.json')
+    research_path = root / 'data/f4/ah/research' / (month + '-' + SCHEMA_VERSION + '.json')
     if command in ('daily', 'all', 'monthly', 'review') and not research_path.exists():
         report = research(paired, now=clock())
         report = {**report, 'evaluated_at': stamp(clock()), 'research_month': month,
@@ -470,7 +526,24 @@ def archive_month(root, now, ah_summary):
         if not scores:
             text += '当月没有可结算的赛前模型输出；不将新训练模型的历史测试成绩冒充真实预测。\n'
         for version, metrics in scores.items():
-            text += f'\n- {version}：{json.dumps(metrics, ensure_ascii=False)}\n'
+            direction = metrics['direction_metrics']['all_rows']['model_direction']
+            def percentage(value):
+                return f'{value:.1%}' if value is not None else '样本不足'
+            text += (f"\n- {version}：有效赛前输出{metrics['predicted_matches']}场，"
+                     f"方向命中率{percentage(direction['positive_return_hit_rate'])}，"
+                     f"全赢率{percentage(direction['full_win_rate'])}，"
+                     f"全样本模拟ROI {percentage(direction['roi'])}。\n")
+            text += f"  五类结算：{json.dumps(direction['settlement_counts'], ensure_ascii=False)}。\n"
+            for item in metrics['direction_metrics']['probability_threshold_diagnostics']:
+                selected = item['model_direction']
+                text += (f"  预测正收益概率≥{item['probability_threshold']:.0%}且估计EV≥0："
+                         f"{item['selected_count']}场，覆盖{percentage(item['coverage'])}，"
+                         f"命中率{percentage(selected['positive_return_hit_rate'])}，"
+                         f"模拟ROI {percentage(selected['roi'])}。\n")
+            if not metrics['direction_metrics']['policy_prospectively_stored_for_all_rows']:
+                text += '  新方向规则未在每条记录赛前存证；以上仅为旧概率的事后诊断，不计新策略前向成绩。\n'
+            if metrics['rejected_records']:
+                text += f"  不合格输出剔除{len(metrics['rejected_records'])}条；原因见后台评分。\n"
         if ah_summary:
             text += render_ah(ah_summary)
         path.parent.mkdir(parents=True, exist_ok=True)

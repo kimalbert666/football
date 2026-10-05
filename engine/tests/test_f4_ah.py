@@ -55,6 +55,31 @@ class AHIntegrationTests(unittest.TestCase):
         self.now = ah.instant(self.fixture['kickoff_at'])
         self.assertEqual(self.run_capture()['new_valid'], 0)
 
+    def test_joint_probability_requires_full_time_provenance_and_freshness(self):
+        market = {**self.quote, 'market': '90min_1x2', 'odds': [2, 3, 4]}
+        self.assertAlmostEqual(sum(ah.probability_1x2(market, self.now, 5)), 1)
+        for changes in ({'market': 'first_half_1x2'}, {'content_sha256': None},
+                        {'provider_event_id': None}, {'url': None}, {'bookmaker': 'macau'},
+                        {'captured_at': ah.stamp(self.now - timedelta(minutes=6))},
+                        {'published_at': ah.stamp(self.now + timedelta(seconds=1))}):
+            with self.subTest(changes=changes):
+                self.assertIsNone(ah.probability_1x2({**market, **changes}, self.now, 5))
+
+    def test_fixed_line_movement_is_saved_when_representative_line_changes(self):
+        self.now -= timedelta(minutes=45)
+        self.quote.update(captured_at=ah.stamp(self.now), published_at=ah.stamp(self.now),
+                          source='synthetic-a', line_selection='balance', home_handicap=-.25,
+                          odds=[1.94, 1.96], lines=[{'home_handicap': -.5, 'odds': [2.10, 1.80]}])
+        self.run_capture()
+        self.now += timedelta(minutes=45)
+        self.quote.update(captured_at=ah.stamp(self.now), published_at=ah.stamp(self.now),
+                          home_handicap=-.5, odds=[1.96, 1.94])
+        self.run_capture()
+        early = ah.load_observations(self.root)[-1]['early_quote']
+        self.assertEqual(early['fixed_line_home_handicap'], -.5)
+        self.assertEqual(early['fixed_line_odds'], [2.10, 1.80])
+        self.assertIsNone(early['main_handicap_change'])
+
     def test_first_valid_snapshot_is_immutable_and_missing_can_retry(self):
         missing = lambda *a, **k: {'markets': {}, 'sources': [], 'problems': ['synthetic missing quote']}
         self.assertEqual(self.run_capture(missing)['new_attempts'], 1)
