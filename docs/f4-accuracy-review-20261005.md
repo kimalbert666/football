@@ -39,3 +39,11 @@
 - [scikit-learn决策门槛说明](https://scikit-learn.org/stable/modules/classification_threshold.html)与[校准说明](https://scikit-learn.org/stable/modules/calibration.html)：概率估计和决策指标分开，门槛及校准不能在最终测试段寻优。
 
 具体代码、数据哈希和自动运行会另存版本；本说明不声称任何已验证的准确率增幅。
+
+## 部署验收
+
+2026-10-05已更新GitHub `main`，代码提交为`a58e2312`。[云端验收](https://github.com/kimalbert666/football/actions/runs/37334162604)通过416项测试和108个子测试，完成实际采集检查及记录提交；日常Issue通知按研究期政策跳过。
+
+香港时间23:36的云端状态确认使用`f4-ah-research-v2`，选择指标为验证集正收益方向命中率，研究状态仍为`insufficient_data`，权重0，正式亚盘快照及赛果配对均0。
+
+行情仍有限制：InferSports健康信息过期；赛马会独立接口列出10场未来英超赛事，但不代表盘口可用。23:39另对未来7天内9场已知ESPN赛事作只读身份／报价核验：8场所需市场尚未同时售卖，1场身份或开球时间尚不能唯一匹配，合格联合报价0。此核验早于规定决策窗口，**没有导入正式快照、预测或成绩**。真实临场报价、完整比赛结算与长期模型优势仍须未来数据验证。
