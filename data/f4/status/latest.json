@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-05T23:55:41.258477Z",
+  "checked_at": "2026-10-06T00:12:22.276683Z",
   "command": "capture",
   "mode": "shadow",
   "new_predictions": 0,
@@ -13,8 +13,8 @@
       "complete": true,
       "scope": {
         "league": "england-premier",
-        "from": "2026-10-05",
-        "through": "2026-10-06",
+        "from": "2026-10-06",
+        "through": "2026-10-07",
         "provider": "espn",
         "pending_lookup_limit": 20
       },
@@ -25,30 +25,30 @@
       {
         "name": "espn-calendar",
         "status": "ok",
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261005",
-        "captured_at": "2026-10-05T23:55:38.374418Z",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261006",
+        "captured_at": "2026-10-06T00:12:19.057026Z",
         "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261006",
-        "captured_at": "2026-10-05T23:55:38.461671Z",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261007",
+        "captured_at": "2026-10-06T00:12:19.296550Z",
         "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/Company.js",
         "status": "ok",
-        "captured_at": "2026-10-05T23:55:39.378040Z",
+        "captured_at": "2026-10-06T00:12:20.079758Z",
         "content_sha256": "dc3fe95cc1987c07c5ccda09933a5beda8ba336d34e1f4ef9ffc0d67b0229a51"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/index_vip.aspx",
         "status": "ok",
-        "captured_at": "2026-10-05T23:55:40.789108Z",
-        "content_sha256": "b8c711447481f909ce573f3c85a8472b36d1e995be715e678184db411ed3d0e4"
+        "captured_at": "2026-10-06T00:12:21.669457Z",
+        "content_sha256": "02216e7e1220c44dae56c6e025d57b4dbf1f717c4967f09f578809486716682c"
       },
       {
         "name": "titan007-crown-quotes",
