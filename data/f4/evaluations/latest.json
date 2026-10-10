@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluated_at": "2026-10-09T01:39:57.820805Z",
+  "evaluated_at": "2026-10-10T11:15:19.969634Z",
   "mode": "shadow",
   "candidate_weight": 0,
   "automatic_promotion": false,
@@ -24,12 +24,12 @@
     "log_loss_floor": 1e-15
   },
   "counts": {
-    "raw_snapshots": 0,
-    "effective_valid": 0,
+    "raw_snapshots": 4,
+    "effective_valid": 4,
     "missing_baseline": 0,
     "missing_baseline_groups": 0,
     "redundant_snapshots": 0,
-    "pending": 0,
+    "pending": 4,
     "settled": 0,
     "paired": 0,
     "missing_candidate": 0,
@@ -38,11 +38,11 @@
     "excluded_postponed": 0,
     "excluded_identity": 0,
     "excluded_future": 0,
-    "distinct_match_count": 0,
-    "known_tracked_fixtures": 19,
-    "closed_windows": 0,
+    "distinct_match_count": 4,
+    "known_tracked_fixtures": 24,
+    "closed_windows": 2,
     "covered_windows": 0,
-    "missing_windows": 0,
+    "missing_windows": 2,
     "late_discovered_windows": 18
   },
   "baseline": {
@@ -79,16 +79,80 @@
     "correct": 0,
     "accuracy": null
   },
-  "pending_statuses": {},
-  "groups": [],
-  "training_evidence": [],
+  "pending_statuses": {
+    "unobserved": 4
+  },
+  "groups": [
+    {
+      "league": "england-premier",
+      "horizon": "T-180m",
+      "candidate_version": "dc-shadow-18bae91698fd",
+      "experiment_id": "f4-forward-epl-crown-v1",
+      "counts": {
+        "raw_snapshots": 4,
+        "effective_valid": 4,
+        "missing_baseline": 0,
+        "missing_baseline_groups": 0,
+        "redundant_snapshots": 0,
+        "pending": 4,
+        "settled": 0,
+        "paired": 0,
+        "missing_candidate": 0,
+        "excluded_rescheduled": 0,
+        "excluded_cancelled": 0,
+        "excluded_postponed": 0,
+        "excluded_identity": 0,
+        "excluded_future": 0
+      },
+      "baseline": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null,
+        "rps": null,
+        "brier": null,
+        "log_loss": null
+      },
+      "paired_baseline": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null,
+        "rps": null,
+        "brier": null,
+        "log_loss": null
+      },
+      "candidate": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null,
+        "rps": null,
+        "brier": null,
+        "log_loss": null
+      },
+      "f2": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "f2_paired_baseline": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "pending_statuses": {
+        "unobserved": 4
+      }
+    }
+  ],
+  "training_evidence": [
+    "legacy_model_declared_unverified"
+  ],
   "coverage": {
     "scope": "locally discovered target fixtures only; source completeness is not established",
-    "known_tracked_fixtures": 19,
+    "known_tracked_fixtures": 24,
     "unresolved_fixtures": 0,
-    "closed_windows": 0,
+    "closed_windows": 2,
     "covered_windows": 0,
-    "missing_windows": 0,
+    "missing_windows": 2,
     "missing_baseline_windows": 0,
     "late_discovered_windows": 18,
     "unknown_discovery_windows": 0,

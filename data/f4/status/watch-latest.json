@@ -1,11 +1,13 @@
 {
-  "started_at": "2026-10-09T01:39:53.048368Z",
-  "run_id": "37870846096",
+  "started_at": "2026-10-10T11:14:03.254073Z",
+  "run_id": null,
   "captures": [],
   "mode": "bounded_match_window_worker",
   "timing_guaranteed": false,
-  "previous_worker_started_at": "2026-10-09T01:22:18.119224Z",
+  "previous_worker_started_at": "2026-10-09T01:39:53.048368Z",
   "continuation_requested": false,
-  "state": "no_nearby_unrecorded_window",
-  "checked_at": "2026-10-09T01:39:59.630551Z"
+  "state": "manual_fallback_capture_completed",
+  "checked_at": "2026-10-10T11:19:35.247298+00:00",
+  "settlement_catchup_at": "2026-10-10T11:15:20.114316Z",
+  "termination_reason": "Requested immediate pre-kick audit complete; local bounded helper stopped after real capture. Cloud Actions still disabled by fork usage policy."
 }
