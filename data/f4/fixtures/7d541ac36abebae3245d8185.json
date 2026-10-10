@@ -8,29 +8,10 @@
   "home": "Aston Villa",
   "away": "Brentford",
   "kickoff_at": "2026-10-10T14:00:00Z",
-  "status": "scheduled",
+  "status": "live",
   "score": null,
-  "market": {
-    "bookmaker": "crown",
-    "company_id": 545,
-    "market": "90min_1x2",
-    "odds": [
-      2.55,
-      3.6,
-      2.67
-    ],
-    "captured_at": "2026-10-10T13:45:21.246588Z",
-    "published_at": "2026-10-10T13:43:00Z",
-    "source": "titan007-crown",
-    "url": "https://1x2d.titan007.com/3003900.js",
-    "provider_event_id": "3003900",
-    "provider_quote_id": "157900536",
-    "content_sha256": "8c59f57aea381747c2cb168a1751695b461f118b977c5b8355ef0b6caefded34",
-    "provider_kickoff_at": "2026-10-10T14:00:00Z",
-    "market_status": "not_exposed",
-    "provenance": "Titan007 public display attributed to Crown; not direct bookmaker API"
-  },
+  "market": null,
   "problems": [],
   "first_seen_at": "2026-10-04T03:01:08.748364Z",
-  "last_seen_at": "2026-10-10T13:45:22.513714Z"
+  "last_seen_at": "2026-10-10T14:15:31.399300Z"
 }
