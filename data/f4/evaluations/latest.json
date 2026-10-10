@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluated_at": "2026-10-10T12:20:09.749766Z",
+  "evaluated_at": "2026-10-10T12:50:31.612245Z",
   "mode": "shadow",
   "candidate_weight": 0,
   "automatic_promotion": false,
@@ -24,12 +24,12 @@
     "log_loss_floor": 1e-15
   },
   "counts": {
-    "raw_snapshots": 4,
-    "effective_valid": 4,
+    "raw_snapshots": 8,
+    "effective_valid": 8,
     "missing_baseline": 0,
     "missing_baseline_groups": 0,
     "redundant_snapshots": 0,
-    "pending": 4,
+    "pending": 8,
     "settled": 0,
     "paired": 0,
     "missing_candidate": 0,
@@ -80,12 +80,71 @@
     "accuracy": null
   },
   "pending_statuses": {
-    "unobserved": 4
+    "unobserved": 8
   },
   "groups": [
     {
       "league": "england-premier",
       "horizon": "T-180m",
+      "candidate_version": "dc-shadow-18bae91698fd",
+      "experiment_id": "f4-forward-epl-crown-v1",
+      "counts": {
+        "raw_snapshots": 4,
+        "effective_valid": 4,
+        "missing_baseline": 0,
+        "missing_baseline_groups": 0,
+        "redundant_snapshots": 0,
+        "pending": 4,
+        "settled": 0,
+        "paired": 0,
+        "missing_candidate": 0,
+        "excluded_rescheduled": 0,
+        "excluded_cancelled": 0,
+        "excluded_postponed": 0,
+        "excluded_identity": 0,
+        "excluded_future": 0
+      },
+      "baseline": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null,
+        "rps": null,
+        "brier": null,
+        "log_loss": null
+      },
+      "paired_baseline": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null,
+        "rps": null,
+        "brier": null,
+        "log_loss": null
+      },
+      "candidate": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null,
+        "rps": null,
+        "brier": null,
+        "log_loss": null
+      },
+      "f2": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "f2_paired_baseline": {
+        "n": 0,
+        "correct": 0,
+        "accuracy": null
+      },
+      "pending_statuses": {
+        "unobserved": 4
+      }
+    },
+    {
+      "league": "england-premier",
+      "horizon": "T-60m",
       "candidate_version": "dc-shadow-18bae91698fd",
       "experiment_id": "f4-forward-epl-crown-v1",
       "counts": {

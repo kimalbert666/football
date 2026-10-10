@@ -1,8 +1,8 @@
 {
-  "evaluated_at": "2026-10-10T12:20:09.749304Z",
-  "new_valid": 0,
-  "new_attempts": 0,
-  "valid_observations": 5,
+  "evaluated_at": "2026-10-10T12:50:31.611764Z",
+  "new_valid": 4,
+  "new_attempts": 4,
+  "valid_observations": 9,
   "distinct_matches": 5,
   "paired_matches": 0,
   "pairing_issues": {
@@ -206,24 +206,24 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-10T12:20:08.172855Z",
+      "captured_at": "2026-10-10T12:50:30.176620Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-10T12:20:08.701331Z",
-      "content_sha256": "bf57699a638d317115db17df6157d2a76888009f0031218ea54704a0153f8e2d"
+      "captured_at": "2026-10-10T12:50:30.705600Z",
+      "content_sha256": "1d3632111d48ab0959ce097a600ccec9e2fea8549a103d85056caab382abc861"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-10T12:20:09.735928Z",
-      "response_at": "2026-10-10T12:20:09Z",
-      "content_sha256": "4116c1e90d2052e5509a4cc4a79eb720dad26fad7483e68084090a8e03166ea0",
-      "match_count": 233,
+      "captured_at": "2026-10-10T12:50:31.596071Z",
+      "response_at": "2026-10-10T12:50:31Z",
+      "content_sha256": "7d747474d426505fc36482b833f8cb50937e870ad058c945e06383ce202b923f",
+      "match_count": 232,
       "epl_match_count": 10
     }
   ],
@@ -238,10 +238,15 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-10T12:20:08.701331Z"
+    "checked_at": "2026-10-10T12:50:30.705600Z"
   },
-  "fallback_matches": [],
-  "quote_availability": "not_tested_no_due_matches",
+  "fallback_matches": [
+    "espn:401878772",
+    "espn:401878775",
+    "espn:401878776",
+    "espn:401879265"
+  ],
+  "quote_availability": "complete",
   "research_only": true,
   "automatic_promotion": false,
   "automatic_wagering": false
