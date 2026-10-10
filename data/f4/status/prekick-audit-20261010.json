@@ -11,53 +11,58 @@
   "observations": [
     {
       "path": "data/f4/ah/observations/2026-10-10/14073050a360af8d4236f71e323ed7c3bd251853785e4f43d90432f65f73979b.json",
-      "sha256": "f37b82076c2cb5a9b2310dc83581ad03279f10652b2bd3836f858714e976b712",
+      "sha256": "cdcc7675cc4bab34e5212c7fdffeed537a3398d6dc6fb6d31d822093585decc2",
       "match_id": "espn:401878772",
       "kickoff_at": "2026-10-10T14:00:00Z",
       "observed_at": "2026-10-10T11:14:48.972651Z",
       "horizon": "T-180m",
       "bookmaker": "hkjc",
-      "has_valid_quote": true
+      "has_valid_quote": true,
+      "hash_basis": "Git repository blob bytes (LF), independent of local checkout newline conversion"
     },
     {
       "path": "data/f4/ah/observations/2026-10-10/1f0649bc7f325c42f673692c6d601adf0b95c66efdd830bf6579dd22a3fe29e9.json",
-      "sha256": "06cc332041d44b282bed801ca0c37d8fb6489f24007e6e7f3b23dab47a5c2c8c",
+      "sha256": "b8052ae4229c801ea3acbe08cb54419e52aa4f80d70c279d1ec393407e096af0",
       "match_id": "espn:401879265",
       "kickoff_at": "2026-10-10T14:00:00Z",
       "observed_at": "2026-10-10T11:14:48.977178Z",
       "horizon": "T-180m",
       "bookmaker": "hkjc",
-      "has_valid_quote": true
+      "has_valid_quote": true,
+      "hash_basis": "Git repository blob bytes (LF), independent of local checkout newline conversion"
     },
     {
       "path": "data/f4/ah/observations/2026-10-10/7c7a9378e438ed5b2ab36d32eefd96b59b77d76e4c62219bda4b821b9e894f75.json",
-      "sha256": "7ee10f891f7bac0a42b5fd5515c6ccba15491aef6e828611d1bdc4911242a496",
+      "sha256": "242e9da456b99bd2bd2d321caff7f85b198bcb1f645ef4ba3f91b0b4a23b6d2e",
       "match_id": "espn:401878775",
       "kickoff_at": "2026-10-10T14:00:00Z",
       "observed_at": "2026-10-10T11:14:48.974154Z",
       "horizon": "T-180m",
       "bookmaker": "hkjc",
-      "has_valid_quote": true
+      "has_valid_quote": true,
+      "hash_basis": "Git repository blob bytes (LF), independent of local checkout newline conversion"
     },
     {
       "path": "data/f4/ah/observations/2026-10-10/a233e161bfefd5a3addba627f76ab0e96a1c4ca557980999ea06ee7d6d6fb249.json",
-      "sha256": "db50380502d1b77eb346aa084191c6d6e7c4c094de55b5b942a44948087aff8e",
+      "sha256": "c0bea83cbd3b9e6161a93739590e370c51e4730e402d87ef9b8d299903d71fd2",
       "match_id": "espn:401878776",
       "kickoff_at": "2026-10-10T14:00:00Z",
       "observed_at": "2026-10-10T11:14:48.976173Z",
       "horizon": "T-180m",
       "bookmaker": "hkjc",
-      "has_valid_quote": true
+      "has_valid_quote": true,
+      "hash_basis": "Git repository blob bytes (LF), independent of local checkout newline conversion"
     },
     {
       "path": "data/f4/ah/observations/2026-10-10/ce35be31451e857b9d8a21f791ffa015ce825cff50c2518ca5c75e063a92a4c7.json",
-      "sha256": "1e258eeb26fd4410ef1e67f4e6676cbcedac36e8cce2c12612287a1da933d13f",
+      "sha256": "d91b3090ef9e8e62c62ec9309869eeb14e1e7660109bcb742c6409b0638bd65f",
       "match_id": "espn:401879268",
       "kickoff_at": "2026-10-10T11:30:00Z",
       "observed_at": "2026-10-10T11:14:48.971648Z",
       "horizon": "T-15m",
       "bookmaker": "hkjc",
-      "has_valid_quote": true
+      "has_valid_quote": true,
+      "hash_basis": "Git repository blob bytes (LF), independent of local checkout newline conversion"
     }
   ],
   "remaining_limitations": [
@@ -68,5 +73,31 @@
   "targeted_tests": {
     "passed": 68,
     "scope": "watch worker and saved prediction validation"
+  },
+  "quote_upload_verified": true,
+  "quote_hashes_verified_on_github_main": true,
+  "quote_capture_commit": "a7c9ff3d",
+  "source_alias_repair": {
+    "canonical_id": "england.man-united",
+    "variant": "Manchester Utd",
+    "fresh_verified_at": "2026-10-10T11:24:16.350Z",
+    "fixture": "espn:401878773",
+    "provider_event_id": "50075988",
+    "identity_unique": true,
+    "kickoff_difference_seconds": 0,
+    "probe_only_not_formal_observation": true
+  },
+  "scheduling_repair": {
+    "previous_cron": "7,17,27,37,47,57 * * * *",
+    "new_cron": "7 * * * *",
+    "scheduled_discovery_runs_per_day_before": 144,
+    "scheduled_discovery_runs_per_day_after": 24,
+    "worker_arm_minutes": 180,
+    "worker_max_minutes": 300,
+    "simulation_kickoff_minute_phases_passed": 60,
+    "simulation_phases_requiring_one_handoff": 46,
+    "assumed_handoff_delay_seconds": 10,
+    "timing_guaranteed": false,
+    "remaining_risk": "Failed worker or delayed/rejected handoff can miss windows; hourly cron recovers more slowly. Waiting runner time does not fall in proportion to cron count."
   }
 }

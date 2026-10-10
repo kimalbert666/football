@@ -2,7 +2,9 @@ name: F4 Shadow Monitor
 
 on:
   schedule:
-    - cron: '7,17,27,37,47,57 * * * *'
+    # Hourly discovery; the bounded worker waits for exact capture windows.
+    # Reduce empty fork runs; runner availability and handoffs still matter.
+    - cron: '7 * * * *'
     # 07:43 Hong Kong: outcomes and fixture coverage, without training.
     - cron: '43 23 * * *'
     # First day 10:13 Hong Kong: previous month research report.
