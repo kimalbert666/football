@@ -1,8 +1,8 @@
 {
-  "evaluated_at": "2026-10-10T15:15:53.432284Z",
-  "new_valid": 0,
-  "new_attempts": 0,
-  "valid_observations": 14,
+  "evaluated_at": "2026-10-10T15:30:35.663588Z",
+  "new_valid": 1,
+  "new_attempts": 1,
+  "valid_observations": 15,
   "distinct_matches": 6,
   "paired_matches": 0,
   "pairing_issues": {
@@ -206,24 +206,24 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-10T14:45:45.258481Z",
+      "captured_at": "2026-10-10T15:30:34.281698Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-10T14:45:45.775112Z",
-      "content_sha256": "4025aa0e72e7a854417b99c0f7f4bba7074dd6fd725f0e19a7445d627b639b46"
+      "captured_at": "2026-10-10T15:30:34.874498Z",
+      "content_sha256": "4bbaa0aaa72608337df14a2b904ddaa63818e1c9202f1809b0dceba33f7ba4f5"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-10T14:45:46.719707Z",
-      "response_at": "2026-10-10T14:45:46Z",
-      "content_sha256": "fe1ef24785bf7069e0b06501213a95968e9f606dd7a442ce44ebdf4bf5ae73a7",
-      "match_count": 202,
+      "captured_at": "2026-10-10T15:30:35.650562Z",
+      "response_at": "2026-10-10T15:30:35Z",
+      "content_sha256": "108d1c5f668e6575cffa9f70687f7f7cd8161a821b32b52ca78d8bbbc8ee29a2",
+      "match_count": 196,
       "epl_match_count": 9
     }
   ],
@@ -238,10 +238,12 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-10T14:45:45.775112Z"
+    "checked_at": "2026-10-10T15:30:34.874498Z"
   },
-  "fallback_matches": [],
-  "quote_availability": "not_tested_no_due_matches",
+  "fallback_matches": [
+    "espn:401878773"
+  ],
+  "quote_availability": "complete",
   "research_only": true,
   "automatic_promotion": false,
   "automatic_wagering": false
