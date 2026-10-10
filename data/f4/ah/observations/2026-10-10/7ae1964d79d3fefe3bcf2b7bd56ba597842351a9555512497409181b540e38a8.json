@@ -1,0 +1,134 @@
+{
+  "match_id": "espn:401878773",
+  "provider": "espn",
+  "source_event_id": "401878773",
+  "home_id": "man-united",
+  "away_id": "tottenham",
+  "home": "Manchester United",
+  "away": "Tottenham Hotspur",
+  "kickoff_at": "2026-10-10T16:30:00Z",
+  "league": "england-premier",
+  "schema_version": 1,
+  "experiment_id": "f4-epl-ah-research-v1",
+  "observed_at": "2026-10-10T16:15:19.106183Z",
+  "horizon": "T-15m",
+  "actual_minutes": 14.681563616666667,
+  "quote": {
+    "bookmaker": "hkjc",
+    "captured_at": "2026-10-10T16:15:19.095808Z",
+    "snapshot_at": "2026-10-10T16:15:19Z",
+    "source": "hkjc-direct",
+    "url": "https://info.cld.hkjc.com/graphql/base/",
+    "content_sha256": "a147d3335a6ed04028d1711145118916656170125c09fbebfe860267af2cd92d",
+    "provider_event_id": "50075988",
+    "provider_kickoff_at": "2026-10-11T00:30:00.000+08:00",
+    "home_handicap": -0.75,
+    "odds": [
+      1.8,
+      2.03
+    ],
+    "published_at": "2026-10-08T10:38:25.365000Z",
+    "raw_condition": "-0.5/-1.0",
+    "provider_main": true,
+    "market": "90min_asian_handicap",
+    "lines": [
+      {
+        "home_handicap": -0.75,
+        "odds": [
+          1.8,
+          2.03
+        ],
+        "published_at": "2026-10-08T10:38:25.365000Z",
+        "raw_condition": "-0.5/-1.0",
+        "provider_main": true
+      }
+    ],
+    "line_selection": "provider_main",
+    "market_1x2": {
+      "bookmaker": "hkjc",
+      "captured_at": "2026-10-10T16:15:19.095808Z",
+      "snapshot_at": "2026-10-10T16:15:19Z",
+      "source": "hkjc-direct",
+      "url": "https://info.cld.hkjc.com/graphql/base/",
+      "content_sha256": "a147d3335a6ed04028d1711145118916656170125c09fbebfe860267af2cd92d",
+      "provider_event_id": "50075988",
+      "provider_kickoff_at": "2026-10-11T00:30:00.000+08:00",
+      "market": "90min_1x2",
+      "odds": [
+        1.54,
+        4.2,
+        4.1
+      ],
+      "published_at": "2026-10-07T23:00:03.072000Z"
+    },
+    "opening_lines": [],
+    "market_status": "official_provider_reports_selling",
+    "freshness_evidence": "current official HTTP response, cache <=60s, PREEVENT and selling pool status",
+    "provenance": "HKJC public website response; publication time is last pool change, no execution guarantee"
+  },
+  "bookmaker": "hkjc",
+  "p_1x2": [
+    0.5739617358842743,
+    0.2104526364909006,
+    0.21558562762482503
+  ],
+  "quote_1x2": {
+    "bookmaker": "hkjc",
+    "captured_at": "2026-10-10T16:15:19.095808Z",
+    "snapshot_at": "2026-10-10T16:15:19Z",
+    "source": "hkjc-direct",
+    "url": "https://info.cld.hkjc.com/graphql/base/",
+    "content_sha256": "a147d3335a6ed04028d1711145118916656170125c09fbebfe860267af2cd92d",
+    "provider_event_id": "50075988",
+    "provider_kickoff_at": "2026-10-11T00:30:00.000+08:00",
+    "market": "90min_1x2",
+    "odds": [
+      1.54,
+      4.2,
+      4.1
+    ],
+    "published_at": "2026-10-07T23:00:03.072000Z"
+  },
+  "ratings": null,
+  "early_quote": {
+    "observed_at": "2026-10-10T13:20:56.986174Z",
+    "home_handicap": -0.75,
+    "odds": [
+      1.84,
+      1.98
+    ],
+    "fixed_line_home_handicap": -0.75,
+    "fixed_line_odds": [
+      1.84,
+      1.98
+    ],
+    "bookmaker": "hkjc",
+    "source": "hkjc-direct",
+    "url": "https://info.cld.hkjc.com/graphql/base/",
+    "line_selection": "provider_main",
+    "provider_main": true,
+    "provenance": {
+      "kind": "prospective_capture",
+      "market": "90min_asian_handicap",
+      "source": "https://info.cld.hkjc.com/graphql/base/"
+    },
+    "main_handicap_change": 0.0,
+    "main_handicap_change_available": true,
+    "captured_at": "2026-10-10T13:20:56.974192Z",
+    "published_at": "2026-10-08T10:38:25.365000Z",
+    "snapshot_at": "2026-10-10T13:20:56Z",
+    "provider_event_id": "50075988",
+    "content_sha256": "4e086fbf6ff6a5941df0fecfe0f80230ec234b8986d57d481c5dd33492d547fa"
+  },
+  "reason": null,
+  "selected": false,
+  "candidate_weight": 0,
+  "provenance": {
+    "kind": "prospective_capture",
+    "market": "90min_asian_handicap",
+    "source": "https://info.cld.hkjc.com/graphql/base/"
+  },
+  "candidates": {},
+  "generated_at": "2026-10-10T16:15:19.106309Z",
+  "observation_id": "7ae1964d79d3fefe3bcf2b7bd56ba597842351a9555512497409181b540e38a8"
+}

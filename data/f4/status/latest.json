@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-10T16:00:42.011701Z",
+  "checked_at": "2026-10-10T16:15:19.109057Z",
   "command": "capture",
   "mode": "shadow",
   "new_predictions": 0,
@@ -26,34 +26,43 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261010",
-        "captured_at": "2026-10-10T16:00:37.598202Z",
-        "content_sha256": "bdbb5be2a0ef19dc3aa0e0bbf5a1a3e56ce6b5483f682df2f2f86d92ff359bee"
+        "captured_at": "2026-10-10T16:15:00.147862Z",
+        "content_sha256": "7c883027b3541348b059bf30bb6f7a9232e5d28fc1c648058c7365053129bd48"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261011",
-        "captured_at": "2026-10-10T16:00:37.708971Z",
-        "content_sha256": "705d1beed18337e7228df7f7c22ea4fd65b758a7e1088a6b363677f13b33da62"
+        "captured_at": "2026-10-10T16:15:00.242629Z",
+        "content_sha256": "de204a24495a9bce9317817522c8056e1ba2897a07231bcbc55e5fc0b0b0cbb5"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/Company.js",
         "status": "ok",
-        "captured_at": "2026-10-10T16:00:38.806522Z",
+        "captured_at": "2026-10-10T16:15:02.177421Z",
         "content_sha256": "c075a14e3a167b3c0d77cb734956ed838bc3067f9a5d3df24b5d7a05f4811e18"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/index_vip.aspx",
         "status": "ok",
-        "captured_at": "2026-10-10T16:00:41.992062Z",
-        "content_sha256": "88cade7d15b95f9e30653a3aab0d2ac55e4a4c3e65bcf50f4479348377083696"
+        "captured_at": "2026-10-10T16:15:11.848411Z",
+        "content_sha256": "e18e324ad4ab65f4f9bbeef3f1f312968a33e361211fc6f89af518658a73f00b"
       },
       {
-        "name": "titan007-crown-quotes",
-        "status": "not_requested",
-        "reason": "No confirmed EPL fixture in a capture window"
+        "name": "titan007-crown",
+        "url": "https://1x2.titan007.com/TomorrowOdds.aspx",
+        "status": "ok",
+        "captured_at": "2026-10-10T16:15:15.741867Z",
+        "content_sha256": "942476028187c4bb8a30eaaed6aac9050b3d5403a3d553693ea45845df8a8bcf"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003907.js",
+        "status": "ok",
+        "captured_at": "2026-10-10T16:15:16.924698Z",
+        "content_sha256": "06bd07e8209a05388f15d30fd13fc7f0e93f0e186a7a073507ef08d61f0b52b1"
       }
     ]
   },
@@ -61,8 +70,8 @@
   "automatic_promotion": false,
   "automatic_wagering": false,
   "asian_handicap": {
-    "new_valid": 0,
-    "new_attempts": 0,
+    "new_valid": 1,
+    "new_attempts": 1,
     "distinct_matches": 6,
     "paired_matches": 0,
     "problems": [
