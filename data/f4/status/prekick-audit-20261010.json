@@ -7,7 +7,7 @@
   "user_reported_banner": "Workflows are not currently being run on this fork due to the scale of GitHub Actions usage. A repository maintainer can choose to re-enable these.",
   "repository_permissions_enabled": true,
   "workflow_enabled": true,
-  "cloud_resume_verified": false,
+  "cloud_resume_verified": true,
   "observations": [
     {
       "path": "data/f4/ah/observations/2026-10-10/14073050a360af8d4236f71e323ed7c3bd251853785e4f43d90432f65f73979b.json",
@@ -67,8 +67,8 @@
   ],
   "remaining_limitations": [
     "Primary InferSports odds feed stale; official HKJC fallback supplied actual quotes.",
-    "Cloud re-enable needs maintainer confirmation on GitHub page; no cloud capture guarantee until actual run succeeds.",
-    "Arsenal T180 and T60 windows already elapsed; no retroactive reconstruction."
+    "Arsenal T180 and T60 windows already elapsed; no retroactive reconstruction.",
+    "Cloud startup, tests and initial checkpoint verified after maintainer restore; future capture windows and match result settlement still require actual records."
   ],
   "targeted_tests": {
     "passed": 68,
@@ -99,5 +99,19 @@
     "assumed_handoff_delay_seconds": 10,
     "timing_guaranteed": false,
     "remaining_risk": "Failed worker or delayed/rejected handoff can miss windows; hourly cron recovers more slowly. Waiting runner time does not fall in proportion to cron count."
+  },
+  "resume": {
+    "restored_by_maintainer": true,
+    "dispatch_verified_at": "2026-10-10T11:49:30Z",
+    "dispatch_http": 204,
+    "run_id": 38049767276,
+    "run_url": "https://github.com/kimalbert666/football/actions/runs/38049767276",
+    "deployed_head_sha": "eb1154c36e6dcd9fd91ceaf9a13479136beddc8f",
+    "manual_acceptance_tests": "passed",
+    "cloud_worker_started_at": "2026-10-10T11:49:53.798593Z",
+    "checkpoint_verified_at": "2026-10-10T11:49:58.937050Z",
+    "checkpoint_run_id_matches": true,
+    "worker_status": "in_progress_waiting_for_future_windows",
+    "future_capture_or_settlement_not_yet_verified": true
   }
 }

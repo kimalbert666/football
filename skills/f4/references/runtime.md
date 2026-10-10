@@ -30,7 +30,7 @@
 
 本skill的`scripts/evaluate.py`是JSONL离线评分器，`scripts/replay.py`是本地历史探索工具，与云端账本不同。云端资料须明确转换schema；不能将旧系统缺少真实截止时间的记录冒充前向样本。
 
-GitHub Python工作流实际可启动时，可在GPT和网页关闭后运行，无需模型API。10月10日该fork因Actions使用规模被暂停，权限和workflow状态虽为已启用，实际dispatch仍返回422。须按Actions页面提示由维护者重新启用，并用真实启动验收；不能将本地补采或已启用配置说成云端恢复。自动阅读研究仍需可运行的Codex或模型API环境，当前未接入。若用户另外要求Codex定时任务，用automation_update检查并创建或更新，不能将本地任务说成无需电脑的GitHub任务。
+GitHub Python工作流实际可启动时，可在GPT和网页关闭后运行，无需模型API。10月10日该fork曾因Actions使用规模被暂停，权限和workflow状态虽为已启用，实际dispatch仍返回422。维护者按Actions页面提示恢复后，19:49香港时间启动的运行38049767276已通过云端测试并保存匹配运行编号的新检查点，确认执行与保存恢复；后续窗口及赛后结算还须真实记录验证。今后遇到停用仍要以实际启动验收，不能将本地补采或已启用配置说成云端恢复。自动阅读研究仍需可运行的Codex或模型API环境，当前未接入。若用户另外要求Codex定时任务，用automation_update检查并创建或更新，不能将本地任务说成无需电脑的GitHub任务。
 
 ## 保存、通知与验收
 
