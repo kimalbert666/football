@@ -1,12 +1,12 @@
 {
-  "evaluated_at": "2026-10-10T13:20:56.988407Z",
-  "new_valid": 1,
-  "new_attempts": 1,
-  "valid_observations": 10,
+  "evaluated_at": "2026-10-10T13:45:24.530057Z",
+  "new_valid": 4,
+  "new_attempts": 4,
+  "valid_observations": 14,
   "distinct_matches": 6,
   "paired_matches": 0,
   "pairing_issues": {
-    "awaiting_regulation_result": 1
+    "awaiting_regulation_result": 5
   },
   "line_groups": {},
   "prospective_scores": {},
@@ -206,25 +206,25 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-10T13:20:55.589482Z",
+      "captured_at": "2026-10-10T13:45:23.080732Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-10T13:20:56.152183Z",
-      "content_sha256": "c54cd9ed455116c2ebc4115566ba2062fae72c279c09fc7f658f561422c17bcb"
+      "captured_at": "2026-10-10T13:45:23.610874Z",
+      "content_sha256": "37c83eba3e8c7d0b91006b158cf0075d58c66dbdb69d2bb82f61cbc8eb191932"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-10T13:20:56.974192Z",
-      "response_at": "2026-10-10T13:20:56Z",
-      "content_sha256": "4e086fbf6ff6a5941df0fecfe0f80230ec234b8986d57d481c5dd33492d547fa",
-      "match_count": 229,
-      "epl_match_count": 10
+      "captured_at": "2026-10-10T13:45:24.514903Z",
+      "response_at": "2026-10-10T13:45:24Z",
+      "content_sha256": "ae7c757bb4cfefac6dd6ae0a55f9d3e2af1abdb601627076017d8575cf86ae62",
+      "match_count": 224,
+      "epl_match_count": 9
     }
   ],
   "provider_faults": {
@@ -238,10 +238,13 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-10T13:20:56.152183Z"
+    "checked_at": "2026-10-10T13:45:23.610874Z"
   },
   "fallback_matches": [
-    "espn:401878773"
+    "espn:401878772",
+    "espn:401878775",
+    "espn:401878776",
+    "espn:401879265"
   ],
   "quote_availability": "complete",
   "research_only": true,

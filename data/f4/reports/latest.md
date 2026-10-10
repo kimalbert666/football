@@ -1,11 +1,13 @@
 # f4 英超跟踪更新
 
-更新时间：2026-10-10 21:20（香港时间）。
+更新时间：2026-10-10 21:45（香港时间）。
 
-本次新增赛前记录 **1** 条，补充赛果／状态 **0** 条。累计有效赛前记录涉及 **5** 场比赛。
+本次新增赛前记录 **0** 条，补充赛果／状态 **0** 条。累计有效赛前记录涉及 **5** 场比赛。
+
+本次没有已识别的英超比赛进入预定赛前记录窗口。
 
 
-评估时间：2026-10-10T13:20:56.988907Z（UTC）。
+评估时间：2026-10-10T13:45:24.530547Z（UTC）。
 
 候选为冻结的旧 Dixon–Coles（DC）参数，仅作影子对照；候选权重为 **0**，不自动晋级、不自动下注。
 训练截止日期来自历史文件声明，训练资料尚未独立认证；已有结果不构成已认证优势，也不能证明校准有效。
@@ -51,23 +53,13 @@ f2 点预测：0 场，胜平负方向命中率 —（无已结算样本）；�
 
 ## 本次运行
 
-- 核对时间：2026-10-10T13:20:56.988907Z（UTC）。
+- 核对时间：2026-10-10T13:45:24.530547Z（UTC）。
 - 范围：全英超，杯赛尚未接入。
-- 新记录 1 条，其中市场输入有效 1 条；赛果／状态修订 0 条。
+- 新记录 0 条，其中市场输入有效 0 条；赛果／状态修订 0 条。
 - 赛前窗口：T−180分与T−60分，各允许±20分；实际时间保存在每条记录中。
 - f4与原任务并行；候选权重为0，不自动下注、不自动读论文或改权重。
 - 当前候选：冻结的旧DC参数，仅用于前向对照；其历史训练资料尚未独立认证。
 - 赔率使用球探公开页面转载的皇冠90分钟胜平负报价；并非皇冠官方API，页面不提供独立受注状态，不能保证可成交。
-- 数据提醒：f2 row 0 rejected: an explicit kickoff/decision time is required
-- 数据提醒：f2 row 1 rejected: an explicit kickoff/decision time is required
-- 数据提醒：f2 row 2 rejected: an explicit kickoff/decision time is required
-- 数据提醒：f2 row 3 rejected: an explicit kickoff/decision time is required
-- 数据提醒：f2 row 4 rejected: an explicit kickoff/decision time is required
-- 数据提醒：f2 row 5 rejected: unknown or ambiguous source teams
-- 数据提醒：f2 row 6 rejected: an explicit kickoff/decision time is required
-- 数据提醒：f2 row 7 rejected: an explicit kickoff/decision time is required
-- 数据提醒：f2 row 8 rejected: an explicit kickoff/decision time is required
-- 数据提醒：f2 row 9 rejected: an explicit kickoff/decision time is required
 
 ## 最近赛前记录
 
@@ -87,7 +79,7 @@ f2 点预测：0 场，胜平负方向命中率 —（无已结算样本）；�
 
 覆盖所有实际出现的合法让球档位；盘口示例不是筛选白名单。研究期只发月报和重要故障，试验方向后台保存。
 
-- 有效亚盘记录：10；涉及6场比赛。
+- 有效亚盘记录：14；涉及6场比赛。
 - T−15分钟已有赛果配对：0场。
 - 全赢、半赢、走盘、半输、全输分开；按赛前保存的价格结算。
 - 方向命中率以全赢或半赢计命中，走盘留在分母；同时报告全赢率、价格、收益和覆盖率。
@@ -95,6 +87,6 @@ f2 点预测：0 场，胜平负方向命中率 —（无已结算样本）；�
 - M1：insufficient_data。
 - M2：insufficient_data。
 - M3：insufficient_data。
-- 本次所需比赛报价覆盖：complete；独立备用源补齐1场。
-- 香港赛马会独立接口：ok；返回英超赛事10场。
+- 本次所需比赛报价覆盖：complete；独立备用源补齐4场。
+- 香港赛马会独立接口：ok；返回英超赛事9场。
 - 亚盘数据提醒：Crown AH source unavailable (ValueError: provider feed health unavailable or stale)
