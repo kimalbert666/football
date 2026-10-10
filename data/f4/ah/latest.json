@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-10-10T14:15:31.406126Z",
+  "evaluated_at": "2026-10-10T14:45:46.731290Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 14,
@@ -206,24 +206,24 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-10T13:45:23.080732Z",
+      "captured_at": "2026-10-10T14:45:45.258481Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-10T13:45:23.610874Z",
-      "content_sha256": "37c83eba3e8c7d0b91006b158cf0075d58c66dbdb69d2bb82f61cbc8eb191932"
+      "captured_at": "2026-10-10T14:45:45.775112Z",
+      "content_sha256": "4025aa0e72e7a854417b99c0f7f4bba7074dd6fd725f0e19a7445d627b639b46"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-10T13:45:24.514903Z",
-      "response_at": "2026-10-10T13:45:24Z",
-      "content_sha256": "ae7c757bb4cfefac6dd6ae0a55f9d3e2af1abdb601627076017d8575cf86ae62",
-      "match_count": 224,
+      "captured_at": "2026-10-10T14:45:46.719707Z",
+      "response_at": "2026-10-10T14:45:46Z",
+      "content_sha256": "fe1ef24785bf7069e0b06501213a95968e9f606dd7a442ce44ebdf4bf5ae73a7",
+      "match_count": 202,
       "epl_match_count": 9
     }
   ],
@@ -238,15 +238,10 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-10T13:45:23.610874Z"
+    "checked_at": "2026-10-10T14:45:45.775112Z"
   },
-  "fallback_matches": [
-    "espn:401878772",
-    "espn:401878775",
-    "espn:401878776",
-    "espn:401879265"
-  ],
-  "quote_availability": "complete",
+  "fallback_matches": [],
+  "quote_availability": "not_tested_no_due_matches",
   "research_only": true,
   "automatic_promotion": false,
   "automatic_wagering": false

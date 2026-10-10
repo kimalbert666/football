@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-10T14:15:31.406622Z",
+  "checked_at": "2026-10-10T14:45:46.731783Z",
   "command": "capture",
   "mode": "shadow",
   "new_predictions": 0,
@@ -26,29 +26,29 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261010",
-        "captured_at": "2026-10-10T14:15:26.499550Z",
-        "content_sha256": "a3fcb2a53e089164dc6dbc29251bd54fae884378c156d9199cd75723d8c68a45"
+        "captured_at": "2026-10-10T14:45:33.224601Z",
+        "content_sha256": "6462a90e4481656c9228255da6324a809a15ffb6b7b652e3c2aa3c18d5093aca"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261011",
-        "captured_at": "2026-10-10T14:15:26.593837Z",
+        "captured_at": "2026-10-10T14:45:33.320270Z",
         "content_sha256": "ff687277229b4a83dae281754cb896ec782353ff764984d5f61b880c39203998"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/Company.js",
         "status": "ok",
-        "captured_at": "2026-10-10T14:15:27.499879Z",
+        "captured_at": "2026-10-10T14:45:35.113835Z",
         "content_sha256": "c075a14e3a167b3c0d77cb734956ed838bc3067f9a5d3df24b5d7a05f4811e18"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/index_vip.aspx",
         "status": "ok",
-        "captured_at": "2026-10-10T14:15:31.384385Z",
-        "content_sha256": "80efdcfc919abb6b8de5cd443536eaab68443d64293da934c3dfcf385538a530"
+        "captured_at": "2026-10-10T14:45:44.628725Z",
+        "content_sha256": "5d6e67649fb980cf43e274dcc34500bbff7e5adfe14597152e4b7d4b05172202"
       },
       {
         "name": "titan007-crown-quotes",
@@ -74,12 +74,7 @@
       ],
       "hkjc-direct": []
     },
-    "fallback_matches": [
-      "espn:401878772",
-      "espn:401878775",
-      "espn:401878776",
-      "espn:401879265"
-    ],
-    "quote_availability": "complete"
+    "fallback_matches": [],
+    "quote_availability": "not_tested_no_due_matches"
   }
 }
