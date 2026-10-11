@@ -1,0 +1,272 @@
+{
+  "checked_at": "2026-10-11T12:51:54.447857+00:00",
+  "verified_head": "9d48b37b7e915f83460a537c2551164982e972e2",
+  "before_daily_head": "122a63f69bd02389624293a754d721771517866d",
+  "observation_count": 16,
+  "all_sixteen_observation_blobs_unchanged": true,
+  "matches": [
+    {
+      "match_id": "espn:401879265",
+      "home": "ipswich",
+      "away": "fulham",
+      "kickoff_at": "2026-10-10T14:00:00Z",
+      "stages": [
+        "T-15m",
+        "T-180m",
+        "T-60m"
+      ],
+      "T15": {
+        "observed_at": "2026-10-10T13:45:24.527681Z",
+        "bookmaker": "hkjc",
+        "line": 0.25,
+        "odds": [
+          1.83,
+          1.99
+        ],
+        "has_same_book_1x2": true,
+        "candidates": []
+      },
+      "outcome": {
+        "status": "completed",
+        "home_score": 2,
+        "away_score": 1,
+        "observed_at": "2026-10-11T12:49:45.904081Z",
+        "kickoff_at": "2026-10-10T14:00:00Z"
+      }
+    },
+    {
+      "match_id": "espn:401878775",
+      "home": "chelsea",
+      "away": "bournemouth",
+      "kickoff_at": "2026-10-10T14:00:00Z",
+      "stages": [
+        "T-15m",
+        "T-180m",
+        "T-60m"
+      ],
+      "T15": {
+        "observed_at": "2026-10-10T13:45:24.527127Z",
+        "bookmaker": "hkjc",
+        "line": -0.75,
+        "odds": [
+          1.96,
+          1.86
+        ],
+        "has_same_book_1x2": true,
+        "candidates": []
+      },
+      "outcome": {
+        "status": "completed",
+        "home_score": 5,
+        "away_score": 1,
+        "observed_at": "2026-10-11T12:49:45.904081Z",
+        "kickoff_at": "2026-10-10T14:00:00Z"
+      }
+    },
+    {
+      "match_id": "espn:401878772",
+      "home": "sunderland",
+      "away": "brighton",
+      "kickoff_at": "2026-10-10T14:00:00Z",
+      "stages": [
+        "T-180m",
+        "T-60m",
+        "T-15m"
+      ],
+      "T15": {
+        "observed_at": "2026-10-10T13:45:24.526750Z",
+        "bookmaker": "hkjc",
+        "line": 0.25,
+        "odds": [
+          1.8,
+          2.03
+        ],
+        "has_same_book_1x2": true,
+        "candidates": []
+      },
+      "outcome": {
+        "status": "completed",
+        "home_score": 0,
+        "away_score": 2,
+        "observed_at": "2026-10-11T12:49:45.904081Z",
+        "kickoff_at": "2026-10-10T14:00:00Z"
+      }
+    },
+    {
+      "match_id": "espn:401878776",
+      "home": "aston-villa",
+      "away": "brentford",
+      "kickoff_at": "2026-10-10T14:00:00Z",
+      "stages": [
+        "T-60m",
+        "T-180m",
+        "T-15m"
+      ],
+      "T15": {
+        "observed_at": "2026-10-10T13:45:24.527406Z",
+        "bookmaker": "hkjc",
+        "line": 0.0,
+        "odds": [
+          1.86,
+          1.96
+        ],
+        "has_same_book_1x2": true,
+        "candidates": []
+      },
+      "outcome": {
+        "status": "completed",
+        "home_score": 2,
+        "away_score": 2,
+        "observed_at": "2026-10-11T12:49:45.904081Z",
+        "kickoff_at": "2026-10-10T14:00:00Z"
+      }
+    },
+    {
+      "match_id": "espn:401878773",
+      "home": "man-united",
+      "away": "tottenham",
+      "kickoff_at": "2026-10-10T16:30:00Z",
+      "stages": [
+        "T-15m",
+        "T-60m",
+        "T-180m"
+      ],
+      "T15": {
+        "observed_at": "2026-10-10T16:15:19.106183Z",
+        "bookmaker": "hkjc",
+        "line": -0.75,
+        "odds": [
+          1.8,
+          2.03
+        ],
+        "has_same_book_1x2": true,
+        "candidates": []
+      },
+      "outcome": {
+        "status": "completed",
+        "home_score": 1,
+        "away_score": 1,
+        "observed_at": "2026-10-11T12:49:45.904081Z",
+        "kickoff_at": "2026-10-10T16:30:00Z"
+      }
+    },
+    {
+      "match_id": "espn:401879268",
+      "home": "arsenal",
+      "away": "leeds",
+      "kickoff_at": "2026-10-10T11:30:00Z",
+      "stages": [
+        "T-15m"
+      ],
+      "T15": {
+        "observed_at": "2026-10-10T11:14:48.971648Z",
+        "bookmaker": "hkjc",
+        "line": -1.25,
+        "odds": [
+          1.98,
+          1.84
+        ],
+        "has_same_book_1x2": true,
+        "candidates": []
+      },
+      "outcome": {
+        "status": "completed",
+        "home_score": 2,
+        "away_score": 1,
+        "observed_at": "2026-10-11T12:49:45.904081Z",
+        "kickoff_at": "2026-10-10T11:30:00Z"
+      }
+    }
+  ],
+  "ah_summary": {
+    "evaluated_at": "2026-10-11T12:49:52.132231Z",
+    "valid_observations": 16,
+    "distinct_matches": 6,
+    "paired_matches": 6,
+    "pairing_issues": {},
+    "line_groups": {
+      "-1.25": {
+        "matches": 1,
+        "home": {
+          "half_loss": 1
+        },
+        "away": {
+          "half_win": 1
+        },
+        "home_profit": -0.5,
+        "away_profit": 0.42000000000000004
+      },
+      "0.25": {
+        "matches": 2,
+        "home": {
+          "full_loss": 1,
+          "full_win": 1
+        },
+        "away": {
+          "full_win": 1,
+          "full_loss": 1
+        },
+        "home_profit": -0.16999999999999993,
+        "away_profit": 0.029999999999999805
+      },
+      "-0.75": {
+        "matches": 2,
+        "home": {
+          "full_win": 1,
+          "full_loss": 1
+        },
+        "away": {
+          "full_loss": 1,
+          "full_win": 1
+        },
+        "home_profit": -0.040000000000000036,
+        "away_profit": 0.029999999999999805
+      },
+      "0.0": {
+        "matches": 1,
+        "home": {
+          "push": 1
+        },
+        "away": {
+          "push": 1
+        },
+        "home_profit": 0.0,
+        "away_profit": 0.0
+      }
+    },
+    "prospective_scores": {}
+  },
+  "last_settlement": {
+    "checked_at": "2026-10-11T12:49:52.133591Z",
+    "command": "daily",
+    "new_outcomes": 6
+  },
+  "capture_origins": {
+    "manual_local_fallback_observations": 5,
+    "github_watch_observations": 11,
+    "github_watch_run_id": 38049767276
+  },
+  "settlement_run": {
+    "run_id": 38140731774,
+    "event": "workflow_dispatch",
+    "command": "daily",
+    "conclusion": "success",
+    "url": "https://github.com/kimalbert666/football/actions/runs/38140731774",
+    "new_outcomes": 6,
+    "issue_notification_step": "skipped"
+  },
+  "automatic_schedule": {
+    "verified": false,
+    "latest_observed_schedule_at": "2026-10-09T01:39:40Z",
+    "repair_attempt": "re-register same-frequency hourly cron 7 -> 8 on main",
+    "hourly_cron": "8 * * * *",
+    "frequency_increased": false,
+    "acceptance_requires": "new event=schedule run; manual dispatch is not schedule acceptance",
+    "root_cause_confirmed": false
+  },
+  "model_evidence": {
+    "prospective_predictions_saved": 0,
+    "validated_accuracy_improvement": false,
+    "paired_matches_are_research_data_not_model_hits": true
+  }
+}
