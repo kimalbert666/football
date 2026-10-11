@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluated_at": "2026-10-11T12:49:52.133591Z",
+  "evaluated_at": "2026-10-11T12:56:39.798515Z",
   "mode": "shadow",
   "candidate_weight": 0,
   "automatic_promotion": false,
@@ -40,9 +40,9 @@
     "excluded_future": 0,
     "distinct_match_count": 5,
     "known_tracked_fixtures": 28,
-    "closed_windows": 16,
+    "closed_windows": 17,
     "covered_windows": 10,
-    "missing_windows": 6,
+    "missing_windows": 7,
     "late_discovered_windows": 18
   },
   "baseline": {
@@ -203,9 +203,9 @@
     "scope": "locally discovered target fixtures only; source completeness is not established",
     "known_tracked_fixtures": 28,
     "unresolved_fixtures": 0,
-    "closed_windows": 16,
+    "closed_windows": 17,
     "covered_windows": 10,
-    "missing_windows": 6,
+    "missing_windows": 7,
     "missing_baseline_windows": 0,
     "late_discovered_windows": 18,
     "unknown_discovery_windows": 0,
