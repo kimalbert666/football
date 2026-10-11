@@ -1,14 +1,61 @@
 {
-  "evaluated_at": "2026-10-10T16:15:19.108501Z",
-  "new_valid": 1,
-  "new_attempts": 1,
+  "evaluated_at": "2026-10-11T12:49:52.132231Z",
+  "new_valid": 0,
+  "new_attempts": 0,
   "valid_observations": 16,
   "distinct_matches": 6,
-  "paired_matches": 0,
-  "pairing_issues": {
-    "awaiting_regulation_result": 6
+  "paired_matches": 6,
+  "pairing_issues": {},
+  "line_groups": {
+    "-1.25": {
+      "matches": 1,
+      "home": {
+        "half_loss": 1
+      },
+      "away": {
+        "half_win": 1
+      },
+      "home_profit": -0.5,
+      "away_profit": 0.42000000000000004
+    },
+    "0.25": {
+      "matches": 2,
+      "home": {
+        "full_loss": 1,
+        "full_win": 1
+      },
+      "away": {
+        "full_win": 1,
+        "full_loss": 1
+      },
+      "home_profit": -0.16999999999999993,
+      "away_profit": 0.029999999999999805
+    },
+    "-0.75": {
+      "matches": 2,
+      "home": {
+        "full_win": 1,
+        "full_loss": 1
+      },
+      "away": {
+        "full_loss": 1,
+        "full_win": 1
+      },
+      "home_profit": -0.040000000000000036,
+      "away_profit": 0.029999999999999805
+    },
+    "0.0": {
+      "matches": 1,
+      "home": {
+        "push": 1
+      },
+      "away": {
+        "push": 1
+      },
+      "home_profit": 0.0,
+      "away_profit": 0.0
+    }
   },
-  "line_groups": {},
   "prospective_scores": {},
   "research": {
     "schema_version": "f4-ah-research-v2",
@@ -197,7 +244,58 @@
     "automatic_promotion": false,
     "note": "Rolling retrospective model development, not proof of a prospective advantage"
   },
-  "by_bookmaker": {},
+  "by_bookmaker": {
+    "hkjc": {
+      "-1.25": {
+        "matches": 1,
+        "home": {
+          "half_loss": 1
+        },
+        "away": {
+          "half_win": 1
+        },
+        "home_profit": -0.5,
+        "away_profit": 0.42000000000000004
+      },
+      "0.25": {
+        "matches": 2,
+        "home": {
+          "full_loss": 1,
+          "full_win": 1
+        },
+        "away": {
+          "full_win": 1,
+          "full_loss": 1
+        },
+        "home_profit": -0.16999999999999993,
+        "away_profit": 0.029999999999999805
+      },
+      "-0.75": {
+        "matches": 2,
+        "home": {
+          "full_win": 1,
+          "full_loss": 1
+        },
+        "away": {
+          "full_loss": 1,
+          "full_win": 1
+        },
+        "home_profit": -0.040000000000000036,
+        "away_profit": 0.029999999999999805
+      },
+      "0.0": {
+        "matches": 1,
+        "home": {
+          "push": 1
+        },
+        "away": {
+          "push": 1
+        },
+        "home_profit": 0.0,
+        "away_profit": 0.0
+      }
+    }
+  },
   "problems": [
     "Crown AH source unavailable (ValueError: provider feed health unavailable or stale)"
   ],
@@ -206,25 +304,25 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-10T16:15:17.746289Z",
+      "captured_at": "2026-10-11T12:49:50.368473Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-10T16:15:18.333827Z",
-      "content_sha256": "c4983955e56ed0dee08f95234b82c32b49a16eca70ed84800fa6306b0bad3444"
+      "captured_at": "2026-10-11T12:49:51.008570Z",
+      "content_sha256": "c025f9e2dfca7045d6de64d6bfc08d0c0c2028cd6c21d5eb3e4e778727aee7ea"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-10T16:15:19.095808Z",
-      "response_at": "2026-10-10T16:15:19Z",
-      "content_sha256": "a147d3335a6ed04028d1711145118916656170125c09fbebfe860267af2cd92d",
-      "match_count": 185,
-      "epl_match_count": 5
+      "captured_at": "2026-10-11T12:49:52.118981Z",
+      "response_at": "2026-10-11T12:49:52Z",
+      "content_sha256": "082e7d8be5612f0207b4a348047d4c11f01c46a093de25e5804a542c63b4cf47",
+      "match_count": 98,
+      "epl_match_count": 4
     }
   ],
   "provider_faults": {
@@ -238,12 +336,10 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-10T16:15:18.333827Z"
+    "checked_at": "2026-10-11T12:49:51.008570Z"
   },
-  "fallback_matches": [
-    "espn:401878773"
-  ],
-  "quote_availability": "complete",
+  "fallback_matches": [],
+  "quote_availability": "not_tested_no_due_matches",
   "research_only": true,
   "automatic_promotion": false,
   "automatic_wagering": false

@@ -1,0 +1,31 @@
+{
+  "kickoff_at": "2026-10-18T13:00:00Z",
+  "updated_at": "2026-10-11T12:49:52.129402Z",
+  "fixtures": [
+    {
+      "match_id": "espn:401879260",
+      "home": "Leeds United",
+      "away": "Manchester United",
+      "status": "awaiting_window",
+      "observation_id": null
+    },
+    {
+      "match_id": "espn:401879261",
+      "home": "Brighton & Hove Albion",
+      "away": "Crystal Palace",
+      "status": "awaiting_window",
+      "observation_id": null
+    },
+    {
+      "match_id": "espn:401879263",
+      "home": "AFC Bournemouth",
+      "away": "Sunderland",
+      "status": "awaiting_window",
+      "observation_id": null
+    }
+  ],
+  "research_only": true,
+  "direction_notification_enabled": false,
+  "all_no_selection": false,
+  "reason": "No approved models; missing data is not a no-pick verdict"
+}
