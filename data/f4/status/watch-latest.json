@@ -1,19 +1,11 @@
 {
-  "started_at": "2026-10-11T12:56:33.764470Z",
-  "run_id": "38141170719",
-  "captures": [
-    {
-      "requested_at": "2026-10-11T15:15:00.003324Z",
-      "target_at": "2026-10-11T15:15:00Z",
-      "delay_seconds": 0.003324,
-      "completed_at": "2026-10-11T15:15:11.987429Z"
-    }
-  ],
+  "started_at": "2026-10-11T15:16:37.781340Z",
+  "run_id": "38146941173",
+  "captures": [],
   "mode": "bounded_match_window_worker",
   "timing_guaranteed": false,
-  "previous_worker_started_at": "2026-10-10T11:49:53.798593Z",
+  "previous_worker_started_at": "2026-10-11T12:56:33.764470Z",
   "continuation_requested": false,
-  "state": "complete_or_no_nearby_window",
-  "checked_at": "2026-10-11T15:16:13.429690Z",
-  "next_window_at": "2026-10-11T15:15:00Z"
+  "state": "planning",
+  "checked_at": "2026-10-11T15:16:48.719128Z"
 }
