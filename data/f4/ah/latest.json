@@ -1,9 +1,9 @@
 {
-  "evaluated_at": "2026-10-11T13:57:02.118334Z",
-  "new_valid": 0,
-  "new_attempts": 0,
-  "valid_observations": 16,
-  "distinct_matches": 6,
+  "evaluated_at": "2026-10-11T14:27:15.723469Z",
+  "new_valid": 1,
+  "new_attempts": 1,
+  "valid_observations": 17,
+  "distinct_matches": 7,
   "paired_matches": 6,
   "pairing_issues": {},
   "line_groups": {
@@ -304,24 +304,24 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-11T13:57:01.006433Z",
+      "captured_at": "2026-10-11T14:27:14.597336Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-11T13:57:01.549803Z",
-      "content_sha256": "157caad9f9983564a2019c5c3455bec2f2526448de89cc4ca84e1c347a59f62d"
+      "captured_at": "2026-10-11T14:27:15.135220Z",
+      "content_sha256": "2834a4f439e393a9ef21e97e9d39258d19b651cfbe27521a570701966f69a711"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-11T13:57:02.107549Z",
-      "response_at": "2026-10-11T13:57:02Z",
-      "content_sha256": "74552d7ffcfff55e4a6dca936ae39c5f4d71a9e3ba8ee43270ff2e3611912454",
-      "match_count": 88,
+      "captured_at": "2026-10-11T14:27:15.712491Z",
+      "response_at": "2026-10-11T14:27:15Z",
+      "content_sha256": "08175bc7e4f95f2d9e382705c773d319469e67b63b0edb38c6a49ce0627769cd",
+      "match_count": 85,
       "epl_match_count": 4
     }
   ],
@@ -336,10 +336,12 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-11T13:57:01.549803Z"
+    "checked_at": "2026-10-11T14:27:15.135220Z"
   },
-  "fallback_matches": [],
-  "quote_availability": "not_tested_no_due_matches",
+  "fallback_matches": [
+    "espn:401879264"
+  ],
+  "quote_availability": "complete",
   "research_only": true,
   "automatic_promotion": false,
   "automatic_wagering": false
