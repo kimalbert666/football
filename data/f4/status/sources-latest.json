@@ -1,33 +1,33 @@
 {
-  "captured_at": "2026-10-11T12:56:39.369201Z",
+  "captured_at": "2026-10-11T13:26:44.159080Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261011",
-      "captured_at": "2026-10-11T12:56:33.891987Z",
-      "content_sha256": "b755ffff5bfc2ef09d54b182fbd29a5b129d8bf3134a1a1820827498fc910cde"
+      "captured_at": "2026-10-11T13:26:41.592168Z",
+      "content_sha256": "a5f1aac78e3b18b3759cc20532073d76d7a8e36afc86792821aa3e18e640cc2c"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261012",
-      "captured_at": "2026-10-11T12:56:33.969360Z",
+      "captured_at": "2026-10-11T13:26:41.652330Z",
       "content_sha256": "310ac22ea9915109a5d23b23ca51bb08c48b061a2bd145bcab3a84cb0e05f9e3"
     },
     {
       "name": "titan007-crown",
       "url": "https://1x2.titan007.com/Company.js",
       "status": "ok",
-      "captured_at": "2026-10-11T12:56:35.047608Z",
+      "captured_at": "2026-10-11T13:26:42.388525Z",
       "content_sha256": "c075a14e3a167b3c0d77cb734956ed838bc3067f9a5d3df24b5d7a05f4811e18"
     },
     {
       "name": "titan007-crown",
       "url": "https://1x2.titan007.com/index_vip.aspx",
       "status": "ok",
-      "captured_at": "2026-10-11T12:56:39.340958Z",
-      "content_sha256": "d91035ca4c44e2a77dd7c9f9b418506df80d73c0accc746ae16f217c71557211"
+      "captured_at": "2026-10-11T13:26:44.139720Z",
+      "content_sha256": "2a3c4d8e9cbe7229a26099832daaba2574e741c7e137d09c10672ec793e99f63"
     },
     {
       "name": "titan007-crown-quotes",
@@ -46,7 +46,7 @@
       "home": "Hull City",
       "away": "Everton",
       "kickoff_at": "2026-10-11T13:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
@@ -61,7 +61,7 @@
       "home": "Crystal Palace",
       "away": "Nottingham Forest",
       "kickoff_at": "2026-10-11T13:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
