@@ -1,13 +1,11 @@
 {
-  "evaluated_at": "2026-10-11T23:22:32.436048Z",
+  "evaluated_at": "2026-10-11T23:51:14.606580Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 18,
   "distinct_matches": 7,
-  "paired_matches": 6,
-  "pairing_issues": {
-    "awaiting_regulation_result": 1
-  },
+  "paired_matches": 7,
+  "pairing_issues": {},
   "line_groups": {
     "-1.25": {
       "matches": 1,
@@ -21,17 +19,17 @@
       "away_profit": 0.42000000000000004
     },
     "0.25": {
-      "matches": 2,
+      "matches": 3,
       "home": {
-        "full_loss": 1,
+        "full_loss": 2,
         "full_win": 1
       },
       "away": {
-        "full_win": 1,
+        "full_win": 2,
         "full_loss": 1
       },
-      "home_profit": -0.16999999999999993,
-      "away_profit": 0.029999999999999805
+      "home_profit": -1.17,
+      "away_profit": 0.7699999999999998
     },
     "-0.75": {
       "matches": 2,
@@ -260,17 +258,17 @@
         "away_profit": 0.42000000000000004
       },
       "0.25": {
-        "matches": 2,
+        "matches": 3,
         "home": {
-          "full_loss": 1,
+          "full_loss": 2,
           "full_win": 1
         },
         "away": {
-          "full_win": 1,
+          "full_win": 2,
           "full_loss": 1
         },
-        "home_profit": -0.16999999999999993,
-        "away_profit": 0.029999999999999805
+        "home_profit": -1.17,
+        "away_profit": 0.7699999999999998
       },
       "-0.75": {
         "matches": 2,
@@ -306,24 +304,24 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-11T22:23:17.786509Z",
+      "captured_at": "2026-10-11T23:51:13.545120Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-11T22:23:18.419098Z",
-      "content_sha256": "be306a3117ec35f3162ce992a32b03b0f23d374af2c7d4035a2ef1ace3072a12"
+      "captured_at": "2026-10-11T23:51:14.037543Z",
+      "content_sha256": "8c7d0ad72aaa5715bdf95c4f9a8314ea8d69689ec32b9bf77011174a6af6c5b4"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-11T22:23:19.051151Z",
-      "response_at": "2026-10-11T22:23:19Z",
-      "content_sha256": "8729c8915a003ac432afbc363f6848cf70d6746594fb28ca24f4e909355b467f",
-      "match_count": 42,
+      "captured_at": "2026-10-11T23:51:14.596978Z",
+      "response_at": "2026-10-11T23:51:14Z",
+      "content_sha256": "cc8c33a31a9b612519107c835eda9183469745bb5f81decba71f3760950236f0",
+      "match_count": 39,
       "epl_match_count": 1
     }
   ],
@@ -338,7 +336,7 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-11T22:23:18.419098Z"
+    "checked_at": "2026-10-11T23:51:14.037543Z"
   },
   "fallback_matches": [],
   "quote_availability": "not_tested_no_due_matches",
