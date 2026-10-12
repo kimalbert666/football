@@ -1,0 +1,67 @@
+{
+  "deployed_head": "0d0b5f38ff2942113630d81c3bbfab9f4e6d3051",
+  "run_id": 38207030533,
+  "run_url": "https://github.com/kimalbert666/football/actions/runs/38207030533",
+  "event": "workflow_dispatch",
+  "conclusion": "success",
+  "job_id": 114672681746,
+  "accepted_head": "781654996d9b466367b0fc6a52c731bef7866e87",
+  "artifact_id": 11727393078,
+  "artifact_size_bytes": 43106,
+  "artifact_observations": 18,
+  "all_artifact_observation_blobs_match_main": true,
+  "log_backed_up": true,
+  "local_tests": {
+    "passed": 441,
+    "subtests_passed": 112
+  },
+  "watch_status": {
+    "started_at": "2026-10-12T05:14:09.087184Z",
+    "run_id": "38207030533",
+    "captures": [],
+    "mode": "bounded_match_window_worker",
+    "timing_guaranteed": false,
+    "previous_worker_started_at": "2026-10-12T04:26:49.483611Z",
+    "continuation_requested": false,
+    "state": "no_nearby_unrecorded_window",
+    "checked_at": "2026-10-12T05:14:16.173157Z"
+  },
+  "ah_summary": {
+    "evaluated_at": "2026-10-12T05:14:14.351795Z",
+    "new_valid": 0,
+    "valid_observations": 18,
+    "distinct_matches": 7,
+    "paired_matches": 7,
+    "window_coverage": {
+      "scope": "fixtures_in_current_source_check",
+      "fixtures": 1,
+      "windows": {
+        "T-180m": {
+          "awaiting_window": 1
+        },
+        "T-60m": {
+          "awaiting_window": 1
+        },
+        "T-15m": {
+          "awaiting_window": 1
+        }
+      }
+    }
+  },
+  "future_formal_windows_not_yet_verified": true,
+  "cloud_steps": {
+    "tests": "success",
+    "observe": "success",
+    "save": "success",
+    "diagnostic_upload": "success",
+    "issue_notice": "skipped"
+  },
+  "verified_capture_window_start": "2026-10-12T16:00:00Z",
+  "planned_tonight_windows_hk": [
+    "2026-10-13T00:00:00+08:00",
+    "2026-10-13T02:00:00+08:00",
+    "2026-10-13T02:45:00+08:00"
+  ],
+  "model_weights_or_notice_policy_changed": false,
+  "new_formal_samples_this_run": 0
+}
