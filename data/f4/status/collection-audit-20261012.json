@@ -1,0 +1,143 @@
+{
+  "checked_at": "2026-10-12T04:22:39.391898+00:00",
+  "verified_head": "866371defa32142fd647337a7045f88244fe2289",
+  "previous_sixteen_observation_blobs_unchanged": true,
+  "yesterday_matches": [
+    {
+      "match_id": "espn:401879266",
+      "home": "Crystal Palace",
+      "away": "Nottingham Forest",
+      "kickoff_at": "2026-10-11T13:00:00Z",
+      "observations": [],
+      "missing_valid_windows": [
+        "T-15m",
+        "T-180m",
+        "T-60m"
+      ],
+      "result": {
+        "status": "completed",
+        "home_score": 3,
+        "away_score": 1,
+        "observed_at": "2026-10-11T23:51:12.445471Z",
+        "kickoff_at": "2026-10-11T13:00:00Z"
+      }
+    },
+    {
+      "match_id": "espn:401878774",
+      "home": "Hull City",
+      "away": "Everton",
+      "kickoff_at": "2026-10-11T13:00:00Z",
+      "observations": [],
+      "missing_valid_windows": [
+        "T-15m",
+        "T-180m",
+        "T-60m"
+      ],
+      "result": {
+        "status": "completed",
+        "home_score": 2,
+        "away_score": 2,
+        "observed_at": "2026-10-11T23:51:12.445471Z",
+        "kickoff_at": "2026-10-11T13:00:00Z"
+      }
+    },
+    {
+      "match_id": "espn:401879264",
+      "home": "Liverpool",
+      "away": "Manchester City",
+      "kickoff_at": "2026-10-11T15:30:00Z",
+      "observations": [
+        {
+          "path": "data/f4/ah/observations/2026-10-11/425458e98a3debaf8ea8bc0f73d43de33e081f3aa2ed118ea0a37477f17e3fee.json",
+          "horizon": "T-60m",
+          "observed_at": "2026-10-11T14:27:15.720727Z",
+          "actual_minutes": 62.73798788333333,
+          "has_quote": true,
+          "bookmaker": "hkjc",
+          "line": 0.25,
+          "odds": [
+            2.03,
+            1.8
+          ],
+          "has_same_book_1x2": true,
+          "candidates": []
+        },
+        {
+          "path": "data/f4/ah/observations/2026-10-11/4ae51a91d401d4e4a88a095840829ff37d36ffc2ec36ebf340d2f80619a74492.json",
+          "horizon": "T-15m",
+          "observed_at": "2026-10-11T15:15:11.964979Z",
+          "actual_minutes": 14.800583683333334,
+          "has_quote": true,
+          "bookmaker": "hkjc",
+          "line": 0.25,
+          "odds": [
+            2.11,
+            1.74
+          ],
+          "has_same_book_1x2": true,
+          "candidates": []
+        }
+      ],
+      "missing_valid_windows": [
+        "T-180m"
+      ],
+      "result": {
+        "status": "completed",
+        "home_score": 0,
+        "away_score": 3,
+        "observed_at": "2026-10-11T23:51:12.445471Z",
+        "kickoff_at": "2026-10-11T15:30:00Z"
+      }
+    }
+  ],
+  "totals": {
+    "evaluated_at": "2026-10-12T03:26:54.523983Z",
+    "valid_observations": 18,
+    "distinct_matches": 7,
+    "paired_matches": 7,
+    "pairing_issues": {},
+    "prospective_scores": {}
+  },
+  "last_settlement": {
+    "checked_at": "2026-10-11T23:51:14.611294Z",
+    "command": "daily",
+    "new_outcomes": 3
+  },
+  "watch_status": {
+    "started_at": "2026-10-12T03:26:43.847467Z",
+    "run_id": "38199756809",
+    "captures": [],
+    "mode": "bounded_match_window_worker",
+    "timing_guaranteed": false,
+    "previous_worker_started_at": "2026-10-12T02:25:26.342172Z",
+    "continuation_requested": false,
+    "state": "no_nearby_unrecorded_window",
+    "checked_at": "2026-10-12T03:26:56.106921Z"
+  },
+  "latest_command": "capture",
+  "source_problems": [],
+  "coverage_note": "2026-10-11 Hong Kong evening: 3 results saved; only Liverpool-Manchester City has valid T60 and T15. The other two fixtures have no pre-match snapshot. No retroactive quote reconstruction.",
+  "schedule_acceptance": {
+    "actual_schedule_observed": true,
+    "first_successful_schedule_run_id": 38146941173,
+    "first_successful_schedule_created_at": "2026-10-11T14:22:54Z",
+    "latest_verified_schedule_run_id": 38199756809,
+    "latest_verified_schedule_created_at": "2026-10-12T03:26:31Z",
+    "first_schedule_was_cancelled": true,
+    "long_term_timing_guarantee": false
+  },
+  "automatic_daily_acceptance": {
+    "run_id": 38185804273,
+    "job_id": 114607740311,
+    "event": "schedule",
+    "command": "daily",
+    "created_at": "2026-10-11T23:50:54Z",
+    "conclusion": "success",
+    "new_outcomes": 3,
+    "collection_step": "success",
+    "save_step": "success",
+    "notification_step": "skipped",
+    "saved_commit": "04ecb12fb57b56bf9fd87c01a6645058c843f568",
+    "saved_commit_pushed_to_main": true
+  }
+}
