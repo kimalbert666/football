@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-12T23:24:04.122901Z",
-  "command": "capture",
+  "checked_at": "2026-10-12T23:52:47.878523Z",
+  "command": "daily",
   "mode": "shadow",
   "new_predictions": 0,
   "new_valid_predictions": 0,
-  "new_outcomes": 0,
+  "new_outcomes": 1,
   "due_fixtures": 0,
-  "tracked_fixtures_seen": 1,
+  "tracked_fixtures_seen": 14,
   "skipped": [],
   "legacy_deferred": null,
   "source_health": {
@@ -14,8 +14,8 @@
       "complete": true,
       "scope": {
         "league": "england-premier",
-        "from": "2026-10-12",
-        "through": "2026-10-13",
+        "from": "2026-10-11",
+        "through": "2026-10-19",
         "provider": "espn",
         "pending_lookup_limit": 20
       },
@@ -26,16 +26,65 @@
       {
         "name": "espn-calendar",
         "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261011",
+        "captured_at": "2026-10-12T23:52:45.278970Z",
+        "content_sha256": "34bccf5f5fa3fd83edd3085064b2ce20aafabacc172899b81daa511a566d50c5"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261012",
-        "captured_at": "2026-10-12T23:24:01.879956Z",
+        "captured_at": "2026-10-12T23:52:45.329514Z",
         "content_sha256": "f1b91bc36c66812b8c14d3265a2d0d01fb276becb4bb9157dd88c67af5913f12"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261013",
-        "captured_at": "2026-10-12T23:24:01.929993Z",
+        "captured_at": "2026-10-12T23:52:45.371173Z",
         "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261014",
+        "captured_at": "2026-10-12T23:52:45.424435Z",
+        "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261015",
+        "captured_at": "2026-10-12T23:52:45.479345Z",
+        "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261016",
+        "captured_at": "2026-10-12T23:52:45.525123Z",
+        "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261017",
+        "captured_at": "2026-10-12T23:52:45.578560Z",
+        "content_sha256": "069c59d501b26c7f8ad4db47e5933f9f702dfdcbced2a91c5cd0a5c643ceaa89"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261018",
+        "captured_at": "2026-10-12T23:52:45.642458Z",
+        "content_sha256": "46aef83a9e8d2293760433f3048b416808ff34137627643a8493fbf9906fcedd"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261019",
+        "captured_at": "2026-10-12T23:52:45.724992Z",
+        "content_sha256": "9c5f82adf242758faa8b1e2f4aec3c3dee42307013da22d5dd2522337d4b0301"
       }
     ]
   },
@@ -46,7 +95,7 @@
     "new_valid": 0,
     "new_attempts": 0,
     "distinct_matches": 8,
-    "paired_matches": 7,
+    "paired_matches": 8,
     "problems": [
       "Crown AH source unavailable (ValueError: provider feed health unavailable or stale)"
     ],
