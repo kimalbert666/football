@@ -1,31 +1,11 @@
 {
-  "started_at": "2026-10-12T14:30:21.921008Z",
-  "run_id": "38263366738",
-  "captures": [
-    {
-      "requested_at": "2026-10-12T16:00:00.003478Z",
-      "target_at": "2026-10-12T16:00:00Z",
-      "delay_seconds": 0.003478,
-      "completed_at": "2026-10-12T16:00:24.197879Z"
-    },
-    {
-      "requested_at": "2026-10-12T18:00:00.003526Z",
-      "target_at": "2026-10-12T18:00:00Z",
-      "delay_seconds": 0.003526,
-      "completed_at": "2026-10-12T18:00:14.551939Z"
-    },
-    {
-      "requested_at": "2026-10-12T18:45:00.003362Z",
-      "target_at": "2026-10-12T18:45:00Z",
-      "delay_seconds": 0.003362,
-      "completed_at": "2026-10-12T18:45:04.378010Z"
-    }
-  ],
+  "started_at": "2026-10-12T18:46:24.638480Z",
+  "run_id": "38291103799",
+  "captures": [],
   "mode": "bounded_match_window_worker",
   "timing_guaranteed": false,
-  "previous_worker_started_at": "2026-10-12T13:38:20.776235Z",
+  "previous_worker_started_at": "2026-10-12T14:30:21.921008Z",
   "continuation_requested": false,
-  "state": "complete_or_no_nearby_window",
-  "checked_at": "2026-10-12T18:46:05.843116Z",
-  "next_window_at": "2026-10-12T18:45:00Z"
+  "state": "planning",
+  "checked_at": "2026-10-12T18:46:24.859692Z"
 }
