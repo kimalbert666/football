@@ -1,11 +1,13 @@
 {
-  "evaluated_at": "2026-10-12T18:30:16.602399Z",
-  "new_valid": 0,
-  "new_attempts": 0,
-  "valid_observations": 20,
+  "evaluated_at": "2026-10-12T18:45:02.836577Z",
+  "new_valid": 1,
+  "new_attempts": 1,
+  "valid_observations": 21,
   "distinct_matches": 8,
   "paired_matches": 7,
-  "pairing_issues": {},
+  "pairing_issues": {
+    "awaiting_regulation_result": 1
+  },
   "line_groups": {
     "-1.25": {
       "matches": 1,
@@ -1348,24 +1350,24 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-12T18:00:00.899147Z",
+      "captured_at": "2026-10-12T18:45:00.875880Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-12T18:00:01.583710Z",
-      "content_sha256": "aeeed77d34b8fddb112831424f6ee13aa22c39c19dec19a4aaf4627784ea3864"
+      "captured_at": "2026-10-12T18:45:01.623974Z",
+      "content_sha256": "e278754661076fee7e6570371b68182c38f71bcfaff036dea8db6b3895a7157e"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-12T18:00:02.458157Z",
-      "response_at": "2026-10-12T18:00:02Z",
-      "content_sha256": "c122e1628ea6c4bfd49fb09650d423f2135b18862f5ea0d0b5daf1ca3977873e",
-      "match_count": 90,
+      "captured_at": "2026-10-12T18:45:02.826475Z",
+      "response_at": "2026-10-12T18:45:02Z",
+      "content_sha256": "94a0302b9deb5455c4c985216424741d3c60d78a6a51f5de818835df0ae7e4d9",
+      "match_count": 85,
       "epl_match_count": 1
     }
   ],
@@ -1380,7 +1382,7 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-12T18:00:01.583710Z"
+    "checked_at": "2026-10-12T18:45:01.623974Z"
   },
   "fallback_matches": [
     "espn:401879267"
@@ -1399,7 +1401,8 @@
         "complete_joint_market": 1
       },
       "T-15m": {
-        "awaiting_window": 1
+        "recorded_research_only": 1,
+        "complete_joint_market": 1
       }
     }
   },
