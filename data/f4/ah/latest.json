@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-10-12T04:26:53.744232Z",
+  "evaluated_at": "2026-10-12T05:14:14.351795Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 18,
@@ -304,24 +304,24 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-12T03:26:52.132665Z",
+      "captured_at": "2026-10-12T05:14:13.186885Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-12T03:26:53.826999Z",
-      "content_sha256": "69314d907a66c0d4301b7d0ae890b314342c6b5bdc5854ba0abbb80a26e8db67"
+      "captured_at": "2026-10-12T05:14:13.739129Z",
+      "content_sha256": "a254fe43366080ca5815cc4c8dd8571b3b89c0003fcfe8b9defe8bcaa152e6e9"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-12T03:26:54.518557Z",
-      "response_at": "2026-10-12T03:26:54Z",
-      "content_sha256": "dc7efe6f8f226efca90da12d4fc09d27981b64936950b1976eb77e00870ed5e6",
-      "match_count": 37,
+      "captured_at": "2026-10-12T05:14:14.342486Z",
+      "response_at": "2026-10-12T05:14:14Z",
+      "content_sha256": "e535d3fda80630f15c637284d5149af23b057686b278484b9fa285860cbe0ae2",
+      "match_count": 75,
       "epl_match_count": 1
     }
   ],
@@ -336,10 +336,25 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-12T03:26:53.826999Z"
+    "checked_at": "2026-10-12T05:14:13.739129Z"
   },
   "fallback_matches": [],
   "quote_availability": "not_tested_no_due_matches",
+  "window_coverage": {
+    "scope": "fixtures_in_current_source_check",
+    "fixtures": 1,
+    "windows": {
+      "T-180m": {
+        "awaiting_window": 1
+      },
+      "T-60m": {
+        "awaiting_window": 1
+      },
+      "T-15m": {
+        "awaiting_window": 1
+      }
+    }
+  },
   "research_only": true,
   "automatic_promotion": false,
   "automatic_wagering": false
