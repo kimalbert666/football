@@ -9,6 +9,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from f4_ledger import load_latest_outcomes
+from f4_ah_patterns import price_venue_diagnostics, render_price_venue_diagnostics
 
 HK = timezone(timedelta(hours=8))
 
@@ -327,7 +328,7 @@ def update_batches(root, fixtures, observations, now, cfg):
             'windows': {horizon: dict(values) for horizon, values in counts.items()}}
 
 
-def render_ah(summary):
+def render_ah(summary, *, include_price_venue=True):
     text = '\n\n## 亚洲让球研究\n\n'
     text += ('覆盖所有实际出现的合法让球档位；盘口示例不是筛选白名单。研究期只发月报和重要故障，试验方向后台保存。\n\n')
     text += (f"- 有效亚盘记录：{summary['valid_observations']}；涉及{summary['distinct_matches']}场比赛。\n"
@@ -360,6 +361,9 @@ def render_ah(summary):
             text += f"- 香港赛马会独立接口：{item.get('status')}；返回英超赛事{item.get('epl_match_count', '未确认')}场。\n"
     for problem in summary.get('problems', []):
         text += f'- 亚盘数据提醒：{problem}\n'
+    if include_price_venue and summary.get('price_venue_diagnostics') is not None:
+        text += '\n以下盘口、水位与主客场统计累计至本次检查，不是当月或模型预测成绩。\n'
+        text += render_price_venue_diagnostics(summary['price_venue_diagnostics'])
     return text
 
 
@@ -465,6 +469,7 @@ def run_ah(root, fixtures, command, *, clock, source=None):
                'distinct_matches': len({r['match_id'] for r in old if r.get('quote')}),
                'paired_matches': len(paired), 'pairing_issues': pairing_issues,
                'line_groups': grouped_results(paired), 'prospective_scores': prospective_scores(paired), 'research': model_report,
+               'price_venue_diagnostics': price_venue_diagnostics(paired),
                'by_bookmaker': {book: grouped_results([r for r in paired if r['quote']['bookmaker'] == book])
                                for book in sorted({r['quote']['bookmaker'] for r in paired})},
                'problems': bundle.get('problems', []), 'sources': bundle.get('sources', []),
@@ -562,6 +567,8 @@ def archive_month(root, now, ah_summary):
             text += f"| {line} | {item['matches']} | {h} | {a} | {item['home_profit']:.3f} | {item['away_profit']:.3f} |\n"
         text += '\n每方向每场模拟1单位；半赢／走盘不冒充全赢。样本不足不能证明模型优势。\n'
         text += f'\n未配对原因：{json.dumps(issues, ensure_ascii=False)}。\n'
+        text += f'\n以下盘口、水位与主客场统计仅含{month}开球的有效赛果配对。\n'
+        text += render_price_venue_diagnostics(price_venue_diagnostics(paired))
         scores = prospective_scores(paired)
         text += '\n## 真实赛前模型对照\n\n'
         if not scores:
@@ -586,7 +593,8 @@ def archive_month(root, now, ah_summary):
             if metrics['rejected_records']:
                 text += f"  不合格输出剔除{len(metrics['rejected_records'])}条；原因见后台评分。\n"
         if ah_summary:
-            text += render_ah(ah_summary)
+            text += '\n以下为生成月报时的累计记录与来源状态，范围不同于上述当月统计。\n'
+            text += render_ah(ah_summary, include_price_venue=False)
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(text, encoding='utf-8')
     return {month: hashlib.sha256(path.read_bytes()).hexdigest()}
