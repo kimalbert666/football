@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-10-12T10:41:08.649972Z",
+  "evaluated_at": "2026-10-12T11:26:54.037490Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 18,
@@ -1386,23 +1386,16 @@
   "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 14,
+    "fixtures": 1,
     "windows": {
       "T-180m": {
-        "missed_window": 3,
-        "awaiting_window": 11
+        "awaiting_window": 1
       },
       "T-60m": {
-        "missed_window": 2,
-        "recorded_research_only": 1,
-        "complete_joint_market": 1,
-        "awaiting_window": 11
+        "awaiting_window": 1
       },
       "T-15m": {
-        "missed_window": 2,
-        "recorded_research_only": 1,
-        "complete_joint_market": 1,
-        "awaiting_window": 11
+        "awaiting_window": 1
       }
     }
   },
