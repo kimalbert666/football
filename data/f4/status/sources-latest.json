@@ -1,18 +1,18 @@
 {
-  "captured_at": "2026-10-12T20:25:56.290560Z",
+  "captured_at": "2026-10-12T21:22:57.060127Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261012",
-      "captured_at": "2026-10-12T20:25:56.235673Z",
-      "content_sha256": "4bee4fafa9918ecf514866fcaeef04554c29c34cb3355aa3de3d2593573f1024"
+      "captured_at": "2026-10-12T21:22:56.943959Z",
+      "content_sha256": "f1b91bc36c66812b8c14d3265a2d0d01fb276becb4bb9157dd88c67af5913f12"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261013",
-      "captured_at": "2026-10-12T20:25:56.290404Z",
+      "captured_at": "2026-10-12T21:22:57.059948Z",
       "content_sha256": "c7c3ed40fca60899c8743a063133d6720e7932098669432d4e254fbae1b821e1"
     }
   ],
@@ -27,8 +27,11 @@
       "home": "Coventry City",
       "away": "Newcastle United",
       "kickoff_at": "2026-10-12T19:00:00Z",
-      "status": "live",
-      "score": null,
+      "status": "completed",
+      "score": [
+        4,
+        1
+      ],
       "market": null,
       "problems": []
     }
