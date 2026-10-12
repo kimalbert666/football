@@ -1,0 +1,132 @@
+{
+  "kind": "read_only_outside_capture_windows_not_training_sample",
+  "is_formal_observation": false,
+  "checked_at": "2026-10-12T04:38:57.673606+00:00",
+  "source": {
+    "url": "https://info.cld.hkjc.com/graphql/base/",
+    "captured_at": "2026-10-12T04:38:59.461289Z",
+    "response_at": "2026-10-12T04:38:59Z",
+    "content_sha256": "6748fac873e7e6c70153f95468a79687d11b5540337cadc7d702c37157b4e5b8",
+    "epl_event_count": 1
+  },
+  "verified_current_matches": [
+    {
+      "match_id": "espn:401879267",
+      "home": "Coventry City",
+      "away": "Newcastle United",
+      "home_id": "coventry",
+      "away_id": "newcastle",
+      "kickoff_at": "2026-10-12T19:00:00Z",
+      "status": "scheduled",
+      "problems": [],
+      "match_count": 1,
+      "verified": true,
+      "provider_event_id": "50075993",
+      "home_handicap": 0.25,
+      "odds": [
+        1.95,
+        1.87
+      ],
+      "had": [
+        3.0,
+        3.4,
+        2.0
+      ],
+      "all_lines": [
+        {
+          "home_handicap": 0.25,
+          "odds": [
+            1.95,
+            1.87
+          ],
+          "published_at": "2026-10-08T10:38:25.365000Z",
+          "raw_condition": "0.0/+0.5",
+          "provider_main": true
+        }
+      ]
+    }
+  ],
+  "future_fixture_availability": [
+    {
+      "match_id": "espn:401878771",
+      "home": "Everton",
+      "away": "Chelsea",
+      "kickoff_at": "2026-10-17T11:30:00Z",
+      "verified": false,
+      "reason": "unique identity not published or unmatched"
+    },
+    {
+      "match_id": "espn:401879262",
+      "home": "Brentford",
+      "away": "Liverpool",
+      "kickoff_at": "2026-10-17T14:00:00Z",
+      "verified": false,
+      "reason": "unique identity not published or unmatched"
+    },
+    {
+      "match_id": "espn:401878770",
+      "home": "Fulham",
+      "away": "Hull City",
+      "kickoff_at": "2026-10-17T14:00:00Z",
+      "verified": false,
+      "reason": "unique identity not published or unmatched"
+    },
+    {
+      "match_id": "espn:401879259",
+      "home": "Manchester City",
+      "away": "Ipswich Town",
+      "kickoff_at": "2026-10-17T14:00:00Z",
+      "verified": false,
+      "reason": "unique identity not published or unmatched"
+    },
+    {
+      "match_id": "espn:401879258",
+      "home": "Newcastle United",
+      "away": "Aston Villa",
+      "kickoff_at": "2026-10-17T16:30:00Z",
+      "verified": false,
+      "reason": "unique identity not published or unmatched"
+    },
+    {
+      "match_id": "espn:401879263",
+      "home": "AFC Bournemouth",
+      "away": "Sunderland",
+      "kickoff_at": "2026-10-18T13:00:00Z",
+      "verified": false,
+      "reason": "unique identity not published or unmatched"
+    },
+    {
+      "match_id": "espn:401879261",
+      "home": "Brighton & Hove Albion",
+      "away": "Crystal Palace",
+      "kickoff_at": "2026-10-18T13:00:00Z",
+      "verified": false,
+      "reason": "unique identity not published or unmatched"
+    },
+    {
+      "match_id": "espn:401879260",
+      "home": "Leeds United",
+      "away": "Manchester United",
+      "kickoff_at": "2026-10-18T13:00:00Z",
+      "verified": false,
+      "reason": "unique identity not published or unmatched"
+    },
+    {
+      "match_id": "espn:401878769",
+      "home": "Nottingham Forest",
+      "away": "Arsenal",
+      "kickoff_at": "2026-10-18T15:30:00Z",
+      "verified": false,
+      "reason": "unique identity not published or unmatched"
+    },
+    {
+      "match_id": "espn:401879257",
+      "home": "Tottenham Hotspur",
+      "away": "Coventry City",
+      "kickoff_at": "2026-10-19T19:00:00Z",
+      "verified": false,
+      "reason": "unique identity not published or unmatched"
+    }
+  ],
+  "note": "Future matches are not yet published; this does not prove a missing quote inside a capture window."
+}

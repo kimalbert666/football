@@ -273,31 +273,58 @@ def prospective_scores(rows):
 
 
 def update_batches(root, fixtures, observations, now, cfg):
-    """Audit the full fixture universe, including missing final-stage observations."""
+    """Audit each configured window; a stored score never fills a quote gap."""
     by_key = defaultdict(list)
     for item in observations:
-        by_key[(item['match_id'], item['kickoff_at'])].append(item)
+        if item.get('experiment_id') == cfg.get('experiment_id'):
+            by_key[(item['match_id'], stamp(item['kickoff_at']))].append(item)
     batches = defaultdict(list)
+    counts = {f'T-{minutes}m': Counter() for minutes in cfg['windows']}
+    started = instant(cfg['started_at']) if cfg.get('started_at') else None
     for fixture in fixtures:
         if fixture.get('kickoff_at') and fixture.get('home_id') and fixture.get('away_id'):
-            batches[fixture['kickoff_at']].append(fixture)
+            batches[stamp(fixture['kickoff_at'])].append(fixture)
     for kickoff, rows in batches.items():
         records = []
         for fixture in rows:
-            finals = [r for r in by_key[(fixture['match_id'], kickoff)] if r['horizon'] == 'T-15m']
-            valid = next((r for r in finals if r.get('quote')), None)
-            if valid:
-                status = 'recorded_research_only'
-            elif now >= instant(kickoff) - timedelta(minutes=10):
-                status = 'data_unavailable' if finals else 'missed_window'
-            else:
-                status = 'awaiting_window'
+            window_records = {}
+            same_fixture = by_key[(fixture['match_id'], kickoff)]
+            for minutes, tolerance in cfg['windows'].items():
+                horizon = f'T-{minutes}m'
+                attempts = sorted((r for r in same_fixture if r['horizon'] == horizon),
+                                  key=lambda r: r['observed_at'])
+                valid = next((r for r in attempts if r.get('quote')), None)
+                target = instant(kickoff) - timedelta(minutes=int(minutes))
+                closes = min(instant(kickoff), target + timedelta(minutes=tolerance))
+                if fixture.get('status') in ('postponed', 'cancelled'):
+                    status = 'postponed_or_cancelled'
+                elif started and closes <= started:
+                    status = 'outside_experiment'
+                elif valid:
+                    status = 'recorded_research_only'
+                elif now >= closes:
+                    status = 'data_unavailable' if attempts else 'missed_window'
+                else:
+                    status = 'retrying_quote_unavailable' if attempts else 'awaiting_window'
+                joint = bool(valid and valid.get('p_1x2') is not None)
+                window_records[horizon] = {'status': status, 'expected_at': stamp(target),
+                    'closes_at': stamp(closes), 'attempts': len(attempts),
+                    'observation_id': valid.get('observation_id') if valid else None,
+                    'same_bookmaker_1x2_available': joint}
+                counts[horizon][status] += 1
+                if valid and joint:
+                    counts[horizon]['complete_joint_market'] += 1
+            final = window_records.get('T-15m', {'status': 'not_configured', 'observation_id': None})
             records.append({'match_id': fixture['match_id'], 'home': fixture['home'], 'away': fixture['away'],
-                            'status': status, 'observation_id': valid.get('observation_id') if valid else None})
+                            'status': final['status'], 'observation_id': final['observation_id'],
+                            'windows': window_records})
         value = {'kickoff_at': kickoff, 'updated_at': stamp(now), 'fixtures': records,
+                 'experiment_id': cfg['experiment_id'],
                  'research_only': True, 'direction_notification_enabled': False,
                  'all_no_selection': False, 'reason': 'No approved models; missing data is not a no-pick verdict'}
         write(root / 'data/f4/ah/batches' / (digest(kickoff)[:24] + '.json'), value)
+    return {'scope': 'fixtures_in_current_source_check', 'fixtures': sum(map(len, batches.values())),
+            'windows': {horizon: dict(values) for horizon, values in counts.items()}}
 
 
 def render_ah(summary):
@@ -310,6 +337,19 @@ def render_ah(summary):
              '- 候选M1盘口与水位、M2实力与盘口差异、M3盘口变化；缺样本或特征时不训练、不虚构命中率。\n')
     for key, item in summary.get('research', {}).get('candidates', {}).items():
         text += f"- {key}：{item.get('status', 'unknown')}。\n"
+    coverage = summary.get('window_coverage', {})
+    if coverage:
+        text += (f"\n本次来源检查涉及{coverage['fixtures']}场，逐窗口对账如下；"
+                 '这是本次检查范围，历史及整月覆盖另表统计。\n\n'
+                 '| 窗口 | 亚盘及同公司胜平负齐全 | 仅亚盘 | 待采／重试 | 尝试无报价 | 未尝试漏窗 | 排除 |\n'
+                 '|---|---|---|---|---|---|---|\n')
+        for horizon, counts in coverage.get('windows', {}).items():
+            complete = counts.get('complete_joint_market', 0)
+            partial = counts.get('recorded_research_only', 0) - complete
+            pending = counts.get('awaiting_window', 0) + counts.get('retrying_quote_unavailable', 0)
+            excluded = counts.get('outside_experiment', 0) + counts.get('postponed_or_cancelled', 0)
+            text += (f"| {horizon} | {complete} | {partial} | {pending} | "
+                     f"{counts.get('data_unavailable', 0)} | {counts.get('missed_window', 0)} | {excluded} |\n")
     availability = summary.get('quote_availability')
     if availability == 'not_tested_no_due_matches':
         text += '- 本次无比赛进入采集窗口；仅探测接口健康，尚未验证本轮英超报价。\n'
@@ -419,7 +459,7 @@ def run_ah(root, fixtures, command, *, clock, source=None):
         write(research_path, report, True)
         write(root / 'data/f4/ah/research/latest.json', report)
         model_report = report
-    update_batches(root, fixtures, old, clock(), cfg)
+    window_coverage = update_batches(root, fixtures, old, clock(), cfg)
     summary = {'evaluated_at': stamp(clock()), 'new_valid': new_valid, 'new_attempts': new_attempts,
                'valid_observations': sum(r.get('quote') is not None for r in old),
                'distinct_matches': len({r['match_id'] for r in old if r.get('quote')}),
@@ -432,6 +472,7 @@ def run_ah(root, fixtures, command, *, clock, source=None):
                'primary_provider_health': bundle.get('primary_provider_health', {}),
                'fallback_matches': bundle.get('fallback_matches', []),
                'quote_availability': bundle.get('quote_availability'),
+               'window_coverage': window_coverage,
                'research_only': True, 'automatic_promotion': False, 'automatic_wagering': False}
     write(root / 'data/f4/ah/latest.json', summary)
     return summary

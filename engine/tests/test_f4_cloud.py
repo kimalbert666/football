@@ -4,7 +4,7 @@ import json
 import sys
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -198,6 +198,241 @@ class CloudTests(unittest.TestCase):
         self.assertEqual(result['new_predictions'], 0)
         self.assertTrue(emit.call_args.kwargs['notify'])
         self.assertEqual(first, cloud.read_json(self.root / '.github/run-logs/f4-notify-token.json', {}))
+
+    def enable_ah(self):
+        config = cloud.read_json(self.root / 'data/f4/config.json', {})
+        config['asian_handicap'] = {
+            'enabled': True, 'experiment_id': 'synthetic-ah-only', 'research_only': True,
+            'automatic_promotion': False, 'automatic_wagering': False,
+            'windows': {'180': 20, '60': 10, '15': 5}, 'max_capture_age_minutes': 5,
+            'bookmaker_priority': ['hkjc'],
+        }
+        cloud.write_json(self.root / 'data/f4/config.json', config)
+
+    def ah_source(self, root, fixtures, now, **kwargs):
+        quotes = {}
+        for fixture in fixtures:
+            market = {'bookmaker': 'hkjc', 'market': '90min_1x2', 'odds': [2.0, 3.2, 4.0],
+                      'captured_at': cloud.stamp(self.now), 'published_at': cloud.stamp(self.now),
+                      'source': 'synthetic-hkjc', 'provider_event_id': fixture['match_id'],
+                      'url': 'https://example.invalid/1x2', 'content_sha256': 'a' * 64}
+            quotes[fixture['match_id']] = {
+                **market, 'market': '90min_asian_handicap', 'home_handicap': -.25,
+                'odds': [1.90, 1.95], 'market_1x2': market,
+            }
+        return {'markets': quotes, 'sources': [], 'problems': [], 'provider_faults': {}}
+
+    def test_t15_ah_and_same_company_1x2_are_checkpointed_without_legacy_requests(self):
+        import f4_ah as ah
+        self.enable_ah()
+        self.kickoff = self.now + timedelta(minutes=15)
+        self.fixture['kickoff_at'] = cloud.stamp(self.kickoff)
+        order = []
+        def calendar(root, now, **kwargs):
+            self.assertFalse(kwargs['include_market'])
+            order.append('calendar')
+            return self.collector(root, now, **kwargs)
+        def source(*args, **kwargs):
+            order.append('ah')
+            return self.ah_source(*args, **kwargs)
+        def checkpoint(root):
+            rows = ah.load_observations(root)
+            self.assertEqual(len(rows), 1)
+            self.assertEqual(rows[0]['quote_1x2']['bookmaker'], 'hkjc')
+            self.assertIsNotNone(rows[0]['p_1x2'])
+            order.append('checkpoint')
+        def forbidden(*args, **kwargs):
+            self.fail('T15-only capture must not request unrelated legacy sources')
+        result = cloud.run(self.root, 'capture', collector=calendar, candidate=forbidden,
+                           market_attacher=forbidden, f2_fetcher=forbidden, ah_source=source,
+                           capture_checkpoint=checkpoint, clock=lambda: self.now)
+        original = ah.load_observations(self.root)
+        self.assertEqual(order, ['calendar', 'ah', 'checkpoint'])
+        self.assertEqual(result['asian_handicap']['new_valid'], 1)
+        self.now += timedelta(minutes=1)
+        cloud.run(self.root, 'capture', collector=calendar, candidate=forbidden,
+                  market_attacher=forbidden, f2_fetcher=forbidden, ah_source=source,
+                  capture_checkpoint=checkpoint, clock=lambda: self.now)
+        self.assertEqual(order, ['calendar', 'ah', 'checkpoint', 'calendar'])
+        self.assertEqual(original, ah.load_observations(self.root))
+
+    def test_slow_legacy_source_cannot_displace_due_t15_capture_or_start_late_f2(self):
+        import f4_ah as ah
+        self.enable_ah()
+        at_capture = self.now
+        t15 = {**self.fixture, 'match_id': 'espn:synthetic-t15',
+               'kickoff_at': cloud.stamp(self.now + timedelta(minutes=15))}
+        order = []
+        def calendar(*args, **kwargs):
+            self.assertFalse(kwargs['include_market'])
+            return {**self.collector(*args, **kwargs), 'fixtures': [t15, copy.deepcopy(self.fixture)]}
+        def checkpoint(root):
+            self.assertEqual({r['horizon'] for r in ah.load_observations(root)}, {'T-15m', 'T-180m'})
+            order.append('checkpoint')
+        def slow_markets(root, bundle, **kwargs):
+            self.assertEqual(order, ['checkpoint'])
+            self.assertEqual(kwargs['match_ids'], {self.fixture['match_id']})
+            self.assertEqual(len(ah.load_observations(root)), 2)
+            self.now += timedelta(minutes=21)
+            order.append('legacy')
+            return {**bundle, 'captured_at': cloud.stamp(self.now)}
+        result = cloud.run(self.root, 'capture', collector=calendar, candidate=self.candidate,
+                           market_attacher=slow_markets, f2_fetcher=self.f2, ah_source=self.ah_source,
+                           capture_checkpoint=checkpoint, clock=lambda: self.now)
+        self.assertEqual(order, ['checkpoint', 'legacy'])
+        self.assertEqual(result['asian_handicap']['new_valid'], 2)
+        self.assertEqual(self.f2_calls, 0)
+        self.assertEqual(cloud.load_predictions(self.root), [])
+        self.assertTrue(result['skipped'])
+        self.assertTrue(all(r['observed_at'] == cloud.stamp(at_capture) for r in ah.load_observations(self.root)))
+
+    def test_slow_f2_can_cross_other_kickoff_only_after_ah_is_saved(self):
+        import f4_ah as ah
+        self.enable_ah()
+        at_capture = self.now
+        t15 = {**self.fixture, 'match_id': 'espn:synthetic-t15',
+               'kickoff_at': cloud.stamp(self.now + timedelta(minutes=15))}
+        order = []
+        def calendar(*args, **kwargs):
+            return {**self.collector(*args, **kwargs), 'fixtures': [t15, copy.deepcopy(self.fixture)]}
+        def checkpoint(root):
+            self.assertEqual(len(ah.load_observations(root)), 2)
+            order.append('checkpoint')
+        def markets(root, bundle, **kwargs):
+            self.assertEqual(order, ['checkpoint'])
+            order.append('legacy')
+            return bundle
+        def f2(*args):
+            self.assertEqual(order, ['checkpoint', 'legacy'])
+            order.append('f2')
+            self.now += timedelta(minutes=16)
+            return {'sources': [], 'predictions': {}, 'problems': []}
+        result = cloud.run(self.root, 'capture', collector=calendar, candidate=self.candidate,
+                           market_attacher=markets, f2_fetcher=f2, ah_source=self.ah_source,
+                           capture_checkpoint=checkpoint, clock=lambda: self.now)
+        self.assertEqual(order, ['checkpoint', 'legacy', 'f2'])
+        self.assertEqual(result['new_valid_predictions'], 0)  # legacy quote exceeded its freshness limit
+        self.assertEqual(result['asian_handicap']['new_valid'], 2)
+        self.assertTrue(all(r['observed_at'] == cloud.stamp(at_capture) for r in ah.load_observations(self.root)))
+
+    def test_priority_order_does_not_backdate_a_slow_ah_response(self):
+        import f4_ah as ah
+        self.enable_ah()
+        self.kickoff = self.now + timedelta(minutes=15)
+        self.fixture['kickoff_at'] = cloud.stamp(self.kickoff)
+        def source(*args, **kwargs):
+            self.now += timedelta(minutes=16)
+            return self.ah_source(*args, **kwargs)
+        checkpoint = Mock()
+        legacy = Mock(side_effect=AssertionError('the expired window must not request old quotes'))
+        result = cloud.run(self.root, 'capture', collector=self.collector, candidate=self.candidate,
+                           market_attacher=legacy, f2_fetcher=self.f2, ah_source=source,
+                           capture_checkpoint=checkpoint, clock=lambda: self.now)
+        self.assertEqual(result['asian_handicap']['new_valid'], 0)
+        self.assertEqual(ah.load_observations(self.root), [])
+        checkpoint.assert_not_called()
+        legacy.assert_not_called()
+
+    def test_failed_priority_checkpoint_stops_legacy_work_without_claiming_persistence(self):
+        import f4_ah as ah
+        self.enable_ah()
+        def broken_checkpoint(root):
+            self.assertEqual(len(ah.load_observations(root)), 1)
+            raise RuntimeError('synthetic checkpoint failed')
+        legacy = Mock(side_effect=AssertionError('legacy must not start'))
+        with self.assertRaisesRegex(RuntimeError, 'synthetic checkpoint failed'):
+            cloud.run(self.root, 'capture', collector=self.collector, candidate=self.candidate,
+                      market_attacher=legacy, f2_fetcher=legacy, ah_source=self.ah_source,
+                      capture_checkpoint=broken_checkpoint, clock=lambda: self.now)
+        legacy.assert_not_called()
+        self.assertEqual(len(ah.load_observations(self.root)), 1)
+
+    def test_legacy_market_failure_preserves_independent_ah_source_health_and_snapshot(self):
+        import f4_ah as ah
+        self.enable_ah()
+        checkpoint = Mock()
+        def unavailable(root, bundle, **kwargs):
+            self.assertEqual(checkpoint.call_count, 1)
+            return {**bundle, 'fixtures': [{**self.fixture, 'market': None}],
+                    'problems': ['synthetic legacy Titan007 unavailable']}
+        result = cloud.run(self.root, 'capture', collector=self.collector, candidate=self.candidate,
+                           market_attacher=unavailable, f2_fetcher=self.f2, ah_source=self.ah_source,
+                           capture_checkpoint=checkpoint, clock=lambda: self.now)
+        self.assertEqual(result['asian_handicap']['new_valid'], 1)
+        self.assertEqual(result['new_valid_predictions'], 0)
+        self.assertEqual(ah.read(self.root / 'data/f4/ah/source-health.json')['problems'], [])
+        self.assertEqual(ah.load_observations(self.root)[0]['quote_1x2']['bookmaker'], 'hkjc')
+        self.assertIn('synthetic legacy Titan007 unavailable', result['source_health']['problems'])
+
+    def test_missing_t15_defers_slow_legacy_then_recovers_on_true_next_minute(self):
+        import f4_ah as ah
+        self.enable_ah()
+        first_at = self.now
+        t15 = {**self.fixture, 'match_id': 'espn:synthetic-t15',
+               'kickoff_at': cloud.stamp(self.now + timedelta(minutes=15)), 'market': None}
+        source_calls, legacy_calls = [], []
+        def calendar(*args, **kwargs):
+            return {**self.collector(*args, **kwargs), 'fixtures': [t15, copy.deepcopy(self.fixture)]}
+        def source(root, fixtures, now, **kwargs):
+            source_calls.append(now)
+            result = self.ah_source(root, fixtures, now, **kwargs)
+            if len(source_calls) == 1:
+                result['markets'].pop(t15['match_id'])
+                result['problems'] = ['synthetic T15 quote temporarily missing']
+            return result
+        def slow_markets(root, bundle, **kwargs):
+            final_rows = [r for r in ah.load_observations(root) if r['match_id'] == t15['match_id']]
+            self.assertTrue(any(r.get('quote') and r.get('p_1x2') for r in final_rows))
+            legacy_calls.append(self.now)
+            self.now += timedelta(minutes=21)
+            return {**bundle, 'captured_at': cloud.stamp(self.now)}
+        checkpoint = Mock()
+        first = cloud.run(self.root, 'capture', collector=calendar, candidate=self.candidate,
+                          market_attacher=slow_markets, f2_fetcher=self.f2, ah_source=source,
+                          capture_checkpoint=checkpoint, clock=lambda: self.now)
+        self.assertEqual(self.now, first_at)
+        self.assertEqual(legacy_calls, [])
+        self.assertEqual(self.f2_calls, 0)
+        self.assertEqual(first['legacy_deferred']['pending_t15_matches'], [t15['match_id']])
+        self.assertEqual(first['legacy_deferred']['deferred_legacy_matches'], [self.fixture['match_id']])
+        self.assertTrue(first['skipped'])
+        original_missing = next(r for r in ah.load_observations(self.root) if r['match_id'] == t15['match_id'])
+        self.assertIsNone(original_missing['quote'])
+        self.now += timedelta(minutes=1)
+        second = cloud.run(self.root, 'capture', collector=calendar, candidate=self.candidate,
+                           market_attacher=slow_markets, f2_fetcher=self.f2, ah_source=source,
+                           capture_checkpoint=checkpoint, clock=lambda: self.now)
+        self.assertEqual(source_calls, [first_at, first_at + timedelta(minutes=1)])
+        self.assertEqual(legacy_calls, [first_at + timedelta(minutes=1)])
+        self.assertEqual(checkpoint.call_count, 2)
+        self.assertIsNone(second['legacy_deferred'])
+        self.assertEqual(self.f2_calls, 0)  # its own window expired during the later legacy request
+        rows = ah.load_observations(self.root)
+        self.assertIn(original_missing, rows)
+        final = next(r for r in rows if r['match_id'] == t15['match_id'] and r.get('quote'))
+        self.assertEqual(final['observed_at'], cloud.stamp(first_at + timedelta(minutes=1)))
+        self.assertIsNotNone(final['p_1x2'])
+
+    def test_t15_ah_only_record_cannot_unlock_legacy_without_same_company_1x2(self):
+        import f4_ah as ah
+        self.enable_ah()
+        t15 = {**self.fixture, 'match_id': 'espn:synthetic-t15',
+               'kickoff_at': cloud.stamp(self.now + timedelta(minutes=15)), 'market': None}
+        def calendar(*args, **kwargs):
+            return {**self.collector(*args, **kwargs), 'fixtures': [t15, copy.deepcopy(self.fixture)]}
+        def source(*args, **kwargs):
+            result = self.ah_source(*args, **kwargs)
+            result['markets'][t15['match_id']]['market_1x2'] = None
+            return result
+        legacy = Mock(side_effect=AssertionError('incomplete T15 must protect the retry window'))
+        result = cloud.run(self.root, 'capture', collector=calendar, candidate=self.candidate,
+                           market_attacher=legacy, f2_fetcher=legacy, ah_source=source,
+                           capture_checkpoint=Mock(), clock=lambda: self.now)
+        legacy.assert_not_called()
+        final = next(r for r in ah.load_observations(self.root) if r['match_id'] == t15['match_id'])
+        self.assertIsNotNone(final['quote'])
+        self.assertIsNone(final['p_1x2'])
+        self.assertEqual(result['legacy_deferred']['reason'], 'incomplete_t15_joint_market')
 
 
 if __name__ == '__main__':

@@ -6,6 +6,7 @@ Only normalized fields and response hashes leave this module.
 """
 from __future__ import annotations
 
+import copy
 import hashlib
 import json
 import math
@@ -248,6 +249,32 @@ def _sporttery_fixture(raw, aliases, captured_at):
     return row
 
 
+def _get(fetch, sources, problems, name, url, parse):
+    source = {'name': name, 'status': 'error', 'url': url, 'captured_at': None, 'content_sha256': None}
+    try:
+        payload = fetch(url)
+        source['captured_at'] = _stamp(datetime.now(timezone.utc))
+        if not isinstance(payload, dict):
+            raise ValueError('source response is not an object')
+        source['content_sha256'] = hashlib.sha256(json.dumps(payload, sort_keys=True, ensure_ascii=False,
+                                                            allow_nan=False).encode()).hexdigest()
+        result = parse(payload, source['captured_at'])
+        source['status'] = 'ok'
+        return result
+    except Exception as exc:
+        # Do not persist raw bodies, credentials, or provider error messages.
+        status = getattr(getattr(exc, 'response', None), 'status_code', None)
+        detail = type(exc).__name__
+        if type(status) is int and 100 <= status <= 599:
+            source['http_status'] = status
+            detail += f'; HTTP {status}'
+        problems.append(f'{name}: unavailable or malformed ({detail})')
+        return None
+    finally:
+        source['captured_at'] = source['captured_at'] or _stamp(datetime.now(timezone.utc))
+        sources.append(source)
+
+
 def collect(root, now, include_market=True, *, pending=None, fetch=None,
             lookahead_days=1, lookback_days=0):
     """Collect the complete daily EPL calendar and optionally match fresh HAD prices.
@@ -272,31 +299,6 @@ def collect(root, now, include_market=True, *, pending=None, fetch=None,
         problems.append('England team alias registry is unavailable or malformed')
         complete = False
 
-    def get(name, url, parse):
-        source = {'name': name, 'status': 'error', 'url': url, 'captured_at': None, 'content_sha256': None}
-        try:
-            payload = fetch(url)
-            source['captured_at'] = _stamp(datetime.now(timezone.utc))
-            if not isinstance(payload, dict):
-                raise ValueError('source response is not an object')
-            source['content_sha256'] = hashlib.sha256(json.dumps(payload, sort_keys=True, ensure_ascii=False,
-                                                                allow_nan=False).encode()).hexdigest()
-            result = parse(payload, source['captured_at'])
-            source['status'] = 'ok'
-            return result
-        except Exception as exc:
-            # Do not persist raw bodies, credentials, or provider error messages.
-            status = getattr(getattr(exc, 'response', None), 'status_code', None)
-            detail = type(exc).__name__
-            if type(status) is int and 100 <= status <= 599:
-                source['http_status'] = status
-                detail += f'; HTTP {status}'
-            problems.append(f'{name}: unavailable or malformed ({detail})')
-            return None
-        finally:
-            source['captured_at'] = source['captured_at'] or _stamp(datetime.now(timezone.utc))
-            sources.append(source)
-
     def merge(row):
         nonlocal complete
         previous = fixtures.get(row['match_id'])
@@ -320,7 +322,7 @@ def collect(root, now, include_market=True, *, pending=None, fetch=None,
             if not isinstance(payload.get('events'), list):
                 raise ValueError('ESPN events missing')
             return [_espn_event(e, aliases) for e in payload['events']]
-        rows = get('espn-calendar', url, parse_calendar)
+        rows = _get(fetch, sources, problems, 'espn-calendar', url, parse_calendar)
         if rows is None:
             complete = False
         else:
@@ -354,41 +356,70 @@ def collect(root, now, include_market=True, *, pending=None, fetch=None,
                 row.update(home_id=None, away_id=None, status='unknown', score=None)
                 row['problems'].append('ESPN summary identity differs from pending fixture')
             return row
-        row = get('espn-result', url, parse_summary)
+        row = _get(fetch, sources, problems, 'espn-result', url, parse_summary)
         if row is None:
             complete = False
         else:
             merge(row)
 
-    calendar_complete = complete
+    bundle = {'captured_at': _stamp(datetime.now(timezone.utc)), 'sources': sources,
+              'fixtures': sorted(fixtures.values(), key=lambda row: (row['kickoff_at'] or '', row['match_id'])),
+              'coverage': {'complete': complete,
+                           'scope': {'league': LEAGUE, 'from': start.isoformat(), 'through': end.isoformat(),
+                                     'provider': 'espn', 'pending_lookup_limit': MAX_PENDING},
+                           'reason': 'Independent daily EPL calendar verified' if complete
+                                     else 'Independent EPL calendar or pending identities could not be fully verified'},
+              'problems': list(dict.fromkeys(problems))}
+    if include_market:
+        return attach_markets(root, bundle, fetch=fetch)
+    return bundle
+
+
+def attach_markets(root, bundle, *, now=None, fetch=None, match_ids=None):
+    """Enrich a verified calendar with the separate legacy 1X2 experiment.
+
+    AH and its same-company 1X2 quotes use their own adapter. Keeping this step
+    separate lets the caller persist that time-critical capture first.
+    """
+    result = copy.deepcopy(bundle)
+    fixtures = {row['match_id']: row for row in result.get('fixtures', [])}
+    sources, problems = result.setdefault('sources', []), result.setdefault('problems', [])
+    calendar_complete = result.get('coverage', {}).get('complete', False)
+    fetch = fetch or _fetch
     config_path = Path(root) / 'data/f4/config.json'
     config = json.loads(config_path.read_text(encoding='utf-8')) if config_path.exists() else {}
     odds_source = config.get('odds_source', 'sporttery')
     if odds_source not in ('sporttery', 'crown'):
         raise ValueError('Unsupported fixed odds source')
-    if include_market and odds_source == 'crown':
+    if odds_source == 'crown':
         from f4_crown import attach_crown
-        queried_at = datetime.now(timezone.utc)
+        queried_at = now or datetime.now(timezone.utc)
+        if queried_at.utcoffset() is None:
+            raise ValueError('market query time requires a timezone')
         due = []
         for row in fixtures.values():
+            if match_ids is not None and row['match_id'] not in match_ids:
+                continue
             if row['status'] != 'scheduled' or not row['kickoff_at'] or not row['home_id'] or not row['away_id']:
                 continue
             minutes = (_instant(row['kickoff_at']) - queried_at).total_seconds() / 60
             old_due = any(abs(minutes - h) <= config.get('horizon_tolerance_minutes', 20)
                           for h in config.get('horizons_minutes', [180, 60]))
-            ah_cfg = config.get('asian_handicap', {})
-            ah_due = ah_cfg.get('enabled') and any(abs(minutes - int(h)) <= tolerance
-                                                 for h, tolerance in ah_cfg.get('windows', {}).items())
-            if minutes > 0 and (old_due or ah_due):
+            if minutes > 0 and old_due:
                 due.append(row)
-        crown = attach_crown(root, due, queried_at)
+        crown = attach_crown(root, due, queried_at) if due else {'markets': {}, 'sources': [], 'problems': []}
         sources.extend(crown.get('sources', []))
         problems.extend(crown.get('problems', []))
         for match_id, market in crown.get('markets', {}).items():
             if match_id in fixtures and fixtures[match_id]['status'] == 'scheduled':
                 fixtures[match_id]['market'] = market
-    elif include_market:
-        quotes = get('sporttery', SPORTTERY_URL,
+    else:
+        try:
+            aliases = _aliases(root)
+        except (OSError, TypeError, ValueError):
+            aliases = {}
+            problems.append('England team alias registry is unavailable or malformed')
+        quotes = _get(fetch, sources, problems, 'sporttery', SPORTTERY_URL,
                      lambda payload, captured: ([_sporttery_fixture(r, aliases, captured)
                          for r in _sporttery_rows(payload)
                          if r.get('leagueAbbName') == '英超' or r.get('leagueCode') == 'EPL']))
@@ -411,6 +442,8 @@ def collect(root, now, include_market=True, *, pending=None, fetch=None,
                 else:
                     problems.append(f"{quote['match_id']}: Sporttery EPL row has no exact ESPN fixture match")
             for match_id, candidates in matches.items():
+                if match_ids is not None and match_id not in match_ids:
+                    continue
                 row = fixtures[match_id]
                 if len(candidates) != 1:
                     row['problems'].append('Multiple Sporttery quotes match this ESPN fixture')
@@ -419,11 +452,7 @@ def collect(root, now, include_market=True, *, pending=None, fetch=None,
                     if row['status'] == 'scheduled':
                         row['market'] = candidates[0]['market']
                 problems.extend(f'{match_id}: {p}' for p in row['problems'])
-    return {'captured_at': _stamp(datetime.now(timezone.utc)), 'sources': sources,
-            'fixtures': sorted(fixtures.values(), key=lambda row: (row['kickoff_at'] or '', row['match_id'])),
-            'coverage': {'complete': calendar_complete,
-                         'scope': {'league': LEAGUE, 'from': start.isoformat(), 'through': end.isoformat(),
-                                   'provider': 'espn', 'pending_lookup_limit': MAX_PENDING},
-                         'reason': 'Independent daily EPL calendar verified' if calendar_complete
-                                   else 'Independent EPL calendar or pending identities could not be fully verified'},
-            'problems': list(dict.fromkeys(problems))}
+    result.update(captured_at=_stamp(datetime.now(timezone.utc)),
+                  fixtures=sorted(fixtures.values(), key=lambda row: (row['kickoff_at'] or '', row['match_id'])),
+                  problems=list(dict.fromkeys(problems)))
+    return result

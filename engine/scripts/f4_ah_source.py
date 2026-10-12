@@ -107,6 +107,8 @@ def parse_quotes(payload, event, fixture, aliases, captured_at, url, content_sha
             lines[line] = {'home_handicap': line, 'odds': prices, 'published_at': _stamp(changed)}
     if not lines:
         raise ValueError('no open full-time Crown handicap quotes')
+    if market_1x2 is None:
+        raise ValueError('same-bookmaker open full-time 1X2 required with Asian handicap')
     opening_lines = []
     if opening is not None:
         if opening.get('event_id') != event['id']:

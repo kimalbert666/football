@@ -23,8 +23,10 @@ class SourceTests(unittest.TestCase):
         self.quote = {'bookmaker': 'crown', 'period': 'full_time', 'market_type': 'asian_handicap',
                       'line': -2.75, 'handicap_components': [-2.5, -3.0], 'prices': {'home': 1.9, 'away': 2.0},
                       'format': 'decimal', 'status': 'open', 'as_of': '2026-10-01T09:00:00Z'}
+        self.quote_1x2 = {**self.quote, 'market_type': '1x2',
+                          'prices': {'home': 1.5, 'draw': 4.0, 'away': 6.0}}
         self.payload = {'event_id': 'evt_test', 'as_of': _stamp(self.now - timedelta(seconds=90)),
-                        'stale': False, 'odds': [self.quote]}
+                        'stale': False, 'odds': [self.quote, self.quote_1x2]}
 
     def parse(self, payload=None, event=None):
         return parse_quotes(payload or self.payload, event or self.event, self.fixture, self.aliases,
@@ -72,10 +74,19 @@ class SourceTests(unittest.TestCase):
         self.assertIn('global feed health', result['freshness_evidence'])
 
     def test_explicit_alternative_bookmaker_is_preserved(self):
-        payload = {**self.payload, 'odds': [{**self.quote, 'bookmaker': 'macau'}]}
+        payload = {**self.payload, 'odds': [{**q, 'bookmaker': 'macau'}
+                                          for q in (self.quote, self.quote_1x2)]}
         result = parse_quotes(payload, self.event, self.fixture, self.aliases, _stamp(self.now),
                               'https://example.invalid/synthetic', 'a'*64, bookmaker='macau')
         self.assertEqual(result['bookmaker'], 'macau')
+
+    def test_missing_or_wrong_bookmaker_1x2_cannot_be_complete_ah_input(self):
+        for auxiliary in ([], [{**self.quote_1x2, 'bookmaker': 'macau'}],
+                          [{**self.quote_1x2, 'status': 'suspended'}],
+                          [{**self.quote_1x2, 'period': 'half_time'}]):
+            with self.subTest(auxiliary=auxiliary), self.assertRaisesRegex(ValueError, 'same-bookmaker'):
+                self.parse({**self.payload, 'odds': [self.quote, *auxiliary]})
+        self.assertEqual(self.parse()['market_1x2']['bookmaker'], 'crown')
 
     def test_no_due_match_does_not_spend_quota(self):
         with tempfile.TemporaryDirectory() as directory:

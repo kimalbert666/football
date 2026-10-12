@@ -9,7 +9,6 @@ import argparse
 import os
 import subprocess
 import time
-from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -23,14 +22,13 @@ def fixture_targets(root, now):
     cfg = read(root / 'data/f4/config.json', {}).get('asian_handicap', {})
     if not cfg.get('enabled'):
         return []
-    valid, attempts, latest = set(), Counter(), {}
+    valid, latest = set(), {}
     for row in load_observations(root):
         if row.get('experiment_id') != cfg['experiment_id']:
             continue
         key = (row['match_id'], stamp(row['kickoff_at']), row['horizon'])
         if row.get('quote'):
             valid.add(key)
-        attempts[key] += 1
         latest[key] = max(latest.get(key, instant(row['observed_at'])), instant(row['observed_at']))
     targets = []
     for path in (root / 'data/f4/fixtures').glob('*.json'):
@@ -43,9 +41,12 @@ def fixture_targets(root, now):
             key = (row['match_id'], stamp(kickoff), f'T-{minutes}m')
             target = kickoff - timedelta(minutes=int(minutes))
             closes = min(kickoff, target + timedelta(minutes=tolerance))
-            if key in valid or attempts[key] >= 3 or now >= closes:
+            if key in valid or now >= closes:
                 continue
-            retry_at = latest.get(key, target - timedelta(minutes=2)) + timedelta(minutes=2)
+            # A transient missing quote must not exhaust the whole window.
+            # The deadline and spacing bound requests; T15 retries each minute.
+            gap = timedelta(minutes=1 if int(minutes) == 15 else 2)
+            retry_at = latest.get(key, target - gap) + gap
             due = max(target, retry_at)
             if due < closes:
                 targets.append({'key': key, 'at': due, 'nominal_at': target, 'closes_at': closes})
@@ -56,6 +57,19 @@ def checkpoint(root):
     """Called only in Actions with its existing checkout credential helper."""
     if os.getenv('GITHUB_ACTIONS') != 'true':
         return
+    def git(*args):
+        return subprocess.run(['git', *args], cwd=root, check=True, capture_output=True, text=True)
+
+    def reject_rebase_conflict():
+        for state in ('rebase-merge', 'rebase-apply'):
+            value = git('rev-parse', '--git-path', state).stdout.strip()
+            path = Path(value)
+            if (path if path.is_absolute() else root / path).exists():
+                raise RuntimeError('f4 checkpoint has a Git conflict; retaining local records') from None
+
+    # A retry may inherit an interrupted rebase. Never stage conflict markers,
+    # send notices, or make another commit in that state.
+    reject_rebase_conflict()
     # Publish pending monthly/critical notices promptly during a long worker;
     # the publisher retains the research policy and acknowledges only success.
     from f4_publish import publish
@@ -71,8 +85,6 @@ def checkpoint(root):
         health_path = root / 'data/f4/status/notice-delivery-health.json'
         if health_path.exists():
             write(health_path, {'status': 'ok', 'checked_at': stamp(datetime.now(timezone.utc))})
-    def git(*args):
-        return subprocess.run(['git', *args], cwd=root, check=True, capture_output=True, text=True)
     git('config', 'user.name', 'github-actions[bot]')
     git('config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com')
     git('add', '--', 'data/f4')
@@ -83,14 +95,16 @@ def checkpoint(root):
         raise RuntimeError('Cannot inspect staged f4 records')
     git('commit', '-m', 'chore(f4): checkpoint pre-match worker records')
     for attempt in range(3):
-        # Do not discard or force-push conflicting records.
-        git('pull', '--rebase', 'origin', 'main')
         try:
+            # Retry transient pull failures too, but never discard a conflict.
+            git('pull', '--rebase', 'origin', 'main')
             git('push', 'origin', 'HEAD:main')
             return
         except subprocess.CalledProcessError:
+            reject_rebase_conflict()
             if attempt == 2:
                 raise RuntimeError('Could not persist f4 checkpoint') from None
+            time.sleep(attempt + 1)
 
 
 def dispatch_continuation():
@@ -108,8 +122,8 @@ def dispatch_continuation():
     return True
 
 
-def watch(root, *, max_minutes=300, arm_minutes=180, clock=lambda: datetime.now(timezone.utc),
-          sleeper=time.sleep, run=cloud_run, persist=checkpoint, dispatch=dispatch_continuation):
+def watch(root, *, max_minutes=300, arm_minutes=120, clock=lambda: datetime.now(timezone.utc),
+          sleeper=time.sleep, run=None, persist=checkpoint, dispatch=dispatch_continuation):
     if not 0 <= max_minutes <= 300 or not 0 <= arm_minutes <= 180:
         raise ValueError('worker duration/arming exceeds configured bounds')
     started = clock()
@@ -123,10 +137,33 @@ def watch(root, *, max_minutes=300, arm_minutes=180, clock=lambda: datetime.now(
         status.update(state=state, checked_at=stamp(clock()))
         write(root / 'data/f4/status/watch-latest.json', status)
 
+    def early_capture_checkpoint(path):
+        # Commit the AH snapshot before unrelated legacy requests can delay or
+        # fail the rest of the capture. Injected test runners stay independent.
+        save('ah_saved_legacy_pending')
+        persist(path)
+
+    if run is None:
+        def run(path, command, *, clock):
+            return cloud_run(path, command, clock=clock,
+                             capture_checkpoint=early_capture_checkpoint)
+
     # Immediate normal capture also refreshes today's/tomorrow's ESPN calendar.
     # Do this before slower result backfills so an already due window is first.
     save('refreshing_calendar')
-    run(root, 'capture', clock=clock)
+    for attempt in range(3):
+        try:
+            run(root, 'capture', clock=clock)
+            status.pop('last_error', None)
+            break
+        except Exception as exc:
+            status['last_error'] = type(exc).__name__
+            exhausted = attempt == 2 or clock() >= deadline
+            save('failed' if exhausted else 'retrying_initial_capture')
+            persist(root)
+            if exhausted:
+                raise
+            sleeper(min(60, (deadline - clock()).total_seconds()))
     save('planning')
     persist(root)
     targets = fixture_targets(root, clock())

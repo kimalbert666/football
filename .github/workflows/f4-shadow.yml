@@ -88,7 +88,13 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: f4-shadow-${{ github.run_id }}-${{ github.run_attempt }}
-          path: .github/run-logs/
+          # Preserve immutable, limited match observations if main cannot be
+          # pushed. These are normalized fields, never the raw provider feed.
+          path: |
+            .github/run-logs/
+            data/f4/ah/observations/
+            data/f4/outcomes/
+          include-hidden-files: true
           if-no-files-found: ignore
           retention-days: 14
       - name: Propagate observation failures

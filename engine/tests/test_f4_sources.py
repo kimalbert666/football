@@ -363,3 +363,46 @@ def test_crown_daily_settlement_does_not_fetch_any_odds(root, now, monkeypatch):
     sources.collect(root, now, False, fetch=fetch)
     attach.assert_not_called()
     assert all('sporttery' not in url for url in fetch.calls)
+
+
+def test_separate_market_enrichment_preserves_calendar_and_uses_response_capture(root, now):
+    fetch = transport(now, [event(now)], [quote(now)])
+    calendar = sources.collect(root, now, False, fetch=fetch)
+    original = copy.deepcopy(calendar)
+    assert len(fetch.calls) == 2
+    enriched = sources.attach_markets(root, calendar, now=now, fetch=fetch)
+    assert calendar == original
+    assert len(fetch.calls) == 3
+    assert enriched['coverage'] == calendar['coverage']
+    assert enriched['fixtures'][0]['market']['odds'] == [2.1, 3.2, 3.5]
+    assert sources._instant(enriched['fixtures'][0]['market']['captured_at']) >= sources._instant(calendar['captured_at'])
+
+
+def test_legacy_crown_does_not_fetch_during_ah_only_t15_window(root, now, monkeypatch):
+    from unittest.mock import Mock
+    config = root / 'data/f4/config.json'
+    config.parent.mkdir(parents=True, exist_ok=True)
+    config.write_text(json.dumps({'odds_source': 'crown', 'horizons_minutes': [180, 60],
+                                 'horizon_tolerance_minutes': 20,
+                                 'asian_handicap': {'enabled': True, 'windows': {'15': 5}}}), encoding='utf-8')
+    item = event(now - timedelta(minutes=105))  # fifteen minutes until kickoff
+    attach = Mock(side_effect=AssertionError('AH T15 must not invoke legacy Titan007'))
+    monkeypatch.setattr('f4_crown.attach_crown', attach)
+    result = sources.collect(root, now, fetch=transport(now, [item]))
+    assert len(result['fixtures']) == 1
+    assert result['fixtures'][0]['market'] is None
+    attach.assert_not_called()
+
+
+def test_legacy_crown_requests_only_unrecorded_experiment_matches(root, now, monkeypatch):
+    from unittest.mock import Mock
+    config = root / 'data/f4/config.json'
+    config.parent.mkdir(parents=True, exist_ok=True)
+    config.write_text(json.dumps({'odds_source': 'crown'}), encoding='utf-8')
+    calendar = sources.collect(root, now, False, fetch=transport(now, [
+        event(now + timedelta(hours=1), eid='101'), event(now + timedelta(hours=1), eid='102'),
+    ]))
+    attach = Mock(return_value={'markets': {}, 'sources': [], 'problems': []})
+    monkeypatch.setattr('f4_crown.attach_crown', attach)
+    sources.attach_markets(root, calendar, now=now, match_ids={'espn:102'})
+    assert [row['match_id'] for row in attach.call_args.args[1]] == ['espn:102']

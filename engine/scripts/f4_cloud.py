@@ -13,7 +13,7 @@ import os
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from f4_sources import collect
+from f4_sources import collect, attach_markets
 from f4_candidates import dc_candidate, capture_f2
 from f4_ledger import load_predictions, load_latest_outcomes, save_prediction, save_outcome, evaluate_ledger, render_report
 
@@ -94,8 +94,31 @@ def prediction_key(row):
     return (row['match_id'], stamp(instant(row['kickoff_at'])), row['horizon'], row['experiment_id'])
 
 
+def pending_t15_captures(root, fixtures, now, cfg):
+    """Keep unrelated network work out of a still incomplete final window."""
+    from f4_ah import load_observations, probability_1x2, stage, validate_quote
+    complete = set()
+    for row in load_observations(root):
+        if row.get('horizon') != 'T-15m' or row.get('experiment_id') != cfg['experiment_id']:
+            continue
+        try:
+            decision = instant(row['observed_at'])
+            quote = validate_quote(row.get('quote'), row, decision, cfg['max_capture_age_minutes'],
+                                   cfg.get('bookmaker_priority', ['crown']))
+            if (row.get('p_1x2') is None or probability_1x2(row.get('quote_1x2'), decision,
+                    cfg['max_capture_age_minutes'], quote['bookmaker']) is None):
+                continue
+            complete.add((row['match_id'], stamp(instant(row['kickoff_at'])), row['home_id'], row['away_id']))
+        except (KeyError, TypeError, ValueError):
+            continue
+    return [fixture['match_id'] for fixture in fixtures
+            if stage(fixture, now, cfg) == 'T-15m'
+            and (fixture['match_id'], stamp(instant(fixture['kickoff_at'])),
+                 fixture.get('home_id'), fixture.get('away_id')) not in complete]
+
+
 def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=capture_f2, ah_source=None,
-        clock=lambda: datetime.now(timezone.utc)):
+        clock=lambda: datetime.now(timezone.utc), market_attacher=attach_markets, capture_checkpoint=None):
     config = read_json(root / 'data/f4/config.json', None)
     if not config or config['mode'] != 'shadow' or config['candidate_weight'] != 0:
         raise ValueError('Only the frozen zero-weight shadow experiment is supported')
@@ -109,6 +132,7 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
     capture = command in ('capture', 'all')
     settle = command in ('daily', 'all', 'monthly')
     review = command in ('review', 'all', 'monthly')
+    prioritize_ah = capture and config.get('asian_handicap', {}).get('enabled', False)
     pending = {}
     if settle:
         outcomes = load_latest_outcomes(root)
@@ -121,7 +145,7 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
                     and outcomes.get(record['match_id'], {}).get('status') not in ('completed', 'cancelled')):
                 pending[record['match_id']] = record
     if capture or settle:
-        bundle = collector(root, now, include_market=capture, pending=list(pending.values()),
+        bundle = collector(root, now, include_market=capture and not prioritize_ah, pending=list(pending.values()),
                            lookahead_days=7 if settle else 1, lookback_days=1 if settle else 0)
     else:
         bundle = read_json(root / 'data/f4/status/sources-latest.json',
@@ -137,6 +161,28 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
             previous = read_json(path, {})
             write_json(path, {**fixture, 'first_seen_at': previous.get('first_seen_at', bundle['captured_at']),
                               'last_seen_at': bundle['captured_at']})
+    new_predictions, new_valid, new_outcomes, skipped = 0, 0, 0, []
+    if settle:
+        observed = stamp(clock())
+        for fixture in fixtures:
+            if not all(fixture.get(key) for key in ('home_id', 'away_id', 'kickoff_at')):
+                continue
+            if fixture.get('status') not in ('completed', 'postponed', 'cancelled'):
+                prior = pending.get(fixture['match_id'])
+                if not prior or instant(prior['kickoff_at']) == instant(fixture['kickoff_at']):
+                    continue
+            score = fixture.get('score') or [None, None]
+            outcome = {**fixture, 'home_score': score[0], 'away_score': score[1]}
+            new_outcomes += int(save_outcome(root, outcome, observed))
+    ah_summary = None
+    if config.get('asian_handicap', {}).get('enabled'):
+        from f4_ah import run_ah
+        # The research's own AH + same-company 1X2 source must finish and be
+        # persisted before unrelated legacy Crown/F2 requests can consume time.
+        ah_summary = run_ah(root, fixtures, command, clock=clock, source=ah_source)
+        if (prioritize_ah and capture_checkpoint is not None
+                and (ah_summary.get('new_valid', 0) or ah_summary.get('new_attempts', 0))):
+            capture_checkpoint(root)
     seen = {prediction_key(r) for r in old if r.get('p_baseline') is not None}
     due = []
     if capture:
@@ -147,8 +193,38 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
             key = (fixture['match_id'], stamp(instant(fixture['kickoff_at'])), stage, config['experiment_id'])
             if key not in seen:
                 due.append(fixture)
+    legacy_deferred = None
+    if prioritize_ah and due:
+        pending_final = pending_t15_captures(root, fixtures, clock(), config['asian_handicap'])
+        if pending_final:
+            legacy_deferred = {'reason': 'incomplete_t15_joint_market',
+                               'pending_t15_matches': pending_final,
+                               'deferred_legacy_matches': [fixture['match_id'] for fixture in due]}
+            for fixture in due:
+                skipped.append(f"{fixture['match_id']}: 暂缓旧胜平负／F2，优先重试未完成的T−15亚盘与同公司胜平负："
+                               + ', '.join(pending_final))
+            due = []
+    if prioritize_ah and due:
+        bundle = market_attacher(root, bundle, now=clock(), match_ids={f['match_id'] for f in due})
+        by_id = {f['match_id']: f for f in bundle.get('fixtures', [])}
+        fixtures = [by_id.get(f['match_id'], f) for f in fixtures]
+        due = [by_id.get(f['match_id'], f) for f in due]
+        write_json(root / 'data/f4/status/sources-latest.json', bundle)
+        for fixture in fixtures:
+            path = root / 'data/f4/fixtures' / (fingerprint(fixture['match_id'])[:24] + '.json')
+            previous = read_json(path, {})
+            write_json(path, {**fixture, 'first_seen_at': previous.get('first_seen_at', bundle['captured_at']),
+                              'last_seen_at': bundle['captured_at']})
+        # A slow legacy source must not trigger additional F2 calls after its
+        # own window has ended, nor re-label late input with the request clock.
+        remaining = []
+        for fixture in due:
+            if stage_for(fixture, clock(), config):
+                remaining.append(fixture)
+            else:
+                skipped.append(f"{fixture['match_id']}: 旧胜平负数据返回时已离开预定窗口")
+        due = remaining
     f2 = f2_fetcher(root, due) if due else {'sources': [], 'predictions': {}, 'problems': []}
-    new_predictions, new_valid, new_outcomes, skipped = 0, 0, 0, []
     for fixture in due:
         decision = clock()
         stage = stage_for(fixture, decision, config)
@@ -206,23 +282,6 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
         _, created = save_prediction(root, record)
         new_predictions += int(created)
         new_valid += int(created and p_market is not None)
-    if settle:
-        observed = stamp(clock())
-        for fixture in fixtures:
-            if not all(fixture.get(key) for key in ('home_id', 'away_id', 'kickoff_at')):
-                continue
-            if fixture.get('status') not in ('completed', 'postponed', 'cancelled'):
-                # A rescheduled kickoff must invalidate the old stage even before it is played.
-                prior = pending.get(fixture['match_id'])
-                if not prior or instant(prior['kickoff_at']) == instant(fixture['kickoff_at']):
-                    continue
-            score = fixture.get('score') or [None, None]
-            outcome = {**fixture, 'home_score': score[0], 'away_score': score[1]}
-            new_outcomes += int(save_outcome(root, outcome, observed))
-    ah_summary = None
-    if config.get('asian_handicap', {}).get('enabled'):
-        from f4_ah import run_ah
-        ah_summary = run_ah(root, fixtures, command, clock=clock, source=ah_source)
     completed_at = clock()
     if settle and bundle.get('coverage', {}).get('complete') and not bundle.get('problems'):
         write_json(root / 'data/f4/status/last-settlement.json', {
@@ -233,7 +292,8 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
     status = {'checked_at': stamp(completed_at), 'command': command, 'mode': 'shadow',
               'new_predictions': new_predictions, 'new_valid_predictions': new_valid,
               'new_outcomes': new_outcomes, 'due_fixtures': len(due), 'tracked_fixtures_seen': len(fixtures),
-              'skipped': skipped, 'source_health': source_health, 'f2_problems': f2.get('problems', []),
+              'skipped': skipped, 'legacy_deferred': legacy_deferred,
+              'source_health': source_health, 'f2_problems': f2.get('problems', []),
               'automatic_promotion': False, 'automatic_wagering': False,
               'asian_handicap': {k: v for k, v in (ah_summary or {}).items()
                                  if k in ('new_valid', 'new_attempts', 'distinct_matches', 'paired_matches', 'problems',

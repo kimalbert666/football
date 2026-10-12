@@ -132,6 +132,54 @@ class AHIntegrationTests(unittest.TestCase):
         self.assertFalse(batch['all_no_selection'])
         self.assertFalse(batch['direction_notification_enabled'])
 
+    def test_batch_audits_every_window_and_score_cannot_fill_a_quote_gap(self):
+        self.quote['market_1x2'] = {**self.quote, 'market': '90min_1x2', 'odds': [2.0, 3.0, 4.0]}
+        self.run_capture()
+        other = {**self.fixture, 'match_id': 'espn:synthetic-other', 'home': 'Other home'}
+        self.now += timedelta(minutes=20)
+        save_outcome(self.root, {**other, 'status': 'completed', 'home_score': 1, 'away_score': 0},
+                     ah.stamp(self.now))
+        summary = ah.update_batches(self.root, [self.fixture, other], ah.load_observations(self.root),
+                                    self.now, self.cfg)
+        batch = ah.read(next((self.root / 'data/f4/ah/batches').glob('*.json')))
+        first, missing = batch['fixtures']
+        self.assertEqual(first['windows']['T-15m']['status'], 'recorded_research_only')
+        self.assertTrue(first['windows']['T-15m']['same_bookmaker_1x2_available'])
+        self.assertEqual(first['windows']['T-60m']['status'], 'missed_window')
+        self.assertEqual(missing['windows']['T-15m']['status'], 'missed_window')
+        self.assertEqual(set(first['windows']), {'T-180m', 'T-60m', 'T-15m'})
+        self.assertEqual(summary['windows']['T-15m']['complete_joint_market'], 1)
+        self.assertEqual(summary['windows']['T-15m']['missed_window'], 1)
+
+    def test_batch_old_kickoff_and_other_experiment_cannot_hide_new_gap(self):
+        self.run_capture()
+        moved = {**self.fixture, 'kickoff_at': '2026-10-02T12:00:00Z'}
+        old = {**ah.load_observations(self.root)[0], 'kickoff_at': moved['kickoff_at'],
+               'experiment_id': 'previous-experiment'}
+        self.now = ah.instant('2026-10-02T11:50:00Z')
+        ah.update_batches(self.root, [moved], [*ah.load_observations(self.root), old], self.now, self.cfg)
+        batch = ah.read(self.root / 'data/f4/ah/batches' / (ah.digest(moved['kickoff_at'])[:24] + '.json'))
+        self.assertEqual(batch['fixtures'][0]['windows']['T-15m']['status'], 'missed_window')
+        self.assertEqual(batch['fixtures'][0]['windows']['T-15m']['attempts'], 0)
+
+    def test_batch_missing_quote_keeps_retry_state_until_actual_close(self):
+        missing = lambda *a, **k: {'markets': {}, 'sources': [], 'problems': []}
+        self.run_capture(missing)
+        rows = ah.load_observations(self.root)
+        summary = ah.update_batches(self.root, [self.fixture], rows, self.now, self.cfg)
+        self.assertEqual(summary['windows']['T-15m']['retrying_quote_unavailable'], 1)
+        self.now = ah.instant('2026-10-02T10:50:00Z')
+        summary = ah.update_batches(self.root, [self.fixture], rows, self.now, self.cfg)
+        self.assertEqual(summary['windows']['T-15m']['data_unavailable'], 1)
+        self.assertNotIn('retrying_quote_unavailable', summary['windows']['T-15m'])
+
+    def test_batch_pre_launch_windows_are_excluded_from_misses(self):
+        self.cfg['started_at'] = '2026-10-02T11:00:00Z'
+        self.now = ah.instant('2026-10-02T11:05:00Z')
+        summary = ah.update_batches(self.root, [self.fixture], [], self.now, self.cfg)
+        self.assertTrue(all(values == {'outside_experiment': 1}
+                            for values in summary['windows'].values()))
+
     def test_coverage_distinguishes_prelaunch_late_discovery_and_real_missing(self):
         rows = [
             ('prelaunch', '2026-09-20T12:00:00Z', '2026-09-20T14:00:00Z', 'completed'),
