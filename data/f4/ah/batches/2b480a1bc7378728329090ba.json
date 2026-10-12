@@ -1,15 +1,42 @@
 {
   "kickoff_at": "2026-10-11T15:30:00Z",
-  "updated_at": "2026-10-11T23:51:14.604797Z",
+  "updated_at": "2026-10-12T10:41:08.588053Z",
   "fixtures": [
     {
       "match_id": "espn:401879264",
       "home": "Liverpool",
       "away": "Manchester City",
       "status": "recorded_research_only",
-      "observation_id": "4ae51a91d401d4e4a88a095840829ff37d36ffc2ec36ebf340d2f80619a74492"
+      "observation_id": "4ae51a91d401d4e4a88a095840829ff37d36ffc2ec36ebf340d2f80619a74492",
+      "windows": {
+        "T-180m": {
+          "status": "missed_window",
+          "expected_at": "2026-10-11T12:30:00Z",
+          "closes_at": "2026-10-11T12:50:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-60m": {
+          "status": "recorded_research_only",
+          "expected_at": "2026-10-11T14:30:00Z",
+          "closes_at": "2026-10-11T14:40:00Z",
+          "attempts": 1,
+          "observation_id": "425458e98a3debaf8ea8bc0f73d43de33e081f3aa2ed118ea0a37477f17e3fee",
+          "same_bookmaker_1x2_available": true
+        },
+        "T-15m": {
+          "status": "recorded_research_only",
+          "expected_at": "2026-10-11T15:15:00Z",
+          "closes_at": "2026-10-11T15:20:00Z",
+          "attempts": 1,
+          "observation_id": "4ae51a91d401d4e4a88a095840829ff37d36ffc2ec36ebf340d2f80619a74492",
+          "same_bookmaker_1x2_available": true
+        }
+      }
     }
   ],
+  "experiment_id": "f4-epl-ah-research-v1",
   "research_only": true,
   "direction_notification_enabled": false,
   "all_no_selection": false,

@@ -1,22 +1,75 @@
 {
   "kickoff_at": "2026-10-11T13:00:00Z",
-  "updated_at": "2026-10-11T23:51:14.604797Z",
+  "updated_at": "2026-10-12T10:41:08.588053Z",
   "fixtures": [
     {
       "match_id": "espn:401878774",
       "home": "Hull City",
       "away": "Everton",
       "status": "missed_window",
-      "observation_id": null
+      "observation_id": null,
+      "windows": {
+        "T-180m": {
+          "status": "missed_window",
+          "expected_at": "2026-10-11T10:00:00Z",
+          "closes_at": "2026-10-11T10:20:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-60m": {
+          "status": "missed_window",
+          "expected_at": "2026-10-11T12:00:00Z",
+          "closes_at": "2026-10-11T12:10:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-15m": {
+          "status": "missed_window",
+          "expected_at": "2026-10-11T12:45:00Z",
+          "closes_at": "2026-10-11T12:50:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        }
+      }
     },
     {
       "match_id": "espn:401879266",
       "home": "Crystal Palace",
       "away": "Nottingham Forest",
       "status": "missed_window",
-      "observation_id": null
+      "observation_id": null,
+      "windows": {
+        "T-180m": {
+          "status": "missed_window",
+          "expected_at": "2026-10-11T10:00:00Z",
+          "closes_at": "2026-10-11T10:20:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-60m": {
+          "status": "missed_window",
+          "expected_at": "2026-10-11T12:00:00Z",
+          "closes_at": "2026-10-11T12:10:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-15m": {
+          "status": "missed_window",
+          "expected_at": "2026-10-11T12:45:00Z",
+          "closes_at": "2026-10-11T12:50:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        }
+      }
     }
   ],
+  "experiment_id": "f4-epl-ah-research-v1",
   "research_only": true,
   "direction_notification_enabled": false,
   "all_no_selection": false,
