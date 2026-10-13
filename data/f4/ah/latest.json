@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-10-13T07:30:12.355349Z",
+  "evaluated_at": "2026-10-13T08:29:21.637188Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 21,
@@ -1416,23 +1416,23 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-13T06:33:22.509104Z",
+      "captured_at": "2026-10-13T08:29:20.651992Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-13T06:33:23.141139Z",
-      "content_sha256": "bb9f20fa7130e5f461db937e2a55da05f9b62d92e50a32ff2c0b06294178a99a"
+      "captured_at": "2026-10-13T08:29:21.207182Z",
+      "content_sha256": "2f0c84e01d26208d48167a11cf69b17f6c3b982bac0998cf6ae8d067b1c7214b"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-13T06:33:23.707903Z",
-      "response_at": "2026-10-13T06:33:23Z",
-      "content_sha256": "161a4dd07e83230cb1f7fa5fcd7113a9842b48bb14112aec90187c7a119ef4a5",
+      "captured_at": "2026-10-13T08:29:21.629218Z",
+      "response_at": "2026-10-13T08:29:21Z",
+      "content_sha256": "e8ed92182b0cde9568f77dc78239c26b3f43057474df857f61b81e10bd55bf4f",
       "match_count": 73,
       "epl_match_count": 0
     }
@@ -1448,7 +1448,7 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-13T06:33:23.141139Z"
+    "checked_at": "2026-10-13T08:29:21.207182Z"
   },
   "fallback_matches": [],
   "quote_availability": "not_tested_no_due_matches",
