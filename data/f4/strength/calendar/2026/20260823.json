@@ -1,0 +1,57 @@
+{
+  "day": "20260823",
+  "events_seen": 3,
+  "record_sha256": "fc7fe4dbfae07957a6ee474e343501cf8c193d1cf7e619ad834d1e9589a04038",
+  "results": [
+    {
+      "away": "Aston Villa",
+      "away_id": "aston-villa",
+      "away_provider_id": "362",
+      "home": "Brighton & Hove Albion",
+      "home_id": "brighton",
+      "home_provider_id": "331",
+      "kickoff_at": "2026-08-23T13:00:00Z",
+      "match_id": "espn:401879297",
+      "score": [
+        4,
+        0
+      ]
+    },
+    {
+      "away": "AFC Bournemouth",
+      "away_id": "bournemouth",
+      "away_provider_id": "349",
+      "home": "Manchester City",
+      "home_id": "man-city",
+      "home_provider_id": "382",
+      "kickoff_at": "2026-08-23T13:00:00Z",
+      "match_id": "espn:401879320",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "away": "Liverpool",
+      "away_id": "liverpool",
+      "away_provider_id": "364",
+      "home": "Newcastle United",
+      "home_id": "newcastle",
+      "home_provider_id": "361",
+      "kickoff_at": "2026-08-23T15:30:00Z",
+      "match_id": "espn:401879319",
+      "score": [
+        2,
+        2
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:04.279061Z",
+    "content_sha256": "ad5fd15c70e92f0ee1182e3cb921fdb17942d4948768b4c42a10a7aebe461e2f",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260823&limit=1000"
+  }
+}

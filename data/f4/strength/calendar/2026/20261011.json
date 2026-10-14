@@ -1,0 +1,57 @@
+{
+  "day": "20261011",
+  "events_seen": 3,
+  "record_sha256": "6109b3d7e4cc69e7136c6c10f59fd47c699a95a0d6d62c5f471c182fdf802d01",
+  "results": [
+    {
+      "away": "Nottingham Forest",
+      "away_id": "nottingham-forest",
+      "away_provider_id": "393",
+      "home": "Crystal Palace",
+      "home_id": "crystal-palace",
+      "home_provider_id": "384",
+      "kickoff_at": "2026-10-11T13:00:00Z",
+      "match_id": "espn:401879266",
+      "score": [
+        3,
+        1
+      ]
+    },
+    {
+      "away": "Everton",
+      "away_id": "everton",
+      "away_provider_id": "368",
+      "home": "Hull City",
+      "home_id": "hull-city",
+      "home_provider_id": "306",
+      "kickoff_at": "2026-10-11T13:00:00Z",
+      "match_id": "espn:401878774",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "away": "Manchester City",
+      "away_id": "man-city",
+      "away_provider_id": "382",
+      "home": "Liverpool",
+      "home_id": "liverpool",
+      "home_provider_id": "364",
+      "kickoff_at": "2026-10-11T15:30:00Z",
+      "match_id": "espn:401879264",
+      "score": [
+        0,
+        3
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:07.514646Z",
+    "content_sha256": "ec654d6faafabe449637be1d2f750e75394109024acf6b4db64c884384c756cf",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261011&limit=1000"
+  }
+}

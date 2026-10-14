@@ -1,0 +1,71 @@
+{
+  "day": "20260829",
+  "events_seen": 4,
+  "record_sha256": "f362a88a4ca2b103c6edc52f91d7a8e76379be7763ae7f992ac5362d93513337",
+  "results": [
+    {
+      "away": "Nottingham Forest",
+      "away_id": "nottingham-forest",
+      "away_provider_id": "393",
+      "home": "Liverpool",
+      "home_id": "liverpool",
+      "home_provider_id": "364",
+      "kickoff_at": "2026-08-29T11:30:00Z",
+      "match_id": "espn:401879314",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "away": "Everton",
+      "away_id": "everton",
+      "away_provider_id": "368",
+      "home": "AFC Bournemouth",
+      "home_id": "bournemouth",
+      "home_provider_id": "349",
+      "kickoff_at": "2026-08-29T14:00:00Z",
+      "match_id": "espn:401879296",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "away": "Hull City",
+      "away_id": "hull-city",
+      "away_provider_id": "306",
+      "home": "Coventry City",
+      "home_id": "coventry",
+      "home_provider_id": "388",
+      "kickoff_at": "2026-08-29T14:00:00Z",
+      "match_id": "espn:401879316",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "away": "Newcastle United",
+      "away_id": "newcastle",
+      "away_provider_id": "361",
+      "home": "Tottenham Hotspur",
+      "home_id": "tottenham",
+      "home_provider_id": "367",
+      "kickoff_at": "2026-08-29T16:30:00Z",
+      "match_id": "espn:401879312",
+      "score": [
+        0,
+        2
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:03.758222Z",
+    "content_sha256": "9ae4478a30538ec67314c238545457e6a55e1a7216cdf0b72d1077e0476bc562",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260829&limit=1000"
+  }
+}

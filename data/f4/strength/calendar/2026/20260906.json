@@ -1,0 +1,43 @@
+{
+  "day": "20260906",
+  "events_seen": 2,
+  "record_sha256": "30f877c443179f7d15256ce3f5a12c39a09a9c04618cf9f41f1f0dfe52e57ee0",
+  "results": [
+    {
+      "away": "Manchester United",
+      "away_id": "man-united",
+      "away_provider_id": "360",
+      "home": "Everton",
+      "home_id": "everton",
+      "home_provider_id": "368",
+      "kickoff_at": "2026-09-06T13:00:00Z",
+      "match_id": "espn:401879291",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "away": "Chelsea",
+      "away_id": "chelsea",
+      "away_provider_id": "363",
+      "home": "Arsenal",
+      "home_id": "arsenal",
+      "home_provider_id": "359",
+      "kickoff_at": "2026-09-06T15:30:00Z",
+      "match_id": "espn:401879292",
+      "score": [
+        2,
+        1
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:05.602317Z",
+    "content_sha256": "18a773ff8640ec2fe28d3e62c3abbfe69ec16b119b4270c3003ec8f008abf9f0",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260906&limit=1000"
+  }
+}

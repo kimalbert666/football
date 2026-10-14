@@ -1,0 +1,29 @@
+{
+  "day": "20260824",
+  "events_seen": 1,
+  "record_sha256": "be197a3254bb9835b9e206993eac8645d81e1d8841c654e49662e3b5d2d850c5",
+  "results": [
+    {
+      "away": "Chelsea",
+      "away_id": "chelsea",
+      "away_provider_id": "363",
+      "home": "Fulham",
+      "home_id": "fulham",
+      "home_provider_id": "370",
+      "kickoff_at": "2026-08-24T19:00:00Z",
+      "match_id": "espn:401879318",
+      "score": [
+        2,
+        3
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:02.270983Z",
+    "content_sha256": "bd1935f7ef57c9efa03fbdde7b45824b061495852477c9dbe2699c8f4953a3c0",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260824&limit=1000"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "day": "20260821",
+  "events_seen": 1,
+  "record_sha256": "acc933034ececeaed53d5fa375490b9854fbb40db04f91003521fe7849b27658",
+  "results": [
+    {
+      "away": "Coventry City",
+      "away_id": "coventry",
+      "away_provider_id": "388",
+      "home": "Arsenal",
+      "home_id": "arsenal",
+      "home_provider_id": "359",
+      "kickoff_at": "2026-08-21T19:00:00Z",
+      "match_id": "espn:401879301",
+      "score": [
+        3,
+        0
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:02.770229Z",
+    "content_sha256": "6801fd24fc76ff5d55ef7e234bf4bd115ca53d6e31c620a203af5147eb75212e",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260821&limit=1000"
+  }
+}

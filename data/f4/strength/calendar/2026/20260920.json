@@ -1,0 +1,71 @@
+{
+  "day": "20260920",
+  "events_seen": 4,
+  "record_sha256": "da52cb17c79da41bdc43a8394d0182362511ac08d93436b032766555c4793211",
+  "results": [
+    {
+      "away": "Liverpool",
+      "away_id": "liverpool",
+      "away_provider_id": "364",
+      "home": "AFC Bournemouth",
+      "home_id": "bournemouth",
+      "home_provider_id": "349",
+      "kickoff_at": "2026-09-20T13:00:00Z",
+      "match_id": "espn:401879276",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "away": "Crystal Palace",
+      "away_id": "crystal-palace",
+      "away_provider_id": "384",
+      "home": "Leeds United",
+      "home_id": "leeds",
+      "home_provider_id": "357",
+      "kickoff_at": "2026-09-20T13:00:00Z",
+      "match_id": "espn:401879273",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "away": "Sunderland",
+      "away_id": "sunderland",
+      "away_provider_id": "366",
+      "home": "Manchester City",
+      "home_id": "man-city",
+      "home_provider_id": "382",
+      "kickoff_at": "2026-09-20T13:00:00Z",
+      "match_id": "espn:401879272",
+      "score": [
+        5,
+        3
+      ]
+    },
+    {
+      "away": "Manchester United",
+      "away_id": "man-united",
+      "away_provider_id": "360",
+      "home": "Fulham",
+      "home_id": "fulham",
+      "home_provider_id": "370",
+      "kickoff_at": "2026-09-20T15:30:00Z",
+      "match_id": "espn:401878777",
+      "score": [
+        1,
+        1
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:07.350177Z",
+    "content_sha256": "4a5051f8c2e419574598a431a7e0a56bef27cde7306df47f16a8c2f33c91f69d",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260920&limit=1000"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "f4-sgodds-opening-exploration-v1",
+  "retrieved_at": "2026-10-12T11:10:53.492876Z",
+  "source_page": "https://sgodds.com/football/data",
+  "terms_url": "https://sgodds.com/terms-conditions",
+  "help_url": "https://sgodds.com/help",
+  "content_sha256": "00bdabf4cd882bba00fac99d16fad0edec016070a8a632e078a6de05cb09c198",
+  "content_bytes": 199415,
+  "provider": "sgodds",
+  "bookmaker_provider_claim": "singapore_pools",
+  "quote_period": "opening_provider_claim",
+  "quote_timestamps_available": false,
+  "kickoff_timezone_certified": false,
+  "training_eligible": false,
+  "prospective_eligible": false,
+  "raw_and_row_data_publication_allowed": false,
+  "licence_status": "no_open_redistribution_licence_found_private_exploration_only",
+  "input_rows": 290,
+  "mechanically_coherent_unique_fixtures": 290,
+  "completed_candidate_matches": 289,
+  "pending_or_postponed_candidates": 1,
+  "exact_duplicate_rows": 0,
+  "conflicting_fixtures": 0,
+  "reused_match_numbers": 98,
+  "rejected_rows": {},
+  "required_field_nonempty_counts": {
+    "Ah_01": 290,
+    "Ah_01_Hcap": 290,
+    "Ah_02": 290,
+    "Ah_02_Hcap": 290,
+    "Ft1X2_01": 290,
+    "Ft1X2_02": 290,
+    "Ft1X2_03": 290,
+    "ID": 290,
+    "League": 290,
+    "Live Bet": 290,
+    "Match": 290,
+    "Result": 290,
+    "Start Time": 290
+  },
+  "provider_local_date_range": [
+    "2025-12-13",
+    "2026-10-13"
+  ],
+  "completed_matches_by_season": {
+    "2025/2026": 230,
+    "2026/2027": 59
+  },
+  "completed_matches_by_handicap_size": {
+    "0.0": 39,
+    "0.25": 67,
+    "0.5": 60,
+    "0.75": 45,
+    "1.0": 33,
+    "1.25": 29,
+    "1.75": 9,
+    "2.0": 4,
+    "2.25": 3
+  },
+  "known_limitations": [
+    "Provider labels the export opening odds; exact quote timestamps are absent.",
+    "Kickoff timezone is not declared in the CSV; provider-local time is retained.",
+    "Provider warns that historical AH/OU line changes may leave inconsistent single records.",
+    "All rights reserved; no open redistribution licence was found. Keep raw and row data private.",
+    "Live Bet marks availability of live betting, not the observation time of this opening quote.",
+    "These records are not prospective T-15 observations and do not establish model advantage."
+  ],
+  "csv_url": "https://sgodds.com/downloads/sgodds-1791765601-english-premier.csv",
+  "manual_page_spot_check": {
+    "checked_completed_fixtures": 3,
+    "csv_opening_ah_prices_1x2_and_result_matching_provider_pages": 3,
+    "exact_market_timestamp_verified": 0,
+    "historical_line_alignment_verified": 0,
+    "scope": "bounded recent fixture sample only; not independent original bookmaker verification",
+    "page_urls": [
+      "https://sgodds.com/football/results-past-odds/Liverpool-vs-Manchester-City-145751",
+      "https://sgodds.com/football/results-past-odds/Crystal-Palace-vs-Nottingham-145749",
+      "https://sgodds.com/football/results-past-odds/Hull-City-vs-Everton-145750"
+    ]
+  }
+}

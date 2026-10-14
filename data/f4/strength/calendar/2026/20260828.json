@@ -1,0 +1,29 @@
+{
+  "day": "20260828",
+  "events_seen": 1,
+  "record_sha256": "99f15b2c5fbdacb53529ca0421d27e0d340b8d139ffc83db21e313e7e72e3b6f",
+  "results": [
+    {
+      "away": "Manchester City",
+      "away_id": "man-city",
+      "away_provider_id": "382",
+      "home": "Crystal Palace",
+      "home_id": "crystal-palace",
+      "home_provider_id": "384",
+      "kickoff_at": "2026-08-28T19:00:00Z",
+      "match_id": "espn:401879294",
+      "score": [
+        1,
+        4
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:03.388153Z",
+    "content_sha256": "58dee6e0300dc1cd6564f9c274331b93311f6f5b464d80fc638c595f32ad6122",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260828&limit=1000"
+  }
+}

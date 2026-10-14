@@ -1,0 +1,71 @@
+{
+  "day": "20260830",
+  "events_seen": 4,
+  "record_sha256": "5efc4c623b28e95017e29108c9a7db306ba49dfbd467a2a3ff5f52472c39108a",
+  "results": [
+    {
+      "away": "Brighton & Hove Albion",
+      "away_id": "brighton",
+      "away_provider_id": "331",
+      "home": "Chelsea",
+      "home_id": "chelsea",
+      "home_provider_id": "363",
+      "kickoff_at": "2026-08-30T13:00:00Z",
+      "match_id": "espn:401879317",
+      "score": [
+        4,
+        3
+      ]
+    },
+    {
+      "away": "Brentford",
+      "away_id": "brentford",
+      "away_provider_id": "337",
+      "home": "Leeds United",
+      "home_id": "leeds",
+      "home_provider_id": "357",
+      "kickoff_at": "2026-08-30T13:00:00Z",
+      "match_id": "espn:401879315",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "away": "Fulham",
+      "away_id": "fulham",
+      "away_provider_id": "370",
+      "home": "Sunderland",
+      "home_id": "sunderland",
+      "home_provider_id": "366",
+      "kickoff_at": "2026-08-30T13:00:00Z",
+      "match_id": "espn:401879313",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "away": "Ipswich Town",
+      "away_id": "ipswich",
+      "away_provider_id": "373",
+      "home": "Manchester United",
+      "home_id": "man-united",
+      "home_provider_id": "360",
+      "kickoff_at": "2026-08-30T15:30:00Z",
+      "match_id": "espn:401879293",
+      "score": [
+        5,
+        2
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:04.191904Z",
+    "content_sha256": "53ded7099b55f57eb00b85141ba40301ad88678c67b3f14d17658237e8c8f696",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260830&limit=1000"
+  }
+}

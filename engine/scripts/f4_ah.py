@@ -377,6 +377,9 @@ def run_ah(root, fixtures, command, *, clock, source=None):
     from f4_ah_source import attach_asian_handicap
     from f4_ah_research import research, predict, SCHEMA_VERSION
     from f4_ah_movement import aligned_early_quote
+    from f4_early_scout import load_early_observations
+    from f4_strength import ratings_for_fixture
+    from f4_context import context_for_fixture
     source = source or attach_asian_handicap
     now, old = clock(), load_observations(root)
     valid_keys = {identity(r) for r in old if r.get('quote')}
@@ -399,6 +402,12 @@ def run_ah(root, fixtures, command, *, clock, source=None):
     outcomes = load_latest_outcomes(root)
     model_report = read(root / 'data/f4/ah/research/latest.json', {})
     new_valid, new_attempts = 0, 0
+    enrichment_issues = []
+    try:
+        early_scouts = load_early_observations(root, issues=enrichment_issues)
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        early_scouts = []
+        enrichment_issues.append('first-observed cache unavailable: ' + type(exc).__name__)
     for fixture in due:
         decision = clock()
         horizon = stage(fixture, decision, cfg)
@@ -409,7 +418,9 @@ def run_ah(root, fixtures, command, *, clock, source=None):
             quote = validate_quote(quote, fixture, decision, cfg['max_capture_age_minutes'], cfg.get('bookmaker_priority', ['crown']))
         except (KeyError, TypeError, ValueError) as exc:
             quote, reason = None, str(exc)
-        predecessors = (r for r in old if r['match_id'] == fixture['match_id']
+        predecessors = (r for r in sorted([*early_scouts, *old], key=lambda r: instant(r['observed_at']))
+                      if r['match_id'] == fixture['match_id']
+                      and all(r.get(key) == fixture.get(key) for key in ('home_id', 'away_id'))
                       and stamp(r['kickoff_at']) == stamp(fixture['kickoff_at']) and r.get('quote') and quote
                       and r.get('experiment_id') == cfg['experiment_id']
                       and instant(r['observed_at']) < decision)
@@ -417,11 +428,24 @@ def run_ah(root, fixtures, command, *, clock, source=None):
                             if (aligned := aligned_early_quote(r, quote)) is not None), None)
         row = {key: fixture.get(key) for key in ('match_id', 'provider', 'source_event_id', 'home_id', 'away_id', 'home', 'away', 'kickoff_at', 'league')}
         joint_market = (quote or {}).get('market_1x2') or fixture.get('market')
+        independent_ratings, context = None, None
+        enrich_cfg = config.get('enrichment', {})
+        if enrich_cfg.get('enabled') and enrich_cfg.get('independent_strength'):
+            try:
+                independent_ratings = ratings_for_fixture(root, fixture, decision)
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                enrichment_issues.append(f"{fixture['match_id']}: strength cache unavailable ({type(exc).__name__})")
+        if enrich_cfg.get('enabled') and enrich_cfg.get('historical_xg_and_availability'):
+            try:
+                context = context_for_fixture(root, fixture, decision)
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                enrichment_issues.append(f"{fixture['match_id']}: context cache unavailable ({type(exc).__name__})")
         row.update(schema_version=1, experiment_id=cfg['experiment_id'], observed_at=stamp(decision),
                    horizon=horizon, actual_minutes=(instant(fixture['kickoff_at']) - decision).total_seconds() / 60,
                    quote=quote, bookmaker=(quote or {}).get('bookmaker'),
                    p_1x2=probability_1x2(joint_market, decision, cfg['max_capture_age_minutes'], (quote or {}).get('bookmaker', 'crown')),
-                   quote_1x2=joint_market, ratings=ratings_before(outcomes, fixture, decision),
+                   quote_1x2=joint_market, ratings=independent_ratings or ratings_before(outcomes, fixture, decision),
+                   context=context, context_feature_policy='stored_for_future_protocol_not_used_by_v2',
                    early_quote=early_quote, reason=reason, selected=False, candidate_weight=0,
                    provenance={'kind': 'prospective_capture', 'market': '90min_asian_handicap',
                                'source': quote.get('url') if quote else None}, candidates={})
@@ -470,6 +494,7 @@ def run_ah(root, fixtures, command, *, clock, source=None):
                'paired_matches': len(paired), 'pairing_issues': pairing_issues,
                'line_groups': grouped_results(paired), 'prospective_scores': prospective_scores(paired), 'research': model_report,
                'price_venue_diagnostics': price_venue_diagnostics(paired),
+               'enrichment_issues': enrichment_issues,
                'by_bookmaker': {book: grouped_results([r for r in paired if r['quote']['bookmaker'] == book])
                                for book in sorted({r['quote']['bookmaker'] for r in paired})},
                'problems': bundle.get('problems', []), 'sources': bundle.get('sources', []),

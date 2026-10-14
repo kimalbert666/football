@@ -1,0 +1,113 @@
+{
+  "day": "20260905",
+  "events_seen": 7,
+  "record_sha256": "380d4e9a79faa4ed8498d8242c83de9f6d449cef472f90538c5a50245b6b1743",
+  "results": [
+    {
+      "away": "AFC Bournemouth",
+      "away_id": "bournemouth",
+      "away_provider_id": "349",
+      "home": "Newcastle United",
+      "home_id": "newcastle",
+      "home_provider_id": "361",
+      "kickoff_at": "2026-09-05T11:30:00Z",
+      "match_id": "espn:401879286",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "away": "Sunderland",
+      "away_id": "sunderland",
+      "away_provider_id": "366",
+      "home": "Brentford",
+      "home_id": "brentford",
+      "home_provider_id": "337",
+      "kickoff_at": "2026-09-05T14:00:00Z",
+      "match_id": "espn:401879311",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "away": "Leeds United",
+      "away_id": "leeds",
+      "away_provider_id": "357",
+      "home": "Brighton & Hove Albion",
+      "home_id": "brighton",
+      "home_provider_id": "331",
+      "kickoff_at": "2026-09-05T14:00:00Z",
+      "match_id": "espn:401879290",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "away": "Crystal Palace",
+      "away_id": "crystal-palace",
+      "away_provider_id": "384",
+      "home": "Fulham",
+      "home_id": "fulham",
+      "home_provider_id": "370",
+      "kickoff_at": "2026-09-05T14:00:00Z",
+      "match_id": "espn:401879289",
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "away": "Coventry City",
+      "away_id": "coventry",
+      "away_provider_id": "388",
+      "home": "Manchester City",
+      "home_id": "man-city",
+      "home_provider_id": "382",
+      "kickoff_at": "2026-09-05T14:00:00Z",
+      "match_id": "espn:401879287",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "away": "Tottenham Hotspur",
+      "away_id": "tottenham",
+      "away_provider_id": "367",
+      "home": "Nottingham Forest",
+      "home_id": "nottingham-forest",
+      "home_provider_id": "393",
+      "kickoff_at": "2026-09-05T14:00:00Z",
+      "match_id": "espn:401878780",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "away": "Aston Villa",
+      "away_id": "aston-villa",
+      "away_provider_id": "362",
+      "home": "Hull City",
+      "home_id": "hull-city",
+      "home_provider_id": "306",
+      "kickoff_at": "2026-09-05T16:30:00Z",
+      "match_id": "espn:401878781",
+      "score": [
+        0,
+        0
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:05.725854Z",
+    "content_sha256": "69fad55861bd6432c303029eac5a08f0e36c09518ac0751b443f93c45c0a6d8d",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260905&limit=1000"
+  }
+}

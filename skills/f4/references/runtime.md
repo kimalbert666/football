@@ -18,6 +18,7 @@
 - `.github/workflows/f4-shadow.yml`按上述安排执行。`capture`及`watch`进入`engine/scripts/f4_watch.py`有时长限制的等待流程；`all`做一次完整检查，不长时间等待。
 - `f4_cloud.py`统一采集、补赛果、评分与通知；`f4_ah.py`记录亚洲盘及月报覆盖，`f4_ah_research.py`拟合预定义候选。
 - `f4_ah_patterns.py`输出盘口×价格×主客场的五类结算描述，当前报告累计、月报按开球月份筛选；它不训练模型、不修改权重或增加通知。规则研究另需当时实力特征和未来验证。
+- `f4_strength.py`后台按ESPN已核验当季完场结果计算独立Elo；`f4_context.py`保存滞后xG、FPL报告标记与正式俱乐部开球间隔；窗口内仅读决策前缓存，旧报价不回填。背景字段还未进入v2特征，首发未自动接入。`f4_early_scout.py`单独保存首次观察报价，它不等于庄家初盘，也不增加三窗口样本数。详见仓库`docs/f4-data-enrichment.md`。
 - `data/f4/config.json`固定实验、窗口、来源策略及亚盘研究起点。杯赛不在f4范围；四队配置只供原独立任务使用。
 - `f4_sources.py`获取ESPN赛程和常规完场结果；`f4_ah_source.py`先尝试InferSports公司报价，缺少可用报价时可用`f4_hkjc.py`独立读取赛马会公开网站同场HAD/HDC市场。原来源故障与备用覆盖分别保留。公司身份不明、迟到、停售、响应陈旧均记缺失。
 - `f4_crown.py`仍只供旧胜平负实验读取球探转载的皇冠价格；`f4_candidates.py`保留冻结旧DC参数及可匹配的f2比分点预测，不重训旧模型、不把比分换成虚构概率。

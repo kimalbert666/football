@@ -93,6 +93,11 @@ jobs:
           path: |
             .github/run-logs/
             data/f4/ah/observations/
+            data/f4/ah/first-observed/
+            data/f4/ah/first-observed-status.json
+            data/f4/strength/
+            data/f4/context/
+            data/f4/status/enrichment-latest.json
             data/f4/outcomes/
           include-hidden-files: true
           if-no-files-found: ignore

@@ -1,0 +1,29 @@
+{
+  "day": "20260918",
+  "events_seen": 1,
+  "record_sha256": "5d4ee2ac68d52a9826fefa237d3cf3fb2a71e8a2c062c4d2d533fdfb609c5560",
+  "results": [
+    {
+      "away": "Chelsea",
+      "away_id": "chelsea",
+      "away_provider_id": "363",
+      "home": "Brentford",
+      "home_id": "brentford",
+      "home_provider_id": "337",
+      "kickoff_at": "2026-09-18T19:00:00Z",
+      "match_id": "espn:401879275",
+      "score": [
+        3,
+        0
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:06.578746Z",
+    "content_sha256": "b284917a49100ba4252b1860fd5208bb46ca3a68245d58620bbd1361ada7a858",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260918&limit=1000"
+  }
+}

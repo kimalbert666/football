@@ -1,0 +1,43 @@
+{
+  "day": "20260913",
+  "events_seen": 2,
+  "record_sha256": "304e7212e0375cd26ee9fa6caccedfa06a1f80a1ca44b0b5ce8a5afa840f86ff",
+  "results": [
+    {
+      "away": "Brighton & Hove Albion",
+      "away_id": "brighton",
+      "away_provider_id": "331",
+      "home": "Coventry City",
+      "home_id": "coventry",
+      "home_provider_id": "388",
+      "kickoff_at": "2026-09-13T13:00:00Z",
+      "match_id": "espn:401879282",
+      "score": [
+        0,
+        5
+      ]
+    },
+    {
+      "away": "Manchester City",
+      "away_id": "man-city",
+      "away_provider_id": "382",
+      "home": "Manchester United",
+      "home_id": "man-united",
+      "home_provider_id": "360",
+      "kickoff_at": "2026-09-13T15:30:00Z",
+      "match_id": "espn:401879278",
+      "score": [
+        0,
+        1
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:06.482519Z",
+    "content_sha256": "4f309597d70a95923815a464abffda3f9af3c72d7b8efa3973dc1380019422f2",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260913&limit=1000"
+  }
+}

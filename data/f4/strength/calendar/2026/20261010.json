@@ -1,0 +1,99 @@
+{
+  "day": "20261010",
+  "events_seen": 6,
+  "record_sha256": "989f31a3283701f8218d2260637eb14c7ee6e5cfdcbfb1eb11c5b0a37d7196b0",
+  "results": [
+    {
+      "away": "Leeds United",
+      "away_id": "leeds",
+      "away_provider_id": "357",
+      "home": "Arsenal",
+      "home_id": "arsenal",
+      "home_provider_id": "359",
+      "kickoff_at": "2026-10-10T11:30:00Z",
+      "match_id": "espn:401879268",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "away": "Brentford",
+      "away_id": "brentford",
+      "away_provider_id": "337",
+      "home": "Aston Villa",
+      "home_id": "aston-villa",
+      "home_provider_id": "362",
+      "kickoff_at": "2026-10-10T14:00:00Z",
+      "match_id": "espn:401878776",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "away": "AFC Bournemouth",
+      "away_id": "bournemouth",
+      "away_provider_id": "349",
+      "home": "Chelsea",
+      "home_id": "chelsea",
+      "home_provider_id": "363",
+      "kickoff_at": "2026-10-10T14:00:00Z",
+      "match_id": "espn:401878775",
+      "score": [
+        5,
+        1
+      ]
+    },
+    {
+      "away": "Fulham",
+      "away_id": "fulham",
+      "away_provider_id": "370",
+      "home": "Ipswich Town",
+      "home_id": "ipswich",
+      "home_provider_id": "373",
+      "kickoff_at": "2026-10-10T14:00:00Z",
+      "match_id": "espn:401879265",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "away": "Brighton & Hove Albion",
+      "away_id": "brighton",
+      "away_provider_id": "331",
+      "home": "Sunderland",
+      "home_id": "sunderland",
+      "home_provider_id": "366",
+      "kickoff_at": "2026-10-10T14:00:00Z",
+      "match_id": "espn:401878772",
+      "score": [
+        0,
+        2
+      ]
+    },
+    {
+      "away": "Tottenham Hotspur",
+      "away_id": "tottenham",
+      "away_provider_id": "367",
+      "home": "Manchester United",
+      "home_id": "man-united",
+      "home_provider_id": "360",
+      "kickoff_at": "2026-10-10T16:30:00Z",
+      "match_id": "espn:401878773",
+      "score": [
+        1,
+        1
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:07.987096Z",
+    "content_sha256": "de201afc226abae2abccd56a35d98915922ea088bb771c51b9d3f79056d4ff89",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261010&limit=1000"
+  }
+}

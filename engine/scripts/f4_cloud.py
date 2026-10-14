@@ -282,6 +282,36 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
         _, created = save_prediction(root, record)
         new_predictions += int(created)
         new_valid += int(created and p_market is not None)
+    enrichment_status = read_json(root / 'data/f4/status/enrichment-latest.json', {})
+    enrich_cfg = config.get('enrichment', {})
+    if enrich_cfg.get('enabled') and command in ('daily', 'all', 'monthly'):
+        from f4_early_scout import background_window_safe, scout_early_quotes
+        if background_window_safe(fixtures, clock(), buffer_minutes=enrich_cfg.get('capture_window_buffer_minutes', 30)):
+            # All fixed-window observations have already been saved. Optional
+            # context is warmed for later decisions, never fetched within T15.
+            enrichment_status = {'checked_at': stamp(clock()), 'status': 'checked', 'sources': {}}
+            tasks = []
+            if enrich_cfg.get('independent_strength'):
+                from f4_strength import refresh_strength
+                tasks.append(('strength', lambda: refresh_strength(root, fixtures, clock=clock)))
+            if enrich_cfg.get('historical_xg_and_availability'):
+                from f4_context import refresh_context
+                tasks.append(('context', lambda: refresh_context(root, fixtures, clock=clock)))
+            if enrich_cfg.get('first_observed_quotes'):
+                tasks.append(('first_observed_quotes', lambda: scout_early_quotes(
+                    root, fixtures, clock(), source=ah_source, clock=clock)))
+            for name, task in tasks:
+                if not background_window_safe(fixtures, clock(), buffer_minutes=enrich_cfg.get('capture_window_buffer_minutes', 30)):
+                    enrichment_status['sources'][name] = {'status': 'deferred_capture_window'}
+                    continue
+                try:
+                    enrichment_status['sources'][name] = task()
+                except Exception as exc:
+                    enrichment_status['sources'][name] = {'status': 'unavailable', 'error': type(exc).__name__}
+            enrichment_status['completed_at'] = stamp(clock())
+            write_json(root / 'data/f4/status/enrichment-latest.json', enrichment_status)
+        else:
+            enrichment_status = {**enrichment_status, 'refresh_status': 'deferred_capture_window'}
     completed_at = clock()
     if settle and bundle.get('coverage', {}).get('complete') and not bundle.get('problems'):
         write_json(root / 'data/f4/status/last-settlement.json', {
@@ -293,6 +323,7 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
               'new_predictions': new_predictions, 'new_valid_predictions': new_valid,
               'new_outcomes': new_outcomes, 'due_fixtures': len(due), 'tracked_fixtures_seen': len(fixtures),
               'skipped': skipped, 'legacy_deferred': legacy_deferred,
+              'enrichment': enrichment_status,
               'source_health': source_health, 'f2_problems': f2.get('problems', []),
               'automatic_promotion': False, 'automatic_wagering': False,
               'asian_handicap': {k: v for k, v in (ah_summary or {}).items()
@@ -320,6 +351,10 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
     report += '- 赛前窗口：T−180分与T−60分，各允许±20分；实际时间保存在每条记录中。\n'
     report += '- f4与原任务并行；候选权重为0，不自动下注、不自动读论文或改权重。\n'
     report += '- 当前候选：冻结的旧DC参数，仅用于前向对照；其历史训练资料尚未独立认证。\n'
+    if enrich_cfg.get('enabled'):
+        report += '- 实力与背景只读取决策前缓存；日常后台更新，不修改过去快照。新增xG／伤停等背景尚未进入v2模型特征。\n'
+        for name, item in enrichment_status.get('sources', {}).items():
+            report += f"- 背景数据 {name}：{item.get('status', 'unknown')}。\n"
     report += '- ' + config.get('market_reference_note', '单源市场报价；抓取时间不能单独证明提供商内部数据最新。') + '\n'
     if not fixtures:
         report += '- 本次数据范围未识别到目标赛程；这不代表目标联赛一定没有比赛。\n'

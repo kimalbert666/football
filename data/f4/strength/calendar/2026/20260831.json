@@ -1,0 +1,29 @@
+{
+  "day": "20260831",
+  "events_seen": 1,
+  "record_sha256": "38a22c8c422180595ab9e129a3d3b834a6fab39a4624f953020881fb60eff66e",
+  "results": [
+    {
+      "away": "Arsenal",
+      "away_id": "arsenal",
+      "away_provider_id": "359",
+      "home": "Aston Villa",
+      "home_id": "aston-villa",
+      "home_provider_id": "362",
+      "kickoff_at": "2026-08-31T19:00:00Z",
+      "match_id": "espn:401879295",
+      "score": [
+        0,
+        1
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:04.446111Z",
+    "content_sha256": "8a094c9aafec7cc6dbf3dd51a49e982d2ffd90ad8e457e9c10a0045ccd809aa2",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260831&limit=1000"
+  }
+}

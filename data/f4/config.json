@@ -43,6 +43,15 @@
     "first_review_target": "2026-12-01",
     "direction_notifications": false
   },
+  "enrichment": {
+    "enabled": true,
+    "independent_strength": true,
+    "historical_xg_and_availability": true,
+    "first_observed_quotes": true,
+    "capture_window_buffer_minutes": 30,
+    "old_records_backfill": false,
+    "experimental_features_only": true
+  },
   "asian_handicap": {
     "enabled": true,
     "started_at": "2026-09-23T00:00:00+08:00",

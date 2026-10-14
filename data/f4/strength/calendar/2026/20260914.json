@@ -1,0 +1,29 @@
+{
+  "day": "20260914",
+  "events_seen": 1,
+  "record_sha256": "0763a8e04dabf27c1af3903204fbb9dae0ffdc0609527f8fdcd9033e013b29b0",
+  "results": [
+    {
+      "away": "Newcastle United",
+      "away_id": "newcastle",
+      "away_provider_id": "361",
+      "home": "Leeds United",
+      "home_id": "leeds",
+      "home_provider_id": "357",
+      "kickoff_at": "2026-09-14T19:00:00Z",
+      "match_id": "espn:401879280",
+      "score": [
+        4,
+        1
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:06.067699Z",
+    "content_sha256": "383a5c9298f6c6a2a238c765e60b58264bbf1d95b4698333189e2ac888fc901f",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260914&limit=1000"
+  }
+}

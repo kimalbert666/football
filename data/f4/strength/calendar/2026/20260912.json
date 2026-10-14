@@ -1,0 +1,113 @@
+{
+  "day": "20260912",
+  "events_seen": 7,
+  "record_sha256": "111a418b4397c077f445a78341c814a348900d03d5b51334d7799952d6e9330d",
+  "results": [
+    {
+      "away": "Brentford",
+      "away_id": "brentford",
+      "away_provider_id": "337",
+      "home": "AFC Bournemouth",
+      "home_id": "bournemouth",
+      "home_provider_id": "349",
+      "kickoff_at": "2026-09-12T14:00:00Z",
+      "match_id": "espn:401879285",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "away": "Nottingham Forest",
+      "away_id": "nottingham-forest",
+      "away_provider_id": "393",
+      "home": "Aston Villa",
+      "home_id": "aston-villa",
+      "home_provider_id": "362",
+      "kickoff_at": "2026-09-12T14:00:00Z",
+      "match_id": "espn:401879284",
+      "score": [
+        1,
+        2
+      ]
+    },
+    {
+      "away": "Hull City",
+      "away_id": "hull-city",
+      "away_provider_id": "306",
+      "home": "Chelsea",
+      "home_id": "chelsea",
+      "home_provider_id": "363",
+      "kickoff_at": "2026-09-12T14:00:00Z",
+      "match_id": "espn:401879283",
+      "score": [
+        2,
+        2
+      ]
+    },
+    {
+      "away": "Ipswich Town",
+      "away_id": "ipswich",
+      "away_provider_id": "373",
+      "home": "Crystal Palace",
+      "home_id": "crystal-palace",
+      "home_provider_id": "384",
+      "kickoff_at": "2026-09-12T14:00:00Z",
+      "match_id": "espn:401879281",
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "away": "Fulham",
+      "away_id": "fulham",
+      "away_provider_id": "370",
+      "home": "Liverpool",
+      "home_id": "liverpool",
+      "home_provider_id": "364",
+      "kickoff_at": "2026-09-12T14:00:00Z",
+      "match_id": "espn:401879279",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "away": "Everton",
+      "away_id": "everton",
+      "away_provider_id": "368",
+      "home": "Tottenham Hotspur",
+      "home_id": "tottenham",
+      "home_provider_id": "367",
+      "kickoff_at": "2026-09-12T16:30:00Z",
+      "match_id": "espn:401879277",
+      "score": [
+        0,
+        0
+      ]
+    },
+    {
+      "away": "Arsenal",
+      "away_id": "arsenal",
+      "away_provider_id": "359",
+      "home": "Sunderland",
+      "home_id": "sunderland",
+      "home_provider_id": "366",
+      "kickoff_at": "2026-09-12T19:00:00Z",
+      "match_id": "espn:401878779",
+      "score": [
+        0,
+        2
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:05.151024Z",
+    "content_sha256": "b04a4f9e9bdbe1eaefe2b452405d8ad4e0a845c708d02a29e5f7733a3c85715a",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260912&limit=1000"
+  }
+}

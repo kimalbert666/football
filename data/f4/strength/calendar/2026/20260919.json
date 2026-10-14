@@ -1,0 +1,85 @@
+{
+  "day": "20260919",
+  "events_seen": 5,
+  "record_sha256": "59d461558934cd882f6d803432c645b1caee3314e2a0290b3776ca00a0bce5e8",
+  "results": [
+    {
+      "away": "Aston Villa",
+      "away_id": "aston-villa",
+      "away_provider_id": "362",
+      "home": "Tottenham Hotspur",
+      "home_id": "tottenham",
+      "home_provider_id": "367",
+      "kickoff_at": "2026-09-19T11:30:00Z",
+      "match_id": "espn:401879269",
+      "score": [
+        2,
+        3
+      ]
+    },
+    {
+      "away": "Arsenal",
+      "away_id": "arsenal",
+      "away_provider_id": "359",
+      "home": "Brighton & Hove Albion",
+      "home_id": "brighton",
+      "home_provider_id": "331",
+      "kickoff_at": "2026-09-19T14:00:00Z",
+      "match_id": "espn:401879274",
+      "score": [
+        3,
+        0
+      ]
+    },
+    {
+      "away": "Ipswich Town",
+      "away_id": "ipswich",
+      "away_provider_id": "373",
+      "home": "Everton",
+      "home_id": "everton",
+      "home_provider_id": "368",
+      "kickoff_at": "2026-09-19T14:00:00Z",
+      "match_id": "espn:401878778",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "away": "Hull City",
+      "away_id": "hull-city",
+      "away_provider_id": "306",
+      "home": "Newcastle United",
+      "home_id": "newcastle",
+      "home_provider_id": "361",
+      "kickoff_at": "2026-09-19T14:00:00Z",
+      "match_id": "espn:401879271",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "away": "Coventry City",
+      "away_id": "coventry",
+      "away_provider_id": "388",
+      "home": "Nottingham Forest",
+      "home_id": "nottingham-forest",
+      "home_provider_id": "393",
+      "kickoff_at": "2026-09-19T16:30:00Z",
+      "match_id": "espn:401879270",
+      "score": [
+        0,
+        1
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:07.104311Z",
+    "content_sha256": "711cbce97cd8f214e6f9c68df581a023a9a1228b7903d91c7c29db91af714f6b",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260919&limit=1000"
+  }
+}

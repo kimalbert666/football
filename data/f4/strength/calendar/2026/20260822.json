@@ -1,0 +1,85 @@
+{
+  "day": "20260822",
+  "events_seen": 5,
+  "record_sha256": "e2d4f1a2d7d3b6d15bf27bea53ab7c0329df75228f9d6b24d9a56c0e02cdb26e",
+  "results": [
+    {
+      "away": "Manchester United",
+      "away_id": "man-united",
+      "away_provider_id": "360",
+      "home": "Hull City",
+      "home_id": "hull-city",
+      "home_provider_id": "306",
+      "kickoff_at": "2026-08-22T11:30:00Z",
+      "match_id": "espn:401879322",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "away": "Crystal Palace",
+      "away_id": "crystal-palace",
+      "away_provider_id": "384",
+      "home": "Everton",
+      "home_id": "everton",
+      "home_provider_id": "368",
+      "kickoff_at": "2026-08-22T14:00:00Z",
+      "match_id": "espn:401879300",
+      "score": [
+        2,
+        0
+      ]
+    },
+    {
+      "away": "Sunderland",
+      "away_id": "sunderland",
+      "away_provider_id": "366",
+      "home": "Ipswich Town",
+      "home_id": "ipswich",
+      "home_provider_id": "373",
+      "kickoff_at": "2026-08-22T14:00:00Z",
+      "match_id": "espn:401879299",
+      "score": [
+        2,
+        1
+      ]
+    },
+    {
+      "away": "Leeds United",
+      "away_id": "leeds",
+      "away_provider_id": "357",
+      "home": "Nottingham Forest",
+      "home_id": "nottingham-forest",
+      "home_provider_id": "393",
+      "kickoff_at": "2026-08-22T14:00:00Z",
+      "match_id": "espn:401879298",
+      "score": [
+        0,
+        1
+      ]
+    },
+    {
+      "away": "Tottenham Hotspur",
+      "away_id": "tottenham",
+      "away_provider_id": "367",
+      "home": "Brentford",
+      "home_id": "brentford",
+      "home_provider_id": "337",
+      "kickoff_at": "2026-08-22T16:30:00Z",
+      "match_id": "espn:401879321",
+      "score": [
+        3,
+        0
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:02.787831Z",
+    "content_sha256": "bdf6716fda3101421489ac3a8817bf90c1106e310538100563c54755254c11d2",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260822&limit=1000"
+  }
+}

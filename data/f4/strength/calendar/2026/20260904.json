@@ -1,0 +1,29 @@
+{
+  "day": "20260904",
+  "events_seen": 1,
+  "record_sha256": "a822578dbd09871a2899f5d80a5a388ba5836ccd47a07dcaf843a39d01b51f22",
+  "results": [
+    {
+      "away": "Liverpool",
+      "away_id": "liverpool",
+      "away_provider_id": "364",
+      "home": "Ipswich Town",
+      "home_id": "ipswich",
+      "home_provider_id": "373",
+      "kickoff_at": "2026-09-04T19:00:00Z",
+      "match_id": "espn:401879288",
+      "score": [
+        0,
+        2
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-12T11:10:05.321137Z",
+    "content_sha256": "c63a342c1a3565166b4481872599894e9142fbb9e867dc4e6a0c6a3790b05067",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260904&limit=1000"
+  }
+}
