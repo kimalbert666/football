@@ -103,6 +103,16 @@ class EnrichmentIntegrationTests(unittest.TestCase):
         context.assert_not_called()
         self.assertIsNone(ah.load_observations(self.root)[0]['context'])
 
+    def test_full_acceptance_forces_source_refresh_beyond_published_cache(self):
+        self.fixture['kickoff_at'] = '2026-10-14T23:00:00Z'
+        with patch('f4_strength.refresh_strength', return_value={'status': 'ready'}) as strength, \
+             patch('f4_context.refresh_context', return_value={'status': 'ready'}) as context, \
+             patch('f4_early_scout.scout_early_quotes', return_value={'status': 'partial'}) as scout:
+            self.run_cloud('all')
+        self.assertTrue(strength.call_args.kwargs['force'])
+        self.assertTrue(context.call_args.kwargs['force'])
+        self.assertTrue(scout.call_args.kwargs['force'])
+
 
 if __name__ == '__main__':
     unittest.main()

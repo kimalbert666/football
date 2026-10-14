@@ -293,13 +293,13 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
             tasks = []
             if enrich_cfg.get('independent_strength'):
                 from f4_strength import refresh_strength
-                tasks.append(('strength', lambda: refresh_strength(root, fixtures, clock=clock)))
+                tasks.append(('strength', lambda: refresh_strength(root, fixtures, clock=clock, force=command == 'all')))
             if enrich_cfg.get('historical_xg_and_availability'):
                 from f4_context import refresh_context
-                tasks.append(('context', lambda: refresh_context(root, fixtures, clock=clock)))
+                tasks.append(('context', lambda: refresh_context(root, fixtures, clock=clock, force=command == 'all')))
             if enrich_cfg.get('first_observed_quotes'):
                 tasks.append(('first_observed_quotes', lambda: scout_early_quotes(
-                    root, fixtures, clock(), source=ah_source, clock=clock)))
+                    root, fixtures, clock(), source=ah_source, clock=clock, force=command == 'all')))
             for name, task in tasks:
                 if not background_window_safe(fixtures, clock(), buffer_minutes=enrich_cfg.get('capture_window_buffer_minutes', 30)):
                     enrichment_status['sources'][name] = {'status': 'deferred_capture_window'}
