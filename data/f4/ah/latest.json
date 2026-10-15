@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-10-15T04:28:28.319566Z",
+  "evaluated_at": "2026-10-15T04:52:17.366399Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 21,
@@ -1417,24 +1417,24 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-15T04:28:27.356712Z",
+      "captured_at": "2026-10-15T04:52:15.680431Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-15T04:28:27.903901Z",
-      "content_sha256": "106b157c8978df3511d63a3c56146e7920db3df89e32c4c1b0bb783140f86ac8"
+      "captured_at": "2026-10-15T04:52:16.409566Z",
+      "content_sha256": "e9d0c399082dae13d71c9a891c5bc54e2dcc72b540b97655cf412989fefdf420"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-15T04:28:28.308590Z",
-      "response_at": "2026-10-15T04:28:28Z",
-      "content_sha256": "e3cb0b7a2a581b2190d6521e79ad0e8de35d9257b9919ebbd7bc26ab063ef85b",
-      "match_count": 97,
+      "captured_at": "2026-10-15T04:52:17.353777Z",
+      "response_at": "2026-10-15T04:52:17Z",
+      "content_sha256": "9c316cf993fd1982ecc168ce90b73d3e738ba7edb5a03f8fee2815bdb5268bae",
+      "match_count": 94,
       "epl_match_count": 2
     }
   ],
@@ -1449,17 +1449,23 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-15T04:28:27.903901Z"
+    "checked_at": "2026-10-15T04:52:16.409566Z"
   },
   "fallback_matches": [],
   "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 0,
+    "fixtures": 10,
     "windows": {
-      "T-180m": {},
-      "T-60m": {},
-      "T-15m": {}
+      "T-180m": {
+        "awaiting_window": 10
+      },
+      "T-60m": {
+        "awaiting_window": 10
+      },
+      "T-15m": {
+        "awaiting_window": 10
+      }
     }
   },
   "research_only": true,
