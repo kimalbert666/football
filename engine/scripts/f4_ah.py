@@ -376,7 +376,7 @@ def run_ah(root, fixtures, command, *, clock, source=None):
         raise ValueError('AH research requires research-only, no promotion and no wagering')
     from f4_ah_source import attach_asian_handicap
     from f4_ah_research import research, predict, SCHEMA_VERSION
-    from f4_ah_movement import aligned_early_quote
+    from f4_ah_movement import aligned_early_quote, observed_main_line_movement
     from f4_early_scout import load_early_observations
     from f4_strength import ratings_for_fixture
     from f4_context import context_for_fixture
@@ -418,14 +418,16 @@ def run_ah(root, fixtures, command, *, clock, source=None):
             quote = validate_quote(quote, fixture, decision, cfg['max_capture_age_minutes'], cfg.get('bookmaker_priority', ['crown']))
         except (KeyError, TypeError, ValueError) as exc:
             quote, reason = None, str(exc)
-        predecessors = (r for r in sorted([*early_scouts, *old], key=lambda r: instant(r['observed_at']))
+        predecessors = [r for r in sorted([*early_scouts, *old], key=lambda r: instant(r['observed_at']))
                       if r['match_id'] == fixture['match_id']
                       and all(r.get(key) == fixture.get(key) for key in ('home_id', 'away_id'))
                       and stamp(r['kickoff_at']) == stamp(fixture['kickoff_at']) and r.get('quote') and quote
                       and r.get('experiment_id') == cfg['experiment_id']
-                      and instant(r['observed_at']) < decision)
+                      and instant(r['observed_at']) < decision]
         early_quote = next((aligned for r in predecessors
                             if (aligned := aligned_early_quote(r, quote)) is not None), None)
+        main_line_movement = next((movement for r in predecessors
+                                   if (movement := observed_main_line_movement(r, quote)) is not None), None)
         row = {key: fixture.get(key) for key in ('match_id', 'provider', 'source_event_id', 'home_id', 'away_id', 'home', 'away', 'kickoff_at', 'league')}
         joint_market = (quote or {}).get('market_1x2') or fixture.get('market')
         independent_ratings, context = None, None
@@ -446,7 +448,9 @@ def run_ah(root, fixtures, command, *, clock, source=None):
                    p_1x2=probability_1x2(joint_market, decision, cfg['max_capture_age_minutes'], (quote or {}).get('bookmaker', 'crown')),
                    quote_1x2=joint_market, ratings=independent_ratings or ratings_before(outcomes, fixture, decision),
                    context=context, context_feature_policy='stored_for_future_protocol_not_used_by_v2',
-                   early_quote=early_quote, reason=reason, selected=False, candidate_weight=0,
+                   early_quote=early_quote, main_line_movement=main_line_movement,
+                   main_line_movement_feature_policy='stored_for_future_protocol_not_used_by_v2',
+                   reason=reason, selected=False, candidate_weight=0,
                    provenance={'kind': 'prospective_capture', 'market': '90min_asian_handicap',
                                'source': quote.get('url') if quote else None}, candidates={})
         if quote:

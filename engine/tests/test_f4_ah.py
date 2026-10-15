@@ -80,6 +80,75 @@ class AHIntegrationTests(unittest.TestCase):
         self.assertEqual(early['fixed_line_odds'], [2.10, 1.80])
         self.assertIsNone(early['main_handicap_change'])
 
+    def capture_main_quote(self, minutes_before, line):
+        self.now = ah.instant(self.fixture['kickoff_at']) - timedelta(minutes=minutes_before)
+        self.quote.update(captured_at=ah.stamp(self.now), published_at=ah.stamp(self.now),
+                          source='synthetic-a', line_selection='provider_main', provider_main=True,
+                          provider_kickoff_at=self.fixture['kickoff_at'], home_handicap=line)
+        self.quote.pop('lines', None)
+        self.quote['market_1x2'] = {key: value for key, value in self.quote.items() if key != 'market_1x2'}
+        self.quote['market_1x2'].update(market='90min_1x2', odds=[2.0, 3.0, 4.0])
+        return self.run_capture()
+
+    def test_main_shift_persists_without_an_earlier_current_contract_and_never_rewrites_history(self):
+        self.capture_main_quote(180, -.5)
+        self.capture_main_quote(60, -.75)
+        original = {path: path.read_bytes() for path in
+                    (self.root / 'data/f4/ah/observations').glob('*/*.json')}
+        self.capture_main_quote(15, -1)
+        latest = ah.load_observations(self.root)[-1]
+        movement = latest['main_line_movement']
+        self.assertIsNone(latest['early_quote'])
+        self.assertEqual(movement['earlier_home_handicap'], -.5)
+        self.assertEqual(movement['current_home_handicap'], -1)
+        self.assertEqual(movement['main_handicap_change'], -.5)
+        self.assertEqual(movement['baseline_kind'], 'observed_T-180m')
+        self.assertEqual(movement['observed_at'], '2026-10-02T08:00:00Z')
+        self.assertFalse(movement['opening_certified'])
+        self.assertFalse(movement['same_handicap_contract'])
+        self.assertNotIn('fixed_line_odds', movement)
+        self.assertEqual(latest['candidate_weight'], 0)
+        self.assertFalse(latest['selected'])
+        self.assertEqual(latest['main_line_movement_feature_policy'],
+                         'stored_for_future_protocol_not_used_by_v2')
+        self.assertTrue(all(path.read_bytes() == content for path, content in original.items()))
+        # This additional evidence cannot make a missing same-contract M3 input usable.
+        from f4_ah_research import _features
+        with self.assertRaisesRegex(ValueError, 'genuine earlier quote required'):
+            _features({**latest, 'home_handicap': -1, 'odds': latest['quote']['odds']}, 'M3')
+
+    def test_main_shift_skips_incompatible_earlier_main_lines(self):
+        self.capture_main_quote(180, -.5)
+        self.capture_main_quote(60, -.75)
+        saved = ah.load_observations(self.root)
+        self.now = ah.instant(self.fixture['kickoff_at']) - timedelta(minutes=15)
+        self.quote.update(captured_at=ah.stamp(self.now), published_at=ah.stamp(self.now), home_handicap=-1)
+        for change in ({'source': 'other-source'}, {'line_selection': 'balance'},
+                       {'provider_main': False}, {'bookmaker': 'other-company'},
+                       {'url': 'https://other.invalid/quote'}):
+            with self.subTest(change=change):
+                rows = copy.deepcopy(saved)
+                rows[0]['quote'].update(change)
+                with patch.object(ah, 'load_observations', return_value=rows), patch.object(ah, 'write') as writer:
+                    self.run_capture()
+                captured = [call.args[1] for call in writer.call_args_list
+                            if isinstance(call.args[1], dict) and 'observation_id' in call.args[1]][0]
+                self.assertEqual(captured['main_line_movement']['earlier_home_handicap'], -.75)
+                self.assertEqual(captured['main_line_movement']['baseline_kind'], 'observed_T-60m')
+                self.assertIsNone(captured['early_quote'])
+
+    def test_main_shift_does_not_cross_experiments(self):
+        self.capture_main_quote(180, -.5)
+        old = ah.load_observations(self.root)[0]
+        self.cfg['experiment_id'] = 'synthetic-new-experiment'
+        ah.write(self.root / 'data/f4/config.json', self.config)
+        self.capture_main_quote(15, -1)
+        records = ah.load_observations(self.root)
+        self.assertEqual(records[0], old)
+        self.assertEqual(records[-1]['experiment_id'], 'synthetic-new-experiment')
+        self.assertIsNone(records[-1]['main_line_movement'])
+        self.assertIsNone(records[-1]['early_quote'])
+
     def test_first_valid_snapshot_is_immutable_and_missing_can_retry(self):
         missing = lambda *a, **k: {'markets': {}, 'sources': [], 'problems': ['synthetic missing quote']}
         self.assertEqual(self.run_capture(missing)['new_attempts'], 1)

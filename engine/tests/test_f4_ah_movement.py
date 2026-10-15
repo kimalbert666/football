@@ -4,7 +4,7 @@ import math
 
 import pytest
 
-from f4_ah_movement import aligned_early_quote
+from f4_ah_movement import aligned_early_quote, observed_main_line_movement
 
 
 def snapshots():
@@ -136,3 +136,117 @@ def test_malformed_current_contract_is_unavailable(mutation):
     earlier, current = snapshots()
     current.update(mutation)
     assert aligned_early_quote(earlier, current) is None
+
+
+def main_snapshots():
+    earlier, current = snapshots()
+    earlier.update(horizon="first-observed", kickoff_at="2026-10-06T12:00:00Z",
+                   generated_at="2026-10-06T09:00:01Z")
+    for quote in (earlier["quote"], current):
+        quote.update(line_selection="provider_main", provider_main=True,
+                     provider_event_id="synthetic-event", provider_kickoff_at=earlier["kickoff_at"],
+                     market="90min_asian_handicap")
+    earlier["quote"]["lines"] = earlier["quote"]["lines"][:1]
+    return earlier, current
+
+
+@pytest.mark.parametrize("initial,current_line", [(-.25, -.5), (-.5, -1), (.25, -.25), (-1, -.75)])
+def test_main_shift_survives_missing_earlier_current_contract_without_cross_line_water(initial, current_line):
+    earlier, current = main_snapshots()
+    earlier["quote"]["home_handicap"] = initial
+    earlier["quote"]["lines"] = [{"home_handicap": initial, "odds": [1.94, 1.96]}]
+    current["home_handicap"] = current_line
+    before = copy.deepcopy(earlier), copy.deepcopy(current)
+    assert aligned_early_quote(earlier, current) is None
+    result = observed_main_line_movement(earlier, current)
+    assert result["earlier_home_handicap"] == initial
+    assert result["current_home_handicap"] == current_line
+    assert result["main_handicap_change"] == current_line - initial
+    assert result["earlier_odds"] == [1.94, 1.96]
+    assert result["current_odds"] == [1.96, 1.94]
+    assert result["same_handicap_contract"] is False
+    assert result["price_comparison_policy"] == "different_contract_prices_not_compared"
+    assert "fixed_line_odds" not in result
+    assert "home_log_price_change" not in result
+    assert result["baseline_kind"] == "collector_first_observed"
+    assert result["opening_certified"] is False
+    assert (earlier, current) == before
+    result["provenance"]["kind"] = "changed-output"
+    result["earlier_odds"][0] = 10
+    assert (earlier, current) == before
+
+
+@pytest.mark.parametrize("horizon,kind", [("T-180m", "observed_T-180m"), ("T-60m", "observed_T-60m"),
+                                        ("T-15m", "observed_T-15m"),
+                                        ("T180", "observed_T180"), ("T60", "observed_T60"),
+                                        ("T15", "observed_T15"), (None, "collector_earlier_observed")])
+def test_main_movement_baseline_uses_actual_observation_kind_never_claimed_opening(horizon, kind):
+    earlier, current = main_snapshots()
+    earlier["horizon"] = horizon
+    earlier["opening_certified"] = True  # An unsupported claim is never inherited.
+    result = observed_main_line_movement(earlier, current)
+    assert result["baseline_kind"] == kind
+    assert result["opening_certified"] is False
+
+
+def test_same_main_line_is_recorded_as_zero_shift_without_price_ratio():
+    earlier, current = main_snapshots()
+    current["home_handicap"] = earlier["quote"]["home_handicap"]
+    result = observed_main_line_movement(earlier, current)
+    assert result["main_handicap_change"] == 0
+    assert result["same_handicap_contract"] is True
+
+
+@pytest.mark.parametrize("mutation", [
+    {"bookmaker": "hkjc"}, {"source": "different"}, {"url": "https://other.invalid/quote"},
+    {"provider_main": False}, {"provider_main": 1},
+    {"line_selection": "closest_price_balance_not_provider_main"},
+    {"provider_event_id": "different-event"}, {"provider_event_id": None},
+    {"provider_kickoff_at": "2026-10-06T12:15:00Z"}, {"provider_kickoff_at": None},
+    {"captured_at": "2026-10-06T09:00:00Z"}, {"captured_at": "2026-10-06T08:00:00Z"},
+    {"captured_at": "2026-10-06T12:00:00Z"}, {"captured_at": "2026-10-06T11:45:00"},
+    {"published_at": "2026-10-06T11:45:01Z"}, {"market": "first_half_asian_handicap"},
+    {"home_handicap": -.3}, {"home_handicap": True}, {"odds": [1.9, float("nan")]},
+])
+def test_main_movement_rejects_incompatible_identity_main_flags_time_and_contract(mutation):
+    earlier, current = main_snapshots()
+    current.update(mutation)
+    assert observed_main_line_movement(earlier, current) is None
+
+
+@pytest.mark.parametrize("key", ["provider_event_id", "provider_kickoff_at", "captured_at"])
+def test_main_movement_one_end_missing_identity_or_current_time_is_unavailable(key):
+    earlier, current = main_snapshots()
+    current.pop(key)
+    assert observed_main_line_movement(earlier, current) is None
+
+
+@pytest.mark.parametrize("mutation", [
+    {"observed_at": "2026-10-06T09:00:00"},
+    {"observed_at": "2026-10-06T11:45:00Z"},
+    {"generated_at": "2026-10-06T08:59:59Z"},
+    {"generated_at": "2026-10-06T11:45:00Z"},
+    {"kickoff_at": "2026-10-06T12:15:00Z"}, {"provenance": {}},
+])
+def test_main_movement_rejects_malformed_earlier_observation(mutation):
+    earlier, current = main_snapshots()
+    earlier.update(mutation)
+    assert observed_main_line_movement(earlier, current) is None
+
+
+def test_main_movement_rejects_earlier_capture_after_observation_or_future_published_value():
+    earlier, current = main_snapshots()
+    earlier["quote"]["captured_at"] = "2026-10-06T09:00:01Z"
+    assert observed_main_line_movement(earlier, current) is None
+    earlier["quote"]["captured_at"] = "2026-10-06T08:59:55Z"
+    earlier["quote"]["published_at"] = "2026-10-06T09:00:00Z"
+    assert observed_main_line_movement(earlier, current) is None
+
+
+def test_main_movement_timezone_equivalent_kickoffs_match_and_neither_main_end_can_be_missing():
+    earlier, current = main_snapshots()
+    current["provider_kickoff_at"] = "2026-10-06T20:00:00+08:00"
+    result = observed_main_line_movement(earlier, current)
+    assert result["provider_event_id"] == "synthetic-event"
+    earlier["quote"]["provider_main"] = False
+    assert observed_main_line_movement(earlier, current) is None
