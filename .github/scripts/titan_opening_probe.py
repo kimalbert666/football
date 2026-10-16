@@ -379,14 +379,16 @@ def fetch_and_parse(url, referer, parser):
     return result
 
 
-def curl_and_parse(url, referer, parser):
-    """Compare a standard HTTP/2 client, retaining normal TLS verification."""
-    result = {"url": url, "transport": "system_curl_http2",
+def curl_and_parse(url, referer, parser, http_version="2"):
+    """Compare standard HTTP versions, retaining normal TLS verification."""
+    if http_version not in {"2", "1.1"}:
+        raise ValueError("unsupported_http_version")
+    result = {"url": url, "transport": "system_curl_http" + http_version,
               "fetched_at_utc": datetime.now(timezone.utc).isoformat(),
               "transport_ok": False, "parse_ok": False}
     try:
         run = subprocess.run([
-            "curl", "--silent", "--show-error", "--http2", "--proto", "=https",
+            "curl", "--silent", "--show-error", "--http" + http_version, "--proto", "=https",
             "--connect-timeout", "10", "--max-time", str(TIMEOUT_SECONDS),
             "--max-filesize", str(MAX_RESPONSE_BYTES), "--user-agent", USER_AGENT,
             "--referer", referer, "--header", "Accept: text/html,application/xhtml+xml",
@@ -418,9 +420,11 @@ def curl_and_parse(url, referer, parser):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, help="Optional limited JSON evidence file; never writes raw HTML")
-    parser.add_argument("--transport", choices=["urllib", "curl"], default="urllib")
+    parser.add_argument("--transport", choices=["urllib", "curl", "curl-http1"], default="urllib")
     args = parser.parse_args()
     fetch = curl_and_parse if args.transport == "curl" else fetch_and_parse
+    if args.transport == "curl-http1":
+        fetch = lambda url, referer, parser: curl_and_parse(url, referer, parser, http_version="1.1")
     summary = fetch(SUMMARY_URL, "https://www.titan007.com/", parse_summary)
     history = fetch(DETAIL_URL, SUMMARY_URL, parse_history)
     crow = next((row for row in summary.get("companies", []) if row["company_id"] == "3"), None)

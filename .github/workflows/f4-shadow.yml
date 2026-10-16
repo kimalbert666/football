@@ -21,7 +21,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Probe opening quote and history
-        run: python3 .github/scripts/titan_opening_probe.py --transport curl --output titan-opening-probe.json
+        run: python3 .github/scripts/titan_opening_probe.py --transport curl-http1 --output titan-opening-probe.json
       - name: Preserve limited diagnostic evidence
         if: always()
         uses: actions/upload-artifact@v4
