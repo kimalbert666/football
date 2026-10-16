@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-10-16T01:15:19.541781Z",
+  "evaluated_at": "2026-10-16T01:15:23.469942Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 21,
@@ -1417,22 +1417,22 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-16T01:15:17.831451Z",
+      "captured_at": "2026-10-16T01:15:22.693838Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-16T01:15:18.510083Z",
-      "content_sha256": "4f4c25d770c19ac16024c720222d1446a8ea7d76693074ca1cdc5b1d154b7954"
+      "captured_at": "2026-10-16T01:15:23.330659Z",
+      "content_sha256": "e5b960f1377e590f4f629c998acad6c8650384e696a72610920901c08a56227d"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-16T01:15:19.525966Z",
-      "response_at": "2026-10-16T01:15:19Z",
+      "captured_at": "2026-10-16T01:15:23.453080Z",
+      "response_at": "2026-10-16T01:15:23Z",
       "content_sha256": "ff4e35681f0e87b5269a8e0e8d44d8af779a39e178e7eae0565367ebc2c9bcad",
       "match_count": 166,
       "epl_match_count": 8
@@ -1449,22 +1449,22 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-16T01:15:18.510083Z"
+    "checked_at": "2026-10-16T01:15:23.330659Z"
   },
   "fallback_matches": [],
   "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 5,
+    "fixtures": 11,
     "windows": {
       "T-180m": {
-        "awaiting_window": 5
+        "awaiting_window": 11
       },
       "T-60m": {
-        "awaiting_window": 5
+        "awaiting_window": 11
       },
       "T-15m": {
-        "awaiting_window": 5
+        "awaiting_window": 11
       }
     }
   },
