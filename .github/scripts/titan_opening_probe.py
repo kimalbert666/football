@@ -12,6 +12,7 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+import subprocess
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -181,25 +182,55 @@ def parse_summary(html):
     document = Document(html)
     selected = {}
     issues = []
+    # Fixed diagnostic witness for match 3003902. These are not a general
+    # provider schema or a claim that every page is rendered in HK odds.
+    witness = {
+        "3": (1.02, .25, .86, "2026-09-19 01:31"),
+        "8": (.83, .5, 1.03, "2026-09-13 01:32"),
+        "48": (.90, .25, .86, "2026-10-08 18:39"),
+    }
+
+    def visible_text(node):
+        if not node.visible() or node.tag in {"script", "style"}:
+            return ""
+        return " ".join(visible_text(child) if isinstance(child, Node) else child
+                        for child in node.children)
+
     for row in document.root.descendants("tr"):
         cells = direct_cells(row)
         links = company_links(row)
         if len(links) != 1 or not 6 <= len(cells) <= 24:
             continue
         company, detail_url = next(iter(links.items()))
-        # Initial columns precede live/closing columns. Hidden live cells must
-        # never become a competing candidate or alter visible column positions.
-        visible = [cell for cell in cells if cell.visible()]
-        triples = []
-        for index in range(len(visible) - 2):
-            triple = visible[index:index + 3]
-            fields = quote_fields(triple)
-            if fields is not None:
-                triples.append((fields, title_datetime(triple)))
-        if not triples or triples[0][1] is None:
+        # Use the actual initial columns observed for this fixed fixture.
+        # Missing initial cells must not fall through to a closing/live quote.
+        triple = cells[3:6]
+        if len(triple) != 3 or not all(cell.visible() for cell in triple):
+            issues.append(f"company_{company}_opening_cells_missing_or_hidden")
+            continue
+        opening = quote_fields(triple)
+        if opening is None:
+            issues.append(f"company_{company}_opening_quote_invalid")
+            continue
+        # Read only dates belonging to visible initial cells/descendants.
+        dates = set()
+        for cell in triple:
+            for node in [cell, *cell.descendants()]:
+                if not node.visible():
+                    continue
+                for match in FULL_DATE.finditer(node.attrs.get("title", "") or ""):
+                    try:
+                        dates.add(datetime(*(int(part) for part in match.groups())).strftime("%Y-%m-%d %H:%M"))
+                    except ValueError:
+                        pass
+        date = next(iter(dates)) if len(dates) == 1 else None
+        if date is None:
             issues.append(f"company_{company}_opening_datetime_missing")
             continue
-        opening, date = triples[0]
+        observed = (opening["home_profit_only_odds"], opening["home_handicap"],
+                    opening["away_profit_only_odds"], date)
+        if observed != witness[company]:
+            issues.append(f"company_{company}_fixed_case_browser_witness_mismatch")
         item = {
             "company_id": company,
             "company_label": TARGET_COMPANIES[company],
@@ -211,7 +242,7 @@ def parse_summary(html):
             continue
         selected[company] = item
     title = document_title(document)
-    kickoff_confirmed = EXPECTED_KICKOFF in clean(document.root.text())
+    kickoff_confirmed = EXPECTED_KICKOFF in clean(visible_text(document.root))
     missing = sorted(set(TARGET_COMPANIES) - set(selected))
     if missing:
         issues.append("missing_companies:" + ",".join(missing))
@@ -221,6 +252,8 @@ def parse_summary(html):
         "parse_ok": len(selected) == 3 and kickoff_confirmed and not issues,
         "page_title": title,
         "expected_fixture_kickoff_found": kickoff_confirmed,
+        "fixed_case_browser_witness_agree": len(selected) == 3 and not any("browser_witness_mismatch" in issue for issue in issues),
+        "odds_format_basis": "HK profit-only odds independently observed in browser for fixed match 3003902",
         "companies": [selected[key] for key in TARGET_COMPANIES if key in selected],
         "issues": sorted(set(issues)),
     }
@@ -346,12 +379,50 @@ def fetch_and_parse(url, referer, parser):
     return result
 
 
+def curl_and_parse(url, referer, parser):
+    """Compare a standard HTTP/2 client, retaining normal TLS verification."""
+    result = {"url": url, "transport": "system_curl_http2",
+              "fetched_at_utc": datetime.now(timezone.utc).isoformat(),
+              "transport_ok": False, "parse_ok": False}
+    try:
+        run = subprocess.run([
+            "curl", "--silent", "--show-error", "--http2", "--proto", "=https",
+            "--connect-timeout", "10", "--max-time", str(TIMEOUT_SECONDS),
+            "--max-filesize", str(MAX_RESPONSE_BYTES), "--user-agent", USER_AGENT,
+            "--referer", referer, "--header", "Accept: text/html,application/xhtml+xml",
+            "--write-out", "\n__F4_HTTP__%{http_code}\n__F4_TYPE__%{content_type}\n__F4_VERSION__%{http_version}",
+            url], capture_output=True, timeout=TIMEOUT_SECONDS + 5)
+        result["client_exit_code"] = run.returncode
+        if run.returncode:
+            result["error"] = "curl_request_failed"
+            return result
+        payload, marker = run.stdout.rsplit(b"\n__F4_HTTP__", 1)
+        status, kind = marker.split(b"\n__F4_TYPE__", 1)
+        content_type, version = kind.split(b"\n__F4_VERSION__", 1)
+        result["http_status"] = int(status)
+        result["http_version"] = version.decode("ascii")
+        result["response_bytes"] = len(payload)
+        if len(payload) > MAX_RESPONSE_BYTES:
+            raise ValueError("response_exceeded_diagnostic_size_limit")
+        result["transport_ok"] = result["http_status"] == 200
+        if result["transport_ok"]:
+            html, encoding = decode_html(payload, content_type.decode("ascii", errors="replace"))
+            result["response_encoding"] = encoding
+            result.update(parser(html))
+    except Exception as exc:
+        result["error_type"] = type(exc).__name__
+        result["error"] = "request_or_parse_failed"
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, help="Optional limited JSON evidence file; never writes raw HTML")
+    parser.add_argument("--transport", choices=["urllib", "curl"], default="urllib")
     args = parser.parse_args()
-    summary = fetch_and_parse(SUMMARY_URL, "https://www.titan007.com/", parse_summary)
-    history = fetch_and_parse(DETAIL_URL, SUMMARY_URL, parse_history)
+    fetch = curl_and_parse if args.transport == "curl" else fetch_and_parse
+    summary = fetch(SUMMARY_URL, "https://www.titan007.com/", parse_summary)
+    history = fetch(DETAIL_URL, SUMMARY_URL, parse_history)
     crow = next((row for row in summary.get("companies", []) if row["company_id"] == "3"), None)
     opening = history.get("first_opening")
     opening_matches = bool(crow and opening and all(crow["opening"][field] == opening[field] for field in ("home_profit_only_odds", "home_handicap", "away_profit_only_odds")) and crow["opening"]["displayed_full_datetime"] == opening["fixture_year_inferred_datetime"])
