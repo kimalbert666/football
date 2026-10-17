@@ -10,27 +10,8 @@
   "kickoff_at": "2026-10-17T14:00:00Z",
   "status": "scheduled",
   "score": null,
-  "market": {
-    "bookmaker": "crown",
-    "company_id": 545,
-    "market": "90min_1x2",
-    "odds": [
-      1.27,
-      6.7,
-      9.3
-    ],
-    "captured_at": "2026-10-17T13:00:26.612582Z",
-    "published_at": "2026-10-17T12:36:00Z",
-    "source": "titan007-crown",
-    "url": "https://1x2d.titan007.com/3003915.js",
-    "provider_event_id": "3003915",
-    "provider_quote_id": "158231795",
-    "content_sha256": "6553cf4dfa38f4801e07e47d724f439b07daf921d7fba102f0683ac44dd1ec8e",
-    "provider_kickoff_at": "2026-10-17T14:00:00Z",
-    "market_status": "not_exposed",
-    "provenance": "Titan007 public display attributed to Crown; not direct bookmaker API"
-  },
+  "market": null,
   "problems": [],
   "first_seen_at": "2026-10-10T11:14:57.376552Z",
-  "last_seen_at": "2026-10-17T13:00:26.997532Z"
+  "last_seen_at": "2026-10-17T13:30:00.384805Z"
 }

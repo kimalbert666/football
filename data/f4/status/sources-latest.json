@@ -1,61 +1,19 @@
 {
-  "captured_at": "2026-10-17T13:00:26.997532Z",
+  "captured_at": "2026-10-17T13:30:00.384805Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261017",
-      "captured_at": "2026-10-17T13:00:00.193925Z",
-      "content_sha256": "354915741d3c1c3999ea0e571312d43b16e770ea017b43001bffa54502a0ef2e"
+      "captured_at": "2026-10-17T13:30:00.149848Z",
+      "content_sha256": "5699f60bae339004aabb4733495bc36807e2354a4bb985e1a1df55ec528a0e5b"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261018",
-      "captured_at": "2026-10-17T13:00:00.300767Z",
+      "captured_at": "2026-10-17T13:30:00.383708Z",
       "content_sha256": "3f3a176915aa11fe195ff80deb6c268a247dc97857fff3e7a4717d8ae158ce38"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2.titan007.com/Company.js",
-      "status": "ok",
-      "captured_at": "2026-10-17T13:00:07.695080Z",
-      "content_sha256": "dc86391e88b7c0f601a561f2cc847e5abda654473c5eae14727641ce56ddf35d"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2.titan007.com/index_vip.aspx",
-      "status": "ok",
-      "captured_at": "2026-10-17T13:00:12.967398Z",
-      "content_sha256": "e2d7f13c8ef04aaae74aa3edfbc136b0439177c736edacb58aa67c9d1a003207"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2.titan007.com/TomorrowOdds.aspx",
-      "status": "ok",
-      "captured_at": "2026-10-17T13:00:18.772658Z",
-      "content_sha256": "c02693712c169c25b0f1bb77bcd709f1e46d4b434365383fdbdae2f2a8bd4614"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2d.titan007.com/3003910.js",
-      "status": "ok",
-      "captured_at": "2026-10-17T13:00:20.331023Z",
-      "content_sha256": "89e0afda8ca56c0f823c62e5879d39f24208664195b8b9643547393cc846887c"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2d.titan007.com/3003913.js",
-      "status": "ok",
-      "captured_at": "2026-10-17T13:00:25.229498Z",
-      "content_sha256": "53cf058c7b76e15fbd1934e55d3d04541a5f7ee12193e6a9d9388513c1b4c45c"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2d.titan007.com/3003915.js",
-      "status": "ok",
-      "captured_at": "2026-10-17T13:00:26.612582Z",
-      "content_sha256": "6553cf4dfa38f4801e07e47d724f439b07daf921d7fba102f0683ac44dd1ec8e"
     }
   ],
   "fixtures": [
@@ -86,26 +44,7 @@
       "kickoff_at": "2026-10-17T14:00:00Z",
       "status": "scheduled",
       "score": null,
-      "market": {
-        "bookmaker": "crown",
-        "company_id": 545,
-        "market": "90min_1x2",
-        "odds": [
-          1.61,
-          4.1,
-          5.6
-        ],
-        "captured_at": "2026-10-17T13:00:25.229498Z",
-        "published_at": "2026-10-17T12:57:00Z",
-        "source": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003913.js",
-        "provider_event_id": "3003913",
-        "provider_quote_id": "158231757",
-        "content_sha256": "53cf058c7b76e15fbd1934e55d3d04541a5f7ee12193e6a9d9388513c1b4c45c",
-        "provider_kickoff_at": "2026-10-17T14:00:00Z",
-        "market_status": "not_exposed",
-        "provenance": "Titan007 public display attributed to Crown; not direct bookmaker API"
-      },
+      "market": null,
       "problems": []
     },
     {
@@ -120,26 +59,7 @@
       "kickoff_at": "2026-10-17T14:00:00Z",
       "status": "scheduled",
       "score": null,
-      "market": {
-        "bookmaker": "crown",
-        "company_id": 545,
-        "market": "90min_1x2",
-        "odds": [
-          1.27,
-          6.7,
-          9.3
-        ],
-        "captured_at": "2026-10-17T13:00:26.612582Z",
-        "published_at": "2026-10-17T12:36:00Z",
-        "source": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003915.js",
-        "provider_event_id": "3003915",
-        "provider_quote_id": "158231795",
-        "content_sha256": "6553cf4dfa38f4801e07e47d724f439b07daf921d7fba102f0683ac44dd1ec8e",
-        "provider_kickoff_at": "2026-10-17T14:00:00Z",
-        "market_status": "not_exposed",
-        "provenance": "Titan007 public display attributed to Crown; not direct bookmaker API"
-      },
+      "market": null,
       "problems": []
     },
     {
@@ -154,26 +74,7 @@
       "kickoff_at": "2026-10-17T14:00:00Z",
       "status": "scheduled",
       "score": null,
-      "market": {
-        "bookmaker": "crown",
-        "company_id": 545,
-        "market": "90min_1x2",
-        "odds": [
-          2.66,
-          3.7,
-          2.51
-        ],
-        "captured_at": "2026-10-17T13:00:20.331023Z",
-        "published_at": "2026-10-17T12:53:00Z",
-        "source": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003910.js",
-        "provider_event_id": "3003910",
-        "provider_quote_id": "158231758",
-        "content_sha256": "89e0afda8ca56c0f823c62e5879d39f24208664195b8b9643547393cc846887c",
-        "provider_kickoff_at": "2026-10-17T14:00:00Z",
-        "market_status": "not_exposed",
-        "provenance": "Titan007 public display attributed to Crown; not direct bookmaker API"
-      },
+      "market": null,
       "problems": []
     },
     {
