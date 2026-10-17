@@ -1,43 +1,11 @@
 {
-  "started_at": "2026-10-17T08:43:51.478572Z",
-  "run_id": "39018436570",
-  "captures": [
-    {
-      "requested_at": "2026-10-17T10:30:00.002405Z",
-      "target_at": "2026-10-17T10:30:00Z",
-      "delay_seconds": 0.002405,
-      "completed_at": "2026-10-17T10:30:24.875599Z"
-    },
-    {
-      "requested_at": "2026-10-17T11:00:00.002586Z",
-      "target_at": "2026-10-17T11:00:00Z",
-      "delay_seconds": 0.002586,
-      "completed_at": "2026-10-17T11:00:20.418174Z"
-    },
-    {
-      "requested_at": "2026-10-17T11:15:00.002887Z",
-      "target_at": "2026-10-17T11:15:00Z",
-      "delay_seconds": 0.002887,
-      "completed_at": "2026-10-17T11:15:05.631893Z"
-    },
-    {
-      "requested_at": "2026-10-17T13:00:00.003014Z",
-      "target_at": "2026-10-17T13:00:00Z",
-      "delay_seconds": 0.003014,
-      "completed_at": "2026-10-17T13:00:28.388786Z"
-    },
-    {
-      "requested_at": "2026-10-17T13:30:00.003432Z",
-      "target_at": "2026-10-17T13:30:00Z",
-      "delay_seconds": 0.003432,
-      "completed_at": "2026-10-17T13:31:06.806827Z"
-    }
-  ],
+  "started_at": "2026-10-17T13:44:16.812088Z",
+  "run_id": "39037765624",
+  "captures": [],
   "mode": "bounded_match_window_worker",
   "timing_guaranteed": false,
-  "previous_worker_started_at": "2026-10-17T04:16:21.516443Z",
-  "continuation_requested": true,
-  "state": "duration_limit",
-  "checked_at": "2026-10-17T13:43:54.326278Z",
-  "next_window_at": "2026-10-17T13:45:00Z"
+  "previous_worker_started_at": "2026-10-17T08:43:51.478572Z",
+  "continuation_requested": false,
+  "state": "ah_saved_legacy_pending",
+  "checked_at": "2026-10-17T13:44:19.963800Z"
 }
