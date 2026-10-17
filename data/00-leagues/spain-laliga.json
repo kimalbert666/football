@@ -1,23 +1,23 @@
 {
   "league": "spain-laliga",
   "season": "2026-27",
-  "generatedAt": "2026-09-26",
-  "roundsPlayed": 64,
+  "generatedAt": "2026-10-17",
+  "roundsPlayed": 65,
   "standings": [
     {
       "pos": 1,
       "team": "Barcelona",
-      "played": 64,
-      "won": 51,
+      "played": 65,
+      "won": 52,
       "drawn": 5,
       "lost": 8,
-      "gf": 186,
+      "gf": 189,
       "ga": 66,
-      "gd": 120,
-      "pts": 158,
+      "gd": 123,
+      "pts": 161,
       "form": "WWWWW",
       "homeRecord": {
-        "w": 26,
+        "w": 27,
         "d": 1,
         "l": 4
       },
@@ -30,17 +30,17 @@
     {
       "pos": 2,
       "team": "Real Madrid",
-      "played": 64,
-      "won": 45,
+      "played": 65,
+      "won": 46,
       "drawn": 9,
       "lost": 10,
-      "gf": 137,
+      "gf": 138,
       "ga": 63,
-      "gd": 74,
-      "pts": 144,
-      "form": "WLWWL",
+      "gd": 75,
+      "pts": 147,
+      "form": "LWWLW",
       "homeRecord": {
-        "w": 27,
+        "w": 28,
         "d": 1,
         "l": 3
       },
@@ -53,22 +53,22 @@
     {
       "pos": 3,
       "team": "Ath Madrid",
-      "played": 64,
-      "won": 38,
+      "played": 65,
+      "won": 39,
       "drawn": 16,
       "lost": 10,
-      "gf": 118,
-      "ga": 54,
-      "gd": 64,
-      "pts": 130,
-      "form": "WLWWW",
+      "gf": 120,
+      "ga": 55,
+      "gd": 65,
+      "pts": 133,
+      "form": "LWWWW",
       "homeRecord": {
         "w": 25,
         "d": 6,
         "l": 1
       },
       "awayRecord": {
-        "w": 13,
+        "w": 14,
         "d": 10,
         "l": 9
       }
@@ -76,15 +76,15 @@
     {
       "pos": 4,
       "team": "Villarreal",
-      "played": 63,
+      "played": 64,
       "won": 35,
       "drawn": 14,
-      "lost": 14,
+      "lost": 15,
       "gf": 121,
-      "ga": 80,
-      "gd": 41,
+      "ga": 81,
+      "gd": 40,
       "pts": 119,
-      "form": "LLLWW",
+      "form": "LLWWL",
       "homeRecord": {
         "w": 18,
         "d": 8,
@@ -93,23 +93,23 @@
       "awayRecord": {
         "w": 17,
         "d": 6,
-        "l": 8
+        "l": 9
       }
     },
     {
       "pos": 5,
       "team": "Betis",
-      "played": 64,
-      "won": 28,
+      "played": 65,
+      "won": 29,
       "drawn": 21,
       "lost": 15,
-      "gf": 97,
-      "ga": 82,
-      "gd": 15,
-      "pts": 105,
-      "form": "LWWWD",
+      "gf": 102,
+      "ga": 84,
+      "gd": 18,
+      "pts": 108,
+      "form": "WWWDW",
       "homeRecord": {
-        "w": 17,
+        "w": 18,
         "d": 8,
         "l": 6
       },
@@ -145,15 +145,15 @@
     {
       "pos": 7,
       "team": "Celta",
-      "played": 64,
+      "played": 65,
       "won": 24,
-      "drawn": 19,
+      "drawn": 20,
       "lost": 21,
       "gf": 92,
       "ga": 83,
       "gd": 9,
-      "pts": 91,
-      "form": "LDDDW",
+      "pts": 92,
+      "form": "DDDWD",
       "homeRecord": {
         "w": 14,
         "d": 9,
@@ -161,22 +161,22 @@
       },
       "awayRecord": {
         "w": 10,
-        "d": 10,
+        "d": 11,
         "l": 11
       }
     },
     {
       "pos": 8,
       "team": "Espanol",
-      "played": 64,
+      "played": 65,
       "won": 23,
-      "drawn": 14,
+      "drawn": 15,
       "lost": 27,
-      "gf": 73,
-      "ga": 81,
+      "gf": 74,
+      "ga": 82,
       "gd": -8,
-      "pts": 83,
-      "form": "LDWLL",
+      "pts": 84,
+      "form": "DWLLD",
       "homeRecord": {
         "w": 15,
         "d": 8,
@@ -184,7 +184,7 @@
       },
       "awayRecord": {
         "w": 8,
-        "d": 6,
+        "d": 7,
         "l": 17
       }
     },
@@ -213,41 +213,18 @@
     },
     {
       "pos": 10,
-      "team": "Osasuna",
-      "played": 64,
-      "won": 19,
-      "drawn": 22,
-      "lost": 23,
-      "gf": 72,
-      "ga": 87,
-      "gd": -15,
-      "pts": 79,
-      "form": "WLLLD",
-      "homeRecord": {
-        "w": 16,
-        "d": 10,
-        "l": 6
-      },
-      "awayRecord": {
-        "w": 3,
-        "d": 12,
-        "l": 17
-      }
-    },
-    {
-      "pos": 11,
       "team": "Sociedad",
-      "played": 64,
-      "won": 21,
+      "played": 65,
+      "won": 22,
       "drawn": 14,
       "lost": 29,
-      "gf": 68,
-      "ga": 86,
-      "gd": -18,
-      "pts": 77,
-      "form": "WDWLW",
+      "gf": 71,
+      "ga": 88,
+      "gd": -17,
+      "pts": 80,
+      "form": "DWLWW",
       "homeRecord": {
-        "w": 12,
+        "w": 13,
         "d": 6,
         "l": 13
       },
@@ -258,17 +235,40 @@
       }
     },
     {
+      "pos": 11,
+      "team": "Osasuna",
+      "played": 65,
+      "won": 19,
+      "drawn": 22,
+      "lost": 24,
+      "gf": 74,
+      "ga": 92,
+      "gd": -18,
+      "pts": 79,
+      "form": "LLLDL",
+      "homeRecord": {
+        "w": 16,
+        "d": 10,
+        "l": 6
+      },
+      "awayRecord": {
+        "w": 3,
+        "d": 12,
+        "l": 18
+      }
+    },
+    {
       "pos": 12,
       "team": "Sevilla",
-      "played": 64,
+      "played": 65,
       "won": 20,
-      "drawn": 14,
+      "drawn": 15,
       "lost": 30,
-      "gf": 76,
-      "ga": 94,
+      "gf": 79,
+      "ga": 97,
       "gd": -18,
-      "pts": 74,
-      "form": "LDWWL",
+      "pts": 75,
+      "form": "DWWLD",
       "homeRecord": {
         "w": 11,
         "d": 7,
@@ -276,26 +276,26 @@
       },
       "awayRecord": {
         "w": 9,
-        "d": 7,
+        "d": 8,
         "l": 15
       }
     },
     {
       "pos": 13,
       "team": "Alaves",
-      "played": 64,
+      "played": 65,
       "won": 18,
       "drawn": 18,
-      "lost": 28,
-      "gf": 65,
-      "ga": 78,
-      "gd": -13,
+      "lost": 29,
+      "gf": 66,
+      "ga": 80,
+      "gd": -14,
       "pts": 72,
-      "form": "WWLLD",
+      "form": "WLLDL",
       "homeRecord": {
         "w": 13,
         "d": 9,
-        "l": 11
+        "l": 12
       },
       "awayRecord": {
         "w": 5,
@@ -306,15 +306,15 @@
     {
       "pos": 14,
       "team": "Getafe",
-      "played": 64,
+      "played": 65,
       "won": 19,
       "drawn": 14,
-      "lost": 31,
+      "lost": 32,
       "gf": 53,
-      "ga": 71,
-      "gd": -18,
+      "ga": 74,
+      "gd": -21,
       "pts": 71,
-      "form": "LDDLW",
+      "form": "DDLWL",
       "homeRecord": {
         "w": 9,
         "d": 11,
@@ -323,21 +323,21 @@
       "awayRecord": {
         "w": 10,
         "d": 3,
-        "l": 19
+        "l": 20
       }
     },
     {
       "pos": 15,
       "team": "Valencia",
-      "played": 64,
+      "played": 65,
       "won": 15,
-      "drawn": 22,
+      "drawn": 23,
       "lost": 27,
-      "gf": 66,
-      "ga": 98,
+      "gf": 68,
+      "ga": 100,
       "gd": -32,
-      "pts": 67,
-      "form": "LLLWL",
+      "pts": 68,
+      "form": "LLWLD",
       "homeRecord": {
         "w": 12,
         "d": 10,
@@ -345,7 +345,7 @@
       },
       "awayRecord": {
         "w": 3,
-        "d": 12,
+        "d": 13,
         "l": 16
       }
     },
@@ -444,18 +444,18 @@
     {
       "pos": 20,
       "team": "Elche",
-      "played": 26,
+      "played": 27,
       "won": 6,
-      "drawn": 10,
+      "drawn": 11,
       "lost": 10,
       "gf": 36,
       "ga": 41,
       "gd": -5,
-      "pts": 28,
-      "form": "LLDLW",
+      "pts": 29,
+      "form": "LDLWD",
       "homeRecord": {
         "w": 5,
-        "d": 4,
+        "d": 5,
         "l": 4
       },
       "awayRecord": {
@@ -467,18 +467,18 @@
     {
       "pos": 21,
       "team": "Levante",
-      "played": 24,
+      "played": 25,
       "won": 4,
-      "drawn": 7,
+      "drawn": 8,
       "lost": 13,
-      "gf": 29,
-      "ga": 42,
+      "gf": 32,
+      "ga": 45,
       "gd": -13,
-      "pts": 19,
-      "form": "DWDLL",
+      "pts": 20,
+      "form": "WDLLD",
       "homeRecord": {
         "w": 1,
-        "d": 3,
+        "d": 4,
         "l": 6
       },
       "awayRecord": {
@@ -536,15 +536,15 @@
     {
       "pos": 24,
       "team": "La Coruna",
-      "played": 7,
+      "played": 8,
       "won": 2,
       "drawn": 4,
-      "lost": 1,
-      "gf": 10,
-      "ga": 8,
-      "gd": 2,
+      "lost": 2,
+      "gf": 12,
+      "ga": 11,
+      "gd": 1,
       "pts": 10,
-      "form": "WWDLD",
+      "form": "WDLDL",
       "homeRecord": {
         "w": 1,
         "d": 2,
@@ -553,24 +553,24 @@
       "awayRecord": {
         "w": 1,
         "d": 2,
-        "l": 0
+        "l": 1
       }
     },
     {
       "pos": 25,
       "team": "Santander",
-      "played": 7,
+      "played": 8,
       "won": 2,
-      "drawn": 1,
+      "drawn": 2,
       "lost": 4,
-      "gf": 11,
-      "ga": 21,
+      "gf": 13,
+      "ga": 23,
       "gd": -10,
-      "pts": 7,
-      "form": "WLWLL",
+      "pts": 8,
+      "form": "LWLLD",
       "homeRecord": {
         "w": 2,
-        "d": 1,
+        "d": 2,
         "l": 0
       },
       "awayRecord": {
@@ -582,18 +582,18 @@
     {
       "pos": 26,
       "team": "Malaga",
-      "played": 7,
+      "played": 8,
       "won": 0,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 4,
-      "gf": 3,
-      "ga": 12,
+      "gf": 4,
+      "ga": 13,
       "gd": -9,
-      "pts": 3,
-      "form": "LDDLL",
+      "pts": 4,
+      "form": "DDLLD",
       "homeRecord": {
         "w": 0,
-        "d": 2,
+        "d": 3,
         "l": 1
       },
       "awayRecord": {
@@ -604,18 +604,18 @@
     }
   ],
   "leagueStats": {
-    "avgGoals": 2.65,
+    "avgGoals": 2.662,
     "homeWinRate": 0.448,
-    "drawRate": 0.257,
-    "upsetRate": 0.248,
+    "drawRate": 0.26,
+    "upsetRate": 0.244,
     "topScores": [
       {
         "score": "1-1",
-        "count": 100
+        "count": 101
       },
       {
         "score": "1-0",
-        "count": 84
+        "count": 85
       },
       {
         "score": "2-1",
@@ -623,7 +623,7 @@
       }
     ],
     "computedFrom": "fd",
-    "matchesUsed": 638,
+    "matchesUsed": 647,
     "seasonsMerged": [
       "2425",
       "2526",
@@ -648,8 +648,8 @@
     ]
   },
   "dcParams": {
-    "homeAdv": 0.3127,
-    "rho": -0.1196,
+    "homeAdv": 0.3237,
+    "rho": -0.1807,
     "xi": 0.005
   },
   "freshness": {
