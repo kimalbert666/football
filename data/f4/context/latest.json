@@ -1,12 +1,12 @@
 {
   "model_feature_status": "context_only_not_used_in_current_M1_M2_M3",
-  "observed_at": "2026-10-16T01:15:45.075579Z",
+  "observed_at": "2026-10-17T01:31:14.220290Z",
   "problems": [],
   "requested_clubs": 20,
   "schema": "f4-prematch-context-observed-v1",
   "season_year": 2026,
-  "snapshot_path": "data/f4/context/snapshots/4757ab64a90ee9f6e50a540ee5c8d0a9f95eff26fd3ba5298a9d54c53dd2364d.json",
-  "snapshot_sha256": "4757ab64a90ee9f6e50a540ee5c8d0a9f95eff26fd3ba5298a9d54c53dd2364d",
+  "snapshot_path": "data/f4/context/snapshots/30d134413ca6ab9fa74a42187b52f57c717ce49892e41f0691794263a9037d6f.json",
+  "snapshot_sha256": "30d134413ca6ab9fa74a42187b52f57c717ce49892e41f0691794263a9037d6f",
   "source_statuses": {
     "espn-rest:arsenal": "available",
     "espn-rest:aston-villa": "available",
@@ -25,7 +25,7 @@
     "espn-rest:man-city": "available",
     "espn-rest:man-united": "available",
     "espn-rest:newcastle": "available",
-    "espn-rest:nottingham-forest": "unavailable",
+    "espn-rest:nottingham-forest": "available",
     "espn-rest:sunderland": "available",
     "espn-rest:tottenham": "available",
     "fpl": "available",
@@ -33,7 +33,7 @@
   },
   "status": "ready",
   "teams_availability": 20,
-  "teams_club_schedule": 19,
+  "teams_club_schedule": 20,
   "teams_xg": 20,
   "unresolved_clubs": []
 }

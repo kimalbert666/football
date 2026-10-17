@@ -1,36 +1,42 @@
 {
   "status": "partial",
-  "checked_at": "2026-10-16T01:15:45.269021Z",
-  "due_fixtures": 9,
-  "new_records": 6,
+  "checked_at": "2026-10-17T01:31:15.074692Z",
+  "due_fixtures": 7,
+  "new_records": 2,
   "saved_matches": [
-    "espn:401878771",
-    "espn:401878770",
-    "espn:401879259",
-    "espn:401879262",
-    "espn:401879258",
-    "espn:401879257"
+    "espn:401879261",
+    "espn:401879263"
   ],
-  "stored_first_observations": 8,
+  "stored_first_observations": 10,
   "missing": [
     {
-      "match_id": "espn:401879261",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401879263",
-      "reason": "missing Asian handicap quote"
-    },
-    {
       "match_id": "espn:401879253",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401879256",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401878768",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401879255",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401878767",
       "reason": "missing Asian handicap quote"
     }
   ],
   "provider_faults": {},
   "source_problems": [
-    "espn:401879261: HKJC AH unavailable (unique EPL identity not published or not matched)",
-    "espn:401879263: HKJC AH unavailable (unique EPL identity not published or not matched)",
-    "espn:401879253: HKJC AH unavailable (unique EPL identity not published or not matched)"
+    "espn:401879253: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879256: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401878768: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879255: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401878767: HKJC AH unavailable (unique EPL identity not published or not matched)"
   ],
   "source_policy": "independent_bulk_scout_no_formal_primary_quota",
   "opening_certified": false
