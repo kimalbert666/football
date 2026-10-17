@@ -19,13 +19,19 @@
       "target_at": "2026-10-17T11:15:00Z",
       "delay_seconds": 0.002887,
       "completed_at": "2026-10-17T11:15:05.631893Z"
+    },
+    {
+      "requested_at": "2026-10-17T13:00:00.003014Z",
+      "target_at": "2026-10-17T13:00:00Z",
+      "delay_seconds": 0.003014,
+      "completed_at": "2026-10-17T13:00:28.388786Z"
     }
   ],
   "mode": "bounded_match_window_worker",
   "timing_guaranteed": false,
   "previous_worker_started_at": "2026-10-17T04:16:21.516443Z",
   "continuation_requested": false,
-  "state": "ah_saved_legacy_pending",
-  "checked_at": "2026-10-17T13:00:05.076355Z",
+  "state": "waiting",
+  "checked_at": "2026-10-17T13:00:28.388807Z",
   "next_window_at": "2026-10-17T13:00:00Z"
 }
