@@ -1,13 +1,11 @@
 {
-  "evaluated_at": "2026-10-17T22:14:09.765780Z",
+  "evaluated_at": "2026-10-17T22:14:18.463469Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 36,
   "distinct_matches": 13,
-  "paired_matches": 8,
-  "pairing_issues": {
-    "awaiting_regulation_result": 5
-  },
+  "paired_matches": 13,
+  "pairing_issues": {},
   "line_groups": {
     "-1.25": {
       "matches": 1,
@@ -21,30 +19,32 @@
       "away_profit": 0.42000000000000004
     },
     "0.25": {
-      "matches": 4,
+      "matches": 6,
       "home": {
-        "full_loss": 2,
+        "full_loss": 4,
         "full_win": 2
       },
       "away": {
-        "full_win": 2,
+        "full_win": 4,
         "full_loss": 2
       },
-      "home_profit": -0.009999999999999787,
-      "away_profit": -0.2300000000000002
+      "home_profit": -2.01,
+      "away_profit": 1.7599999999999998
     },
     "-0.75": {
-      "matches": 2,
+      "matches": 3,
       "home": {
         "full_win": 1,
-        "full_loss": 1
+        "full_loss": 1,
+        "half_win": 1
       },
       "away": {
         "full_loss": 1,
-        "full_win": 1
+        "full_win": 1,
+        "half_loss": 1
       },
-      "home_profit": -0.040000000000000036,
-      "away_profit": 0.029999999999999805
+      "home_profit": 0.375,
+      "away_profit": -0.4700000000000002
     },
     "0.0": {
       "matches": 1,
@@ -56,6 +56,28 @@
       },
       "home_profit": 0.0,
       "away_profit": 0.0
+    },
+    "-1.75": {
+      "matches": 1,
+      "home": {
+        "full_loss": 1
+      },
+      "away": {
+        "full_win": 1
+      },
+      "home_profit": -1.0,
+      "away_profit": 1.04
+    },
+    "-0.25": {
+      "matches": 1,
+      "home": {
+        "full_loss": 1
+      },
+      "away": {
+        "full_win": 1
+      },
+      "home_profit": -1.0,
+      "away_profit": 0.99
     }
   },
   "prospective_scores": {},
@@ -293,9 +315,9 @@
       }
     ],
     "fixed_window": "T-15m, 10 to 20 minutes before kickoff",
-    "unique_fixtures": 8,
-    "accepted_pairs": 8,
-    "side_records": 16,
+    "unique_fixtures": 13,
+    "accepted_pairs": 13,
+    "side_records": 26,
     "duplicate_pairs_excluded": 0,
     "rejected_pairs": [],
     "rejection_counts": {},
@@ -389,18 +411,59 @@
         "bookmaker": "hkjc",
         "abs_handicap": 0.25,
         "side": "lower",
-        "venue": "home",
-        "odds_band": "1_75_to_1_85",
-        "odds_band_label": "1.75–1.85",
-        "matches": 2,
+        "venue": "away",
+        "odds_band": "1_90_to_2_00",
+        "odds_band_label": "1.90–2.00",
+        "matches": 1,
         "settlement_counts": {
           "full_win": 1,
           "half_win": 0,
           "push": 0,
           "half_loss": 0,
-          "full_loss": 1
+          "full_loss": 0
         },
-        "unit_stake_net_profit": -0.17,
+        "unit_stake_net_profit": 0.99,
+        "records": [
+          {
+            "match_id": "espn:401879258",
+            "kickoff_at": "2026-10-17T16:30:00+00:00",
+            "observed_at": "2026-10-17T16:15:03.024547+00:00",
+            "home": "Newcastle United",
+            "away": "Aston Villa",
+            "team": "Aston Villa",
+            "home_handicap": -0.25,
+            "venue": "away",
+            "decimal_odds": 1.99,
+            "final_score": [
+              0,
+              1
+            ],
+            "settlement": "full_win",
+            "unit_stake_net_profit": 0.99
+          }
+        ],
+        "positive_returns": 1,
+        "positive_return_rate": 1.0,
+        "full_win_rate": 1.0,
+        "unit_stake_roi": 0.99
+      },
+      {
+        "experiment_id": "f4-epl-ah-research-v1",
+        "bookmaker": "hkjc",
+        "abs_handicap": 0.25,
+        "side": "lower",
+        "venue": "home",
+        "odds_band": "1_75_to_1_85",
+        "odds_band_label": "1.75–1.85",
+        "matches": 4,
+        "settlement_counts": {
+          "full_win": 1,
+          "half_win": 0,
+          "push": 0,
+          "half_loss": 0,
+          "full_loss": 3
+        },
+        "unit_stake_net_profit": -2.17,
         "records": [
           {
             "match_id": "espn:401878772",
@@ -435,12 +498,46 @@
             ],
             "settlement": "full_win",
             "unit_stake_net_profit": 0.8300000000000001
+          },
+          {
+            "match_id": "espn:401878771",
+            "kickoff_at": "2026-10-17T11:30:00+00:00",
+            "observed_at": "2026-10-17T11:15:03.910519+00:00",
+            "home": "Everton",
+            "away": "Chelsea",
+            "team": "Everton",
+            "home_handicap": 0.25,
+            "venue": "home",
+            "decimal_odds": 1.85,
+            "final_score": [
+              0,
+              2
+            ],
+            "settlement": "full_loss",
+            "unit_stake_net_profit": -1.0
+          },
+          {
+            "match_id": "espn:401879262",
+            "kickoff_at": "2026-10-17T14:00:00+00:00",
+            "observed_at": "2026-10-17T13:44:19.952643+00:00",
+            "home": "Brentford",
+            "away": "Liverpool",
+            "team": "Brentford",
+            "home_handicap": 0.25,
+            "venue": "home",
+            "decimal_odds": 1.77,
+            "final_score": [
+              1,
+              2
+            ],
+            "settlement": "full_loss",
+            "unit_stake_net_profit": -1.0
           }
         ],
         "positive_returns": 1,
-        "positive_return_rate": 0.5,
-        "full_win_rate": 0.5,
-        "unit_stake_roi": -0.085
+        "positive_return_rate": 0.25,
+        "full_win_rate": 0.25,
+        "unit_stake_roi": -0.5425
       },
       {
         "experiment_id": "f4-epl-ah-research-v1",
@@ -566,15 +663,15 @@
         "venue": "away",
         "odds_band": "1_90_to_2_00",
         "odds_band_label": "1.90–2.00",
-        "matches": 1,
+        "matches": 2,
         "settlement_counts": {
-          "full_win": 0,
+          "full_win": 1,
           "half_win": 0,
           "push": 0,
           "half_loss": 0,
           "full_loss": 1
         },
-        "unit_stake_net_profit": -1.0,
+        "unit_stake_net_profit": -0.05,
         "records": [
           {
             "match_id": "espn:401879265",
@@ -592,12 +689,29 @@
             ],
             "settlement": "full_loss",
             "unit_stake_net_profit": -1.0
+          },
+          {
+            "match_id": "espn:401878771",
+            "kickoff_at": "2026-10-17T11:30:00+00:00",
+            "observed_at": "2026-10-17T11:15:03.910519+00:00",
+            "home": "Everton",
+            "away": "Chelsea",
+            "team": "Chelsea",
+            "home_handicap": 0.25,
+            "venue": "away",
+            "decimal_odds": 1.95,
+            "final_score": [
+              0,
+              2
+            ],
+            "settlement": "full_win",
+            "unit_stake_net_profit": 0.95
           }
         ],
-        "positive_returns": 0,
-        "positive_return_rate": 0.0,
-        "full_win_rate": 0.0,
-        "unit_stake_roi": -1.0
+        "positive_returns": 1,
+        "positive_return_rate": 0.5,
+        "full_win_rate": 0.5,
+        "unit_stake_roi": -0.025
       },
       {
         "experiment_id": "f4-epl-ah-research-v1",
@@ -607,15 +721,15 @@
         "venue": "away",
         "odds_band": "above_2_00",
         "odds_band_label": ">2.00",
-        "matches": 1,
+        "matches": 2,
         "settlement_counts": {
-          "full_win": 1,
+          "full_win": 2,
           "half_win": 0,
           "push": 0,
           "half_loss": 0,
           "full_loss": 0
         },
-        "unit_stake_net_profit": 1.03,
+        "unit_stake_net_profit": 2.07,
         "records": [
           {
             "match_id": "espn:401878772",
@@ -633,12 +747,70 @@
             ],
             "settlement": "full_win",
             "unit_stake_net_profit": 1.0299999999999998
+          },
+          {
+            "match_id": "espn:401879262",
+            "kickoff_at": "2026-10-17T14:00:00+00:00",
+            "observed_at": "2026-10-17T13:44:19.952643+00:00",
+            "home": "Brentford",
+            "away": "Liverpool",
+            "team": "Liverpool",
+            "home_handicap": 0.25,
+            "venue": "away",
+            "decimal_odds": 2.04,
+            "final_score": [
+              1,
+              2
+            ],
+            "settlement": "full_win",
+            "unit_stake_net_profit": 1.04
           }
         ],
-        "positive_returns": 1,
+        "positive_returns": 2,
         "positive_return_rate": 1.0,
         "full_win_rate": 1.0,
-        "unit_stake_roi": 1.03
+        "unit_stake_roi": 1.035
+      },
+      {
+        "experiment_id": "f4-epl-ah-research-v1",
+        "bookmaker": "hkjc",
+        "abs_handicap": 0.25,
+        "side": "upper",
+        "venue": "home",
+        "odds_band": "1_75_to_1_85",
+        "odds_band_label": "1.75–1.85",
+        "matches": 1,
+        "settlement_counts": {
+          "full_win": 0,
+          "half_win": 0,
+          "push": 0,
+          "half_loss": 0,
+          "full_loss": 1
+        },
+        "unit_stake_net_profit": -1.0,
+        "records": [
+          {
+            "match_id": "espn:401879258",
+            "kickoff_at": "2026-10-17T16:30:00+00:00",
+            "observed_at": "2026-10-17T16:15:03.024547+00:00",
+            "home": "Newcastle United",
+            "away": "Aston Villa",
+            "team": "Newcastle United",
+            "home_handicap": -0.25,
+            "venue": "home",
+            "decimal_odds": 1.81,
+            "final_score": [
+              0,
+              1
+            ],
+            "settlement": "full_loss",
+            "unit_stake_net_profit": -1.0
+          }
+        ],
+        "positive_returns": 0,
+        "positive_return_rate": 0.0,
+        "full_win_rate": 0.0,
+        "unit_stake_roi": -1.0
       },
       {
         "experiment_id": "f4-epl-ah-research-v1",
@@ -680,6 +852,47 @@
         "positive_return_rate": 0.0,
         "full_win_rate": 0.0,
         "unit_stake_roi": -1.0
+      },
+      {
+        "experiment_id": "f4-epl-ah-research-v1",
+        "bookmaker": "hkjc",
+        "abs_handicap": 0.75,
+        "side": "lower",
+        "venue": "away",
+        "odds_band": "1_90_to_2_00",
+        "odds_band_label": "1.90–2.00",
+        "matches": 1,
+        "settlement_counts": {
+          "full_win": 0,
+          "half_win": 0,
+          "push": 0,
+          "half_loss": 1,
+          "full_loss": 0
+        },
+        "unit_stake_net_profit": -0.5,
+        "records": [
+          {
+            "match_id": "espn:401878770",
+            "kickoff_at": "2026-10-17T14:00:00+00:00",
+            "observed_at": "2026-10-17T13:44:19.939728+00:00",
+            "home": "Fulham",
+            "away": "Hull City",
+            "team": "Hull City",
+            "home_handicap": -0.75,
+            "venue": "away",
+            "decimal_odds": 1.97,
+            "final_score": [
+              1,
+              0
+            ],
+            "settlement": "half_loss",
+            "unit_stake_net_profit": -0.5
+          }
+        ],
+        "positive_returns": 0,
+        "positive_return_rate": 0.0,
+        "full_win_rate": 0.0,
+        "unit_stake_roi": -0.5
       },
       {
         "experiment_id": "f4-epl-ah-research-v1",
@@ -730,15 +943,15 @@
         "venue": "home",
         "odds_band": "1_75_to_1_85",
         "odds_band_label": "1.75–1.85",
-        "matches": 1,
+        "matches": 2,
         "settlement_counts": {
           "full_win": 0,
-          "half_win": 0,
+          "half_win": 1,
           "push": 0,
           "half_loss": 0,
           "full_loss": 1
         },
-        "unit_stake_net_profit": -1.0,
+        "unit_stake_net_profit": -0.585,
         "records": [
           {
             "match_id": "espn:401878773",
@@ -756,12 +969,29 @@
             ],
             "settlement": "full_loss",
             "unit_stake_net_profit": -1.0
+          },
+          {
+            "match_id": "espn:401878770",
+            "kickoff_at": "2026-10-17T14:00:00+00:00",
+            "observed_at": "2026-10-17T13:44:19.939728+00:00",
+            "home": "Fulham",
+            "away": "Hull City",
+            "team": "Fulham",
+            "home_handicap": -0.75,
+            "venue": "home",
+            "decimal_odds": 1.83,
+            "final_score": [
+              1,
+              0
+            ],
+            "settlement": "half_win",
+            "unit_stake_net_profit": 0.41500000000000004
           }
         ],
-        "positive_returns": 0,
-        "positive_return_rate": 0.0,
+        "positive_returns": 1,
+        "positive_return_rate": 0.5,
         "full_win_rate": 0.0,
-        "unit_stake_roi": -1.0
+        "unit_stake_roi": -0.2925
       },
       {
         "experiment_id": "f4-epl-ah-research-v1",
@@ -885,13 +1115,95 @@
         "positive_return_rate": 0.0,
         "full_win_rate": 0.0,
         "unit_stake_roi": -0.5
+      },
+      {
+        "experiment_id": "f4-epl-ah-research-v1",
+        "bookmaker": "hkjc",
+        "abs_handicap": 1.75,
+        "side": "lower",
+        "venue": "away",
+        "odds_band": "above_2_00",
+        "odds_band_label": ">2.00",
+        "matches": 1,
+        "settlement_counts": {
+          "full_win": 1,
+          "half_win": 0,
+          "push": 0,
+          "half_loss": 0,
+          "full_loss": 0
+        },
+        "unit_stake_net_profit": 1.04,
+        "records": [
+          {
+            "match_id": "espn:401879259",
+            "kickoff_at": "2026-10-17T14:00:00+00:00",
+            "observed_at": "2026-10-17T13:44:19.946306+00:00",
+            "home": "Manchester City",
+            "away": "Ipswich Town",
+            "team": "Ipswich Town",
+            "home_handicap": -1.75,
+            "venue": "away",
+            "decimal_odds": 2.04,
+            "final_score": [
+              3,
+              2
+            ],
+            "settlement": "full_win",
+            "unit_stake_net_profit": 1.04
+          }
+        ],
+        "positive_returns": 1,
+        "positive_return_rate": 1.0,
+        "full_win_rate": 1.0,
+        "unit_stake_roi": 1.04
+      },
+      {
+        "experiment_id": "f4-epl-ah-research-v1",
+        "bookmaker": "hkjc",
+        "abs_handicap": 1.75,
+        "side": "upper",
+        "venue": "home",
+        "odds_band": "1_75_to_1_85",
+        "odds_band_label": "1.75–1.85",
+        "matches": 1,
+        "settlement_counts": {
+          "full_win": 0,
+          "half_win": 0,
+          "push": 0,
+          "half_loss": 0,
+          "full_loss": 1
+        },
+        "unit_stake_net_profit": -1.0,
+        "records": [
+          {
+            "match_id": "espn:401879259",
+            "kickoff_at": "2026-10-17T14:00:00+00:00",
+            "observed_at": "2026-10-17T13:44:19.946306+00:00",
+            "home": "Manchester City",
+            "away": "Ipswich Town",
+            "team": "Manchester City",
+            "home_handicap": -1.75,
+            "venue": "home",
+            "decimal_odds": 1.77,
+            "final_score": [
+              3,
+              2
+            ],
+            "settlement": "full_loss",
+            "unit_stake_net_profit": -1.0
+          }
+        ],
+        "positive_returns": 0,
+        "positive_return_rate": 0.0,
+        "full_win_rate": 0.0,
+        "unit_stake_roi": -1.0
       }
     ],
     "book_summaries": [
       {
         "experiment_id": "f4-epl-ah-research-v1",
         "bookmaker": "hkjc",
-        "paired_matches": 8,
+        "paired_matches": 13,
         "odds_band_groups": [
           {
             "side": "flat_away",
@@ -974,15 +1286,15 @@
             "odds_band": "1_75_to_1_85",
             "odds_band_label": "1.75–1.85",
             "aggregation": "all handicap sizes and venues within this experiment/bookmaker",
-            "matches": 3,
+            "matches": 5,
             "settlement_counts": {
               "full_win": 1,
               "half_win": 1,
               "push": 0,
               "half_loss": 0,
-              "full_loss": 1
+              "full_loss": 3
             },
-            "unit_stake_net_profit": 0.25,
+            "unit_stake_net_profit": -1.75,
             "records": [
               {
                 "match_id": "espn:401879268",
@@ -1034,12 +1346,46 @@
                 ],
                 "settlement": "full_win",
                 "unit_stake_net_profit": 0.8300000000000001
+              },
+              {
+                "match_id": "espn:401878771",
+                "kickoff_at": "2026-10-17T11:30:00+00:00",
+                "observed_at": "2026-10-17T11:15:03.910519+00:00",
+                "home": "Everton",
+                "away": "Chelsea",
+                "team": "Everton",
+                "home_handicap": 0.25,
+                "venue": "home",
+                "decimal_odds": 1.85,
+                "final_score": [
+                  0,
+                  2
+                ],
+                "settlement": "full_loss",
+                "unit_stake_net_profit": -1.0
+              },
+              {
+                "match_id": "espn:401879262",
+                "kickoff_at": "2026-10-17T14:00:00+00:00",
+                "observed_at": "2026-10-17T13:44:19.952643+00:00",
+                "home": "Brentford",
+                "away": "Liverpool",
+                "team": "Brentford",
+                "home_handicap": 0.25,
+                "venue": "home",
+                "decimal_odds": 1.77,
+                "final_score": [
+                  1,
+                  2
+                ],
+                "settlement": "full_loss",
+                "unit_stake_net_profit": -1.0
               }
             ],
             "positive_returns": 2,
-            "positive_return_rate": 0.6666666666666666,
-            "full_win_rate": 0.3333333333333333,
-            "unit_stake_roi": 0.08333333333333333
+            "positive_return_rate": 0.4,
+            "full_win_rate": 0.2,
+            "unit_stake_roi": -0.35
           },
           {
             "side": "lower",
@@ -1081,18 +1427,73 @@
           },
           {
             "side": "lower",
+            "odds_band": "1_90_to_2_00",
+            "odds_band_label": "1.90–2.00",
+            "aggregation": "all handicap sizes and venues within this experiment/bookmaker",
+            "matches": 2,
+            "settlement_counts": {
+              "full_win": 1,
+              "half_win": 0,
+              "push": 0,
+              "half_loss": 1,
+              "full_loss": 0
+            },
+            "unit_stake_net_profit": 0.49,
+            "records": [
+              {
+                "match_id": "espn:401878770",
+                "kickoff_at": "2026-10-17T14:00:00+00:00",
+                "observed_at": "2026-10-17T13:44:19.939728+00:00",
+                "home": "Fulham",
+                "away": "Hull City",
+                "team": "Hull City",
+                "home_handicap": -0.75,
+                "venue": "away",
+                "decimal_odds": 1.97,
+                "final_score": [
+                  1,
+                  0
+                ],
+                "settlement": "half_loss",
+                "unit_stake_net_profit": -0.5
+              },
+              {
+                "match_id": "espn:401879258",
+                "kickoff_at": "2026-10-17T16:30:00+00:00",
+                "observed_at": "2026-10-17T16:15:03.024547+00:00",
+                "home": "Newcastle United",
+                "away": "Aston Villa",
+                "team": "Aston Villa",
+                "home_handicap": -0.25,
+                "venue": "away",
+                "decimal_odds": 1.99,
+                "final_score": [
+                  0,
+                  1
+                ],
+                "settlement": "full_win",
+                "unit_stake_net_profit": 0.99
+              }
+            ],
+            "positive_returns": 1,
+            "positive_return_rate": 0.5,
+            "full_win_rate": 0.5,
+            "unit_stake_roi": 0.245
+          },
+          {
+            "side": "lower",
             "odds_band": "above_2_00",
             "odds_band_label": ">2.00",
             "aggregation": "all handicap sizes and venues within this experiment/bookmaker",
-            "matches": 3,
+            "matches": 4,
             "settlement_counts": {
-              "full_win": 2,
+              "full_win": 3,
               "half_win": 0,
               "push": 0,
               "half_loss": 0,
               "full_loss": 1
             },
-            "unit_stake_net_profit": 1.19,
+            "unit_stake_net_profit": 2.23,
             "records": [
               {
                 "match_id": "espn:401878773",
@@ -1144,12 +1545,29 @@
                 ],
                 "settlement": "full_win",
                 "unit_stake_net_profit": 1.1600000000000001
+              },
+              {
+                "match_id": "espn:401879259",
+                "kickoff_at": "2026-10-17T14:00:00+00:00",
+                "observed_at": "2026-10-17T13:44:19.946306+00:00",
+                "home": "Manchester City",
+                "away": "Ipswich Town",
+                "team": "Ipswich Town",
+                "home_handicap": -1.75,
+                "venue": "away",
+                "decimal_odds": 2.04,
+                "final_score": [
+                  3,
+                  2
+                ],
+                "settlement": "full_win",
+                "unit_stake_net_profit": 1.04
               }
             ],
-            "positive_returns": 2,
-            "positive_return_rate": 0.6666666666666666,
-            "full_win_rate": 0.6666666666666666,
-            "unit_stake_roi": 0.39666666666666667
+            "positive_returns": 3,
+            "positive_return_rate": 0.75,
+            "full_win_rate": 0.75,
+            "unit_stake_roi": 0.5575
           },
           {
             "side": "upper",
@@ -1211,15 +1629,15 @@
             "odds_band": "1_75_to_1_85",
             "odds_band_label": "1.75–1.85",
             "aggregation": "all handicap sizes and venues within this experiment/bookmaker",
-            "matches": 1,
+            "matches": 4,
             "settlement_counts": {
               "full_win": 0,
-              "half_win": 0,
+              "half_win": 1,
               "push": 0,
               "half_loss": 0,
-              "full_loss": 1
+              "full_loss": 3
             },
-            "unit_stake_net_profit": -1.0,
+            "unit_stake_net_profit": -2.585,
             "records": [
               {
                 "match_id": "espn:401878773",
@@ -1237,27 +1655,78 @@
                 ],
                 "settlement": "full_loss",
                 "unit_stake_net_profit": -1.0
+              },
+              {
+                "match_id": "espn:401878770",
+                "kickoff_at": "2026-10-17T14:00:00+00:00",
+                "observed_at": "2026-10-17T13:44:19.939728+00:00",
+                "home": "Fulham",
+                "away": "Hull City",
+                "team": "Fulham",
+                "home_handicap": -0.75,
+                "venue": "home",
+                "decimal_odds": 1.83,
+                "final_score": [
+                  1,
+                  0
+                ],
+                "settlement": "half_win",
+                "unit_stake_net_profit": 0.41500000000000004
+              },
+              {
+                "match_id": "espn:401879259",
+                "kickoff_at": "2026-10-17T14:00:00+00:00",
+                "observed_at": "2026-10-17T13:44:19.946306+00:00",
+                "home": "Manchester City",
+                "away": "Ipswich Town",
+                "team": "Manchester City",
+                "home_handicap": -1.75,
+                "venue": "home",
+                "decimal_odds": 1.77,
+                "final_score": [
+                  3,
+                  2
+                ],
+                "settlement": "full_loss",
+                "unit_stake_net_profit": -1.0
+              },
+              {
+                "match_id": "espn:401879258",
+                "kickoff_at": "2026-10-17T16:30:00+00:00",
+                "observed_at": "2026-10-17T16:15:03.024547+00:00",
+                "home": "Newcastle United",
+                "away": "Aston Villa",
+                "team": "Newcastle United",
+                "home_handicap": -0.25,
+                "venue": "home",
+                "decimal_odds": 1.81,
+                "final_score": [
+                  0,
+                  1
+                ],
+                "settlement": "full_loss",
+                "unit_stake_net_profit": -1.0
               }
             ],
-            "positive_returns": 0,
-            "positive_return_rate": 0.0,
+            "positive_returns": 1,
+            "positive_return_rate": 0.25,
             "full_win_rate": 0.0,
-            "unit_stake_roi": -1.0
+            "unit_stake_roi": -0.64625
           },
           {
             "side": "upper",
             "odds_band": "1_90_to_2_00",
             "odds_band_label": "1.90–2.00",
             "aggregation": "all handicap sizes and venues within this experiment/bookmaker",
-            "matches": 3,
+            "matches": 4,
             "settlement_counts": {
-              "full_win": 1,
+              "full_win": 2,
               "half_win": 0,
               "push": 0,
               "half_loss": 1,
               "full_loss": 1
             },
-            "unit_stake_net_profit": -0.54,
+            "unit_stake_net_profit": 0.41,
             "records": [
               {
                 "match_id": "espn:401879268",
@@ -1309,27 +1778,44 @@
                 ],
                 "settlement": "full_loss",
                 "unit_stake_net_profit": -1.0
+              },
+              {
+                "match_id": "espn:401878771",
+                "kickoff_at": "2026-10-17T11:30:00+00:00",
+                "observed_at": "2026-10-17T11:15:03.910519+00:00",
+                "home": "Everton",
+                "away": "Chelsea",
+                "team": "Chelsea",
+                "home_handicap": 0.25,
+                "venue": "away",
+                "decimal_odds": 1.95,
+                "final_score": [
+                  0,
+                  2
+                ],
+                "settlement": "full_win",
+                "unit_stake_net_profit": 0.95
               }
             ],
-            "positive_returns": 1,
-            "positive_return_rate": 0.3333333333333333,
-            "full_win_rate": 0.3333333333333333,
-            "unit_stake_roi": -0.18000000000000002
+            "positive_returns": 2,
+            "positive_return_rate": 0.5,
+            "full_win_rate": 0.5,
+            "unit_stake_roi": 0.1025
           },
           {
             "side": "upper",
             "odds_band": "above_2_00",
             "odds_band_label": ">2.00",
             "aggregation": "all handicap sizes and venues within this experiment/bookmaker",
-            "matches": 1,
+            "matches": 2,
             "settlement_counts": {
-              "full_win": 1,
+              "full_win": 2,
               "half_win": 0,
               "push": 0,
               "half_loss": 0,
               "full_loss": 0
             },
-            "unit_stake_net_profit": 1.03,
+            "unit_stake_net_profit": 2.07,
             "records": [
               {
                 "match_id": "espn:401878772",
@@ -1347,12 +1833,29 @@
                 ],
                 "settlement": "full_win",
                 "unit_stake_net_profit": 1.0299999999999998
+              },
+              {
+                "match_id": "espn:401879262",
+                "kickoff_at": "2026-10-17T14:00:00+00:00",
+                "observed_at": "2026-10-17T13:44:19.952643+00:00",
+                "home": "Brentford",
+                "away": "Liverpool",
+                "team": "Liverpool",
+                "home_handicap": 0.25,
+                "venue": "away",
+                "decimal_odds": 2.04,
+                "final_score": [
+                  1,
+                  2
+                ],
+                "settlement": "full_win",
+                "unit_stake_net_profit": 1.04
               }
             ],
-            "positive_returns": 1,
+            "positive_returns": 2,
             "positive_return_rate": 1.0,
             "full_win_rate": 1.0,
-            "unit_stake_roi": 1.03
+            "unit_stake_roi": 1.035
           }
         ]
       }
@@ -1373,30 +1876,32 @@
         "away_profit": 0.42000000000000004
       },
       "0.25": {
-        "matches": 4,
+        "matches": 6,
         "home": {
-          "full_loss": 2,
+          "full_loss": 4,
           "full_win": 2
         },
         "away": {
-          "full_win": 2,
+          "full_win": 4,
           "full_loss": 2
         },
-        "home_profit": -0.009999999999999787,
-        "away_profit": -0.2300000000000002
+        "home_profit": -2.01,
+        "away_profit": 1.7599999999999998
       },
       "-0.75": {
-        "matches": 2,
+        "matches": 3,
         "home": {
           "full_win": 1,
-          "full_loss": 1
+          "full_loss": 1,
+          "half_win": 1
         },
         "away": {
           "full_loss": 1,
-          "full_win": 1
+          "full_win": 1,
+          "half_loss": 1
         },
-        "home_profit": -0.040000000000000036,
-        "away_profit": 0.029999999999999805
+        "home_profit": 0.375,
+        "away_profit": -0.4700000000000002
       },
       "0.0": {
         "matches": 1,
@@ -1408,6 +1913,28 @@
         },
         "home_profit": 0.0,
         "away_profit": 0.0
+      },
+      "-1.75": {
+        "matches": 1,
+        "home": {
+          "full_loss": 1
+        },
+        "away": {
+          "full_win": 1
+        },
+        "home_profit": -1.0,
+        "away_profit": 1.04
+      },
+      "-0.25": {
+        "matches": 1,
+        "home": {
+          "full_loss": 1
+        },
+        "away": {
+          "full_win": 1
+        },
+        "home_profit": -1.0,
+        "away_profit": 0.99
       }
     }
   },
@@ -1419,22 +1946,22 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-17T22:14:07.980068Z",
+      "captured_at": "2026-10-17T22:14:17.728034Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-17T22:14:08.655974Z",
-      "content_sha256": "b3d36d0620fbe2749650a1bfb581f1c5c730f592ecf2617eb69766eb08a12083"
+      "captured_at": "2026-10-17T22:14:18.387539Z",
+      "content_sha256": "7de6c98fdcdec90e58cd62782c2955756775f1d1827601918c6a55bbcf58480b"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-17T22:14:09.746293Z",
-      "response_at": "2026-10-17T22:14:09Z",
+      "captured_at": "2026-10-17T22:14:18.445564Z",
+      "response_at": "2026-10-17T22:14:18Z",
       "content_sha256": "66ae0b95af5ee6da69d163877b83471eafac23093feab67b8abf2cf4720cebf8",
       "match_count": 149,
       "epl_match_count": 5
@@ -1451,28 +1978,28 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-17T22:14:08.655974Z"
+    "checked_at": "2026-10-17T22:14:18.387539Z"
   },
   "fallback_matches": [],
   "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 9,
+    "fixtures": 15,
     "windows": {
       "T-180m": {
         "recorded_research_only": 5,
         "complete_joint_market": 5,
-        "awaiting_window": 4
+        "awaiting_window": 10
       },
       "T-60m": {
         "recorded_research_only": 5,
         "complete_joint_market": 5,
-        "awaiting_window": 4
+        "awaiting_window": 10
       },
       "T-15m": {
         "recorded_research_only": 5,
         "complete_joint_market": 5,
-        "awaiting_window": 4
+        "awaiting_window": 10
       }
     }
   },
