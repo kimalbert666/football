@@ -1,18 +1,18 @@
 {
-  "captured_at": "2026-10-17T16:00:28.965302Z",
+  "captured_at": "2026-10-17T16:15:00.400919Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261017",
-      "captured_at": "2026-10-17T16:00:28.855492Z",
-      "content_sha256": "a8a77d8be1b5bca89ddaa203baf26137be0ac3a674b736834f5ab192367ccf58"
+      "captured_at": "2026-10-17T16:15:00.263427Z",
+      "content_sha256": "1ce95ded72953d81526c474246d311352c3c48166c4309efb8ffb150014ed8b4"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261018",
-      "captured_at": "2026-10-17T16:00:28.964646Z",
+      "captured_at": "2026-10-17T16:15:00.400147Z",
       "content_sha256": "9fee57366994ff314d161bcfa96099a982deda5f0c3da6abc113817f521e7518"
     }
   ],
@@ -63,8 +63,11 @@
       "home": "Manchester City",
       "away": "Ipswich Town",
       "kickoff_at": "2026-10-17T14:00:00Z",
-      "status": "live",
-      "score": null,
+      "status": "completed",
+      "score": [
+        3,
+        2
+      ],
       "market": null,
       "problems": []
     },
@@ -78,8 +81,11 @@
       "home": "Brentford",
       "away": "Liverpool",
       "kickoff_at": "2026-10-17T14:00:00Z",
-      "status": "live",
-      "score": null,
+      "status": "completed",
+      "score": [
+        1,
+        2
+      ],
       "market": null,
       "problems": []
     },

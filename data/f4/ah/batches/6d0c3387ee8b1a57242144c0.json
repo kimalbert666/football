@@ -1,13 +1,13 @@
 {
   "kickoff_at": "2026-10-17T16:30:00Z",
-  "updated_at": "2026-10-17T16:00:28.971674Z",
+  "updated_at": "2026-10-17T16:15:03.031428Z",
   "fixtures": [
     {
       "match_id": "espn:401879258",
       "home": "Newcastle United",
       "away": "Aston Villa",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "3f74ca5871456677f2b4945f5bb0ece670a4a538a817080801a638816e1911eb",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -26,12 +26,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-17T16:15:00Z",
           "closes_at": "2026-10-17T16:20:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "3f74ca5871456677f2b4945f5bb0ece670a4a538a817080801a638816e1911eb",
+          "same_bookmaker_1x2_available": true
         }
       }
     }
