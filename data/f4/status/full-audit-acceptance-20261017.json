@@ -1,0 +1,137 @@
+{
+  "checked_at": "2026-10-17T15:45:57.017601+00:00",
+  "main_head": "7f5fec2dd35b91f397a5cd3aa8a0c60d3df5d75f",
+  "repair_commit": "7f5fec2dd35b91f397a5cd3aa8a0c60d3df5d75f",
+  "acceptance_run": "https://github.com/kimalbert666/football/actions/runs/39046355551",
+  "acceptance_branch": "codex/f4-full-audit-20261017",
+  "cloud_tests": "611 passed, 177 subtests passed in 3.40s",
+  "code_blob_verification": true,
+  "preserved_immutable_records": 93,
+  "acceptance_isolated_from_live_collector": true,
+  "true_opening_source_connected": false,
+  "notification_policy_changed": false,
+  "model_weights_changed": false,
+  "live_worker_started_before_repair": true,
+  "new_worker_runtime_requires_next_run": true,
+  "live_record_check": {
+    "checked_at": "2026-10-17T15:32:50.208665+00:00",
+    "head": "53c800e92f2072d0a9655dc26409594d68721b5e",
+    "total_formal_observations": 35,
+    "today_observations": 14,
+    "active_run_id": "39037765624",
+    "snapshot_windows": [
+      {
+        "match_id": "espn:401879262",
+        "home": "Brentford",
+        "away": "Liverpool",
+        "horizon": "T-60m",
+        "observed_at": "2026-10-17T13:00:05.063227Z",
+        "actual_minutes": 59.91561288333333
+      },
+      {
+        "match_id": "espn:401879258",
+        "home": "Newcastle United",
+        "away": "Aston Villa",
+        "horizon": "T-180m",
+        "observed_at": "2026-10-17T13:30:13.373700Z",
+        "actual_minutes": 179.777105
+      },
+      {
+        "match_id": "espn:401879262",
+        "home": "Brentford",
+        "away": "Liverpool",
+        "horizon": "T-180m",
+        "observed_at": "2026-10-17T11:00:03.001136Z",
+        "actual_minutes": 179.94998106666665
+      },
+      {
+        "match_id": "espn:401878770",
+        "home": "Fulham",
+        "away": "Hull City",
+        "horizon": "T-15m",
+        "observed_at": "2026-10-17T13:44:19.939728Z",
+        "actual_minutes": 15.667671200000001
+      },
+      {
+        "match_id": "espn:401878770",
+        "home": "Fulham",
+        "away": "Hull City",
+        "horizon": "T-60m",
+        "observed_at": "2026-10-17T13:00:05.046464Z",
+        "actual_minutes": 59.91589226666667
+      },
+      {
+        "match_id": "espn:401879262",
+        "home": "Brentford",
+        "away": "Liverpool",
+        "horizon": "T-15m",
+        "observed_at": "2026-10-17T13:44:19.952643Z",
+        "actual_minutes": 15.66745595
+      },
+      {
+        "match_id": "espn:401879258",
+        "home": "Newcastle United",
+        "away": "Aston Villa",
+        "horizon": "T-60m",
+        "observed_at": "2026-10-17T15:30:05.782134Z",
+        "actual_minutes": 59.9036311
+      },
+      {
+        "match_id": "espn:401879259",
+        "home": "Manchester City",
+        "away": "Ipswich Town",
+        "horizon": "T-60m",
+        "observed_at": "2026-10-17T13:00:05.054997Z",
+        "actual_minutes": 59.91575005
+      },
+      {
+        "match_id": "espn:401878771",
+        "home": "Everton",
+        "away": "Chelsea",
+        "horizon": "T-60m",
+        "observed_at": "2026-10-17T10:30:03.821276Z",
+        "actual_minutes": 59.936312066666666
+      },
+      {
+        "match_id": "espn:401878771",
+        "home": "Everton",
+        "away": "Chelsea",
+        "horizon": "T-180m",
+        "observed_at": "2026-10-17T08:43:54.751885Z",
+        "actual_minutes": 166.08746858333333
+      },
+      {
+        "match_id": "espn:401879259",
+        "home": "Manchester City",
+        "away": "Ipswich Town",
+        "horizon": "T-180m",
+        "observed_at": "2026-10-17T11:00:02.992851Z",
+        "actual_minutes": 179.95011914999998
+      },
+      {
+        "match_id": "espn:401878771",
+        "home": "Everton",
+        "away": "Chelsea",
+        "horizon": "T-15m",
+        "observed_at": "2026-10-17T11:15:03.910519Z",
+        "actual_minutes": 14.934824683333334
+      },
+      {
+        "match_id": "espn:401878770",
+        "home": "Fulham",
+        "away": "Hull City",
+        "horizon": "T-180m",
+        "observed_at": "2026-10-17T11:00:02.984327Z",
+        "actual_minutes": 179.95026121666666
+      },
+      {
+        "match_id": "espn:401879259",
+        "home": "Manchester City",
+        "away": "Ipswich Town",
+        "horizon": "T-15m",
+        "observed_at": "2026-10-17T13:44:19.946306Z",
+        "actual_minutes": 15.667561566666667
+      }
+    ]
+  }
+}
