@@ -1,18 +1,18 @@
 {
-  "captured_at": "2026-10-17T11:15:00.281977Z",
+  "captured_at": "2026-10-17T11:45:07.720649Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261017",
-      "captured_at": "2026-10-17T11:15:00.174348Z",
-      "content_sha256": "28f2d0c80a8898b30e8a7af46fb591a2a0b6f3d37024d84cd06c92fe5879fb98"
+      "captured_at": "2026-10-17T11:45:07.644998Z",
+      "content_sha256": "c7820559131013658b69746fa60289974943f82f85609960c8330659b39a417d"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261018",
-      "captured_at": "2026-10-17T11:15:00.280949Z",
+      "captured_at": "2026-10-17T11:45:07.719594Z",
       "content_sha256": "3f3a176915aa11fe195ff80deb6c268a247dc97857fff3e7a4717d8ae158ce38"
     }
   ],
@@ -27,7 +27,7 @@
       "home": "Everton",
       "away": "Chelsea",
       "kickoff_at": "2026-10-17T11:30:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
