@@ -1,8 +1,8 @@
 {
-  "evaluated_at": "2026-10-17T10:14:21.630105Z",
-  "new_valid": 0,
-  "new_attempts": 0,
-  "valid_observations": 22,
+  "evaluated_at": "2026-10-17T10:30:03.838449Z",
+  "new_valid": 1,
+  "new_attempts": 1,
+  "valid_observations": 23,
   "distinct_matches": 9,
   "paired_matches": 8,
   "pairing_issues": {},
@@ -1417,24 +1417,24 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-17T09:44:17.756071Z",
+      "captured_at": "2026-10-17T10:30:01.114238Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-17T09:44:18.393303Z",
-      "content_sha256": "935b43280866c3540be06110d874067e3dfe7840005ed315edffc3bc42ea80ab"
+      "captured_at": "2026-10-17T10:30:01.767367Z",
+      "content_sha256": "b977646feadd6999075efca3c99adf437731b4040659960c625c3a8773b17523"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-17T09:44:19.697432Z",
-      "response_at": "2026-10-17T09:44:19Z",
-      "content_sha256": "3f4b3c7aee2e9a53afae905f6a319497f768e602f1b8f3c5ccaba967b4cf04c7",
-      "match_count": 237,
+      "captured_at": "2026-10-17T10:30:03.808604Z",
+      "response_at": "2026-10-17T10:30:03Z",
+      "content_sha256": "1f2e3e944548baeffdcaf85d585463d1c9319dc1ef528e15becd459456a7fb93",
+      "match_count": 236,
       "epl_match_count": 10
     }
   ],
@@ -1449,10 +1449,12 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-17T09:44:18.393303Z"
+    "checked_at": "2026-10-17T10:30:01.767367Z"
   },
-  "fallback_matches": [],
-  "quote_availability": "not_tested_no_due_matches",
+  "fallback_matches": [
+    "espn:401878771"
+  ],
+  "quote_availability": "complete",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
     "fixtures": 9,
@@ -1463,7 +1465,9 @@
         "awaiting_window": 8
       },
       "T-60m": {
-        "awaiting_window": 9
+        "recorded_research_only": 1,
+        "complete_joint_market": 1,
+        "awaiting_window": 8
       },
       "T-15m": {
         "awaiting_window": 9
