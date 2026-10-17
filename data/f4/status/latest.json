@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-10-17T11:00:20.400279Z",
+  "checked_at": "2026-10-17T11:15:05.613555Z",
   "command": "capture",
   "mode": "shadow",
-  "new_predictions": 3,
-  "new_valid_predictions": 3,
+  "new_predictions": 0,
+  "new_valid_predictions": 0,
   "new_outcomes": 0,
-  "due_fixtures": 3,
+  "due_fixtures": 0,
   "tracked_fixtures_seen": 9,
   "skipped": [],
   "legacy_deferred": null,
@@ -169,77 +169,24 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261017",
-        "captured_at": "2026-10-17T11:00:00.195244Z",
-        "content_sha256": "cc1cd61f1fedde3bb2f966af7a583f830beaf7c6aab056759127dc09ba1f3c83"
+        "captured_at": "2026-10-17T11:15:00.174348Z",
+        "content_sha256": "28f2d0c80a8898b30e8a7af46fb591a2a0b6f3d37024d84cd06c92fe5879fb98"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261018",
-        "captured_at": "2026-10-17T11:00:00.323158Z",
+        "captured_at": "2026-10-17T11:15:00.280949Z",
         "content_sha256": "3f3a176915aa11fe195ff80deb6c268a247dc97857fff3e7a4717d8ae158ce38"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2.titan007.com/Company.js",
-        "status": "ok",
-        "captured_at": "2026-10-17T11:00:06.636650Z",
-        "content_sha256": "dc86391e88b7c0f601a561f2cc847e5abda654473c5eae14727641ce56ddf35d"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2.titan007.com/index_vip.aspx",
-        "status": "ok",
-        "captured_at": "2026-10-17T11:00:10.194829Z",
-        "content_sha256": "4ee02af01a535ab44a697aff94058d265ed9b628ad631ecb256d67835ed83a87"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2.titan007.com/TomorrowOdds.aspx",
-        "status": "ok",
-        "captured_at": "2026-10-17T11:00:13.836454Z",
-        "content_sha256": "ee9e90b5a1b4b9a88d1f5b7cf83d03a8e6868513f53d6eea4dda3d41ef8c36fc"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003910.js",
-        "status": "ok",
-        "captured_at": "2026-10-17T11:00:15.086875Z",
-        "content_sha256": "ad7536b490ef155b23ac3bde2dd3d4d48aa67baa2d2dd24b1fb08ba35951624a"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003913.js",
-        "status": "ok",
-        "captured_at": "2026-10-17T11:00:17.572877Z",
-        "content_sha256": "9450ad1c84cb234afbb37c97846e105456f1717a5cd25084b6c0ff65d2018f75"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003915.js",
-        "status": "ok",
-        "captured_at": "2026-10-17T11:00:18.783644Z",
-        "content_sha256": "006fcd9f12aa4fecb2406443ced9d87d167ecc790719a5e96a76926d8d7c7570"
       }
     ]
   },
-  "f2_problems": [
-    "f2 row 0 rejected: an explicit kickoff/decision time is required",
-    "f2 row 1 rejected: an explicit kickoff/decision time is required",
-    "f2 row 2 rejected: an explicit kickoff/decision time is required",
-    "f2 row 3 rejected: an explicit kickoff/decision time is required",
-    "f2 row 4 rejected: an explicit kickoff/decision time is required",
-    "f2 row 5 rejected: unknown or ambiguous source teams",
-    "f2 row 6 rejected: an explicit kickoff/decision time is required",
-    "f2 row 7 rejected: an explicit kickoff/decision time is required",
-    "f2 row 8 rejected: an explicit kickoff/decision time is required",
-    "f2 row 9 rejected: an explicit kickoff/decision time is required"
-  ],
+  "f2_problems": [],
   "automatic_promotion": false,
   "automatic_wagering": false,
   "asian_handicap": {
-    "new_valid": 3,
-    "new_attempts": 3,
+    "new_valid": 1,
+    "new_attempts": 1,
     "distinct_matches": 12,
     "paired_matches": 8,
     "problems": [
@@ -252,9 +199,7 @@
       "hkjc-direct": []
     },
     "fallback_matches": [
-      "espn:401878770",
-      "espn:401879259",
-      "espn:401879262"
+      "espn:401878771"
     ],
     "quote_availability": "complete"
   }
