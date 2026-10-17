@@ -1,29 +1,83 @@
 {
-  "checked_at": "2026-10-17T14:44:28.634220Z",
-  "markets": {},
+  "checked_at": "2026-10-17T15:30:05.780343Z",
+  "markets": {
+    "espn:401879258": {
+      "bookmaker": "hkjc",
+      "captured_at": "2026-10-17T15:30:05.773625Z",
+      "snapshot_at": "2026-10-17T15:30:05Z",
+      "source": "hkjc-direct",
+      "url": "https://info.cld.hkjc.com/graphql/base/",
+      "content_sha256": "e1daf3a416ae43baf585d550b077a71a3e8ed65b34f540beb663d8a462d1c692",
+      "provider_event_id": "50076447",
+      "provider_kickoff_at": "2026-10-18T00:30:00.000+08:00",
+      "home_handicap": -0.25,
+      "odds": [
+        1.94,
+        1.86
+      ],
+      "published_at": "2026-10-15T11:35:15.818000Z",
+      "raw_condition": "0.0/-0.5",
+      "provider_main": true,
+      "market": "90min_asian_handicap",
+      "lines": [
+        {
+          "home_handicap": -0.25,
+          "odds": [
+            1.94,
+            1.86
+          ],
+          "published_at": "2026-10-15T11:35:15.818000Z",
+          "raw_condition": "0.0/-0.5",
+          "provider_main": true
+        }
+      ],
+      "line_selection": "provider_main",
+      "market_1x2": {
+        "bookmaker": "hkjc",
+        "captured_at": "2026-10-17T15:30:05.773625Z",
+        "snapshot_at": "2026-10-17T15:30:05Z",
+        "source": "hkjc-direct",
+        "url": "https://info.cld.hkjc.com/graphql/base/",
+        "content_sha256": "e1daf3a416ae43baf585d550b077a71a3e8ed65b34f540beb663d8a462d1c692",
+        "provider_event_id": "50076447",
+        "provider_kickoff_at": "2026-10-18T00:30:00.000+08:00",
+        "market": "90min_1x2",
+        "odds": [
+          2.08,
+          3.5,
+          2.77
+        ],
+        "published_at": "2026-10-15T11:35:15.818000Z"
+      },
+      "opening_lines": [],
+      "market_status": "official_provider_reports_selling",
+      "freshness_evidence": "current official HTTP response, cache <=60s, PREEVENT and selling pool status",
+      "provenance": "HKJC public website response; publication time is last pool change, no execution guarantee"
+    }
+  },
   "sources": [
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-17T14:44:26.511132Z",
+      "captured_at": "2026-10-17T15:30:03.745560Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-17T14:44:27.137002Z",
-      "content_sha256": "87e022c2ddd91ec7339bf831800980070675263385fa54b586f35aa9cf0abf59"
+      "captured_at": "2026-10-17T15:30:04.363293Z",
+      "content_sha256": "b4c61852360578af4ec6a43fc6c0a907f510152b23ad22b794acb920f1472805"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-17T14:44:28.627441Z",
-      "response_at": "2026-10-17T14:44:28Z",
-      "content_sha256": "d50ca156b737b374d6531f01ba7bc654565a3bad639b80b09ba9c8d00db9701a",
-      "match_count": 188,
+      "captured_at": "2026-10-17T15:30:05.773625Z",
+      "response_at": "2026-10-17T15:30:05Z",
+      "content_sha256": "e1daf3a416ae43baf585d550b077a71a3e8ed65b34f540beb663d8a462d1c692",
+      "match_count": 182,
       "epl_match_count": 9
     }
   ],
@@ -41,9 +95,11 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-17T14:44:27.137002Z"
+    "checked_at": "2026-10-17T15:30:04.363293Z"
   },
-  "fallback_matches": [],
+  "fallback_matches": [
+    "espn:401879258"
+  ],
   "unresolved_matches": [],
-  "quote_availability": "not_tested_no_due_matches"
+  "quote_availability": "complete"
 }
