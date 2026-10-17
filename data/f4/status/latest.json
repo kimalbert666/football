@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-17T11:45:07.731249Z",
+  "checked_at": "2026-10-17T12:15:27.324325Z",
   "command": "capture",
   "mode": "shadow",
   "new_predictions": 0,
@@ -169,14 +169,14 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261017",
-        "captured_at": "2026-10-17T11:45:07.644998Z",
-        "content_sha256": "c7820559131013658b69746fa60289974943f82f85609960c8330659b39a417d"
+        "captured_at": "2026-10-17T12:15:09.643108Z",
+        "content_sha256": "af4495789fee100a5eabe262a3ee775bfc8916635938e91bd2a123943a0f1391"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261018",
-        "captured_at": "2026-10-17T11:45:07.719594Z",
+        "captured_at": "2026-10-17T12:15:09.732704Z",
         "content_sha256": "3f3a176915aa11fe195ff80deb6c268a247dc97857fff3e7a4717d8ae158ce38"
       }
     ]
@@ -198,9 +198,7 @@
       ],
       "hkjc-direct": []
     },
-    "fallback_matches": [
-      "espn:401878771"
-    ],
-    "quote_availability": "complete"
+    "fallback_matches": [],
+    "quote_availability": "not_tested_no_due_matches"
   }
 }
