@@ -1,6 +1,6 @@
 {
   "kickoff_at": "2026-10-17T14:00:00Z",
-  "updated_at": "2026-10-17T10:30:03.830831Z",
+  "updated_at": "2026-10-17T11:00:03.010370Z",
   "fixtures": [
     {
       "match_id": "espn:401878770",
@@ -10,12 +10,12 @@
       "observation_id": null,
       "windows": {
         "T-180m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-17T11:00:00Z",
           "closes_at": "2026-10-17T11:20:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "e701365e0fe3c73797add3ab36116f11f52c9661c28b0bf41ba9f992022ba766",
+          "same_bookmaker_1x2_available": true
         },
         "T-60m": {
           "status": "awaiting_window",
@@ -43,12 +43,12 @@
       "observation_id": null,
       "windows": {
         "T-180m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-17T11:00:00Z",
           "closes_at": "2026-10-17T11:20:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "b54757614f5cdb0bf5c7f18e42bf228f1d59cc3f0bd3a568db0ad46bda7a15bc",
+          "same_bookmaker_1x2_available": true
         },
         "T-60m": {
           "status": "awaiting_window",
@@ -76,12 +76,12 @@
       "observation_id": null,
       "windows": {
         "T-180m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-17T11:00:00Z",
           "closes_at": "2026-10-17T11:20:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "284ff5e4f5f5acd91eafed63c969c15fd5af2fa0baa53750e67b0e1ac0e136ec",
+          "same_bookmaker_1x2_available": true
         },
         "T-60m": {
           "status": "awaiting_window",

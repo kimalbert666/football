@@ -1,0 +1,597 @@
+{
+  "match_id": "espn:401878770",
+  "provider": "espn",
+  "source_event_id": "401878770",
+  "home_id": "fulham",
+  "away_id": "hull-city",
+  "home": "Fulham",
+  "away": "Hull City",
+  "kickoff_at": "2026-10-17T14:00:00Z",
+  "league": "england-premier",
+  "schema_version": 1,
+  "experiment_id": "f4-epl-ah-research-v1",
+  "observed_at": "2026-10-17T11:00:02.984327Z",
+  "horizon": "T-180m",
+  "actual_minutes": 179.95026121666666,
+  "quote": {
+    "bookmaker": "hkjc",
+    "captured_at": "2026-10-17T11:00:02.971269Z",
+    "snapshot_at": "2026-10-17T11:00:02Z",
+    "source": "hkjc-direct",
+    "url": "https://info.cld.hkjc.com/graphql/base/",
+    "content_sha256": "47f24773d9a1626be99829920be76f3a3eb3caed8ad29d42b4e46d78df40e3af",
+    "provider_event_id": "50076444",
+    "provider_kickoff_at": "2026-10-17T22:00:00.000+08:00",
+    "home_handicap": -0.75,
+    "odds": [
+      1.78,
+      2.03
+    ],
+    "published_at": "2026-10-15T11:30:01.796000Z",
+    "raw_condition": "-0.5/-1.0",
+    "provider_main": true,
+    "market": "90min_asian_handicap",
+    "lines": [
+      {
+        "home_handicap": -0.75,
+        "odds": [
+          1.78,
+          2.03
+        ],
+        "published_at": "2026-10-15T11:30:01.796000Z",
+        "raw_condition": "-0.5/-1.0",
+        "provider_main": true
+      }
+    ],
+    "line_selection": "provider_main",
+    "market_1x2": {
+      "bookmaker": "hkjc",
+      "captured_at": "2026-10-17T11:00:02.971269Z",
+      "snapshot_at": "2026-10-17T11:00:02Z",
+      "source": "hkjc-direct",
+      "url": "https://info.cld.hkjc.com/graphql/base/",
+      "content_sha256": "47f24773d9a1626be99829920be76f3a3eb3caed8ad29d42b4e46d78df40e3af",
+      "provider_event_id": "50076444",
+      "provider_kickoff_at": "2026-10-17T22:00:00.000+08:00",
+      "market": "90min_1x2",
+      "odds": [
+        1.51,
+        3.85,
+        4.85
+      ],
+      "published_at": "2026-10-15T11:30:01.796000Z"
+    },
+    "opening_lines": [],
+    "market_status": "official_provider_reports_selling",
+    "freshness_evidence": "current official HTTP response, cache <=60s, PREEVENT and selling pool status",
+    "provenance": "HKJC public website response; publication time is last pool change, no execution guarantee"
+  },
+  "bookmaker": "hkjc",
+  "p_1x2": [
+    0.5870101699177919,
+    0.23022996274697807,
+    0.18275986733523006
+  ],
+  "quote_1x2": {
+    "bookmaker": "hkjc",
+    "captured_at": "2026-10-17T11:00:02.971269Z",
+    "snapshot_at": "2026-10-17T11:00:02Z",
+    "source": "hkjc-direct",
+    "url": "https://info.cld.hkjc.com/graphql/base/",
+    "content_sha256": "47f24773d9a1626be99829920be76f3a3eb3caed8ad29d42b4e46d78df40e3af",
+    "provider_event_id": "50076444",
+    "provider_kickoff_at": "2026-10-17T22:00:00.000+08:00",
+    "market": "90min_1x2",
+    "odds": [
+      1.51,
+      3.85,
+      4.85
+    ],
+    "published_at": "2026-10-15T11:30:01.796000Z"
+  },
+  "ratings": {
+    "home": 1462.4355281220462,
+    "away": 1507.9881207796009,
+    "observed_at": "2026-10-17T01:31:11.862987Z",
+    "retrieved_at": "2026-10-17T01:31:11.862987Z",
+    "source": "verified-espn-season-results-elo-k20-ha60-v1",
+    "prior_games": [
+      6,
+      6
+    ],
+    "snapshot_sha256": "1d0f1ab63c4a502fa3ce04b8fca315a4ab07d2e55e29a61fd518341a88b6e96f",
+    "season_year": 2026,
+    "result_count": 60,
+    "availability": "genuinely_retrieved_before_future_decision_only",
+    "latest_result_kickoff_at": "2026-10-12T19:00:00Z"
+  },
+  "context": {
+    "schema": "f4-prematch-context-observed-v1",
+    "observed_at": "2026-10-17T01:31:14.220290Z",
+    "snapshot_sha256": "30d134413ca6ab9fa74a42187b52f57c717ce49892e41f0691794263a9037d6f",
+    "season_year": 2026,
+    "model_feature_status": "context_only_not_used_in_current_M1_M2_M3",
+    "home": {
+      "availability": {
+        "confirmed_absences": null,
+        "flag_counts": {
+          "a": 23,
+          "d": 3,
+          "u": 2
+        },
+        "flagged_players": [
+          {
+            "category": "unavailable_not_necessarily_injured",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-09-01T13:25:11.231240Z",
+            "player_id": "252",
+            "status": "u"
+          },
+          {
+            "category": "doubtful",
+            "chance_of_playing_next_round": 75,
+            "chance_of_playing_this_round": 75,
+            "news_added": "2026-10-09T11:30:11.109085Z",
+            "player_id": "254",
+            "status": "d"
+          },
+          {
+            "category": "doubtful",
+            "chance_of_playing_next_round": 75,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-08-14T18:00:06.460944Z",
+            "player_id": "266",
+            "status": "d"
+          },
+          {
+            "category": "unavailable_not_necessarily_injured",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-08-28T11:30:08.336405Z",
+            "player_id": "610",
+            "status": "u"
+          },
+          {
+            "category": "doubtful",
+            "chance_of_playing_next_round": 25,
+            "chance_of_playing_this_round": null,
+            "news_added": "2026-10-16T17:30:09.637224Z",
+            "player_id": "635",
+            "status": "d"
+          }
+        ],
+        "interpretation": "availability_flags_are_not_confirmed_absences",
+        "observed_at": "2026-10-17T01:31:12.103783Z",
+        "roster_count": 28,
+        "source": "fpl-reported",
+        "status": "reported_flags"
+      },
+      "club_schedule": {
+        "coverage": "reported_formal_club_matches_only_not_individual_or_international_rest",
+        "last_formal_games": [
+          {
+            "competition": "eng.1",
+            "kickoff_at": "2026-09-05T14:00:00Z",
+            "match_id": "espn:401879289"
+          },
+          {
+            "competition": "eng.1",
+            "kickoff_at": "2026-09-12T14:00:00Z",
+            "match_id": "espn:401879279"
+          },
+          {
+            "competition": "eng.league_cup",
+            "kickoff_at": "2026-09-15T18:45:00Z",
+            "match_id": "espn:401914283"
+          },
+          {
+            "competition": "eng.1",
+            "kickoff_at": "2026-09-20T15:30:00Z",
+            "match_id": "espn:401878777"
+          },
+          {
+            "competition": "eng.1",
+            "kickoff_at": "2026-10-10T14:00:00Z",
+            "match_id": "espn:401879265"
+          }
+        ],
+        "observed_at": "2026-10-17T01:31:13.739696Z",
+        "provider_team_id": "370",
+        "source": "espn-all-team-schedule",
+        "status": "available",
+        "previous_formal_kickoff_at": "2026-10-10T14:00:00Z",
+        "kickoff_gap_hours": 168.0,
+        "interpretation": "club_kickoff_gap_not_confirmed_player_rest"
+      },
+      "xg_history": {
+        "date_policy": "completed_matches_strictly_before_observation_calendar_date",
+        "historical_publication_time_verified": false,
+        "last_five": [
+          {
+            "match_date": "2026-08-30",
+            "opponent_id": "sunderland",
+            "source_match_id": "31195",
+            "venue": "away",
+            "xg_against": 1.56229,
+            "xg_for": 1.02405
+          },
+          {
+            "match_date": "2026-09-05",
+            "opponent_id": "crystal-palace",
+            "source_match_id": "31204",
+            "venue": "home",
+            "xg_against": 2.35981,
+            "xg_for": 2.88274
+          },
+          {
+            "match_date": "2026-09-12",
+            "opponent_id": "liverpool",
+            "source_match_id": "31214",
+            "venue": "away",
+            "xg_against": 1.79832,
+            "xg_for": 0.922453
+          },
+          {
+            "match_date": "2026-09-20",
+            "opponent_id": "man-united",
+            "source_match_id": "31229",
+            "venue": "home",
+            "xg_against": 2.12453,
+            "xg_for": 1.71719
+          },
+          {
+            "match_date": "2026-10-10",
+            "opponent_id": "ipswich",
+            "source_match_id": "31233",
+            "venue": "away",
+            "xg_against": 1.25918,
+            "xg_for": 1.77856
+          }
+        ],
+        "mean_xg_against_last_five": 1.8208259999999998,
+        "mean_xg_for_last_five": 1.6649986,
+        "observed_at": "2026-10-17T01:31:13.376248Z",
+        "prior_match_count": 6,
+        "source": "understat",
+        "status": "available"
+      }
+    },
+    "away": {
+      "availability": {
+        "confirmed_absences": null,
+        "flag_counts": {
+          "a": 25,
+          "i": 9,
+          "u": 9
+        },
+        "flagged_players": [
+          {
+            "category": "injury_reported",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-08-08T19:00:05.601633Z",
+            "player_id": "274",
+            "status": "i"
+          },
+          {
+            "category": "unavailable_not_necessarily_injured",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-07-29T13:00:27.959925Z",
+            "player_id": "275",
+            "status": "u"
+          },
+          {
+            "category": "unavailable_not_necessarily_injured",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-08-17T13:50:27.125537Z",
+            "player_id": "276",
+            "status": "u"
+          },
+          {
+            "category": "injury_reported",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-08-02T09:00:11.030017Z",
+            "player_id": "278",
+            "status": "i"
+          },
+          {
+            "category": "unavailable_not_necessarily_injured",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-09-02T16:09:06.479140Z",
+            "player_id": "281",
+            "status": "u"
+          },
+          {
+            "category": "unavailable_not_necessarily_injured",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-08-02T09:00:11.038361Z",
+            "player_id": "283",
+            "status": "u"
+          },
+          {
+            "category": "unavailable_not_necessarily_injured",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-09-02T15:36:41.038103Z",
+            "player_id": "287",
+            "status": "u"
+          },
+          {
+            "category": "injury_reported",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-07-23T12:01:23.532635Z",
+            "player_id": "291",
+            "status": "i"
+          },
+          {
+            "category": "unavailable_not_necessarily_injured",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-08-12T14:08:23.542043Z",
+            "player_id": "293",
+            "status": "u"
+          },
+          {
+            "category": "unavailable_not_necessarily_injured",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-09-11T14:42:38.120231Z",
+            "player_id": "296",
+            "status": "u"
+          },
+          {
+            "category": "injury_reported",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-08-04T18:30:11.027155Z",
+            "player_id": "297",
+            "status": "i"
+          },
+          {
+            "category": "unavailable_not_necessarily_injured",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-08-17T13:50:27.145733Z",
+            "player_id": "298",
+            "status": "u"
+          },
+          {
+            "category": "unavailable_not_necessarily_injured",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-08-03T14:05:20.234842Z",
+            "player_id": "299",
+            "status": "u"
+          },
+          {
+            "category": "injury_reported",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-09-17T14:00:26.419938Z",
+            "player_id": "556",
+            "status": "i"
+          },
+          {
+            "category": "injury_reported",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 100,
+            "news_added": "2026-10-16T12:30:09.976274Z",
+            "player_id": "586",
+            "status": "i"
+          },
+          {
+            "category": "injury_reported",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": null,
+            "news_added": "2026-10-16T13:00:08.314070Z",
+            "player_id": "589",
+            "status": "i"
+          },
+          {
+            "category": "injury_reported",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": null,
+            "news_added": "2026-10-16T17:30:09.623338Z",
+            "player_id": "617",
+            "status": "i"
+          },
+          {
+            "category": "injury_reported",
+            "chance_of_playing_next_round": 0,
+            "chance_of_playing_this_round": 0,
+            "news_added": "2026-09-09T10:00:08.919489Z",
+            "player_id": "632",
+            "status": "i"
+          }
+        ],
+        "interpretation": "availability_flags_are_not_confirmed_absences",
+        "observed_at": "2026-10-17T01:31:12.103783Z",
+        "roster_count": 43,
+        "source": "fpl-reported",
+        "status": "reported_flags"
+      },
+      "club_schedule": {
+        "coverage": "reported_formal_club_matches_only_not_individual_or_international_rest",
+        "last_formal_games": [
+          {
+            "competition": "eng.1",
+            "kickoff_at": "2026-09-05T16:30:00Z",
+            "match_id": "espn:401878781"
+          },
+          {
+            "competition": "eng.league_cup",
+            "kickoff_at": "2026-09-08T18:45:00Z",
+            "match_id": "espn:401914259"
+          },
+          {
+            "competition": "eng.1",
+            "kickoff_at": "2026-09-12T14:00:00Z",
+            "match_id": "espn:401879283"
+          },
+          {
+            "competition": "eng.1",
+            "kickoff_at": "2026-09-19T14:00:00Z",
+            "match_id": "espn:401879271"
+          },
+          {
+            "competition": "eng.1",
+            "kickoff_at": "2026-10-11T13:00:00Z",
+            "match_id": "espn:401878774"
+          }
+        ],
+        "observed_at": "2026-10-17T01:31:13.808674Z",
+        "provider_team_id": "306",
+        "source": "espn-all-team-schedule",
+        "status": "available",
+        "previous_formal_kickoff_at": "2026-10-11T13:00:00Z",
+        "kickoff_gap_hours": 145.0,
+        "interpretation": "club_kickoff_gap_not_confirmed_player_rest"
+      },
+      "xg_history": {
+        "date_policy": "completed_matches_strictly_before_observation_calendar_date",
+        "historical_publication_time_verified": false,
+        "last_five": [
+          {
+            "match_date": "2026-08-29",
+            "opponent_id": "coventry",
+            "source_match_id": "31192",
+            "venue": "away",
+            "xg_against": 1.18233,
+            "xg_for": 0.459726
+          },
+          {
+            "match_date": "2026-09-05",
+            "opponent_id": "aston-villa",
+            "source_match_id": "31207",
+            "venue": "home",
+            "xg_against": 1.63526,
+            "xg_for": 0.812385
+          },
+          {
+            "match_date": "2026-09-12",
+            "opponent_id": "chelsea",
+            "source_match_id": "31212",
+            "venue": "away",
+            "xg_against": 1.21374,
+            "xg_for": 1.80363
+          },
+          {
+            "match_date": "2026-09-19",
+            "opponent_id": "newcastle",
+            "source_match_id": "31223",
+            "venue": "away",
+            "xg_against": 1.37521,
+            "xg_for": 1.15888
+          },
+          {
+            "match_date": "2026-10-11",
+            "opponent_id": "everton",
+            "source_match_id": "31237",
+            "venue": "home",
+            "xg_against": 2.79588,
+            "xg_for": 1.53245
+          }
+        ],
+        "mean_xg_against_last_five": 1.640484,
+        "mean_xg_for_last_five": 1.1534141999999998,
+        "observed_at": "2026-10-17T01:31:13.376248Z",
+        "prior_match_count": 6,
+        "source": "understat",
+        "status": "available"
+      }
+    }
+  },
+  "context_feature_policy": "stored_for_future_protocol_not_used_by_v2",
+  "early_quote": {
+    "observed_at": "2026-10-16T01:15:45.267728Z",
+    "home_handicap": -0.75,
+    "odds": [
+      1.83,
+      1.93
+    ],
+    "fixed_line_home_handicap": -0.75,
+    "fixed_line_odds": [
+      1.83,
+      1.93
+    ],
+    "bookmaker": "hkjc",
+    "source": "hkjc-direct",
+    "url": "https://info.cld.hkjc.com/graphql/base/",
+    "line_selection": "provider_main",
+    "provider_main": true,
+    "provenance": {
+      "kind": "prospective_first_observed_quote",
+      "note": "First quote observed by this collector, not certified bookmaker opening",
+      "source": "https://info.cld.hkjc.com/graphql/base/",
+      "market": "90min_asian_handicap"
+    },
+    "main_handicap_change": 0.0,
+    "main_handicap_change_available": true,
+    "captured_at": "2026-10-16T01:15:45.257040Z",
+    "published_at": "2026-10-15T11:30:01.796000Z",
+    "snapshot_at": "2026-10-16T01:15:45Z",
+    "provider_event_id": "50076444",
+    "content_sha256": "ff4e35681f0e87b5269a8e0e8d44d8af779a39e178e7eae0565367ebc2c9bcad"
+  },
+  "main_line_movement": {
+    "observed_at": "2026-10-16T01:15:45.267728Z",
+    "current_observed_at": "2026-10-17T11:00:02.971269Z",
+    "earlier_home_handicap": -0.75,
+    "current_home_handicap": -0.75,
+    "main_handicap_change": 0.0,
+    "main_handicap_change_available": true,
+    "earlier_odds": [
+      1.83,
+      1.93
+    ],
+    "current_odds": [
+      1.78,
+      2.03
+    ],
+    "price_comparison_policy": "different_contract_prices_not_compared",
+    "same_handicap_contract": true,
+    "baseline_kind": "collector_first_observed",
+    "opening_certified": false,
+    "bookmaker": "hkjc",
+    "source": "hkjc-direct",
+    "url": "https://info.cld.hkjc.com/graphql/base/",
+    "line_selection": "provider_main",
+    "provider_main": true,
+    "provenance": {
+      "kind": "prospective_first_observed_quote",
+      "note": "First quote observed by this collector, not certified bookmaker opening",
+      "source": "https://info.cld.hkjc.com/graphql/base/",
+      "market": "90min_asian_handicap"
+    },
+    "provider_event_id": "50076444",
+    "provider_kickoff_at": "2026-10-17T14:00:00+00:00",
+    "earlier_horizon": "first-observed",
+    "earlier_captured_at": "2026-10-16T01:15:45.257040Z",
+    "current_captured_at": "2026-10-17T11:00:02.971269Z",
+    "earlier_published_at": "2026-10-15T11:30:01.796000Z",
+    "current_published_at": "2026-10-15T11:30:01.796000Z",
+    "earlier_snapshot_at": "2026-10-16T01:15:45Z",
+    "current_snapshot_at": "2026-10-17T11:00:02Z",
+    "earlier_content_sha256": "ff4e35681f0e87b5269a8e0e8d44d8af779a39e178e7eae0565367ebc2c9bcad",
+    "current_content_sha256": "47f24773d9a1626be99829920be76f3a3eb3caed8ad29d42b4e46d78df40e3af"
+  },
+  "main_line_movement_feature_policy": "stored_for_future_protocol_not_used_by_v2",
+  "reason": null,
+  "selected": false,
+  "candidate_weight": 0,
+  "provenance": {
+    "kind": "prospective_capture",
+    "market": "90min_asian_handicap",
+    "source": "https://info.cld.hkjc.com/graphql/base/"
+  },
+  "candidates": {},
+  "generated_at": "2026-10-17T11:00:02.992280Z",
+  "observation_id": "e701365e0fe3c73797add3ab36116f11f52c9661c28b0bf41ba9f992022ba766"
+}
