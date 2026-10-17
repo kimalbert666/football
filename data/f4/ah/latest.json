@@ -1,8 +1,8 @@
 {
-  "evaluated_at": "2026-10-17T12:45:29.248608Z",
-  "new_valid": 0,
-  "new_attempts": 0,
-  "valid_observations": 27,
+  "evaluated_at": "2026-10-17T13:00:05.074160Z",
+  "new_valid": 3,
+  "new_attempts": 3,
+  "valid_observations": 30,
   "distinct_matches": 12,
   "paired_matches": 8,
   "pairing_issues": {
@@ -1419,24 +1419,24 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-17T12:15:25.141003Z",
+      "captured_at": "2026-10-17T13:00:00.936979Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-17T12:15:25.773871Z",
-      "content_sha256": "f061dd7eb3ca20075d8c02711a453edeb04bb8562eb803ea8ccec05d38d0e4f6"
+      "captured_at": "2026-10-17T13:00:01.563949Z",
+      "content_sha256": "152e47939e5c17e117b3e0c1e829f50064c34bb85f526184f1e0503f1098f1b7"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-17T12:15:27.307825Z",
-      "response_at": "2026-10-17T12:15:27Z",
-      "content_sha256": "a4d458c764b3f86bbc5d0c339d13426f4726d16603bdea36835be990f1e5c60f",
-      "match_count": 222,
+      "captured_at": "2026-10-17T13:00:05.034762Z",
+      "response_at": "2026-10-17T13:00:05Z",
+      "content_sha256": "e8aa876d3c3df4760a0b13e86331271804a4f7fc228d725f6fc711f1fd56a37d",
+      "match_count": 216,
       "epl_match_count": 10
     }
   ],
@@ -1451,10 +1451,14 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-17T12:15:25.773871Z"
+    "checked_at": "2026-10-17T13:00:01.563949Z"
   },
-  "fallback_matches": [],
-  "quote_availability": "not_tested_no_due_matches",
+  "fallback_matches": [
+    "espn:401878770",
+    "espn:401879259",
+    "espn:401879262"
+  ],
+  "quote_availability": "complete",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
     "fixtures": 9,
@@ -1465,9 +1469,9 @@
         "awaiting_window": 5
       },
       "T-60m": {
-        "recorded_research_only": 1,
-        "complete_joint_market": 1,
-        "awaiting_window": 8
+        "recorded_research_only": 4,
+        "complete_joint_market": 4,
+        "awaiting_window": 5
       },
       "T-15m": {
         "recorded_research_only": 1,
