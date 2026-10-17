@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-10-17T17:04:52.934426Z",
+  "evaluated_at": "2026-10-17T19:19:32.037377Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 36,
@@ -1419,25 +1419,25 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-17T16:15:01.113788Z",
+      "captured_at": "2026-10-17T19:19:30.104628Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-17T16:15:01.712205Z",
-      "content_sha256": "7d724b69260aa72cb0acd6c8af3725eb9257ee0bcb2011e2fcdfaf2cc64d36cc"
+      "captured_at": "2026-10-17T19:19:30.840120Z",
+      "content_sha256": "4aaa338b35b6feeda8314f8c20def13346064203886bcb232ac6d7667436a3b9"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-17T16:15:03.016526Z",
-      "response_at": "2026-10-17T16:15:02Z",
-      "content_sha256": "a9549faba56f30ba879c112b964eaa6a6d3cf83b8dd418155169dc5a189ebb28",
-      "match_count": 173,
-      "epl_match_count": 6
+      "captured_at": "2026-10-17T19:19:32.021053Z",
+      "response_at": "2026-10-17T19:19:32Z",
+      "content_sha256": "5a091ba938e545225e55528c50853221e77b6b837ccee31a8494ff4ca57957e5",
+      "match_count": 158,
+      "epl_match_count": 5
     }
   ],
   "provider_faults": {
@@ -1451,12 +1451,10 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-17T16:15:01.712205Z"
+    "checked_at": "2026-10-17T19:19:30.840120Z"
   },
-  "fallback_matches": [
-    "espn:401879258"
-  ],
-  "quote_availability": "complete",
+  "fallback_matches": [],
+  "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
     "fixtures": 9,
