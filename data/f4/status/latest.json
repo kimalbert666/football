@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-10-17T10:30:24.859244Z",
+  "checked_at": "2026-10-17T11:00:20.400279Z",
   "command": "capture",
   "mode": "shadow",
-  "new_predictions": 1,
-  "new_valid_predictions": 1,
+  "new_predictions": 3,
+  "new_valid_predictions": 3,
   "new_outcomes": 0,
-  "due_fixtures": 1,
+  "due_fixtures": 3,
   "tracked_fixtures_seen": 9,
   "skipped": [],
   "legacy_deferred": null,
@@ -169,43 +169,57 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261017",
-        "captured_at": "2026-10-17T10:30:00.299260Z",
-        "content_sha256": "878fd223b85c83de67360bf6b351c46b1c7a4d9f9f1f40a34e9f76b6b350c3e2"
+        "captured_at": "2026-10-17T11:00:00.195244Z",
+        "content_sha256": "cc1cd61f1fedde3bb2f966af7a583f830beaf7c6aab056759127dc09ba1f3c83"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261018",
-        "captured_at": "2026-10-17T10:30:00.469643Z",
+        "captured_at": "2026-10-17T11:00:00.323158Z",
         "content_sha256": "3f3a176915aa11fe195ff80deb6c268a247dc97857fff3e7a4717d8ae158ce38"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/Company.js",
         "status": "ok",
-        "captured_at": "2026-10-17T10:30:07.613248Z",
+        "captured_at": "2026-10-17T11:00:06.636650Z",
         "content_sha256": "dc86391e88b7c0f601a561f2cc847e5abda654473c5eae14727641ce56ddf35d"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/index_vip.aspx",
         "status": "ok",
-        "captured_at": "2026-10-17T10:30:11.368267Z",
-        "content_sha256": "cf891e07d5724d492c3e11562b6d85c959fb1eefb5718db8cdaad5c43b9498dd"
+        "captured_at": "2026-10-17T11:00:10.194829Z",
+        "content_sha256": "4ee02af01a535ab44a697aff94058d265ed9b628ad631ecb256d67835ed83a87"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/TomorrowOdds.aspx",
         "status": "ok",
-        "captured_at": "2026-10-17T10:30:22.475001Z",
-        "content_sha256": "46af62eef5709def98905b980c7380cac20802e787a3bff3eeb77ac3b32b221f"
+        "captured_at": "2026-10-17T11:00:13.836454Z",
+        "content_sha256": "ee9e90b5a1b4b9a88d1f5b7cf83d03a8e6868513f53d6eea4dda3d41ef8c36fc"
       },
       {
         "name": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003912.js",
+        "url": "https://1x2d.titan007.com/3003910.js",
         "status": "ok",
-        "captured_at": "2026-10-17T10:30:23.796084Z",
-        "content_sha256": "c933730f9a56722def6c034781ae033a79075ff90eeb87a61d49401cb307b1ac"
+        "captured_at": "2026-10-17T11:00:15.086875Z",
+        "content_sha256": "ad7536b490ef155b23ac3bde2dd3d4d48aa67baa2d2dd24b1fb08ba35951624a"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003913.js",
+        "status": "ok",
+        "captured_at": "2026-10-17T11:00:17.572877Z",
+        "content_sha256": "9450ad1c84cb234afbb37c97846e105456f1717a5cd25084b6c0ff65d2018f75"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003915.js",
+        "status": "ok",
+        "captured_at": "2026-10-17T11:00:18.783644Z",
+        "content_sha256": "006fcd9f12aa4fecb2406443ced9d87d167ecc790719a5e96a76926d8d7c7570"
       }
     ]
   },
@@ -224,9 +238,9 @@
   "automatic_promotion": false,
   "automatic_wagering": false,
   "asian_handicap": {
-    "new_valid": 1,
-    "new_attempts": 1,
-    "distinct_matches": 9,
+    "new_valid": 3,
+    "new_attempts": 3,
+    "distinct_matches": 12,
     "paired_matches": 8,
     "problems": [
       "Crown AH source unavailable (ValueError: provider feed health unavailable or stale)"
@@ -238,7 +252,9 @@
       "hkjc-direct": []
     },
     "fallback_matches": [
-      "espn:401878771"
+      "espn:401878770",
+      "espn:401879259",
+      "espn:401879262"
     ],
     "quote_availability": "complete"
   }
