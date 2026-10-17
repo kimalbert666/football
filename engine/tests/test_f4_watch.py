@@ -156,17 +156,42 @@ def test_default_arming_fits_single_fixture_all_windows_in_one_worker(setup):
     dispatch.assert_not_called()
 
 
-def test_default_arming_does_not_hold_three_hours_before_first_target(setup):
+def test_default_arming_does_not_hold_six_hours_before_first_target(setup):
     root, cfg, fixture = setup
     cfg['windows'] = {'180': 20, '60': 10, '15': 5}
     write(root / 'data/f4/config.json', {'asian_handicap': cfg})
-    clock = FakeClock('2026-10-10T05:00:00Z')
+    clock = FakeClock('2026-10-10T02:00:00Z')
     run, calls = capture_stub(root, cfg, fixture)
     status = worker.watch(root, clock=clock, sleeper=clock.sleep, run=run,
                           persist=Mock(), dispatch=Mock())
     assert status['state'] == 'no_nearby_unrecorded_window'
     assert not load_observations(root)
     assert not clock.sleeps
+
+
+def test_default_arming_covers_observed_four_hour_cron_gap_and_hands_off(setup):
+    root, cfg, fixture = setup
+    cfg['windows'] = {'180': 20, '60': 10, '15': 5}
+    fixture = {**fixture, 'kickoff_at': '2026-10-17T11:30:00Z'}
+    write(root / 'data/f4/config.json', {'asian_handicap': cfg})
+    write(root / 'data/f4/fixtures/synthetic.json', fixture)
+    clock = FakeClock('2026-10-17T04:16:00Z')
+    run, calls = capture_stub(root, cfg, fixture)
+    events = []
+    def persist(path):
+        events.append(('persist', read(path / 'data/f4/status/watch-latest.json')['state']))
+    def dispatch():
+        events.append(('dispatch', None))
+        return True
+    status = worker.watch(root, clock=clock, sleeper=clock.sleep, run=run,
+                          persist=persist, dispatch=dispatch)
+    rows = load_observations(root)
+    assert len(rows) == 1 and rows[0]['horizon'] == 'T-180m'
+    assert instant('2026-10-17T08:10:00Z') <= instant(rows[0]['observed_at']) < instant('2026-10-17T08:50:00Z')
+    assert clock() == instant('2026-10-17T09:16:00Z')
+    assert status['state'] == 'duration_limit' and status['continuation_requested'] is True
+    assert status['arm_minutes'] == status['max_minutes'] == 300
+    assert events[-3:] == [('persist', 'checkpoint_before_handoff'), ('dispatch', None), ('persist', 'duration_limit')]
 
 
 def test_calendar_refresh_can_cancel_target_without_phantom_capture(setup):
@@ -241,15 +266,64 @@ def test_initial_transient_capture_exception_retries_with_real_clock(setup):
     assert 'last_error' not in status
 
 
-def test_initial_permanent_capture_failure_stops_after_three_attempts(setup):
+def test_initial_transient_failure_retries_until_window_closes(setup):
     root, cfg, fixture = setup
     clock = FakeClock('2026-10-10T10:45:00Z')
     failing = Mock(side_effect=TimeoutError('synthetic ongoing timeout'))
     with pytest.raises(TimeoutError):
         worker.watch(root, clock=clock, sleeper=clock.sleep, run=failing,
                      persist=Mock(), dispatch=Mock())
-    assert failing.call_count == 3
+    assert failing.call_count == 5
+    assert clock() == instant('2026-10-10T10:50:00Z')
     assert read(root / 'data/f4/status/watch-latest.json')['state'] == 'failed'
+
+
+@pytest.mark.parametrize('starts_at', ['2026-10-10T10:44:00Z', '2026-10-10T10:45:00Z'])
+def test_t15_recovers_after_more_than_three_transient_exceptions(setup, starts_at):
+    from requests.exceptions import Timeout
+    root, cfg, fixture = setup
+    clock = FakeClock(starts_at)
+    base, calls = capture_stub(root, cfg, fixture)
+    failures = []
+
+    def interrupted(path, command, *, clock):
+        # Starting at 10:44 exercises the main loop; starting at 10:45
+        # exercises the initial capture retry loop.
+        if command == 'capture' and instant('2026-10-10T10:45:00Z') <= clock() < instant('2026-10-10T10:49:00Z'):
+            failures.append(clock())
+            raise Timeout('synthetic network interruption')
+        if clock() == instant('2026-10-10T10:44:00Z'):
+            observation(root, cfg, fixture, clock(), None)
+            return
+        base(path, command, clock=clock)
+
+    status = worker.watch(root, clock=clock, sleeper=clock.sleep, run=interrupted,
+                          persist=Mock(), dispatch=Mock())
+    assert len(failures) == 4
+    valid = [row for row in load_observations(root) if row.get('quote')]
+    assert len(valid) == 1 and valid[0]['observed_at'] == '2026-10-10T10:49:00Z'
+    assert status['state'] in ('complete_or_no_nearby_window', 'no_nearby_unrecorded_window')
+
+
+def test_transient_window_retries_respect_worker_deadline(setup):
+    root, cfg, fixture = setup
+    clock = FakeClock('2026-10-10T10:45:00Z')
+    failing = Mock(side_effect=TimeoutError('synthetic timeout'))
+    with pytest.raises(TimeoutError):
+        worker.watch(root, max_minutes=1.5, clock=clock, sleeper=clock.sleep,
+                     run=failing, persist=Mock(), dispatch=Mock())
+    assert failing.call_count == 2
+    assert clock() == instant('2026-10-10T10:46:30Z')
+
+
+def test_transient_failure_without_an_open_window_still_stops_after_three(setup):
+    root, cfg, fixture = setup
+    clock = FakeClock('2026-10-10T09:00:00Z')
+    failing = Mock(side_effect=TimeoutError('synthetic timeout'))
+    with pytest.raises(TimeoutError):
+        worker.watch(root, clock=clock, sleeper=clock.sleep, run=failing,
+                     persist=Mock(), dispatch=Mock())
+    assert failing.call_count == 3
 
 
 def test_default_cloud_adapter_persists_ah_before_legacy_tail(setup, monkeypatch):
@@ -326,7 +400,7 @@ def test_repeated_capture_exceptions_stop_after_three_retries(setup):
 
 
 @pytest.mark.parametrize('field,value', [('max_minutes', -1), ('max_minutes', 301),
-                                         ('arm_minutes', -1), ('arm_minutes', 181)])
+                                         ('arm_minutes', -1), ('arm_minutes', 301)])
 def test_reject_unbounded_worker_before_side_effects(setup, field, value):
     root, _, _ = setup
     run = Mock()
@@ -362,8 +436,10 @@ def test_checkpoint_does_nothing_outside_actions(monkeypatch, tmp_path):
 
 def test_failed_notice_does_not_prevent_record_checkpoint(monkeypatch, tmp_path):
     monkeypatch.setenv('GITHUB_ACTIONS', 'true')
+    def git_run(args, **kwargs):
+        return Mock(returncode=0, stdout='0' if 'rev-list' in args else '.git/absent-state')
     with patch('f4_publish.publish', side_effect=RuntimeError('synthetic delivery failure')):
-        with patch.object(worker.subprocess, 'run', return_value=Mock(returncode=0, stdout='.git/absent-state')) as run:
+        with patch.object(worker.subprocess, 'run', side_effect=git_run) as run:
             worker.checkpoint(tmp_path)
     assert any(call.args[0] == ['git', 'add', '--', 'data/f4'] for call in run.call_args_list)
     assert read(tmp_path / 'data/f4/status/notice-delivery-health.json')['acknowledged'] is False
@@ -383,7 +459,7 @@ def test_checkpoint_retries_transient_pull_without_force_or_discard(monkeypatch,
                 raise worker.subprocess.CalledProcessError(1, args)
         if args[:3] == ['git', 'rev-parse', '--git-path']:
             return Mock(returncode=0, stdout='.git/' + args[-1])
-        return Mock(returncode=0)
+        return Mock(returncode=0, stdout='1')
 
     with patch('f4_publish.publish', return_value=False), patch.object(worker.subprocess, 'run', side_effect=git_run), \
             patch.object(worker.time, 'sleep') as sleep:
@@ -407,7 +483,7 @@ def test_checkpoint_retains_conflicted_record_commit_without_retrying(monkeypatc
             raise worker.subprocess.CalledProcessError(1, args)
         if args[:3] == ['git', 'rev-parse', '--git-path']:
             return Mock(returncode=0, stdout='.git/' + args[-1])
-        return Mock(returncode=0)
+        return Mock(returncode=0, stdout='1')
 
     with patch('f4_publish.publish', return_value=False), patch.object(worker.subprocess, 'run', side_effect=git_run), \
             patch.object(worker.time, 'sleep') as sleep, pytest.raises(RuntimeError, match='Git conflict'):
@@ -431,6 +507,58 @@ def test_checkpoint_with_existing_rebase_never_stages_or_sends_notice(monkeypatc
         worker.checkpoint(tmp_path)
     publish.assert_not_called()
     assert run.call_count == 1
+
+
+def test_save_only_resumes_committed_records_after_failed_push(monkeypatch, tmp_path):
+    """Exercise real local Git, including a clean index after the failed push."""
+    monkeypatch.setenv('GITHUB_ACTIONS', 'true')
+    real_run = worker.subprocess.run
+    remote, root = tmp_path / 'remote.git', tmp_path / 'checkout'
+    root.mkdir()
+
+    def git(*args, cwd=root):
+        return real_run(['git', *args], cwd=cwd, check=True, capture_output=True, text=True).stdout.strip()
+
+    git('init', '--bare', str(remote))
+    git('init', '-b', 'main')
+    git('config', 'user.name', 'synthetic-test')
+    git('config', 'user.email', 'synthetic@example.invalid')
+    write(root / 'data/f4/seed.json', {'synthetic': True})
+    git('add', '--', 'data/f4')
+    git('commit', '-m', 'synthetic seed')
+    git('remote', 'add', 'origin', str(remote))
+    git('push', '-u', 'origin', 'main')
+    write(root / 'data/f4/observation.json', {'synthetic': 'unuploaded'})
+    pushes = []
+
+    def unavailable(args, **kwargs):
+        if args[:2] == ['git', 'push']:
+            pushes.append(args)
+            raise worker.subprocess.CalledProcessError(1, args)
+        return real_run(args, **kwargs)
+
+    with patch.object(worker.subprocess, 'run', side_effect=unavailable), \
+            patch.object(worker.time, 'sleep'), patch('f4_publish.publish') as publish:
+        with pytest.raises(RuntimeError, match='Could not persist'):
+            worker.checkpoint(root, publish_notice=False)
+        publish.assert_not_called()
+    assert len(pushes) == 3
+    assert git('status', '--porcelain') == ''
+    assert git('rev-list', '--count', 'origin/main..HEAD') == '1'
+    local_head = git('rev-parse', 'HEAD')
+    worker.checkpoint(root, publish_notice=False)
+    assert git('rev-parse', 'main', cwd=remote) == local_head
+    assert git('rev-list', '--count', 'origin/main..HEAD') == '0'
+
+
+def test_save_only_rebase_conflict_never_stages_or_publishes(monkeypatch, tmp_path):
+    monkeypatch.setenv('GITHUB_ACTIONS', 'true')
+    (tmp_path / '.git/rebase-merge').mkdir(parents=True)
+    with patch.object(worker.subprocess, 'run', return_value=Mock(returncode=0, stdout='.git/rebase-merge')) as run, \
+            patch('f4_publish.publish') as publish, pytest.raises(RuntimeError, match='Git conflict'):
+        worker.checkpoint(tmp_path, publish_notice=False)
+    assert run.call_count == 1
+    publish.assert_not_called()
 
 
 def test_due_quote_precedes_slow_settlement_backfill(setup):

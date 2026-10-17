@@ -49,11 +49,12 @@ def fixture_targets(root, now):
             retry_at = latest.get(key, target - gap) + gap
             due = max(target, retry_at)
             if due < closes:
-                targets.append({'key': key, 'at': due, 'nominal_at': target, 'closes_at': closes})
+                targets.append({'key': key, 'at': due, 'nominal_at': target,
+                                'opens_at': target - timedelta(minutes=tolerance), 'closes_at': closes})
     return sorted(targets, key=lambda t: (t['at'], t['key']))
 
 
-def checkpoint(root):
+def checkpoint(root, *, publish_notice=True):
     """Called only in Actions with its existing checkout credential helper."""
     if os.getenv('GITHUB_ACTIONS') != 'true':
         return
@@ -72,28 +73,35 @@ def checkpoint(root):
     reject_rebase_conflict()
     # Publish pending monthly/critical notices promptly during a long worker;
     # the publisher retains the research policy and acknowledges only success.
-    from f4_publish import publish
-    try:
-        publish(root)
-    except Exception as exc:
-        # A mail/Issue outage must not lose the independent match records.
-        write(root / 'data/f4/status/notice-delivery-health.json', {
-            'status': 'failed', 'error': type(exc).__name__,
-            'checked_at': stamp(datetime.now(timezone.utc)), 'acknowledged': False})
-        print('::warning::f4 Issue delivery failed; records will persist and delivery will retry.')
-    else:
-        health_path = root / 'data/f4/status/notice-delivery-health.json'
-        if health_path.exists():
-            write(health_path, {'status': 'ok', 'checked_at': stamp(datetime.now(timezone.utc))})
+    if publish_notice:
+        from f4_publish import publish
+        try:
+            publish(root)
+        except Exception as exc:
+            # A mail/Issue outage must not lose the independent match records.
+            write(root / 'data/f4/status/notice-delivery-health.json', {
+                'status': 'failed', 'error': type(exc).__name__,
+                'checked_at': stamp(datetime.now(timezone.utc)), 'acknowledged': False})
+            print('::warning::f4 Issue delivery failed; records will persist and delivery will retry.')
+        else:
+            health_path = root / 'data/f4/status/notice-delivery-health.json'
+            if health_path.exists():
+                write(health_path, {'status': 'ok', 'checked_at': stamp(datetime.now(timezone.utc))})
     git('config', 'user.name', 'github-actions[bot]')
     git('config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com')
     git('add', '--', 'data/f4')
     changed = subprocess.run(['git', 'diff', '--cached', '--quiet'], cwd=root)
-    if changed.returncode == 0:
-        return
-    if changed.returncode != 1:
+    if changed.returncode not in (0, 1):
         raise RuntimeError('Cannot inspect staged f4 records')
-    git('commit', '-m', 'chore(f4): checkpoint pre-match worker records')
+    if changed.returncode == 1:
+        git('commit', '-m', 'chore(f4): checkpoint pre-match worker records')
+    # A previous checkpoint may have committed successfully but failed to push.
+    # An empty index proves nothing about whether those records reached main.
+    ahead = git('rev-list', '--count', 'origin/main..HEAD').stdout.strip()
+    if not ahead.isdigit():
+        raise RuntimeError('Cannot verify unpushed f4 records')
+    if int(ahead) == 0:
+        return
     for attempt in range(3):
         try:
             # Retry transient pull failures too, but never discard a conflict.
@@ -105,6 +113,16 @@ def checkpoint(root):
             if attempt == 2:
                 raise RuntimeError('Could not persist f4 checkpoint') from None
             time.sleep(attempt + 1)
+
+
+def transient_retry_until(root, now, deadline, error):
+    """Keep transient network failures retryable inside an unfinished window."""
+    from requests.exceptions import ConnectionError as RequestConnectionError, Timeout
+    if not isinstance(error, (ConnectionError, TimeoutError, RequestConnectionError, Timeout)):
+        return None
+    closes = [target['closes_at'] for target in fixture_targets(root, now)
+              if target['opens_at'] <= now < target['closes_at']]
+    return min(deadline, max(closes)) if closes and now < deadline else None
 
 
 def dispatch_continuation():
@@ -122,15 +140,16 @@ def dispatch_continuation():
     return True
 
 
-def watch(root, *, max_minutes=300, arm_minutes=120, clock=lambda: datetime.now(timezone.utc),
+def watch(root, *, max_minutes=300, arm_minutes=300, clock=lambda: datetime.now(timezone.utc),
           sleeper=time.sleep, run=None, persist=checkpoint, dispatch=dispatch_continuation):
-    if not 0 <= max_minutes <= 300 or not 0 <= arm_minutes <= 180:
+    if not 0 <= max_minutes <= 300 or not 0 <= arm_minutes <= 300:
         raise ValueError('worker duration/arming exceeds configured bounds')
     started = clock()
     deadline = started + timedelta(minutes=max_minutes)
     prior = read(root / 'data/f4/status/watch-latest.json', {})
     status = {'started_at': stamp(started), 'run_id': os.getenv('GITHUB_RUN_ID'), 'captures': [],
               'mode': 'bounded_match_window_worker', 'timing_guaranteed': False,
+              'max_minutes': max_minutes, 'arm_minutes': arm_minutes,
               'previous_worker_started_at': prior.get('started_at'), 'continuation_requested': False}
 
     def save(state):
@@ -151,19 +170,32 @@ def watch(root, *, max_minutes=300, arm_minutes=120, clock=lambda: datetime.now(
     # Immediate normal capture also refreshes today's/tomorrow's ESPN calendar.
     # Do this before slower result backfills so an already due window is first.
     save('refreshing_calendar')
-    for attempt in range(3):
+    attempt = 0
+    while True:
+        attempt += 1
         try:
             run(root, 'capture', clock=clock)
             status.pop('last_error', None)
             break
         except Exception as exc:
             status['last_error'] = type(exc).__name__
-            exhausted = attempt == 2 or clock() >= deadline
+            retry_until = transient_retry_until(root, clock(), deadline, exc)
+            exhausted = clock() >= deadline or (attempt >= 3 and retry_until is None)
             save('failed' if exhausted else 'retrying_initial_capture')
             persist(root)
             if exhausted:
                 raise
-            sleeper(min(60, (deadline - clock()).total_seconds()))
+            stop_at = retry_until or deadline
+            remaining = (stop_at - clock()).total_seconds()
+            if remaining <= 0:
+                save('failed')
+                persist(root)
+                raise
+            sleeper(min(60, remaining))
+            if retry_until is not None and clock() >= retry_until:
+                save('failed')
+                persist(root)
+                raise
     save('planning')
     persist(root)
     targets = fixture_targets(root, clock())
@@ -211,10 +243,24 @@ def watch(root, *, max_minutes=300, arm_minutes=120, clock=lambda: datetime.now(
             except Exception as exc:
                 failures += 1
                 status['last_error'] = type(exc).__name__
-                save('retrying' if failures < 3 else 'failed')
+                retry_until = transient_retry_until(root, clock(), deadline, exc)
+                exhausted = clock() >= deadline or (failures >= 3 and retry_until is None)
+                save('failed' if exhausted else 'retrying')
                 persist(root)
-                if failures >= 3:
+                if exhausted:
                     raise
+                if retry_until is not None:
+                    remaining = (retry_until - clock()).total_seconds()
+                    if remaining <= 0:
+                        save('failed')
+                        persist(root)
+                        raise
+                    sleeper(min(60, remaining))
+                    if clock() >= retry_until:
+                        save('failed')
+                        persist(root)
+                        raise
+                    continue
             # Bound retries even when an upstream exception produced no observation.
             sleeper(min(60, max(0, (deadline - clock()).total_seconds())))
         else:
@@ -234,8 +280,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=ROOT)
     parser.add_argument('--max-minutes', type=float, default=300)
+    parser.add_argument('--save-only', action='store_true', help='Persist records without capture or notice delivery')
     args = parser.parse_args()
-    watch(args.root, max_minutes=args.max_minutes)
+    if args.save_only:
+        checkpoint(args.root, publish_notice=False)
+    else:
+        watch(args.root, max_minutes=args.max_minutes)
 
 
 if __name__ == '__main__':

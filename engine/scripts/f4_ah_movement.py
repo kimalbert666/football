@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import math
 from copy import deepcopy
-from datetime import datetime
+from datetime import datetime, timedelta
 from urllib.parse import urlsplit
 
 
@@ -56,6 +56,58 @@ def _movement_time(value):
     return result
 
 
+def _pair_identity_and_times(early_observation, current_quote):
+    """Apply identical identity and time boundaries to both movement features."""
+    earlier = early_observation["quote"]
+    for quote in (earlier, current_quote):
+        if quote.get("market") is not None and quote["market"] != "90min_asian_handicap":
+            raise ValueError("incompatible market")
+    event = None
+    if any("provider_event_id" in q for q in (earlier, current_quote)):
+        identifiers = [q.get("provider_event_id") for q in (earlier, current_quote)]
+        if (any(not isinstance(x, (str, int)) or isinstance(x, bool)
+                or not str(x).strip() for x in identifiers)
+                or str(identifiers[0]) != str(identifiers[1])):
+            raise ValueError("provider event conflict")
+        event = str(identifiers[0])
+    kickoff = None
+    if any("provider_kickoff_at" in q for q in (earlier, current_quote)):
+        kickoffs = [_movement_time(q.get("provider_kickoff_at")) for q in (earlier, current_quote)]
+        if kickoffs[0] != kickoffs[1]:
+            raise ValueError("provider kickoff conflict")
+        kickoff = kickoffs[0]
+    if "kickoff_at" in early_observation:
+        observation_kickoff = _movement_time(early_observation["kickoff_at"])
+        if kickoff is not None and observation_kickoff != kickoff:
+            raise ValueError("observation kickoff conflict")
+        kickoff = observation_kickoff
+
+    observed = _movement_time(early_observation.get("observed_at"))
+    captured = _movement_time(current_quote.get("captured_at"))
+    if not observed < captured or (kickoff is not None and captured >= kickoff):
+        raise ValueError("not an earlier pre-match observation")
+    early_captured = _movement_time(earlier.get("captured_at")) if "captured_at" in earlier else observed
+    if early_captured > observed:
+        raise ValueError("early capture after observation")
+    if "generated_at" in early_observation:
+        generated = _movement_time(early_observation["generated_at"])
+        if not observed <= generated < captured:
+            raise ValueError("early record not available before current capture")
+    for quote, cutoff in ((earlier, early_captured), (current_quote, captured)):
+        for key in ("published_at", "snapshot_at"):
+            limit = cutoff
+            # HKJC's snapshot_at is the HTTP Date clock, not a quote update.
+            # Keep the same bounded clock skew already checked by its adapter;
+            # actual quote publication and collection times stay strict.
+            if (key == "snapshot_at" and quote.get("source") == "hkjc-direct"
+                    and quote.get("bookmaker") == "hkjc"
+                    and quote.get("url") == "https://info.cld.hkjc.com/graphql/base/"):
+                limit += timedelta(seconds=5)
+            if key in quote and _movement_time(quote[key]) > limit:
+                raise ValueError("quote publication after capture")
+    return event, kickoff
+
+
 def observed_main_line_movement(early_observation, current_quote):
     """Keep a provider-declared main-line shift independently of price alignment.
 
@@ -76,46 +128,8 @@ def observed_main_line_movement(early_observation, current_quote):
                 return None
         if _host(earlier.get("url")) != _host(current_quote.get("url")):
             return None
-        for quote in (earlier, current_quote):
-            if quote.get("market") is not None and quote["market"] != "90min_asian_handicap":
-                return None
-
         # Missing metadata cannot silently erase an identity that one end has.
-        event = None
-        if any("provider_event_id" in q for q in (earlier, current_quote)):
-            identifiers = [q.get("provider_event_id") for q in (earlier, current_quote)]
-            if (any(not isinstance(x, (str, int)) or isinstance(x, bool)
-                    or not str(x).strip() for x in identifiers)
-                    or str(identifiers[0]) != str(identifiers[1])):
-                return None
-            event = str(identifiers[0])
-        kickoff = None
-        if any("provider_kickoff_at" in q for q in (earlier, current_quote)):
-            kickoffs = [_movement_time(q.get("provider_kickoff_at")) for q in (earlier, current_quote)]
-            if kickoffs[0] != kickoffs[1]:
-                return None
-            kickoff = kickoffs[0]
-        if "kickoff_at" in early_observation:
-            observation_kickoff = _movement_time(early_observation["kickoff_at"])
-            if kickoff is not None and observation_kickoff != kickoff:
-                return None
-            kickoff = observation_kickoff
-
-        observed = _movement_time(early_observation.get("observed_at"))
-        captured = _movement_time(current_quote.get("captured_at"))
-        if not observed < captured or (kickoff is not None and captured >= kickoff):
-            return None
-        early_captured = _movement_time(earlier.get("captured_at")) if "captured_at" in earlier else observed
-        if early_captured > observed:
-            return None
-        if "generated_at" in early_observation:
-            generated = _movement_time(early_observation["generated_at"])
-            if not observed <= generated < captured:
-                return None
-        for quote, cutoff in ((earlier, early_captured), (current_quote, captured)):
-            for key in ("published_at", "snapshot_at"):
-                if key in quote and _movement_time(quote[key]) > cutoff:
-                    return None
+        event, kickoff = _pair_identity_and_times(early_observation, current_quote)
 
         provenance = early_observation.get("provenance") or earlier.get("provenance")
         if (not isinstance(provenance, (str, dict)) or not provenance
@@ -185,19 +199,8 @@ def aligned_early_quote(early_observation, current_quote):
         if _host(earlier.get("url")) != _host(current_quote.get("url")):
             return None
 
-        observed = early_observation.get("observed_at")
-        if not isinstance(observed, str):
-            return None
-        when = datetime.fromisoformat(observed.replace("Z", "+00:00"))
-        if when.utcoffset() is None:
-            return None
-        if current_quote.get("captured_at") is not None:
-            captured_at = current_quote["captured_at"]
-            if not isinstance(captured_at, str):
-                return None
-            captured = datetime.fromisoformat(captured_at.replace("Z", "+00:00"))
-            if captured.utcoffset() is None or when >= captured:
-                return None
+        _pair_identity_and_times(early_observation, current_quote)
+        observed = early_observation["observed_at"]
 
         target = _line(current_quote.get("home_handicap"))
         selected = _line(earlier.get("home_handicap"))

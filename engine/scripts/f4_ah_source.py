@@ -45,18 +45,68 @@ def _valid_line(value):
 
 
 def _identity(event, fixture, aliases):
-    if event.get('sport') != 'football' or event.get('status') != 'scheduled':
-        return False
-    league = event.get('league', {})
-    if league.get('id') != LEAGUE_ID or league.get('name') not in ('ENPL', 'English Premier League', 'England Premier League'):
-        return False
-    if abs((_instant(event['scheduled_at']) - _instant(fixture['kickoff_at'])).total_seconds()) > 60:
-        return False
-    for side in ('home', 'away'):
-        name = event[side + '_team']['name']
-        if _resolve([name, PROVIDER_NAMES.get(name)], aliases) != fixture.get(side + '_id'):
+    try:
+        if not isinstance(event, dict) or event.get('sport') != 'football' or event.get('status') != 'scheduled':
             return False
-    return event.get('home_team', {}).get('id') != event.get('away_team', {}).get('id')
+        if not isinstance(event.get('id'), str) or not event['id'].strip():
+            return False
+        league = event.get('league', {})
+        if league.get('id') != LEAGUE_ID or league.get('name') not in ('ENPL', 'English Premier League', 'England Premier League'):
+            return False
+        if abs((_instant(event['scheduled_at']) - _instant(fixture['kickoff_at'])).total_seconds()) > 60:
+            return False
+        for side in ('home', 'away'):
+            team = event[side + '_team']
+            identifier = team.get('id')
+            if (isinstance(identifier, bool) or not isinstance(identifier, (str, int))
+                    or not str(identifier).strip()):
+                return False
+            name = team['name']
+            if (not fixture.get(side + '_id')
+                    or _resolve([name, PROVIDER_NAMES.get(name)], aliases) != fixture[side + '_id']):
+                return False
+        return (str(event['home_team']['id']) != str(event['away_team']['id'])
+                and fixture['home_id'] != fixture['away_id'])
+    except (ValueError, KeyError, TypeError, AttributeError):
+        # One unrelated malformed event must not suppress every other match.
+        return False
+
+
+def _opening_lines(opening, event, captured, kickoff, captured_at, bookmaker):
+    """Validate optional historical metadata independently of the current quote."""
+    if not isinstance(opening, dict) or opening.get('event_id') != event['id']:
+        raise ValueError('opening event conflict')
+    entries = opening.get('opening')
+    if not isinstance(entries, list):
+        raise ValueError('opening rows missing')
+    opening_captured = _instant(opening.get('_captured_at', captured_at))
+    if opening_captured >= kickoff:
+        raise ValueError('opening fetched at or after kickoff')
+    result, seen = [], set()
+    for quote in entries:
+        if not isinstance(quote, dict):
+            raise ValueError('malformed opening row')
+        if (quote.get('bookmaker') != bookmaker or quote.get('period') != 'full_time'
+                or quote.get('market_type') != 'asian_handicap' or quote.get('format') != 'decimal'):
+            continue
+        opened = _instant(quote['opened_at'])
+        if opened > min(captured, opening_captured) or opened >= kickoff:
+            raise ValueError('invalid declared opening time')
+        line = _valid_line(quote['line'])
+        if line in seen:
+            raise ValueError('duplicate opening handicap line')
+        quarters = round(line * 4)
+        if quarters % 2:
+            components = quote.get('handicap_components')
+            if (not isinstance(components, list) or len(components) != 2
+                    or sorted(components) != [(quarters - 1) / 4, (quarters + 1) / 4]):
+                raise ValueError('opening split conflicts with handicap')
+        seen.add(line)
+        result.append({'home_handicap': line,
+                       'odds': [_valid_price(quote['prices'][s]) for s in ('home', 'away')],
+                       'published_at': _stamp(opened), 'captured_at': _stamp(opening_captured),
+                       'provenance': 'provider-reported opening; not independently certified'})
+    return result
 
 
 def parse_quotes(payload, event, fixture, aliases, captured_at, url, content_sha256, opening=None, *, bookmaker='crown', health=None):
@@ -109,20 +159,15 @@ def parse_quotes(payload, event, fixture, aliases, captured_at, url, content_sha
         raise ValueError('no open full-time Crown handicap quotes')
     if market_1x2 is None:
         raise ValueError('same-bookmaker open full-time 1X2 required with Asian handicap')
-    opening_lines = []
+    opening_lines, opening_warning = [], None
     if opening is not None:
-        if opening.get('event_id') != event['id']:
-            raise ValueError('opening event conflict')
-        for quote in opening.get('opening', []):
-            if (quote.get('bookmaker') == bookmaker and quote.get('period') == 'full_time'
-                    and quote.get('market_type') == 'asian_handicap' and quote.get('format') == 'decimal'):
-                opened = _instant(quote['opened_at'])
-                if opened > captured or opened >= kickoff:
-                    raise ValueError('invalid declared opening time')
-                opening_lines.append({'home_handicap': _valid_line(quote['line']),
-                                      'odds': [_valid_price(quote['prices'][s]) for s in ('home', 'away')],
-                                      'published_at': _stamp(opened), 'captured_at': opening.get('_captured_at', captured_at),
-                                      'provenance': 'provider-reported opening; not independently certified'})
+        try:
+            opening_lines = _opening_lines(opening, event, captured, kickoff, captured_at, bookmaker)
+        except (ValueError, KeyError, TypeError, AttributeError, OverflowError) as exc:
+            # A rejected auxiliary history must not discard valid current AH/1X2.
+            # No partial opening rows survive a conflict, and no current price
+            # is substituted for the missing opening.
+            opening_warning = 'Declared opening rejected: ' + str(exc)[:160]
     # Fixed selection before seeing outcomes. Alternative lines are all kept;
     # this is expressly NOT a provider-certified main-line identifier.
     representative = min(lines.values(), key=lambda q: (abs(math.log(q['odds'][0] / q['odds'][1])),
@@ -132,6 +177,7 @@ def parse_quotes(payload, event, fixture, aliases, captured_at, url, content_sha
             'url': url, 'content_sha256': content_sha256, 'provider_event_id': event['id'],
             'provider_kickoff_at': event['scheduled_at'], 'market_status': 'provider_reports_open',
             'lines': [lines[line] for line in sorted(lines)], 'opening_lines': opening_lines,
+            **({'opening_warning': opening_warning} if opening_warning else {}),
             'line_selection': 'closest_price_balance_not_provider_main', 'market_1x2': market_1x2,
             'source_delay_seconds': 90, 'snapshot_age_seconds': age,
             'freshness_evidence': 'provider stale=false and fresh global feed health' if health_fresh else 'recent provider update',

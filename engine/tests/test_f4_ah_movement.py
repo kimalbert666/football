@@ -150,6 +150,29 @@ def main_snapshots():
     return earlier, current
 
 
+@pytest.mark.parametrize("reader", [aligned_early_quote, observed_main_line_movement])
+def test_hkjc_http_date_skew_matches_adapter_without_relaxing_publication(reader):
+    earlier, current = main_snapshots()
+    current["home_handicap"] = earlier["quote"]["home_handicap"]
+    for quote in (earlier["quote"], current):
+        quote.update(bookmaker="hkjc", source="hkjc-direct",
+                     url="https://info.cld.hkjc.com/graphql/base/")
+    current["captured_at"] = "2026-10-06T11:45:00.894046Z"
+    current["snapshot_at"] = "2026-10-06T11:45:01Z"
+    before = copy.deepcopy((earlier, current))
+    assert reader(earlier, current) is not None
+    assert (earlier, current) == before
+    current["snapshot_at"] = "2026-10-06T11:45:06Z"
+    assert reader(earlier, current) is None
+    current["snapshot_at"] = "2026-10-06T11:45:01Z"
+    current["published_at"] = current["snapshot_at"]
+    assert reader(earlier, current) is None
+    current.pop("published_at")
+    for quote in (earlier["quote"], current):
+        quote["url"] = "https://example.invalid/"
+    assert reader(earlier, current) is None
+
+
 @pytest.mark.parametrize("initial,current_line", [(-.25, -.5), (-.5, -1), (.25, -.25), (-1, -.75)])
 def test_main_shift_survives_missing_earlier_current_contract_without_cross_line_water(initial, current_line):
     earlier, current = main_snapshots()
@@ -250,3 +273,63 @@ def test_main_movement_timezone_equivalent_kickoffs_match_and_neither_main_end_c
     assert result["provider_event_id"] == "synthetic-event"
     earlier["quote"]["provider_main"] = False
     assert observed_main_line_movement(earlier, current) is None
+
+
+def aligned_snapshots():
+    earlier, current = main_snapshots()
+    earlier["quote"]["lines"].append({"home_handicap": -.5, "odds": [2.10, 1.80]})
+    return earlier, current
+
+
+@pytest.mark.parametrize("mutation", [
+    {"provider_event_id": "different-event"}, {"provider_event_id": None},
+    {"provider_kickoff_at": "2026-10-07T12:00:00Z"}, {"provider_kickoff_at": None},
+    {"captured_at": None}, {"captured_at": "2026-10-06T12:00:00Z"},
+    {"published_at": "2026-10-06T11:45:01Z"}, {"snapshot_at": "2026-10-06T11:45:01Z"},
+    {"market": "first_half_asian_handicap"},
+])
+def test_aligned_movement_rejects_current_event_kickoff_market_and_time_conflicts(mutation):
+    earlier, current = aligned_snapshots()
+    assert aligned_early_quote(earlier, current) is not None
+    current.update(mutation)
+    assert aligned_early_quote(earlier, current) is None
+
+
+@pytest.mark.parametrize("key", ["provider_event_id", "provider_kickoff_at", "captured_at"])
+def test_aligned_movement_rejects_one_end_missing_metadata(key):
+    earlier, current = aligned_snapshots()
+    current.pop(key)
+    assert aligned_early_quote(earlier, current) is None
+
+
+@pytest.mark.parametrize("mutation", [
+    {"captured_at": "2026-10-06T10:00:00Z"},
+    {"published_at": "2026-10-06T09:00:00Z"},
+    {"snapshot_at": "2026-10-06T09:00:00Z"},
+    {"provider_event_id": "different-event"},
+    {"market": "first_half_asian_handicap"},
+])
+def test_aligned_movement_rejects_unavailable_earlier_quote(mutation):
+    earlier, current = aligned_snapshots()
+    earlier["quote"].update(mutation)
+    assert aligned_early_quote(earlier, current) is None
+
+
+@pytest.mark.parametrize("mutation", [
+    {"generated_at": "2026-10-06T08:59:59Z"},
+    {"generated_at": "2026-10-06T11:45:00Z"},
+    {"kickoff_at": "2026-10-07T12:00:00Z"},
+])
+def test_aligned_movement_rejects_unavailable_earlier_record(mutation):
+    earlier, current = aligned_snapshots()
+    earlier.update(mutation)
+    assert aligned_early_quote(earlier, current) is None
+
+
+def test_aligned_movement_accepts_equivalent_timezone_and_preserves_raw_observation():
+    earlier, current = aligned_snapshots()
+    current["provider_kickoff_at"] = "2026-10-06T20:00:00+08:00"
+    result = aligned_early_quote(earlier, current)
+    assert result["fixed_line_odds"] == [2.10, 1.80]
+    assert result["captured_at"] == earlier["quote"]["captured_at"]
+    assert result["provider_event_id"] == "synthetic-event"
