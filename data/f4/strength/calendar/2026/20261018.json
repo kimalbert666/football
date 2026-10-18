@@ -1,35 +1,71 @@
 {
   "day": "20261018",
   "events_seen": 4,
-  "pending_results": [
+  "pending_results": [],
+  "record_sha256": "c7e9eb419353d78759789d8dac7b9afe1e25c7e1f191cd35de5490e4ede4b32f",
+  "results": [
     {
+      "away": "Sunderland",
+      "away_id": "sunderland",
+      "away_provider_id": "366",
+      "home": "AFC Bournemouth",
+      "home_id": "bournemouth",
+      "home_provider_id": "349",
       "kickoff_at": "2026-10-18T13:00:00Z",
       "match_id": "espn:401879263",
-      "status": "scheduled"
+      "score": [
+        2,
+        0
+      ]
     },
     {
+      "away": "Crystal Palace",
+      "away_id": "crystal-palace",
+      "away_provider_id": "384",
+      "home": "Brighton & Hove Albion",
+      "home_id": "brighton",
+      "home_provider_id": "331",
       "kickoff_at": "2026-10-18T13:00:00Z",
       "match_id": "espn:401879261",
-      "status": "scheduled"
+      "score": [
+        5,
+        0
+      ]
     },
     {
+      "away": "Manchester United",
+      "away_id": "man-united",
+      "away_provider_id": "360",
+      "home": "Leeds United",
+      "home_id": "leeds",
+      "home_provider_id": "357",
       "kickoff_at": "2026-10-18T13:00:00Z",
       "match_id": "espn:401879260",
-      "status": "scheduled"
+      "score": [
+        1,
+        1
+      ]
     },
     {
+      "away": "Arsenal",
+      "away_id": "arsenal",
+      "away_provider_id": "359",
+      "home": "Nottingham Forest",
+      "home_id": "nottingham-forest",
+      "home_provider_id": "393",
       "kickoff_at": "2026-10-18T15:30:00Z",
       "match_id": "espn:401878769",
-      "status": "scheduled"
+      "score": [
+        0,
+        1
+      ]
     }
   ],
-  "record_sha256": "ac9776f9c3492066268ba5948f5110d6f9228485e194b1d0c0642a39a66e80b7",
-  "results": [],
   "schema": "f4-strength-observed-v1",
   "season_year": 2026,
   "source": {
-    "captured_at": "2026-10-18T01:30:40.318786Z",
-    "content_sha256": "e83b7c1dce51e5d8f09b28a583a6ff5b191ed9a54ecc073caba50992c05cac8f",
+    "captured_at": "2026-10-18T23:04:05.048687Z",
+    "content_sha256": "a79e5e2684e24e4635ed1968b4a9f698b26962dd54945a7b1e6e3371c6689557",
     "name": "espn",
     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261018&limit=1000"
   }
