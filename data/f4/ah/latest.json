@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-10-18T10:48:50.743598Z",
+  "evaluated_at": "2026-10-18T11:18:55.331868Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 39,
@@ -1946,24 +1946,24 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-18T09:48:54.697790Z",
+      "captured_at": "2026-10-18T11:18:54.179716Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-18T09:48:55.358028Z",
-      "content_sha256": "0b8dc8df0edc4f2373270692da79107886b5aa532130ecb4d00df3c44885ff88"
+      "captured_at": "2026-10-18T11:18:54.717310Z",
+      "content_sha256": "987c257ad625f0cd53872dac3bcfcf0df17c06c7f34b7ba9db6556583df903f0"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-18T09:48:56.308441Z",
-      "response_at": "2026-10-18T09:48:56Z",
-      "content_sha256": "8aa137e97002b4f2c7f256c0a78f089be21952fc4ee99f0a753d9a234b642df8",
-      "match_count": 109,
+      "captured_at": "2026-10-18T11:18:55.317918Z",
+      "response_at": "2026-10-18T11:18:55Z",
+      "content_sha256": "442d076dabe9342b2d0047d78605f55f0200a2e46abb8c34716080b5882e3a44",
+      "match_count": 104,
       "epl_match_count": 5
     }
   ],
@@ -1978,14 +1978,10 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-18T09:48:55.358028Z"
+    "checked_at": "2026-10-18T11:18:54.717310Z"
   },
-  "fallback_matches": [
-    "espn:401879260",
-    "espn:401879261",
-    "espn:401879263"
-  ],
-  "quote_availability": "complete",
+  "fallback_matches": [],
+  "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
     "fixtures": 5,
