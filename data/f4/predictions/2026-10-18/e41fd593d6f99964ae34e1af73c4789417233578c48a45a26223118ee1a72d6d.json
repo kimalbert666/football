@@ -1,0 +1,110 @@
+{
+  "actual_minutes": 74.66671576666666,
+  "away": "Arsenal",
+  "away_id": "arsenal",
+  "baseline_version": "titan007-crown-1x2-inverse-normalized-v1",
+  "candidate_reason": null,
+  "candidate_source_sha256": "18bae91698fd21b2d9e2ef5f4635de511148d6c7d85777a6791dec30cb300124",
+  "candidate_training_evidence": "legacy_model_declared_unverified",
+  "candidate_version": "dc-shadow-18bae91698fd",
+  "candidate_weight": 0,
+  "captured_at": "2026-10-18T14:15:18.623973Z",
+  "champion_version": "market-reference-v1",
+  "coverage": {
+    "complete": true,
+    "reason": "Independent daily EPL calendar verified",
+    "scope": {
+      "from": "2026-10-18",
+      "league": "england-premier",
+      "pending_lookup_limit": 20,
+      "provider": "espn",
+      "through": "2026-10-19"
+    }
+  },
+  "decision_at": "2026-10-18T14:15:19.997054Z",
+  "experiment_id": "f4-forward-epl-crown-v1",
+  "f2": null,
+  "generated_at": "2026-10-18T14:15:19.999214Z",
+  "home": "Nottingham Forest",
+  "home_id": "nottingham-forest",
+  "horizon": "T-60m",
+  "horizon_tolerance_minutes": 20,
+  "kickoff_at": "2026-10-18T15:30:00Z",
+  "league": "england-premier",
+  "market": "90min_1x2",
+  "match_id": "espn:401878769",
+  "origin": {
+    "commit": "d72791764acb26d7182887ab9a9398fa796e2455",
+    "kind": "github-actions",
+    "run_id": "39120695945"
+  },
+  "p_baseline": null,
+  "p_candidate": [
+    0.06126835699046482,
+    0.23776348821922227,
+    0.7009681547903129
+  ],
+  "p_champion": null,
+  "provider": "espn",
+  "quote": null,
+  "reason": "缺少匹配的赛前胜平负报价",
+  "rejected_candidate_cutoff": null,
+  "schema_version": 1,
+  "selected": false,
+  "source_event_id": "401878769",
+  "source_problems": [
+    "f2 row 0 rejected: an explicit kickoff/decision time is required",
+    "f2 row 1 rejected: an explicit kickoff/decision time is required",
+    "f2 row 2 rejected: an explicit kickoff/decision time is required",
+    "f2 row 3 rejected: an explicit kickoff/decision time is required",
+    "f2 row 4 rejected: an explicit kickoff/decision time is required",
+    "f2 row 5 rejected: unknown or ambiguous source teams",
+    "f2 row 6 rejected: an explicit kickoff/decision time is required",
+    "f2 row 7 rejected: an explicit kickoff/decision time is required",
+    "f2 row 8 rejected: an explicit kickoff/decision time is required",
+    "f2 row 9 rejected: an explicit kickoff/decision time is required"
+  ],
+  "sources": [
+    {
+      "captured_at": "2026-10-18T14:15:10.912023Z",
+      "content_sha256": "ddb029da30cb67fff4d9d5e42ba9e52748ea53ee028252ac81e09f2530c5ce10",
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261018"
+    },
+    {
+      "captured_at": "2026-10-18T14:15:10.960132Z",
+      "content_sha256": "53881f64ece58c96035329e6591baec338acd8938cbcddeefe600a6a15ef0a49",
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261019"
+    },
+    {
+      "captured_at": "2026-10-18T14:15:15.221936Z",
+      "content_sha256": "dc86391e88b7c0f601a561f2cc847e5abda654473c5eae14727641ce56ddf35d",
+      "name": "titan007-crown",
+      "status": "ok",
+      "url": "https://1x2.titan007.com/Company.js"
+    },
+    {
+      "captured_at": "2026-10-18T14:15:18.608423Z",
+      "content_sha256": "6b6b3c6b36e6d87fb6930351591c4d738e8a47e0bb3ea3fd537546dd1c310eaa",
+      "name": "titan007-crown",
+      "status": "ok",
+      "url": "https://1x2.titan007.com/index_vip.aspx"
+    },
+    {
+      "name": "titan007-crown-quotes",
+      "reason": "No confirmed EPL fixture in a capture window",
+      "status": "not_requested"
+    },
+    {
+      "captured_at": "2026-10-18T14:15:19.995488+00:00",
+      "content_sha256": "e8c372390f2cd04725fe7dc41b31c14c3501198516c6fca3e329b661ef4e9b90",
+      "endpoint": "https://ru7m5svay1.execute-api.eu-central-1.amazonaws.com/prod/mcp",
+      "provider_match_count": 10,
+      "source": "f2-footballbin"
+    }
+  ],
+  "trained_through": "2026-09-10T15:59:59.999999Z"
+}
