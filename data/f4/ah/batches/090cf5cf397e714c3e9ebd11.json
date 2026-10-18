@@ -1,13 +1,13 @@
 {
   "kickoff_at": "2026-10-18T15:30:00Z",
-  "updated_at": "2026-10-18T15:00:26.981188Z",
+  "updated_at": "2026-10-18T15:15:01.894777Z",
   "fixtures": [
     {
       "match_id": "espn:401878769",
       "home": "Nottingham Forest",
       "away": "Arsenal",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "fdefd1b35575525720caa732f7f78c1718cf4266057b39b6a3c6d4360d4221ba",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -26,12 +26,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-18T15:15:00Z",
           "closes_at": "2026-10-18T15:20:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "fdefd1b35575525720caa732f7f78c1718cf4266057b39b6a3c6d4360d4221ba",
+          "same_bookmaker_1x2_available": true
         }
       }
     }
