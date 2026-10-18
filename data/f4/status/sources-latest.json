@@ -1,19 +1,19 @@
 {
-  "captured_at": "2026-10-18T15:16:31.282722Z",
+  "captured_at": "2026-10-18T18:02:36.517155Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261018",
-      "captured_at": "2026-10-18T15:16:31.244817Z",
-      "content_sha256": "05ae5ecf750e58530a55b9055524a5bac78d80d79ad0a8732518e6cfe02d159a"
+      "captured_at": "2026-10-18T18:02:36.395616Z",
+      "content_sha256": "7de4f415759d5de24345f840ea3239347ffb64c719cdbfa1444f59386a07670a"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261019",
-      "captured_at": "2026-10-18T15:16:31.282198Z",
-      "content_sha256": "1227f0f45c8f8b6e35f0aa79dd3c5a5228a07a9b8c83d69617d4da601182ab2b"
+      "captured_at": "2026-10-18T18:02:36.516744Z",
+      "content_sha256": "63617c9ccc90332f3fa6a25ebc572e4b270e71ec6be8e7215a9aaad2272f53b4"
     }
   ],
   "fixtures": [
@@ -81,8 +81,11 @@
       "home": "Nottingham Forest",
       "away": "Arsenal",
       "kickoff_at": "2026-10-18T15:30:00Z",
-      "status": "scheduled",
-      "score": null,
+      "status": "completed",
+      "score": [
+        0,
+        1
+      ],
       "market": null,
       "problems": []
     },
