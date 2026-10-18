@@ -1,12 +1,9 @@
 {
   "status": "partial",
-  "checked_at": "2026-10-17T01:31:15.074692Z",
-  "due_fixtures": 7,
-  "new_records": 2,
-  "saved_matches": [
-    "espn:401879261",
-    "espn:401879263"
-  ],
+  "checked_at": "2026-10-18T01:30:41.951747Z",
+  "due_fixtures": 10,
+  "new_records": 0,
+  "saved_matches": [],
   "stored_first_observations": 10,
   "missing": [
     {
@@ -28,6 +25,26 @@
     {
       "match_id": "espn:401878767",
       "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401878765",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401878766",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401879252",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401879254",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401878764",
+      "reason": "missing Asian handicap quote"
     }
   ],
   "provider_faults": {},
@@ -36,7 +53,12 @@
     "espn:401879256: HKJC AH unavailable (unique EPL identity not published or not matched)",
     "espn:401878768: HKJC AH unavailable (unique EPL identity not published or not matched)",
     "espn:401879255: HKJC AH unavailable (unique EPL identity not published or not matched)",
-    "espn:401878767: HKJC AH unavailable (unique EPL identity not published or not matched)"
+    "espn:401878767: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401878765: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401878766: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879252: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879254: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401878764: HKJC AH unavailable (unique EPL identity not published or not matched)"
   ],
   "source_policy": "independent_bulk_scout_no_formal_primary_quota",
   "opening_certified": false

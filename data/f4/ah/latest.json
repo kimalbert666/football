@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-10-18T00:56:53.372868Z",
+  "evaluated_at": "2026-10-18T01:30:40.153331Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 36,
@@ -1946,24 +1946,24 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-18T00:56:51.518198Z",
+      "captured_at": "2026-10-18T01:30:38.417915Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-18T00:56:52.177958Z",
-      "content_sha256": "29049c205e18f8156b88215cf7b5d9bd50972f925f689c1e3a66f672ff447287"
+      "captured_at": "2026-10-18T01:30:39.142272Z",
+      "content_sha256": "336d4f0113a0acdbf983800e9f1d7e5f74a46c63d1d6d66677e26d310d6d74f9"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-18T00:56:53.357410Z",
-      "response_at": "2026-10-18T00:56:53Z",
-      "content_sha256": "450298932a119cb7a7789a1f3ea48ce923420524bb2b170c6e09c6fcba459719",
-      "match_count": 136,
+      "captured_at": "2026-10-18T01:30:40.135684Z",
+      "response_at": "2026-10-18T01:30:40Z",
+      "content_sha256": "b76d6b6ea145be92994ede5c8dbeae5e75460a26da6e8f7b4d2557d9e253d7b9",
+      "match_count": 133,
       "epl_match_count": 5
     }
   ],
@@ -1978,22 +1978,28 @@
     "feed_live": false,
     "as_of": "2026-10-02T22:02:04Z",
     "as_of_stale": true,
-    "checked_at": "2026-10-18T00:56:52.177958Z"
+    "checked_at": "2026-10-18T01:30:39.142272Z"
   },
   "fallback_matches": [],
   "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 5,
+    "fixtures": 20,
     "windows": {
       "T-180m": {
-        "awaiting_window": 5
+        "recorded_research_only": 5,
+        "complete_joint_market": 5,
+        "awaiting_window": 15
       },
       "T-60m": {
-        "awaiting_window": 5
+        "recorded_research_only": 5,
+        "complete_joint_market": 5,
+        "awaiting_window": 15
       },
       "T-15m": {
-        "awaiting_window": 5
+        "recorded_research_only": 5,
+        "complete_joint_market": 5,
+        "awaiting_window": 15
       }
     }
   },
