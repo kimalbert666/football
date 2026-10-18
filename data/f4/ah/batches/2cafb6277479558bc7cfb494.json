@@ -1,6 +1,6 @@
 {
   "kickoff_at": "2026-10-18T13:00:00Z",
-  "updated_at": "2026-10-18T11:48:57.474788Z",
+  "updated_at": "2026-10-18T12:00:05.291006Z",
   "fixtures": [
     {
       "match_id": "espn:401879260",
@@ -18,12 +18,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-60m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-18T12:00:00Z",
           "closes_at": "2026-10-18T12:10:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "66f1463b051cbade326df74d92527352e2b7c7ee1aa6c3566536a1d000cc0e94",
+          "same_bookmaker_1x2_available": true
         },
         "T-15m": {
           "status": "awaiting_window",
@@ -51,12 +51,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-60m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-18T12:00:00Z",
           "closes_at": "2026-10-18T12:10:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "d44f59a9393f1d70ec6a9a22edbc13af5c2c16030e9043e928f9657478ebe33e",
+          "same_bookmaker_1x2_available": true
         },
         "T-15m": {
           "status": "awaiting_window",
@@ -84,12 +84,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-60m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-18T12:00:00Z",
           "closes_at": "2026-10-18T12:10:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "3accf6cf64395a878735ea51cc81c0674dcd090cf29613987ba84c3a348926a9",
+          "same_bookmaker_1x2_available": true
         },
         "T-15m": {
           "status": "awaiting_window",
