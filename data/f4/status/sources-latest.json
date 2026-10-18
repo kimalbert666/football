@@ -1,47 +1,19 @@
 {
-  "captured_at": "2026-10-18T14:30:23.392521Z",
+  "captured_at": "2026-10-18T15:00:26.968290Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261018",
-      "captured_at": "2026-10-18T14:30:00.081583Z",
-      "content_sha256": "525988391279d92c600fed6ac78398283b5c27cc7ef3f129ce6a3d19e8888573"
+      "captured_at": "2026-10-18T15:00:26.882416Z",
+      "content_sha256": "da9f16ae121f7f798f45aea76015ef7cbe952a7225941eec8e2ab88a95474058"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261019",
-      "captured_at": "2026-10-18T14:30:00.122236Z",
-      "content_sha256": "53881f64ece58c96035329e6591baec338acd8938cbcddeefe600a6a15ef0a49"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2.titan007.com/Company.js",
-      "status": "ok",
-      "captured_at": "2026-10-18T14:30:04.480031Z",
-      "content_sha256": "dc86391e88b7c0f601a561f2cc847e5abda654473c5eae14727641ce56ddf35d"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2.titan007.com/index_vip.aspx",
-      "status": "ok",
-      "captured_at": "2026-10-18T14:30:07.275787Z",
-      "content_sha256": "f73d90dddb1984e6f70e652c1566850b6ad8a03292b36d283a828e3bff91ce3c"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2.titan007.com/TomorrowOdds.aspx",
-      "status": "ok",
-      "captured_at": "2026-10-18T14:30:21.184913Z",
-      "content_sha256": "a56079919e1f00456c9d22d279736028861bad53c2c4fd24ad7bafe1c367e420"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2d.titan007.com/3003917.js",
-      "status": "ok",
-      "captured_at": "2026-10-18T14:30:23.184329Z",
-      "content_sha256": "fc1a49347416018435cd5dd670a88b27bb398211889df94a58ac54458ffef0e5"
+      "captured_at": "2026-10-18T15:00:26.967701Z",
+      "content_sha256": "1227f0f45c8f8b6e35f0aa79dd3c5a5228a07a9b8c83d69617d4da601182ab2b"
     }
   ],
   "fixtures": [
@@ -55,8 +27,11 @@
       "home": "Leeds United",
       "away": "Manchester United",
       "kickoff_at": "2026-10-18T13:00:00Z",
-      "status": "live",
-      "score": null,
+      "status": "completed",
+      "score": [
+        1,
+        1
+      ],
       "market": null,
       "problems": []
     },
@@ -70,8 +45,11 @@
       "home": "Brighton & Hove Albion",
       "away": "Crystal Palace",
       "kickoff_at": "2026-10-18T13:00:00Z",
-      "status": "live",
-      "score": null,
+      "status": "completed",
+      "score": [
+        5,
+        0
+      ],
       "market": null,
       "problems": []
     },
@@ -85,8 +63,11 @@
       "home": "AFC Bournemouth",
       "away": "Sunderland",
       "kickoff_at": "2026-10-18T13:00:00Z",
-      "status": "live",
-      "score": null,
+      "status": "completed",
+      "score": [
+        2,
+        0
+      ],
       "market": null,
       "problems": []
     },
@@ -102,26 +83,7 @@
       "kickoff_at": "2026-10-18T15:30:00Z",
       "status": "scheduled",
       "score": null,
-      "market": {
-        "bookmaker": "crown",
-        "company_id": 545,
-        "market": "90min_1x2",
-        "odds": [
-          6.6,
-          4.0,
-          1.56
-        ],
-        "captured_at": "2026-10-18T14:30:23.184329Z",
-        "published_at": "2026-10-18T14:28:00Z",
-        "source": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003917.js",
-        "provider_event_id": "3003917",
-        "provider_quote_id": "158231870",
-        "content_sha256": "fc1a49347416018435cd5dd670a88b27bb398211889df94a58ac54458ffef0e5",
-        "provider_kickoff_at": "2026-10-18T15:30:00Z",
-        "market_status": "not_exposed",
-        "provenance": "Titan007 public display attributed to Crown; not direct bookmaker API"
-      },
+      "market": null,
       "problems": []
     },
     {
