@@ -1,0 +1,21 @@
+{
+  "day": "20261019",
+  "events_seen": 1,
+  "pending_results": [
+    {
+      "kickoff_at": "2026-10-19T19:00:00Z",
+      "match_id": "espn:401879257",
+      "status": "scheduled"
+    }
+  ],
+  "record_sha256": "d767513d8f07e8c7e61d7680ff84b018732b8b36d118267e933a5a79529125aa",
+  "results": [],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-19T01:38:30.613034Z",
+    "content_sha256": "73e7c6722e910c449b991915a31a5329b34e306ba7359f21b6a4868026376055",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261019&limit=1000"
+  }
+}

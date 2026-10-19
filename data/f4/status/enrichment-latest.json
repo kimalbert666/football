@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-18T23:04:04.784333Z",
+  "checked_at": "2026-10-19T01:38:30.437781Z",
   "status": "checked",
   "sources": {
     "strength": {
@@ -36,65 +36,69 @@
           "20261011",
           "20261012",
           "20261017",
-          "20261018"
+          "20261018",
+          "20261019"
         ]
       },
       "metadata_source": {
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261018",
-        "captured_at": "2026-10-18T23:04:04.844529Z",
-        "content_sha256": "a79e5e2684e24e4635ed1968b4a9f698b26962dd54945a7b1e6e3371c6689557"
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261019",
+        "captured_at": "2026-10-19T01:38:30.513642Z",
+        "content_sha256": "73e7c6722e910c449b991915a31a5329b34e306ba7359f21b6a4868026376055"
       },
-      "observed_at": "2026-10-18T23:04:05.051078Z",
-      "requested_dates": 22,
-      "verified_dates": 22,
+      "observed_at": "2026-10-19T01:38:30.629561Z",
+      "requested_dates": 23,
+      "verified_dates": 23,
       "missing_dates": [],
-      "snapshot_path": "data/f4/strength/snapshots/1f0ccd5e5b80d2704b084e2f6b0ce4d524ff92527366304263fd59bb5d685876.json",
-      "snapshot_sha256": "1f0ccd5e5b80d2704b084e2f6b0ce4d524ff92527366304263fd59bb5d685876",
+      "snapshot_path": "data/f4/strength/snapshots/a4d123147a0af824c5aa91720658e083ede6b1e0bd0281da28007edede175829.json",
+      "snapshot_sha256": "a4d123147a0af824c5aa91720658e083ede6b1e0bd0281da28007edede175829",
       "result_count": 69,
       "teams": 20,
       "teams_with_five_games": 20,
-      "requested_fixtures": 20,
-      "rated_requested_fixtures": 20
+      "requested_fixtures": 15,
+      "rated_requested_fixtures": 15
     },
     "context": {
-      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3",
-      "observed_at": "2026-10-18T01:30:41.879175Z",
-      "problems": [],
-      "requested_clubs": 16,
       "schema": "f4-prematch-context-observed-v1",
+      "status": "ready",
+      "observed_at": "2026-10-19T01:38:32.405643Z",
       "season_year": 2026,
-      "snapshot_path": "data/f4/context/snapshots/067be489f3e8b8e02de5ec56d07a1ac99a25ba856b62d29a1d9bc6e3cc20df25.json",
-      "snapshot_sha256": "067be489f3e8b8e02de5ec56d07a1ac99a25ba856b62d29a1d9bc6e3cc20df25",
+      "snapshot_sha256": "0ea2c6781cebedbf4a022e4953195aeb2f05cc3eca1018c7752d62ece5bd9492",
+      "snapshot_path": "data/f4/context/snapshots/0ea2c6781cebedbf4a022e4953195aeb2f05cc3eca1018c7752d62ece5bd9492.json",
+      "teams_xg": 20,
+      "teams_availability": 20,
+      "teams_club_schedule": 20,
+      "requested_clubs": 20,
+      "unresolved_clubs": [],
       "source_statuses": {
+        "fpl": "available",
+        "understat": "available",
         "espn-rest:arsenal": "available",
         "espn-rest:aston-villa": "available",
         "espn-rest:bournemouth": "available",
+        "espn-rest:brentford": "available",
         "espn-rest:brighton": "available",
         "espn-rest:chelsea": "available",
         "espn-rest:coventry": "available",
         "espn-rest:crystal-palace": "available",
         "espn-rest:everton": "available",
         "espn-rest:fulham": "available",
+        "espn-rest:hull-city": "available",
         "espn-rest:ipswich": "available",
         "espn-rest:leeds": "available",
+        "espn-rest:liverpool": "available",
         "espn-rest:man-city": "available",
         "espn-rest:man-united": "available",
+        "espn-rest:newcastle": "available",
         "espn-rest:nottingham-forest": "available",
         "espn-rest:sunderland": "available",
-        "espn-rest:tottenham": "available",
-        "fpl": "available",
-        "understat": "available"
+        "espn-rest:tottenham": "available"
       },
-      "status": "ready",
-      "teams_availability": 20,
-      "teams_club_schedule": 16,
-      "teams_xg": 20,
-      "unresolved_clubs": [],
-      "refresh": "cached_same_utc_day"
+      "problems": [],
+      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3"
     },
     "first_observed_quotes": {
-      "status": "cached",
-      "checked_at": "2026-10-18T01:30:41.951747Z",
+      "status": "partial",
+      "checked_at": "2026-10-19T01:38:32.594206Z",
       "due_fixtures": 10,
       "new_records": 0,
       "saved_matches": [],
@@ -158,5 +162,5 @@
       "opening_certified": false
     }
   },
-  "completed_at": "2026-10-18T23:04:05.054245Z"
+  "completed_at": "2026-10-19T01:38:32.594615Z"
 }
