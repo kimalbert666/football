@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-10-19T07:41:51.798061Z",
+  "evaluated_at": "2026-10-19T15:32:21.220476Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 48,
@@ -2384,47 +2384,48 @@
       }
     }
   },
-  "problems": [
-    "Crown AH source unavailable (ValueError: provider feed health unavailable or stale)"
-  ],
+  "problems": [],
   "sources": [
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-19T07:41:50.369679Z",
+      "captured_at": "2026-10-19T15:32:19.769084Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-19T07:41:51.020484Z",
-      "content_sha256": "d093cb09d0f8bc7458fd08b7dd495c3fb64dcc629ce9baf36ce8df4f6dfe61fa"
+      "captured_at": "2026-10-19T15:32:20.431984Z",
+      "content_sha256": "68ff6b1bbc839e50564a0363d8ba7efd7a93ed067cd28afa1d5287778ec83e26"
+    },
+    {
+      "name": "infersports-crown-ah-quotes",
+      "status": "not_requested",
+      "reason": "no confirmed EPL fixture in capture window"
     },
     {
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-19T07:41:51.791908Z",
-      "response_at": "2026-10-19T07:41:51Z",
-      "content_sha256": "7359d16901b195dfc35fd56a51bf24f130298afa4dad0c00f78ea8739b366f90",
-      "match_count": 49,
+      "captured_at": "2026-10-19T15:32:21.207067Z",
+      "response_at": "2026-10-19T15:32:21Z",
+      "content_sha256": "4f2dc18a669096c0c67a1ff724ca84387b3d01ef3266235b69536bbc8f0fbb14",
+      "match_count": 82,
       "epl_match_count": 1
     }
   ],
   "provider_faults": {
-    "infersports": [
-      "Crown AH source unavailable (ValueError: provider feed health unavailable or stale)"
-    ],
+    "infersports": [],
     "hkjc-direct": []
   },
   "primary_provider_health": {
-    "status": "degraded",
-    "feed_live": false,
-    "as_of": "2026-10-02T22:02:04Z",
-    "as_of_stale": true,
-    "checked_at": "2026-10-19T07:41:51.020484Z"
+    "status": "ok",
+    "feed_live": true,
+    "as_of": "2026-10-19T15:32:12Z",
+    "as_of_stale": false,
+    "checked_at": "2026-10-19T15:32:20.431984Z"
   },
   "fallback_matches": [],
   "quote_availability": "not_tested_no_due_matches",

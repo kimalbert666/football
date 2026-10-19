@@ -15,19 +15,20 @@
     },
     "9dc1747c93d5868d2b0d8753": {
       "episode": 1,
-      "active": true,
+      "active": false,
       "first_seen_at": "2026-10-02T23:51:39.371872Z",
       "code": "ah_source_unavailable",
       "source": "crown-asian-handicap",
       "detail": "Crown AH source unavailable (ValueError: provider feed health unavailable or stale)",
       "last_seen_at": "2026-10-19T07:41:51.803677Z",
       "acknowledged_episode": 1,
-      "last_notified_at": "2026-10-02T23:55:01.384970Z"
+      "last_notified_at": "2026-10-02T23:55:01.384970Z",
+      "recovered_at": "2026-10-19T15:32:21.229231Z"
     }
   },
   "pending": [],
   "acknowledged_months": [
     "2026-09"
   ],
-  "updated_at": "2026-10-19T07:41:51.803677Z"
+  "updated_at": "2026-10-19T15:32:21.229231Z"
 }
