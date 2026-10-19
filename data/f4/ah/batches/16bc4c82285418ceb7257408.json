@@ -1,13 +1,13 @@
 {
   "kickoff_at": "2026-10-19T19:00:00Z",
-  "updated_at": "2026-10-19T18:30:17.855366Z",
+  "updated_at": "2026-10-19T18:45:03.438001Z",
   "fixtures": [
     {
       "match_id": "espn:401879257",
       "home": "Tottenham Hotspur",
       "away": "Coventry City",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "ffe95dbe14d6cc551122eb819206d993523c760cf88b0a52290d1d12b2505f34",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -26,12 +26,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-19T18:45:00Z",
           "closes_at": "2026-10-19T18:50:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "ffe95dbe14d6cc551122eb819206d993523c760cf88b0a52290d1d12b2505f34",
+          "same_bookmaker_1x2_available": true
         }
       }
     }
