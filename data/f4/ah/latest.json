@@ -1,13 +1,11 @@
 {
-  "evaluated_at": "2026-10-20T00:16:33.232866Z",
+  "evaluated_at": "2026-10-20T00:16:38.207753Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 51,
   "distinct_matches": 18,
-  "paired_matches": 17,
-  "pairing_issues": {
-    "awaiting_regulation_result": 1
-  },
+  "paired_matches": 18,
+  "pairing_issues": {},
   "line_groups": {
     "-1.25": {
       "matches": 2,
@@ -95,6 +93,17 @@
       },
       "home_profit": 0.0,
       "away_profit": 0.0
+    },
+    "-1.0": {
+      "matches": 1,
+      "home": {
+        "full_win": 1
+      },
+      "away": {
+        "full_loss": 1
+      },
+      "home_profit": 0.8899999999999999,
+      "away_profit": -1.0
     }
   },
   "prospective_scores": {},
@@ -332,15 +341,97 @@
       }
     ],
     "fixed_window": "T-15m, 10 to 20 minutes before kickoff",
-    "unique_fixtures": 17,
-    "accepted_pairs": 17,
-    "side_records": 34,
+    "unique_fixtures": 18,
+    "accepted_pairs": 18,
+    "side_records": 36,
     "duplicate_pairs_excluded": 0,
     "rejected_pairs": [],
     "rejection_counts": {},
     "positive_return_denominator": "all settled matches including pushes within each group",
     "profit_basis": "descriptive one-unit settlement at each saved price, not a betting strategy",
     "groups": [
+      {
+        "experiment_id": "f4-epl-ah-research-v1",
+        "bookmaker": "crown",
+        "abs_handicap": 1.0,
+        "side": "lower",
+        "venue": "away",
+        "odds_band": "1_90_to_2_00",
+        "odds_band_label": "1.90–2.00",
+        "matches": 1,
+        "settlement_counts": {
+          "full_win": 0,
+          "half_win": 0,
+          "push": 0,
+          "half_loss": 0,
+          "full_loss": 1
+        },
+        "unit_stake_net_profit": -1.0,
+        "records": [
+          {
+            "match_id": "espn:401879257",
+            "kickoff_at": "2026-10-19T19:00:00+00:00",
+            "observed_at": "2026-10-19T18:45:03.419455+00:00",
+            "home": "Tottenham Hotspur",
+            "away": "Coventry City",
+            "team": "Coventry City",
+            "home_handicap": -1.0,
+            "venue": "away",
+            "decimal_odds": 2.0,
+            "final_score": [
+              3,
+              1
+            ],
+            "settlement": "full_loss",
+            "unit_stake_net_profit": -1.0
+          }
+        ],
+        "positive_returns": 0,
+        "positive_return_rate": 0.0,
+        "full_win_rate": 0.0,
+        "unit_stake_roi": -1.0
+      },
+      {
+        "experiment_id": "f4-epl-ah-research-v1",
+        "bookmaker": "crown",
+        "abs_handicap": 1.0,
+        "side": "upper",
+        "venue": "home",
+        "odds_band": "above_1_85_below_1_90",
+        "odds_band_label": ">1.85且<1.90",
+        "matches": 1,
+        "settlement_counts": {
+          "full_win": 1,
+          "half_win": 0,
+          "push": 0,
+          "half_loss": 0,
+          "full_loss": 0
+        },
+        "unit_stake_net_profit": 0.89,
+        "records": [
+          {
+            "match_id": "espn:401879257",
+            "kickoff_at": "2026-10-19T19:00:00+00:00",
+            "observed_at": "2026-10-19T18:45:03.419455+00:00",
+            "home": "Tottenham Hotspur",
+            "away": "Coventry City",
+            "team": "Tottenham Hotspur",
+            "home_handicap": -1.0,
+            "venue": "home",
+            "decimal_odds": 1.89,
+            "final_score": [
+              3,
+              1
+            ],
+            "settlement": "full_win",
+            "unit_stake_net_profit": 0.8899999999999999
+          }
+        ],
+        "positive_returns": 1,
+        "positive_return_rate": 1.0,
+        "full_win_rate": 1.0,
+        "unit_stake_roi": 0.89
+      },
       {
         "experiment_id": "f4-epl-ah-research-v1",
         "bookmaker": "hkjc",
@@ -1499,6 +1590,89 @@
     "book_summaries": [
       {
         "experiment_id": "f4-epl-ah-research-v1",
+        "bookmaker": "crown",
+        "paired_matches": 1,
+        "odds_band_groups": [
+          {
+            "side": "lower",
+            "odds_band": "1_90_to_2_00",
+            "odds_band_label": "1.90–2.00",
+            "aggregation": "all handicap sizes and venues within this experiment/bookmaker",
+            "matches": 1,
+            "settlement_counts": {
+              "full_win": 0,
+              "half_win": 0,
+              "push": 0,
+              "half_loss": 0,
+              "full_loss": 1
+            },
+            "unit_stake_net_profit": -1.0,
+            "records": [
+              {
+                "match_id": "espn:401879257",
+                "kickoff_at": "2026-10-19T19:00:00+00:00",
+                "observed_at": "2026-10-19T18:45:03.419455+00:00",
+                "home": "Tottenham Hotspur",
+                "away": "Coventry City",
+                "team": "Coventry City",
+                "home_handicap": -1.0,
+                "venue": "away",
+                "decimal_odds": 2.0,
+                "final_score": [
+                  3,
+                  1
+                ],
+                "settlement": "full_loss",
+                "unit_stake_net_profit": -1.0
+              }
+            ],
+            "positive_returns": 0,
+            "positive_return_rate": 0.0,
+            "full_win_rate": 0.0,
+            "unit_stake_roi": -1.0
+          },
+          {
+            "side": "upper",
+            "odds_band": "above_1_85_below_1_90",
+            "odds_band_label": ">1.85且<1.90",
+            "aggregation": "all handicap sizes and venues within this experiment/bookmaker",
+            "matches": 1,
+            "settlement_counts": {
+              "full_win": 1,
+              "half_win": 0,
+              "push": 0,
+              "half_loss": 0,
+              "full_loss": 0
+            },
+            "unit_stake_net_profit": 0.89,
+            "records": [
+              {
+                "match_id": "espn:401879257",
+                "kickoff_at": "2026-10-19T19:00:00+00:00",
+                "observed_at": "2026-10-19T18:45:03.419455+00:00",
+                "home": "Tottenham Hotspur",
+                "away": "Coventry City",
+                "team": "Tottenham Hotspur",
+                "home_handicap": -1.0,
+                "venue": "home",
+                "decimal_odds": 1.89,
+                "final_score": [
+                  3,
+                  1
+                ],
+                "settlement": "full_win",
+                "unit_stake_net_profit": 0.8899999999999999
+              }
+            ],
+            "positive_returns": 1,
+            "positive_return_rate": 1.0,
+            "full_win_rate": 1.0,
+            "unit_stake_roi": 0.89
+          }
+        ]
+      },
+      {
+        "experiment_id": "f4-epl-ah-research-v1",
         "bookmaker": "hkjc",
         "paired_matches": 17,
         "odds_band_groups": [
@@ -2296,6 +2470,19 @@
   },
   "enrichment_issues": [],
   "by_bookmaker": {
+    "crown": {
+      "-1.0": {
+        "matches": 1,
+        "home": {
+          "full_win": 1
+        },
+        "away": {
+          "full_loss": 1
+        },
+        "home_profit": 0.8899999999999999,
+        "away_profit": -1.0
+      }
+    },
     "hkjc": {
       "-1.25": {
         "matches": 2,
@@ -2392,36 +2579,30 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-19T18:45:00.828876Z",
+      "captured_at": "2026-10-20T00:16:36.585997Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-19T18:45:01.504583Z",
-      "content_sha256": "ff13431d34d9a13cf2581b1376bf00d0e32ff246ca401a45f32cf6abe4bdfd16"
+      "captured_at": "2026-10-20T00:16:37.516854Z",
+      "content_sha256": "50dd48ff032e7f68a73e2bc8985fde5a8a095c3fb58d40a3bcbd6097a59a1e4b"
     },
     {
-      "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events?sport=football&league=lg_T9268DXK&status=scheduled&date=2026-10-19&limit=100",
-      "status": "ok",
-      "captured_at": "2026-10-19T18:45:02.147430Z",
-      "content_sha256": "2428e11db88cb729600205dee28d13e8457c804e874c9e019ddf3ee4a2fe18c8"
+      "name": "infersports-crown-ah-quotes",
+      "status": "not_requested",
+      "reason": "no confirmed EPL fixture in capture window"
     },
     {
-      "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events/evt_NSZFMJGJ/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "name": "hkjc-direct-ah",
+      "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-19T18:45:02.774734Z",
-      "content_sha256": "0f602f1c1ff42a5ffd5e8430f390c3f20971af5076fa0724097f4f0d87d5dbd0"
-    },
-    {
-      "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events/evt_NSZFMJGJ/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
-      "status": "ok",
-      "captured_at": "2026-10-19T18:45:03.413979Z",
-      "content_sha256": "2386456ff5ce4965848c5c355bee75cbbea36961e25b963565d10f25f8a4448b"
+      "captured_at": "2026-10-20T00:16:38.193005Z",
+      "response_at": "2026-10-20T00:16:38Z",
+      "content_sha256": "86e3181d12b9e870066fb215945ed81dc3cf404a336eaf16ee627da01f9884f7",
+      "match_count": 74,
+      "epl_match_count": 0
     }
   ],
   "provider_faults": {
@@ -2431,19 +2612,31 @@
   "primary_provider_health": {
     "status": "ok",
     "feed_live": true,
-    "as_of": "2026-10-19T18:44:53Z",
+    "as_of": "2026-10-20T00:16:28Z",
     "as_of_stale": false,
-    "checked_at": "2026-10-19T18:45:01.504583Z"
+    "checked_at": "2026-10-20T00:16:37.516854Z"
   },
   "fallback_matches": [],
-  "quote_availability": "complete",
+  "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 0,
+    "fixtures": 11,
     "windows": {
-      "T-180m": {},
-      "T-60m": {},
-      "T-15m": {}
+      "T-180m": {
+        "recorded_research_only": 1,
+        "complete_joint_market": 1,
+        "awaiting_window": 10
+      },
+      "T-60m": {
+        "recorded_research_only": 1,
+        "complete_joint_market": 1,
+        "awaiting_window": 10
+      },
+      "T-15m": {
+        "recorded_research_only": 1,
+        "complete_joint_market": 1,
+        "awaiting_window": 10
+      }
     }
   },
   "research_only": true,

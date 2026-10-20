@@ -1,20 +1,29 @@
 {
   "day": "20261019",
   "events_seen": 1,
-  "pending_results": [
+  "pending_results": [],
+  "record_sha256": "cf004a82c9d72e3faca54f771ff59a401d752cc07f2240afb9f9b86652ef8651",
+  "results": [
     {
+      "away": "Coventry City",
+      "away_id": "coventry",
+      "away_provider_id": "388",
+      "home": "Tottenham Hotspur",
+      "home_id": "tottenham",
+      "home_provider_id": "367",
       "kickoff_at": "2026-10-19T19:00:00Z",
       "match_id": "espn:401879257",
-      "status": "scheduled"
+      "score": [
+        3,
+        1
+      ]
     }
   ],
-  "record_sha256": "d767513d8f07e8c7e61d7680ff84b018732b8b36d118267e933a5a79529125aa",
-  "results": [],
   "schema": "f4-strength-observed-v1",
   "season_year": 2026,
   "source": {
-    "captured_at": "2026-10-19T01:38:30.613034Z",
-    "content_sha256": "73e7c6722e910c449b991915a31a5329b34e306ba7359f21b6a4868026376055",
+    "captured_at": "2026-10-20T00:16:38.351945Z",
+    "content_sha256": "4c0276fe97ef9f851e54940ed7e8d36b72778cb2a9f783dc7da26b7480628885",
     "name": "espn",
     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261019&limit=1000"
   }

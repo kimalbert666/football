@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-19T01:38:30.437781Z",
+  "checked_at": "2026-10-20T00:16:38.213021Z",
   "status": "checked",
   "sources": {
     "strength": {
@@ -41,29 +41,29 @@
         ]
       },
       "metadata_source": {
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261019",
-        "captured_at": "2026-10-19T01:38:30.513642Z",
-        "content_sha256": "73e7c6722e910c449b991915a31a5329b34e306ba7359f21b6a4868026376055"
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261020",
+        "captured_at": "2026-10-20T00:16:38.255173Z",
+        "content_sha256": "28de657f9e31d788ecea3c3722ace7a814388ca4028c6209cf1e8477d4107629"
       },
-      "observed_at": "2026-10-19T01:38:30.629561Z",
+      "observed_at": "2026-10-20T00:16:38.371973Z",
       "requested_dates": 23,
       "verified_dates": 23,
       "missing_dates": [],
-      "snapshot_path": "data/f4/strength/snapshots/a4d123147a0af824c5aa91720658e083ede6b1e0bd0281da28007edede175829.json",
-      "snapshot_sha256": "a4d123147a0af824c5aa91720658e083ede6b1e0bd0281da28007edede175829",
-      "result_count": 69,
+      "snapshot_path": "data/f4/strength/snapshots/bc714f3828f7733d3cca4e79ab8d326e8ce477d6709dd1f32bbe2a3bd6892f9a.json",
+      "snapshot_sha256": "bc714f3828f7733d3cca4e79ab8d326e8ce477d6709dd1f32bbe2a3bd6892f9a",
+      "result_count": 70,
       "teams": 20,
       "teams_with_five_games": 20,
-      "requested_fixtures": 15,
-      "rated_requested_fixtures": 15
+      "requested_fixtures": 11,
+      "rated_requested_fixtures": 11
     },
     "context": {
       "schema": "f4-prematch-context-observed-v1",
       "status": "ready",
-      "observed_at": "2026-10-19T01:38:32.405643Z",
+      "observed_at": "2026-10-20T00:16:40.096286Z",
       "season_year": 2026,
-      "snapshot_sha256": "0ea2c6781cebedbf4a022e4953195aeb2f05cc3eca1018c7752d62ece5bd9492",
-      "snapshot_path": "data/f4/context/snapshots/0ea2c6781cebedbf4a022e4953195aeb2f05cc3eca1018c7752d62ece5bd9492.json",
+      "snapshot_sha256": "f47269c6ee639dc48626f8aedacb08293dfc364d6fd3f69a07b6c55da79a1879",
+      "snapshot_path": "data/f4/context/snapshots/f47269c6ee639dc48626f8aedacb08293dfc364d6fd3f69a07b6c55da79a1879.json",
       "teams_xg": 20,
       "teams_availability": 20,
       "teams_club_schedule": 20,
@@ -98,7 +98,7 @@
     },
     "first_observed_quotes": {
       "status": "partial",
-      "checked_at": "2026-10-19T01:38:32.594206Z",
+      "checked_at": "2026-10-20T00:16:40.155018Z",
       "due_fixtures": 10,
       "new_records": 0,
       "saved_matches": [],
@@ -162,5 +162,5 @@
       "opening_certified": false
     }
   },
-  "completed_at": "2026-10-19T01:38:32.594615Z"
+  "completed_at": "2026-10-20T00:16:40.155347Z"
 }
