@@ -1,47 +1,28 @@
 {
-  "captured_at": "2026-10-19T21:00:31.906127Z",
+  "captured_at": "2026-10-20T00:16:33.197555Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261019",
-      "captured_at": "2026-10-19T21:00:31.782403Z",
-      "content_sha256": "60476941cdd1ac505ef83d4410111091f8125f6e6cfe240f7c8b61f9639c37ed"
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261020",
+      "captured_at": "2026-10-20T00:16:33.114428Z",
+      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261020",
-      "captured_at": "2026-10-19T21:00:31.905923Z",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261021",
+      "captured_at": "2026-10-20T00:16:33.197273Z",
       "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
     }
   ],
-  "fixtures": [
-    {
-      "match_id": "espn:401879257",
-      "source_event_id": "401879257",
-      "provider": "espn",
-      "league": "england-premier",
-      "home_id": "tottenham",
-      "away_id": "coventry",
-      "home": "Tottenham Hotspur",
-      "away": "Coventry City",
-      "kickoff_at": "2026-10-19T19:00:00Z",
-      "status": "completed",
-      "score": [
-        3,
-        1
-      ],
-      "market": null,
-      "problems": []
-    }
-  ],
+  "fixtures": [],
   "coverage": {
     "complete": true,
     "scope": {
       "league": "england-premier",
-      "from": "2026-10-19",
-      "through": "2026-10-20",
+      "from": "2026-10-20",
+      "through": "2026-10-21",
       "provider": "espn",
       "pending_lookup_limit": 20
     },
