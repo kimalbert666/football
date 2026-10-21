@@ -1,30 +1,36 @@
 {
-  "checked_at": "2026-10-21T23:14:57.152423Z",
-  "command": "capture",
+  "checked_at": "2026-10-21T23:15:02.206592Z",
+  "command": "daily",
   "mode": "shadow",
   "new_predictions": 0,
   "new_valid_predictions": 0,
   "new_outcomes": 0,
   "due_fixtures": 0,
-  "tracked_fixtures_seen": 0,
+  "tracked_fixtures_seen": 10,
   "skipped": [],
   "legacy_deferred": null,
   "enrichment": {
-    "checked_at": "2026-10-21T01:59:44.390355Z",
+    "checked_at": "2026-10-21T23:15:02.200939Z",
     "status": "checked",
     "sources": {
       "strength": {
-        "schema": "f4-strength-observed-v1",
-        "method": "verified-espn-season-results-elo-k20-ha60-v1",
-        "status": "ready",
-        "coverage_scope": "all_past_dates_in_espn_declared_current_season_calendar",
         "available_for_historical_decisions": false,
+        "coverage_scope": "all_past_dates_in_espn_declared_current_season_calendar",
+        "metadata_source": {
+          "captured_at": "2026-10-21T01:59:44.482228Z",
+          "content_sha256": "28de657f9e31d788ecea3c3722ace7a814388ca4028c6209cf1e8477d4107629",
+          "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261021"
+        },
+        "method": "verified-espn-season-results-elo-k20-ha60-v1",
+        "missing_dates": [],
+        "observed_at": "2026-10-21T01:59:44.563081Z",
         "problems": [],
+        "rated_requested_fixtures": 10,
+        "requested_dates": 23,
+        "requested_fixtures": 10,
+        "result_count": 70,
+        "schema": "f4-strength-observed-v1",
         "season": {
-          "year": 2026,
-          "start_at": "2026-06-01T04:00:00Z",
-          "end_at": "2027-06-01T03:59:00Z",
-          "name": "2026-27 English Premier League",
           "days": [
             "20260821",
             "20260822",
@@ -49,40 +55,30 @@
             "20261017",
             "20261018",
             "20261019"
-          ]
+          ],
+          "end_at": "2027-06-01T03:59:00Z",
+          "name": "2026-27 English Premier League",
+          "start_at": "2026-06-01T04:00:00Z",
+          "year": 2026
         },
-        "metadata_source": {
-          "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261021",
-          "captured_at": "2026-10-21T01:59:44.482228Z",
-          "content_sha256": "28de657f9e31d788ecea3c3722ace7a814388ca4028c6209cf1e8477d4107629"
-        },
-        "observed_at": "2026-10-21T01:59:44.563081Z",
-        "requested_dates": 23,
-        "verified_dates": 23,
-        "missing_dates": [],
         "snapshot_path": "data/f4/strength/snapshots/bcf2335371ddc81da0f98ab55e85f7ded2d689e2b82745d5ea28a53750da023e.json",
         "snapshot_sha256": "bcf2335371ddc81da0f98ab55e85f7ded2d689e2b82745d5ea28a53750da023e",
-        "result_count": 70,
+        "status": "ready",
         "teams": 20,
         "teams_with_five_games": 20,
-        "requested_fixtures": 10,
-        "rated_requested_fixtures": 10
+        "verified_dates": 23,
+        "refresh": "cached_same_utc_day"
       },
       "context": {
-        "schema": "f4-prematch-context-observed-v1",
-        "status": "ready",
+        "model_feature_status": "context_only_not_used_in_current_M1_M2_M3",
         "observed_at": "2026-10-21T01:59:46.402845Z",
-        "season_year": 2026,
-        "snapshot_sha256": "2bc026b063ee33432a68f6461f4145f3646f5d16d398ab261b88648e487d595f",
-        "snapshot_path": "data/f4/context/snapshots/2bc026b063ee33432a68f6461f4145f3646f5d16d398ab261b88648e487d595f.json",
-        "teams_xg": 20,
-        "teams_availability": 20,
-        "teams_club_schedule": 20,
+        "problems": [],
         "requested_clubs": 20,
-        "unresolved_clubs": [],
+        "schema": "f4-prematch-context-observed-v1",
+        "season_year": 2026,
+        "snapshot_path": "data/f4/context/snapshots/2bc026b063ee33432a68f6461f4145f3646f5d16d398ab261b88648e487d595f.json",
+        "snapshot_sha256": "2bc026b063ee33432a68f6461f4145f3646f5d16d398ab261b88648e487d595f",
         "source_statuses": {
-          "fpl": "available",
-          "understat": "available",
           "espn-rest:arsenal": "available",
           "espn-rest:aston-villa": "available",
           "espn-rest:bournemouth": "available",
@@ -102,13 +98,19 @@
           "espn-rest:newcastle": "available",
           "espn-rest:nottingham-forest": "available",
           "espn-rest:sunderland": "available",
-          "espn-rest:tottenham": "available"
+          "espn-rest:tottenham": "available",
+          "fpl": "available",
+          "understat": "available"
         },
-        "problems": [],
-        "model_feature_status": "context_only_not_used_in_current_M1_M2_M3"
+        "status": "ready",
+        "teams_availability": 20,
+        "teams_club_schedule": 20,
+        "teams_xg": 20,
+        "unresolved_clubs": [],
+        "refresh": "cached_same_utc_day"
       },
       "first_observed_quotes": {
-        "status": "partial",
+        "status": "cached",
         "checked_at": "2026-10-21T01:59:47.306313Z",
         "due_fixtures": 10,
         "new_records": 0,
@@ -173,15 +175,15 @@
         "opening_certified": false
       }
     },
-    "completed_at": "2026-10-21T01:59:47.306637Z"
+    "completed_at": "2026-10-21T23:15:02.202445Z"
   },
   "source_health": {
     "coverage": {
       "complete": true,
       "scope": {
         "league": "england-premier",
-        "from": "2026-10-21",
-        "through": "2026-10-22",
+        "from": "2026-10-20",
+        "through": "2026-10-28",
         "provider": "espn",
         "pending_lookup_limit": 20
       },
@@ -192,15 +194,64 @@
       {
         "name": "espn-calendar",
         "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261020",
+        "captured_at": "2026-10-21T23:14:59.265487Z",
+        "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261021",
-        "captured_at": "2026-10-21T23:14:57.043023Z",
+        "captured_at": "2026-10-21T23:14:59.335859Z",
         "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261022",
-        "captured_at": "2026-10-21T23:14:57.117860Z",
+        "captured_at": "2026-10-21T23:14:59.390819Z",
+        "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261023",
+        "captured_at": "2026-10-21T23:14:59.660822Z",
+        "content_sha256": "eeaa8c779534a93b8c0426a77a31d7911d80ff865e7620882fb8a7b385a385ca"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261024",
+        "captured_at": "2026-10-21T23:14:59.758793Z",
+        "content_sha256": "6d112e916bbd53d692c5618931ddb87bd49ca2b8de649a691bee499466548306"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025",
+        "captured_at": "2026-10-21T23:14:59.864032Z",
+        "content_sha256": "930ce479a6e7e5e88ad790e6b6b64d870c80c45c6f567e3f1418a3897131320d"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261026",
+        "captured_at": "2026-10-21T23:14:59.959607Z",
+        "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261027",
+        "captured_at": "2026-10-21T23:15:00.003081Z",
+        "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
+      },
+      {
+        "name": "espn-calendar",
+        "status": "ok",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261028",
+        "captured_at": "2026-10-21T23:15:00.188619Z",
         "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
       }
     ]
