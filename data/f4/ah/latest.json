@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-10-21T01:59:44.380772Z",
+  "evaluated_at": "2026-10-21T04:35:12.376394Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 51,
@@ -2620,17 +2620,11 @@
   "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 10,
+    "fixtures": 0,
     "windows": {
-      "T-180m": {
-        "awaiting_window": 10
-      },
-      "T-60m": {
-        "awaiting_window": 10
-      },
-      "T-15m": {
-        "awaiting_window": 10
-      }
+      "T-180m": {},
+      "T-60m": {},
+      "T-15m": {}
     }
   },
   "research_only": true,
