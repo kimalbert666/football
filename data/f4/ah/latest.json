@@ -1,13 +1,11 @@
 {
-  "evaluated_at": "2026-10-23T22:07:05.317714Z",
+  "evaluated_at": "2026-10-23T22:07:11.421435Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 54,
   "distinct_matches": 19,
-  "paired_matches": 18,
-  "pairing_issues": {
-    "awaiting_regulation_result": 1
-  },
+  "paired_matches": 19,
+  "pairing_issues": {},
   "line_groups": {
     "-1.25": {
       "matches": 2,
@@ -23,17 +21,19 @@
       "away_profit": -0.58
     },
     "0.25": {
-      "matches": 6,
+      "matches": 7,
       "home": {
         "full_loss": 4,
-        "full_win": 2
+        "full_win": 2,
+        "half_win": 1
       },
       "away": {
         "full_win": 4,
-        "full_loss": 2
+        "full_loss": 2,
+        "half_loss": 1
       },
-      "home_profit": -2.01,
-      "away_profit": 1.7599999999999998
+      "home_profit": -1.5199999999999998,
+      "away_profit": 1.2599999999999998
     },
     "-0.75": {
       "matches": 3,
@@ -343,15 +343,97 @@
       }
     ],
     "fixed_window": "T-15m, 10 to 20 minutes before kickoff",
-    "unique_fixtures": 18,
-    "accepted_pairs": 18,
-    "side_records": 36,
+    "unique_fixtures": 19,
+    "accepted_pairs": 19,
+    "side_records": 38,
     "duplicate_pairs_excluded": 0,
     "rejected_pairs": [],
     "rejection_counts": {},
     "positive_return_denominator": "all settled matches including pushes within each group",
     "profit_basis": "descriptive one-unit settlement at each saved price, not a betting strategy",
     "groups": [
+      {
+        "experiment_id": "f4-epl-ah-research-v1",
+        "bookmaker": "crown",
+        "abs_handicap": 0.25,
+        "side": "lower",
+        "venue": "home",
+        "odds_band": "1_90_to_2_00",
+        "odds_band_label": "1.90–2.00",
+        "matches": 1,
+        "settlement_counts": {
+          "full_win": 0,
+          "half_win": 1,
+          "push": 0,
+          "half_loss": 0,
+          "full_loss": 0
+        },
+        "unit_stake_net_profit": 0.49,
+        "records": [
+          {
+            "match_id": "espn:401879253",
+            "kickoff_at": "2026-10-23T19:00:00+00:00",
+            "observed_at": "2026-10-23T18:45:03.412249+00:00",
+            "home": "Ipswich Town",
+            "away": "Nottingham Forest",
+            "team": "Ipswich Town",
+            "home_handicap": 0.25,
+            "venue": "home",
+            "decimal_odds": 1.98,
+            "final_score": [
+              1,
+              1
+            ],
+            "settlement": "half_win",
+            "unit_stake_net_profit": 0.49
+          }
+        ],
+        "positive_returns": 1,
+        "positive_return_rate": 1.0,
+        "full_win_rate": 0.0,
+        "unit_stake_roi": 0.49
+      },
+      {
+        "experiment_id": "f4-epl-ah-research-v1",
+        "bookmaker": "crown",
+        "abs_handicap": 0.25,
+        "side": "upper",
+        "venue": "away",
+        "odds_band": "1_90_to_2_00",
+        "odds_band_label": "1.90–2.00",
+        "matches": 1,
+        "settlement_counts": {
+          "full_win": 0,
+          "half_win": 0,
+          "push": 0,
+          "half_loss": 1,
+          "full_loss": 0
+        },
+        "unit_stake_net_profit": -0.5,
+        "records": [
+          {
+            "match_id": "espn:401879253",
+            "kickoff_at": "2026-10-23T19:00:00+00:00",
+            "observed_at": "2026-10-23T18:45:03.412249+00:00",
+            "home": "Ipswich Town",
+            "away": "Nottingham Forest",
+            "team": "Nottingham Forest",
+            "home_handicap": 0.25,
+            "venue": "away",
+            "decimal_odds": 1.91,
+            "final_score": [
+              1,
+              1
+            ],
+            "settlement": "half_loss",
+            "unit_stake_net_profit": -0.5
+          }
+        ],
+        "positive_returns": 0,
+        "positive_return_rate": 0.0,
+        "full_win_rate": 0.0,
+        "unit_stake_roi": -0.5
+      },
       {
         "experiment_id": "f4-epl-ah-research-v1",
         "bookmaker": "crown",
@@ -1593,22 +1675,22 @@
       {
         "experiment_id": "f4-epl-ah-research-v1",
         "bookmaker": "crown",
-        "paired_matches": 1,
+        "paired_matches": 2,
         "odds_band_groups": [
           {
             "side": "lower",
             "odds_band": "1_90_to_2_00",
             "odds_band_label": "1.90–2.00",
             "aggregation": "all handicap sizes and venues within this experiment/bookmaker",
-            "matches": 1,
+            "matches": 2,
             "settlement_counts": {
               "full_win": 0,
-              "half_win": 0,
+              "half_win": 1,
               "push": 0,
               "half_loss": 0,
               "full_loss": 1
             },
-            "unit_stake_net_profit": -1.0,
+            "unit_stake_net_profit": -0.51,
             "records": [
               {
                 "match_id": "espn:401879257",
@@ -1626,12 +1708,29 @@
                 ],
                 "settlement": "full_loss",
                 "unit_stake_net_profit": -1.0
+              },
+              {
+                "match_id": "espn:401879253",
+                "kickoff_at": "2026-10-23T19:00:00+00:00",
+                "observed_at": "2026-10-23T18:45:03.412249+00:00",
+                "home": "Ipswich Town",
+                "away": "Nottingham Forest",
+                "team": "Ipswich Town",
+                "home_handicap": 0.25,
+                "venue": "home",
+                "decimal_odds": 1.98,
+                "final_score": [
+                  1,
+                  1
+                ],
+                "settlement": "half_win",
+                "unit_stake_net_profit": 0.49
               }
             ],
-            "positive_returns": 0,
-            "positive_return_rate": 0.0,
+            "positive_returns": 1,
+            "positive_return_rate": 0.5,
             "full_win_rate": 0.0,
-            "unit_stake_roi": -1.0
+            "unit_stake_roi": -0.255
           },
           {
             "side": "upper",
@@ -1670,6 +1769,44 @@
             "positive_return_rate": 1.0,
             "full_win_rate": 1.0,
             "unit_stake_roi": 0.89
+          },
+          {
+            "side": "upper",
+            "odds_band": "1_90_to_2_00",
+            "odds_band_label": "1.90–2.00",
+            "aggregation": "all handicap sizes and venues within this experiment/bookmaker",
+            "matches": 1,
+            "settlement_counts": {
+              "full_win": 0,
+              "half_win": 0,
+              "push": 0,
+              "half_loss": 1,
+              "full_loss": 0
+            },
+            "unit_stake_net_profit": -0.5,
+            "records": [
+              {
+                "match_id": "espn:401879253",
+                "kickoff_at": "2026-10-23T19:00:00+00:00",
+                "observed_at": "2026-10-23T18:45:03.412249+00:00",
+                "home": "Ipswich Town",
+                "away": "Nottingham Forest",
+                "team": "Nottingham Forest",
+                "home_handicap": 0.25,
+                "venue": "away",
+                "decimal_odds": 1.91,
+                "final_score": [
+                  1,
+                  1
+                ],
+                "settlement": "half_loss",
+                "unit_stake_net_profit": -0.5
+              }
+            ],
+            "positive_returns": 0,
+            "positive_return_rate": 0.0,
+            "full_win_rate": 0.0,
+            "unit_stake_roi": -0.5
           }
         ]
       },
@@ -2483,6 +2620,17 @@
         },
         "home_profit": 0.8899999999999999,
         "away_profit": -1.0
+      },
+      "0.25": {
+        "matches": 1,
+        "home": {
+          "half_win": 1
+        },
+        "away": {
+          "half_loss": 1
+        },
+        "home_profit": 0.49,
+        "away_profit": -0.5
       }
     },
     "hkjc": {
@@ -2581,36 +2729,30 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-23T18:45:01.017068Z",
+      "captured_at": "2026-10-23T22:07:09.357754Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-23T18:45:01.645183Z",
-      "content_sha256": "81ed2d60bb319c84e1dd584cf3c65886bbb87171ade06b101d421060b879705f"
+      "captured_at": "2026-10-23T22:07:09.973954Z",
+      "content_sha256": "794a4b1bdb66fa51fcaa5261525a4a4131dca633ec2f57d01da17f2ee98afb16"
     },
     {
-      "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events?sport=football&league=lg_T9268DXK&status=scheduled&date=2026-10-23&limit=100",
-      "status": "ok",
-      "captured_at": "2026-10-23T18:45:02.190474Z",
-      "content_sha256": "b6e19cae418774443e8c1f4ee4ae3e6ed1c786e05701febd097718fd86595457"
+      "name": "infersports-crown-ah-quotes",
+      "status": "not_requested",
+      "reason": "no confirmed EPL fixture in capture window"
     },
     {
-      "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events/evt_G5J06NY6/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "name": "hkjc-direct-ah",
+      "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-23T18:45:02.820326Z",
-      "content_sha256": "6e0f4fd7f5279ffd722f8cd7409d739cdf61616c7b168268ac40576930d1568a"
-    },
-    {
-      "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events/evt_G5J06NY6/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
-      "status": "ok",
-      "captured_at": "2026-10-23T18:45:03.406017Z",
-      "content_sha256": "67cf9c9ddc0b41866d44de7d38d8fad55a2b81f91a554a156eaed554357bb24b"
+      "captured_at": "2026-10-23T22:07:11.395806Z",
+      "response_at": "2026-10-23T22:07:11Z",
+      "content_sha256": "9e2af0663443a5337bef33c6409539454509f10c497a75c486ff845d4ac18717",
+      "match_count": 297,
+      "epl_match_count": 9
     }
   ],
   "provider_faults": {
@@ -2620,30 +2762,30 @@
   "primary_provider_health": {
     "status": "ok",
     "feed_live": true,
-    "as_of": "2026-10-23T18:44:52Z",
+    "as_of": "2026-10-23T22:07:01Z",
     "as_of_stale": false,
-    "checked_at": "2026-10-23T18:45:01.645183Z"
+    "checked_at": "2026-10-23T22:07:09.973954Z"
   },
   "fallback_matches": [],
-  "quote_availability": "complete",
+  "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 5,
+    "fixtures": 10,
     "windows": {
       "T-180m": {
         "recorded_research_only": 1,
         "complete_joint_market": 1,
-        "awaiting_window": 4
+        "awaiting_window": 9
       },
       "T-60m": {
         "recorded_research_only": 1,
         "complete_joint_market": 1,
-        "awaiting_window": 4
+        "awaiting_window": 9
       },
       "T-15m": {
         "recorded_research_only": 1,
         "complete_joint_market": 1,
-        "awaiting_window": 4
+        "awaiting_window": 9
       }
     }
   },

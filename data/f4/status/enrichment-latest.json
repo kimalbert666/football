@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-23T01:54:51.951630Z",
+  "checked_at": "2026-10-23T22:07:11.426898Z",
   "status": "checked",
   "sources": {
     "strength": {
@@ -43,36 +43,31 @@
       },
       "metadata_source": {
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261023",
-        "captured_at": "2026-10-23T01:54:52.014310Z",
-        "content_sha256": "d8e543fde5e57451bec52b2456bce6873634054f846184473ea839c3abee9517"
+        "captured_at": "2026-10-23T22:07:11.562565Z",
+        "content_sha256": "d06abf6a32e9a3e91987788ee0d70a38c74e2feb2b7d30eafe278d908924dbb4"
       },
-      "observed_at": "2026-10-23T01:54:52.088266Z",
+      "observed_at": "2026-10-23T22:07:11.743266Z",
       "requested_dates": 24,
       "verified_dates": 24,
       "missing_dates": [],
-      "snapshot_path": "data/f4/strength/snapshots/698421432ec6dc86630405a175fe6a524ad59840da230c235fe26915403ed6f2.json",
-      "snapshot_sha256": "698421432ec6dc86630405a175fe6a524ad59840da230c235fe26915403ed6f2",
-      "result_count": 70,
+      "snapshot_path": "data/f4/strength/snapshots/c8ab142dd5357ab2107311443ca20c28670f8f6eef1ac90becaa3d7d8e80334f.json",
+      "snapshot_sha256": "c8ab142dd5357ab2107311443ca20c28670f8f6eef1ac90becaa3d7d8e80334f",
+      "result_count": 71,
       "teams": 20,
       "teams_with_five_games": 20,
       "requested_fixtures": 10,
       "rated_requested_fixtures": 10
     },
     "context": {
-      "schema": "f4-prematch-context-observed-v1",
-      "status": "ready",
+      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3",
       "observed_at": "2026-10-23T01:54:54.358841Z",
-      "season_year": 2026,
-      "snapshot_sha256": "00e626f09fc9708f50c89cdaf184613f4e02d6035017606590e6ee8b01dea019",
-      "snapshot_path": "data/f4/context/snapshots/00e626f09fc9708f50c89cdaf184613f4e02d6035017606590e6ee8b01dea019.json",
-      "teams_xg": 20,
-      "teams_availability": 20,
-      "teams_club_schedule": 20,
+      "problems": [],
       "requested_clubs": 20,
-      "unresolved_clubs": [],
+      "schema": "f4-prematch-context-observed-v1",
+      "season_year": 2026,
+      "snapshot_path": "data/f4/context/snapshots/00e626f09fc9708f50c89cdaf184613f4e02d6035017606590e6ee8b01dea019.json",
+      "snapshot_sha256": "00e626f09fc9708f50c89cdaf184613f4e02d6035017606590e6ee8b01dea019",
       "source_statuses": {
-        "fpl": "available",
-        "understat": "available",
         "espn-rest:arsenal": "available",
         "espn-rest:aston-villa": "available",
         "espn-rest:bournemouth": "available",
@@ -92,16 +87,22 @@
         "espn-rest:newcastle": "available",
         "espn-rest:nottingham-forest": "available",
         "espn-rest:sunderland": "available",
-        "espn-rest:tottenham": "available"
+        "espn-rest:tottenham": "available",
+        "fpl": "available",
+        "understat": "available"
       },
-      "problems": [],
-      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3"
+      "status": "ready",
+      "teams_availability": 20,
+      "teams_club_schedule": 20,
+      "teams_xg": 20,
+      "unresolved_clubs": [],
+      "refresh": "cached_same_utc_day"
     },
     "first_observed_quotes": {
-      "status": "partial",
+      "status": "cached",
       "checked_at": "2026-10-23T01:54:54.865565Z",
       "due_fixtures": 10,
-      "new_records": 6,
+      "new_records": 0,
       "saved_matches": [
         "espn:401879253",
         "espn:401879256",
@@ -140,5 +141,5 @@
       "opening_certified": false
     }
   },
-  "completed_at": "2026-10-23T01:54:54.865891Z"
+  "completed_at": "2026-10-23T22:07:11.746161Z"
 }

@@ -1,20 +1,29 @@
 {
   "day": "20261023",
   "events_seen": 1,
-  "pending_results": [
+  "pending_results": [],
+  "record_sha256": "31c7186b1ed9a2536c5591e7f434dbab0f2532e64b2cf131fc32a9b37fa9f958",
+  "results": [
     {
+      "away": "Nottingham Forest",
+      "away_id": "nottingham-forest",
+      "away_provider_id": "393",
+      "home": "Ipswich Town",
+      "home_id": "ipswich",
+      "home_provider_id": "373",
       "kickoff_at": "2026-10-23T19:00:00Z",
       "match_id": "espn:401879253",
-      "status": "scheduled"
+      "score": [
+        1,
+        1
+      ]
     }
   ],
-  "record_sha256": "7a2e27d1db34f79b8c7d94038212c129af1052ef4c80c65ec7c8543f002b5f4e",
-  "results": [],
   "schema": "f4-strength-observed-v1",
   "season_year": 2026,
   "source": {
-    "captured_at": "2026-10-23T01:54:52.086984Z",
-    "content_sha256": "d8e543fde5e57451bec52b2456bce6873634054f846184473ea839c3abee9517",
+    "captured_at": "2026-10-23T22:07:11.742047Z",
+    "content_sha256": "d06abf6a32e9a3e91987788ee0d70a38c74e2feb2b7d30eafe278d908924dbb4",
     "name": "espn",
     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261023&limit=1000"
   }
