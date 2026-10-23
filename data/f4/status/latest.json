@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-10-23T15:28:41.941406Z",
+  "checked_at": "2026-10-23T15:59:01.992437Z",
   "command": "capture",
   "mode": "shadow",
-  "new_predictions": 0,
-  "new_valid_predictions": 0,
+  "new_predictions": 1,
+  "new_valid_predictions": 1,
   "new_outcomes": 0,
-  "due_fixtures": 0,
+  "due_fixtures": 1,
   "tracked_fixtures_seen": 5,
   "skipped": [],
   "legacy_deferred": null,
@@ -171,25 +171,64 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261023",
-        "captured_at": "2026-10-23T15:28:41.773612Z",
+        "captured_at": "2026-10-23T15:58:44.318854Z",
         "content_sha256": "5cf8956307521ef4dbc7c864186bd73726dc3b21a4f91c74101837d28580d31a"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261024",
-        "captured_at": "2026-10-23T15:28:41.907868Z",
-        "content_sha256": "9b7d6e8a52cb6dbeb5e51d00aa294d62696604cfe6a63f880b9a4f06f8bd0493"
+        "captured_at": "2026-10-23T15:58:44.466707Z",
+        "content_sha256": "2f877ab71170f7ca657c472a3097d5891935d7a0f7f91b019b3792ce696835e7"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2.titan007.com/Company.js",
+        "status": "ok",
+        "captured_at": "2026-10-23T15:58:50.375038Z",
+        "content_sha256": "8ffeb7953dcf04220e3728ab3ec6f98d3ef3287d9cce9b54076b6e01962f1ed2"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2.titan007.com/index_vip.aspx",
+        "status": "ok",
+        "captured_at": "2026-10-23T15:58:54.924815Z",
+        "content_sha256": "1579a05d45acd9aef281a1c78287871753f130c339ad9f0a283ecae07005e3f6"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2.titan007.com/TomorrowOdds.aspx",
+        "status": "ok",
+        "captured_at": "2026-10-23T15:58:58.947542Z",
+        "content_sha256": "1704c6a523fd2173035a13b8927170672abfb07bf9d2d3d6ca026d3b8a7a04d8"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003925.js",
+        "status": "ok",
+        "captured_at": "2026-10-23T15:59:00.470666Z",
+        "content_sha256": "7cc9bdff0b68afd6f1eddcf18123337cb24c6e584e927100937414cfda805db3"
       }
     ]
   },
-  "f2_problems": [],
+  "f2_problems": [
+    "f2 row 0 rejected: an explicit kickoff/decision time is required",
+    "f2 row 1 rejected: an explicit kickoff/decision time is required",
+    "f2 row 2 rejected: an explicit kickoff/decision time is required",
+    "f2 row 3 rejected: an explicit kickoff/decision time is required",
+    "f2 row 4 rejected: an explicit kickoff/decision time is required",
+    "f2 row 5 rejected: unknown or ambiguous source teams",
+    "f2 row 6 rejected: an explicit kickoff/decision time is required",
+    "f2 row 7 rejected: an explicit kickoff/decision time is required",
+    "f2 row 8 rejected: an explicit kickoff/decision time is required",
+    "f2 row 9 rejected: an explicit kickoff/decision time is required"
+  ],
   "automatic_promotion": false,
   "automatic_wagering": false,
   "asian_handicap": {
-    "new_valid": 0,
-    "new_attempts": 0,
-    "distinct_matches": 18,
+    "new_valid": 1,
+    "new_attempts": 1,
+    "distinct_matches": 19,
     "paired_matches": 18,
     "problems": [],
     "provider_faults": {
@@ -197,6 +236,6 @@
       "hkjc-direct": []
     },
     "fallback_matches": [],
-    "quote_availability": "not_tested_no_due_matches"
+    "quote_availability": "complete"
   }
 }
