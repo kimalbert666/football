@@ -1,37 +1,20 @@
 {
   "status": "partial",
-  "checked_at": "2026-10-22T01:49:16.943512Z",
+  "checked_at": "2026-10-23T01:54:54.865565Z",
   "due_fixtures": 10,
-  "new_records": 0,
-  "saved_matches": [],
-  "stored_first_observations": 10,
+  "new_records": 6,
+  "saved_matches": [
+    "espn:401879253",
+    "espn:401879256",
+    "espn:401878768",
+    "espn:401879255",
+    "espn:401878767",
+    "espn:401878766"
+  ],
+  "stored_first_observations": 16,
   "missing": [
     {
-      "match_id": "espn:401879253",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401879256",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401878768",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401879255",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401878767",
-      "reason": "missing Asian handicap quote"
-    },
-    {
       "match_id": "espn:401878765",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401878766",
       "reason": "missing Asian handicap quote"
     },
     {
@@ -49,13 +32,7 @@
   ],
   "provider_faults": {},
   "source_problems": [
-    "espn:401879253: HKJC AH unavailable (unique EPL identity not published or not matched)",
-    "espn:401879256: HKJC AH unavailable (unique EPL identity not published or not matched)",
-    "espn:401878768: HKJC AH unavailable (unique EPL identity not published or not matched)",
-    "espn:401879255: HKJC AH unavailable (unique EPL identity not published or not matched)",
-    "espn:401878767: HKJC AH unavailable (unique EPL identity not published or not matched)",
     "espn:401878765: HKJC AH unavailable (unique EPL identity not published or not matched)",
-    "espn:401878766: HKJC AH unavailable (unique EPL identity not published or not matched)",
     "espn:401879252: HKJC AH unavailable (unique EPL identity not published or not matched)",
     "espn:401879254: HKJC AH unavailable (unique EPL identity not published or not matched)",
     "espn:401878764: HKJC AH unavailable (unique EPL identity not published or not matched)"

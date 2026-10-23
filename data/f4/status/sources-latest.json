@@ -1,67 +1,67 @@
 {
-  "captured_at": "2026-10-22T23:17:37.485309Z",
+  "captured_at": "2026-10-23T01:54:50.093032Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261021",
-      "captured_at": "2026-10-22T23:17:36.227727Z",
-      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
-    },
-    {
-      "name": "espn-calendar",
-      "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261022",
-      "captured_at": "2026-10-22T23:17:36.409631Z",
+      "captured_at": "2026-10-23T01:54:49.257868Z",
       "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261023",
-      "captured_at": "2026-10-22T23:17:36.558256Z",
-      "content_sha256": "7b82eb2854a2a166081550d4fd51069e1b9cf64be25ddc45456ce497f397d1bb"
+      "captured_at": "2026-10-23T01:54:49.308810Z",
+      "content_sha256": "bba57a5ea2a64631e1d41b1f6373f15d985098de52229ebe7d661a5b90251d67"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261024",
-      "captured_at": "2026-10-22T23:17:36.771588Z",
-      "content_sha256": "c25b338bbe254bf2a0fa06d08e7d6189e3801e56f8c20eea59800aa338a01c6c"
+      "captured_at": "2026-10-23T01:54:49.397048Z",
+      "content_sha256": "500168ddbf6873962395dce29f69f669223c7103d761c80e691d5976dd195286"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025",
-      "captured_at": "2026-10-22T23:17:36.937137Z",
-      "content_sha256": "db9661055b63c30e9226d5db63bf8680feb33d6dc2c92372ab88ee7cc963e6ee"
+      "captured_at": "2026-10-23T01:54:49.461637Z",
+      "content_sha256": "6474a0a608e26edda74224be7f59205448580346e90e7210631b7e692cc1fca3"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261026",
-      "captured_at": "2026-10-22T23:17:37.057362Z",
+      "captured_at": "2026-10-23T01:54:49.552343Z",
       "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261027",
-      "captured_at": "2026-10-22T23:17:37.213656Z",
+      "captured_at": "2026-10-23T01:54:49.696365Z",
       "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261028",
-      "captured_at": "2026-10-22T23:17:37.345411Z",
+      "captured_at": "2026-10-23T01:54:49.897738Z",
       "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261029",
-      "captured_at": "2026-10-22T23:17:37.485037Z",
+      "captured_at": "2026-10-23T01:54:49.999855Z",
+      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261030",
+      "captured_at": "2026-10-23T01:54:50.092759Z",
       "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
     }
   ],
@@ -221,8 +221,8 @@
     "complete": true,
     "scope": {
       "league": "england-premier",
-      "from": "2026-10-21",
-      "through": "2026-10-29",
+      "from": "2026-10-22",
+      "through": "2026-10-30",
       "provider": "espn",
       "pending_lookup_limit": 20
     },
