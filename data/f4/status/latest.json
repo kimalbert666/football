@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-10-24T09:44:44.298089Z",
+  "checked_at": "2026-10-24T10:14:53.019433Z",
   "command": "capture",
   "mode": "shadow",
-  "new_predictions": 0,
+  "new_predictions": 1,
   "new_valid_predictions": 0,
   "new_outcomes": 0,
-  "due_fixtures": 0,
+  "due_fixtures": 1,
   "tracked_fixtures_seen": 9,
   "skipped": [],
   "legacy_deferred": null,
@@ -188,19 +188,49 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261024",
-        "captured_at": "2026-10-24T09:44:44.171761Z",
-        "content_sha256": "468953e25d74210f582752d0e08d72f5f7e2b4f0547f388642f24645a3921e63"
+        "captured_at": "2026-10-24T10:14:46.578974Z",
+        "content_sha256": "9d4081eff6b2286e34abbf7bb7585481e860a4e130111eb6481bdc68ae6e661b"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025",
-        "captured_at": "2026-10-24T09:44:44.284392Z",
-        "content_sha256": "3c33aa7e18f42e8a81050ff48dd97e208336d1cd6cc609a0c0a5e69c125c2640"
+        "captured_at": "2026-10-24T10:14:46.821094Z",
+        "content_sha256": "55e61e8eb2577479a1f8348746a962317bddf59beb3a2d1a3480e64916043e54"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2.titan007.com/Company.js",
+        "status": "ok",
+        "captured_at": "2026-10-24T10:14:48.515474Z",
+        "content_sha256": "8ffeb7953dcf04220e3728ab3ec6f98d3ef3287d9cce9b54076b6e01962f1ed2"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2.titan007.com/index_vip.aspx",
+        "status": "ok",
+        "captured_at": "2026-10-24T10:14:52.031369Z",
+        "content_sha256": "cfb3a92bdd3b0d52e058dc27bfe58a1d258cbde5ae98feebb2b6a22519671583"
+      },
+      {
+        "name": "titan007-crown-quotes",
+        "status": "not_requested",
+        "reason": "No confirmed EPL fixture in a capture window"
       }
     ]
   },
-  "f2_problems": [],
+  "f2_problems": [
+    "f2 row 0 rejected: an explicit kickoff/decision time is required",
+    "f2 row 1 rejected: an explicit kickoff/decision time is required",
+    "f2 row 2 rejected: an explicit kickoff/decision time is required",
+    "f2 row 3 rejected: an explicit kickoff/decision time is required",
+    "f2 row 4 rejected: an explicit kickoff/decision time is required",
+    "f2 row 5 rejected: unknown or ambiguous source teams",
+    "f2 row 6 rejected: an explicit kickoff/decision time is required",
+    "f2 row 7 rejected: an explicit kickoff/decision time is required",
+    "f2 row 8 rejected: an explicit kickoff/decision time is required",
+    "f2 row 9 rejected: an explicit kickoff/decision time is required"
+  ],
   "automatic_promotion": false,
   "automatic_wagering": false,
   "asian_handicap": {
