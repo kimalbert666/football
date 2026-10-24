@@ -1,19 +1,19 @@
 {
-  "captured_at": "2026-10-24T16:15:00.197122Z",
+  "captured_at": "2026-10-24T18:04:39.826333Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261024",
-      "captured_at": "2026-10-24T16:15:00.100918Z",
-      "content_sha256": "25d10433d5779ba4bc44e343b16f157273617d8b6d4ccd324897c90ba2d4e870"
+      "captured_at": "2026-10-24T18:04:39.749913Z",
+      "content_sha256": "499bac341aa9a05e18e2601db662ebc5036908a829bb648e0d9f8270e0cf289d"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025",
-      "captured_at": "2026-10-24T16:15:00.195829Z",
-      "content_sha256": "06c5b67bfe82112b328a8e4fb0b30affeb50e7c1608c0dc4ba61cab4375a17f8"
+      "captured_at": "2026-10-24T18:04:39.825198Z",
+      "content_sha256": "4258f389740d70ce007c86847b807bd86b8f4a6afb0dd08bb161e31a82aab2bf"
     }
   ],
   "fixtures": [
@@ -81,7 +81,7 @@
       "home": "Chelsea",
       "away": "Tottenham Hotspur",
       "kickoff_at": "2026-10-24T16:30:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
