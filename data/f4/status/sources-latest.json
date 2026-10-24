@@ -1,19 +1,19 @@
 {
-  "captured_at": "2026-10-24T11:14:58.408858Z",
+  "captured_at": "2026-10-24T11:45:05.345545Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261024",
-      "captured_at": "2026-10-24T11:14:58.355970Z",
-      "content_sha256": "7799d7af74c38db37139db425036fd1cdca3e46d4daccb64aa8368f8efd3eb39"
+      "captured_at": "2026-10-24T11:45:05.295794Z",
+      "content_sha256": "ae527f80bcad57c6adb3d18cdc662bf40faba2626b2aaa16a1c968ff4e2e0b07"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025",
-      "captured_at": "2026-10-24T11:14:58.407275Z",
-      "content_sha256": "797d0bc0baf407741b04133932e38b87ab20213b315ae06bbfed68a6a6063087"
+      "captured_at": "2026-10-24T11:45:05.343774Z",
+      "content_sha256": "e58d3e81dc2a1262fdfc30fff9d139b55f50ef676c17b6e6fcf852b5b164137e"
     }
   ],
   "fixtures": [
@@ -27,7 +27,7 @@
       "home": "Aston Villa",
       "away": "Manchester City",
       "kickoff_at": "2026-10-24T11:30:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
