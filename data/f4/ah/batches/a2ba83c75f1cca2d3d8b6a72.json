@@ -1,13 +1,13 @@
 {
   "kickoff_at": "2026-10-24T11:30:00Z",
-  "updated_at": "2026-10-24T10:44:41.289751Z",
+  "updated_at": "2026-10-24T11:15:01.727638Z",
   "fixtures": [
     {
       "match_id": "espn:401879256",
       "home": "Aston Villa",
       "away": "Manchester City",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "112be68b28ab7481b124a632f6a9e75cf1dc3fcc50cd7e299aae8369911379df",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -26,12 +26,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-24T11:15:00Z",
           "closes_at": "2026-10-24T11:20:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "112be68b28ab7481b124a632f6a9e75cf1dc3fcc50cd7e299aae8369911379df",
+          "same_bookmaker_1x2_available": true
         }
       }
     }
