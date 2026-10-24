@@ -1,0 +1,44 @@
+{
+  "kickoff_at": "2026-10-31T12:30:00Z",
+  "updated_at": "2026-10-24T01:56:45.811626Z",
+  "fixtures": [
+    {
+      "match_id": "espn:401879248",
+      "home": "Chelsea",
+      "away": "Manchester United",
+      "status": "awaiting_window",
+      "observation_id": null,
+      "windows": {
+        "T-180m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-10-31T09:30:00Z",
+          "closes_at": "2026-10-31T09:50:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-60m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-10-31T11:30:00Z",
+          "closes_at": "2026-10-31T11:40:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-15m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-10-31T12:15:00Z",
+          "closes_at": "2026-10-31T12:20:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        }
+      }
+    }
+  ],
+  "experiment_id": "f4-epl-ah-research-v1",
+  "research_only": true,
+  "direction_notification_enabled": false,
+  "all_no_selection": false,
+  "reason": "No approved models; missing data is not a no-pick verdict"
+}

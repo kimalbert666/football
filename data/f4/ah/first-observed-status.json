@@ -1,41 +1,59 @@
 {
   "status": "partial",
-  "checked_at": "2026-10-23T01:54:54.865565Z",
-  "due_fixtures": 10,
-  "new_records": 6,
+  "checked_at": "2026-10-24T01:56:48.488779Z",
+  "due_fixtures": 12,
+  "new_records": 4,
   "saved_matches": [
-    "espn:401879253",
-    "espn:401879256",
-    "espn:401878768",
-    "espn:401879255",
-    "espn:401878767",
-    "espn:401878766"
+    "espn:401878765",
+    "espn:401879252",
+    "espn:401879254",
+    "espn:401878764"
   ],
-  "stored_first_observations": 16,
+  "stored_first_observations": 20,
   "missing": [
     {
-      "match_id": "espn:401878765",
+      "match_id": "espn:401879248",
       "reason": "missing Asian handicap quote"
     },
     {
-      "match_id": "espn:401879252",
+      "match_id": "espn:401878763",
       "reason": "missing Asian handicap quote"
     },
     {
-      "match_id": "espn:401879254",
+      "match_id": "espn:401879245",
       "reason": "missing Asian handicap quote"
     },
     {
-      "match_id": "espn:401878764",
+      "match_id": "espn:401879247",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401879249",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401879251",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401878761",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401879250",
       "reason": "missing Asian handicap quote"
     }
   ],
   "provider_faults": {},
   "source_problems": [
-    "espn:401878765: HKJC AH unavailable (unique EPL identity not published or not matched)",
-    "espn:401879252: HKJC AH unavailable (unique EPL identity not published or not matched)",
-    "espn:401879254: HKJC AH unavailable (unique EPL identity not published or not matched)",
-    "espn:401878764: HKJC AH unavailable (unique EPL identity not published or not matched)"
+    "espn:401879248: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401878763: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879245: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879247: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879249: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879251: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401878761: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879250: HKJC AH unavailable (unique EPL identity not published or not matched)"
   ],
   "source_policy": "independent_bulk_scout_no_formal_primary_quota",
   "opening_certified": false
