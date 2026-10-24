@@ -1,89 +1,22 @@
 {
-  "captured_at": "2026-10-23T22:07:08.714934Z",
+  "captured_at": "2026-10-24T00:38:02.495245Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261022",
-      "captured_at": "2026-10-23T22:07:07.375280Z",
-      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
-    },
-    {
-      "name": "espn-calendar",
-      "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261023",
-      "captured_at": "2026-10-23T22:07:07.537356Z",
-      "content_sha256": "7817bcdf5fdf07a88dd881525aab3a264d01a95e999e16084176a19ebc3101cb"
-    },
-    {
-      "name": "espn-calendar",
-      "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261024",
-      "captured_at": "2026-10-23T22:07:07.705313Z",
-      "content_sha256": "185490e5f4cc6d854720b4e51b922a8c0f86db11850c0758bd64182ee06bbd97"
+      "captured_at": "2026-10-24T00:38:02.359975Z",
+      "content_sha256": "3a42871864405edbc10cc831bf9b67c8b74cdf4c6432617fd29fd2c968c22172"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025",
-      "captured_at": "2026-10-23T22:07:07.863734Z",
-      "content_sha256": "10e3c415035a4be3112b55195be6077589e662a154a67818e8b5dd5fab67b7e3"
-    },
-    {
-      "name": "espn-calendar",
-      "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261026",
-      "captured_at": "2026-10-23T22:07:08.109435Z",
-      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
-    },
-    {
-      "name": "espn-calendar",
-      "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261027",
-      "captured_at": "2026-10-23T22:07:08.214308Z",
-      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
-    },
-    {
-      "name": "espn-calendar",
-      "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261028",
-      "captured_at": "2026-10-23T22:07:08.311079Z",
-      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
-    },
-    {
-      "name": "espn-calendar",
-      "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261029",
-      "captured_at": "2026-10-23T22:07:08.542452Z",
-      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
-    },
-    {
-      "name": "espn-calendar",
-      "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261030",
-      "captured_at": "2026-10-23T22:07:08.714660Z",
-      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
+      "captured_at": "2026-10-24T00:38:02.493684Z",
+      "content_sha256": "c4d938755cbb143855ee281b1e387bad2686586599fb51f46449c3a1b026032a"
     }
   ],
   "fixtures": [
-    {
-      "match_id": "espn:401879253",
-      "source_event_id": "401879253",
-      "provider": "espn",
-      "league": "england-premier",
-      "home_id": "ipswich",
-      "away_id": "nottingham-forest",
-      "home": "Ipswich Town",
-      "away": "Nottingham Forest",
-      "kickoff_at": "2026-10-23T19:00:00Z",
-      "status": "completed",
-      "score": [
-        1,
-        1
-      ],
-      "market": null,
-      "problems": []
-    },
     {
       "match_id": "espn:401879256",
       "source_event_id": "401879256",
@@ -224,8 +157,8 @@
     "complete": true,
     "scope": {
       "league": "england-premier",
-      "from": "2026-10-22",
-      "through": "2026-10-30",
+      "from": "2026-10-24",
+      "through": "2026-10-25",
       "provider": "espn",
       "pending_lookup_limit": 20
     },
