@@ -1,13 +1,13 @@
 {
   "kickoff_at": "2026-10-24T14:00:00Z",
-  "updated_at": "2026-10-24T13:30:03.756538Z",
+  "updated_at": "2026-10-24T13:45:06.933601Z",
   "fixtures": [
     {
       "match_id": "espn:401878768",
       "home": "Arsenal",
       "away": "Everton",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "9424bc6a8bb488edf417074eda2a3bf7018820f4ec86e25c8046cca52357279f",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -26,12 +26,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-24T13:45:00Z",
           "closes_at": "2026-10-24T13:50:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "9424bc6a8bb488edf417074eda2a3bf7018820f4ec86e25c8046cca52357279f",
+          "same_bookmaker_1x2_available": true
         }
       }
     },
@@ -39,8 +39,8 @@
       "match_id": "espn:401879255",
       "home": "Coventry City",
       "away": "Fulham",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "ec301dd587f7912001c917dfa23db7d9c58a9239d961850e55defd2a453167ad",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -59,12 +59,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-24T13:45:00Z",
           "closes_at": "2026-10-24T13:50:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "ec301dd587f7912001c917dfa23db7d9c58a9239d961850e55defd2a453167ad",
+          "same_bookmaker_1x2_available": true
         }
       }
     }
