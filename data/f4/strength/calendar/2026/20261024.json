@@ -1,35 +1,71 @@
 {
   "day": "20261024",
   "events_seen": 4,
-  "pending_results": [
+  "pending_results": [],
+  "record_sha256": "c2b32e6a804b58f6c8338294171940be0051b69e6ccc3d53e1d13dbe99085c2f",
+  "results": [
     {
+      "away": "Manchester City",
+      "away_id": "man-city",
+      "away_provider_id": "382",
+      "home": "Aston Villa",
+      "home_id": "aston-villa",
+      "home_provider_id": "362",
       "kickoff_at": "2026-10-24T11:30:00Z",
       "match_id": "espn:401879256",
-      "status": "scheduled"
+      "score": [
+        2,
+        1
+      ]
     },
     {
+      "away": "Everton",
+      "away_id": "everton",
+      "away_provider_id": "368",
+      "home": "Arsenal",
+      "home_id": "arsenal",
+      "home_provider_id": "359",
       "kickoff_at": "2026-10-24T14:00:00Z",
       "match_id": "espn:401878768",
-      "status": "scheduled"
+      "score": [
+        2,
+        0
+      ]
     },
     {
+      "away": "Fulham",
+      "away_id": "fulham",
+      "away_provider_id": "370",
+      "home": "Coventry City",
+      "home_id": "coventry",
+      "home_provider_id": "388",
       "kickoff_at": "2026-10-24T14:00:00Z",
       "match_id": "espn:401879255",
-      "status": "scheduled"
+      "score": [
+        0,
+        1
+      ]
     },
     {
+      "away": "Tottenham Hotspur",
+      "away_id": "tottenham",
+      "away_provider_id": "367",
+      "home": "Chelsea",
+      "home_id": "chelsea",
+      "home_provider_id": "363",
       "kickoff_at": "2026-10-24T16:30:00Z",
       "match_id": "espn:401878767",
-      "status": "scheduled"
+      "score": [
+        0,
+        2
+      ]
     }
   ],
-  "record_sha256": "5212a042437c22f9247f81aee571e931d5625b630557bdfaf3323a5cc58d58c5",
-  "results": [],
   "schema": "f4-strength-observed-v1",
   "season_year": 2026,
   "source": {
-    "captured_at": "2026-10-24T01:56:46.064065Z",
-    "content_sha256": "7cbd4aaa4bc688519c9f4f292d6c4e189ceb239ee6bc5f7f902b13fbe02a1167",
+    "captured_at": "2026-10-24T23:07:45.461420Z",
+    "content_sha256": "9890f8c49f98151bdfe0ea4e35ca24a731d5782f15e338c90a4bbd7f88f34577",
     "name": "espn",
     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261024&limit=1000"
   }

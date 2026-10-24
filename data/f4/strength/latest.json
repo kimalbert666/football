@@ -2,18 +2,18 @@
   "available_for_historical_decisions": false,
   "coverage_scope": "all_past_dates_in_espn_declared_current_season_calendar",
   "metadata_source": {
-    "captured_at": "2026-10-24T01:56:45.925364Z",
-    "content_sha256": "7cbd4aaa4bc688519c9f4f292d6c4e189ceb239ee6bc5f7f902b13fbe02a1167",
+    "captured_at": "2026-10-24T23:07:45.353163Z",
+    "content_sha256": "9890f8c49f98151bdfe0ea4e35ca24a731d5782f15e338c90a4bbd7f88f34577",
     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261024"
   },
   "method": "verified-espn-season-results-elo-k20-ha60-v1",
   "missing_dates": [],
-  "observed_at": "2026-10-24T01:56:46.068544Z",
+  "observed_at": "2026-10-24T23:07:45.517298Z",
   "problems": [],
   "rated_requested_fixtures": 18,
   "requested_dates": 25,
   "requested_fixtures": 18,
-  "result_count": 71,
+  "result_count": 75,
   "schema": "f4-strength-observed-v1",
   "season": {
     "days": [
@@ -48,8 +48,8 @@
     "start_at": "2026-06-01T04:00:00Z",
     "year": 2026
   },
-  "snapshot_path": "data/f4/strength/snapshots/dd90ddcd45937d972d6114dae7331e3b56b5b7aba0ca2792881fab5916165ec7.json",
-  "snapshot_sha256": "dd90ddcd45937d972d6114dae7331e3b56b5b7aba0ca2792881fab5916165ec7",
+  "snapshot_path": "data/f4/strength/snapshots/b6b4a28c02f9998d3520f67e0a643808ac536d72351f7146a073131eff724b2f.json",
+  "snapshot_sha256": "b6b4a28c02f9998d3520f67e0a643808ac536d72351f7146a073131eff724b2f",
   "status": "ready",
   "teams": 20,
   "teams_with_five_games": 20,
