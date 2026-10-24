@@ -1,7 +1,7 @@
 {
   "league": "portugal-liga",
   "season": "2026-27",
-  "generatedAt": "2026-10-17",
+  "generatedAt": "2026-10-24",
   "roundsPlayed": 59,
   "standings": [
     {
@@ -76,19 +76,19 @@
     {
       "pos": 4,
       "team": "Sp Braga",
-      "played": 58,
+      "played": 59,
       "won": 29,
       "drawn": 17,
-      "lost": 12,
-      "gf": 94,
-      "ga": 56,
-      "gd": 38,
+      "lost": 13,
+      "gf": 95,
+      "ga": 58,
+      "gd": 37,
       "pts": 104,
-      "form": "WLWDL",
+      "form": "LWDLL",
       "homeRecord": {
         "w": 15,
         "d": 7,
-        "l": 6
+        "l": 7
       },
       "awayRecord": {
         "w": 14,
@@ -167,6 +167,29 @@
     },
     {
       "pos": 8,
+      "team": "Gil Vicente",
+      "played": 59,
+      "won": 19,
+      "drawn": 19,
+      "lost": 21,
+      "gf": 64,
+      "ga": 65,
+      "gd": -1,
+      "pts": 76,
+      "form": "LLDWW",
+      "homeRecord": {
+        "w": 11,
+        "d": 8,
+        "l": 10
+      },
+      "awayRecord": {
+        "w": 8,
+        "d": 11,
+        "l": 11
+      }
+    },
+    {
+      "pos": 9,
       "team": "Moreirense",
       "played": 59,
       "won": 20,
@@ -186,29 +209,6 @@
         "w": 8,
         "d": 5,
         "l": 17
-      }
-    },
-    {
-      "pos": 9,
-      "team": "Gil Vicente",
-      "played": 58,
-      "won": 18,
-      "drawn": 19,
-      "lost": 21,
-      "gf": 62,
-      "ga": 64,
-      "gd": -2,
-      "pts": 73,
-      "form": "DLLDW",
-      "homeRecord": {
-        "w": 11,
-        "d": 8,
-        "l": 10
-      },
-      "awayRecord": {
-        "w": 7,
-        "d": 11,
-        "l": 11
       }
     },
     {
@@ -515,7 +515,7 @@
     "avgGoals": 2.638,
     "homeWinRate": 0.411,
     "drawRate": 0.262,
-    "upsetRate": 0.223,
+    "upsetRate": 0.224,
     "topScores": [
       {
         "score": "1-1",
@@ -531,7 +531,7 @@
       }
     ],
     "computedFrom": "fd",
-    "matchesUsed": 530,
+    "matchesUsed": 531,
     "seasonsMerged": [
       "2425",
       "2526",
