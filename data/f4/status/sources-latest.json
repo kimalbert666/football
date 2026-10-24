@@ -1,19 +1,19 @@
 {
-  "captured_at": "2026-10-24T15:45:09.677041Z",
+  "captured_at": "2026-10-24T16:15:00.197122Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261024",
-      "captured_at": "2026-10-24T15:45:09.573919Z",
-      "content_sha256": "b9702d4e83271fd18e15022df974171f75f2573dce6b16a6ede6e96bff91fe05"
+      "captured_at": "2026-10-24T16:15:00.100918Z",
+      "content_sha256": "25d10433d5779ba4bc44e343b16f157273617d8b6d4ccd324897c90ba2d4e870"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025",
-      "captured_at": "2026-10-24T15:45:09.675687Z",
-      "content_sha256": "69d627e689adee9fb7c5aa23f053f2a4c724d38179f7172b670f84fe0749068f"
+      "captured_at": "2026-10-24T16:15:00.195829Z",
+      "content_sha256": "06c5b67bfe82112b328a8e4fb0b30affeb50e7c1608c0dc4ba61cab4375a17f8"
     }
   ],
   "fixtures": [
@@ -45,8 +45,11 @@
       "home": "Arsenal",
       "away": "Everton",
       "kickoff_at": "2026-10-24T14:00:00Z",
-      "status": "live",
-      "score": null,
+      "status": "completed",
+      "score": [
+        2,
+        0
+      ],
       "market": null,
       "problems": []
     },
@@ -60,8 +63,11 @@
       "home": "Coventry City",
       "away": "Fulham",
       "kickoff_at": "2026-10-24T14:00:00Z",
-      "status": "live",
-      "score": null,
+      "status": "completed",
+      "score": [
+        0,
+        1
+      ],
       "market": null,
       "problems": []
     },
