@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluated_at": "2026-10-24T10:30:14.533635Z",
+  "evaluated_at": "2026-10-24T10:44:56.614447Z",
   "mode": "shadow",
   "candidate_weight": 0,
   "automatic_promotion": false,
@@ -24,12 +24,12 @@
     "log_loss_floor": 1e-15
   },
   "counts": {
-    "raw_snapshots": 48,
-    "effective_valid": 37,
+    "raw_snapshots": 50,
+    "effective_valid": 39,
     "missing_baseline": 11,
     "missing_baseline_groups": 0,
     "redundant_snapshots": 0,
-    "pending": 2,
+    "pending": 4,
     "settled": 35,
     "paired": 35,
     "missing_candidate": 0,
@@ -38,7 +38,7 @@
     "excluded_postponed": 0,
     "excluded_identity": 0,
     "excluded_future": 0,
-    "distinct_match_count": 19,
+    "distinct_match_count": 21,
     "known_tracked_fixtures": 47,
     "closed_windows": 43,
     "covered_windows": 36,
@@ -80,7 +80,7 @@
     "accuracy": null
   },
   "pending_statuses": {
-    "unobserved": 2
+    "unobserved": 4
   },
   "groups": [
     {
@@ -89,12 +89,12 @@
       "candidate_version": "dc-shadow-18bae91698fd",
       "experiment_id": "f4-forward-epl-crown-v1",
       "counts": {
-        "raw_snapshots": 18,
-        "effective_valid": 18,
+        "raw_snapshots": 20,
+        "effective_valid": 20,
         "missing_baseline": 0,
         "missing_baseline_groups": 0,
         "redundant_snapshots": 0,
-        "pending": 1,
+        "pending": 3,
         "settled": 17,
         "paired": 17,
         "missing_candidate": 0,
@@ -139,7 +139,7 @@
         "accuracy": null
       },
       "pending_statuses": {
-        "unobserved": 1
+        "unobserved": 3
       }
     },
     {
