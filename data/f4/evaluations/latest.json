@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluated_at": "2026-10-25T10:34:56.006204Z",
+  "evaluated_at": "2026-10-25T11:00:35.693226Z",
   "mode": "shadow",
   "candidate_weight": 0,
   "automatic_promotion": false,
@@ -24,12 +24,12 @@
     "log_loss_floor": 1e-15
   },
   "counts": {
-    "raw_snapshots": 57,
-    "effective_valid": 43,
+    "raw_snapshots": 61,
+    "effective_valid": 47,
     "missing_baseline": 14,
     "missing_baseline_groups": 0,
     "redundant_snapshots": 0,
-    "pending": 0,
+    "pending": 4,
     "settled": 43,
     "paired": 43,
     "missing_candidate": 0,
@@ -38,7 +38,7 @@
     "excluded_postponed": 0,
     "excluded_identity": 0,
     "excluded_future": 0,
-    "distinct_match_count": 22,
+    "distinct_match_count": 26,
     "known_tracked_fixtures": 48,
     "closed_windows": 50,
     "covered_windows": 43,
@@ -79,7 +79,9 @@
     "correct": 0,
     "accuracy": null
   },
-  "pending_statuses": {},
+  "pending_statuses": {
+    "unobserved": 4
+  },
   "groups": [
     {
       "league": "england-premier",
@@ -87,12 +89,12 @@
       "candidate_version": "dc-shadow-18bae91698fd",
       "experiment_id": "f4-forward-epl-crown-v1",
       "counts": {
-        "raw_snapshots": 21,
-        "effective_valid": 21,
+        "raw_snapshots": 25,
+        "effective_valid": 25,
         "missing_baseline": 0,
         "missing_baseline_groups": 0,
         "redundant_snapshots": 0,
-        "pending": 0,
+        "pending": 4,
         "settled": 21,
         "paired": 21,
         "missing_candidate": 0,
@@ -136,7 +138,9 @@
         "correct": 0,
         "accuracy": null
       },
-      "pending_statuses": {}
+      "pending_statuses": {
+        "unobserved": 4
+      }
     },
     {
       "league": "england-premier",
