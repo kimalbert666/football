@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-10-25T13:00:31.960225Z",
+  "checked_at": "2026-10-25T13:30:46.027307Z",
   "command": "capture",
   "mode": "shadow",
-  "new_predictions": 4,
-  "new_valid_predictions": 4,
+  "new_predictions": 1,
+  "new_valid_predictions": 1,
   "new_outcomes": 0,
-  "due_fixtures": 4,
+  "due_fixtures": 1,
   "tracked_fixtures_seen": 5,
   "skipped": [],
   "legacy_deferred": null,
@@ -189,64 +189,43 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025",
-        "captured_at": "2026-10-25T13:00:00.146933Z",
-        "content_sha256": "656e99c1e00b60ef3cbb15f3766c46d502e4ead6ad81b32f4cc3905ff6c12491"
+        "captured_at": "2026-10-25T13:30:00.390303Z",
+        "content_sha256": "953d52b9795fdd1439132b725dce70e6c97b8ab938210c3262aae8779ea62385"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261026",
-        "captured_at": "2026-10-25T13:00:00.262515Z",
+        "captured_at": "2026-10-25T13:30:00.489843Z",
         "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/Company.js",
         "status": "ok",
-        "captured_at": "2026-10-25T13:00:11.745061Z",
+        "captured_at": "2026-10-25T13:30:06.764995Z",
         "content_sha256": "8ffeb7953dcf04220e3728ab3ec6f98d3ef3287d9cce9b54076b6e01962f1ed2"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/index_vip.aspx",
         "status": "ok",
-        "captured_at": "2026-10-25T13:00:15.161304Z",
-        "content_sha256": "89225b7c1001ff0dad16df86bc7f878217a3211ad072520a7e7a7a45a4eb7a93"
+        "captured_at": "2026-10-25T13:30:10.294178Z",
+        "content_sha256": "ccd9e7b899fdd6c8b72d1ecedd1bec33d3fbf62e05d2f3367ac96547fa50333d"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/TomorrowOdds.aspx",
         "status": "ok",
-        "captured_at": "2026-10-25T13:00:25.815541Z",
-        "content_sha256": "dbe8d50c97db59a2c9c86babf1df35eda99acd9ac5013159c67c396371053a1c"
+        "captured_at": "2026-10-25T13:30:43.366164Z",
+        "content_sha256": "128dda6211947feccaaf16859c5314cdd5d20b4dacef0cd8e8e9212344e22ac7"
       },
       {
         "name": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003923.js",
+        "url": "https://1x2d.titan007.com/3003928.js",
         "status": "ok",
-        "captured_at": "2026-10-25T13:00:27.143898Z",
-        "content_sha256": "c722742875e97a64835c6269d40ec09c11990b64f5bdb9d69cea16fba9b1726e"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003924.js",
-        "status": "ok",
-        "captured_at": "2026-10-25T13:00:28.455706Z",
-        "content_sha256": "66fae628dc8f657ff8836d67112d54b4a65b4ad489d485fac19be8488c1aed15"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003926.js",
-        "status": "ok",
-        "captured_at": "2026-10-25T13:00:29.909115Z",
-        "content_sha256": "b739aaaf536016136c0e833270234739129a09454ad5aedfbaa9e1d05b3e575d"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003927.js",
-        "status": "ok",
-        "captured_at": "2026-10-25T13:00:31.182016Z",
-        "content_sha256": "0001879f02d9232e67872aa5eff54509d2617f379c181b78e84f3433bf386230"
+        "captured_at": "2026-10-25T13:30:44.739285Z",
+        "content_sha256": "9af1a1abd2c572a887b1af7121e7f65e2bd89f3bfcafa9a51d6b4a54b8a67042"
       }
     ]
   },
@@ -265,9 +244,9 @@
   "automatic_promotion": false,
   "automatic_wagering": false,
   "asian_handicap": {
-    "new_valid": 4,
-    "new_attempts": 4,
-    "distinct_matches": 27,
+    "new_valid": 1,
+    "new_attempts": 1,
+    "distinct_matches": 28,
     "paired_matches": 23,
     "problems": [],
     "provider_faults": {
