@@ -1,40 +1,85 @@
 {
   "day": "20261025",
   "events_seen": 5,
-  "pending_results": [
+  "pending_results": [],
+  "record_sha256": "e6e2bf144da929fd46d723868590bd76f52f44b34608bc4e2a1d3d5682416ca1",
+  "results": [
     {
+      "away": "Newcastle United",
+      "away_id": "newcastle",
+      "away_provider_id": "361",
+      "home": "Crystal Palace",
+      "home_id": "crystal-palace",
+      "home_provider_id": "384",
       "kickoff_at": "2026-10-25T14:00:00Z",
       "match_id": "espn:401879254",
-      "status": "scheduled"
+      "score": [
+        0,
+        2
+      ]
     },
     {
+      "away": "Brentford",
+      "away_id": "brentford",
+      "away_provider_id": "337",
+      "home": "Hull City",
+      "home_id": "hull-city",
+      "home_provider_id": "306",
       "kickoff_at": "2026-10-25T14:00:00Z",
       "match_id": "espn:401878766",
-      "status": "scheduled"
+      "score": [
+        1,
+        1
+      ]
     },
     {
+      "away": "Brighton & Hove Albion",
+      "away_id": "brighton",
+      "away_provider_id": "331",
+      "home": "Liverpool",
+      "home_id": "liverpool",
+      "home_provider_id": "364",
       "kickoff_at": "2026-10-25T14:00:00Z",
       "match_id": "espn:401878765",
-      "status": "scheduled"
+      "score": [
+        2,
+        0
+      ]
     },
     {
+      "away": "AFC Bournemouth",
+      "away_id": "bournemouth",
+      "away_provider_id": "349",
+      "home": "Manchester United",
+      "home_id": "man-united",
+      "home_provider_id": "360",
       "kickoff_at": "2026-10-25T14:00:00Z",
       "match_id": "espn:401879252",
-      "status": "scheduled"
+      "score": [
+        0,
+        3
+      ]
     },
     {
+      "away": "Leeds United",
+      "away_id": "leeds",
+      "away_provider_id": "357",
+      "home": "Sunderland",
+      "home_id": "sunderland",
+      "home_provider_id": "366",
       "kickoff_at": "2026-10-25T16:30:00Z",
       "match_id": "espn:401878764",
-      "status": "scheduled"
+      "score": [
+        0,
+        0
+      ]
     }
   ],
-  "record_sha256": "091ab29eb04deca2036fdfb21fe2bada00489ed26301f015a1b67f5f044523e9",
-  "results": [],
   "schema": "f4-strength-observed-v1",
   "season_year": 2026,
   "source": {
-    "captured_at": "2026-10-25T01:36:14.541921Z",
-    "content_sha256": "6896669b7fdfda9d88b866e2cfeac3af726100ed8cf5ded582e8507904199cda",
+    "captured_at": "2026-10-25T21:42:16.385480Z",
+    "content_sha256": "41167282e2f8826a9285671cc4f42c29bbea50a56f25fc8d69f13ceb5ce36a6c",
     "name": "espn",
     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025&limit=1000"
   }
