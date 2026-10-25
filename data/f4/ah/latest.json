@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-10-25T01:07:43.173185Z",
+  "evaluated_at": "2026-10-25T01:36:14.193134Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 66,
@@ -3277,15 +3277,15 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-24T23:07:43.352932Z",
+      "captured_at": "2026-10-25T01:36:12.895886Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-24T23:07:43.984959Z",
-      "content_sha256": "f32c5a6ddab52484f9bb8a98a034a1cb9e5b172640742449494f1c0765692c8d"
+      "captured_at": "2026-10-25T01:36:13.455499Z",
+      "content_sha256": "ea656df0a4dd45a22f3b99a2819d668bdd1ec535b30f2e0d630ff82c07fc3b03"
     },
     {
       "name": "infersports-crown-ah-quotes",
@@ -3296,10 +3296,10 @@
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-24T23:07:45.250902Z",
-      "response_at": "2026-10-24T23:07:45Z",
-      "content_sha256": "ecc97c1ef8d53b38729265ac89888f6db5a4aaa5c0b83ee63cd4123e33c686c5",
-      "match_count": 152,
+      "captured_at": "2026-10-25T01:36:14.181193Z",
+      "response_at": "2026-10-25T01:36:14Z",
+      "content_sha256": "f8dd34ebb905d11fe043a9ed3930d189b872e8ad74021b23ab158d99338c1c74",
+      "match_count": 137,
       "epl_match_count": 5
     }
   ],
@@ -3310,24 +3310,30 @@
   "primary_provider_health": {
     "status": "ok",
     "feed_live": true,
-    "as_of": "2026-10-24T23:07:35Z",
+    "as_of": "2026-10-25T01:36:05Z",
     "as_of_stale": false,
-    "checked_at": "2026-10-24T23:07:43.984959Z"
+    "checked_at": "2026-10-25T01:36:13.455499Z"
   },
   "fallback_matches": [],
   "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 5,
+    "fixtures": 18,
     "windows": {
       "T-180m": {
-        "awaiting_window": 5
+        "recorded_research_only": 4,
+        "complete_joint_market": 4,
+        "awaiting_window": 14
       },
       "T-60m": {
-        "awaiting_window": 5
+        "recorded_research_only": 4,
+        "complete_joint_market": 4,
+        "awaiting_window": 14
       },
       "T-15m": {
-        "awaiting_window": 5
+        "recorded_research_only": 4,
+        "complete_joint_market": 4,
+        "awaiting_window": 14
       }
     }
   },

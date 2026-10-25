@@ -1,0 +1,41 @@
+{
+  "day": "20261025",
+  "events_seen": 5,
+  "pending_results": [
+    {
+      "kickoff_at": "2026-10-25T14:00:00Z",
+      "match_id": "espn:401879254",
+      "status": "scheduled"
+    },
+    {
+      "kickoff_at": "2026-10-25T14:00:00Z",
+      "match_id": "espn:401878766",
+      "status": "scheduled"
+    },
+    {
+      "kickoff_at": "2026-10-25T14:00:00Z",
+      "match_id": "espn:401878765",
+      "status": "scheduled"
+    },
+    {
+      "kickoff_at": "2026-10-25T14:00:00Z",
+      "match_id": "espn:401879252",
+      "status": "scheduled"
+    },
+    {
+      "kickoff_at": "2026-10-25T16:30:00Z",
+      "match_id": "espn:401878764",
+      "status": "scheduled"
+    }
+  ],
+  "record_sha256": "091ab29eb04deca2036fdfb21fe2bada00489ed26301f015a1b67f5f044523e9",
+  "results": [],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-10-25T01:36:14.541921Z",
+    "content_sha256": "6896669b7fdfda9d88b866e2cfeac3af726100ed8cf5ded582e8507904199cda",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025&limit=1000"
+  }
+}
