@@ -1,18 +1,18 @@
 {
-  "captured_at": "2026-10-25T13:45:00.341919Z",
+  "captured_at": "2026-10-25T14:15:10.707117Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025",
-      "captured_at": "2026-10-25T13:45:00.222745Z",
-      "content_sha256": "7f34419c20314ce0dd444fbe8e57c2eb9372ca7afc880865c601e42d91f0ce6a"
+      "captured_at": "2026-10-25T14:15:10.533661Z",
+      "content_sha256": "48db4a1b6f7894912c36406b2eb5d4da8197e724cd05a67a14943885fa73e735"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261026",
-      "captured_at": "2026-10-25T13:45:00.341834Z",
+      "captured_at": "2026-10-25T14:15:10.706998Z",
       "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
     }
   ],
@@ -27,7 +27,7 @@
       "home": "Liverpool",
       "away": "Brighton & Hove Albion",
       "kickoff_at": "2026-10-25T14:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
@@ -42,7 +42,7 @@
       "home": "Hull City",
       "away": "Brentford",
       "kickoff_at": "2026-10-25T14:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
@@ -57,7 +57,7 @@
       "home": "Manchester United",
       "away": "AFC Bournemouth",
       "kickoff_at": "2026-10-25T14:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
@@ -72,7 +72,7 @@
       "home": "Crystal Palace",
       "away": "Newcastle United",
       "kickoff_at": "2026-10-25T14:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
