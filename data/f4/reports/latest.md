@@ -1,21 +1,19 @@
 # f4 英超跟踪更新
 
-更新时间：2026-10-25 22:45（香港时间）。
+更新时间：2026-10-25 23:15（香港时间）。
 
 本次新增赛前记录 **0** 条，补充赛果／状态 **0** 条。累计有效赛前记录涉及 **27** 场比赛。
 
-本次没有已识别的英超比赛进入预定赛前记录窗口。
 
-
-评估时间：2026-10-25T14:45:13.142759Z（UTC）。
+评估时间：2026-10-25T15:15:20.770072Z（UTC）。
 
 候选为冻结的旧 Dixon–Coles（DC）参数，仅作影子对照；候选权重为 **0**，不自动晋级、不自动下注。
 训练截止日期来自历史文件声明，训练资料尚未独立认证；已有结果不构成已认证优势，也不能证明校准有效。
 
 ## 样本与覆盖
 
-- 原始快照 66 条；按比赛、开球时间、窗口和实验固定首条有效市场基线后，有效记录 52 条。
-- 缺少市场基线的尝试 14 条，其中 0 组始终缺失；重复有效快照 0 条不重复计分。
+- 原始快照 67 条；按比赛、开球时间、窗口和实验固定首条有效市场基线后，有效记录 52 条。
+- 缺少市场基线的尝试 15 条，其中 1 组始终缺失；重复有效快照 0 条不重复计分。
 - 有效记录涉及 27 场不同比赛；已结算 43 条、候选与基线同场配对 43 条、待赛果 9 条。总体条数按赛前窗口统计，同一比赛两个窗口不算两场独立比赛。
 - 排除：改期后开球时间不匹配 0 条、取消 0 条、延期 0 条、球队身份不符 0 条。
 - 本地已发现目标赛程 48 场；在窗口关闭前已知的窗口 59 个，其中已留有效基线 52 个、缺失 7 个；窗口关闭后才发现 18 个，另列而不计入及时覆盖分母。
@@ -53,9 +51,9 @@ f2 点预测：0 场，胜平负方向命中率 —（无已结算样本）；�
 
 ## 本次运行
 
-- 核对时间：2026-10-25T14:45:13.142759Z（UTC）。
+- 核对时间：2026-10-25T15:15:20.770072Z（UTC）。
 - 范围：全英超，杯赛尚未接入。
-- 新记录 0 条，其中市场输入有效 0 条；赛果／状态修订 0 条。
+- 新记录 1 条，其中市场输入有效 0 条；赛果／状态修订 0 条。
 - 赛前窗口：T−180分与T−60分，各允许±20分；实际时间保存在每条记录中。
 - f4与原任务并行；候选权重为0，不自动下注、不自动读论文或改权重。
 - 当前候选：冻结的旧DC参数，仅用于前向对照；其历史训练资料尚未独立认证。
@@ -64,11 +62,22 @@ f2 点预测：0 场，胜平负方向命中率 —（无已结算样本）；�
 - 背景数据 context：ready。
 - 背景数据 first_observed_quotes：partial。
 - 赔率使用球探公开页面转载的皇冠90分钟胜平负报价；并非皇冠官方API，页面不提供独立受注状态，不能保证可成交。
+- 数据提醒：f2 row 0 rejected: an explicit kickoff/decision time is required
+- 数据提醒：f2 row 1 rejected: an explicit kickoff/decision time is required
+- 数据提醒：f2 row 2 rejected: an explicit kickoff/decision time is required
+- 数据提醒：f2 row 3 rejected: an explicit kickoff/decision time is required
+- 数据提醒：f2 row 4 rejected: an explicit kickoff/decision time is required
+- 数据提醒：f2 row 5 rejected: unknown or ambiguous source teams
+- 数据提醒：f2 row 6 rejected: an explicit kickoff/decision time is required
+- 数据提醒：f2 row 7 rejected: an explicit kickoff/decision time is required
+- 数据提醒：f2 row 8 rejected: an explicit kickoff/decision time is required
+- 数据提醒：f2 row 9 rejected: an explicit kickoff/decision time is required
 
 ## 最近赛前记录
 
 | 比赛 | 窗口 | 市场参考：主／平／客 | f2比分点预测 | 状态 |
 |---|---|---|---|---|
+| Sunderland — Leeds United | T-60m | 缺失 | 未取得可匹配预测 | 仅记录／无投注建议 |
 | Sunderland — Leeds United | T-180m | 32.0%／30.5%／37.5% | 未取得可匹配预测 | 仅记录／无投注建议 |
 | Crystal Palace — Newcastle United | T-60m | 37.7%／26.3%／36.0% | 未取得可匹配预测 | 仅记录／无投注建议 |
 | Manchester United — AFC Bournemouth | T-60m | 39.9%／27.8%／32.3% | 未取得可匹配预测 | 仅记录／无投注建议 |
@@ -76,7 +85,6 @@ f2 点预测：0 场，胜平负方向命中率 —（无已结算样本）；�
 | Liverpool — Brighton & Hove Albion | T-60m | 46.8%／24.9%／28.2% | 未取得可匹配预测 | 仅记录／无投注建议 |
 | Crystal Palace — Newcastle United | T-180m | 34.3%／26.0%／39.7% | 未取得可匹配预测 | 仅记录／无投注建议 |
 | Manchester United — AFC Bournemouth | T-180m | 40.3%／27.8%／31.9% | 未取得可匹配预测 | 仅记录／无投注建议 |
-| Hull City — Brentford | T-180m | 19.2%／23.1%／57.7% | 未取得可匹配预测 | 仅记录／无投注建议 |
 
 
 ## 亚洲让球研究
