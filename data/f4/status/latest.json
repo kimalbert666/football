@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-10-25T11:00:35.693226Z",
+  "checked_at": "2026-10-25T11:05:02.842164Z",
   "command": "capture",
   "mode": "shadow",
-  "new_predictions": 4,
-  "new_valid_predictions": 4,
+  "new_predictions": 0,
+  "new_valid_predictions": 0,
   "new_outcomes": 0,
-  "due_fixtures": 4,
+  "due_fixtures": 0,
   "tracked_fixtures_seen": 5,
   "skipped": [],
   "legacy_deferred": null,
@@ -189,84 +189,24 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025",
-        "captured_at": "2026-10-25T11:00:00.163887Z",
+        "captured_at": "2026-10-25T11:05:02.702704Z",
         "content_sha256": "0f875b4e42744d0c85510a6a100ca697acbb322b713ed8691906e0b47439bcb9"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261026",
-        "captured_at": "2026-10-25T11:00:00.237393Z",
+        "captured_at": "2026-10-25T11:05:02.822227Z",
         "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2.titan007.com/Company.js",
-        "status": "ok",
-        "captured_at": "2026-10-25T11:00:13.290821Z",
-        "content_sha256": "8ffeb7953dcf04220e3728ab3ec6f98d3ef3287d9cce9b54076b6e01962f1ed2"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2.titan007.com/index_vip.aspx",
-        "status": "ok",
-        "captured_at": "2026-10-25T11:00:20.052305Z",
-        "content_sha256": "6fe1d5d58e8b4c4646700dec1957c7916e3fb0fb2f7aa88c5dc6d56e7a4d2913"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2.titan007.com/TomorrowOdds.aspx",
-        "status": "ok",
-        "captured_at": "2026-10-25T11:00:27.754810Z",
-        "content_sha256": "14f807b0608c52dcc88348ac0b59be9db303f4815a444e6817b8d4a3db02de64"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003927.js",
-        "status": "ok",
-        "captured_at": "2026-10-25T11:00:29.306554Z",
-        "content_sha256": "92d7801158e4f0eaf812522b4907dd587c5ed42a41c9b26ebce3f717563e4570"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003926.js",
-        "status": "ok",
-        "captured_at": "2026-10-25T11:00:30.824865Z",
-        "content_sha256": "96bc0f7c07bb47a4b1aabf2dd59521fdc00c9b0bbba077ecc97011c10b86574d"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003924.js",
-        "status": "ok",
-        "captured_at": "2026-10-25T11:00:32.364785Z",
-        "content_sha256": "cb48e0c7d37db152448204876e262c39068e73125696d99cd039f015251e19f7"
-      },
-      {
-        "name": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003923.js",
-        "status": "ok",
-        "captured_at": "2026-10-25T11:00:35.020292Z",
-        "content_sha256": "0b769cbcc0ab76c12b3bb2f1f5d285e912bbf47a039e65bd5e77669798f22184"
       }
     ]
   },
-  "f2_problems": [
-    "f2 row 0 rejected: an explicit kickoff/decision time is required",
-    "f2 row 1 rejected: an explicit kickoff/decision time is required",
-    "f2 row 2 rejected: an explicit kickoff/decision time is required",
-    "f2 row 3 rejected: an explicit kickoff/decision time is required",
-    "f2 row 4 rejected: an explicit kickoff/decision time is required",
-    "f2 row 5 rejected: unknown or ambiguous source teams",
-    "f2 row 6 rejected: an explicit kickoff/decision time is required",
-    "f2 row 7 rejected: an explicit kickoff/decision time is required",
-    "f2 row 8 rejected: an explicit kickoff/decision time is required",
-    "f2 row 9 rejected: an explicit kickoff/decision time is required"
-  ],
+  "f2_problems": [],
   "automatic_promotion": false,
   "automatic_wagering": false,
   "asian_handicap": {
-    "new_valid": 4,
-    "new_attempts": 4,
+    "new_valid": 0,
+    "new_attempts": 0,
     "distinct_matches": 27,
     "paired_matches": 23,
     "problems": [],
