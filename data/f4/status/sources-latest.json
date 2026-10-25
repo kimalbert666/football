@@ -1,18 +1,18 @@
 {
-  "captured_at": "2026-10-25T16:16:30.465973Z",
+  "captured_at": "2026-10-25T18:58:53.329385Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261025",
-      "captured_at": "2026-10-25T16:16:30.356335Z",
-      "content_sha256": "fcd3778fee483405d2d590aacced40ded945de9265c064e6a7a7d552f8d9d2d2"
+      "captured_at": "2026-10-25T18:58:53.265074Z",
+      "content_sha256": "e21322806d09c1ed8ae9e34450c532c651b0f988e09cf7a2e6b3946fa57b3f90"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261026",
-      "captured_at": "2026-10-25T16:16:30.465707Z",
+      "captured_at": "2026-10-25T18:58:53.329133Z",
       "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
     }
   ],
@@ -99,8 +99,11 @@
       "home": "Sunderland",
       "away": "Leeds United",
       "kickoff_at": "2026-10-25T16:30:00Z",
-      "status": "scheduled",
-      "score": null,
+      "status": "completed",
+      "score": [
+        0,
+        0
+      ],
       "market": null,
       "problems": []
     }
