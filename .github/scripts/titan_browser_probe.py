@@ -30,24 +30,32 @@ BLOCK_PATTERNS = (
 # This is a bounded rendering-derived projection, not page.content(), network
 # interception, hidden application state, or script evaluation. Hidden cells
 # remain empty placeholders so initial columns cannot shift to closing columns.
-DOM_PROJECTION = r"""() => {
+DOM_PROJECTION = r"""(scope) => {
   const shown = el => {
     if (!el || !el.getClientRects().length) return false;
     const s = getComputedStyle(el);
     return s.display !== 'none' && s.visibility !== 'hidden' && s.visibility !== 'collapse';
   };
-  const allRows = Array.from(document.querySelectorAll('tr')).filter(shown);
+  const summaryTable = scope === 'summary' ? document.querySelector('table#odds') : null;
+  const tables = scope === 'history' ? Array.from(document.querySelectorAll('table')).filter(table =>
+    Array.from(table.rows).some(row => row.closest('table') === table &&
+      /变化时间/.test(row.innerText || '') && /纽卡斯尔联/.test(row.innerText || ''))) : [];
+  const selectedTable = scope === 'summary' ? summaryTable : (tables.length === 1 ? tables[0] : null);
+  const allRows = selectedTable ? Array.from(selectedTable.rows).filter(row =>
+    row.closest('table') === selectedTable && shown(row)) : [];
   const rows = allRows.slice(0, 2000).map(row =>
     Array.from(row.children).filter(c => c.tagName === 'TD').map(cell => {
       if (!shown(cell)) return {visible: false};
       const nested = Array.from(cell.querySelectorAll('[title]')).filter(shown);
       const links = Array.from(cell.querySelectorAll('a[href]')).filter(shown);
-      return {visible: true, text: (cell.innerText || '').slice(0, 500),
+      return {visible: true, text: (cell.innerText || '').slice(0, 500), colspan: cell.colSpan,
         titles: [cell, ...nested].map(x => x.getAttribute('title')).filter(Boolean).slice(0, 8),
         links: links.slice(0, 8).map(a => ({href: a.href, text: (a.innerText || '').slice(0, 60)}))};
     }));
   return {title: document.title.slice(0, 200), body: (document.body?.innerText || '').slice(0, 25000),
-    row_count: allRows.length, rows,
+    row_count: allRows.length, rows, table_found: Boolean(selectedTable),
+    pagination_controls: Array.from(document.querySelectorAll('a,button')).filter(shown)
+      .map(el => (el.innerText || '').trim()).filter(t => /下一页|下一頁|下頁|加载更多|載入更多|load more|^next$/i.test(t)).slice(0, 20),
     visible_challenge: Array.from(document.querySelectorAll('iframe')).some(el =>
       shown(el) && /captcha|challenge/i.test((el.title || '') + ' ' + (el.getAttribute('src') || '')))};
 }"""
@@ -74,7 +82,8 @@ def projected_html(projection):
             if not cell.get("visible"):
                 out.append("<td hidden></td>")
                 continue
-            out.append("<td>" + escape(cell.get("text", "")))
+            span = cell.get("colspan", 1)
+            out.append('<td colspan="' + escape(str(span), quote=True) + '">' + escape(cell.get("text", "")))
             for title in cell.get("titles", []):
                 out.append('<span title="' + escape(title, quote=True) + '"></span>')
             for link in cell.get("links", []):
@@ -83,6 +92,8 @@ def projected_html(projection):
             out.append("</td>")
         out.append("</tr>")
     out.append("</table>")
+    for label in projection.get("pagination_controls", []):
+        out.append('<button>' + escape(label) + '</button>')
     return "".join(out)
 
 
@@ -105,6 +116,16 @@ def parse_projected_history(projection):
     times = [row[5].get("text", "").strip() for row in rows]
     result["same_minute_history_rows_present"] = len(times) != len(set(times))
     result["complete_tick_history_certified"] = False
+    # Retain every displayed prematch event in source order for the separate
+    # strict archive. Full pages, scripts, and unrelated tables are not saved.
+    result["displayed_prematch_rows"] = [
+        {"source_table_row_index": i,
+         "cells": [{"text": c.get("text", ""), "colspan": c.get("colspan", 1),
+                    "visible": c.get("visible", False)} for c in row]}
+        for i, row in enumerate(projection.get("rows", []))
+        if row and row[-1].get("text", "").strip() not in {"滚", "滾"}
+    ]
+    result["pagination_controls"] = projection.get("pagination_controls", [])
     return result
 
 
@@ -123,7 +144,7 @@ async def visit(context, url, parser):
         if status in BLOCK_STATUSES:
             result["stop_reason"] = restriction_reason(status, {})
             return result
-        projection = await page.evaluate(DOM_PROJECTION)
+        projection = await page.evaluate(DOM_PROJECTION, 'summary' if url == SUMMARY_URL else 'history')
         result["page_title"] = projection.get("title")
         reason = restriction_reason(status, projection)
         if reason:
@@ -134,7 +155,9 @@ async def visit(context, url, parser):
             return result
         result["transport_ok"] = status == 200
         result["visible_row_count"] = projection.get("row_count", 0)
-        if projection.get("row_count", 0) > 2000:
+        if not projection.get("table_found"):
+            result["error"] = "expected_quote_table_missing_or_ambiguous"
+        elif projection.get("row_count", 0) > 2000:
             result["error"] = "visible_row_projection_limit_exceeded"
         elif result["transport_ok"]:
             result.update(parse_projected_history(projection) if url == DETAIL_URL else parser(projected_html(projection)))

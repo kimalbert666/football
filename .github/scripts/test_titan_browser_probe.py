@@ -28,6 +28,16 @@ class BrowserDiagnosticTests(unittest.TestCase):
         self.assertNotIn("secret", html)
         self.assertEqual(html.count("<td"), 3)
 
+    def test_full_prematch_rows_preserve_duplicates_and_source_indices(self):
+        sample = row()
+        projection = {"rows": [sample, row(status="滚", when="10-13 03:01"), sample],
+                      "pagination_controls": ["下一页"]}
+        result = probe.parse_projected_history(projection)
+        self.assertEqual([r["source_table_row_index"] for r in result["displayed_prematch_rows"]], [0, 2])
+        self.assertEqual(len(result["displayed_prematch_rows"]), 2)
+        self.assertEqual(result["pagination_controls"], ["下一页"])
+        self.assertIn("下一页", probe.projected_html(projection))
+
     def test_opening_summary_visible_tooltip_and_witness(self):
         cases = (("3", "1.02", "受让平手/半球", "0.86", "2026-09-19 01:31"),
                  ("8", "0.83", "受让半球", "1.03", "2026-09-13 01:32"),
