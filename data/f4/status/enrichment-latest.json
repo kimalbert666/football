@@ -1,19 +1,25 @@
 {
-  "checked_at": "2026-10-26T01:40:30.772075Z",
+  "checked_at": "2026-10-26T23:48:43.287653Z",
   "status": "checked",
   "sources": {
     "strength": {
-      "schema": "f4-strength-observed-v1",
-      "method": "verified-espn-season-results-elo-k20-ha60-v1",
-      "status": "ready",
-      "coverage_scope": "all_past_dates_in_espn_declared_current_season_calendar",
       "available_for_historical_decisions": false,
+      "coverage_scope": "all_past_dates_in_espn_declared_current_season_calendar",
+      "metadata_source": {
+        "captured_at": "2026-10-26T01:40:30.855395Z",
+        "content_sha256": "28de657f9e31d788ecea3c3722ace7a814388ca4028c6209cf1e8477d4107629",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261026"
+      },
+      "method": "verified-espn-season-results-elo-k20-ha60-v1",
+      "missing_dates": [],
+      "observed_at": "2026-10-26T01:40:31.025110Z",
       "problems": [],
+      "rated_requested_fixtures": 15,
+      "requested_dates": 26,
+      "requested_fixtures": 15,
+      "result_count": 80,
+      "schema": "f4-strength-observed-v1",
       "season": {
-        "year": 2026,
-        "start_at": "2026-06-01T04:00:00Z",
-        "end_at": "2027-06-01T03:59:00Z",
-        "name": "2026-27 English Premier League",
         "days": [
           "20260821",
           "20260822",
@@ -41,40 +47,30 @@
           "20261023",
           "20261024",
           "20261025"
-        ]
+        ],
+        "end_at": "2027-06-01T03:59:00Z",
+        "name": "2026-27 English Premier League",
+        "start_at": "2026-06-01T04:00:00Z",
+        "year": 2026
       },
-      "metadata_source": {
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261026",
-        "captured_at": "2026-10-26T01:40:30.855395Z",
-        "content_sha256": "28de657f9e31d788ecea3c3722ace7a814388ca4028c6209cf1e8477d4107629"
-      },
-      "observed_at": "2026-10-26T01:40:31.025110Z",
-      "requested_dates": 26,
-      "verified_dates": 26,
-      "missing_dates": [],
       "snapshot_path": "data/f4/strength/snapshots/042f3c1ab52f079e51fc56518b33f0db67bc7a3428910ecff1b8f9e119921194.json",
       "snapshot_sha256": "042f3c1ab52f079e51fc56518b33f0db67bc7a3428910ecff1b8f9e119921194",
-      "result_count": 80,
+      "status": "ready",
       "teams": 20,
       "teams_with_five_games": 20,
-      "requested_fixtures": 15,
-      "rated_requested_fixtures": 15
+      "verified_dates": 26,
+      "refresh": "cached_same_utc_day"
     },
     "context": {
-      "schema": "f4-prematch-context-observed-v1",
-      "status": "ready",
+      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3",
       "observed_at": "2026-10-26T01:40:32.912779Z",
-      "season_year": 2026,
-      "snapshot_sha256": "8ad2cc72999fc708d37f1e1617052d430c03a0e82c3b64127681b68715ea608d",
-      "snapshot_path": "data/f4/context/snapshots/8ad2cc72999fc708d37f1e1617052d430c03a0e82c3b64127681b68715ea608d.json",
-      "teams_xg": 20,
-      "teams_availability": 20,
-      "teams_club_schedule": 18,
+      "problems": [],
       "requested_clubs": 18,
-      "unresolved_clubs": [],
+      "schema": "f4-prematch-context-observed-v1",
+      "season_year": 2026,
+      "snapshot_path": "data/f4/context/snapshots/8ad2cc72999fc708d37f1e1617052d430c03a0e82c3b64127681b68715ea608d.json",
+      "snapshot_sha256": "8ad2cc72999fc708d37f1e1617052d430c03a0e82c3b64127681b68715ea608d",
       "source_statuses": {
-        "fpl": "available",
-        "understat": "available",
         "espn-rest:arsenal": "available",
         "espn-rest:aston-villa": "available",
         "espn-rest:bournemouth": "available",
@@ -92,13 +88,19 @@
         "espn-rest:man-united": "available",
         "espn-rest:nottingham-forest": "available",
         "espn-rest:sunderland": "available",
-        "espn-rest:tottenham": "available"
+        "espn-rest:tottenham": "available",
+        "fpl": "available",
+        "understat": "available"
       },
-      "problems": [],
-      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3"
+      "status": "ready",
+      "teams_availability": 20,
+      "teams_club_schedule": 18,
+      "teams_xg": 20,
+      "unresolved_clubs": [],
+      "refresh": "cached_same_utc_day"
     },
     "first_observed_quotes": {
-      "status": "partial",
+      "status": "cached",
       "checked_at": "2026-10-26T01:40:33.368508Z",
       "due_fixtures": 10,
       "new_records": 0,
@@ -163,5 +165,5 @@
       "opening_certified": false
     }
   },
-  "completed_at": "2026-10-26T01:40:33.368972Z"
+  "completed_at": "2026-10-26T23:48:43.288952Z"
 }
