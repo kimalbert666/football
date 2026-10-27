@@ -38,8 +38,13 @@ DOM_PROJECTION = r"""(scope) => {
   };
   const summaryTable = scope === 'summary' ? document.querySelector('table#odds') : null;
   const tables = scope === 'history' ? Array.from(document.querySelectorAll('table')).filter(table =>
-    Array.from(table.rows).some(row => row.closest('table') === table &&
-      /变化时间/.test(row.innerText || '') && /纽卡斯尔联/.test(row.innerText || ''))) : [];
+    Array.from(table.rows).some(row => {
+      const cells = Array.from(row.children).filter(c => c.tagName === 'TD' || c.tagName === 'TH');
+      const labels = cells.map(c => (c.innerText || '').trim());
+      return row.closest('table') === table && labels.length === 7 &&
+        labels[0] === '时间' && labels[1] === '比分' && labels[2] === '考文垂' &&
+        labels[4] === '纽卡斯尔联' && labels[5] === '变化时间' && labels[6] === '状态';
+    })) : [];
   const selectedTable = scope === 'summary' ? summaryTable : (tables.length === 1 ? tables[0] : null);
   const allRows = selectedTable ? Array.from(selectedTable.rows).filter(row =>
     row.closest('table') === selectedTable && shown(row)) : [];
@@ -145,6 +150,7 @@ async def visit(context, url, parser):
             result["stop_reason"] = restriction_reason(status, {})
             return result
         projection = await page.evaluate(DOM_PROJECTION, 'summary' if url == SUMMARY_URL else 'history')
+        result["captured_at_utc"] = datetime.now(timezone.utc).isoformat()
         result["page_title"] = projection.get("title")
         reason = restriction_reason(status, projection)
         if reason:
