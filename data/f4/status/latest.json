@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-27T21:15:51.167057Z",
+  "checked_at": "2026-10-28T01:14:51.156076Z",
   "command": "capture",
   "mode": "shadow",
   "new_predictions": 0,
@@ -183,8 +183,8 @@
       "complete": true,
       "scope": {
         "league": "england-premier",
-        "from": "2026-10-27",
-        "through": "2026-10-28",
+        "from": "2026-10-28",
+        "through": "2026-10-29",
         "provider": "espn",
         "pending_lookup_limit": 20
       },
@@ -195,15 +195,15 @@
       {
         "name": "espn-calendar",
         "status": "ok",
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261027",
-        "captured_at": "2026-10-27T21:15:51.069774Z",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261028",
+        "captured_at": "2026-10-28T01:14:50.870024Z",
         "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261028",
-        "captured_at": "2026-10-27T21:15:51.126282Z",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261029",
+        "captured_at": "2026-10-28T01:14:51.115371Z",
         "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
       }
     ]
