@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-27T02:24:37.595195Z",
+  "checked_at": "2026-10-28T01:14:56.648847Z",
   "status": "checked",
   "sources": {
     "strength": {
@@ -44,16 +44,16 @@
         ]
       },
       "metadata_source": {
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261027",
-        "captured_at": "2026-10-27T02:24:37.648556Z",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261028",
+        "captured_at": "2026-10-28T01:14:57.248635Z",
         "content_sha256": "28de657f9e31d788ecea3c3722ace7a814388ca4028c6209cf1e8477d4107629"
       },
-      "observed_at": "2026-10-27T02:24:37.794744Z",
+      "observed_at": "2026-10-28T01:14:57.265998Z",
       "requested_dates": 26,
       "verified_dates": 26,
       "missing_dates": [],
-      "snapshot_path": "data/f4/strength/snapshots/0418e0c0fa2f5d144787b65653401002160e37435f3bc4bcf945c2af523e3224.json",
-      "snapshot_sha256": "0418e0c0fa2f5d144787b65653401002160e37435f3bc4bcf945c2af523e3224",
+      "snapshot_path": "data/f4/strength/snapshots/7b5919ecd9a042b877ab92e7390845e0d787c6888c5d235f873d721dd0ebe4c7.json",
+      "snapshot_sha256": "7b5919ecd9a042b877ab92e7390845e0d787c6888c5d235f873d721dd0ebe4c7",
       "result_count": 80,
       "teams": 20,
       "teams_with_five_games": 20,
@@ -63,10 +63,10 @@
     "context": {
       "schema": "f4-prematch-context-observed-v1",
       "status": "ready",
-      "observed_at": "2026-10-27T02:24:40.143246Z",
+      "observed_at": "2026-10-28T01:15:10.081623Z",
       "season_year": 2026,
-      "snapshot_sha256": "579bb2404d51be0e21d0e50d7067b58e1e155c438c650e256a20a091e73066dc",
-      "snapshot_path": "data/f4/context/snapshots/579bb2404d51be0e21d0e50d7067b58e1e155c438c650e256a20a091e73066dc.json",
+      "snapshot_sha256": "ef6b0ff382be1250b7c051083c9f6667b1c4e983e4e9e6b6a236fea2b61873d0",
+      "snapshot_path": "data/f4/context/snapshots/ef6b0ff382be1250b7c051083c9f6667b1c4e983e4e9e6b6a236fea2b61873d0.json",
       "teams_xg": 20,
       "teams_availability": 20,
       "teams_club_schedule": 20,
@@ -101,7 +101,7 @@
     },
     "first_observed_quotes": {
       "status": "partial",
-      "checked_at": "2026-10-27T02:24:40.226728Z",
+      "checked_at": "2026-10-28T01:15:10.877691Z",
       "due_fixtures": 10,
       "new_records": 0,
       "saved_matches": [],
@@ -165,5 +165,5 @@
       "opening_certified": false
     }
   },
-  "completed_at": "2026-10-27T02:24:40.227253Z"
+  "completed_at": "2026-10-28T01:15:10.877961Z"
 }
