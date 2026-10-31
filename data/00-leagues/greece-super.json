@@ -1,23 +1,23 @@
 {
   "league": "greece-super",
   "season": "2026-27",
-  "generatedAt": "2026-10-24",
-  "roundsPlayed": 50,
+  "generatedAt": "2026-10-31",
+  "roundsPlayed": 51,
   "standings": [
     {
       "pos": 1,
       "team": "Olympiakos",
-      "played": 47,
-      "won": 34,
+      "played": 48,
+      "won": 35,
       "drawn": 8,
       "lost": 5,
-      "gf": 83,
+      "gf": 88,
       "ga": 29,
-      "gd": 54,
-      "pts": 110,
-      "form": "DLWWW",
+      "gd": 59,
+      "pts": 113,
+      "form": "LWWWW",
       "homeRecord": {
-        "w": 18,
+        "w": 19,
         "d": 4,
         "l": 1
       },
@@ -30,15 +30,15 @@
     {
       "pos": 2,
       "team": "PAOK",
-      "played": 47,
+      "played": 48,
       "won": 29,
       "drawn": 6,
-      "lost": 12,
-      "gf": 91,
-      "ga": 51,
-      "gd": 40,
+      "lost": 13,
+      "gf": 92,
+      "ga": 53,
+      "gd": 39,
       "pts": 93,
-      "form": "LWWLW",
+      "form": "WWLWL",
       "homeRecord": {
         "w": 16,
         "d": 3,
@@ -47,28 +47,28 @@
       "awayRecord": {
         "w": 13,
         "d": 3,
-        "l": 6
+        "l": 7
       }
     },
     {
       "pos": 3,
       "team": "Panathinaikos",
-      "played": 45,
-      "won": 26,
+      "played": 46,
+      "won": 27,
       "drawn": 11,
       "lost": 8,
-      "gf": 67,
+      "gf": 68,
       "ga": 40,
-      "gd": 27,
-      "pts": 89,
-      "form": "WWWLW",
+      "gd": 28,
+      "pts": 92,
+      "form": "WWLWW",
       "homeRecord": {
         "w": 17,
         "d": 5,
         "l": 2
       },
       "awayRecord": {
-        "w": 9,
+        "w": 10,
         "d": 6,
         "l": 6
       }
@@ -76,17 +76,17 @@
     {
       "pos": 4,
       "team": "AEK",
-      "played": 46,
-      "won": 25,
+      "played": 47,
+      "won": 26,
       "drawn": 8,
       "lost": 13,
-      "gf": 73,
+      "gf": 78,
       "ga": 38,
-      "gd": 35,
-      "pts": 83,
-      "form": "DWDWW",
+      "gd": 40,
+      "pts": 86,
+      "form": "WDWWW",
       "homeRecord": {
-        "w": 15,
+        "w": 16,
         "d": 3,
         "l": 5
       },
@@ -99,17 +99,17 @@
     {
       "pos": 5,
       "team": "Aris",
-      "played": 47,
-      "won": 23,
+      "played": 48,
+      "won": 24,
       "drawn": 12,
       "lost": 12,
-      "gf": 60,
-      "ga": 54,
-      "gd": 6,
-      "pts": 81,
-      "form": "LLDWW",
+      "gf": 63,
+      "ga": 55,
+      "gd": 8,
+      "pts": 84,
+      "form": "LDWWW",
       "homeRecord": {
-        "w": 14,
+        "w": 15,
         "d": 6,
         "l": 3
       },
@@ -121,16 +121,39 @@
     },
     {
       "pos": 6,
+      "team": "Levadeiakos",
+      "played": 51,
+      "won": 15,
+      "drawn": 17,
+      "lost": 19,
+      "gf": 66,
+      "ga": 62,
+      "gd": 4,
+      "pts": 62,
+      "form": "DLLDD",
+      "homeRecord": {
+        "w": 8,
+        "d": 7,
+        "l": 11
+      },
+      "awayRecord": {
+        "w": 7,
+        "d": 10,
+        "l": 8
+      }
+    },
+    {
+      "pos": 7,
       "team": "Panetolikos",
-      "played": 50,
+      "played": 51,
       "won": 17,
       "drawn": 11,
-      "lost": 22,
+      "lost": 23,
       "gf": 45,
-      "ga": 57,
-      "gd": -12,
+      "ga": 62,
+      "gd": -17,
       "pts": 62,
-      "form": "WLLLL",
+      "form": "LLLLL",
       "homeRecord": {
         "w": 9,
         "d": 2,
@@ -139,69 +162,23 @@
       "awayRecord": {
         "w": 8,
         "d": 9,
-        "l": 8
-      }
-    },
-    {
-      "pos": 7,
-      "team": "Levadeiakos",
-      "played": 50,
-      "won": 15,
-      "drawn": 16,
-      "lost": 19,
-      "gf": 66,
-      "ga": 62,
-      "gd": 4,
-      "pts": 61,
-      "form": "LDLLD",
-      "homeRecord": {
-        "w": 8,
-        "d": 7,
-        "l": 11
-      },
-      "awayRecord": {
-        "w": 7,
-        "d": 9,
-        "l": 8
-      }
-    },
-    {
-      "pos": 8,
-      "team": "Atromitos",
-      "played": 46,
-      "won": 14,
-      "drawn": 12,
-      "lost": 20,
-      "gf": 54,
-      "ga": 55,
-      "gd": -1,
-      "pts": 54,
-      "form": "LDDLL",
-      "homeRecord": {
-        "w": 3,
-        "d": 8,
-        "l": 11
-      },
-      "awayRecord": {
-        "w": 11,
-        "d": 4,
         "l": 9
       }
     },
     {
-      "pos": 9,
+      "pos": 8,
       "team": "OFI Crete",
-      "played": 46,
-      "won": 15,
+      "played": 47,
+      "won": 16,
       "drawn": 9,
       "lost": 22,
-      "gf": 60,
-      "ga": 74,
-      "gd": -14,
-      "pts": 54,
-      "form": "WWDLL",
+      "gf": 62,
+      "ga": 75,
+      "gd": -13,
+      "pts": 57,
+      "form": "WDLLW",
       "homeRecord": {
-        "w": 8,
+        "w": 9,
         "d": 5,
         "l": 10
       },
@@ -212,21 +189,44 @@
       }
     },
     {
+      "pos": 9,
+      "team": "Atromitos",
+      "played": 47,
+      "won": 14,
+      "drawn": 12,
+      "lost": 21,
+      "gf": 55,
+      "ga": 58,
+      "gd": -3,
+      "pts": 54,
+      "form": "DDLLL",
+      "homeRecord": {
+        "w": 3,
+        "d": 8,
+        "l": 11
+      },
+      "awayRecord": {
+        "w": 11,
+        "d": 4,
+        "l": 10
+      }
+    },
+    {
       "pos": 10,
       "team": "Volos NFC",
-      "played": 50,
+      "played": 51,
       "won": 15,
       "drawn": 9,
-      "lost": 26,
+      "lost": 27,
       "gf": 51,
-      "ga": 74,
-      "gd": -23,
+      "ga": 75,
+      "gd": -24,
       "pts": 54,
-      "form": "DLLLD",
+      "form": "LLLDL",
       "homeRecord": {
         "w": 6,
         "d": 6,
-        "l": 12
+        "l": 13
       },
       "awayRecord": {
         "w": 9,
@@ -237,18 +237,18 @@
     {
       "pos": 11,
       "team": "Asteras Tripolis",
-      "played": 47,
+      "played": 48,
       "won": 14,
-      "drawn": 10,
+      "drawn": 11,
       "lost": 23,
       "gf": 51,
       "ga": 71,
       "gd": -20,
-      "pts": 52,
-      "form": "LDDWL",
+      "pts": 53,
+      "form": "DDWLD",
       "homeRecord": {
         "w": 8,
-        "d": 5,
+        "d": 6,
         "l": 10
       },
       "awayRecord": {
@@ -329,22 +329,22 @@
     {
       "pos": 15,
       "team": "Kifisia",
-      "played": 14,
-      "won": 3,
+      "played": 15,
+      "won": 4,
       "drawn": 5,
       "lost": 6,
-      "gf": 18,
-      "ga": 21,
-      "gd": -3,
-      "pts": 14,
-      "form": "LDWWL",
+      "gf": 21,
+      "ga": 23,
+      "gd": -2,
+      "pts": 17,
+      "form": "DWWLW",
       "homeRecord": {
         "w": 1,
         "d": 3,
         "l": 3
       },
       "awayRecord": {
-        "w": 2,
+        "w": 3,
         "d": 2,
         "l": 3
       }
@@ -352,15 +352,15 @@
     {
       "pos": 16,
       "team": "Kalamata",
-      "played": 7,
+      "played": 8,
       "won": 3,
       "drawn": 1,
-      "lost": 3,
+      "lost": 4,
       "gf": 13,
-      "ga": 12,
-      "gd": 1,
+      "ga": 17,
+      "gd": -4,
       "pts": 10,
-      "form": "DWLWW",
+      "form": "WLWWL",
       "homeRecord": {
         "w": 2,
         "d": 0,
@@ -369,25 +369,25 @@
       "awayRecord": {
         "w": 1,
         "d": 1,
-        "l": 1
+        "l": 2
       }
     },
     {
       "pos": 17,
       "team": "Iraklis",
-      "played": 7,
+      "played": 8,
       "won": 2,
       "drawn": 3,
-      "lost": 2,
-      "gf": 7,
-      "ga": 8,
-      "gd": -1,
+      "lost": 3,
+      "gf": 9,
+      "ga": 11,
+      "gd": -2,
       "pts": 9,
-      "form": "WDDWL",
+      "form": "DDWLL",
       "homeRecord": {
         "w": 1,
         "d": 1,
-        "l": 0
+        "l": 1
       },
       "awayRecord": {
         "w": 1,
@@ -420,9 +420,9 @@
     }
   ],
   "leagueStats": {
-    "avgGoals": 2.528,
-    "homeWinRate": 0.415,
-    "drawRate": 0.23,
+    "avgGoals": 2.544,
+    "homeWinRate": 0.418,
+    "drawRate": 0.228,
     "upsetRate": 0.266,
     "topScores": [
       {
@@ -431,15 +431,15 @@
       },
       {
         "score": "0-1",
-        "count": 34
+        "count": 35
       },
       {
-        "score": "1-2",
+        "score": "2-1",
         "count": 31
       }
     ],
     "computedFrom": "fd",
-    "matchesUsed": 335,
+    "matchesUsed": 342,
     "seasonsMerged": [
       "2425",
       "2526",
@@ -449,7 +449,7 @@
   "context": {
     "titleRace": {
       "leader": "Olympiakos",
-      "gap": 17
+      "gap": 20
     },
     "relegationZone": [
       16,
