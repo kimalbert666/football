@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-10-31T11:28:46.233523Z",
+  "checked_at": "2026-10-31T11:59:18.043297Z",
   "command": "capture",
   "mode": "shadow",
-  "new_predictions": 1,
-  "new_valid_predictions": 1,
+  "new_predictions": 5,
+  "new_valid_predictions": 5,
   "new_outcomes": 0,
-  "due_fixtures": 1,
+  "due_fixtures": 5,
   "tracked_fixtures_seen": 9,
   "skipped": [],
   "legacy_deferred": null,
@@ -174,43 +174,71 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261031",
-        "captured_at": "2026-10-31T11:28:31.636549Z",
-        "content_sha256": "1547507add4992fa6f7260f1080cb04dfce239127e17b8935e034256f519d3a8"
+        "captured_at": "2026-10-31T11:58:48.369530Z",
+        "content_sha256": "88a4c05fef3a0b81150b2d3fa0e31e23654f6c8d0d313bed7a167cd19a6b5627"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261101",
-        "captured_at": "2026-10-31T11:28:31.702073Z",
-        "content_sha256": "4a6693947bb013458c0057478b03ed37d3f077b95c42acf4638d31959bd71aa8"
+        "captured_at": "2026-10-31T11:58:48.467254Z",
+        "content_sha256": "e00f963db7e42ec2783bd5e44b3c3d500ab1f95696eb13b9b136737e955841a6"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/Company.js",
         "status": "ok",
-        "captured_at": "2026-10-31T11:28:37.245904Z",
+        "captured_at": "2026-10-31T11:58:58.390207Z",
         "content_sha256": "8ffeb7953dcf04220e3728ab3ec6f98d3ef3287d9cce9b54076b6e01962f1ed2"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/index_vip.aspx",
         "status": "ok",
-        "captured_at": "2026-10-31T11:28:39.904932Z",
-        "content_sha256": "78ea77a87863f27743c629a95a9cfc295e77bb368aac9efc95da6795713df7a6"
+        "captured_at": "2026-10-31T11:59:06.396279Z",
+        "content_sha256": "320f8c1dc6d6af497d478296d1d9ffbc7b2d88a17df34fda15c31adbff02f454"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/TomorrowOdds.aspx",
         "status": "ok",
-        "captured_at": "2026-10-31T11:28:43.231650Z",
-        "content_sha256": "559befc1d4fc2b322bccd21c5a22ae321ee34d17457a512a47d64c65b0af5513"
+        "captured_at": "2026-10-31T11:59:08.975113Z",
+        "content_sha256": "3efe74bb2764a42bf44c244577ea06042bfdb4b4463cf17c80ff1883c51b182c"
       },
       {
         "name": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003932.js",
+        "url": "https://1x2d.titan007.com/3003936.js",
         "status": "ok",
-        "captured_at": "2026-10-31T11:28:44.703793Z",
-        "content_sha256": "6afef7fbe0af731139a8ceffb26c571c00b82121b988ba042ec57eff75e6837b"
+        "captured_at": "2026-10-31T11:59:10.256183Z",
+        "content_sha256": "45e90b0513f2a0843cbb5d6fa3eb049745c7f8c75bf6952477be849fdc89b496"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003934.js",
+        "status": "ok",
+        "captured_at": "2026-10-31T11:59:13.469583Z",
+        "content_sha256": "dbed0d4313fd751f56126a18dd734c841782b17599d4220a42e51ffa673de6c3"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003933.js",
+        "status": "ok",
+        "captured_at": "2026-10-31T11:59:14.567222Z",
+        "content_sha256": "13753e8b4f91e97739925de76aa611d18cef7d08f04e3e3a91e189203b429f19"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003931.js",
+        "status": "ok",
+        "captured_at": "2026-10-31T11:59:15.652409Z",
+        "content_sha256": "19ab77b3ef245f812be09c81d09e44d5452093be1c509f5cd93631e03d10d0f7"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003929.js",
+        "status": "ok",
+        "captured_at": "2026-10-31T11:59:16.912502Z",
+        "content_sha256": "2ff1fa52807ac60513167f5d511d7e8805261f357457362e860e59167c3bf019"
       }
     ]
   },
@@ -229,9 +257,9 @@
   "automatic_promotion": false,
   "automatic_wagering": false,
   "asian_handicap": {
-    "new_valid": 1,
-    "new_attempts": 1,
-    "distinct_matches": 29,
+    "new_valid": 5,
+    "new_attempts": 5,
+    "distinct_matches": 34,
     "paired_matches": 28,
     "problems": [],
     "provider_faults": {
