@@ -1,38 +1,19 @@
 {
-  "captured_at": "2026-10-31T18:45:18.786611Z",
+  "captured_at": "2026-10-31T19:00:00.260700Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261031",
-      "captured_at": "2026-10-31T18:45:12.386936Z",
-      "content_sha256": "6611ba81e517459bae2987374eea14b6dc9402b204be644adcef2384091b8470"
+      "captured_at": "2026-10-31T19:00:00.188364Z",
+      "content_sha256": "2a174a4b0d8903a2ebcb4c66dd53dfe7645bb8787472d08fc28d640bfd671bdf"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261101",
-      "captured_at": "2026-10-31T18:45:12.450255Z",
-      "content_sha256": "a47c920e4ff53925b2025d6300c85c79a229360af36c57dc7c251e64331f34dc"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2.titan007.com/Company.js",
-      "status": "ok",
-      "captured_at": "2026-10-31T18:45:13.690279Z",
-      "content_sha256": "8ffeb7953dcf04220e3728ab3ec6f98d3ef3287d9cce9b54076b6e01962f1ed2"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2.titan007.com/index_vip.aspx",
-      "status": "ok",
-      "captured_at": "2026-10-31T18:45:18.743812Z",
-      "content_sha256": "0f30c907ff2a52011fb89c003f986f32180dcfe859d2faa60cbff06afabee09b"
-    },
-    {
-      "name": "titan007-crown-quotes",
-      "status": "not_requested",
-      "reason": "No confirmed EPL fixture in a capture window"
+      "captured_at": "2026-10-31T19:00:00.260197Z",
+      "content_sha256": "adc2f59c454129af2ac204d864e003e3282cdc86a62fd3191094ae8ecab27b6a"
     }
   ],
   "fixtures": [
