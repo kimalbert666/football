@@ -1,13 +1,13 @@
 {
   "kickoff_at": "2026-10-31T17:30:00Z",
-  "updated_at": "2026-10-31T16:59:34.034849Z",
+  "updated_at": "2026-10-31T17:15:03.705780Z",
   "fixtures": [
     {
       "match_id": "espn:401878761",
       "home": "Tottenham Hotspur",
       "away": "Crystal Palace",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "362566047665521e907b3f325e8bd1487a60b9e6de94b3295128ca3c96b8a390",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -26,12 +26,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-31T17:15:00Z",
           "closes_at": "2026-10-31T17:20:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "362566047665521e907b3f325e8bd1487a60b9e6de94b3295128ca3c96b8a390",
+          "same_bookmaker_1x2_available": true
         }
       }
     }
