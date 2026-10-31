@@ -1,19 +1,19 @@
 {
-  "captured_at": "2026-10-31T12:15:00.224929Z",
+  "captured_at": "2026-10-31T12:45:07.418941Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261031",
-      "captured_at": "2026-10-31T12:15:00.162111Z",
-      "content_sha256": "63712b8da75cdded3e6fc90e8653800949431440d92afdbcd57d6633fee12e6c"
+      "captured_at": "2026-10-31T12:45:07.372819Z",
+      "content_sha256": "b359be200cece726cd37e78a0ce8101c668f3051b886ae5ced9a65f9303622c1"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261101",
-      "captured_at": "2026-10-31T12:15:00.224575Z",
-      "content_sha256": "e00f963db7e42ec2783bd5e44b3c3d500ab1f95696eb13b9b136737e955841a6"
+      "captured_at": "2026-10-31T12:45:07.418580Z",
+      "content_sha256": "d9dcec3c2388c569347054f6ff7b66bf52b04c574294f04d2d71aff91a25242a"
     }
   ],
   "fixtures": [
@@ -27,7 +27,7 @@
       "home": "Chelsea",
       "away": "Manchester United",
       "kickoff_at": "2026-10-31T12:30:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
