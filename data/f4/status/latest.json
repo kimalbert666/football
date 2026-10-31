@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-31T14:45:09.005928Z",
+  "checked_at": "2026-10-31T15:15:11.321920Z",
   "command": "capture",
   "mode": "shadow",
   "new_predictions": 0,
@@ -174,14 +174,14 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261031",
-        "captured_at": "2026-10-31T14:45:00.130938Z",
-        "content_sha256": "9622d31670e5e920d4d703ad5434f09054b25b69412e1ae7654cf1d706bb1a51"
+        "captured_at": "2026-10-31T15:15:11.236044Z",
+        "content_sha256": "e2dbdcb23601bb73115e5c2fc329e0d4e699aa96775b68d0eb0652c486cd80a8"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261101",
-        "captured_at": "2026-10-31T14:45:00.177895Z",
+        "captured_at": "2026-10-31T15:15:11.300888Z",
         "content_sha256": "9f58b657852cf6c9d8b873ac53fc934f2a2b6ebc34081a537ce21ebc3cea5855"
       }
     ]
@@ -190,8 +190,8 @@
   "automatic_promotion": false,
   "automatic_wagering": false,
   "asian_handicap": {
-    "new_valid": 5,
-    "new_attempts": 5,
+    "new_valid": 0,
+    "new_attempts": 0,
     "distinct_matches": 35,
     "paired_matches": 28,
     "problems": [],
