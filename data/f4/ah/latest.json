@@ -1,8 +1,8 @@
 {
-  "evaluated_at": "2026-10-31T10:58:29.158505Z",
-  "new_valid": 0,
-  "new_attempts": 0,
-  "valid_observations": 82,
+  "evaluated_at": "2026-10-31T11:28:34.608364Z",
+  "new_valid": 1,
+  "new_attempts": 1,
+  "valid_observations": 83,
   "distinct_matches": 29,
   "paired_matches": 28,
   "pairing_issues": {},
@@ -3879,35 +3879,35 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-31T09:28:21.193637Z",
+      "captured_at": "2026-10-31T11:28:32.291949Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-31T09:28:21.710130Z",
-      "content_sha256": "373401503ad3d36de08929e8b366bb00b2b878a6599efe73af6dc7c0004f9bc8"
+      "captured_at": "2026-10-31T11:28:32.991192Z",
+      "content_sha256": "5f6e317d1504cab08ca885d7abc08d2c3bed925ec6a8fe13b567496914cdf706"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/events?sport=football&league=lg_T9268DXK&status=scheduled&date=2026-10-31&limit=100",
       "status": "ok",
-      "captured_at": "2026-10-31T09:28:22.264639Z",
+      "captured_at": "2026-10-31T11:28:33.524804Z",
       "content_sha256": "b20b96e6c73f2a06cea8e137b72e38e2889af9e518b8aa4df97c993c256f2463"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/events/evt_9DGF82H2/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
       "status": "ok",
-      "captured_at": "2026-10-31T09:28:22.784496Z",
-      "content_sha256": "e5c558c0c3d780227fc07318f030fab47ed5831a70337bc4c6fc46b5be166c49"
+      "captured_at": "2026-10-31T11:28:34.012271Z",
+      "content_sha256": "7cc855fa15d6df04e17de9f022645ebd1b1d314dc1022b61fb91ed3f0ba35eab"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/events/evt_9DGF82H2/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
       "status": "ok",
-      "captured_at": "2026-10-31T09:28:23.330340Z",
+      "captured_at": "2026-10-31T11:28:34.584454Z",
       "content_sha256": "31ef3f2d74b3e3c1ef452aca0d45584d456b48a2541d312389c600b7da98beb0"
     }
   ],
@@ -3918,9 +3918,9 @@
   "primary_provider_health": {
     "status": "ok",
     "feed_live": true,
-    "as_of": "2026-10-31T09:28:13Z",
+    "as_of": "2026-10-31T11:28:24Z",
     "as_of_stale": false,
-    "checked_at": "2026-10-31T09:28:21.710130Z"
+    "checked_at": "2026-10-31T11:28:32.991192Z"
   },
   "fallback_matches": [],
   "quote_availability": "complete",
@@ -3934,7 +3934,9 @@
         "awaiting_window": 8
       },
       "T-60m": {
-        "awaiting_window": 9
+        "recorded_research_only": 1,
+        "complete_joint_market": 1,
+        "awaiting_window": 8
       },
       "T-15m": {
         "awaiting_window": 9
