@@ -1,6 +1,6 @@
 {
   "kickoff_at": "2026-10-31T15:00:00Z",
-  "updated_at": "2026-10-31T11:28:34.606918Z",
+  "updated_at": "2026-10-31T11:58:55.620353Z",
   "fixtures": [
     {
       "match_id": "espn:401878763",
@@ -10,12 +10,12 @@
       "observation_id": null,
       "windows": {
         "T-180m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-31T12:00:00Z",
           "closes_at": "2026-10-31T12:20:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "6aba2a5282e60109705a380211453f9fd4edcf86ffaf140735f2a577d19aca94",
+          "same_bookmaker_1x2_available": true
         },
         "T-60m": {
           "status": "awaiting_window",
@@ -43,12 +43,12 @@
       "observation_id": null,
       "windows": {
         "T-180m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-31T12:00:00Z",
           "closes_at": "2026-10-31T12:20:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "15f505230a0c2fa1ab73a2ae5e7f218d92826134bbed1202cc59eed67530cf0a",
+          "same_bookmaker_1x2_available": true
         },
         "T-60m": {
           "status": "awaiting_window",
@@ -76,12 +76,12 @@
       "observation_id": null,
       "windows": {
         "T-180m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-31T12:00:00Z",
           "closes_at": "2026-10-31T12:20:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "77f6efb5648756c4373ec6054db3ad4640ffbb3760a99448cc6a11d9d5c1b007",
+          "same_bookmaker_1x2_available": true
         },
         "T-60m": {
           "status": "awaiting_window",
@@ -109,12 +109,12 @@
       "observation_id": null,
       "windows": {
         "T-180m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-31T12:00:00Z",
           "closes_at": "2026-10-31T12:20:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "c1b1e6dda41e7bc8dc993ed8c6f03ef8496b4a3059fee5468ca68a6101547cb6",
+          "same_bookmaker_1x2_available": true
         },
         "T-60m": {
           "status": "awaiting_window",
@@ -142,12 +142,12 @@
       "observation_id": null,
       "windows": {
         "T-180m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-10-31T12:00:00Z",
           "closes_at": "2026-10-31T12:20:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "075689009fab19151d4b3aa3995b5f442f1c7da3ab4bc420b1d7d1e32c156486",
+          "same_bookmaker_1x2_available": true
         },
         "T-60m": {
           "status": "awaiting_window",
