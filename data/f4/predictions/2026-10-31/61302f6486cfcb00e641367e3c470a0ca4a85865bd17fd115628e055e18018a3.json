@@ -1,0 +1,146 @@
+{
+  "actual_minutes": 59.65196773333333,
+  "away": "Fulham",
+  "away_id": "fulham",
+  "baseline_version": "titan007-crown-1x2-inverse-normalized-v1",
+  "candidate_reason": null,
+  "candidate_source_sha256": "18bae91698fd21b2d9e2ef5f4635de511148d6c7d85777a6791dec30cb300124",
+  "candidate_training_evidence": "legacy_model_declared_unverified",
+  "candidate_version": "dc-shadow-18bae91698fd",
+  "candidate_weight": 0,
+  "captured_at": "2026-10-31T19:00:19.659023Z",
+  "champion_version": "market-reference-v1",
+  "coverage": {
+    "complete": true,
+    "reason": "Independent daily EPL calendar verified",
+    "scope": {
+      "from": "2026-10-31",
+      "league": "england-premier",
+      "pending_lookup_limit": 20,
+      "provider": "espn",
+      "through": "2026-11-01"
+    }
+  },
+  "decision_at": "2026-10-31T19:00:20.881936Z",
+  "experiment_id": "f4-forward-epl-crown-v1",
+  "f2": null,
+  "generated_at": "2026-10-31T19:00:20.884146Z",
+  "home": "Aston Villa",
+  "home_id": "aston-villa",
+  "horizon": "T-60m",
+  "horizon_tolerance_minutes": 20,
+  "kickoff_at": "2026-10-31T20:00:00Z",
+  "league": "england-premier",
+  "market": "90min_1x2",
+  "match_id": "espn:401879250",
+  "origin": {
+    "commit": "961941917a09964fbbaf47b5054e85a484396896",
+    "kind": "github-actions",
+    "run_id": "41215012926"
+  },
+  "p_baseline": [
+    0.4604409857328145,
+    0.2697795071335928,
+    0.2697795071335928
+  ],
+  "p_candidate": [
+    0.5068629618055709,
+    0.2736882994324556,
+    0.2194487387619736
+  ],
+  "p_champion": [
+    0.4604409857328145,
+    0.2697795071335928,
+    0.2697795071335928
+  ],
+  "provider": "espn",
+  "quote": {
+    "bookmaker": "crown",
+    "captured_at": "2026-10-31T19:00:19.464618Z",
+    "company_id": 545,
+    "content_sha256": "88ca3c787864300110c3c2d0856cc2d87d20788f6b4260d3a623b4a3c192375d",
+    "market": "90min_1x2",
+    "market_status": "not_exposed",
+    "odds": [
+      2.08,
+      3.55,
+      3.55
+    ],
+    "provenance": "Titan007 public display attributed to Crown; not direct bookmaker API",
+    "provider_event_id": "3003930",
+    "provider_kickoff_at": "2026-10-31T20:00:00Z",
+    "provider_quote_id": "159809284",
+    "published_at": "2026-10-31T18:51:00Z",
+    "source": "titan007-crown",
+    "url": "https://1x2d.titan007.com/3003930.js"
+  },
+  "reason": "仅作单源市场参考，候选尚未验证优势，不输出投注建议",
+  "rejected_candidate_cutoff": null,
+  "schema_version": 1,
+  "selected": false,
+  "source_event_id": "401879250",
+  "source_problems": [
+    "f2 row 0 rejected: an explicit kickoff/decision time is required",
+    "f2 row 1 rejected: an explicit kickoff/decision time is required",
+    "f2 row 2 rejected: an explicit kickoff/decision time is required",
+    "f2 row 3 rejected: an explicit kickoff/decision time is required",
+    "f2 row 4 rejected: an explicit kickoff/decision time is required",
+    "f2 row 5 rejected: unknown or ambiguous source teams",
+    "f2 row 6 rejected: an explicit kickoff/decision time is required",
+    "f2 row 7 rejected: an explicit kickoff/decision time is required",
+    "f2 row 8 rejected: an explicit kickoff/decision time is required",
+    "f2 row 9 rejected: an explicit kickoff/decision time is required"
+  ],
+  "sources": [
+    {
+      "captured_at": "2026-10-31T19:00:00.188364Z",
+      "content_sha256": "2a174a4b0d8903a2ebcb4c66dd53dfe7645bb8787472d08fc28d640bfd671bdf",
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261031"
+    },
+    {
+      "captured_at": "2026-10-31T19:00:00.260197Z",
+      "content_sha256": "adc2f59c454129af2ac204d864e003e3282cdc86a62fd3191094ae8ecab27b6a",
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261101"
+    },
+    {
+      "captured_at": "2026-10-31T19:00:05.979731Z",
+      "content_sha256": "8ffeb7953dcf04220e3728ab3ec6f98d3ef3287d9cce9b54076b6e01962f1ed2",
+      "name": "titan007-crown",
+      "status": "ok",
+      "url": "https://1x2.titan007.com/Company.js"
+    },
+    {
+      "captured_at": "2026-10-31T19:00:08.693060Z",
+      "content_sha256": "3c439c111a7f091b331c8ce7cd8585022ee20de1a4cd084b15ec26932c87220f",
+      "name": "titan007-crown",
+      "status": "ok",
+      "url": "https://1x2.titan007.com/index_vip.aspx"
+    },
+    {
+      "captured_at": "2026-10-31T19:00:17.789705Z",
+      "content_sha256": "321a07a27bc77dbe0375ce7383877b4530e57f6594c6a1c4256bcc17b21d794c",
+      "name": "titan007-crown",
+      "status": "ok",
+      "url": "https://1x2.titan007.com/TomorrowOdds.aspx"
+    },
+    {
+      "captured_at": "2026-10-31T19:00:19.464618Z",
+      "content_sha256": "88ca3c787864300110c3c2d0856cc2d87d20788f6b4260d3a623b4a3c192375d",
+      "name": "titan007-crown",
+      "status": "ok",
+      "url": "https://1x2d.titan007.com/3003930.js"
+    },
+    {
+      "captured_at": "2026-10-31T19:00:20.880272+00:00",
+      "content_sha256": "e8c372390f2cd04725fe7dc41b31c14c3501198516c6fca3e329b661ef4e9b90",
+      "endpoint": "https://ru7m5svay1.execute-api.eu-central-1.amazonaws.com/prod/mcp",
+      "provider_match_count": 10,
+      "source": "f2-footballbin"
+    }
+  ],
+  "trained_through": "2026-09-10T15:59:59.999999Z"
+}
