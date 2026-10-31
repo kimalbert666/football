@@ -1,9 +1,9 @@
 {
-  "checked_at": "2026-10-31T13:45:17.138499Z",
+  "checked_at": "2026-10-31T14:00:33.457157Z",
   "command": "capture",
   "mode": "shadow",
   "new_predictions": 5,
-  "new_valid_predictions": 0,
+  "new_valid_predictions": 5,
   "new_outcomes": 0,
   "due_fixtures": 5,
   "tracked_fixtures_seen": 9,
@@ -174,34 +174,71 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261031",
-        "captured_at": "2026-10-31T13:45:12.364816Z",
-        "content_sha256": "2bf7d587ec6f491e39a1b68960cd9b0ffebcc06cec0bee8d2b5522a0529c6663"
+        "captured_at": "2026-10-31T14:00:00.220366Z",
+        "content_sha256": "57d0233cb68fca1830014d54a57fbbfc3ffe3e89f874caf31b99ce01cbeccddb"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261101",
-        "captured_at": "2026-10-31T13:45:12.406510Z",
-        "content_sha256": "ba0da3db89a9d0188239a629c75690edb9993a1a1bc7761f6709a0a166e19382"
+        "captured_at": "2026-10-31T14:00:00.318160Z",
+        "content_sha256": "7099997a6cb546b3ae9ad83436cf10f3d6f852f2368d899717a70ad73600a699"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/Company.js",
         "status": "ok",
-        "captured_at": "2026-10-31T13:45:13.359933Z",
+        "captured_at": "2026-10-31T14:00:10.066827Z",
         "content_sha256": "8ffeb7953dcf04220e3728ab3ec6f98d3ef3287d9cce9b54076b6e01962f1ed2"
       },
       {
         "name": "titan007-crown",
         "url": "https://1x2.titan007.com/index_vip.aspx",
         "status": "ok",
-        "captured_at": "2026-10-31T13:45:15.753758Z",
-        "content_sha256": "6fc945631a4cff5d26c60d3a73ea12c426148011b7cc78e49e4d50ddb26df387"
+        "captured_at": "2026-10-31T14:00:13.228935Z",
+        "content_sha256": "f4f9eb5ee70bd149a917a457ea65480b1523dc8ff67f22fc755aeff8cb7ca62f"
       },
       {
-        "name": "titan007-crown-quotes",
-        "status": "not_requested",
-        "reason": "No confirmed EPL fixture in a capture window"
+        "name": "titan007-crown",
+        "url": "https://1x2.titan007.com/TomorrowOdds.aspx",
+        "status": "ok",
+        "captured_at": "2026-10-31T14:00:18.887277Z",
+        "content_sha256": "b4de3fed85535d450724c193511db79d0aa14d7221bfa9c0f85e3ac135e1e53f"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003936.js",
+        "status": "ok",
+        "captured_at": "2026-10-31T14:00:20.233984Z",
+        "content_sha256": "763ccaf5cd77f5d12627b90d9a396e843501a0e6a5ee7a80b10ba5ee685bb281"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003934.js",
+        "status": "ok",
+        "captured_at": "2026-10-31T14:00:25.450180Z",
+        "content_sha256": "48dcdc2773c3c7a49fc8d46b6bc47a24d7a9e36a5b04dab7a8809ef8bfc65572"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003933.js",
+        "status": "ok",
+        "captured_at": "2026-10-31T14:00:28.193273Z",
+        "content_sha256": "9ea1a4cd7428d3cfa6fa96fa86d98bb5fcb127ae81355a691934cc50428e9813"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003931.js",
+        "status": "ok",
+        "captured_at": "2026-10-31T14:00:29.302274Z",
+        "content_sha256": "923fb8d5ba49f6ef3bd97e4b09d073eeb3fda89e3c51972fd4e73b6c9fddd966"
+      },
+      {
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003929.js",
+        "status": "ok",
+        "captured_at": "2026-10-31T14:00:31.874752Z",
+        "content_sha256": "c7d29c6866c9ccf65e0dfe8d34782d5ac6f35a418bb1f485901359019176754c"
       }
     ]
   },
@@ -220,8 +257,8 @@
   "automatic_promotion": false,
   "automatic_wagering": false,
   "asian_handicap": {
-    "new_valid": 0,
-    "new_attempts": 0,
+    "new_valid": 5,
+    "new_attempts": 5,
     "distinct_matches": 34,
     "paired_matches": 28,
     "problems": [],
