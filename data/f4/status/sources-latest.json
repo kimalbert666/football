@@ -1,19 +1,19 @@
 {
-  "captured_at": "2026-10-31T19:46:30.799488Z",
+  "captured_at": "2026-10-31T21:27:23.396912Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261031",
-      "captured_at": "2026-10-31T19:46:30.647934Z",
-      "content_sha256": "2915735558549fc4239e285bc823ba393b28e38449aaedfb7d935dcb6de3677b"
+      "captured_at": "2026-10-31T21:27:23.348553Z",
+      "content_sha256": "f1a8a5e96581e7ddface9e1d3cc4881aa162b00ed328ab3584038c4ad5780f1c"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261101",
-      "captured_at": "2026-10-31T19:46:30.799033Z",
-      "content_sha256": "5dd724015590e8e7ad0806903da5ba25a05784f51611215bd5358142f72b16fb"
+      "captured_at": "2026-10-31T21:27:23.396426Z",
+      "content_sha256": "7c4341ba4c183d50a3f5988ffdeee4906f7d985eb3d6399880227a1fe4ab0b0c"
     }
   ],
   "fixtures": [
@@ -153,7 +153,7 @@
       "home": "Aston Villa",
       "away": "Fulham",
       "kickoff_at": "2026-10-31T20:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
