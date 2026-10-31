@@ -1,0 +1,77 @@
+{
+  "kickoff_at": "2026-11-07T15:00:00Z",
+  "updated_at": "2026-10-31T02:42:05.613240Z",
+  "fixtures": [
+    {
+      "match_id": "espn:401878760",
+      "home": "Arsenal",
+      "away": "Hull City",
+      "status": "awaiting_window",
+      "observation_id": null,
+      "windows": {
+        "T-180m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-07T12:00:00Z",
+          "closes_at": "2026-11-07T12:20:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-60m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-07T14:00:00Z",
+          "closes_at": "2026-11-07T14:10:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-15m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-07T14:45:00Z",
+          "closes_at": "2026-11-07T14:50:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        }
+      }
+    },
+    {
+      "match_id": "espn:401879241",
+      "home": "Fulham",
+      "away": "Newcastle United",
+      "status": "awaiting_window",
+      "observation_id": null,
+      "windows": {
+        "T-180m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-07T12:00:00Z",
+          "closes_at": "2026-11-07T12:20:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-60m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-07T14:00:00Z",
+          "closes_at": "2026-11-07T14:10:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-15m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-07T14:45:00Z",
+          "closes_at": "2026-11-07T14:50:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        }
+      }
+    }
+  ],
+  "experiment_id": "f4-epl-ah-research-v1",
+  "research_only": true,
+  "direction_notification_enabled": false,
+  "all_no_selection": false,
+  "reason": "No approved models; missing data is not a no-pick verdict"
+}
