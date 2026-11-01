@@ -1,135 +1,35 @@
 {
-  "checked_at": "2026-10-31T19:45:04.530090Z",
-  "markets": {
-    "espn:401879250": {
-      "home_handicap": -0.5,
-      "odds": [
-        1.98,
-        1.91
-      ],
-      "published_at": "2026-10-31T19:38:03Z",
-      "bookmaker": "crown",
-      "market": "90min_asian_handicap",
-      "captured_at": "2026-10-31T19:45:03.857899Z",
-      "snapshot_at": "2026-10-31T19:44:51Z",
-      "source": "infersports-crown",
-      "url": "https://api.infersports.dev/v1/events/evt_CGD4G4P3/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
-      "content_sha256": "5e1249139d17de813873aa0e025d68b9b6f376a69a5f11936d8a960853467c9a",
-      "provider_event_id": "evt_CGD4G4P3",
-      "provider_kickoff_at": "2026-10-31T20:00:00Z",
-      "market_status": "provider_reports_open",
-      "lines": [
-        {
-          "home_handicap": -0.75,
-          "odds": [
-            2.25,
-            1.69
-          ],
-          "published_at": "2026-10-31T19:38:03Z"
-        },
-        {
-          "home_handicap": -0.5,
-          "odds": [
-            1.98,
-            1.91
-          ],
-          "published_at": "2026-10-31T19:38:03Z"
-        },
-        {
-          "home_handicap": -0.25,
-          "odds": [
-            1.73,
-            2.19
-          ],
-          "published_at": "2026-10-31T19:38:03Z"
-        },
-        {
-          "home_handicap": 0.0,
-          "odds": [
-            1.48,
-            2.72
-          ],
-          "published_at": "2026-10-31T19:38:03Z"
-        }
-      ],
-      "opening_lines": [
-        {
-          "home_handicap": -0.5,
-          "odds": [
-            2.06,
-            1.82
-          ],
-          "published_at": "2026-10-19T04:03:55Z",
-          "captured_at": "2026-10-31T19:45:04.528421Z",
-          "provenance": "provider-reported opening; not independently certified"
-        }
-      ],
-      "line_selection": "closest_price_balance_not_provider_main",
-      "market_1x2": {
-        "bookmaker": "crown",
-        "market": "90min_1x2",
-        "odds": [
-          1.98,
-          3.7,
-          3.75
-        ],
-        "captured_at": "2026-10-31T19:45:03.857899Z",
-        "published_at": "2026-10-31T19:38:03Z",
-        "source": "infersports-crown",
-        "url": "https://api.infersports.dev/v1/events/evt_CGD4G4P3/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
-        "provider_event_id": "evt_CGD4G4P3",
-        "snapshot_at": "2026-10-31T19:44:51Z",
-        "content_sha256": "5e1249139d17de813873aa0e025d68b9b6f376a69a5f11936d8a960853467c9a",
-        "provider_kickoff_at": "2026-10-31T20:00:00Z"
-      },
-      "source_delay_seconds": 90,
-      "snapshot_age_seconds": 12.857899,
-      "freshness_evidence": "provider stale=false and fresh global feed health",
-      "provenance": "Third-party bookmaker attribution; unchanged prices not independently polled at bookmaker",
-      "bookmaker_priority": [
-        "crown",
-        "macau",
-        "hkjc",
-        "sbobet"
-      ],
-      "earlier_bookmaker_rejections": []
-    }
-  },
+  "checked_at": "2026-11-01T01:02:48.674794Z",
+  "markets": {},
   "sources": [
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-10-31T19:45:01.833806Z",
+      "captured_at": "2026-11-01T01:02:46.884522Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-10-31T19:45:02.478451Z",
-      "content_sha256": "b8cf3ece7e887ddd8f6821f348491be04916b98f656f5dd07157869d120cff6a"
+      "captured_at": "2026-11-01T01:02:47.520133Z",
+      "content_sha256": "ab4a179babeac3f31a9ce986d4733a508a82130fee98c4072c1ee8e2c472e540"
     },
     {
-      "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events?sport=football&league=lg_T9268DXK&status=scheduled&date=2026-10-31&limit=100",
-      "status": "ok",
-      "captured_at": "2026-10-31T19:45:03.133580Z",
-      "content_sha256": "25479466397b9384cde74b3f42cad38c2c2bac3bb490c2e83153b68ad4400c4d"
+      "name": "infersports-crown-ah-quotes",
+      "status": "not_requested",
+      "reason": "no confirmed EPL fixture in capture window"
     },
     {
-      "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events/evt_CGD4G4P3/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "name": "hkjc-direct-ah",
+      "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-10-31T19:45:03.857899Z",
-      "content_sha256": "5e1249139d17de813873aa0e025d68b9b6f376a69a5f11936d8a960853467c9a"
-    },
-    {
-      "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events/evt_CGD4G4P3/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
-      "status": "ok",
-      "captured_at": "2026-10-31T19:45:04.528421Z",
-      "content_sha256": "535f070a50c797eea53cff138adc486f88e3ba42318297a802e1d887f1318731"
+      "captured_at": "2026-11-01T01:02:48.666128Z",
+      "response_at": "2026-11-01T01:02:48Z",
+      "content_sha256": "5abe1d2dc1cd842fbbeb4fa3134e27d6cf74c0903fab4347a3bfe74a35cb4736",
+      "match_count": 144,
+      "epl_match_count": 2
     }
   ],
   "problems": [],
@@ -140,11 +40,11 @@
   "primary_provider_health": {
     "status": "ok",
     "feed_live": true,
-    "as_of": "2026-10-31T19:44:54Z",
+    "as_of": "2026-11-01T01:02:39Z",
     "as_of_stale": false,
-    "checked_at": "2026-10-31T19:45:02.478451Z"
+    "checked_at": "2026-11-01T01:02:47.520133Z"
   },
   "fallback_matches": [],
   "unresolved_matches": [],
-  "quote_availability": "complete"
+  "quote_availability": "not_tested_no_due_matches"
 }

@@ -1,55 +1,127 @@
 {
   "day": "20261031",
   "events_seen": 8,
-  "pending_results": [
+  "pending_results": [],
+  "record_sha256": "2bc5d3ce1360a690c9da0045b41d54c72ee24de5b11dddaed27996ab28ba2218",
+  "results": [
     {
+      "away": "Manchester United",
+      "away_id": "man-united",
+      "away_provider_id": "360",
+      "home": "Chelsea",
+      "home_id": "chelsea",
+      "home_provider_id": "363",
       "kickoff_at": "2026-10-31T12:30:00Z",
       "match_id": "espn:401879248",
-      "status": "scheduled"
+      "score": [
+        2,
+        0
+      ]
     },
     {
+      "away": "Leeds United",
+      "away_id": "leeds",
+      "away_provider_id": "357",
+      "home": "AFC Bournemouth",
+      "home_id": "bournemouth",
+      "home_provider_id": "349",
       "kickoff_at": "2026-10-31T15:00:00Z",
       "match_id": "espn:401879251",
-      "status": "scheduled"
+      "score": [
+        2,
+        0
+      ]
     },
     {
+      "away": "Nottingham Forest",
+      "away_id": "nottingham-forest",
+      "away_provider_id": "393",
+      "home": "Brentford",
+      "home_id": "brentford",
+      "home_provider_id": "337",
       "kickoff_at": "2026-10-31T15:00:00Z",
       "match_id": "espn:401879249",
-      "status": "scheduled"
+      "score": [
+        2,
+        0
+      ]
     },
     {
+      "away": "Sunderland",
+      "away_id": "sunderland",
+      "away_provider_id": "366",
+      "home": "Coventry City",
+      "home_id": "coventry",
+      "home_provider_id": "388",
       "kickoff_at": "2026-10-31T15:00:00Z",
       "match_id": "espn:401879247",
-      "status": "scheduled"
+      "score": [
+        3,
+        1
+      ]
     },
     {
+      "away": "Ipswich Town",
+      "away_id": "ipswich",
+      "away_provider_id": "373",
+      "home": "Hull City",
+      "home_id": "hull-city",
+      "home_provider_id": "306",
       "kickoff_at": "2026-10-31T15:00:00Z",
       "match_id": "espn:401878763",
-      "status": "scheduled"
+      "score": [
+        2,
+        2
+      ]
     },
     {
+      "away": "Brighton & Hove Albion",
+      "away_id": "brighton",
+      "away_provider_id": "331",
+      "home": "Manchester City",
+      "home_id": "man-city",
+      "home_provider_id": "382",
       "kickoff_at": "2026-10-31T15:00:00Z",
       "match_id": "espn:401879245",
-      "status": "scheduled"
+      "score": [
+        0,
+        1
+      ]
     },
     {
+      "away": "Crystal Palace",
+      "away_id": "crystal-palace",
+      "away_provider_id": "384",
+      "home": "Tottenham Hotspur",
+      "home_id": "tottenham",
+      "home_provider_id": "367",
       "kickoff_at": "2026-10-31T17:30:00Z",
       "match_id": "espn:401878761",
-      "status": "scheduled"
+      "score": [
+        2,
+        0
+      ]
     },
     {
+      "away": "Fulham",
+      "away_id": "fulham",
+      "away_provider_id": "370",
+      "home": "Aston Villa",
+      "home_id": "aston-villa",
+      "home_provider_id": "362",
       "kickoff_at": "2026-10-31T20:00:00Z",
       "match_id": "espn:401879250",
-      "status": "scheduled"
+      "score": [
+        1,
+        1
+      ]
     }
   ],
-  "record_sha256": "001b1b3441cd3dea6d1e06ff2a400e2abf8b4306ecd2dc0530c2ca098bfd4241",
-  "results": [],
   "schema": "f4-strength-observed-v1",
   "season_year": 2026,
   "source": {
-    "captured_at": "2026-10-31T02:42:05.959673Z",
-    "content_sha256": "e7bb282f69680c914519ac449deda3c78b8496ccfbe9449c7a59aebd4b9fd911",
+    "captured_at": "2026-11-01T01:02:49.173323Z",
+    "content_sha256": "e610cbde9bf889069a38356600fb35be74488aa6dcadf478a644127d56c899fa",
     "name": "espn",
     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261031&limit=1000"
   }

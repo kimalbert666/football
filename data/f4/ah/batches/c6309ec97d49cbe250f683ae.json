@@ -1,0 +1,143 @@
+{
+  "kickoff_at": "2026-11-08T14:00:00Z",
+  "updated_at": "2026-11-01T01:02:48.692704Z",
+  "fixtures": [
+    {
+      "match_id": "espn:401878759",
+      "home": "Ipswich Town",
+      "away": "AFC Bournemouth",
+      "status": "awaiting_window",
+      "observation_id": null,
+      "windows": {
+        "T-180m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-08T11:00:00Z",
+          "closes_at": "2026-11-08T11:20:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-60m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-08T13:00:00Z",
+          "closes_at": "2026-11-08T13:10:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-15m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-08T13:45:00Z",
+          "closes_at": "2026-11-08T13:50:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        }
+      }
+    },
+    {
+      "match_id": "espn:401879239",
+      "home": "Sunderland",
+      "away": "Chelsea",
+      "status": "awaiting_window",
+      "observation_id": null,
+      "windows": {
+        "T-180m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-08T11:00:00Z",
+          "closes_at": "2026-11-08T11:20:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-60m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-08T13:00:00Z",
+          "closes_at": "2026-11-08T13:10:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-15m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-08T13:45:00Z",
+          "closes_at": "2026-11-08T13:50:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        }
+      }
+    },
+    {
+      "match_id": "espn:401879243",
+      "home": "Crystal Palace",
+      "away": "Liverpool",
+      "status": "awaiting_window",
+      "observation_id": null,
+      "windows": {
+        "T-180m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-08T11:00:00Z",
+          "closes_at": "2026-11-08T11:20:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-60m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-08T13:00:00Z",
+          "closes_at": "2026-11-08T13:10:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-15m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-08T13:45:00Z",
+          "closes_at": "2026-11-08T13:50:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        }
+      }
+    },
+    {
+      "match_id": "espn:401879244",
+      "home": "Brighton & Hove Albion",
+      "away": "Brentford",
+      "status": "awaiting_window",
+      "observation_id": null,
+      "windows": {
+        "T-180m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-08T11:00:00Z",
+          "closes_at": "2026-11-08T11:20:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-60m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-08T13:00:00Z",
+          "closes_at": "2026-11-08T13:10:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        },
+        "T-15m": {
+          "status": "awaiting_window",
+          "expected_at": "2026-11-08T13:45:00Z",
+          "closes_at": "2026-11-08T13:50:00Z",
+          "attempts": 0,
+          "observation_id": null,
+          "same_bookmaker_1x2_available": false
+        }
+      }
+    }
+  ],
+  "experiment_id": "f4-epl-ah-research-v1",
+  "research_only": true,
+  "direction_notification_enabled": false,
+  "all_no_selection": false,
+  "reason": "No approved models; missing data is not a no-pick verdict"
+}

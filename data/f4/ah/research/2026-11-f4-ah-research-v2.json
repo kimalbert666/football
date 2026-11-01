@@ -1,0 +1,272 @@
+{
+  "schema_version": "f4-ah-research-v2",
+  "status": "insufficient_data",
+  "created_at": "2026-11-01T01:02:48.681216+00:00",
+  "weight": 0,
+  "auto_promote": false,
+  "input_rows": 36,
+  "accepted_matches": 36,
+  "rejected_rows": [],
+  "duplicate_snapshots_removed": 0,
+  "data_sha256": "e0900b6fd51b5a58fabd0418e568a628fe2b2f33aa2fb281c0b468dc6b278883",
+  "minimum_samples": {
+    "train": 120,
+    "validation": 40,
+    "test": 40
+  },
+  "split": {
+    "purged": {
+      "train": 0,
+      "validation": 0
+    },
+    "train": {
+      "count": 17,
+      "match_ids": [
+        "espn:401879268",
+        "espn:401878772",
+        "espn:401878775",
+        "espn:401878776",
+        "espn:401879265",
+        "espn:401878773",
+        "espn:401879264",
+        "espn:401879267",
+        "espn:401878771",
+        "espn:401878770",
+        "espn:401879259",
+        "espn:401879262",
+        "espn:401879258",
+        "espn:401879260",
+        "espn:401879261",
+        "espn:401879263",
+        "espn:401878769"
+      ],
+      "kickoff_from": "2026-10-10T11:30:00Z",
+      "kickoff_to": "2026-10-18T15:30:00Z"
+    },
+    "validation": {
+      "count": 11,
+      "match_ids": [
+        "espn:401879257",
+        "espn:401879253",
+        "espn:401879256",
+        "espn:401878768",
+        "espn:401879255",
+        "espn:401878767",
+        "espn:401878765",
+        "espn:401878766",
+        "espn:401879252",
+        "espn:401879254",
+        "espn:401878764"
+      ],
+      "kickoff_from": "2026-10-19T19:00:00Z",
+      "kickoff_to": "2026-10-25T16:30:00Z"
+    },
+    "test": {
+      "count": 8,
+      "match_ids": [
+        "espn:401879248",
+        "espn:401878763",
+        "espn:401879245",
+        "espn:401879247",
+        "espn:401879249",
+        "espn:401879251",
+        "espn:401878761",
+        "espn:401879250"
+      ],
+      "kickoff_from": "2026-10-31T12:30:00Z",
+      "kickoff_to": "2026-10-31T20:00:00Z"
+    }
+  },
+  "candidates": {
+    "M1": {
+      "status": "insufficient_data",
+      "weight": 0,
+      "reason": "insufficient chronological samples with required features",
+      "counts": {
+        "train": 17,
+        "validation": 11,
+        "test": 8
+      },
+      "feature_names": [
+        "home_handicap",
+        "absolute_handicap",
+        "quarter_fraction",
+        "home_log_price",
+        "away_log_price",
+        "ah_price_share_home",
+        "ah_reciprocal_sum_minus_one",
+        "log_p_home",
+        "log_p_draw",
+        "log_p_away",
+        "handicap_x_log_home_away",
+        "book_crown",
+        "book_macau",
+        "book_hkjc",
+        "book_sbobet"
+      ],
+      "missing_features": {
+        "train": [],
+        "validation": [],
+        "test": []
+      },
+      "model": null,
+      "validation": null,
+      "test": null
+    },
+    "M2": {
+      "status": "insufficient_data",
+      "weight": 0,
+      "reason": "insufficient chronological samples with required features",
+      "counts": {
+        "train": 9,
+        "validation": 11,
+        "test": 8
+      },
+      "feature_names": [
+        "home_handicap",
+        "absolute_handicap",
+        "quarter_fraction",
+        "home_log_price",
+        "away_log_price",
+        "ah_price_share_home",
+        "ah_reciprocal_sum_minus_one",
+        "log_p_home",
+        "log_p_draw",
+        "log_p_away",
+        "handicap_x_log_home_away",
+        "book_crown",
+        "book_macau",
+        "book_hkjc",
+        "book_sbobet",
+        "rating_difference"
+      ],
+      "missing_features": {
+        "train": [
+          {
+            "match_id": "espn:401879268",
+            "reason": "pre-match ratings required"
+          },
+          {
+            "match_id": "espn:401878772",
+            "reason": "pre-match ratings required"
+          },
+          {
+            "match_id": "espn:401878775",
+            "reason": "pre-match ratings required"
+          },
+          {
+            "match_id": "espn:401878776",
+            "reason": "pre-match ratings required"
+          },
+          {
+            "match_id": "espn:401879265",
+            "reason": "pre-match ratings required"
+          },
+          {
+            "match_id": "espn:401878773",
+            "reason": "pre-match ratings required"
+          },
+          {
+            "match_id": "espn:401879264",
+            "reason": "pre-match ratings required"
+          },
+          {
+            "match_id": "espn:401879267",
+            "reason": "pre-match ratings required"
+          }
+        ],
+        "validation": [],
+        "test": []
+      },
+      "model": null,
+      "validation": null,
+      "test": null
+    },
+    "M3": {
+      "status": "insufficient_data",
+      "weight": 0,
+      "reason": "insufficient chronological samples with required features",
+      "counts": {
+        "train": 14,
+        "validation": 11,
+        "test": 8
+      },
+      "feature_names": [
+        "home_handicap",
+        "absolute_handicap",
+        "quarter_fraction",
+        "home_log_price",
+        "away_log_price",
+        "ah_price_share_home",
+        "ah_reciprocal_sum_minus_one",
+        "log_p_home",
+        "log_p_draw",
+        "log_p_away",
+        "handicap_x_log_home_away",
+        "book_crown",
+        "book_macau",
+        "book_hkjc",
+        "book_sbobet",
+        "fixed_line_home_handicap",
+        "certified_main_handicap_change",
+        "certified_main_movement_available",
+        "home_log_price_change",
+        "away_log_price_change",
+        "elapsed_quote_hours"
+      ],
+      "missing_features": {
+        "train": [
+          {
+            "match_id": "espn:401879268",
+            "reason": "genuine earlier quote required"
+          },
+          {
+            "match_id": "espn:401879265",
+            "reason": "genuine earlier quote required"
+          },
+          {
+            "match_id": "espn:401879262",
+            "reason": "genuine earlier quote required"
+          }
+        ],
+        "validation": [],
+        "test": []
+      },
+      "model": null,
+      "validation": null,
+      "test": null
+    }
+  },
+  "limitations": [
+    "provenance and availability declarations require independent audit",
+    "historical evaluation is not a saved prospective forecast",
+    "repeated testing of the same holdout cannot establish a fresh improvement",
+    "candidates remain zero-weight; no automatic promotion"
+  ],
+  "selection_metric": "validation_positive_return_direction_hit_rate",
+  "selection_policy": {
+    "version": "positive-return-hit-v1",
+    "tie_rule": "log_loss_then_grid_order",
+    "log_loss_guardrail": 0.01,
+    "brier_guardrail": 0.02,
+    "settlement_rps_guardrail": 0.005,
+    "guardrail_unit": "absolute_score_difference; exploratory_predeclared_tolerances",
+    "guardrail_reference": "lowest_validation_log_loss_in_the_same_regularization_grid",
+    "training_objective": "regularized_settlement_log_loss",
+    "pushes_in_denominator": true,
+    "split_unit": "UTC_Monday_week",
+    "snapshot_policy": "earliest_eligible_per_fixture",
+    "ah_price_share_is_not_win_probability": true
+  },
+  "regularization_grid": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "common_test_comparisons": {},
+  "evaluated_at": "2026-11-01T01:02:48.691392Z",
+  "research_month": "2026-11",
+  "prospective_evidence": false,
+  "automatic_promotion": false,
+  "note": "Rolling retrospective model development, not proof of a prospective advantage"
+}
