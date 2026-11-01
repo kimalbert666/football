@@ -1,16 +1,8 @@
 {
-  "type": "critical_incident",
+  "type": "monthly_report",
   "month": "2026-10",
-  "created_at": "2026-10-02T23:51:39.371872Z",
-  "incidents": [
-    {
-      "code": "ah_source_unavailable",
-      "source": "crown-asian-handicap",
-      "detail": "Crown AH source unavailable (ValueError: provider feed health unavailable or stale)",
-      "key": "9dc1747c93d5868d2b0d8753",
-      "episode": 1,
-      "first_seen_at": "2026-10-02T23:51:39.371872Z"
-    }
-  ],
-  "token": "0435b5f9d0100179dc745731900901cfc0e2310572a2394c62d0b3fc9fd98fb4"
+  "report_sha256": "12b6e3744066c036d93bfe14d35c2a524e78a4117cb7a246520f13e12fb050d7",
+  "created_at": "2026-11-01T02:32:53.665957Z",
+  "incidents": [],
+  "token": "65eb992a3439300ff14eda41e765d84d76971595be9a2f58c41acddf245dd447"
 }
