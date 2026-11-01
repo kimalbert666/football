@@ -1,10 +1,10 @@
-name: F4 Browser Opening Source Probe
+name: F4 Browser Opening Batch Acceptance
 
 on:
   workflow_dispatch:
     inputs:
       command:
-        description: One-shot read-only browser connectivity diagnostic
+        description: Bounded read-only cross-fixture acceptance
         required: false
         default: probe
         type: string
@@ -15,20 +15,22 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 14
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - name: Offline identity and archive checks
+        run: python3 -m unittest discover -s .github/scripts -p 'test_titan_*.py'
       - name: Install ordinary Chromium runtime
         timeout-minutes: 4
         run: |
           python3 -m pip install --disable-pip-version-check playwright==1.55.0
           python3 -m playwright install --with-deps chromium
-      - name: Read two fixed public pages once
-        timeout-minutes: 3
-        run: python3 .github/scripts/titan_browser_probe.py --output titan-browser-probe.json
-      - name: Preserve limited diagnostic evidence
+      - name: Read explicit public fixture pages
+        timeout-minutes: 9
+        run: python3 .github/scripts/titan_batch_reader.py --targets .github/scripts/batch-targets.json --output titan-browser-probe.json
+      - name: Preserve structured historical evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
