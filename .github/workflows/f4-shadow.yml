@@ -14,12 +14,15 @@ permissions:
 
 jobs:
   probe:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 14
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
       - name: Offline identity and archive checks
         run: python3 -m unittest discover -s .github/scripts -p 'test_titan_*.py'
       - name: Install ordinary Chromium runtime
