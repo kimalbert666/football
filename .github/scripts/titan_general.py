@@ -291,6 +291,10 @@ def parse_opening_summary(html, event_id, expected_home, expected_away, expected
                 links.append((company, href, _url_issues(href, event_id, company)))
         if not links:
             continue
+        # Several visible cells may link to the identical history page. This
+        # is one destination, unlike two company/event/market destinations.
+        links = list({(company, href): (company, href, errors)
+                      for company, href, errors in links}.values())
         targets = {item[0] for item in links}
         duplicate = targets & seen
         seen.update(targets)

@@ -127,8 +127,12 @@ class SummaryIdentityTests(unittest.TestCase):
             self.assertNotIn("3", result["companies"])
             self.assertIn("company_3_duplicate_rows", result["issues"])
 
-    def test_multiple_detail_links_in_one_row_rejected(self):
+    def test_repeated_identical_history_link_is_one_destination(self):
         html = row().replace("</a>", '</a><a href="' + escape(url(), quote=True) + '">再详</a>')
+        self.assertTrue(parse(document(html))["parse_ok"])
+
+    def test_conflicting_detail_links_in_one_row_rejected(self):
+        html = row().replace("</a>", '</a><a href="' + escape(url().replace('l=0','l=1'), quote=True) + '">再详</a>')
         self.assertFalse(parse(document(html))["parse_ok"])
 
     def test_hidden_duplicate_is_not_selected(self):
