@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-11-01T02:32:53.665957Z",
-  "command": "daily",
+  "checked_at": "2026-11-01T02:55:11.297428Z",
+  "command": "monthly",
   "mode": "shadow",
   "new_predictions": 0,
   "new_valid_predictions": 0,
@@ -10,7 +10,7 @@
   "skipped": [],
   "legacy_deferred": null,
   "enrichment": {
-    "checked_at": "2026-11-01T02:32:53.663872Z",
+    "checked_at": "2026-11-01T02:55:11.296251Z",
     "status": "checked",
     "sources": {
       "strength": {
@@ -171,7 +171,7 @@
         "opening_certified": false
       }
     },
-    "completed_at": "2026-11-01T02:32:53.665668Z"
+    "completed_at": "2026-11-01T02:55:11.297250Z"
   },
   "source_health": {
     "coverage": {
@@ -191,63 +191,63 @@
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261031",
-        "captured_at": "2026-11-01T02:32:50.340314Z",
+        "captured_at": "2026-11-01T02:55:08.117028Z",
         "content_sha256": "04c322116e9377157e73d1a638792ddcde1396c6a1152ecfb334bf19f0fa6fb0"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261101",
-        "captured_at": "2026-11-01T02:32:50.430721Z",
+        "captured_at": "2026-11-01T02:55:08.197666Z",
         "content_sha256": "f9024ed89bd1bbd7f91ed0a3938fffd177a6d65510f835a6a0709025cf62c387"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261102",
-        "captured_at": "2026-11-01T02:32:50.530303Z",
+        "captured_at": "2026-11-01T02:55:08.325981Z",
         "content_sha256": "7de4332256bc3557d21275bcb4f01b9ccd9ec98d61c7555b30db0ab9814b0317"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261103",
-        "captured_at": "2026-11-01T02:32:50.607329Z",
+        "captured_at": "2026-11-01T02:55:08.436484Z",
         "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261104",
-        "captured_at": "2026-11-01T02:32:50.652274Z",
+        "captured_at": "2026-11-01T02:55:08.539790Z",
         "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261105",
-        "captured_at": "2026-11-01T02:32:50.741942Z",
+        "captured_at": "2026-11-01T02:55:08.637730Z",
         "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261106",
-        "captured_at": "2026-11-01T02:32:50.786213Z",
+        "captured_at": "2026-11-01T02:55:08.849531Z",
         "content_sha256": "6633d8712fdda942f819a9afa0f31780e49a93768fd4b6963578119afe38bf70"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261107",
-        "captured_at": "2026-11-01T02:32:50.943345Z",
+        "captured_at": "2026-11-01T02:55:08.942996Z",
         "content_sha256": "de679b6c14a99a00d1466a4dfa6312696834f01f36c492945f9a49bd10ca251d"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261108",
-        "captured_at": "2026-11-01T02:32:51.037140Z",
+        "captured_at": "2026-11-01T02:55:09.067996Z",
         "content_sha256": "edcf9569f8ce91d9f2e9a8d3f07b52e36e3cc0f27d74e4f840fecc6a1c94508c"
       }
     ]
