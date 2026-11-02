@@ -1,33 +1,13 @@
 {
-  "started_at": "2026-11-02T15:38:27.367078Z",
-  "run_id": "41473530513",
-  "captures": [
-    {
-      "requested_at": "2026-11-02T17:00:00.012376Z",
-      "target_at": "2026-11-02T17:00:00Z",
-      "delay_seconds": 0.012376,
-      "completed_at": "2026-11-02T17:00:15.906556Z"
-    },
-    {
-      "requested_at": "2026-11-02T19:00:00.012671Z",
-      "target_at": "2026-11-02T19:00:00Z",
-      "delay_seconds": 0.012671,
-      "completed_at": "2026-11-02T19:00:14.320603Z"
-    },
-    {
-      "requested_at": "2026-11-02T19:45:00.012544Z",
-      "target_at": "2026-11-02T19:45:00Z",
-      "delay_seconds": 0.012544,
-      "completed_at": "2026-11-02T19:45:07.051948Z"
-    }
-  ],
+  "started_at": "2026-11-02T23:27:11.755458Z",
+  "run_id": "41545510169",
+  "captures": [],
   "mode": "bounded_match_window_worker",
   "timing_guaranteed": false,
   "max_minutes": 300,
   "arm_minutes": 300,
-  "previous_worker_started_at": "2026-11-02T05:53:07.141178Z",
+  "previous_worker_started_at": "2026-11-02T15:38:27.367078Z",
   "continuation_requested": false,
-  "state": "complete_or_no_nearby_window",
-  "checked_at": "2026-11-02T19:46:09.617865Z",
-  "next_window_at": "2026-11-02T19:45:00Z"
+  "state": "planning",
+  "checked_at": "2026-11-02T23:27:12.228033Z"
 }
