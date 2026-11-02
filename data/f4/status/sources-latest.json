@@ -1,47 +1,19 @@
 {
-  "captured_at": "2026-11-02T19:00:13.364998Z",
+  "captured_at": "2026-11-02T19:30:16.903534Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261102",
-      "captured_at": "2026-11-02T19:00:00.290733Z",
-      "content_sha256": "fca1e5bbf14a567ff439d47e346d0545212103fe3b2243ab86d1c0c8228a2701"
+      "captured_at": "2026-11-02T19:30:16.799251Z",
+      "content_sha256": "1245045cb055ef894247a7522a382290dde4c18a34d8195c96458e25ddb00285"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261103",
-      "captured_at": "2026-11-02T19:00:00.468483Z",
+      "captured_at": "2026-11-02T19:30:16.903459Z",
       "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2.titan007.com/Company.js",
-      "status": "ok",
-      "captured_at": "2026-11-02T19:00:07.793806Z",
-      "content_sha256": "8ffeb7953dcf04220e3728ab3ec6f98d3ef3287d9cce9b54076b6e01962f1ed2"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2.titan007.com/index_vip.aspx",
-      "status": "ok",
-      "captured_at": "2026-11-02T19:00:09.408144Z",
-      "content_sha256": "f828bdffe88443fde2f51dbb0f9d2f4185e19448ba9e043b8d7e8ea8bb5542b6"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2.titan007.com/TomorrowOdds.aspx",
-      "status": "ok",
-      "captured_at": "2026-11-02T19:00:11.883863Z",
-      "content_sha256": "205c33d4c2737b34307a31e1a34a174777dda7d8a1adf41bb3321c3aa3cc7cc6"
-    },
-    {
-      "name": "titan007-crown",
-      "url": "https://1x2d.titan007.com/3003937.js",
-      "status": "ok",
-      "captured_at": "2026-11-02T19:00:13.205775Z",
-      "content_sha256": "1735a39c31c40b10c7d2f62ff9b81c87c10e279b32a68b64f5ec31887c6bbd1d"
     }
   ],
   "fixtures": [
@@ -57,26 +29,7 @@
       "kickoff_at": "2026-11-02T20:00:00Z",
       "status": "scheduled",
       "score": null,
-      "market": {
-        "bookmaker": "crown",
-        "company_id": 545,
-        "market": "90min_1x2",
-        "odds": [
-          2.16,
-          3.6,
-          3.35
-        ],
-        "captured_at": "2026-11-02T19:00:13.205775Z",
-        "published_at": "2026-11-02T18:56:00Z",
-        "source": "titan007-crown",
-        "url": "https://1x2d.titan007.com/3003937.js",
-        "provider_event_id": "3003937",
-        "provider_quote_id": "159809428",
-        "content_sha256": "1735a39c31c40b10c7d2f62ff9b81c87c10e279b32a68b64f5ec31887c6bbd1d",
-        "provider_kickoff_at": "2026-11-02T20:00:00Z",
-        "market_status": "not_exposed",
-        "provenance": "Titan007 public display attributed to Crown; not direct bookmaker API"
-      },
+      "market": null,
       "problems": []
     }
   ],
