@@ -1,9 +1,9 @@
 {
-  "evaluated_at": "2026-11-02T16:38:34.109464Z",
-  "new_valid": 0,
-  "new_attempts": 0,
-  "valid_observations": 107,
-  "distinct_matches": 37,
+  "evaluated_at": "2026-11-02T17:00:03.736393Z",
+  "new_valid": 1,
+  "new_attempts": 1,
+  "valid_observations": 108,
+  "distinct_matches": 38,
   "paired_matches": 37,
   "pairing_issues": {},
   "line_groups": {
@@ -4926,30 +4926,36 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-11-02T02:43:58.140816Z",
+      "captured_at": "2026-11-02T17:00:01.100539Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-11-02T02:43:58.779258Z",
-      "content_sha256": "ce6666331c6aaad52af18db157ca4cd694560f9a522125efd528eabcf0eacebf"
+      "captured_at": "2026-11-02T17:00:01.726590Z",
+      "content_sha256": "65015ebecc95818d4402eb5722f97977062cb1018a960e7ff9a620a45e07f8e8"
     },
     {
-      "name": "infersports-crown-ah-quotes",
-      "status": "not_requested",
-      "reason": "no confirmed EPL fixture in capture window"
-    },
-    {
-      "name": "hkjc-direct-ah",
-      "url": "https://info.cld.hkjc.com/graphql/base/",
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events?sport=football&league=lg_T9268DXK&status=scheduled&date=2026-11-02&limit=100",
       "status": "ok",
-      "captured_at": "2026-11-02T02:43:59.273900Z",
-      "response_at": "2026-11-02T02:43:59Z",
-      "content_sha256": "871c50d80306ed2e95e5721100b092afde1b249a01078b03167087fa59cee15d",
-      "match_count": 48,
-      "epl_match_count": 1
+      "captured_at": "2026-11-02T17:00:02.369097Z",
+      "content_sha256": "17155ed2377bf7c742e5af4c5f637afa86883ee7b84578974694169ff445897b"
+    },
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events/evt_G5JNFQY6/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "status": "ok",
+      "captured_at": "2026-11-02T17:00:03.085961Z",
+      "content_sha256": "df701956baf1c60220b71075a8c17e092eee2ca1ea98a2790ff99062ba7052e0"
+    },
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events/evt_G5JNFQY6/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "status": "ok",
+      "captured_at": "2026-11-02T17:00:03.702438Z",
+      "content_sha256": "6f30ac7b3d54ecdeb5711f03ef6f1d8050d760eafea8be6c6e015ac8d6447df9"
     }
   ],
   "provider_faults": {
@@ -4959,18 +4965,19 @@
   "primary_provider_health": {
     "status": "ok",
     "feed_live": true,
-    "as_of": "2026-11-02T02:43:50Z",
+    "as_of": "2026-11-02T16:59:53Z",
     "as_of_stale": false,
-    "checked_at": "2026-11-02T02:43:58.779258Z"
+    "checked_at": "2026-11-02T17:00:01.726590Z"
   },
   "fallback_matches": [],
-  "quote_availability": "not_tested_no_due_matches",
+  "quote_availability": "complete",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
     "fixtures": 1,
     "windows": {
       "T-180m": {
-        "awaiting_window": 1
+        "recorded_research_only": 1,
+        "complete_joint_market": 1
       },
       "T-60m": {
         "awaiting_window": 1
