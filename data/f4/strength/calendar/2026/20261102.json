@@ -1,20 +1,29 @@
 {
   "day": "20261102",
   "events_seen": 1,
-  "pending_results": [
+  "pending_results": [],
+  "record_sha256": "69ad52442aadbb0099dcf7e602bccbb1020e2a2bdf047e00049ff5fa0d90c0ea",
+  "results": [
     {
+      "away": "Everton",
+      "away_id": "everton",
+      "away_provider_id": "368",
+      "home": "Newcastle United",
+      "home_id": "newcastle",
+      "home_provider_id": "361",
       "kickoff_at": "2026-11-02T20:00:00Z",
       "match_id": "espn:401878762",
-      "status": "scheduled"
+      "score": [
+        0,
+        1
+      ]
     }
   ],
-  "record_sha256": "b64367ecd4461de68ab522e2b23d29e0fda67277dc450a2c5dd4de555cc85df0",
-  "results": [],
   "schema": "f4-strength-observed-v1",
   "season_year": 2026,
   "source": {
-    "captured_at": "2026-11-02T02:43:59.691335Z",
-    "content_sha256": "05d425d9cdd40aa615e217de1de6c4db32c6c8663c777437ab7fc65eef1ec873",
+    "captured_at": "2026-11-02T23:27:18.529278Z",
+    "content_sha256": "1cd0fd2a92e6bed2e6a149e123ca6b136ed37e20d78a3a4544c404d32e413cc4",
     "name": "espn",
     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261102&limit=1000"
   }

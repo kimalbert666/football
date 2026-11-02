@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-02T02:43:59.293010Z",
+  "checked_at": "2026-11-02T23:27:18.126781Z",
   "status": "checked",
   "sources": {
     "strength": {
@@ -48,36 +48,33 @@
       },
       "metadata_source": {
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261102",
-        "captured_at": "2026-11-02T02:43:59.398926Z",
-        "content_sha256": "05d425d9cdd40aa615e217de1de6c4db32c6c8663c777437ab7fc65eef1ec873"
+        "captured_at": "2026-11-02T23:27:18.207834Z",
+        "content_sha256": "1cd0fd2a92e6bed2e6a149e123ca6b136ed37e20d78a3a4544c404d32e413cc4"
       },
-      "observed_at": "2026-11-02T02:43:59.692272Z",
+      "observed_at": "2026-11-02T23:27:18.541501Z",
       "requested_dates": 29,
       "verified_dates": 29,
       "missing_dates": [],
-      "snapshot_path": "data/f4/strength/snapshots/aa3a7debcd981833bbbb1c8b41cc192947f0ace0614061380140dc437d508107.json",
-      "snapshot_sha256": "aa3a7debcd981833bbbb1c8b41cc192947f0ace0614061380140dc437d508107",
-      "result_count": 89,
+      "snapshot_path": "data/f4/strength/snapshots/59c80b8a60c1990f455f3e32a8310f5e0609a5876b0f1a4941c8d660536b6922.json",
+      "snapshot_sha256": "59c80b8a60c1990f455f3e32a8310f5e0609a5876b0f1a4941c8d660536b6922",
+      "result_count": 90,
       "teams": 20,
       "teams_with_five_games": 20,
       "requested_fixtures": 12,
       "rated_requested_fixtures": 12
     },
     "context": {
-      "schema": "f4-prematch-context-observed-v1",
-      "status": "ready",
+      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3",
       "observed_at": "2026-11-02T02:44:10.965503Z",
-      "season_year": 2026,
-      "snapshot_sha256": "b04e1843811d37a2780e6f1b396e8f95b1e6ec0d443ef2bedb92e9d7bf4ceec4",
-      "snapshot_path": "data/f4/context/snapshots/b04e1843811d37a2780e6f1b396e8f95b1e6ec0d443ef2bedb92e9d7bf4ceec4.json",
-      "teams_xg": 0,
-      "teams_availability": 20,
-      "teams_club_schedule": 20,
+      "problems": [
+        "Understat lagged xG missing or unverified: HTTPSConnectionPool(host='understat.com', port=443): Max retries exceeded with url: /getLeagueData/EPL/2026 (Caused by N"
+      ],
       "requested_clubs": 20,
-      "unresolved_clubs": [],
+      "schema": "f4-prematch-context-observed-v1",
+      "season_year": 2026,
+      "snapshot_path": "data/f4/context/snapshots/b04e1843811d37a2780e6f1b396e8f95b1e6ec0d443ef2bedb92e9d7bf4ceec4.json",
+      "snapshot_sha256": "b04e1843811d37a2780e6f1b396e8f95b1e6ec0d443ef2bedb92e9d7bf4ceec4",
       "source_statuses": {
-        "fpl": "available",
-        "understat": "unavailable",
         "espn-rest:arsenal": "available",
         "espn-rest:aston-villa": "available",
         "espn-rest:bournemouth": "available",
@@ -97,15 +94,19 @@
         "espn-rest:newcastle": "available",
         "espn-rest:nottingham-forest": "available",
         "espn-rest:sunderland": "available",
-        "espn-rest:tottenham": "available"
+        "espn-rest:tottenham": "available",
+        "fpl": "available",
+        "understat": "unavailable"
       },
-      "problems": [
-        "Understat lagged xG missing or unverified: HTTPSConnectionPool(host='understat.com', port=443): Max retries exceeded with url: /getLeagueData/EPL/2026 (Caused by N"
-      ],
-      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3"
+      "status": "ready",
+      "teams_availability": 20,
+      "teams_club_schedule": 20,
+      "teams_xg": 0,
+      "unresolved_clubs": [],
+      "refresh": "cached_same_utc_day"
     },
     "first_observed_quotes": {
-      "status": "partial",
+      "status": "cached",
       "checked_at": "2026-11-02T02:44:11.083959Z",
       "due_fixtures": 10,
       "new_records": 0,
@@ -170,5 +171,5 @@
       "opening_certified": false
     }
   },
-  "completed_at": "2026-11-02T02:44:11.084277Z"
+  "completed_at": "2026-11-02T23:27:18.543664Z"
 }
