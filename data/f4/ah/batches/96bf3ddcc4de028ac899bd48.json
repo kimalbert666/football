@@ -1,13 +1,13 @@
 {
   "kickoff_at": "2026-11-02T20:00:00Z",
-  "updated_at": "2026-11-02T19:30:16.920001Z",
+  "updated_at": "2026-11-02T19:45:03.431222Z",
   "fixtures": [
     {
       "match_id": "espn:401878762",
       "home": "Newcastle United",
       "away": "Everton",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "93d8105e52eba723a32cebe626b21f5667be487dca8d6c8f922ecf662459b6f8",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -26,12 +26,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-11-02T19:45:00Z",
           "closes_at": "2026-11-02T19:50:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "93d8105e52eba723a32cebe626b21f5667be487dca8d6c8f922ecf662459b6f8",
+          "same_bookmaker_1x2_available": true
         }
       }
     }
