@@ -1,10 +1,24 @@
 import json
 from pathlib import Path
 import unittest
-from titan_batch_reader import same_destination, validate_targets, prepare_archive, PROJECTION
+from titan_batch_reader import same_destination, validate_targets, prepare_archive, PROJECTION, archive_acceptance
 
 
 class BatchContractTests(unittest.TestCase):
+    def test_boundary_exclusion_retains_valid_history_but_other_errors_fail(self):
+        a = {'fixture_identity_verified': True, 'provider_opening_reconciled': True,
+             'prematch_quote_count': 2, 'projection_truncated': False, 'pagination_controls': [],
+             'parse_ok': False, 'fixture_kickoff_display': '2026-10-17 22:00',
+             'rows': [{'issues': ['prematch_not_before_kickoff'], 'prematch_quote': False,
+                       'displayed_datetime': '2026-10-17 22:00'}]}
+        self.assertTrue(archive_acceptance(a)['accepted_for_research_archive'])
+        self.assertEqual(archive_acceptance(a)['excluded_boundary_row_count'], 1)
+        for change in ({'provider_opening_reconciled': False}, {'projection_truncated': True},
+                       {'pagination_controls': ['下一页']}, {'prematch_quote_count': 0},
+                       {'rows': [{'issues': ['unparseable_quote']}]},
+                       {'rows': [{'issues': ['prematch_not_before_kickoff', 'prematch_status_has_clock_or_score']}]}):
+            self.assertFalse(archive_acceptance({**a, **change})['accepted_for_research_archive'])
+
     def test_redirect_rejects_wrong_event_company_market(self):
         url = 'https://vip.titan007.com/changeDetail/handicap.aspx?id=42&companyID=3&l=0'
         self.assertTrue(same_destination(url, url))

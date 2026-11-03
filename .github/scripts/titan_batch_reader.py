@@ -24,6 +24,29 @@ PROJECTION = (DOM_PROJECTION.replace('(scope) => {', '({scope, home, away}) => {
               .replace("c.tagName === 'TD').map(cell", "(c.tagName === 'TD' || c.tagName === 'TH')).map(cell"))
 
 
+RECONCILED_STATUSES = {'displayed_history_reconciled', 'displayed_history_reconciled_with_exclusions'}
+
+
+def archive_acceptance(archive):
+    """Keep late '即' rows as excluded evidence, without rejecting earlier rows.
+
+    Any other parse issue, truncation or unresolved pagination fails acceptance.
+    This accepts a research archive, not a complete bookmaker history.
+    """
+    excluded = [r for r in archive['rows'] if r['issues']]
+    boundary_only = all(r['issues'] == ['prematch_not_before_kickoff']
+                        and not r['prematch_quote'] and r['displayed_datetime']
+                        and r['displayed_datetime'] >= archive['fixture_kickoff_display']
+                        for r in excluded)
+    accepted = bool(archive['fixture_identity_verified'] and archive['provider_opening_reconciled']
+                    and archive['prematch_quote_count'] > 0 and not archive['projection_truncated']
+                    and not archive['pagination_controls']
+                    and (archive['parse_ok'] or (excluded and boundary_only)))
+    return {'accepted_for_research_archive': accepted,
+            'excluded_boundary_row_count': sum(r['issues'] == ['prematch_not_before_kickoff'] for r in excluded),
+            'all_displayed_rows_clean': archive['parse_ok']}
+
+
 def stamp():
     return datetime.now(timezone.utc).isoformat()
 
@@ -126,6 +149,7 @@ def prepare_archive(projection, fixture, company, meta):
                    excluded_live_rows=len(projection['rows']) - len(kept),
                    source_fixture_identity=fixture,
                    independent_fixture_mapping_verified=False)
+    archive.update(archive_acceptance(archive))
     return archive
 
 
@@ -163,9 +187,10 @@ async def collect(context, targets, output):
                 if projection is not None:
                     entry['histories'][company['company_id']] = prepare_archive(projection, fixture, company, meta)
             wanted = set(fixture.get('company_ids', ['3']))
-            good = {k for k, a in entry['histories'].items() if a['parse_ok']
-                    and a['fixture_identity_verified'] and a['provider_opening_reconciled']}
+            good = {k for k, a in entry['histories'].items() if a['accepted_for_research_archive']}
             entry['status'] = 'displayed_history_reconciled' if wanted == good else 'history_incomplete_or_failed'
+            if wanted == good and any(a['excluded_boundary_row_count'] for a in entry['histories'].values()):
+                entry['status'] = 'displayed_history_reconciled_with_exclusions'
         except Exception as exc:
             entry.update(status='read_or_parse_error', error_type=type(exc).__name__)
 
@@ -201,7 +226,7 @@ def main():
         if target['provider_event_id'] not in done:
             output['fixtures'].append({'fixture': target, 'status': 'not_attempted_budget_or_runtime_error'})
     output['finished_at_utc'] = stamp()
-    output['reconciled_fixture_count'] = sum(f['status'] == 'displayed_history_reconciled' for f in output['fixtures'])
+    output['reconciled_fixture_count'] = sum(f['status'] in RECONCILED_STATUSES for f in output['fixtures'])
     output['data_acceptance_pass'] = output['reconciled_fixture_count'] == len(targets)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(output, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
