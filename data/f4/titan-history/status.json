@@ -1,0 +1,392 @@
+{
+  "schema": "f4-titan-history-daily-v1",
+  "started_at_utc": "2026-11-03T03:26:06.809806+00:00",
+  "scope": "archived independent EPL fixtures within past/future seven days",
+  "fixture_source": "existing ESPN fixture archive",
+  "sources": [
+    {
+      "url": "https://bf.titan007.com/football/Next_20261031.htm",
+      "checked_at_utc": "2026-11-03T03:26:06.813489+00:00",
+      "status": "read_or_parse_error",
+      "http_status": 200,
+      "error_type": "ValueError"
+    },
+    {
+      "url": "https://bf.titan007.com/football/Next_20261101.htm",
+      "checked_at_utc": "2026-11-03T03:26:08.899293+00:00",
+      "status": "read_or_parse_error",
+      "http_status": 200,
+      "error_type": "ValueError"
+    },
+    {
+      "url": "https://bf.titan007.com/football/Next_20261102.htm",
+      "checked_at_utc": "2026-11-03T03:26:10.637994+00:00",
+      "status": "read_or_parse_error",
+      "http_status": 200,
+      "error_type": "ValueError"
+    },
+    {
+      "url": "https://bf.titan007.com/football/Next_20261103.htm",
+      "checked_at_utc": "2026-11-03T03:26:11.826877+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-03T03:26:13.042808+00:00",
+      "candidate_count": 0,
+      "content_sha256": "fbcae426234511d9c28cbab86fee126cbf5294c0cbb77e66684eedb5c8fa1ff1"
+    },
+    {
+      "url": "https://bf.titan007.com/football/Next_20261107.htm",
+      "checked_at_utc": "2026-11-03T03:26:13.042993+00:00",
+      "status": "read_or_parse_error",
+      "http_status": 200,
+      "error_type": "ValueError"
+    },
+    {
+      "url": "https://bf.titan007.com/football/Next_20261108.htm",
+      "checked_at_utc": "2026-11-03T03:26:14.885581+00:00",
+      "status": "read_or_parse_error",
+      "http_status": 200,
+      "error_type": "ValueError"
+    },
+    {
+      "url": "https://bf.titan007.com/football/Next_20261109.htm",
+      "checked_at_utc": "2026-11-03T03:26:16.559252+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-03T03:26:17.425524+00:00",
+      "candidate_count": 0,
+      "content_sha256": "4b417184c5c78929202fedee5d78a8cd081f10a505b49c1d067694677f1aa792"
+    }
+  ],
+  "mapping": {
+    "schema_version": "titan-fixture-candidate-map-v1",
+    "league_contract": {
+      "canonical_league": "england-premier",
+      "titan_league_id": "36"
+    },
+    "mapping_verified": false,
+    "formal_observation": false,
+    "training_eligible": false,
+    "counts": {
+      "expected": 20,
+      "unique_expected_match_ids": 20,
+      "mapped": 0,
+      "missing": 20,
+      "ambiguous": 0,
+      "candidate_rows": 0,
+      "unused_candidate_rows": 0
+    },
+    "coverage": [
+      {
+        "fixture_input_index": 0,
+        "match_id": "espn:401878763",
+        "home_id": "hull-city",
+        "away_id": "ipswich",
+        "kickoff_at": "2026-10-31T15:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 1,
+        "match_id": "espn:401879246",
+        "home_id": "liverpool",
+        "away_id": "arsenal",
+        "kickoff_at": "2026-11-01T16:30:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 2,
+        "match_id": "espn:401879244",
+        "home_id": "brighton",
+        "away_id": "brentford",
+        "kickoff_at": "2026-11-08T14:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 3,
+        "match_id": "espn:401879245",
+        "home_id": "man-city",
+        "away_id": "brighton",
+        "kickoff_at": "2026-10-31T15:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 4,
+        "match_id": "espn:401879243",
+        "home_id": "crystal-palace",
+        "away_id": "liverpool",
+        "kickoff_at": "2026-11-08T14:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 5,
+        "match_id": "espn:401878760",
+        "home_id": "arsenal",
+        "away_id": "hull-city",
+        "kickoff_at": "2026-11-07T15:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 6,
+        "match_id": "espn:401878761",
+        "home_id": "tottenham",
+        "away_id": "crystal-palace",
+        "kickoff_at": "2026-10-31T17:30:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 7,
+        "match_id": "espn:401878759",
+        "home_id": "ipswich",
+        "away_id": "bournemouth",
+        "kickoff_at": "2026-11-08T14:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 8,
+        "match_id": "espn:401879251",
+        "home_id": "bournemouth",
+        "away_id": "leeds",
+        "kickoff_at": "2026-10-31T15:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 9,
+        "match_id": "espn:401879247",
+        "home_id": "coventry",
+        "away_id": "sunderland",
+        "kickoff_at": "2026-10-31T15:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 10,
+        "match_id": "espn:401879250",
+        "home_id": "aston-villa",
+        "away_id": "fulham",
+        "kickoff_at": "2026-10-31T20:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 11,
+        "match_id": "espn:401879249",
+        "home_id": "brentford",
+        "away_id": "nottingham-forest",
+        "kickoff_at": "2026-10-31T15:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 12,
+        "match_id": "espn:401879242",
+        "home_id": "everton",
+        "away_id": "coventry",
+        "kickoff_at": "2026-11-06T20:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 13,
+        "match_id": "espn:401879248",
+        "home_id": "chelsea",
+        "away_id": "man-united",
+        "kickoff_at": "2026-10-31T12:30:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 14,
+        "match_id": "espn:401878757",
+        "home_id": "nottingham-forest",
+        "away_id": "man-city",
+        "kickoff_at": "2026-11-07T17:30:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 15,
+        "match_id": "espn:401879241",
+        "home_id": "fulham",
+        "away_id": "newcastle",
+        "kickoff_at": "2026-11-07T15:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 16,
+        "match_id": "espn:401878758",
+        "home_id": "leeds",
+        "away_id": "tottenham",
+        "kickoff_at": "2026-11-07T12:30:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 17,
+        "match_id": "espn:401878762",
+        "home_id": "newcastle",
+        "away_id": "everton",
+        "kickoff_at": "2026-11-02T20:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 18,
+        "match_id": "espn:401879239",
+        "home_id": "sunderland",
+        "away_id": "chelsea",
+        "kickoff_at": "2026-11-08T14:00:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      },
+      {
+        "fixture_input_index": 19,
+        "match_id": "espn:401879240",
+        "home_id": "man-united",
+        "away_id": "aston-villa",
+        "kickoff_at": "2026-11-08T16:30:00Z",
+        "state": "missing",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": null,
+        "candidate_input_indices": [],
+        "reasons": [
+          "no_matching_titan_candidate"
+        ]
+      }
+    ],
+    "candidate_diagnostics": []
+  },
+  "formal_observation": false,
+  "training_eligible": false,
+  "bookmaker_first_opening_certified": false,
+  "targets": [],
+  "results": [],
+  "finished_at_utc": "2026-11-03T03:26:17.426539+00:00",
+  "planned": 0,
+  "reconciled": 0,
+  "deferred_by_daily_budget": 0
+}
