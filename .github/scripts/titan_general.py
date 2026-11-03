@@ -303,6 +303,8 @@ def parse_opening_summary(html, event_id, expected_home, expected_away, expected
             issues.append(f"company_{company}_duplicate_rows")
         if len(links) != 1:
             issues.append("ambiguous_detail_links:" + ",".join(sorted(targets)))
+            result.setdefault("ambiguous_link_diagnostics", []).append(
+                [{"company_id": c, "href": h, "issues": e} for c, h, e in links[:20]])
             continue
         company, href, link_issues = links[0]
         if link_issues:
