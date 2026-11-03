@@ -1,0 +1,42 @@
+name: F4 Titan Opening History
+on:
+  schedule:
+    - cron: '27 0 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: f4-titan-opening-history
+  cancel-in-progress: false
+jobs:
+  archive:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        timeout-minutes: 5
+        run: |
+          python -m pip install -r engine/requirements.txt playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Verify identity and archive contracts
+        run: python -m unittest discover -s engine/titan_history -p 'test_titan_*.py'
+      - name: Read and archive source-reported history
+        run: python engine/titan_history/titan_daily.py --root .
+      - name: Save research records
+        if: always()
+        run: python engine/scripts/f4_watch.py --save-only
+      - name: Preserve records if repository saving fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: f4-titan-history-${{ github.run_id }}
+          path: data/f4/titan-history/
+          if-no-files-found: warn
+          retention-days: 14
