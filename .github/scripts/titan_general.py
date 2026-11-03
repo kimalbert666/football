@@ -283,8 +283,13 @@ def parse_opening_summary(html, event_id, expected_home, expected_away, expected
                 continue
             href = urljoin(f"https://{HOST}/AsianOdds_n.aspx?id={event_id}", anchor.attrs.get("href", ""))
             try:
-                _, query = _query(href)
+                parsed, query = _query(href)
             except ValueError:
+                continue
+            # The real summary also links to team/same-line searches using
+            # companyID. Only the AH movement-detail destination identifies
+            # this row's history. Validate its origin and full query below.
+            if parsed.path.lower() != DETAIL_PATH:
                 continue
             targets = set(query.get("companyid", [])) & set(companies)
             for company in sorted(targets):

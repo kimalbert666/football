@@ -131,6 +131,16 @@ class SummaryIdentityTests(unittest.TestCase):
         html = row().replace("</a>", '</a><a href="' + escape(url(), quote=True) + '">再详</a>')
         self.assertTrue(parse(document(html))["parse_ok"])
 
+    def test_real_summary_search_links_are_not_movement_histories(self):
+        extras = (f'https://vip.titan007.com/history/SearchAsianByTeamID.aspx?id={EVENT}&companyid=3&l=0&teamid=57',
+                  f'https://vip.titan007.com/history/SearchAsianByTeamID.aspx?id={EVENT}&companyid=3&l=0&teamid=28',
+                  f'https://vip.titan007.com/history/SearchSameAsian.aspx?id={EVENT}&companyid=3&l=0&goal=-0.25')
+        links = ''.join('<a href="'+escape(href, quote=True)+'">检索</a>' for href in extras)
+        result = parse(document(row().replace('</a>', '</a>'+links)))
+        self.assertTrue(result['parse_ok'])
+        self.assertEqual(result['companies']['3']['history_url'], url())
+        self.assertFalse(parse(document(row(link=extras[0])))['parse_ok'])
+
     def test_conflicting_detail_links_in_one_row_rejected(self):
         html = row().replace("</a>", '</a><a href="' + escape(url().replace('l=0','l=1'), quote=True) + '">再详</a>')
         self.assertFalse(parse(document(html))["parse_ok"])
