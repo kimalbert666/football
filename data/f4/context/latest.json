@@ -1,14 +1,14 @@
 {
   "model_feature_status": "context_only_not_used_in_current_M1_M2_M3",
-  "observed_at": "2026-11-02T02:44:10.965503Z",
+  "observed_at": "2026-11-03T04:00:50.684884Z",
   "problems": [
-    "Understat lagged xG missing or unverified: HTTPSConnectionPool(host='understat.com', port=443): Max retries exceeded with url: /getLeagueData/EPL/2026 (Caused by N"
+    "Understat lagged xG missing or unverified: HTTPSConnectionPool(host='understat.com', port=443): Max retries exceeded with url: /getLeagueData/EPL/2026 (Caused by C"
   ],
   "requested_clubs": 20,
   "schema": "f4-prematch-context-observed-v1",
   "season_year": 2026,
-  "snapshot_path": "data/f4/context/snapshots/b04e1843811d37a2780e6f1b396e8f95b1e6ec0d443ef2bedb92e9d7bf4ceec4.json",
-  "snapshot_sha256": "b04e1843811d37a2780e6f1b396e8f95b1e6ec0d443ef2bedb92e9d7bf4ceec4",
+  "snapshot_path": "data/f4/context/snapshots/67ce09aa059ba2519eeac797df25f14a4cfdd2cfd8fee1c0ab5e085a8dee7e30.json",
+  "snapshot_sha256": "67ce09aa059ba2519eeac797df25f14a4cfdd2cfd8fee1c0ab5e085a8dee7e30",
   "source_statuses": {
     "espn-rest:arsenal": "available",
     "espn-rest:aston-villa": "available",
