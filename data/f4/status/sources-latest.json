@@ -1,28 +1,228 @@
 {
-  "captured_at": "2026-11-04T23:36:28.170253Z",
+  "captured_at": "2026-11-04T23:36:31.682261Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261103",
+      "captured_at": "2026-11-04T23:36:30.608298Z",
+      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261104",
-      "captured_at": "2026-11-04T23:36:26.938363Z",
+      "captured_at": "2026-11-04T23:36:30.751044Z",
       "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261105",
-      "captured_at": "2026-11-04T23:36:28.170152Z",
+      "captured_at": "2026-11-04T23:36:30.842957Z",
+      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261106",
+      "captured_at": "2026-11-04T23:36:30.962610Z",
+      "content_sha256": "ddfb8314935619375e8bf16e200872aef962c3c13a8accfe165c3d9bf545f5a0"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261107",
+      "captured_at": "2026-11-04T23:36:31.142489Z",
+      "content_sha256": "37ee6a93771609556f905be14a4f0ebbdcdb491ae84c349f584ed448ff34f6d3"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261108",
+      "captured_at": "2026-11-04T23:36:31.215196Z",
+      "content_sha256": "5471fdac92b1c5d42b67c2144a69763f600ce73b745a7216d3412486b8a2fa9b"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261109",
+      "captured_at": "2026-11-04T23:36:31.376267Z",
+      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261110",
+      "captured_at": "2026-11-04T23:36:31.532930Z",
+      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
+    },
+    {
+      "name": "espn-calendar",
+      "status": "ok",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261111",
+      "captured_at": "2026-11-04T23:36:31.682163Z",
       "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
     }
   ],
-  "fixtures": [],
+  "fixtures": [
+    {
+      "match_id": "espn:401879242",
+      "source_event_id": "401879242",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "everton",
+      "away_id": "coventry",
+      "home": "Everton",
+      "away": "Coventry City",
+      "kickoff_at": "2026-11-06T20:00:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401878758",
+      "source_event_id": "401878758",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "leeds",
+      "away_id": "tottenham",
+      "home": "Leeds United",
+      "away": "Tottenham Hotspur",
+      "kickoff_at": "2026-11-07T12:30:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401878760",
+      "source_event_id": "401878760",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "arsenal",
+      "away_id": "hull-city",
+      "home": "Arsenal",
+      "away": "Hull City",
+      "kickoff_at": "2026-11-07T15:00:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401879241",
+      "source_event_id": "401879241",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "fulham",
+      "away_id": "newcastle",
+      "home": "Fulham",
+      "away": "Newcastle United",
+      "kickoff_at": "2026-11-07T15:00:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401878757",
+      "source_event_id": "401878757",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "nottingham-forest",
+      "away_id": "man-city",
+      "home": "Nottingham Forest",
+      "away": "Manchester City",
+      "kickoff_at": "2026-11-07T17:30:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401878759",
+      "source_event_id": "401878759",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "ipswich",
+      "away_id": "bournemouth",
+      "home": "Ipswich Town",
+      "away": "AFC Bournemouth",
+      "kickoff_at": "2026-11-08T14:00:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401879239",
+      "source_event_id": "401879239",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "sunderland",
+      "away_id": "chelsea",
+      "home": "Sunderland",
+      "away": "Chelsea",
+      "kickoff_at": "2026-11-08T14:00:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401879243",
+      "source_event_id": "401879243",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "crystal-palace",
+      "away_id": "liverpool",
+      "home": "Crystal Palace",
+      "away": "Liverpool",
+      "kickoff_at": "2026-11-08T14:00:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401879244",
+      "source_event_id": "401879244",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "brighton",
+      "away_id": "brentford",
+      "home": "Brighton & Hove Albion",
+      "away": "Brentford",
+      "kickoff_at": "2026-11-08T14:00:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401879240",
+      "source_event_id": "401879240",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "man-united",
+      "away_id": "aston-villa",
+      "home": "Manchester United",
+      "away": "Aston Villa",
+      "kickoff_at": "2026-11-08T16:30:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    }
+  ],
   "coverage": {
     "complete": true,
     "scope": {
       "league": "england-premier",
-      "from": "2026-11-04",
-      "through": "2026-11-05",
+      "from": "2026-11-03",
+      "through": "2026-11-11",
       "provider": "espn",
       "pending_lookup_limit": 20
     },
