@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-03T04:00:28.534952Z",
+  "checked_at": "2026-11-04T01:16:38.784758Z",
   "status": "checked",
   "sources": {
     "strength": {
@@ -47,29 +47,29 @@
         ]
       },
       "metadata_source": {
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261103",
-        "captured_at": "2026-11-03T04:00:28.619794Z",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261104",
+        "captured_at": "2026-11-04T01:16:38.858968Z",
         "content_sha256": "28de657f9e31d788ecea3c3722ace7a814388ca4028c6209cf1e8477d4107629"
       },
-      "observed_at": "2026-11-03T04:00:28.786365Z",
+      "observed_at": "2026-11-04T01:16:39.091789Z",
       "requested_dates": 29,
       "verified_dates": 29,
       "missing_dates": [],
-      "snapshot_path": "data/f4/strength/snapshots/38ffcdd709103e56944f6de425b93f7a4a7cd6f356a64891583676442643c8e9.json",
-      "snapshot_sha256": "38ffcdd709103e56944f6de425b93f7a4a7cd6f356a64891583676442643c8e9",
+      "snapshot_path": "data/f4/strength/snapshots/f593c99706eaafd70dcd3b4028cd4bb5f2ef936ec3a912ed76934fac8b5e8610.json",
+      "snapshot_sha256": "f593c99706eaafd70dcd3b4028cd4bb5f2ef936ec3a912ed76934fac8b5e8610",
       "result_count": 90,
       "teams": 20,
       "teams_with_five_games": 20,
-      "requested_fixtures": 11,
-      "rated_requested_fixtures": 11
+      "requested_fixtures": 10,
+      "rated_requested_fixtures": 10
     },
     "context": {
       "schema": "f4-prematch-context-observed-v1",
       "status": "ready",
-      "observed_at": "2026-11-03T04:00:50.684884Z",
+      "observed_at": "2026-11-04T01:16:41.041151Z",
       "season_year": 2026,
-      "snapshot_sha256": "67ce09aa059ba2519eeac797df25f14a4cfdd2cfd8fee1c0ab5e085a8dee7e30",
-      "snapshot_path": "data/f4/context/snapshots/67ce09aa059ba2519eeac797df25f14a4cfdd2cfd8fee1c0ab5e085a8dee7e30.json",
+      "snapshot_sha256": "ed5663ba6813059ff88a326a81a73d9f9fc5088aed75be34791a5af1a79905d8",
+      "snapshot_path": "data/f4/context/snapshots/ed5663ba6813059ff88a326a81a73d9f9fc5088aed75be34791a5af1a79905d8.json",
       "teams_xg": 0,
       "teams_availability": 20,
       "teams_club_schedule": 20,
@@ -100,13 +100,13 @@
         "espn-rest:tottenham": "available"
       },
       "problems": [
-        "Understat lagged xG missing or unverified: HTTPSConnectionPool(host='understat.com', port=443): Max retries exceeded with url: /getLeagueData/EPL/2026 (Caused by C"
+        "Understat lagged xG missing or unverified: Expecting value: line 1 column 1 (char 0)"
       ],
       "model_feature_status": "context_only_not_used_in_current_M1_M2_M3"
     },
     "first_observed_quotes": {
       "status": "partial",
-      "checked_at": "2026-11-03T04:00:51.468842Z",
+      "checked_at": "2026-11-04T01:16:41.211692Z",
       "due_fixtures": 10,
       "new_records": 0,
       "saved_matches": [],
@@ -170,5 +170,5 @@
       "opening_certified": false
     }
   },
-  "completed_at": "2026-11-03T04:00:51.469372Z"
+  "completed_at": "2026-11-04T01:16:41.211930Z"
 }
