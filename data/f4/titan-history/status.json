@@ -1,61 +1,61 @@
 {
   "schema": "f4-titan-history-daily-v1",
-  "started_at_utc": "2026-11-03T03:26:06.809806+00:00",
+  "started_at_utc": "2026-11-04T06:43:11.066142+00:00",
   "scope": "archived independent EPL fixtures within past/future seven days",
   "fixture_source": "existing ESPN fixture archive",
   "sources": [
     {
       "url": "https://bf.titan007.com/football/Next_20261031.htm",
-      "checked_at_utc": "2026-11-03T03:26:06.813489+00:00",
+      "checked_at_utc": "2026-11-04T06:43:11.068554+00:00",
       "status": "read_or_parse_error",
       "http_status": 200,
       "error_type": "ValueError"
     },
     {
       "url": "https://bf.titan007.com/football/Next_20261101.htm",
-      "checked_at_utc": "2026-11-03T03:26:08.899293+00:00",
+      "checked_at_utc": "2026-11-04T06:43:12.884641+00:00",
       "status": "read_or_parse_error",
       "http_status": 200,
       "error_type": "ValueError"
     },
     {
       "url": "https://bf.titan007.com/football/Next_20261102.htm",
-      "checked_at_utc": "2026-11-03T03:26:10.637994+00:00",
+      "checked_at_utc": "2026-11-04T06:43:14.729621+00:00",
       "status": "read_or_parse_error",
       "http_status": 200,
       "error_type": "ValueError"
     },
     {
       "url": "https://bf.titan007.com/football/Next_20261103.htm",
-      "checked_at_utc": "2026-11-03T03:26:11.826877+00:00",
+      "checked_at_utc": "2026-11-04T06:43:15.687550+00:00",
       "status": "ok",
       "http_status": 200,
-      "captured_at_utc": "2026-11-03T03:26:13.042808+00:00",
+      "captured_at_utc": "2026-11-04T06:43:17.563249+00:00",
       "candidate_count": 0,
       "content_sha256": "fbcae426234511d9c28cbab86fee126cbf5294c0cbb77e66684eedb5c8fa1ff1"
     },
     {
       "url": "https://bf.titan007.com/football/Next_20261107.htm",
-      "checked_at_utc": "2026-11-03T03:26:13.042993+00:00",
+      "checked_at_utc": "2026-11-04T06:43:17.563433+00:00",
       "status": "read_or_parse_error",
       "http_status": 200,
       "error_type": "ValueError"
     },
     {
       "url": "https://bf.titan007.com/football/Next_20261108.htm",
-      "checked_at_utc": "2026-11-03T03:26:14.885581+00:00",
+      "checked_at_utc": "2026-11-04T06:43:19.756893+00:00",
       "status": "read_or_parse_error",
       "http_status": 200,
       "error_type": "ValueError"
     },
     {
       "url": "https://bf.titan007.com/football/Next_20261109.htm",
-      "checked_at_utc": "2026-11-03T03:26:16.559252+00:00",
+      "checked_at_utc": "2026-11-04T06:43:21.230163+00:00",
       "status": "ok",
       "http_status": 200,
-      "captured_at_utc": "2026-11-03T03:26:17.425524+00:00",
+      "captured_at_utc": "2026-11-04T06:43:22.039052+00:00",
       "candidate_count": 0,
-      "content_sha256": "4b417184c5c78929202fedee5d78a8cd081f10a505b49c1d067694677f1aa792"
+      "content_sha256": "c91a0a46b9ef7bad0b3732692414c58cb0cfbf98a44501ce72a9bb792bc84a7f"
     }
   ],
   "mapping": {
@@ -385,7 +385,7 @@
   "bookmaker_first_opening_certified": false,
   "targets": [],
   "results": [],
-  "finished_at_utc": "2026-11-03T03:26:17.426539+00:00",
+  "finished_at_utc": "2026-11-04T06:43:22.040127+00:00",
   "planned": 0,
   "reconciled": 0,
   "deferred_by_daily_budget": 0
