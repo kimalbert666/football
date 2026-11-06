@@ -1,0 +1,932 @@
+{
+  "captured_at_utc": "2026-11-06T03:53:46.282525+00:00",
+  "run_id": "42159153588",
+  "fixture": {
+    "provider_event_id": "3003940",
+    "home": "布莱顿",
+    "away": "布伦特福德",
+    "kickoff_display": "2026-11-08 22:00",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401879244",
+    "home_id": "brighton",
+    "away_id": "brentford",
+    "independent_fixture_kickoff_at": "2026-11-08T14:00:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261108.htm",
+      "checked_at_utc": "2026-11-06T03:53:35.778898+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-06T03:53:37.423042+00:00",
+      "candidate_count": 5,
+      "content_sha256": "73bc04a2e52f3a1b15070d75c3f2ecb85a1df139705478b1d8f1c64479892f6e"
+    },
+    "independent_fixture_last_seen_at": "2026-11-06T03:39:25.963483Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "displayed_history_reconciled",
+  "histories": {
+    "3": {
+      "schema_version": "titan-displayed-history-archive-v1",
+      "source_url": "https://vip.titan007.com/changeDetail/handicap.aspx?id=3003940&companyID=3&l=0",
+      "captured_at_utc": "2026-11-06T03:53:43.560726+00:00",
+      "fixture_kickoff_display": "2026-11-08 22:00",
+      "year_anchor_display": "2026-10-26 06:47",
+      "fixture_identity_verified": true,
+      "odds_format_verified": false,
+      "timezone_verified": false,
+      "provider_opening_reconciled": true,
+      "formal_observation": false,
+      "training_eligible": false,
+      "displayed_history_coverage": "unknown",
+      "bookmaker_every_change_certified": false,
+      "parse_ok": true,
+      "data_row_count": 11,
+      "prematch_quote_count": 11,
+      "suspended_row_count": 0,
+      "unrecognized_row_count": 0,
+      "issues": {},
+      "pagination_controls": [],
+      "projection_truncated": false,
+      "same_minute_groups": {},
+      "source_order": "preserved; chronological order within minute not certified",
+      "earliest_visible_quote": {
+        "state": "unique_at_displayed_minute",
+        "displayed_datetime": "2026-10-26 06:47",
+        "row_indices": [
+          11
+        ],
+        "quote": {
+          "home_handicap": -0.5,
+          "home_water_raw": "1.04",
+          "away_water_raw": "0.84",
+          "handicap_raw": "半球",
+          "home_hk_water": null,
+          "away_hk_water": null,
+          "home_decimal_odds": null,
+          "away_decimal_odds": null
+        }
+      },
+      "last_visible_prematch_quote": {
+        "state": "unique_at_displayed_minute",
+        "displayed_datetime": "2026-11-05 17:46",
+        "row_indices": [
+          1
+        ],
+        "quote": {
+          "home_handicap": -0.5,
+          "home_water_raw": "0.91",
+          "away_water_raw": "0.97",
+          "handicap_raw": "半球",
+          "home_hk_water": null,
+          "away_hk_water": null,
+          "home_decimal_odds": null,
+          "away_decimal_odds": null
+        }
+      },
+      "last_change_at_or_before_t15": {
+        "state": "unique_at_displayed_minute",
+        "displayed_datetime": "2026-11-05 17:46",
+        "row_indices": [
+          1
+        ],
+        "quote": {
+          "home_handicap": -0.5,
+          "home_water_raw": "0.91",
+          "away_water_raw": "0.97",
+          "handicap_raw": "半球",
+          "home_hk_water": null,
+          "away_hk_water": null,
+          "home_decimal_odds": null,
+          "away_decimal_odds": null
+        }
+      },
+      "rows_sha256": "3b1af9b0aeb1289ed3386556c0826fd731ede5a7a53eedfdc22cee90759c1e04",
+      "rows": [
+        {
+          "source_row_index": 0,
+          "raw_cells": [
+            {
+              "text": "时间",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "比分",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "布莱顿",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "盘",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "布伦特福德",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "变化时间",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "状态",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "状态",
+          "raw_change_time": "变化时间",
+          "displayed_datetime": null,
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": null,
+          "kind": "header",
+          "prematch_quote": false,
+          "quote": null,
+          "issues": []
+        },
+        {
+          "source_row_index": 1,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.91",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.97",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "11-5 17:46",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "11-5 17:46",
+          "displayed_datetime": "2026-11-05 17:46",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "0.91",
+            "away_water_raw": "0.97",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 2,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.93",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.95",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "11-5 06:08",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "11-5 06:08",
+          "displayed_datetime": "2026-11-05 06:08",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "0.93",
+            "away_water_raw": "0.95",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 3,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.91",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.97",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-30 02:10",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-30 02:10",
+          "displayed_datetime": "2026-10-30 02:10",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "0.91",
+            "away_water_raw": "0.97",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 4,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.89",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.99",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-29 05:40",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-29 05:40",
+          "displayed_datetime": "2026-10-29 05:40",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "0.89",
+            "away_water_raw": "0.99",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 5,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.85",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.03",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-26 17:32",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-26 17:32",
+          "displayed_datetime": "2026-10-26 17:32",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "0.85",
+            "away_water_raw": "1.03",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 6,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.90",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.98",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-26 13:28",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-26 13:28",
+          "displayed_datetime": "2026-10-26 13:28",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "0.90",
+            "away_water_raw": "0.98",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 7,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.93",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.95",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-26 13:24",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-26 13:24",
+          "displayed_datetime": "2026-10-26 13:24",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "0.93",
+            "away_water_raw": "0.95",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 8,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.00",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.88",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-26 13:21",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-26 13:21",
+          "displayed_datetime": "2026-10-26 13:21",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.00",
+            "away_water_raw": "0.88",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 9,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.03",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.85",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-26 06:55",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-26 06:55",
+          "displayed_datetime": "2026-10-26 06:55",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.03",
+            "away_water_raw": "0.85",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 10,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.05",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.83",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-26 06:49",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-26 06:49",
+          "displayed_datetime": "2026-10-26 06:49",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.05",
+            "away_water_raw": "0.83",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 11,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.04",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.84",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-26 06:47",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-26 06:47",
+          "displayed_datetime": "2026-10-26 06:47",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.04",
+            "away_water_raw": "0.84",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        }
+      ],
+      "provider_event_id": "3003940",
+      "company_id": "3",
+      "company_label": "Crow*",
+      "identity_check": {
+        "identity_verified": true,
+        "event_id": "3003940",
+        "company_id": "3",
+        "issues": []
+      },
+      "source_table_row_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "source_reported_opening": {
+        "home_water_raw": "1.04",
+        "away_water_raw": "0.84",
+        "home_profit_only_odds": null,
+        "away_profit_only_odds": null,
+        "home_decimal_odds": null,
+        "away_decimal_odds": null,
+        "handicap_display": "半球",
+        "home_handicap": -0.5,
+        "displayed_full_datetime": "2026-10-26 06:47",
+        "quote_time_utc": null
+      },
+      "excluded_live_rows": 0,
+      "source_fixture_identity": {
+        "provider_event_id": "3003940",
+        "home": "布莱顿",
+        "away": "布伦特福德",
+        "kickoff_display": "2026-11-08 22:00",
+        "company_ids": [
+          "3"
+        ],
+        "canonical_match_id": "espn:401879244",
+        "home_id": "brighton",
+        "away_id": "brentford",
+        "independent_fixture_kickoff_at": "2026-11-08T14:00:00Z",
+        "mapping_source_evidence": {
+          "url": "https://bf.titan007.com/football/Next_20261108.htm",
+          "checked_at_utc": "2026-11-06T03:53:35.778898+00:00",
+          "status": "ok",
+          "http_status": 200,
+          "captured_at_utc": "2026-11-06T03:53:37.423042+00:00",
+          "candidate_count": 5,
+          "content_sha256": "73bc04a2e52f3a1b15070d75c3f2ecb85a1df139705478b1d8f1c64479892f6e"
+        },
+        "independent_fixture_last_seen_at": "2026-11-06T03:39:25.963483Z",
+        "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+      },
+      "independent_fixture_mapping_verified": false,
+      "accepted_for_research_archive": true,
+      "excluded_boundary_row_count": 0,
+      "all_displayed_rows_clean": true
+    }
+  },
+  "pages": [
+    {
+      "url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003940",
+      "checked_at_utc": "2026-11-06T03:53:38.738933+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003940",
+      "captured_at_utc": "2026-11-06T03:53:42.627325+00:00",
+      "page_title": "布莱顿VS布伦特福德(2026-2027赛季英超)-亚指指数-新球体育-球探体育",
+      "visible_row_count": 19,
+      "projection_truncated": false
+    },
+    {
+      "url": "https://vip.titan007.com/changeDetail/handicap.aspx?id=3003940&companyID=3&l=0",
+      "checked_at_utc": "2026-11-06T03:53:42.669309+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/changeDetail/handicap.aspx?id=3003940&companyID=3&l=0",
+      "captured_at_utc": "2026-11-06T03:53:43.560726+00:00",
+      "page_title": "亚赔变化表",
+      "visible_row_count": 12,
+      "projection_truncated": false
+    }
+  ],
+  "summary": {
+    "parse_ok": true,
+    "event_id": "3003940",
+    "companies": {
+      "3": {
+        "company_id": "3",
+        "company_label": "Crow*",
+        "history_url": "https://vip.titan007.com/changeDetail/handicap.aspx?id=3003940&companyID=3&l=0",
+        "opening": {
+          "home_water_raw": "1.04",
+          "away_water_raw": "0.84",
+          "home_profit_only_odds": null,
+          "away_profit_only_odds": null,
+          "home_decimal_odds": null,
+          "away_decimal_odds": null,
+          "handicap_display": "半球",
+          "home_handicap": -0.5,
+          "displayed_full_datetime": "2026-10-26 06:47",
+          "quote_time_utc": null
+        }
+      }
+    },
+    "issues": [],
+    "research_only": true,
+    "formal_signal_eligible": false,
+    "bookmaker_original_opening_certified": false,
+    "complete_tick_history_certified": false,
+    "timezone_verified": false,
+    "odds_format_verified": false,
+    "document_title": "布莱顿VS布伦特福德(2026-2027赛季英超)-亚指指数-新球体育-球探体育"
+  }
+}
