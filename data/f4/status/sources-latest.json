@@ -1,19 +1,19 @@
 {
-  "captured_at": "2026-11-06T19:45:00.221425Z",
+  "captured_at": "2026-11-06T23:02:22.169302Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261106",
-      "captured_at": "2026-11-06T19:45:00.155478Z",
-      "content_sha256": "f0864f78475973866b1a395214f92a27a1e3fca7d57a335137969527400a6eb8"
+      "captured_at": "2026-11-06T23:02:22.091367Z",
+      "content_sha256": "da34f247e9a095319bd0d6ead0fd55c737b0dd60f45b629352d6fa82bd72fa00"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261107",
-      "captured_at": "2026-11-06T19:45:00.220153Z",
-      "content_sha256": "a539ea73cf326fbe68edec577df4c1adca50d6b0d42fdc309af1d15cbc589ab9"
+      "captured_at": "2026-11-06T23:02:22.168382Z",
+      "content_sha256": "6281a184d5153bcb5b3d82afcdff9424bca2c7c27c77a4b398f3cb4a28d36432"
     }
   ],
   "fixtures": [
@@ -27,8 +27,11 @@
       "home": "Everton",
       "away": "Coventry City",
       "kickoff_at": "2026-11-06T20:00:00Z",
-      "status": "scheduled",
-      "score": null,
+      "status": "completed",
+      "score": [
+        3,
+        1
+      ],
       "market": null,
       "problems": []
     },
