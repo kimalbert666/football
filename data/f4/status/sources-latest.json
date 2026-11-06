@@ -1,19 +1,19 @@
 {
-  "captured_at": "2026-11-05T21:57:01.016483Z",
+  "captured_at": "2026-11-06T02:19:04.969123Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261105",
-      "captured_at": "2026-11-05T21:57:00.941068Z",
-      "content_sha256": "8c3b2cebaf7e957cb09d6a4faf5c25c81d4a026724a1b75154654694ae7c5aed"
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261106",
+      "captured_at": "2026-11-06T02:19:04.817320Z",
+      "content_sha256": "399bdfd5b04920a31631df24b3189742c36476fe70ece2653dcad066df842d23"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261106",
-      "captured_at": "2026-11-05T21:57:01.016080Z",
-      "content_sha256": "a6d29cd3d3cc60d5bd7c69fe9726cfa868e8afccc84a0711083e81909ba827bc"
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261107",
+      "captured_at": "2026-11-06T02:19:04.968405Z",
+      "content_sha256": "5c2ad6488157e27aef83bd6844f1dcee7450a4f4626626b3d50ae9bd49fb00cd"
     }
   ],
   "fixtures": [
@@ -31,14 +31,74 @@
       "score": null,
       "market": null,
       "problems": []
+    },
+    {
+      "match_id": "espn:401878758",
+      "source_event_id": "401878758",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "leeds",
+      "away_id": "tottenham",
+      "home": "Leeds United",
+      "away": "Tottenham Hotspur",
+      "kickoff_at": "2026-11-07T12:30:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401878760",
+      "source_event_id": "401878760",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "arsenal",
+      "away_id": "hull-city",
+      "home": "Arsenal",
+      "away": "Hull City",
+      "kickoff_at": "2026-11-07T15:00:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401879241",
+      "source_event_id": "401879241",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "fulham",
+      "away_id": "newcastle",
+      "home": "Fulham",
+      "away": "Newcastle United",
+      "kickoff_at": "2026-11-07T15:00:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401878757",
+      "source_event_id": "401878757",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "nottingham-forest",
+      "away_id": "man-city",
+      "home": "Nottingham Forest",
+      "away": "Manchester City",
+      "kickoff_at": "2026-11-07T17:30:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
     }
   ],
   "coverage": {
     "complete": true,
     "scope": {
       "league": "england-premier",
-      "from": "2026-11-05",
-      "through": "2026-11-06",
+      "from": "2026-11-06",
+      "through": "2026-11-07",
       "provider": "espn",
       "pending_lookup_limit": 20
     },
