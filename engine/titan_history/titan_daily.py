@@ -46,9 +46,17 @@ def parse_schedule(html, day, aliases, resolve):
         if not re.fullmatch(r'\d+', event) or linked_ids != {event} or league != '36':
             raise ValueError('EPL schedule event or league identity conflict')
         shown_time = clean(visible_text(cells[1]))
-        kickoff = datetime.strptime(str(day.year)+'-'+shown_time, '%Y-%m-%d %H:%M')
-        if kickoff.date() != day:
+        parts = re.fullmatch(r'(\d{1,2})-(\d{1,2})\s+(\d{1,2}):(\d{2})', shown_time)
+        if not parts:
+            raise ValueError('schedule kickoff display invalid')
+        month, number, hour, minute = map(int, parts.groups())
+        # Actual dated pages include the following early morning (e.g.
+        # Next_20261031 has Nov 1 01:30 and 04:00). Keep the displayed date;
+        # do not force the URL date onto the fixture, including at New Year.
+        choices = [d for d in (day, day+timedelta(days=1)) if (d.month, d.day)==(month, number)]
+        if len(choices) != 1:
             raise ValueError('dated schedule row day mismatch')
+        kickoff = datetime.combine(choices[0], datetime.min.time()).replace(hour=hour, minute=minute)
         home, away = clean(visible_text(cells[3])), clean(visible_text(cells[5]))
         result.append({'provider_event_id': event, 'league_id': league,
                        'home': home, 'away': away, 'home_id': resolve([home], aliases),
@@ -84,9 +92,11 @@ def run(root, max_matches=10):
         if now-timedelta(days=7) <= _instant(f['kickoff_at']) <= now+timedelta(days=7):
             fixtures.append(f)
     aliases = _aliases(root)
-    dates = sorted({_instant(f['kickoff_at']).astimezone(HK).date() for f in fixtures})
+    dates = sorted({d for f in fixtures
+                    for d in (_instant(f['kickoff_at']).astimezone(HK).date(),
+                              _instant(f['kickoff_at']).astimezone(HK).date()-timedelta(days=1))})
     candidates, sources, blocked = [], [], False
-    for day in dates[:15]:
+    for day in dates:
         url = f'https://bf.titan007.com/football/Next_{day:%Y%m%d}.htm'
         meta = {'url': url, 'checked_at_utc': stamp(), 'status': 'not_attempted'}
         sources.append(meta)
@@ -113,6 +123,8 @@ def run(root, max_matches=10):
             candidates.extend(rows)
         except Exception as exc:
             meta.update(status='read_or_parse_error', error_type=type(exc).__name__)
+            if isinstance(exc, ValueError):
+                meta['parse_error'] = str(exc)[:160]
     mapping = map_fixture_candidates(fixtures, candidates, titan_league_id='36')
     status = {'schema': 'f4-titan-history-daily-v1', 'started_at_utc': now.isoformat(),
               'scope': 'archived independent EPL fixtures within past/future seven days',

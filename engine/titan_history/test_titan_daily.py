@@ -34,6 +34,13 @@ class DailyTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             parse_schedule(source_row(day), day+timedelta(days=1), {}, resolve)
 
+    def test_next_morning_and_new_year_keep_actual_displayed_date(self):
+        for day in (datetime(2026,10,31).date(), datetime(2026,12,31).date()):
+            tomorrow=day+timedelta(days=1)
+            value=parse_schedule(source_row(tomorrow).replace('22:00','01:30'), day, {}, resolve)
+            expected=datetime.combine(tomorrow,datetime.min.time()).replace(hour=1,minute=30,tzinfo=HK)
+            self.assertEqual(value[0]['kickoff_at'],expected.astimezone(timezone.utc).isoformat())
+
     def test_immutable_records_refuse_replacement(self):
         with tempfile.TemporaryDirectory() as tmp:
             p=Path(tmp)/'a.json'
@@ -50,9 +57,13 @@ class DailyTests(unittest.TestCase):
             for t in targets:
                 batch['fixtures'].append({'fixture':t,'status':'displayed_history_reconciled',
                                            'histories':{'3':{'prematch_quote_count':7}}})
-        reply=types.SimpleNamespace(status_code=200,content=source_row(day).encode('gb18030'))
+        def schedule_reply(url, **kwargs):
+            # Only the preceding sporting-day page contains this early fixture.
+            page_day=datetime.strptime(url.rsplit('_',1)[1].split('.')[0],'%Y%m%d').date()
+            text=source_row(day) if page_day==day-timedelta(days=1) else '<table></table>'
+            return types.SimpleNamespace(status_code=200,content=text.encode('gb18030'))
         with tempfile.TemporaryDirectory() as tmp, patch.dict('sys.modules',{'f4_sources':sources}), \
-             patch('titan_daily.requests.get',return_value=reply), patch('titan_daily.browser_run',new=fake_browser):
+             patch('titan_daily.requests.get',side_effect=schedule_reply), patch('titan_daily.browser_run',new=fake_browser):
             root=Path(tmp)
             fixture={'match_id':'espn:1','source_event_id':'1','provider':'espn','league':'england-premier',
                      'home_id':'a','away_id':'b','kickoff_at':ko.isoformat(),'status':'scheduled'}
