@@ -1,0 +1,2963 @@
+{
+  "captured_at_utc": "2026-11-06T03:42:22.851278+00:00",
+  "run_id": "42157991134",
+  "fixture": {
+    "provider_event_id": "3003929",
+    "home": "伯恩茅斯",
+    "away": "利兹联",
+    "kickoff_display": "2026-10-31 23:00",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401879251",
+    "home_id": "bournemouth",
+    "away_id": "leeds",
+    "independent_fixture_kickoff_at": "2026-10-31T15:00:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261031.htm",
+      "checked_at_utc": "2026-11-06T03:41:51.264985+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-06T03:41:53.686500+00:00",
+      "candidate_count": 8,
+      "content_sha256": "a5a968329f7df5dcc5318382c02dde15350b3df4249c8fe9de472bc37ce4c4c4"
+    },
+    "independent_fixture_last_seen_at": "2026-11-01T23:32:14.298059Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "displayed_history_reconciled",
+  "histories": {
+    "3": {
+      "schema_version": "titan-displayed-history-archive-v1",
+      "source_url": "https://vip.titan007.com/changeDetail/handicap.aspx?id=3003929&companyID=3&l=0",
+      "captured_at_utc": "2026-11-06T03:42:14.645373+00:00",
+      "fixture_kickoff_display": "2026-10-31 23:00",
+      "year_anchor_display": "2026-10-19 09:56",
+      "fixture_identity_verified": true,
+      "odds_format_verified": false,
+      "timezone_verified": false,
+      "provider_opening_reconciled": true,
+      "formal_observation": false,
+      "training_eligible": false,
+      "displayed_history_coverage": "unknown",
+      "bookmaker_every_change_certified": false,
+      "parse_ok": true,
+      "data_row_count": 45,
+      "prematch_quote_count": 45,
+      "suspended_row_count": 0,
+      "unrecognized_row_count": 0,
+      "issues": {},
+      "pagination_controls": [],
+      "projection_truncated": false,
+      "same_minute_groups": {},
+      "source_order": "preserved; chronological order within minute not certified",
+      "earliest_visible_quote": {
+        "state": "unique_at_displayed_minute",
+        "displayed_datetime": "2026-10-19 09:56",
+        "row_indices": [
+          45
+        ],
+        "quote": {
+          "home_handicap": -0.25,
+          "home_water_raw": "0.97",
+          "away_water_raw": "0.91",
+          "handicap_raw": "平手/半球",
+          "home_hk_water": null,
+          "away_hk_water": null,
+          "home_decimal_odds": null,
+          "away_decimal_odds": null
+        }
+      },
+      "last_visible_prematch_quote": {
+        "state": "unique_at_displayed_minute",
+        "displayed_datetime": "2026-10-31 22:58",
+        "row_indices": [
+          1
+        ],
+        "quote": {
+          "home_handicap": -0.5,
+          "home_water_raw": "1.09",
+          "away_water_raw": "0.80",
+          "handicap_raw": "半球",
+          "home_hk_water": null,
+          "away_hk_water": null,
+          "home_decimal_odds": null,
+          "away_decimal_odds": null
+        }
+      },
+      "last_change_at_or_before_t15": {
+        "state": "ambiguous_cutoff_minute",
+        "displayed_datetime": "2026-10-31 22:45",
+        "row_indices": [
+          6
+        ],
+        "quote": null
+      },
+      "rows_sha256": "758a5586894a2007e3a86a6745c6e8b484a4602a2c9758440230aff26f33bd51",
+      "rows": [
+        {
+          "source_row_index": 0,
+          "raw_cells": [
+            {
+              "text": "时间",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "比分",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "伯恩茅斯",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "盘",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "利兹联",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "变化时间",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "状态",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "状态",
+          "raw_change_time": "变化时间",
+          "displayed_datetime": null,
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": null,
+          "kind": "header",
+          "prematch_quote": false,
+          "quote": null,
+          "issues": []
+        },
+        {
+          "source_row_index": 1,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.09",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.80",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:58",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:58",
+          "displayed_datetime": "2026-10-31 22:58",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.09",
+            "away_water_raw": "0.80",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 2,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.11",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.79",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:56",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:56",
+          "displayed_datetime": "2026-10-31 22:56",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.11",
+            "away_water_raw": "0.79",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 3,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.09",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.80",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:54",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:54",
+          "displayed_datetime": "2026-10-31 22:54",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.09",
+            "away_water_raw": "0.80",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 4,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.07",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.82",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:51",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:51",
+          "displayed_datetime": "2026-10-31 22:51",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.07",
+            "away_water_raw": "0.82",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 5,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.09",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.80",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:49",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:49",
+          "displayed_datetime": "2026-10-31 22:49",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.09",
+            "away_water_raw": "0.80",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 6,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.03",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.86",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:45",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:45",
+          "displayed_datetime": "2026-10-31 22:45",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.03",
+            "away_water_raw": "0.86",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 7,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.04",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.85",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:43",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:43",
+          "displayed_datetime": "2026-10-31 22:43",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.04",
+            "away_water_raw": "0.85",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 8,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.03",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.86",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:41",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:41",
+          "displayed_datetime": "2026-10-31 22:41",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.03",
+            "away_water_raw": "0.86",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 9,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.02",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.87",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:38",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:38",
+          "displayed_datetime": "2026-10-31 22:38",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.02",
+            "away_water_raw": "0.87",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 10,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.01",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.88",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:36",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:36",
+          "displayed_datetime": "2026-10-31 22:36",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.01",
+            "away_water_raw": "0.88",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 11,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.04",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.85",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:35",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:35",
+          "displayed_datetime": "2026-10-31 22:35",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.04",
+            "away_water_raw": "0.85",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 12,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.06",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.83",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:33",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:33",
+          "displayed_datetime": "2026-10-31 22:33",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.06",
+            "away_water_raw": "0.83",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 13,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.04",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.85",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:31",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:31",
+          "displayed_datetime": "2026-10-31 22:31",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.04",
+            "away_water_raw": "0.85",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 14,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.01",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.88",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:29",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:29",
+          "displayed_datetime": "2026-10-31 22:29",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.01",
+            "away_water_raw": "0.88",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 15,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.02",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.87",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:27",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:27",
+          "displayed_datetime": "2026-10-31 22:27",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.02",
+            "away_water_raw": "0.87",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 16,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.03",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.86",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:24",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:24",
+          "displayed_datetime": "2026-10-31 22:24",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.03",
+            "away_water_raw": "0.86",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 17,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.04",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.85",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:16",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:16",
+          "displayed_datetime": "2026-10-31 22:16",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.04",
+            "away_water_raw": "0.85",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 18,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.05",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.84",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:10",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:10",
+          "displayed_datetime": "2026-10-31 22:10",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.05",
+            "away_water_raw": "0.84",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 19,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.06",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.83",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:08",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:08",
+          "displayed_datetime": "2026-10-31 22:08",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.06",
+            "away_water_raw": "0.83",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 20,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.07",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.82",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 22:06",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 22:06",
+          "displayed_datetime": "2026-10-31 22:06",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.07",
+            "away_water_raw": "0.82",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 21,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.08",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.81",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 21:59",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 21:59",
+          "displayed_datetime": "2026-10-31 21:59",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.08",
+            "away_water_raw": "0.81",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 22,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.80",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.09",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 21:54",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 21:54",
+          "displayed_datetime": "2026-10-31 21:54",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.80",
+            "away_water_raw": "1.09",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 23,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.79",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.11",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 21:53",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 21:53",
+          "displayed_datetime": "2026-10-31 21:53",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.79",
+            "away_water_raw": "1.11",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 24,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.81",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.08",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 21:32",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 21:32",
+          "displayed_datetime": "2026-10-31 21:32",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.81",
+            "away_water_raw": "1.08",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 25,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.82",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.07",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 19:56",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 19:56",
+          "displayed_datetime": "2026-10-31 19:56",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.82",
+            "away_water_raw": "1.07",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 26,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.81",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.08",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 19:50",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 19:50",
+          "displayed_datetime": "2026-10-31 19:50",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.81",
+            "away_water_raw": "1.08",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 27,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.82",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.07",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 19:40",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 19:40",
+          "displayed_datetime": "2026-10-31 19:40",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.82",
+            "away_water_raw": "1.07",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 28,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.81",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.08",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 18:50",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 18:50",
+          "displayed_datetime": "2026-10-31 18:50",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.81",
+            "away_water_raw": "1.08",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 29,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.80",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.09",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 18:29",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 18:29",
+          "displayed_datetime": "2026-10-31 18:29",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.80",
+            "away_water_raw": "1.09",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 30,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.81",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.08",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 18:23",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 18:23",
+          "displayed_datetime": "2026-10-31 18:23",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.81",
+            "away_water_raw": "1.08",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 31,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.82",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.07",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 18:19",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 18:19",
+          "displayed_datetime": "2026-10-31 18:19",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.82",
+            "away_water_raw": "1.07",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 32,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.83",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.06",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 17:29",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 17:29",
+          "displayed_datetime": "2026-10-31 17:29",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.83",
+            "away_water_raw": "1.06",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 33,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.84",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.05",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 16:37",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 16:37",
+          "displayed_datetime": "2026-10-31 16:37",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.84",
+            "away_water_raw": "1.05",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 34,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.86",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.03",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 15:29",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 15:29",
+          "displayed_datetime": "2026-10-31 15:29",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.86",
+            "away_water_raw": "1.03",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 35,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.87",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.02",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 15:23",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 15:23",
+          "displayed_datetime": "2026-10-31 15:23",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.87",
+            "away_water_raw": "1.02",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 36,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.84",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.05",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 15:22",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 15:22",
+          "displayed_datetime": "2026-10-31 15:22",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.84",
+            "away_water_raw": "1.05",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 37,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.83",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.06",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 15:08",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 15:08",
+          "displayed_datetime": "2026-10-31 15:08",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.83",
+            "away_water_raw": "1.06",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 38,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.08",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.81",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 12:28",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 12:28",
+          "displayed_datetime": "2026-10-31 12:28",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.5,
+            "home_water_raw": "1.08",
+            "away_water_raw": "0.81",
+            "handicap_raw": "半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 39,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.83",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.06",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-31 12:06",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "即",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "即",
+          "raw_change_time": "10-31 12:06",
+          "displayed_datetime": "2026-10-31 12:06",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.83",
+            "away_water_raw": "1.06",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 40,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.83",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.05",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-29 06:11",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-29 06:11",
+          "displayed_datetime": "2026-10-29 06:11",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.83",
+            "away_water_raw": "1.05",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 41,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.81",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.07",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-27 18:31",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-27 18:31",
+          "displayed_datetime": "2026-10-27 18:31",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.81",
+            "away_water_raw": "1.07",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 42,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.83",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.05",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-26 06:39",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-26 06:39",
+          "displayed_datetime": "2026-10-26 06:39",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.83",
+            "away_water_raw": "1.05",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 43,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.89",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.99",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-20 17:38",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-20 17:38",
+          "displayed_datetime": "2026-10-20 17:38",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.89",
+            "away_water_raw": "0.99",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 44,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.94",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.94",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-20 15:15",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-20 15:15",
+          "displayed_datetime": "2026-10-20 15:15",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.94",
+            "away_water_raw": "0.94",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 45,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.97",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "平手/半球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.91",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "10-19 09:56",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "10-19 09:56",
+          "displayed_datetime": "2026-10-19 09:56",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.25,
+            "home_water_raw": "0.97",
+            "away_water_raw": "0.91",
+            "handicap_raw": "平手/半球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        }
+      ],
+      "provider_event_id": "3003929",
+      "company_id": "3",
+      "company_label": "Crow* 封",
+      "identity_check": {
+        "identity_verified": true,
+        "event_id": "3003929",
+        "company_id": "3",
+        "issues": []
+      },
+      "source_table_row_indices": [
+        0,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228
+      ],
+      "source_reported_opening": {
+        "home_water_raw": "0.97",
+        "away_water_raw": "0.91",
+        "home_profit_only_odds": null,
+        "away_profit_only_odds": null,
+        "home_decimal_odds": null,
+        "away_decimal_odds": null,
+        "handicap_display": "平手/半球",
+        "home_handicap": -0.25,
+        "displayed_full_datetime": "2026-10-19 09:56",
+        "quote_time_utc": null
+      },
+      "excluded_live_rows": 183,
+      "source_fixture_identity": {
+        "provider_event_id": "3003929",
+        "home": "伯恩茅斯",
+        "away": "利兹联",
+        "kickoff_display": "2026-10-31 23:00",
+        "company_ids": [
+          "3"
+        ],
+        "canonical_match_id": "espn:401879251",
+        "home_id": "bournemouth",
+        "away_id": "leeds",
+        "independent_fixture_kickoff_at": "2026-10-31T15:00:00Z",
+        "mapping_source_evidence": {
+          "url": "https://bf.titan007.com/football/Next_20261031.htm",
+          "checked_at_utc": "2026-11-06T03:41:51.264985+00:00",
+          "status": "ok",
+          "http_status": 200,
+          "captured_at_utc": "2026-11-06T03:41:53.686500+00:00",
+          "candidate_count": 8,
+          "content_sha256": "a5a968329f7df5dcc5318382c02dde15350b3df4249c8fe9de472bc37ce4c4c4"
+        },
+        "independent_fixture_last_seen_at": "2026-11-01T23:32:14.298059Z",
+        "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+      },
+      "independent_fixture_mapping_verified": false,
+      "accepted_for_research_archive": true,
+      "excluded_boundary_row_count": 0,
+      "all_displayed_rows_clean": true
+    }
+  },
+  "pages": [
+    {
+      "url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003929",
+      "checked_at_utc": "2026-11-06T03:42:12.964498+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003929",
+      "captured_at_utc": "2026-11-06T03:42:13.878293+00:00",
+      "page_title": "伯恩茅斯VS利兹联(2026-2027赛季英超)-亚指指数-新球体育-球探体育",
+      "visible_row_count": 20,
+      "projection_truncated": false
+    },
+    {
+      "url": "https://vip.titan007.com/changeDetail/handicap.aspx?id=3003929&companyID=3&l=0",
+      "checked_at_utc": "2026-11-06T03:42:13.919709+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/changeDetail/handicap.aspx?id=3003929&companyID=3&l=0",
+      "captured_at_utc": "2026-11-06T03:42:14.645373+00:00",
+      "page_title": "亚赔变化表",
+      "visible_row_count": 229,
+      "projection_truncated": false
+    }
+  ],
+  "summary": {
+    "parse_ok": true,
+    "event_id": "3003929",
+    "companies": {
+      "3": {
+        "company_id": "3",
+        "company_label": "Crow* 封",
+        "history_url": "https://vip.titan007.com/changeDetail/handicap.aspx?id=3003929&companyID=3&l=0",
+        "opening": {
+          "home_water_raw": "0.97",
+          "away_water_raw": "0.91",
+          "home_profit_only_odds": null,
+          "away_profit_only_odds": null,
+          "home_decimal_odds": null,
+          "away_decimal_odds": null,
+          "handicap_display": "平手/半球",
+          "home_handicap": -0.25,
+          "displayed_full_datetime": "2026-10-19 09:56",
+          "quote_time_utc": null
+        }
+      }
+    },
+    "issues": [],
+    "research_only": true,
+    "formal_signal_eligible": false,
+    "bookmaker_original_opening_certified": false,
+    "complete_tick_history_certified": false,
+    "timezone_verified": false,
+    "odds_format_verified": false,
+    "document_title": "伯恩茅斯VS利兹联(2026-2027赛季英超)-亚指指数-新球体育-球探体育"
+  }
+}
