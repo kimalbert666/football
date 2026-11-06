@@ -21,6 +21,22 @@ from titan_fixture_mapping import map_fixture_candidates
 
 HK = timezone(timedelta(hours=8))
 
+# Explicit Titan EPL display spellings. Keep conflicting existing identities
+# in the set so _resolve still rejects an ambiguous name.
+TITAN_NAMES = {
+    '曼彻斯特联': 'man-united', '曼彻斯特城': 'man-city', '赫尔城': 'hull-city',
+    '伊普斯维奇': 'ipswich', '布伦特福德': 'brentford', '诺丁汉森林': 'nottingham-forest',
+    '托特纳姆热刺': 'tottenham', '阿斯顿维拉': 'aston-villa', '富勒姆': 'fulham',
+    '纽卡斯尔联': 'newcastle', '布莱顿': 'brighton',
+}
+
+
+def titan_aliases(index):
+    combined = {name: set(ids) for name, ids in index.items()}
+    for label, team_id in TITAN_NAMES.items():
+        combined.setdefault(label, set()).add(team_id)
+    return combined
+
 
 def visible_text(node):
     if not node.visible() or node.tag in {'script', 'style'} or node.attrs.get('name') == 'order':
@@ -91,7 +107,7 @@ def run(root, max_matches=10):
             continue
         if now-timedelta(days=7) <= _instant(f['kickoff_at']) <= now+timedelta(days=7):
             fixtures.append(f)
-    aliases = _aliases(root)
+    aliases = titan_aliases(_aliases(root))
     dates = sorted({d for f in fixtures
                     for d in (_instant(f['kickoff_at']).astimezone(HK).date(),
                               _instant(f['kickoff_at']).astimezone(HK).date()-timedelta(days=1))})

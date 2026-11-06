@@ -19,6 +19,12 @@ def source_row(day, event='42', link_event='42', league='36'):
 
 
 class DailyTests(unittest.TestCase):
+    def test_titan_names_never_override_ambiguous_identity(self):
+        from titan_daily import titan_aliases
+        index=titan_aliases({'曼彻斯特联': {'other-team'}})
+        self.assertEqual(index['曼彻斯特联'], {'man-united', 'other-team'})
+        self.assertEqual(index['曼彻斯特城'], {'man-city'})
+
     def test_source_identity_and_rank_badges(self):
         day=datetime(2026,10,17).date()
         values=parse_schedule(source_row(day), day, {}, resolve)
