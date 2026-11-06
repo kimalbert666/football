@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-11-06T10:44:05.093364Z",
+  "evaluated_at": "2026-11-06T17:54:55.256509Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 110,
@@ -5062,7 +5062,8 @@
     "fixtures": 5,
     "windows": {
       "T-180m": {
-        "awaiting_window": 5
+        "missed_window": 1,
+        "awaiting_window": 4
       },
       "T-60m": {
         "awaiting_window": 5
