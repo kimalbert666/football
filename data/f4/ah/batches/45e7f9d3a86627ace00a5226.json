@@ -1,16 +1,16 @@
 {
   "kickoff_at": "2026-11-07T12:30:00Z",
-  "updated_at": "2026-11-06T23:02:22.215154Z",
+  "updated_at": "2026-11-08T09:47:47.766176Z",
   "fixtures": [
     {
       "match_id": "espn:401878758",
       "home": "Leeds United",
       "away": "Tottenham Hotspur",
-      "status": "awaiting_window",
+      "status": "missed_window",
       "observation_id": null,
       "windows": {
         "T-180m": {
-          "status": "awaiting_window",
+          "status": "missed_window",
           "expected_at": "2026-11-07T09:30:00Z",
           "closes_at": "2026-11-07T09:50:00Z",
           "attempts": 0,
@@ -18,7 +18,7 @@
           "same_bookmaker_1x2_available": false
         },
         "T-60m": {
-          "status": "awaiting_window",
+          "status": "missed_window",
           "expected_at": "2026-11-07T11:30:00Z",
           "closes_at": "2026-11-07T11:40:00Z",
           "attempts": 0,
@@ -26,7 +26,7 @@
           "same_bookmaker_1x2_available": false
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "missed_window",
           "expected_at": "2026-11-07T12:15:00Z",
           "closes_at": "2026-11-07T12:20:00Z",
           "attempts": 0,

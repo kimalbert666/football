@@ -1,0 +1,72 @@
+{
+  "day": "20261107",
+  "events_seen": 4,
+  "pending_results": [],
+  "record_sha256": "03e17bbd8416112a21ce9598beb5dda746d300701be6170cf4974790660ee031",
+  "results": [
+    {
+      "away": "Tottenham Hotspur",
+      "away_id": "tottenham",
+      "away_provider_id": "367",
+      "home": "Leeds United",
+      "home_id": "leeds",
+      "home_provider_id": "357",
+      "kickoff_at": "2026-11-07T12:30:00Z",
+      "match_id": "espn:401878758",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "away": "Hull City",
+      "away_id": "hull-city",
+      "away_provider_id": "306",
+      "home": "Arsenal",
+      "home_id": "arsenal",
+      "home_provider_id": "359",
+      "kickoff_at": "2026-11-07T15:00:00Z",
+      "match_id": "espn:401878760",
+      "score": [
+        1,
+        0
+      ]
+    },
+    {
+      "away": "Newcastle United",
+      "away_id": "newcastle",
+      "away_provider_id": "361",
+      "home": "Fulham",
+      "home_id": "fulham",
+      "home_provider_id": "370",
+      "kickoff_at": "2026-11-07T15:00:00Z",
+      "match_id": "espn:401879241",
+      "score": [
+        1,
+        1
+      ]
+    },
+    {
+      "away": "Manchester City",
+      "away_id": "man-city",
+      "away_provider_id": "382",
+      "home": "Nottingham Forest",
+      "home_id": "nottingham-forest",
+      "home_provider_id": "393",
+      "kickoff_at": "2026-11-07T17:30:00Z",
+      "match_id": "espn:401878757",
+      "score": [
+        3,
+        1
+      ]
+    }
+  ],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-11-08T09:47:47.941049Z",
+    "content_sha256": "2bc952a7e308f21a1fe827ec9cbfa48f41627b59c79d92d8335dfdab332ab13a",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261107&limit=1000"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluated_at": "2026-11-06T23:02:22.227983Z",
+  "evaluated_at": "2026-11-08T09:47:51.298177Z",
   "mode": "shadow",
   "candidate_weight": 0,
   "automatic_promotion": false,
@@ -29,9 +29,9 @@
     "missing_baseline": 21,
     "missing_baseline_groups": 0,
     "redundant_snapshots": 0,
-    "pending": 1,
-    "settled": 72,
-    "paired": 72,
+    "pending": 0,
+    "settled": 73,
+    "paired": 73,
     "missing_candidate": 0,
     "excluded_rescheduled": 0,
     "excluded_cancelled": 0,
@@ -40,34 +40,34 @@
     "excluded_future": 0,
     "distinct_match_count": 38,
     "known_tracked_fixtures": 59,
-    "closed_windows": 82,
+    "closed_windows": 90,
     "covered_windows": 73,
-    "missing_windows": 9,
+    "missing_windows": 17,
     "late_discovered_windows": 18
   },
   "baseline": {
-    "n": 72,
-    "correct": 36,
-    "accuracy": 0.5,
-    "rps": 0.20767206542915964,
-    "brier": 0.583902822356225,
-    "log_loss": 0.980838822670781
+    "n": 73,
+    "correct": 37,
+    "accuracy": 0.5068493150684932,
+    "rps": 0.20637095605384173,
+    "brier": 0.579759718036895,
+    "log_loss": 0.9751636711644378
   },
   "paired_baseline": {
-    "n": 72,
-    "correct": 36,
-    "accuracy": 0.5,
-    "rps": 0.20767206542915964,
-    "brier": 0.583902822356225,
-    "log_loss": 0.980838822670781
+    "n": 73,
+    "correct": 37,
+    "accuracy": 0.5068493150684932,
+    "rps": 0.20637095605384173,
+    "brier": 0.579759718036895,
+    "log_loss": 0.9751636711644378
   },
   "candidate": {
-    "n": 72,
-    "correct": 36,
-    "accuracy": 0.5,
-    "rps": 0.25488345529027795,
-    "brier": 0.6840240722188335,
-    "log_loss": 1.2190141395220377
+    "n": 73,
+    "correct": 37,
+    "accuracy": 0.5068493150684932,
+    "rps": 0.2521350329606042,
+    "brier": 0.6774163701050699,
+    "log_loss": 1.2077719351134037
   },
   "f2": {
     "n": 0,
@@ -79,9 +79,7 @@
     "correct": 0,
     "accuracy": null
   },
-  "pending_statuses": {
-    "unobserved": 1
-  },
+  "pending_statuses": {},
   "groups": [
     {
       "league": "england-premier",
@@ -151,9 +149,9 @@
         "missing_baseline": 21,
         "missing_baseline_groups": 0,
         "redundant_snapshots": 0,
-        "pending": 1,
-        "settled": 37,
-        "paired": 37,
+        "pending": 0,
+        "settled": 38,
+        "paired": 38,
         "missing_candidate": 0,
         "excluded_rescheduled": 0,
         "excluded_cancelled": 0,
@@ -162,28 +160,28 @@
         "excluded_future": 0
       },
       "baseline": {
-        "n": 37,
-        "correct": 19,
-        "accuracy": 0.5135135135135135,
-        "rps": 0.20712489398185727,
-        "brier": 0.5801975414916349,
-        "log_loss": 0.9752800688508269
+        "n": 38,
+        "correct": 20,
+        "accuracy": 0.5263157894736842,
+        "rps": 0.20463979364104395,
+        "brier": 0.5723359274272531,
+        "log_loss": 0.964524087110219
       },
       "paired_baseline": {
-        "n": 37,
-        "correct": 19,
-        "accuracy": 0.5135135135135135,
-        "rps": 0.20712489398185727,
-        "brier": 0.5801975414916349,
-        "log_loss": 0.9752800688508269
+        "n": 38,
+        "correct": 20,
+        "accuracy": 0.5263157894736842,
+        "rps": 0.20463979364104395,
+        "brier": 0.5723359274272531,
+        "log_loss": 0.964524087110219
       },
       "candidate": {
-        "n": 37,
-        "correct": 19,
-        "accuracy": 0.5135135135135135,
-        "rps": 0.2514336587947172,
-        "brier": 0.6745942900201815,
-        "log_loss": 1.2031348394758152
+        "n": 38,
+        "correct": 20,
+        "accuracy": 0.5263157894736842,
+        "rps": 0.2462445789639113,
+        "brier": 0.6621486986489686,
+        "log_loss": 1.1819558494288664
       },
       "f2": {
         "n": 0,
@@ -195,9 +193,7 @@
         "correct": 0,
         "accuracy": null
       },
-      "pending_statuses": {
-        "unobserved": 1
-      }
+      "pending_statuses": {}
     }
   ],
   "training_evidence": [
@@ -207,9 +203,9 @@
     "scope": "locally discovered target fixtures only; source completeness is not established",
     "known_tracked_fixtures": 59,
     "unresolved_fixtures": 0,
-    "closed_windows": 82,
+    "closed_windows": 90,
     "covered_windows": 73,
-    "missing_windows": 9,
+    "missing_windows": 17,
     "missing_baseline_windows": 0,
     "late_discovered_windows": 18,
     "unknown_discovery_windows": 0,
