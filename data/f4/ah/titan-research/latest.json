@@ -1,14 +1,14 @@
 {
   "schema_version": "f4-ah-titan-opening-v1",
   "status": "insufficient_data",
-  "created_at": "2026-11-08T09:45:19.279278+00:00",
+  "created_at": "2026-11-08T09:49:39.641553+00:00",
   "weight": 0,
   "auto_promote": false,
-  "input_rows": 0,
-  "accepted_matches": 0,
+  "input_rows": 1,
+  "accepted_matches": 1,
   "rejected_rows": [],
   "duplicate_snapshots_removed": 0,
-  "data_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "data_sha256": "3c665edde9738dd6c2a31e477e2de6bd894466a1e69b6801cc415bbe6cc38da6",
   "minimum_samples": {
     "train": 120,
     "validation": 40,
@@ -20,10 +20,12 @@
       "validation": 0
     },
     "train": {
-      "count": 0,
-      "match_ids": [],
-      "kickoff_from": null,
-      "kickoff_to": null
+      "count": 1,
+      "match_ids": [
+        "espn:401879242"
+      ],
+      "kickoff_from": "2026-11-06T20:00:00Z",
+      "kickoff_to": "2026-11-06T20:00:00Z"
     },
     "validation": {
       "count": 0,
@@ -44,7 +46,7 @@
       "weight": 0,
       "reason": "insufficient chronological samples with required features",
       "counts": {
-        "train": 0,
+        "train": 1,
         "validation": 0,
         "test": 0
       },
@@ -79,7 +81,7 @@
       "weight": 0,
       "reason": "insufficient chronological samples with required features",
       "counts": {
-        "train": 0,
+        "train": 1,
         "validation": 0,
         "test": 0
       },
@@ -148,9 +150,9 @@
     "target_contract": "the original T15 quote and settlement from the paired row",
     "opening_movement_conversion": false
   },
-  "evaluated_at": "2026-11-08T09:45:19.279278Z",
+  "evaluated_at": "2026-11-08T09:49:39.641553Z",
   "research_month": "2026-11",
-  "dataset_path": "data/f4/ah/titan-research/datasets/4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945.json",
-  "dataset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "dataset_path": "data/f4/ah/titan-research/datasets/256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2.json",
+  "dataset_sha256": "256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2",
   "automatic_promotion": false
 }

@@ -1,22 +1,18 @@
 {
   "version": "f4-ah-titan-opening-v1",
   "experiment_id": "f4-epl-ah-research-v1",
-  "evaluated_at": "2026-11-08T09:45:19.279278Z",
+  "evaluated_at": "2026-11-08T09:49:39.641553Z",
   "indexed_opening_archives": 30,
   "archive_rejections": [],
-  "paired_t15_matches": 38,
-  "eligible_completed_matches": 0,
-  "pending_result_match_ids": [
-    "espn:401879242"
-  ],
+  "paired_t15_matches": 39,
+  "eligible_completed_matches": 1,
+  "pending_result_match_ids": [],
   "t15_opening_availability": {
     "no reconciled Titan opening archive for fixture": 28,
     "Titan opening unavailable at decision time": 10,
     "available_before_decision": 1
   },
-  "pairing_issues": {
-    "awaiting_regulation_result": 1
-  },
+  "pairing_issues": {},
   "rejected": [
     {
       "match_id": "espn:401879268",
@@ -171,20 +167,20 @@
       "reason": "Titan opening unavailable at decision time"
     }
   ],
-  "dataset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-  "dataset_path": "data/f4/ah/titan-research/datasets/4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945.json",
+  "dataset_sha256": "256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2",
+  "dataset_path": "data/f4/ah/titan-research/datasets/256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2.json",
   "model_status": "insufficient_data",
-  "model_evaluated_at": "2026-11-08T09:45:19.279278Z",
-  "model_dataset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-  "model_dataset_path": "data/f4/ah/titan-research/datasets/4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945.json",
+  "model_evaluated_at": "2026-11-08T09:49:39.641553Z",
+  "model_dataset_sha256": "256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2",
+  "model_dataset_path": "data/f4/ah/titan-research/datasets/256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2.json",
   "candidate_counts": {
     "M1": {
-      "train": 0,
+      "train": 1,
       "validation": 0,
       "test": 0
     },
     "M4": {
-      "train": 0,
+      "train": 1,
       "validation": 0,
       "test": 0
     }
