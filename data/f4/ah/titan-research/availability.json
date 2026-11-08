@@ -1,0 +1,201 @@
+{
+  "version": "f4-ah-titan-opening-v1",
+  "experiment_id": "f4-epl-ah-research-v1",
+  "evaluated_at": "2026-11-08T09:45:19.279278Z",
+  "indexed_opening_archives": 30,
+  "archive_rejections": [],
+  "paired_t15_matches": 38,
+  "eligible_completed_matches": 0,
+  "pending_result_match_ids": [
+    "espn:401879242"
+  ],
+  "t15_opening_availability": {
+    "no reconciled Titan opening archive for fixture": 28,
+    "Titan opening unavailable at decision time": 10,
+    "available_before_decision": 1
+  },
+  "pairing_issues": {
+    "awaiting_regulation_result": 1
+  },
+  "rejected": [
+    {
+      "match_id": "espn:401879268",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401878772",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401878775",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401878776",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879265",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401878773",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879264",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879267",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401878771",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401878770",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879259",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879262",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879258",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879260",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879261",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879263",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401878769",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879257",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879253",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879256",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401878768",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879255",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401878767",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401878765",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401878766",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879252",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879254",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401878764",
+      "reason": "no reconciled Titan opening archive for fixture"
+    },
+    {
+      "match_id": "espn:401879248",
+      "reason": "Titan opening unavailable at decision time"
+    },
+    {
+      "match_id": "espn:401878763",
+      "reason": "Titan opening unavailable at decision time"
+    },
+    {
+      "match_id": "espn:401879245",
+      "reason": "Titan opening unavailable at decision time"
+    },
+    {
+      "match_id": "espn:401879247",
+      "reason": "Titan opening unavailable at decision time"
+    },
+    {
+      "match_id": "espn:401879249",
+      "reason": "Titan opening unavailable at decision time"
+    },
+    {
+      "match_id": "espn:401879251",
+      "reason": "Titan opening unavailable at decision time"
+    },
+    {
+      "match_id": "espn:401878761",
+      "reason": "Titan opening unavailable at decision time"
+    },
+    {
+      "match_id": "espn:401879250",
+      "reason": "Titan opening unavailable at decision time"
+    },
+    {
+      "match_id": "espn:401879246",
+      "reason": "Titan opening unavailable at decision time"
+    },
+    {
+      "match_id": "espn:401878762",
+      "reason": "Titan opening unavailable at decision time"
+    }
+  ],
+  "dataset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "dataset_path": "data/f4/ah/titan-research/datasets/4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945.json",
+  "model_status": "insufficient_data",
+  "model_evaluated_at": "2026-11-08T09:45:19.279278Z",
+  "model_dataset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "model_dataset_path": "data/f4/ah/titan-research/datasets/4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945.json",
+  "candidate_counts": {
+    "M1": {
+      "train": 0,
+      "validation": 0,
+      "test": 0
+    },
+    "M4": {
+      "train": 0,
+      "validation": 0,
+      "test": 0
+    }
+  },
+  "minimum_samples": {
+    "train": 120,
+    "validation": 40,
+    "test": 40
+  },
+  "feature_contract": "source_native_Crown_opening_covariates_available_before_T15",
+  "quote_timezone_verified": false,
+  "decimal_conversion_performed": false,
+  "automatic_promotion": false
+}

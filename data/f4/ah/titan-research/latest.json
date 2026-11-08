@@ -1,0 +1,156 @@
+{
+  "schema_version": "f4-ah-titan-opening-v1",
+  "status": "insufficient_data",
+  "created_at": "2026-11-08T09:45:19.279278+00:00",
+  "weight": 0,
+  "auto_promote": false,
+  "input_rows": 0,
+  "accepted_matches": 0,
+  "rejected_rows": [],
+  "duplicate_snapshots_removed": 0,
+  "data_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "minimum_samples": {
+    "train": 120,
+    "validation": 40,
+    "test": 40
+  },
+  "split": {
+    "purged": {
+      "train": 0,
+      "validation": 0
+    },
+    "train": {
+      "count": 0,
+      "match_ids": [],
+      "kickoff_from": null,
+      "kickoff_to": null
+    },
+    "validation": {
+      "count": 0,
+      "match_ids": [],
+      "kickoff_from": null,
+      "kickoff_to": null
+    },
+    "test": {
+      "count": 0,
+      "match_ids": [],
+      "kickoff_from": null,
+      "kickoff_to": null
+    }
+  },
+  "candidates": {
+    "M1": {
+      "status": "insufficient_data",
+      "weight": 0,
+      "reason": "insufficient chronological samples with required features",
+      "counts": {
+        "train": 0,
+        "validation": 0,
+        "test": 0
+      },
+      "feature_names": [
+        "home_handicap",
+        "absolute_handicap",
+        "quarter_fraction",
+        "home_log_price",
+        "away_log_price",
+        "ah_price_share_home",
+        "ah_reciprocal_sum_minus_one",
+        "log_p_home",
+        "log_p_draw",
+        "log_p_away",
+        "handicap_x_log_home_away",
+        "book_crown",
+        "book_macau",
+        "book_hkjc",
+        "book_sbobet"
+      ],
+      "missing_features": {
+        "train": [],
+        "validation": [],
+        "test": []
+      },
+      "model": null,
+      "validation": null,
+      "test": null
+    },
+    "M4": {
+      "status": "insufficient_data",
+      "weight": 0,
+      "reason": "insufficient chronological samples with required features",
+      "counts": {
+        "train": 0,
+        "validation": 0,
+        "test": 0
+      },
+      "feature_names": [
+        "home_handicap",
+        "absolute_handicap",
+        "quarter_fraction",
+        "home_log_price",
+        "away_log_price",
+        "ah_price_share_home",
+        "ah_reciprocal_sum_minus_one",
+        "log_p_home",
+        "log_p_draw",
+        "log_p_away",
+        "handicap_x_log_home_away",
+        "book_crown",
+        "book_macau",
+        "book_hkjc",
+        "book_sbobet",
+        "titan_opening_home_handicap",
+        "titan_opening_absolute_handicap",
+        "titan_opening_home_water_native",
+        "titan_opening_away_water_native"
+      ],
+      "missing_features": {
+        "train": [],
+        "validation": [],
+        "test": []
+      },
+      "model": null,
+      "validation": null,
+      "test": null
+    }
+  },
+  "limitations": [
+    "provenance and availability declarations require independent audit",
+    "historical evaluation is not a saved prospective forecast",
+    "repeated testing of the same holdout cannot establish a fresh improvement",
+    "candidates remain zero-weight; no automatic promotion"
+  ],
+  "selection_metric": "validation_positive_return_direction_hit_rate",
+  "selection_policy": {
+    "version": "positive-return-hit-v1",
+    "tie_rule": "log_loss_then_grid_order",
+    "log_loss_guardrail": 0.01,
+    "brier_guardrail": 0.02,
+    "settlement_rps_guardrail": 0.005,
+    "guardrail_unit": "absolute_score_difference; exploratory_predeclared_tolerances",
+    "guardrail_reference": "lowest_validation_log_loss_in_the_same_regularization_grid",
+    "training_objective": "regularized_settlement_log_loss",
+    "pushes_in_denominator": true,
+    "split_unit": "UTC_Monday_week",
+    "snapshot_policy": "earliest_eligible_per_fixture",
+    "ah_price_share_is_not_win_probability": true
+  },
+  "regularization_grid": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "common_test_comparisons": {},
+  "opening_feature_policy": {
+    "version": "titan-native-opening-asof-v1",
+    "availability": "immutable capture at or before each decision, strictly before kickoff",
+    "water_scale": "Titan raw displayed numeric values",
+    "target_contract": "the original T15 quote and settlement from the paired row",
+    "opening_movement_conversion": false
+  },
+  "evaluated_at": "2026-11-08T09:45:19.279278Z",
+  "research_month": "2026-11",
+  "dataset_path": "data/f4/ah/titan-research/datasets/4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945.json",
+  "dataset_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "automatic_promotion": false
+}
