@@ -29,6 +29,13 @@ jobs:
         run: python -m unittest discover -s engine/titan_history -p 'test_titan_*.py'
       - name: Read and archive source-reported history
         run: python engine/titan_history/titan_daily.py --root .
+      - name: Verify opening training and frozen decision contracts
+        run: python -m pytest engine/tests/test_f4_titan*.py engine/tests/test_titan_training.py -q
+      - name: Verify existing f4 workflows on manual acceptance
+        if: github.event_name == 'workflow_dispatch'
+        run: python -m pytest engine/tests/test_f4*.py -q
+      - name: Join completed fixtures and update opening research
+        run: python engine/scripts/f4_titan_research.py --root .
       - name: Save research records
         if: always()
         run: python engine/scripts/f4_watch.py --save-only
@@ -37,6 +44,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: f4-titan-history-${{ github.run_id }}
-          path: data/f4/titan-history/
+          path: |
+            data/f4/titan-history/
+            data/f4/ah/titan-research/
           if-no-files-found: warn
           retention-days: 14

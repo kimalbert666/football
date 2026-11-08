@@ -22,6 +22,7 @@ from scipy.special import logsumexp
 
 
 SCHEMA_VERSION = "f4-ah-research-v2"
+TITAN_SCHEMA_VERSION = "f4-ah-titan-opening-v1"
 CLASSES = ("full_win", "half_win", "push", "half_loss", "full_loss")
 CANDIDATES = ("M1", "M2", "M3")
 REGULARIZATION_GRID = (0.1, 1.0, 10.0)
@@ -41,6 +42,10 @@ FEATURES = {
         "fixed_line_home_handicap", "certified_main_handicap_change",
         "certified_main_movement_available", "home_log_price_change",
         "away_log_price_change", "elapsed_quote_hours",
+    ),
+    "M4": BASE_FEATURES + (
+        "titan_opening_home_handicap", "titan_opening_absolute_handicap",
+        "titan_opening_home_water_native", "titan_opening_away_water_native",
     ),
 }
 
@@ -167,7 +172,7 @@ def _validate_base(row, *, settled=False, now=None):
 
 
 def _features(row, candidate):
-    if candidate not in CANDIDATES:
+    if candidate not in FEATURES:
         raise ValueError("unknown candidate")
     observed, _ = _validate_base(row)
     h = _line(row["home_handicap"])
@@ -224,6 +229,12 @@ def _features(row, candidate):
             raise ValueError("main handicap movement magnitude conflicts with certified lines")
         values.extend([early_line, main_change, float(available), math.log(oh / eh),
                        math.log(oa / ea), (observed - when).total_seconds() / 3600])
+    if candidate == "M4":
+        from f4_titan_features import validate_feature_record
+        opening = validate_feature_record(row.get("titan_opening"), row)
+        line = _line(opening["opening_home_handicap"])
+        values.extend([line, abs(line), opening["opening_home_water_raw"],
+                       opening["opening_away_water_raw"]])
     if not all(math.isfinite(x) for x in values):
         raise ValueError("non-finite feature")
     return values
@@ -299,7 +310,10 @@ def _side_output(probabilities, price):
 def predict(model, row):
     """Generate a shadow prediction only when the frozen model already existed."""
     observed, _ = _validate_base(row)
-    if not isinstance(model, dict) or model.get("schema_version") != SCHEMA_VERSION:
+    if not isinstance(model, dict):
+        raise ValueError("unsupported model schema")
+    allowed = {SCHEMA_VERSION: CANDIDATES, TITAN_SCHEMA_VERSION: ("M1", "M4")}
+    if model.get("candidate_id") not in allowed.get(model.get("schema_version"), ()):
         raise ValueError("unsupported model schema")
     if _time(model.get("created_at")) > observed:
         raise ValueError("model did not exist at observation time")
@@ -389,9 +403,13 @@ def _split(rows):
     return parts, purged
 
 
-def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, min_test=40):
+def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, min_test=40,
+             candidate_ids=None):
     """Fit M1 market, M2 market+ratings, M3 market+real earlier-price movement.
 
+    The opt-in M1/M4 experiment adds source-native Titan opening fields captured
+    by each decision. The water values remain covariates in Titan's own scale;
+    settlement and EV still use the independently captured decision contract.
     Requires one 90-minute result per match and strict availability timestamps.
     Uses chronological 60/20/20 UTC weeks, training-only feature scaling,
     validation-only hit-rate choice with a fixed log-loss guardrail, then an
@@ -399,6 +417,13 @@ def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, 
     Model creation time is the actual supplied research clock, not backdated.
     """
     now = _time(now) if now is not None else datetime.now(timezone.utc)
+    selected_candidates = CANDIDATES if candidate_ids is None else tuple(candidate_ids)
+    if (not selected_candidates or len(set(selected_candidates)) != len(selected_candidates)
+            or any(candidate not in FEATURES for candidate in selected_candidates)):
+        raise ValueError("unique supported candidate IDs required")
+    if "M4" in selected_candidates and selected_candidates != ("M1", "M4"):
+        raise ValueError("Titan opening experiment requires the fixed M1/M4 comparison")
+    schema_version = TITAN_SCHEMA_VERSION if "M4" in selected_candidates else SCHEMA_VERSION
     minimums = {"train": min_train, "validation": min_validation, "test": min_test}
     if any(type(n) is not int or n < 1 for n in minimums.values()):
         raise ValueError("minimum sample sizes must be positive integers")
@@ -429,7 +454,7 @@ def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, 
     unique.sort(key=lambda r: (_time(r["kickoff_at"]), r["match_id"]))
     parts, purged = _split(unique)
     report = {
-        "schema_version": SCHEMA_VERSION, "status": "insufficient_data",
+        "schema_version": schema_version, "status": "insufficient_data",
         "created_at": now.isoformat(), "weight": 0, "auto_promote": False,
         "input_rows": len(rows), "accepted_matches": len(unique), "rejected_rows": rejected,
         "duplicate_snapshots_removed": duplicates, "data_sha256": _digest(unique),
@@ -457,7 +482,7 @@ def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, 
                                    "kickoff_from": part[0]["kickoff_at"] if part else None,
                                    "kickoff_to": part[-1]["kickoff_at"] if part else None}
     candidate_rows = {}
-    for candidate in CANDIDATES:
+    for candidate in selected_candidates:
         eligible, missing = {}, {}
         for name, part in parts.items():
             eligible[name], missing[name] = [], []
@@ -494,7 +519,7 @@ def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, 
                 validation[index]["log_loss"], index))
             model = models[best]
             used = eligible["train"] + eligible["validation"]
-            model.update({"schema_version": SCHEMA_VERSION, "created_at": now.isoformat(),
+            model.update({"schema_version": schema_version, "created_at": now.isoformat(),
                           "trained_through": max(_time(r["settled_at"]) for r in used).isoformat(),
                           "training_data_sha256": _digest(eligible["train"]),
                           "selection_data_sha256": _digest(eligible["validation"]),
@@ -512,6 +537,14 @@ def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, 
         except (ValueError, FloatingPointError, OverflowError) as exc:
             result.update({"status": "fit_failed", "reason": str(exc)})
     report["common_test_comparisons"] = _common_test_comparisons(report, candidate_rows, parts["test"])
+    if "M4" in selected_candidates:
+        report["opening_feature_policy"] = {
+            "version": "titan-native-opening-asof-v1",
+            "availability": "immutable capture at or before each decision, strictly before kickoff",
+            "water_scale": "Titan raw displayed numeric values",
+            "target_contract": "the original T15 quote and settlement from the paired row",
+            "opening_movement_conversion": False,
+        }
     # Serialize strictly before writing: NaN/Infinity cannot silently enter a ledger.
     serialized = json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
     if output_dir is not None:
@@ -524,7 +557,7 @@ def research(rows, output_dir=None, now=None, min_train=120, min_validation=40, 
 def _common_test_comparisons(report, candidate_rows, test_rows):
     """Evaluate fitted candidates on identical test fixtures, never select here."""
     from f4_ah_metrics import paired_week_bootstrap
-    fitted = [key for key in CANDIDATES if report["candidates"][key]["model"]]
+    fitted = [key for key in candidate_rows if report["candidates"][key]["model"]]
     sets = list(combinations(fitted, 2))
     if len(fitted) > 2:
         sets.append(tuple(fitted))

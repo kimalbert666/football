@@ -338,6 +338,11 @@ def render_ah(summary, *, include_price_venue=True):
              '- 候选M1盘口与水位、M2实力与盘口差异、M3盘口变化；缺样本或特征时不训练、不虚构命中率。\n')
     for key, item in summary.get('research', {}).get('candidates', {}).items():
         text += f"- {key}：{item.get('status', 'unknown')}。\n"
+    titan = summary.get('titan_research')
+    if titan:
+        text += (f"- 初盘候选M4已完成赛果配对且特征合格{titan.get('eligible_completed_matches', 0)}场，"
+                 f"待赛果{len(titan.get('pending_result_match_ids', []))}场，模型状态{titan.get('model_status')}。\n"
+                 f"- 初盘接入统计更新于{titan.get('evaluated_at')}；训练、验证、测试最低120／40／40场。\n")
     coverage = summary.get('window_coverage', {})
     if coverage:
         text += (f"\n本次来源检查涉及{coverage['fixtures']}场，逐窗口对账如下；"
@@ -380,6 +385,7 @@ def run_ah(root, fixtures, command, *, clock, source=None):
     from f4_early_scout import load_early_observations
     from f4_strength import ratings_for_fixture
     from f4_context import context_for_fixture
+    from f4_titan_features import TitanOpeningIndex
     source = source or attach_asian_handicap
     now, old = clock(), load_observations(root)
     valid_keys = {identity(r) for r in old if r.get('quote')}
@@ -401,6 +407,8 @@ def run_ah(root, fixtures, command, *, clock, source=None):
         bundle = {**previous_source, 'markets': {}}
     outcomes = load_latest_outcomes(root)
     model_report = read(root / 'data/f4/ah/research/latest.json', {})
+    titan_index = TitanOpeningIndex.from_root(root)
+    titan_report = read(root / 'data/f4/ah/titan-research/latest.json', {})
     new_valid, new_attempts = 0, 0
     enrichment_issues = []
     try:
@@ -454,10 +462,17 @@ def run_ah(root, fixtures, command, *, clock, source=None):
                    provenance={'kind': 'prospective_capture', 'market': '90min_asian_handicap',
                                'source': quote.get('url') if quote else None}, candidates={})
         if quote:
+            titan_feature, titan_reason = titan_index.select(row)
+            row['titan_opening'] = titan_feature
+            row['titan_opening_availability'] = titan_reason
             prediction_input = {**row, 'home_handicap': quote['home_handicap'], 'odds': quote['odds']}
-            for key, candidate in model_report.get('candidates', {}).items():
+            candidates = [(key, candidate, model_report) for key, candidate in model_report.get('candidates', {}).items()]
+            if horizon == 'T-15m' and titan_feature:
+                candidates += [('TITAN_M1' if key == 'M1' else key, candidate, titan_report)
+                               for key, candidate in titan_report.get('candidates', {}).items()]
+            for key, candidate, report in candidates:
                 model = candidate.get('model')
-                if not model or instant(model_report['evaluated_at']) >= decision:
+                if not model or instant(report['evaluated_at']) >= decision:
                     continue
                 try:
                     prediction = predict(model, prediction_input)
@@ -496,6 +511,7 @@ def run_ah(root, fixtures, command, *, clock, source=None):
                'valid_observations': sum(r.get('quote') is not None for r in old),
                'distinct_matches': len({r['match_id'] for r in old if r.get('quote')}),
                'paired_matches': len(paired), 'pairing_issues': pairing_issues,
+               'titan_research': read(root / 'data/f4/ah/titan-research/availability.json', {}),
                'line_groups': grouped_results(paired), 'prospective_scores': prospective_scores(paired), 'research': model_report,
                'price_venue_diagnostics': price_venue_diagnostics(paired),
                'enrichment_issues': enrichment_issues,
