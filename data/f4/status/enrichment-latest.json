@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-08T09:47:47.777715Z",
+  "checked_at": "2026-11-10T01:03:03.133509Z",
   "status": "checked",
   "sources": {
     "strength": {
@@ -50,47 +50,37 @@
         ]
       },
       "metadata_source": {
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261108",
-        "captured_at": "2026-11-08T09:47:47.823861Z",
-        "content_sha256": "b61354c41715dd62e203ef693f0d4c0bc029ab69532b047b7bf35f618a51f508"
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261110",
+        "captured_at": "2026-11-10T01:03:03.185585Z",
+        "content_sha256": "28de657f9e31d788ecea3c3722ace7a814388ca4028c6209cf1e8477d4107629"
       },
-      "observed_at": "2026-11-08T09:47:47.977424Z",
+      "observed_at": "2026-11-10T01:03:03.744713Z",
       "requested_dates": 32,
       "verified_dates": 32,
       "missing_dates": [],
-      "snapshot_path": "data/f4/strength/snapshots/cd68b1361d81b50fa1c378a8fbd5a7b7a3e50ce5c8dd2073d0faab3ab1801cc1.json",
-      "snapshot_sha256": "cd68b1361d81b50fa1c378a8fbd5a7b7a3e50ce5c8dd2073d0faab3ab1801cc1",
-      "result_count": 95,
+      "snapshot_path": "data/f4/strength/snapshots/7ecda39e8d702a2245eed39925e5ecc8ac2f3d40c61117265599e6524115f4a3.json",
+      "snapshot_sha256": "7ecda39e8d702a2245eed39925e5ecc8ac2f3d40c61117265599e6524115f4a3",
+      "result_count": 100,
       "teams": 20,
       "teams_with_five_games": 20,
-      "requested_fixtures": 10,
-      "rated_requested_fixtures": 10
+      "requested_fixtures": 0,
+      "rated_requested_fixtures": 0
     },
     "context": {
       "schema": "f4-prematch-context-observed-v1",
       "status": "ready",
-      "observed_at": "2026-11-08T09:47:50.823105Z",
+      "observed_at": "2026-11-10T01:03:04.662000Z",
       "season_year": 2026,
-      "snapshot_sha256": "bb692da3aff71c5d8a84416647250be39795b21166d7f2526dd1d25b95cbe250",
-      "snapshot_path": "data/f4/context/snapshots/bb692da3aff71c5d8a84416647250be39795b21166d7f2526dd1d25b95cbe250.json",
+      "snapshot_sha256": "5ac76a0fd42210625063cd458f4243a31feafeba2d96d95826a1a4a0d6db27f2",
+      "snapshot_path": "data/f4/context/snapshots/5ac76a0fd42210625063cd458f4243a31feafeba2d96d95826a1a4a0d6db27f2.json",
       "teams_xg": 0,
       "teams_availability": 20,
-      "teams_club_schedule": 10,
-      "requested_clubs": 10,
+      "teams_club_schedule": 0,
+      "requested_clubs": 0,
       "unresolved_clubs": [],
       "source_statuses": {
         "fpl": "available",
-        "understat": "unavailable",
-        "espn-rest:aston-villa": "available",
-        "espn-rest:bournemouth": "available",
-        "espn-rest:brentford": "available",
-        "espn-rest:brighton": "available",
-        "espn-rest:chelsea": "available",
-        "espn-rest:crystal-palace": "available",
-        "espn-rest:ipswich": "available",
-        "espn-rest:liverpool": "available",
-        "espn-rest:man-united": "available",
-        "espn-rest:sunderland": "available"
+        "understat": "unavailable"
       },
       "problems": [
         "Understat lagged xG missing or unverified: Expecting value: line 1 column 1 (char 0)"
@@ -98,23 +88,10 @@
       "model_feature_status": "context_only_not_used_in_current_M1_M2_M3"
     },
     "first_observed_quotes": {
-      "status": "complete",
-      "checked_at": "2026-11-08T09:47:51.297393Z",
-      "due_fixtures": 4,
-      "new_records": 4,
-      "saved_matches": [
-        "espn:401878759",
-        "espn:401879239",
-        "espn:401879243",
-        "espn:401879244"
-      ],
-      "stored_first_observations": 40,
-      "missing": [],
-      "provider_faults": {},
-      "source_problems": [],
-      "source_policy": "independent_bulk_scout_no_formal_primary_quota",
-      "opening_certified": false
+      "status": "no_unseen_early_fixtures",
+      "new_records": 0,
+      "stored_first_observations": 40
     }
   },
-  "completed_at": "2026-11-08T09:47:51.297841Z"
+  "completed_at": "2026-11-10T01:03:04.668463Z"
 }

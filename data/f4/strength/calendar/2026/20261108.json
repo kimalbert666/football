@@ -1,40 +1,85 @@
 {
   "day": "20261108",
   "events_seen": 5,
-  "pending_results": [
+  "pending_results": [],
+  "record_sha256": "00ab34e7843e5345af4222056479001f1b1a265bf41d789329d1cd83ffc782a2",
+  "results": [
     {
+      "away": "Brentford",
+      "away_id": "brentford",
+      "away_provider_id": "337",
+      "home": "Brighton & Hove Albion",
+      "home_id": "brighton",
+      "home_provider_id": "331",
       "kickoff_at": "2026-11-08T14:00:00Z",
       "match_id": "espn:401879244",
-      "status": "scheduled"
+      "score": [
+        2,
+        0
+      ]
     },
     {
+      "away": "Liverpool",
+      "away_id": "liverpool",
+      "away_provider_id": "364",
+      "home": "Crystal Palace",
+      "home_id": "crystal-palace",
+      "home_provider_id": "384",
       "kickoff_at": "2026-11-08T14:00:00Z",
       "match_id": "espn:401879243",
-      "status": "scheduled"
+      "score": [
+        1,
+        3
+      ]
     },
     {
+      "away": "AFC Bournemouth",
+      "away_id": "bournemouth",
+      "away_provider_id": "349",
+      "home": "Ipswich Town",
+      "home_id": "ipswich",
+      "home_provider_id": "373",
       "kickoff_at": "2026-11-08T14:00:00Z",
       "match_id": "espn:401878759",
-      "status": "scheduled"
+      "score": [
+        1,
+        2
+      ]
     },
     {
+      "away": "Chelsea",
+      "away_id": "chelsea",
+      "away_provider_id": "363",
+      "home": "Sunderland",
+      "home_id": "sunderland",
+      "home_provider_id": "366",
       "kickoff_at": "2026-11-08T14:00:00Z",
       "match_id": "espn:401879239",
-      "status": "scheduled"
+      "score": [
+        1,
+        0
+      ]
     },
     {
+      "away": "Aston Villa",
+      "away_id": "aston-villa",
+      "away_provider_id": "362",
+      "home": "Manchester United",
+      "home_id": "man-united",
+      "home_provider_id": "360",
       "kickoff_at": "2026-11-08T16:30:00Z",
       "match_id": "espn:401879240",
-      "status": "scheduled"
+      "score": [
+        4,
+        4
+      ]
     }
   ],
-  "record_sha256": "f8a961a0d1a96b124b1901566f231fc627a7fb5856d75395f8f4fc6a4caf5370",
-  "results": [],
   "schema": "f4-strength-observed-v1",
   "season_year": 2026,
   "source": {
-    "captured_at": "2026-11-08T09:47:47.933442Z",
-    "content_sha256": "b61354c41715dd62e203ef693f0d4c0bc029ab69532b047b7bf35f618a51f508",
+    "captured_at": "2026-11-10T01:03:03.742518Z",
+    "content_sha256": "c11c93474b68433d1c61291e8d3081afe5113bbfd7f73d052ca2876e7e67f95d",
     "name": "espn",
     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261108&limit=1000"
   }
