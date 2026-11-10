@@ -1,0 +1,29 @@
+name: F4 Scheduler Watchdog
+on:
+  schedule:
+    - cron: '27 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: f4-scheduler-watchdog
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check scheduler recovery contracts
+        run: python -m unittest discover -s engine/tests -p 'test_f4_scheduler.py'
+      - name: Check workers and recover stale tasks
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python engine/scripts/f4_scheduler.py
