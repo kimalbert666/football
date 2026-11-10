@@ -144,8 +144,27 @@ def run(root, command, *, collector=collect, candidate=dc_candidate, f2_fetcher=
             if (instant(record['kickoff_at']) < now
                     and outcomes.get(record['match_id'], {}).get('status') not in ('completed', 'cancelled')):
                 pending[record['match_id']] = record
+        # A missed prediction window must not also lose the final result. The
+        # dated calendar moves forward, so recover unresolved known fixtures
+        # from their independent ESPN IDs even without an AH/T15 snapshot.
+        for path in sorted((root / 'data/f4/fixtures').glob('*.json')):
+            record = read_json(path, {})
+            try:
+                event_id = str(record['source_event_id'])
+                if (record.get('provider') != 'espn' or not event_id.isdigit()
+                        or record.get('match_id') != 'espn:' + event_id
+                        or record.get('league') != config['league']
+                        or not record.get('home_id') or not record.get('away_id')
+                        or record['home_id'] == record['away_id']
+                        or instant(record['kickoff_at']) >= now
+                        or outcomes.get(record['match_id'], {}).get('status') in ('completed', 'cancelled')):
+                    continue
+            except (KeyError, TypeError, ValueError):
+                continue
+            pending.setdefault(record['match_id'], record)
     if capture or settle:
-        bundle = collector(root, now, include_market=capture and not prioritize_ah, pending=list(pending.values()),
+        pending_rows = sorted(pending.values(), key=lambda r: instant(r['kickoff_at']), reverse=True)
+        bundle = collector(root, now, include_market=capture and not prioritize_ah, pending=pending_rows,
                            lookahead_days=7 if settle else 1, lookback_days=1 if settle else 0)
     else:
         bundle = read_json(root / 'data/f4/status/sources-latest.json',
