@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-11-10T01:03:03.124312Z",
+  "evaluated_at": "2026-11-10T01:08:56.238743Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 112,
@@ -9,8 +9,8 @@
   "titan_research": {
     "version": "f4-ah-titan-opening-v1",
     "experiment_id": "f4-epl-ah-research-v1",
-    "evaluated_at": "2026-11-08T09:49:39.641553Z",
-    "indexed_opening_archives": 30,
+    "evaluated_at": "2026-11-10T01:04:18.383390Z",
+    "indexed_opening_archives": 35,
     "archive_rejections": [],
     "paired_t15_matches": 39,
     "eligible_completed_matches": 1,
@@ -178,7 +178,7 @@
     "dataset_sha256": "256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2",
     "dataset_path": "data/f4/ah/titan-research/datasets/256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2.json",
     "model_status": "insufficient_data",
-    "model_evaluated_at": "2026-11-08T09:49:39.641553Z",
+    "model_evaluated_at": "2026-11-10T01:04:18.383390Z",
     "model_dataset_sha256": "256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2",
     "model_dataset_path": "data/f4/ah/titan-research/datasets/256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2.json",
     "candidate_counts": {
@@ -5283,15 +5283,15 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-11-10T01:03:02.182282Z",
+      "captured_at": "2026-11-10T01:08:54.905307Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-11-10T01:03:02.708607Z",
-      "content_sha256": "5493ed44905d591e38ba5733c67950e4fce11c15f7949e51c660748606190bcd"
+      "captured_at": "2026-11-10T01:08:55.521176Z",
+      "content_sha256": "0c22a2bb69f76c375a15b07db7757f0cc91d0d3d5b595705edb0980cd9b27e9f"
     },
     {
       "name": "infersports-crown-ah-quotes",
@@ -5302,9 +5302,9 @@
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-11-10T01:03:03.098373Z",
-      "response_at": "2026-11-10T01:03:03Z",
-      "content_sha256": "b363b611899304a53bef3bf50034f9651b2d50edde03813c54b482573ef5ae6a",
+      "captured_at": "2026-11-10T01:08:56.199117Z",
+      "response_at": "2026-11-10T01:08:56Z",
+      "content_sha256": "18d9564f5e7fd111eb62ab9e4e7a091c45c1b427050ef38f648a08f7391add1b",
       "match_count": 42,
       "epl_match_count": 0
     }
@@ -5316,19 +5316,25 @@
   "primary_provider_health": {
     "status": "ok",
     "feed_live": true,
-    "as_of": "2026-11-10T01:02:54Z",
+    "as_of": "2026-11-10T01:08:46Z",
     "as_of_stale": false,
-    "checked_at": "2026-11-10T01:03:02.708607Z"
+    "checked_at": "2026-11-10T01:08:55.521176Z"
   },
   "fallback_matches": [],
   "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 0,
+    "fixtures": 5,
     "windows": {
-      "T-180m": {},
-      "T-60m": {},
-      "T-15m": {}
+      "T-180m": {
+        "missed_window": 5
+      },
+      "T-60m": {
+        "missed_window": 5
+      },
+      "T-15m": {
+        "missed_window": 5
+      }
     }
   },
   "research_only": true,
