@@ -1,42 +1,42 @@
 {
   "schema": "f4-titan-history-daily-v1",
-  "started_at_utc": "2026-11-11T06:58:39.849170+00:00",
+  "started_at_utc": "2026-11-12T07:35:56.378192+00:00",
   "scope": "archived independent EPL fixtures within past/future seven days",
   "fixture_source": "existing ESPN fixture archive",
   "sources": [
     {
       "url": "https://bf.titan007.com/football/Next_20261106.htm",
-      "checked_at_utc": "2026-11-11T06:58:39.851531+00:00",
+      "checked_at_utc": "2026-11-12T07:35:56.380023+00:00",
       "status": "ok",
       "http_status": 200,
-      "captured_at_utc": "2026-11-11T06:58:41.222522+00:00",
+      "captured_at_utc": "2026-11-12T07:35:57.758656+00:00",
       "candidate_count": 1,
       "content_sha256": "09211e1f2fd735e138d6cbff31cf2f9da98df496913fc42b420f95e497a5339b"
     },
     {
       "url": "https://bf.titan007.com/football/Next_20261107.htm",
-      "checked_at_utc": "2026-11-11T06:58:41.222750+00:00",
+      "checked_at_utc": "2026-11-12T07:35:57.758850+00:00",
       "status": "ok",
       "http_status": 200,
-      "captured_at_utc": "2026-11-11T06:58:43.199678+00:00",
+      "captured_at_utc": "2026-11-12T07:35:59.306493+00:00",
       "candidate_count": 4,
       "content_sha256": "87493d27a179390990d6c02ae4fe785c058540ec6578724840af4c6abb1031ae"
     },
     {
       "url": "https://bf.titan007.com/football/Next_20261108.htm",
-      "checked_at_utc": "2026-11-11T06:58:43.200350+00:00",
+      "checked_at_utc": "2026-11-12T07:35:59.307065+00:00",
       "status": "ok",
       "http_status": 200,
-      "captured_at_utc": "2026-11-11T06:58:44.993046+00:00",
+      "captured_at_utc": "2026-11-12T07:36:01.160465+00:00",
       "candidate_count": 5,
       "content_sha256": "d5f2c45fb7c69a80f415e1f8a2efff2f3be2e53662cebabce8014704c50e0e00"
     },
     {
       "url": "https://bf.titan007.com/football/Next_20261109.htm",
-      "checked_at_utc": "2026-11-11T06:58:44.993609+00:00",
+      "checked_at_utc": "2026-11-12T07:36:01.160952+00:00",
       "status": "ok",
       "http_status": 200,
-      "captured_at_utc": "2026-11-11T06:58:45.997287+00:00",
+      "captured_at_utc": "2026-11-12T07:36:02.834395+00:00",
       "candidate_count": 0,
       "content_sha256": "b6ecdcac88d0dd0d19cd18f0dae36e8598dda98b29820a5960d292fe5d9e8f9f"
     }
@@ -369,7 +369,7 @@
   "bookmaker_first_opening_certified": false,
   "targets": [],
   "results": [],
-  "finished_at_utc": "2026-11-11T06:58:45.998860+00:00",
+  "finished_at_utc": "2026-11-12T07:36:02.851232+00:00",
   "planned": 0,
   "reconciled": 0,
   "deferred_by_daily_budget": 0
