@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-11T02:59:50.502807Z",
+  "checked_at": "2026-11-12T01:29:54.495135Z",
   "status": "checked",
   "sources": {
     "strength": {
@@ -50,16 +50,16 @@
         ]
       },
       "metadata_source": {
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261111",
-        "captured_at": "2026-11-11T02:59:50.670761Z",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261112",
+        "captured_at": "2026-11-12T01:29:54.601131Z",
         "content_sha256": "28de657f9e31d788ecea3c3722ace7a814388ca4028c6209cf1e8477d4107629"
       },
-      "observed_at": "2026-11-11T02:59:50.699421Z",
+      "observed_at": "2026-11-12T01:29:54.615347Z",
       "requested_dates": 32,
       "verified_dates": 32,
       "missing_dates": [],
-      "snapshot_path": "data/f4/strength/snapshots/ddd1e6b1833fbb60363fcb5bcae5f36be162ca1754c2ea0833cf462077e69873.json",
-      "snapshot_sha256": "ddd1e6b1833fbb60363fcb5bcae5f36be162ca1754c2ea0833cf462077e69873",
+      "snapshot_path": "data/f4/strength/snapshots/26570a3da98b2d8a6fa228720aed1c8a294dc4153f7fa6904cae4570d4b55e78.json",
+      "snapshot_sha256": "26570a3da98b2d8a6fa228720aed1c8a294dc4153f7fa6904cae4570d4b55e78",
       "result_count": 100,
       "teams": 20,
       "teams_with_five_games": 20,
@@ -69,10 +69,10 @@
     "context": {
       "schema": "f4-prematch-context-observed-v1",
       "status": "ready",
-      "observed_at": "2026-11-11T02:59:51.518874Z",
+      "observed_at": "2026-11-12T01:29:55.471473Z",
       "season_year": 2026,
-      "snapshot_sha256": "32b463dd177db92a2e3b2554a17ef83a5dd88ec166eab6288fac9e57ab609dc8",
-      "snapshot_path": "data/f4/context/snapshots/32b463dd177db92a2e3b2554a17ef83a5dd88ec166eab6288fac9e57ab609dc8.json",
+      "snapshot_sha256": "95a1bb3dca8b4eeb60a750bb72db77176b3761f2ec08910e248c1a9968bd8fa3",
+      "snapshot_path": "data/f4/context/snapshots/95a1bb3dca8b4eeb60a750bb72db77176b3761f2ec08910e248c1a9968bd8fa3.json",
       "teams_xg": 0,
       "teams_availability": 20,
       "teams_club_schedule": 0,
@@ -93,5 +93,5 @@
       "stored_first_observations": 40
     }
   },
-  "completed_at": "2026-11-11T02:59:51.523791Z"
+  "completed_at": "2026-11-12T01:29:55.476580Z"
 }
