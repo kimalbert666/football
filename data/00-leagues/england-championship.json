@@ -1,126 +1,195 @@
 {
   "league": "england-championship",
   "season": "2026-27",
-  "generatedAt": "2026-10-31",
-  "roundsPlayed": 80,
+  "generatedAt": "2026-11-14",
+  "roundsPlayed": 83,
   "standings": [
     {
       "pos": 1,
       "team": "Sheffield United",
-      "played": 80,
-      "won": 42,
+      "played": 83,
+      "won": 44,
       "drawn": 13,
-      "lost": 25,
-      "gf": 113,
-      "ga": 83,
-      "gd": 30,
-      "pts": 139,
-      "form": "LWLWD",
+      "lost": 26,
+      "gf": 118,
+      "ga": 87,
+      "gd": 31,
+      "pts": 145,
+      "form": "WDWWL",
       "homeRecord": {
-        "w": 22,
+        "w": 23,
         "d": 7,
         "l": 10
       },
       "awayRecord": {
-        "w": 20,
+        "w": 21,
         "d": 6,
-        "l": 15
+        "l": 16
       }
     },
     {
       "pos": 2,
       "team": "Middlesbrough",
-      "played": 80,
-      "won": 37,
-      "drawn": 19,
-      "lost": 24,
-      "gf": 124,
-      "ga": 93,
-      "gd": 31,
-      "pts": 130,
-      "form": "DWWDW",
+      "played": 83,
+      "won": 38,
+      "drawn": 20,
+      "lost": 25,
+      "gf": 127,
+      "ga": 95,
+      "gd": 32,
+      "pts": 134,
+      "form": "DWWLD",
       "homeRecord": {
-        "w": 22,
+        "w": 23,
         "d": 11,
         "l": 8
       },
       "awayRecord": {
         "w": 15,
-        "d": 8,
-        "l": 16
+        "d": 9,
+        "l": 17
       }
     },
     {
       "pos": 3,
       "team": "Millwall",
-      "played": 80,
-      "won": 34,
+      "played": 83,
+      "won": 35,
       "drawn": 20,
-      "lost": 26,
-      "gf": 91,
-      "ga": 92,
-      "gd": -1,
-      "pts": 122,
-      "form": "DWLDL",
+      "lost": 28,
+      "gf": 95,
+      "ga": 99,
+      "gd": -4,
+      "pts": 125,
+      "form": "DLWLL",
       "homeRecord": {
-        "w": 22,
+        "w": 23,
         "d": 7,
         "l": 13
       },
       "awayRecord": {
         "w": 12,
         "d": 13,
-        "l": 13
+        "l": 15
       }
     },
     {
       "pos": 4,
       "team": "Bristol City",
-      "played": 80,
-      "won": 31,
+      "played": 83,
+      "won": 32,
       "drawn": 25,
-      "lost": 24,
-      "gf": 104,
-      "ga": 92,
-      "gd": 12,
-      "pts": 118,
-      "form": "WDLLD",
+      "lost": 26,
+      "gf": 108,
+      "ga": 101,
+      "gd": 7,
+      "pts": 121,
+      "form": "LDWLL",
       "homeRecord": {
         "w": 20,
         "d": 10,
-        "l": 11
+        "l": 13
       },
       "awayRecord": {
-        "w": 11,
+        "w": 12,
         "d": 15,
         "l": 13
       }
     },
     {
       "pos": 5,
-      "team": "Swansea",
-      "played": 80,
-      "won": 33,
-      "drawn": 16,
-      "lost": 31,
-      "gf": 91,
+      "team": "West Brom",
+      "played": 83,
+      "won": 31,
+      "drawn": 26,
+      "lost": 26,
+      "gf": 105,
       "ga": 92,
-      "gd": -1,
-      "pts": 115,
-      "form": "WWWLL",
+      "gd": 13,
+      "pts": 119,
+      "form": "WDWDW",
       "homeRecord": {
-        "w": 19,
+        "w": 20,
+        "d": 14,
+        "l": 7
+      },
+      "awayRecord": {
+        "w": 11,
+        "d": 12,
+        "l": 19
+      }
+    },
+    {
+      "pos": 6,
+      "team": "Swansea",
+      "played": 83,
+      "won": 34,
+      "drawn": 16,
+      "lost": 33,
+      "gf": 97,
+      "ga": 97,
+      "gd": 0,
+      "pts": 118,
+      "form": "LLWLL",
+      "homeRecord": {
+        "w": 20,
         "d": 11,
         "l": 11
       },
       "awayRecord": {
         "w": 14,
         "d": 5,
+        "l": 22
+      }
+    },
+    {
+      "pos": 7,
+      "team": "QPR",
+      "played": 83,
+      "won": 30,
+      "drawn": 24,
+      "lost": 29,
+      "gf": 110,
+      "ga": 112,
+      "gd": -2,
+      "pts": 114,
+      "form": "LWLDW",
+      "homeRecord": {
+        "w": 17,
+        "d": 13,
+        "l": 11
+      },
+      "awayRecord": {
+        "w": 13,
+        "d": 11,
+        "l": 18
+      }
+    },
+    {
+      "pos": 8,
+      "team": "Stoke",
+      "played": 83,
+      "won": 31,
+      "drawn": 21,
+      "lost": 31,
+      "gf": 92,
+      "ga": 99,
+      "gd": -7,
+      "pts": 114,
+      "form": "WDWWW",
+      "homeRecord": {
+        "w": 17,
+        "d": 12,
+        "l": 11
+      },
+      "awayRecord": {
+        "w": 14,
+        "d": 9,
         "l": 20
       }
     },
     {
-      "pos": 6,
+      "pos": 9,
       "team": "Coventry",
       "played": 68,
       "won": 32,
@@ -143,145 +212,99 @@
       }
     },
     {
-      "pos": 7,
-      "team": "West Brom",
-      "played": 80,
-      "won": 29,
-      "drawn": 25,
-      "lost": 26,
-      "gf": 98,
-      "ga": 90,
-      "gd": 8,
-      "pts": 112,
-      "form": "LLWWD",
-      "homeRecord": {
-        "w": 19,
-        "d": 13,
-        "l": 7
-      },
-      "awayRecord": {
-        "w": 10,
-        "d": 12,
-        "l": 19
-      }
-    },
-    {
-      "pos": 8,
-      "team": "QPR",
-      "played": 80,
+      "pos": 10,
+      "team": "Burnley",
+      "played": 61,
       "won": 29,
       "drawn": 23,
-      "lost": 28,
-      "gf": 106,
-      "ga": 106,
-      "gd": 0,
+      "lost": 9,
+      "gf": 91,
+      "ga": 47,
+      "gd": 44,
       "pts": 110,
-      "form": "DDWLW",
-      "homeRecord": {
-        "w": 16,
-        "d": 12,
-        "l": 11
-      },
-      "awayRecord": {
-        "w": 13,
-        "d": 11,
-        "l": 17
-      }
-    },
-    {
-      "pos": 9,
-      "team": "Burnley",
-      "played": 58,
-      "won": 29,
-      "drawn": 21,
-      "lost": 8,
-      "gf": 86,
-      "ga": 41,
-      "gd": 45,
-      "pts": 108,
-      "form": "DWDLL",
+      "form": "LLDDL",
       "homeRecord": {
         "w": 14,
-        "d": 13,
+        "d": 14,
         "l": 2
       },
       "awayRecord": {
         "w": 15,
-        "d": 8,
-        "l": 6
-      }
-    },
-    {
-      "pos": 10,
-      "team": "Stoke",
-      "played": 80,
-      "won": 28,
-      "drawn": 21,
-      "lost": 31,
-      "gf": 86,
-      "ga": 97,
-      "gd": -11,
-      "pts": 105,
-      "form": "WWLWD",
-      "homeRecord": {
-        "w": 16,
-        "d": 12,
-        "l": 11
-      },
-      "awayRecord": {
-        "w": 12,
         "d": 9,
-        "l": 20
+        "l": 7
       }
     },
     {
       "pos": 11,
       "team": "Blackburn",
-      "played": 79,
-      "won": 28,
+      "played": 82,
+      "won": 29,
       "drawn": 19,
-      "lost": 32,
-      "gf": 90,
-      "ga": 91,
-      "gd": -1,
-      "pts": 103,
-      "form": "DWWLW",
+      "lost": 34,
+      "gf": 93,
+      "ga": 98,
+      "gd": -5,
+      "pts": 106,
+      "form": "LWLLW",
       "homeRecord": {
-        "w": 18,
+        "w": 19,
         "d": 8,
-        "l": 15
+        "l": 16
       },
       "awayRecord": {
         "w": 10,
         "d": 11,
-        "l": 17
+        "l": 18
       }
     },
     {
       "pos": 12,
       "team": "Watford",
-      "played": 78,
-      "won": 28,
-      "drawn": 17,
-      "lost": 33,
-      "gf": 91,
-      "ga": 101,
+      "played": 81,
+      "won": 29,
+      "drawn": 18,
+      "lost": 34,
+      "gf": 94,
+      "ga": 104,
       "gd": -10,
-      "pts": 101,
-      "form": "LLLWL",
+      "pts": 105,
+      "form": "WLLWD",
       "homeRecord": {
-        "w": 22,
-        "d": 8,
+        "w": 23,
+        "d": 9,
         "l": 10
       },
       "awayRecord": {
         "w": 6,
         "d": 9,
-        "l": 23
+        "l": 24
       }
     },
     {
       "pos": 13,
+      "team": "Norwich",
+      "played": 83,
+      "won": 27,
+      "drawn": 20,
+      "lost": 36,
+      "gf": 128,
+      "ga": 122,
+      "gd": 6,
+      "pts": 101,
+      "form": "LWWWW",
+      "homeRecord": {
+        "w": 16,
+        "d": 9,
+        "l": 16
+      },
+      "awayRecord": {
+        "w": 11,
+        "d": 11,
+        "l": 20
+      }
+    },
+    {
+      "pos": 14,
       "team": "Leeds",
       "played": 46,
       "won": 29,
@@ -304,76 +327,76 @@
       }
     },
     {
-      "pos": 14,
+      "pos": 15,
       "team": "Portsmouth",
-      "played": 78,
-      "won": 24,
-      "drawn": 21,
-      "lost": 33,
-      "gf": 90,
-      "ga": 113,
-      "gd": -23,
-      "pts": 93,
-      "form": "LWWDW",
+      "played": 81,
+      "won": 25,
+      "drawn": 22,
+      "lost": 34,
+      "gf": 94,
+      "ga": 116,
+      "gd": -22,
+      "pts": 97,
+      "form": "DWDWL",
       "homeRecord": {
-        "w": 18,
+        "w": 19,
         "d": 10,
-        "l": 12
+        "l": 13
       },
       "awayRecord": {
         "w": 6,
-        "d": 11,
+        "d": 12,
         "l": 21
-      }
-    },
-    {
-      "pos": 15,
-      "team": "Norwich",
-      "played": 80,
-      "won": 24,
-      "drawn": 20,
-      "lost": 36,
-      "gf": 116,
-      "ga": 120,
-      "gd": -4,
-      "pts": 92,
-      "form": "LLLLW",
-      "homeRecord": {
-        "w": 15,
-        "d": 9,
-        "l": 16
-      },
-      "awayRecord": {
-        "w": 9,
-        "d": 11,
-        "l": 20
       }
     },
     {
       "pos": 16,
       "team": "Preston",
-      "played": 80,
-      "won": 20,
+      "played": 83,
+      "won": 21,
       "drawn": 31,
-      "lost": 29,
-      "gf": 88,
-      "ga": 105,
-      "gd": -17,
-      "pts": 91,
-      "form": "DLLLD",
+      "lost": 31,
+      "gf": 91,
+      "ga": 110,
+      "gd": -19,
+      "pts": 94,
+      "form": "LDLLW",
       "homeRecord": {
-        "w": 13,
+        "w": 14,
         "d": 18,
-        "l": 9
+        "l": 10
       },
       "awayRecord": {
         "w": 7,
         "d": 13,
-        "l": 20
+        "l": 21
       }
     },
     {
       "pos": 17,
+      "team": "Derby",
+      "played": 83,
+      "won": 21,
+      "drawn": 23,
+      "lost": 39,
+      "gf": 88,
+      "ga": 115,
+      "gd": -27,
+      "pts": 86,
+      "form": "LDLLW",
+      "homeRecord": {
+        "w": 13,
+        "d": 12,
+        "l": 18
+      },
+      "awayRecord": {
+        "w": 8,
+        "d": 11,
+        "l": 21
+      }
+    },
+    {
+      "pos": 18,
       "team": "Hull",
       "played": 67,
       "won": 22,
@@ -393,29 +416,6 @@
         "w": 11,
         "d": 8,
         "l": 13
-      }
-    },
-    {
-      "pos": 18,
-      "team": "Derby",
-      "played": 80,
-      "won": 20,
-      "drawn": 23,
-      "lost": 37,
-      "gf": 84,
-      "ga": 106,
-      "gd": -22,
-      "pts": 83,
-      "form": "DDLLD",
-      "homeRecord": {
-        "w": 12,
-        "d": 12,
-        "l": 17
-      },
-      "awayRecord": {
-        "w": 8,
-        "d": 11,
-        "l": 20
       }
     },
     {
@@ -490,28 +490,97 @@
     {
       "pos": 22,
       "team": "Cardiff",
-      "played": 57,
-      "won": 11,
-      "drawn": 22,
-      "lost": 24,
-      "gf": 62,
-      "ga": 89,
-      "gd": -27,
-      "pts": 55,
-      "form": "LWLDW",
+      "played": 60,
+      "won": 12,
+      "drawn": 23,
+      "lost": 25,
+      "gf": 70,
+      "ga": 99,
+      "gd": -29,
+      "pts": 59,
+      "form": "DWLDW",
       "homeRecord": {
-        "w": 9,
-        "d": 9,
+        "w": 10,
+        "d": 10,
         "l": 10
       },
       "awayRecord": {
         "w": 2,
         "d": 13,
-        "l": 14
+        "l": 15
       }
     },
     {
       "pos": 23,
+      "team": "Birmingham",
+      "played": 37,
+      "won": 14,
+      "drawn": 12,
+      "lost": 11,
+      "gf": 50,
+      "ga": 47,
+      "gd": 3,
+      "pts": 54,
+      "form": "WLWWW",
+      "homeRecord": {
+        "w": 8,
+        "d": 9,
+        "l": 1
+      },
+      "awayRecord": {
+        "w": 6,
+        "d": 3,
+        "l": 10
+      }
+    },
+    {
+      "pos": 24,
+      "team": "Southampton",
+      "played": 37,
+      "won": 13,
+      "drawn": 13,
+      "lost": 11,
+      "gf": 57,
+      "ga": 48,
+      "gd": 9,
+      "pts": 52,
+      "form": "DWWDL",
+      "homeRecord": {
+        "w": 10,
+        "d": 6,
+        "l": 1
+      },
+      "awayRecord": {
+        "w": 3,
+        "d": 7,
+        "l": 10
+      }
+    },
+    {
+      "pos": 25,
+      "team": "Wrexham",
+      "played": 37,
+      "won": 12,
+      "drawn": 14,
+      "lost": 11,
+      "gf": 52,
+      "ga": 50,
+      "gd": 2,
+      "pts": 50,
+      "form": "WLLWD",
+      "homeRecord": {
+        "w": 7,
+        "d": 8,
+        "l": 4
+      },
+      "awayRecord": {
+        "w": 5,
+        "d": 6,
+        "l": 7
+      }
+    },
+    {
+      "pos": 26,
       "team": "Luton",
       "played": 46,
       "won": 13,
@@ -534,53 +603,7 @@
       }
     },
     {
-      "pos": 24,
-      "team": "Southampton",
-      "played": 34,
-      "won": 12,
-      "drawn": 12,
-      "lost": 10,
-      "gf": 52,
-      "ga": 45,
-      "gd": 7,
-      "pts": 48,
-      "form": "LWWDW",
-      "homeRecord": {
-        "w": 9,
-        "d": 6,
-        "l": 1
-      },
-      "awayRecord": {
-        "w": 3,
-        "d": 6,
-        "l": 9
-      }
-    },
-    {
-      "pos": 25,
-      "team": "Wrexham",
-      "played": 34,
-      "won": 11,
-      "drawn": 13,
-      "lost": 10,
-      "gf": 49,
-      "ga": 48,
-      "gd": 1,
-      "pts": 46,
-      "form": "WDLWL",
-      "homeRecord": {
-        "w": 6,
-        "d": 7,
-        "l": 4
-      },
-      "awayRecord": {
-        "w": 5,
-        "d": 6,
-        "l": 6
-      }
-    },
-    {
-      "pos": 26,
+      "pos": 27,
       "team": "Plymouth",
       "played": 46,
       "won": 11,
@@ -603,49 +626,26 @@
       }
     },
     {
-      "pos": 27,
-      "team": "Birmingham",
-      "played": 34,
-      "won": 11,
-      "drawn": 12,
-      "lost": 11,
-      "gf": 42,
-      "ga": 45,
-      "gd": -3,
-      "pts": 45,
-      "form": "DWWWL",
-      "homeRecord": {
-        "w": 6,
-        "d": 9,
-        "l": 1
-      },
-      "awayRecord": {
-        "w": 5,
-        "d": 3,
-        "l": 10
-      }
-    },
-    {
       "pos": 28,
       "team": "Charlton",
-      "played": 33,
-      "won": 9,
+      "played": 36,
+      "won": 10,
       "drawn": 12,
-      "lost": 12,
-      "gf": 33,
-      "ga": 43,
-      "gd": -10,
-      "pts": 39,
-      "form": "LDDLL",
+      "lost": 14,
+      "gf": 35,
+      "ga": 48,
+      "gd": -13,
+      "pts": 42,
+      "form": "LLLLW",
       "homeRecord": {
-        "w": 6,
+        "w": 7,
         "d": 5,
-        "l": 3
+        "l": 4
       },
       "awayRecord": {
         "w": 3,
         "d": 7,
-        "l": 9
+        "l": 10
       }
     },
     {
@@ -696,118 +696,118 @@
     },
     {
       "pos": 31,
-      "team": "West Ham",
-      "played": 12,
-      "won": 6,
-      "drawn": 4,
-      "lost": 2,
-      "gf": 32,
-      "ga": 15,
-      "gd": 17,
-      "pts": 22,
-      "form": "DDWWL",
-      "homeRecord": {
-        "w": 3,
-        "d": 1,
-        "l": 2
-      },
-      "awayRecord": {
-        "w": 3,
-        "d": 3,
-        "l": 0
-      }
-    },
-    {
-      "pos": 32,
       "team": "Wolves",
-      "played": 12,
-      "won": 6,
-      "drawn": 3,
+      "played": 15,
+      "won": 8,
+      "drawn": 4,
       "lost": 3,
-      "gf": 20,
-      "ga": 16,
-      "gd": 4,
-      "pts": 21,
-      "form": "LLWDW",
+      "gf": 26,
+      "ga": 18,
+      "gd": 8,
+      "pts": 28,
+      "form": "DWWWD",
       "homeRecord": {
-        "w": 3,
+        "w": 4,
         "d": 2,
         "l": 1
       },
       "awayRecord": {
-        "w": 3,
-        "d": 1,
+        "w": 4,
+        "d": 2,
         "l": 2
       }
     },
     {
-      "pos": 33,
-      "team": "Lincoln",
-      "played": 12,
-      "won": 4,
-      "drawn": 3,
-      "lost": 5,
-      "gf": 13,
-      "ga": 20,
-      "gd": -7,
-      "pts": 15,
-      "form": "LLLDW",
+      "pos": 32,
+      "team": "West Ham",
+      "played": 15,
+      "won": 6,
+      "drawn": 5,
+      "lost": 4,
+      "gf": 37,
+      "ga": 23,
+      "gd": 14,
+      "pts": 23,
+      "form": "WLLDL",
       "homeRecord": {
-        "w": 1,
-        "d": 2,
+        "w": 3,
+        "d": 1,
         "l": 3
       },
       "awayRecord": {
         "w": 3,
-        "d": 1,
-        "l": 2
+        "d": 4,
+        "l": 1
+      }
+    },
+    {
+      "pos": 33,
+      "team": "Bolton",
+      "played": 15,
+      "won": 5,
+      "drawn": 2,
+      "lost": 8,
+      "gf": 20,
+      "ga": 29,
+      "gd": -9,
+      "pts": 17,
+      "form": "DLLWL",
+      "homeRecord": {
+        "w": 2,
+        "d": 0,
+        "l": 5
+      },
+      "awayRecord": {
+        "w": 3,
+        "d": 2,
+        "l": 3
       }
     },
     {
       "pos": 34,
-      "team": "Bolton",
-      "played": 12,
+      "team": "Lincoln",
+      "played": 15,
       "won": 4,
-      "drawn": 2,
-      "lost": 6,
-      "gf": 16,
-      "ga": 23,
-      "gd": -7,
-      "pts": 14,
-      "form": "WLWDL",
+      "drawn": 3,
+      "lost": 8,
+      "gf": 15,
+      "ga": 26,
+      "gd": -11,
+      "pts": 15,
+      "form": "DWLLL",
       "homeRecord": {
-        "w": 2,
-        "d": 0,
+        "w": 1,
+        "d": 2,
         "l": 4
       },
       "awayRecord": {
-        "w": 2,
-        "d": 2,
-        "l": 2
+        "w": 3,
+        "d": 1,
+        "l": 4
       }
     }
   ],
   "leagueStats": {
-    "avgGoals": 2.539,
-    "homeWinRate": 0.446,
-    "drawRate": 0.277,
-    "upsetRate": 0.308,
+    "avgGoals": 2.564,
+    "homeWinRate": 0.45,
+    "drawRate": 0.273,
+    "upsetRate": 0.304,
     "topScores": [
       {
         "score": "1-1",
-        "count": 136
+        "count": 139
       },
       {
         "score": "1-0",
-        "count": 113
+        "count": 116
       },
       {
         "score": "2-1",
-        "count": 111
+        "count": 115
       }
     ],
     "computedFrom": "fd",
-    "matchesUsed": 955,
+    "matchesUsed": 991,
     "seasonsMerged": [
       "2425",
       "2526",
@@ -817,7 +817,7 @@
   "context": {
     "titleRace": {
       "leader": "Sheffield United",
-      "gap": 9
+      "gap": 11
     },
     "relegationZone": [
       32,
