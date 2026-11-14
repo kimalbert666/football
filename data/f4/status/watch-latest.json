@@ -1,14 +1,13 @@
 {
-  "started_at": "2026-11-14T03:09:06.375212Z",
-  "run_id": "43550080645",
+  "started_at": "2026-11-14T06:52:49.822035Z",
+  "run_id": "43568427114",
   "captures": [],
   "mode": "bounded_match_window_worker",
   "timing_guaranteed": false,
   "max_minutes": 300,
   "arm_minutes": 300,
-  "previous_worker_started_at": "2026-11-13T22:34:59.691439Z",
+  "previous_worker_started_at": "2026-11-14T03:09:06.375212Z",
   "continuation_requested": false,
-  "state": "no_nearby_unrecorded_window",
-  "checked_at": "2026-11-14T03:09:13.793638Z",
-  "settlement_catchup_at": "2026-11-14T03:09:12.344031Z"
+  "state": "planning",
+  "checked_at": "2026-11-14T06:52:50.350540Z"
 }
