@@ -1,21 +1,35 @@
 {
   "model_feature_status": "context_only_not_used_in_current_M1_M2_M3",
-  "observed_at": "2026-11-14T03:09:12.204957Z",
+  "observed_at": "2026-11-15T01:50:54.956882Z",
   "problems": [
     "Understat lagged xG missing or unverified: Expecting value: line 1 column 1 (char 0)"
   ],
-  "requested_clubs": 0,
+  "requested_clubs": 14,
   "schema": "f4-prematch-context-observed-v1",
   "season_year": 2026,
-  "snapshot_path": "data/f4/context/snapshots/b6999576c40c077328536e258f5656ebe56e3280811115ed29b860483c420177.json",
-  "snapshot_sha256": "b6999576c40c077328536e258f5656ebe56e3280811115ed29b860483c420177",
+  "snapshot_path": "data/f4/context/snapshots/3e6cc089576f19273dc7ea945239fb11cdecfc0478c76221669a8c746ebfb57d.json",
+  "snapshot_sha256": "3e6cc089576f19273dc7ea945239fb11cdecfc0478c76221669a8c746ebfb57d",
   "source_statuses": {
+    "espn-rest:arsenal": "available",
+    "espn-rest:aston-villa": "available",
+    "espn-rest:bournemouth": "available",
+    "espn-rest:chelsea": "available",
+    "espn-rest:coventry": "available",
+    "espn-rest:crystal-palace": "available",
+    "espn-rest:fulham": "available",
+    "espn-rest:ipswich": "available",
+    "espn-rest:leeds": "available",
+    "espn-rest:man-city": "available",
+    "espn-rest:newcastle": "available",
+    "espn-rest:nottingham-forest": "available",
+    "espn-rest:sunderland": "available",
+    "espn-rest:tottenham": "available",
     "fpl": "available",
     "understat": "unavailable"
   },
   "status": "ready",
   "teams_availability": 20,
-  "teams_club_schedule": 0,
+  "teams_club_schedule": 14,
   "teams_xg": 0,
   "unresolved_clubs": []
 }
