@@ -1,9 +1,18 @@
 {
   "version": "f4-ah-titan-opening-v1",
   "experiment_id": "f4-epl-ah-research-v1",
-  "evaluated_at": "2026-11-15T07:01:33.284584Z",
-  "indexed_opening_archives": 42,
-  "archive_rejections": [],
+  "evaluated_at": "2026-11-16T07:10:57.555637Z",
+  "indexed_opening_archives": 49,
+  "archive_rejections": [
+    {
+      "archive_path": "data/f4/titan-history/observations/3003954/20261116T070915-91ef3465d9e3d6044eb6.json",
+      "reason": "opening archive not reconciled"
+    },
+    {
+      "archive_path": "data/f4/titan-history/observations/3003955/20261116T070915-d800c0030785326df0ec.json",
+      "reason": "opening archive not reconciled"
+    }
+  ],
   "paired_t15_matches": 39,
   "eligible_completed_matches": 1,
   "pending_result_match_ids": [],
@@ -170,7 +179,7 @@
   "dataset_sha256": "256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2",
   "dataset_path": "data/f4/ah/titan-research/datasets/256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2.json",
   "model_status": "insufficient_data",
-  "model_evaluated_at": "2026-11-15T07:01:33.284584Z",
+  "model_evaluated_at": "2026-11-16T07:10:57.555637Z",
   "model_dataset_sha256": "256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2",
   "model_dataset_path": "data/f4/ah/titan-research/datasets/256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2.json",
   "candidate_counts": {

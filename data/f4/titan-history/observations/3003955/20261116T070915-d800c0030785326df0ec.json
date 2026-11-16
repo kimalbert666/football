@@ -1,0 +1,32 @@
+{
+  "captured_at_utc": "2026-11-16T07:10:55.451215+00:00",
+  "run_id": "43821655588",
+  "fixture": {
+    "provider_event_id": "3003955",
+    "home": "利物浦",
+    "away": "曼彻斯特联",
+    "kickoff_display": "2026-11-23 00:30",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401878755",
+    "home_id": "liverpool",
+    "away_id": "man-united",
+    "independent_fixture_kickoff_at": "2026-11-22T16:30:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261122.htm",
+      "checked_at_utc": "2026-11-16T07:09:18.230850+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-16T07:09:19.368971+00:00",
+      "candidate_count": 2,
+      "content_sha256": "1ed1a4afe167614a63fd14528fb7519882d117aca2978160e61c3551b4efec7b"
+    },
+    "independent_fixture_last_seen_at": "2026-11-16T03:05:52.555904Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "read_or_parse_error",
+  "histories": {},
+  "pages": [],
+  "error_type": "TimeoutError"
+}
