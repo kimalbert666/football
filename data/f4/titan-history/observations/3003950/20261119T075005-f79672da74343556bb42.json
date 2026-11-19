@@ -1,0 +1,752 @@
+{
+  "captured_at_utc": "2026-11-19T07:50:31.548780+00:00",
+  "run_id": "44482394521",
+  "fixture": {
+    "provider_event_id": "3003950",
+    "home": "阿斯顿维拉",
+    "away": "桑德兰",
+    "kickoff_display": "2026-11-21 23:00",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401878756",
+    "home_id": "aston-villa",
+    "away_id": "sunderland",
+    "independent_fixture_kickoff_at": "2026-11-21T15:00:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261121.htm",
+      "checked_at_utc": "2026-11-19T07:50:06.445860+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-19T07:50:07.691949+00:00",
+      "candidate_count": 7,
+      "content_sha256": "7a02b8927c7f4f0f4ee788caa90e7c6d755ab3b96e1f21f575f3f4d13bf8dda4"
+    },
+    "independent_fixture_last_seen_at": "2026-11-19T04:29:40.601228Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "displayed_history_reconciled",
+  "histories": {
+    "3": {
+      "schema_version": "titan-displayed-history-archive-v1",
+      "source_url": "https://vip.titan007.com/changeDetail/handicap.aspx?id=3003950&companyID=3&l=0",
+      "captured_at_utc": "2026-11-19T07:50:27.998364+00:00",
+      "fixture_kickoff_display": "2026-11-21 23:00",
+      "year_anchor_display": "2026-11-05 06:59",
+      "fixture_identity_verified": true,
+      "odds_format_verified": false,
+      "timezone_verified": false,
+      "provider_opening_reconciled": true,
+      "formal_observation": false,
+      "training_eligible": false,
+      "displayed_history_coverage": "unknown",
+      "bookmaker_every_change_certified": false,
+      "parse_ok": true,
+      "data_row_count": 8,
+      "prematch_quote_count": 8,
+      "suspended_row_count": 0,
+      "unrecognized_row_count": 0,
+      "issues": {},
+      "pagination_controls": [],
+      "projection_truncated": false,
+      "same_minute_groups": {},
+      "source_order": "preserved; chronological order within minute not certified",
+      "earliest_visible_quote": {
+        "state": "unique_at_displayed_minute",
+        "displayed_datetime": "2026-11-05 06:59",
+        "row_indices": [
+          8
+        ],
+        "quote": {
+          "home_handicap": -0.75,
+          "home_water_raw": "0.97",
+          "away_water_raw": "0.91",
+          "handicap_raw": "半球/一球",
+          "home_hk_water": null,
+          "away_hk_water": null,
+          "home_decimal_odds": null,
+          "away_decimal_odds": null
+        }
+      },
+      "last_visible_prematch_quote": {
+        "state": "unique_at_displayed_minute",
+        "displayed_datetime": "2026-11-19 12:04",
+        "row_indices": [
+          1
+        ],
+        "quote": {
+          "home_handicap": -0.75,
+          "home_water_raw": "1.07",
+          "away_water_raw": "0.81",
+          "handicap_raw": "半球/一球",
+          "home_hk_water": null,
+          "away_hk_water": null,
+          "home_decimal_odds": null,
+          "away_decimal_odds": null
+        }
+      },
+      "last_change_at_or_before_t15": {
+        "state": "unique_at_displayed_minute",
+        "displayed_datetime": "2026-11-19 12:04",
+        "row_indices": [
+          1
+        ],
+        "quote": {
+          "home_handicap": -0.75,
+          "home_water_raw": "1.07",
+          "away_water_raw": "0.81",
+          "handicap_raw": "半球/一球",
+          "home_hk_water": null,
+          "away_hk_water": null,
+          "home_decimal_odds": null,
+          "away_decimal_odds": null
+        }
+      },
+      "rows_sha256": "075b488c9661b77e87a5d5d247b4ef243872cb306be3d9e9d8e7ff52e8f91d19",
+      "rows": [
+        {
+          "source_row_index": 0,
+          "raw_cells": [
+            {
+              "text": "时间",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "比分",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "阿斯顿维拉",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "盘",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "桑德兰",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "变化时间",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "状态",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "状态",
+          "raw_change_time": "变化时间",
+          "displayed_datetime": null,
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": null,
+          "kind": "header",
+          "prematch_quote": false,
+          "quote": null,
+          "issues": []
+        },
+        {
+          "source_row_index": 1,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.07",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球/一球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.81",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "11-19 12:04",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "11-19 12:04",
+          "displayed_datetime": "2026-11-19 12:04",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.75,
+            "home_water_raw": "1.07",
+            "away_water_raw": "0.81",
+            "handicap_raw": "半球/一球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 2,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.05",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球/一球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.83",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "11-17 01:29",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "11-17 01:29",
+          "displayed_datetime": "2026-11-17 01:29",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.75,
+            "home_water_raw": "1.05",
+            "away_water_raw": "0.83",
+            "handicap_raw": "半球/一球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 3,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.02",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球/一球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.86",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "11-16 15:25",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "11-16 15:25",
+          "displayed_datetime": "2026-11-16 15:25",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.75,
+            "home_water_raw": "1.02",
+            "away_water_raw": "0.86",
+            "handicap_raw": "半球/一球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 4,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "1.01",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球/一球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.87",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "11-13 18:16",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "11-13 18:16",
+          "displayed_datetime": "2026-11-13 18:16",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.75,
+            "home_water_raw": "1.01",
+            "away_water_raw": "0.87",
+            "handicap_raw": "半球/一球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 5,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.96",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球/一球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.92",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "11-9 08:10",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "11-9 08:10",
+          "displayed_datetime": "2026-11-09 08:10",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.75,
+            "home_water_raw": "0.96",
+            "away_water_raw": "0.92",
+            "handicap_raw": "半球/一球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 6,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.92",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球/一球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.96",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "11-6 22:26",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "11-6 22:26",
+          "displayed_datetime": "2026-11-06 22:26",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.75,
+            "home_water_raw": "0.92",
+            "away_water_raw": "0.96",
+            "handicap_raw": "半球/一球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 7,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.94",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球/一球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.94",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "11-6 06:00",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "11-6 06:00",
+          "displayed_datetime": "2026-11-06 06:00",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.75,
+            "home_water_raw": "0.94",
+            "away_water_raw": "0.94",
+            "handicap_raw": "半球/一球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        },
+        {
+          "source_row_index": 8,
+          "raw_cells": [
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.97",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "半球/一球",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "0.91",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "11-5 06:59",
+              "colspan": 1,
+              "inline_visible": true
+            },
+            {
+              "text": "早",
+              "colspan": 1,
+              "inline_visible": true
+            }
+          ],
+          "raw_status": "早",
+          "raw_change_time": "11-5 06:59",
+          "displayed_datetime": "2026-11-05 06:59",
+          "quote_time_utc": null,
+          "timestamp_precision": "minute",
+          "year_basis": "unique_between_full_opening_anchor_and_fixture_plus_1d",
+          "kind": "quote",
+          "prematch_quote": true,
+          "quote": {
+            "home_handicap": -0.75,
+            "home_water_raw": "0.97",
+            "away_water_raw": "0.91",
+            "handicap_raw": "半球/一球",
+            "home_hk_water": null,
+            "away_hk_water": null,
+            "home_decimal_odds": null,
+            "away_decimal_odds": null
+          },
+          "issues": []
+        }
+      ],
+      "provider_event_id": "3003950",
+      "company_id": "3",
+      "company_label": "Crow*",
+      "identity_check": {
+        "identity_verified": true,
+        "event_id": "3003950",
+        "company_id": "3",
+        "issues": []
+      },
+      "source_table_row_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "source_reported_opening": {
+        "home_water_raw": "0.97",
+        "away_water_raw": "0.91",
+        "home_profit_only_odds": null,
+        "away_profit_only_odds": null,
+        "home_decimal_odds": null,
+        "away_decimal_odds": null,
+        "handicap_display": "半球/一球",
+        "home_handicap": -0.75,
+        "displayed_full_datetime": "2026-11-05 06:59",
+        "quote_time_utc": null
+      },
+      "excluded_live_rows": 0,
+      "source_fixture_identity": {
+        "provider_event_id": "3003950",
+        "home": "阿斯顿维拉",
+        "away": "桑德兰",
+        "kickoff_display": "2026-11-21 23:00",
+        "company_ids": [
+          "3"
+        ],
+        "canonical_match_id": "espn:401878756",
+        "home_id": "aston-villa",
+        "away_id": "sunderland",
+        "independent_fixture_kickoff_at": "2026-11-21T15:00:00Z",
+        "mapping_source_evidence": {
+          "url": "https://bf.titan007.com/football/Next_20261121.htm",
+          "checked_at_utc": "2026-11-19T07:50:06.445860+00:00",
+          "status": "ok",
+          "http_status": 200,
+          "captured_at_utc": "2026-11-19T07:50:07.691949+00:00",
+          "candidate_count": 7,
+          "content_sha256": "7a02b8927c7f4f0f4ee788caa90e7c6d755ab3b96e1f21f575f3f4d13bf8dda4"
+        },
+        "independent_fixture_last_seen_at": "2026-11-19T04:29:40.601228Z",
+        "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+      },
+      "independent_fixture_mapping_verified": false,
+      "accepted_for_research_archive": true,
+      "excluded_boundary_row_count": 0,
+      "all_displayed_rows_clean": true
+    }
+  },
+  "pages": [
+    {
+      "url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003950",
+      "checked_at_utc": "2026-11-19T07:50:26.890985+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003950",
+      "captured_at_utc": "2026-11-19T07:50:27.433738+00:00",
+      "page_title": "阿斯顿维拉VS桑德兰(2026-2027赛季英超)-亚指指数-新球体育-球探体育",
+      "visible_row_count": 19,
+      "projection_truncated": false
+    },
+    {
+      "url": "https://vip.titan007.com/changeDetail/handicap.aspx?id=3003950&companyID=3&l=0",
+      "checked_at_utc": "2026-11-19T07:50:27.461835+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/changeDetail/handicap.aspx?id=3003950&companyID=3&l=0",
+      "captured_at_utc": "2026-11-19T07:50:27.998364+00:00",
+      "page_title": "亚赔变化表",
+      "visible_row_count": 9,
+      "projection_truncated": false
+    }
+  ],
+  "summary": {
+    "parse_ok": true,
+    "event_id": "3003950",
+    "companies": {
+      "3": {
+        "company_id": "3",
+        "company_label": "Crow*",
+        "history_url": "https://vip.titan007.com/changeDetail/handicap.aspx?id=3003950&companyID=3&l=0",
+        "opening": {
+          "home_water_raw": "0.97",
+          "away_water_raw": "0.91",
+          "home_profit_only_odds": null,
+          "away_profit_only_odds": null,
+          "home_decimal_odds": null,
+          "away_decimal_odds": null,
+          "handicap_display": "半球/一球",
+          "home_handicap": -0.75,
+          "displayed_full_datetime": "2026-11-05 06:59",
+          "quote_time_utc": null
+        }
+      }
+    },
+    "issues": [],
+    "research_only": true,
+    "formal_signal_eligible": false,
+    "bookmaker_original_opening_certified": false,
+    "complete_tick_history_certified": false,
+    "timezone_verified": false,
+    "odds_format_verified": false,
+    "document_title": "阿斯顿维拉VS桑德兰(2026-2027赛季英超)-亚指指数-新球体育-球探体育"
+  }
+}

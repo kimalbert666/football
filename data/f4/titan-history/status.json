@@ -1,53 +1,53 @@
 {
   "schema": "f4-titan-history-daily-v1",
-  "started_at_utc": "2026-11-18T07:52:09.688074+00:00",
+  "started_at_utc": "2026-11-19T07:50:05.000784+00:00",
   "scope": "archived independent EPL fixtures within past/future seven days",
   "fixture_source": "existing ESPN fixture archive",
   "sources": [
     {
       "url": "https://bf.titan007.com/football/Next_20261120.htm",
-      "checked_at_utc": "2026-11-18T07:52:09.689899+00:00",
+      "checked_at_utc": "2026-11-19T07:50:05.002683+00:00",
       "status": "ok",
       "http_status": 200,
-      "captured_at_utc": "2026-11-18T07:52:12.239469+00:00",
+      "captured_at_utc": "2026-11-19T07:50:06.445612+00:00",
       "candidate_count": 0,
-      "content_sha256": "217630d5bb87adc361b6bf8e79ddaec839c9c7bc1c469ab5f079aed3b5be21cd"
+      "content_sha256": "a3be4d503a73aa3e6c3d1e6b755dcc30bca1131f38e4525de414d28f0a6becf9"
     },
     {
       "url": "https://bf.titan007.com/football/Next_20261121.htm",
-      "checked_at_utc": "2026-11-18T07:52:12.239628+00:00",
+      "checked_at_utc": "2026-11-19T07:50:06.445860+00:00",
       "status": "ok",
       "http_status": 200,
-      "captured_at_utc": "2026-11-18T07:52:13.734938+00:00",
+      "captured_at_utc": "2026-11-19T07:50:07.691949+00:00",
       "candidate_count": 7,
-      "content_sha256": "1d432ebfe4962908d375c39531c97740350fe770c873008705878e735bc3346d"
+      "content_sha256": "7a02b8927c7f4f0f4ee788caa90e7c6d755ab3b96e1f21f575f3f4d13bf8dda4"
     },
     {
       "url": "https://bf.titan007.com/football/Next_20261122.htm",
-      "checked_at_utc": "2026-11-18T07:52:13.735345+00:00",
+      "checked_at_utc": "2026-11-19T07:50:07.692672+00:00",
       "status": "ok",
       "http_status": 200,
-      "captured_at_utc": "2026-11-18T07:52:15.163369+00:00",
+      "captured_at_utc": "2026-11-19T07:50:09.473791+00:00",
       "candidate_count": 2,
-      "content_sha256": "a8d4d6f059f7b4ec9fa00d52443e687b16bcc2dbbb6980f7ebfe88b6d1219750"
+      "content_sha256": "20b940a34f83482c24c81981608a768af6f92bb2810e08d5e1af4dcdc79ee73d"
     },
     {
       "url": "https://bf.titan007.com/football/Next_20261123.htm",
-      "checked_at_utc": "2026-11-18T07:52:15.163680+00:00",
+      "checked_at_utc": "2026-11-19T07:50:09.474305+00:00",
       "status": "ok",
       "http_status": 200,
-      "captured_at_utc": "2026-11-18T07:52:16.924723+00:00",
+      "captured_at_utc": "2026-11-19T07:50:10.123230+00:00",
       "candidate_count": 1,
-      "content_sha256": "b9f6e22d7bff27503411d906e7440af0b90beb43d9927fa7c311db95b4ef9c42"
+      "content_sha256": "0943634003d9974080a61880fe25226edfc505e15e9417d7cbd7047552de9e81"
     },
     {
       "url": "https://bf.titan007.com/football/Next_20261124.htm",
-      "checked_at_utc": "2026-11-18T07:52:16.924794+00:00",
+      "checked_at_utc": "2026-11-19T07:50:10.123336+00:00",
       "status": "ok",
       "http_status": 200,
-      "captured_at_utc": "2026-11-18T07:52:20.203337+00:00",
+      "captured_at_utc": "2026-11-19T07:50:10.960156+00:00",
       "candidate_count": 0,
-      "content_sha256": "0ac5d141de6bd0890542f1543d2d0b8bac9fb3954af5213818a57df1cd998c35"
+      "content_sha256": "6034680a34ad61fe74bc43aba80f0b1acb44e6616df7cb0a44cf927f5fb69fe5"
     }
   ],
   "mapping": {
@@ -71,75 +71,52 @@
     "coverage": [
       {
         "fixture_input_index": 0,
-        "match_id": "espn:401879233",
-        "home_id": "man-city",
-        "away_id": "fulham",
-        "kickoff_at": "2026-11-21T12:30:00Z",
-        "state": "mapped_candidate",
-        "mapping_verified": false,
-        "requires_ah_detail_validation": true,
-        "candidate": {
-          "provider_event_id": "3003956",
-          "league_id": "36",
-          "home_id": "man-city",
-          "away_id": "fulham",
-          "home": "曼彻斯特城",
-          "away": "富勒姆",
-          "kickoff_at": "2026-11-21T12:30:00Z"
-        },
-        "candidate_input_indices": [
-          0
-        ],
-        "reasons": []
-      },
-      {
-        "fixture_input_index": 1,
-        "match_id": "espn:401879236",
-        "home_id": "chelsea",
-        "away_id": "leeds",
+        "match_id": "espn:401879235",
+        "home_id": "coventry",
+        "away_id": "crystal-palace",
         "kickoff_at": "2026-11-21T15:00:00Z",
         "state": "mapped_candidate",
         "mapping_verified": false,
         "requires_ah_detail_validation": true,
         "candidate": {
-          "provider_event_id": "3003952",
+          "provider_event_id": "3003953",
           "league_id": "36",
-          "home_id": "chelsea",
-          "away_id": "leeds",
-          "home": "切尔西",
-          "away": "利兹联",
+          "home_id": "coventry",
+          "away_id": "crystal-palace",
+          "home": "考文垂",
+          "away": "水晶宫",
           "kickoff_at": "2026-11-21T15:00:00Z"
         },
         "candidate_input_indices": [
-          3
+          4
+        ],
+        "reasons": []
+      },
+      {
+        "fixture_input_index": 1,
+        "match_id": "espn:401879237",
+        "home_id": "brentford",
+        "away_id": "everton",
+        "kickoff_at": "2026-11-23T20:00:00Z",
+        "state": "mapped_candidate",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": {
+          "provider_event_id": "3003951",
+          "league_id": "36",
+          "home_id": "brentford",
+          "away_id": "everton",
+          "home": "布伦特福德",
+          "away": "埃弗顿",
+          "kickoff_at": "2026-11-23T20:00:00Z"
+        },
+        "candidate_input_indices": [
+          9
         ],
         "reasons": []
       },
       {
         "fixture_input_index": 2,
-        "match_id": "espn:401879234",
-        "home_id": "hull-city",
-        "away_id": "brighton",
-        "kickoff_at": "2026-11-22T14:00:00Z",
-        "state": "mapped_candidate",
-        "mapping_verified": false,
-        "requires_ah_detail_validation": true,
-        "candidate": {
-          "provider_event_id": "3003954",
-          "league_id": "36",
-          "home_id": "hull-city",
-          "away_id": "brighton",
-          "home": "赫尔城",
-          "away": "布莱顿",
-          "kickoff_at": "2026-11-22T14:00:00Z"
-        },
-        "candidate_input_indices": [
-          7
-        ],
-        "reasons": []
-      },
-      {
-        "fixture_input_index": 3,
         "match_id": "espn:401878755",
         "home_id": "liverpool",
         "away_id": "man-united",
@@ -162,7 +139,53 @@
         "reasons": []
       },
       {
+        "fixture_input_index": 3,
+        "match_id": "espn:401879234",
+        "home_id": "hull-city",
+        "away_id": "brighton",
+        "kickoff_at": "2026-11-22T14:00:00Z",
+        "state": "mapped_candidate",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": {
+          "provider_event_id": "3003954",
+          "league_id": "36",
+          "home_id": "hull-city",
+          "away_id": "brighton",
+          "home": "赫尔城",
+          "away": "布莱顿",
+          "kickoff_at": "2026-11-22T14:00:00Z"
+        },
+        "candidate_input_indices": [
+          7
+        ],
+        "reasons": []
+      },
+      {
         "fixture_input_index": 4,
+        "match_id": "espn:401879238",
+        "home_id": "bournemouth",
+        "away_id": "nottingham-forest",
+        "kickoff_at": "2026-11-21T15:00:00Z",
+        "state": "mapped_candidate",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": {
+          "provider_event_id": "3003949",
+          "league_id": "36",
+          "home_id": "bournemouth",
+          "away_id": "nottingham-forest",
+          "home": "伯恩茅斯",
+          "away": "诺丁汉森林",
+          "kickoff_at": "2026-11-21T15:00:00Z"
+        },
+        "candidate_input_indices": [
+          1
+        ],
+        "reasons": []
+      },
+      {
+        "fixture_input_index": 5,
         "match_id": "espn:401879232",
         "home_id": "newcastle",
         "away_id": "arsenal",
@@ -181,29 +204,6 @@
         },
         "candidate_input_indices": [
           6
-        ],
-        "reasons": []
-      },
-      {
-        "fixture_input_index": 5,
-        "match_id": "espn:401879235",
-        "home_id": "coventry",
-        "away_id": "crystal-palace",
-        "kickoff_at": "2026-11-21T15:00:00Z",
-        "state": "mapped_candidate",
-        "mapping_verified": false,
-        "requires_ah_detail_validation": true,
-        "candidate": {
-          "provider_event_id": "3003953",
-          "league_id": "36",
-          "home_id": "coventry",
-          "away_id": "crystal-palace",
-          "home": "考文垂",
-          "away": "水晶宫",
-          "kickoff_at": "2026-11-21T15:00:00Z"
-        },
-        "candidate_input_indices": [
-          4
         ],
         "reasons": []
       },
@@ -232,6 +232,52 @@
       },
       {
         "fixture_input_index": 7,
+        "match_id": "espn:401879236",
+        "home_id": "chelsea",
+        "away_id": "leeds",
+        "kickoff_at": "2026-11-21T15:00:00Z",
+        "state": "mapped_candidate",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": {
+          "provider_event_id": "3003952",
+          "league_id": "36",
+          "home_id": "chelsea",
+          "away_id": "leeds",
+          "home": "切尔西",
+          "away": "利兹联",
+          "kickoff_at": "2026-11-21T15:00:00Z"
+        },
+        "candidate_input_indices": [
+          3
+        ],
+        "reasons": []
+      },
+      {
+        "fixture_input_index": 8,
+        "match_id": "espn:401879233",
+        "home_id": "man-city",
+        "away_id": "fulham",
+        "kickoff_at": "2026-11-21T12:30:00Z",
+        "state": "mapped_candidate",
+        "mapping_verified": false,
+        "requires_ah_detail_validation": true,
+        "candidate": {
+          "provider_event_id": "3003956",
+          "league_id": "36",
+          "home_id": "man-city",
+          "away_id": "fulham",
+          "home": "曼彻斯特城",
+          "away": "富勒姆",
+          "kickoff_at": "2026-11-21T12:30:00Z"
+        },
+        "candidate_input_indices": [
+          0
+        ],
+        "reasons": []
+      },
+      {
+        "fixture_input_index": 9,
         "match_id": "espn:401878754",
         "home_id": "tottenham",
         "away_id": "ipswich",
@@ -250,52 +296,6 @@
         },
         "candidate_input_indices": [
           5
-        ],
-        "reasons": []
-      },
-      {
-        "fixture_input_index": 8,
-        "match_id": "espn:401879238",
-        "home_id": "bournemouth",
-        "away_id": "nottingham-forest",
-        "kickoff_at": "2026-11-21T15:00:00Z",
-        "state": "mapped_candidate",
-        "mapping_verified": false,
-        "requires_ah_detail_validation": true,
-        "candidate": {
-          "provider_event_id": "3003949",
-          "league_id": "36",
-          "home_id": "bournemouth",
-          "away_id": "nottingham-forest",
-          "home": "伯恩茅斯",
-          "away": "诺丁汉森林",
-          "kickoff_at": "2026-11-21T15:00:00Z"
-        },
-        "candidate_input_indices": [
-          1
-        ],
-        "reasons": []
-      },
-      {
-        "fixture_input_index": 9,
-        "match_id": "espn:401879237",
-        "home_id": "brentford",
-        "away_id": "everton",
-        "kickoff_at": "2026-11-23T20:00:00Z",
-        "state": "mapped_candidate",
-        "mapping_verified": false,
-        "requires_ah_detail_validation": true,
-        "candidate": {
-          "provider_event_id": "3003951",
-          "league_id": "36",
-          "home_id": "brentford",
-          "away_id": "everton",
-          "home": "布伦特福德",
-          "away": "埃弗顿",
-          "kickoff_at": "2026-11-23T20:00:00Z"
-        },
-        "candidate_input_indices": [
-          9
         ],
         "reasons": []
       }
@@ -381,14 +381,14 @@
       "independent_fixture_kickoff_at": "2026-11-23T20:00:00Z",
       "mapping_source_evidence": {
         "url": "https://bf.titan007.com/football/Next_20261123.htm",
-        "checked_at_utc": "2026-11-18T07:52:15.163680+00:00",
+        "checked_at_utc": "2026-11-19T07:50:09.474305+00:00",
         "status": "ok",
         "http_status": 200,
-        "captured_at_utc": "2026-11-18T07:52:16.924723+00:00",
+        "captured_at_utc": "2026-11-19T07:50:10.123230+00:00",
         "candidate_count": 1,
-        "content_sha256": "b9f6e22d7bff27503411d906e7440af0b90beb43d9927fa7c311db95b4ef9c42"
+        "content_sha256": "0943634003d9974080a61880fe25226edfc505e15e9417d7cbd7047552de9e81"
       },
-      "independent_fixture_last_seen_at": "2026-11-18T04:42:13.392839Z",
+      "independent_fixture_last_seen_at": "2026-11-19T04:29:40.601228Z",
       "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
     },
     {
@@ -405,14 +405,14 @@
       "independent_fixture_kickoff_at": "2026-11-22T14:00:00Z",
       "mapping_source_evidence": {
         "url": "https://bf.titan007.com/football/Next_20261122.htm",
-        "checked_at_utc": "2026-11-18T07:52:13.735345+00:00",
+        "checked_at_utc": "2026-11-19T07:50:07.692672+00:00",
         "status": "ok",
         "http_status": 200,
-        "captured_at_utc": "2026-11-18T07:52:15.163369+00:00",
+        "captured_at_utc": "2026-11-19T07:50:09.473791+00:00",
         "candidate_count": 2,
-        "content_sha256": "a8d4d6f059f7b4ec9fa00d52443e687b16bcc2dbbb6980f7ebfe88b6d1219750"
+        "content_sha256": "20b940a34f83482c24c81981608a768af6f92bb2810e08d5e1af4dcdc79ee73d"
       },
-      "independent_fixture_last_seen_at": "2026-11-18T04:42:13.392839Z",
+      "independent_fixture_last_seen_at": "2026-11-19T04:29:40.601228Z",
       "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
     },
     {
@@ -429,14 +429,14 @@
       "independent_fixture_kickoff_at": "2026-11-22T16:30:00Z",
       "mapping_source_evidence": {
         "url": "https://bf.titan007.com/football/Next_20261122.htm",
-        "checked_at_utc": "2026-11-18T07:52:13.735345+00:00",
+        "checked_at_utc": "2026-11-19T07:50:07.692672+00:00",
         "status": "ok",
         "http_status": 200,
-        "captured_at_utc": "2026-11-18T07:52:15.163369+00:00",
+        "captured_at_utc": "2026-11-19T07:50:09.473791+00:00",
         "candidate_count": 2,
-        "content_sha256": "a8d4d6f059f7b4ec9fa00d52443e687b16bcc2dbbb6980f7ebfe88b6d1219750"
+        "content_sha256": "20b940a34f83482c24c81981608a768af6f92bb2810e08d5e1af4dcdc79ee73d"
       },
-      "independent_fixture_last_seen_at": "2026-11-18T04:42:13.392839Z",
+      "independent_fixture_last_seen_at": "2026-11-19T04:29:40.601228Z",
       "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
     },
     {
@@ -453,14 +453,14 @@
       "independent_fixture_kickoff_at": "2026-11-21T12:30:00Z",
       "mapping_source_evidence": {
         "url": "https://bf.titan007.com/football/Next_20261121.htm",
-        "checked_at_utc": "2026-11-18T07:52:12.239628+00:00",
+        "checked_at_utc": "2026-11-19T07:50:06.445860+00:00",
         "status": "ok",
         "http_status": 200,
-        "captured_at_utc": "2026-11-18T07:52:13.734938+00:00",
+        "captured_at_utc": "2026-11-19T07:50:07.691949+00:00",
         "candidate_count": 7,
-        "content_sha256": "1d432ebfe4962908d375c39531c97740350fe770c873008705878e735bc3346d"
+        "content_sha256": "7a02b8927c7f4f0f4ee788caa90e7c6d755ab3b96e1f21f575f3f4d13bf8dda4"
       },
-      "independent_fixture_last_seen_at": "2026-11-18T04:42:13.392839Z",
+      "independent_fixture_last_seen_at": "2026-11-19T04:29:40.601228Z",
       "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
     },
     {
@@ -477,14 +477,14 @@
       "independent_fixture_kickoff_at": "2026-11-21T15:00:00Z",
       "mapping_source_evidence": {
         "url": "https://bf.titan007.com/football/Next_20261121.htm",
-        "checked_at_utc": "2026-11-18T07:52:12.239628+00:00",
+        "checked_at_utc": "2026-11-19T07:50:06.445860+00:00",
         "status": "ok",
         "http_status": 200,
-        "captured_at_utc": "2026-11-18T07:52:13.734938+00:00",
+        "captured_at_utc": "2026-11-19T07:50:07.691949+00:00",
         "candidate_count": 7,
-        "content_sha256": "1d432ebfe4962908d375c39531c97740350fe770c873008705878e735bc3346d"
+        "content_sha256": "7a02b8927c7f4f0f4ee788caa90e7c6d755ab3b96e1f21f575f3f4d13bf8dda4"
       },
-      "independent_fixture_last_seen_at": "2026-11-18T04:42:13.392839Z",
+      "independent_fixture_last_seen_at": "2026-11-19T04:29:40.601228Z",
       "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
     },
     {
@@ -501,14 +501,14 @@
       "independent_fixture_kickoff_at": "2026-11-21T15:00:00Z",
       "mapping_source_evidence": {
         "url": "https://bf.titan007.com/football/Next_20261121.htm",
-        "checked_at_utc": "2026-11-18T07:52:12.239628+00:00",
+        "checked_at_utc": "2026-11-19T07:50:06.445860+00:00",
         "status": "ok",
         "http_status": 200,
-        "captured_at_utc": "2026-11-18T07:52:13.734938+00:00",
+        "captured_at_utc": "2026-11-19T07:50:07.691949+00:00",
         "candidate_count": 7,
-        "content_sha256": "1d432ebfe4962908d375c39531c97740350fe770c873008705878e735bc3346d"
+        "content_sha256": "7a02b8927c7f4f0f4ee788caa90e7c6d755ab3b96e1f21f575f3f4d13bf8dda4"
       },
-      "independent_fixture_last_seen_at": "2026-11-18T04:42:13.392839Z",
+      "independent_fixture_last_seen_at": "2026-11-19T04:29:40.601228Z",
       "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
     },
     {
@@ -525,14 +525,14 @@
       "independent_fixture_kickoff_at": "2026-11-21T15:00:00Z",
       "mapping_source_evidence": {
         "url": "https://bf.titan007.com/football/Next_20261121.htm",
-        "checked_at_utc": "2026-11-18T07:52:12.239628+00:00",
+        "checked_at_utc": "2026-11-19T07:50:06.445860+00:00",
         "status": "ok",
         "http_status": 200,
-        "captured_at_utc": "2026-11-18T07:52:13.734938+00:00",
+        "captured_at_utc": "2026-11-19T07:50:07.691949+00:00",
         "candidate_count": 7,
-        "content_sha256": "1d432ebfe4962908d375c39531c97740350fe770c873008705878e735bc3346d"
+        "content_sha256": "7a02b8927c7f4f0f4ee788caa90e7c6d755ab3b96e1f21f575f3f4d13bf8dda4"
       },
-      "independent_fixture_last_seen_at": "2026-11-18T04:42:13.392839Z",
+      "independent_fixture_last_seen_at": "2026-11-19T04:29:40.601228Z",
       "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
     },
     {
@@ -549,14 +549,14 @@
       "independent_fixture_kickoff_at": "2026-11-21T15:00:00Z",
       "mapping_source_evidence": {
         "url": "https://bf.titan007.com/football/Next_20261121.htm",
-        "checked_at_utc": "2026-11-18T07:52:12.239628+00:00",
+        "checked_at_utc": "2026-11-19T07:50:06.445860+00:00",
         "status": "ok",
         "http_status": 200,
-        "captured_at_utc": "2026-11-18T07:52:13.734938+00:00",
+        "captured_at_utc": "2026-11-19T07:50:07.691949+00:00",
         "candidate_count": 7,
-        "content_sha256": "1d432ebfe4962908d375c39531c97740350fe770c873008705878e735bc3346d"
+        "content_sha256": "7a02b8927c7f4f0f4ee788caa90e7c6d755ab3b96e1f21f575f3f4d13bf8dda4"
       },
-      "independent_fixture_last_seen_at": "2026-11-18T04:42:13.392839Z",
+      "independent_fixture_last_seen_at": "2026-11-19T04:29:40.601228Z",
       "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
     },
     {
@@ -573,14 +573,14 @@
       "independent_fixture_kickoff_at": "2026-11-21T15:00:00Z",
       "mapping_source_evidence": {
         "url": "https://bf.titan007.com/football/Next_20261121.htm",
-        "checked_at_utc": "2026-11-18T07:52:12.239628+00:00",
+        "checked_at_utc": "2026-11-19T07:50:06.445860+00:00",
         "status": "ok",
         "http_status": 200,
-        "captured_at_utc": "2026-11-18T07:52:13.734938+00:00",
+        "captured_at_utc": "2026-11-19T07:50:07.691949+00:00",
         "candidate_count": 7,
-        "content_sha256": "1d432ebfe4962908d375c39531c97740350fe770c873008705878e735bc3346d"
+        "content_sha256": "7a02b8927c7f4f0f4ee788caa90e7c6d755ab3b96e1f21f575f3f4d13bf8dda4"
       },
-      "independent_fixture_last_seen_at": "2026-11-18T04:42:13.392839Z",
+      "independent_fixture_last_seen_at": "2026-11-19T04:29:40.601228Z",
       "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
     },
     {
@@ -597,14 +597,14 @@
       "independent_fixture_kickoff_at": "2026-11-21T17:30:00Z",
       "mapping_source_evidence": {
         "url": "https://bf.titan007.com/football/Next_20261121.htm",
-        "checked_at_utc": "2026-11-18T07:52:12.239628+00:00",
+        "checked_at_utc": "2026-11-19T07:50:06.445860+00:00",
         "status": "ok",
         "http_status": 200,
-        "captured_at_utc": "2026-11-18T07:52:13.734938+00:00",
+        "captured_at_utc": "2026-11-19T07:50:07.691949+00:00",
         "candidate_count": 7,
-        "content_sha256": "1d432ebfe4962908d375c39531c97740350fe770c873008705878e735bc3346d"
+        "content_sha256": "7a02b8927c7f4f0f4ee788caa90e7c6d755ab3b96e1f21f575f3f4d13bf8dda4"
       },
-      "independent_fixture_last_seen_at": "2026-11-18T04:42:13.392839Z",
+      "independent_fixture_last_seen_at": "2026-11-19T04:29:40.601228Z",
       "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
     }
   ],
@@ -612,19 +612,19 @@
     {
       "provider_event_id": "3003951",
       "match_id": "espn:401879237",
-      "captured_at_utc": "2026-11-18T07:52:44.485742+00:00",
+      "captured_at_utc": "2026-11-19T07:50:31.542955+00:00",
       "status": "displayed_history_reconciled",
-      "archive_path": "data/f4/titan-history/observations/3003951/20261118T075209-e0c7ef0d4c234411700a.json",
+      "archive_path": "data/f4/titan-history/observations/3003951/20261119T075005-5844d5ee8e3655dcfdeb.json",
       "company_history_counts": {
-        "3": 8
+        "3": 9
       }
     },
     {
       "provider_event_id": "3003954",
       "match_id": "espn:401879234",
-      "captured_at_utc": "2026-11-18T07:52:44.486854+00:00",
+      "captured_at_utc": "2026-11-19T07:50:31.544051+00:00",
       "status": "displayed_history_reconciled",
-      "archive_path": "data/f4/titan-history/observations/3003954/20261118T075209-512903b976660d7f281e.json",
+      "archive_path": "data/f4/titan-history/observations/3003954/20261119T075005-cd05f43cdfdcb6f5c021.json",
       "company_history_counts": {
         "3": 3
       }
@@ -632,9 +632,9 @@
     {
       "provider_event_id": "3003955",
       "match_id": "espn:401878755",
-      "captured_at_utc": "2026-11-18T07:52:44.487583+00:00",
+      "captured_at_utc": "2026-11-19T07:50:31.544675+00:00",
       "status": "displayed_history_reconciled",
-      "archive_path": "data/f4/titan-history/observations/3003955/20261118T075209-1240681e8b8eb8474b81.json",
+      "archive_path": "data/f4/titan-history/observations/3003955/20261119T075005-5f0b1c63a2bb9bc387d5.json",
       "company_history_counts": {
         "3": 12
       }
@@ -642,19 +642,19 @@
     {
       "provider_event_id": "3003956",
       "match_id": "espn:401879233",
-      "captured_at_utc": "2026-11-18T07:52:44.488586+00:00",
+      "captured_at_utc": "2026-11-19T07:50:31.545839+00:00",
       "status": "displayed_history_reconciled",
-      "archive_path": "data/f4/titan-history/observations/3003956/20261118T075209-7309865f3ae56715fddf.json",
+      "archive_path": "data/f4/titan-history/observations/3003956/20261119T075005-dbc8a28fa38e015e1e9f.json",
       "company_history_counts": {
-        "3": 7
+        "3": 8
       }
     },
     {
       "provider_event_id": "3003953",
       "match_id": "espn:401879235",
-      "captured_at_utc": "2026-11-18T07:52:44.489352+00:00",
+      "captured_at_utc": "2026-11-19T07:50:31.546715+00:00",
       "status": "displayed_history_reconciled",
-      "archive_path": "data/f4/titan-history/observations/3003953/20261118T075209-7cf45644cda00166b57e.json",
+      "archive_path": "data/f4/titan-history/observations/3003953/20261119T075005-1f27e79522e1dd56d43c.json",
       "company_history_counts": {
         "3": 9
       }
@@ -662,29 +662,29 @@
     {
       "provider_event_id": "3003949",
       "match_id": "espn:401879238",
-      "captured_at_utc": "2026-11-18T07:52:44.490387+00:00",
+      "captured_at_utc": "2026-11-19T07:50:31.547807+00:00",
       "status": "displayed_history_reconciled",
-      "archive_path": "data/f4/titan-history/observations/3003949/20261118T075209-995591c70ef87f99dc46.json",
+      "archive_path": "data/f4/titan-history/observations/3003949/20261119T075005-0a52415474853ef8d1f7.json",
       "company_history_counts": {
-        "3": 8
+        "3": 9
       }
     },
     {
       "provider_event_id": "3003950",
       "match_id": "espn:401878756",
-      "captured_at_utc": "2026-11-18T07:52:44.491213+00:00",
+      "captured_at_utc": "2026-11-19T07:50:31.548780+00:00",
       "status": "displayed_history_reconciled",
-      "archive_path": "data/f4/titan-history/observations/3003950/20261118T075209-d3df2c3f5b04ef812634.json",
+      "archive_path": "data/f4/titan-history/observations/3003950/20261119T075005-f79672da74343556bb42.json",
       "company_history_counts": {
-        "3": 7
+        "3": 8
       }
     },
     {
       "provider_event_id": "3003952",
       "match_id": "espn:401879236",
-      "captured_at_utc": "2026-11-18T07:52:44.491964+00:00",
+      "captured_at_utc": "2026-11-19T07:50:31.549649+00:00",
       "status": "displayed_history_reconciled",
-      "archive_path": "data/f4/titan-history/observations/3003952/20261118T075209-b8ad25a8ece2e1f7e124.json",
+      "archive_path": "data/f4/titan-history/observations/3003952/20261119T075005-1ba28ea3d57e9977cacd.json",
       "company_history_counts": {
         "3": 7
       }
@@ -692,9 +692,9 @@
     {
       "provider_event_id": "3003958",
       "match_id": "espn:401878754",
-      "captured_at_utc": "2026-11-18T07:52:44.492715+00:00",
+      "captured_at_utc": "2026-11-19T07:50:31.550431+00:00",
       "status": "displayed_history_reconciled",
-      "archive_path": "data/f4/titan-history/observations/3003958/20261118T075209-d44048ec7b10a6104bcf.json",
+      "archive_path": "data/f4/titan-history/observations/3003958/20261119T075005-58c9a1553a68c0a5930d.json",
       "company_history_counts": {
         "3": 4
       }
@@ -702,15 +702,15 @@
     {
       "provider_event_id": "3003957",
       "match_id": "espn:401879232",
-      "captured_at_utc": "2026-11-18T07:52:44.493357+00:00",
+      "captured_at_utc": "2026-11-19T07:50:31.551027+00:00",
       "status": "displayed_history_reconciled",
-      "archive_path": "data/f4/titan-history/observations/3003957/20261118T075209-2139b53ea0f458bdc76d.json",
+      "archive_path": "data/f4/titan-history/observations/3003957/20261119T075005-21ea272c3f108130fa17.json",
       "company_history_counts": {
         "3": 5
       }
     }
   ],
-  "finished_at_utc": "2026-11-18T07:52:44.494002+00:00",
+  "finished_at_utc": "2026-11-19T07:50:31.551719+00:00",
   "planned": 10,
   "reconciled": 10,
   "deferred_by_daily_budget": 0
