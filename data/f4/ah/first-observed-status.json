@@ -1,64 +1,30 @@
 {
   "status": "partial",
-  "checked_at": "2026-11-19T03:20:10.879216Z",
-  "due_fixtures": 10,
-  "new_records": 0,
-  "saved_matches": [],
-  "stored_first_observations": 40,
+  "checked_at": "2026-11-20T03:06:37.175404Z",
+  "due_fixtures": 11,
+  "new_records": 10,
+  "saved_matches": [
+    "espn:401879233",
+    "espn:401878754",
+    "espn:401878756",
+    "espn:401879235",
+    "espn:401879236",
+    "espn:401879238",
+    "espn:401879232",
+    "espn:401879234",
+    "espn:401878755",
+    "espn:401879237"
+  ],
+  "stored_first_observations": 50,
   "missing": [
     {
-      "match_id": "espn:401879233",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401878754",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401878756",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401879235",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401879236",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401879238",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401879232",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401879234",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401878755",
-      "reason": "missing Asian handicap quote"
-    },
-    {
-      "match_id": "espn:401879237",
+      "match_id": "espn:401879225",
       "reason": "missing Asian handicap quote"
     }
   ],
   "provider_faults": {},
   "source_problems": [
-    "espn:401879233: HKJC AH unavailable (required pools not currently selling)",
-    "espn:401878754: HKJC AH unavailable (required pools not currently selling)",
-    "espn:401878756: HKJC AH unavailable (required pools not currently selling)",
-    "espn:401879235: HKJC AH unavailable (required pools not currently selling)",
-    "espn:401879236: HKJC AH unavailable (required pools not currently selling)",
-    "espn:401879238: HKJC AH unavailable (required pools not currently selling)",
-    "espn:401879232: HKJC AH unavailable (required pools not currently selling)",
-    "espn:401879234: HKJC AH unavailable (required pools not currently selling)",
-    "espn:401878755: HKJC AH unavailable (required pools not currently selling)",
-    "espn:401879237: HKJC AH unavailable (required pools not currently selling)"
+    "espn:401879225: HKJC AH unavailable (unique EPL identity not published or not matched)"
   ],
   "source_policy": "independent_bulk_scout_no_formal_primary_quota",
   "opening_certified": false
