@@ -1,14 +1,14 @@
 {
-  "checked_at": "2026-11-20T13:25:09.227953+00:00",
+  "checked_at": "2026-11-20T21:28:19.579106+00:00",
   "repository": "kimalbert666/football",
-  "run_id": "44744119459",
+  "run_id": "44820567486",
   "trigger_event": "schedule",
   "workers": [
     {
       "workflow": "f4-shadow.yml",
       "checkpoint_path": "data/f4/status/watch-latest.json",
-      "checkpoint_at": "2026-11-20T11:30:14.017609+00:00",
-      "age_seconds": 6895.210344,
+      "checkpoint_at": "2026-11-20T20:05:51.723038+00:00",
+      "age_seconds": 4947.856068,
       "action": "dispatch_requested",
       "completion_verified": false
     },
@@ -16,7 +16,7 @@
       "workflow": "f4-titan-history.yml",
       "checkpoint_path": "data/f4/titan-history/status.json",
       "checkpoint_at": "2026-11-20T07:41:03.031469+00:00",
-      "age_seconds": 20646.196484,
+      "age_seconds": 49636.547637,
       "action": "skip_fresh"
     }
   ],
