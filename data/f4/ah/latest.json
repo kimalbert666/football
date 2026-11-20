@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-11-20T04:16:40.094054Z",
+  "evaluated_at": "2026-11-20T11:30:11.382197Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 112,
@@ -9,8 +9,8 @@
   "titan_research": {
     "version": "f4-ah-titan-opening-v1",
     "experiment_id": "f4-epl-ah-research-v1",
-    "evaluated_at": "2026-11-19T07:50:33.379556Z",
-    "indexed_opening_archives": 79,
+    "evaluated_at": "2026-11-20T07:41:04.988554Z",
+    "indexed_opening_archives": 89,
     "archive_rejections": [
       {
         "archive_path": "data/f4/titan-history/observations/3003954/20261116T070915-91ef3465d9e3d6044eb6.json",
@@ -187,7 +187,7 @@
     "dataset_sha256": "256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2",
     "dataset_path": "data/f4/ah/titan-research/datasets/256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2.json",
     "model_status": "insufficient_data",
-    "model_evaluated_at": "2026-11-19T07:50:33.379556Z",
+    "model_evaluated_at": "2026-11-20T07:41:04.988554Z",
     "model_dataset_sha256": "256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2",
     "model_dataset_path": "data/f4/ah/titan-research/datasets/256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2.json",
     "candidate_counts": {
@@ -5333,16 +5333,16 @@
   "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 11,
+    "fixtures": 7,
     "windows": {
       "T-180m": {
-        "awaiting_window": 11
+        "awaiting_window": 7
       },
       "T-60m": {
-        "awaiting_window": 11
+        "awaiting_window": 7
       },
       "T-15m": {
-        "awaiting_window": 11
+        "awaiting_window": 7
       }
     }
   },
