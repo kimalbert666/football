@@ -1,13 +1,13 @@
 {
   "kickoff_at": "2026-11-21T12:30:00Z",
-  "updated_at": "2026-11-21T12:00:07.341381Z",
+  "updated_at": "2026-11-21T12:15:02.943017Z",
   "fixtures": [
     {
       "match_id": "espn:401879233",
       "home": "Manchester City",
       "away": "Fulham",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "fbe8370d8521914263a89f16bab3ffa3697c2b1855b6a75fb652276725546156",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -26,12 +26,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-11-21T12:15:00Z",
           "closes_at": "2026-11-21T12:20:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "fbe8370d8521914263a89f16bab3ffa3697c2b1855b6a75fb652276725546156",
+          "same_bookmaker_1x2_available": true
         }
       }
     }
