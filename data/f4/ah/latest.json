@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-11-21T03:21:41.222144Z",
+  "evaluated_at": "2026-11-21T04:16:14.051959Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 112,
@@ -5292,15 +5292,15 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-11-21T01:28:10.232609Z",
+      "captured_at": "2026-11-21T04:16:12.308670Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-11-21T01:28:10.974083Z",
-      "content_sha256": "8af58df658711eb300b15d6a51540a6a1dea91f9152dd47ea137141a956f097d"
+      "captured_at": "2026-11-21T04:16:12.890104Z",
+      "content_sha256": "97d9740320c1a705b4e2b19b71b9e540cf11875996fe6cb3fe4da2ae953d8bbc"
     },
     {
       "name": "infersports-crown-ah-quotes",
@@ -5311,10 +5311,10 @@
       "name": "hkjc-direct-ah",
       "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-11-21T01:28:12.073859Z",
-      "response_at": "2026-11-21T01:28:12Z",
-      "content_sha256": "51c2a84ecaa37263021a784a700727c0115e78aa0aff17f84b45c5d0b213e612",
-      "match_count": 233,
+      "captured_at": "2026-11-21T04:16:14.020526Z",
+      "response_at": "2026-11-21T04:16:13Z",
+      "content_sha256": "b4c7d91170689be706fcf5943f0c005cb81c2467bb7c77b7f2d4f533ccbba64e",
+      "match_count": 230,
       "epl_match_count": 10
     }
   ],
@@ -5325,24 +5325,24 @@
   "primary_provider_health": {
     "status": "ok",
     "feed_live": true,
-    "as_of": "2026-11-21T01:28:01Z",
+    "as_of": "2026-11-21T04:16:03Z",
     "as_of_stale": false,
-    "checked_at": "2026-11-21T01:28:10.974083Z"
+    "checked_at": "2026-11-21T04:16:12.890104Z"
   },
   "fallback_matches": [],
   "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 9,
+    "fixtures": 14,
     "windows": {
       "T-180m": {
-        "awaiting_window": 9
+        "awaiting_window": 14
       },
       "T-60m": {
-        "awaiting_window": 9
+        "awaiting_window": 14
       },
       "T-15m": {
-        "awaiting_window": 9
+        "awaiting_window": 14
       }
     }
   },
