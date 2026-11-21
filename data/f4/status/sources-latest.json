@@ -1,19 +1,19 @@
 {
-  "captured_at": "2026-11-21T14:42:09.426796Z",
+  "captured_at": "2026-11-21T15:12:19.764720Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261121",
-      "captured_at": "2026-11-21T14:42:09.380846Z",
-      "content_sha256": "3c5c7c86fc1f949e2f02ea926b3195980cbba73e31809322a2296f0ce3d45ded"
+      "captured_at": "2026-11-21T15:12:19.650341Z",
+      "content_sha256": "c0562ee6d20956469d8141cbdbd9ef5d24c2a71354051c9a209e462334806913"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261122",
-      "captured_at": "2026-11-21T14:42:09.426296Z",
-      "content_sha256": "86e833aa016d76e527f165e449b64226781e7e4c50e918c1d1294039c7ef3122"
+      "captured_at": "2026-11-21T15:12:19.764133Z",
+      "content_sha256": "b5777ba20022cdb051c32a41ee4c321e0d6ac820e218626592bd10fd11e3d3df"
     }
   ],
   "fixtures": [
@@ -45,7 +45,7 @@
       "home": "Tottenham Hotspur",
       "away": "Ipswich Town",
       "kickoff_at": "2026-11-21T15:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
@@ -60,7 +60,7 @@
       "home": "Aston Villa",
       "away": "Sunderland",
       "kickoff_at": "2026-11-21T15:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
@@ -75,7 +75,7 @@
       "home": "Coventry City",
       "away": "Crystal Palace",
       "kickoff_at": "2026-11-21T15:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
@@ -90,7 +90,7 @@
       "home": "Chelsea",
       "away": "Leeds United",
       "kickoff_at": "2026-11-21T15:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
@@ -105,7 +105,7 @@
       "home": "AFC Bournemouth",
       "away": "Nottingham Forest",
       "kickoff_at": "2026-11-21T15:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
