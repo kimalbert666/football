@@ -1,0 +1,32 @@
+{
+  "captured_at_utc": "2026-11-21T07:41:28.795458+00:00",
+  "run_id": "44881104134",
+  "fixture": {
+    "provider_event_id": "3003950",
+    "home": "阿斯顿维拉",
+    "away": "桑德兰",
+    "kickoff_display": "2026-11-21 23:00",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401878756",
+    "home_id": "aston-villa",
+    "away_id": "sunderland",
+    "independent_fixture_kickoff_at": "2026-11-21T15:00:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261121.htm",
+      "checked_at_utc": "2026-11-21T07:38:23.556786+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-21T07:38:25.838924+00:00",
+      "candidate_count": 7,
+      "content_sha256": "65ff3095e215c81dc4a6fa49c2b6c2afc6807b0711af43ecc85ead3e508542d0"
+    },
+    "independent_fixture_last_seen_at": "2026-11-21T04:16:11.674915Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "read_or_parse_error",
+  "histories": {},
+  "pages": [],
+  "error_type": "TimeoutError"
+}
