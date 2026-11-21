@@ -1,23 +1,39 @@
 {
-  "evaluated_at": "2026-11-21T04:16:14.051959Z",
-  "new_valid": 0,
-  "new_attempts": 0,
-  "valid_observations": 112,
-  "distinct_matches": 39,
+  "evaluated_at": "2026-11-21T09:41:35.528605Z",
+  "new_valid": 1,
+  "new_attempts": 1,
+  "valid_observations": 113,
+  "distinct_matches": 40,
   "paired_matches": 39,
   "pairing_issues": {},
   "titan_research": {
     "version": "f4-ah-titan-opening-v1",
     "experiment_id": "f4-epl-ah-research-v1",
-    "evaluated_at": "2026-11-20T07:41:04.988554Z",
-    "indexed_opening_archives": 89,
+    "evaluated_at": "2026-11-21T07:41:30.432771Z",
+    "indexed_opening_archives": 95,
     "archive_rejections": [
+      {
+        "archive_path": "data/f4/titan-history/observations/3003949/20261121T073821-85749aedf80cef7bdd0c.json",
+        "reason": "opening archive not reconciled"
+      },
+      {
+        "archive_path": "data/f4/titan-history/observations/3003950/20261121T073821-c8c631f7d8b311306483.json",
+        "reason": "opening archive not reconciled"
+      },
+      {
+        "archive_path": "data/f4/titan-history/observations/3003953/20261121T073821-7279d6524d678706f165.json",
+        "reason": "opening archive not reconciled"
+      },
       {
         "archive_path": "data/f4/titan-history/observations/3003954/20261116T070915-91ef3465d9e3d6044eb6.json",
         "reason": "opening archive not reconciled"
       },
       {
         "archive_path": "data/f4/titan-history/observations/3003955/20261116T070915-d800c0030785326df0ec.json",
+        "reason": "opening archive not reconciled"
+      },
+      {
+        "archive_path": "data/f4/titan-history/observations/3003956/20261121T073821-035e51c2f5d300392b60.json",
         "reason": "opening archive not reconciled"
       }
     ],
@@ -187,7 +203,7 @@
     "dataset_sha256": "256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2",
     "dataset_path": "data/f4/ah/titan-research/datasets/256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2.json",
     "model_status": "insufficient_data",
-    "model_evaluated_at": "2026-11-20T07:41:04.988554Z",
+    "model_evaluated_at": "2026-11-21T07:41:30.432771Z",
     "model_dataset_sha256": "256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2",
     "model_dataset_path": "data/f4/ah/titan-research/datasets/256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2.json",
     "candidate_counts": {
@@ -5292,30 +5308,36 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-11-21T04:16:12.308670Z",
+      "captured_at": "2026-11-21T09:41:33.444794Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-11-21T04:16:12.890104Z",
-      "content_sha256": "97d9740320c1a705b4e2b19b71b9e540cf11875996fe6cb3fe4da2ae953d8bbc"
+      "captured_at": "2026-11-21T09:41:33.941486Z",
+      "content_sha256": "91056b69f9f8d717289c36c92779f0b02b809f2cd85c2bff19397757652ab69a"
     },
     {
-      "name": "infersports-crown-ah-quotes",
-      "status": "not_requested",
-      "reason": "no confirmed EPL fixture in capture window"
-    },
-    {
-      "name": "hkjc-direct-ah",
-      "url": "https://info.cld.hkjc.com/graphql/base/",
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events?sport=football&league=lg_T9268DXK&status=scheduled&date=2026-11-21&limit=100",
       "status": "ok",
-      "captured_at": "2026-11-21T04:16:14.020526Z",
-      "response_at": "2026-11-21T04:16:13Z",
-      "content_sha256": "b4c7d91170689be706fcf5943f0c005cb81c2467bb7c77b7f2d4f533ccbba64e",
-      "match_count": 230,
-      "epl_match_count": 10
+      "captured_at": "2026-11-21T09:41:34.420154Z",
+      "content_sha256": "712faa8bf7d7f256a90320f44030c407f14cec95800064b92c7dba999bedd790"
+    },
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events/evt_M1EN3B7T/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "status": "ok",
+      "captured_at": "2026-11-21T09:41:34.946781Z",
+      "content_sha256": "4dacbd208473dd54eead4858924e0e9d9a90aabedb59df2e86118412014ff489"
+    },
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events/evt_M1EN3B7T/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "status": "ok",
+      "captured_at": "2026-11-21T09:41:35.458714Z",
+      "content_sha256": "b182d85d52ad89f8e40b136011e84f1bd4c2902ec878f980c6398465b6e75b1f"
     }
   ],
   "provider_faults": {
@@ -5325,24 +5347,26 @@
   "primary_provider_health": {
     "status": "ok",
     "feed_live": true,
-    "as_of": "2026-11-21T04:16:03Z",
+    "as_of": "2026-11-21T09:41:25Z",
     "as_of_stale": false,
-    "checked_at": "2026-11-21T04:16:12.890104Z"
+    "checked_at": "2026-11-21T09:41:33.941486Z"
   },
   "fallback_matches": [],
-  "quote_availability": "not_tested_no_due_matches",
+  "quote_availability": "complete",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 14,
+    "fixtures": 9,
     "windows": {
       "T-180m": {
-        "awaiting_window": 14
+        "recorded_research_only": 1,
+        "complete_joint_market": 1,
+        "awaiting_window": 8
       },
       "T-60m": {
-        "awaiting_window": 14
+        "awaiting_window": 9
       },
       "T-15m": {
-        "awaiting_window": 14
+        "awaiting_window": 9
       }
     }
   },
