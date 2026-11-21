@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-11-21T04:16:14.062257Z",
-  "command": "daily",
+  "checked_at": "2026-11-21T09:41:47.942689Z",
+  "command": "capture",
   "mode": "shadow",
-  "new_predictions": 0,
-  "new_valid_predictions": 0,
+  "new_predictions": 1,
+  "new_valid_predictions": 1,
   "new_outcomes": 0,
-  "due_fixtures": 0,
-  "tracked_fixtures_seen": 14,
+  "due_fixtures": 1,
+  "tracked_fixtures_seen": 9,
   "skipped": [],
   "legacy_deferred": null,
   "enrichment": {
@@ -164,8 +164,8 @@
       "complete": true,
       "scope": {
         "league": "england-premier",
-        "from": "2026-11-20",
-        "through": "2026-11-28",
+        "from": "2026-11-21",
+        "through": "2026-11-22",
         "provider": "espn",
         "pending_lookup_limit": 20
       },
@@ -176,75 +176,65 @@
       {
         "name": "espn-calendar",
         "status": "ok",
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261120",
-        "captured_at": "2026-11-21T04:16:10.825554Z",
-        "content_sha256": "0e1ea63df5170b546aa068099abd33d21e60543ed14a6c2478fbc134e6f79d20"
-      },
-      {
-        "name": "espn-calendar",
-        "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261121",
-        "captured_at": "2026-11-21T04:16:10.920898Z",
-        "content_sha256": "6e75e37a46194902f9f70ca1c3480def215c1eab04974ca4b1691772d58cd265"
+        "captured_at": "2026-11-21T09:41:32.805143Z",
+        "content_sha256": "69b81c0b2f27d1b337a8a245bd98867835bc2b9a61ae08356495ae54042a03b0"
       },
       {
         "name": "espn-calendar",
         "status": "ok",
         "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261122",
-        "captured_at": "2026-11-21T04:16:11.009938Z",
-        "content_sha256": "50b4ac04a93d3ef25a122753e7f4fa8aa61b9675c1c0db418228f7f3915ce73f"
+        "captured_at": "2026-11-21T09:41:32.854229Z",
+        "content_sha256": "920355be69180d293b0f16e978a0c65da6c970c5e99d9f923c7b0c0157a7bb5c"
       },
       {
-        "name": "espn-calendar",
+        "name": "titan007-crown",
+        "url": "https://1x2.titan007.com/Company.js",
         "status": "ok",
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261123",
-        "captured_at": "2026-11-21T04:16:11.110129Z",
-        "content_sha256": "b1ed4269818acffd3f109baec8f0cab2a378f24a4b8b8b2e35ae0576fbbbfa6b"
+        "captured_at": "2026-11-21T09:41:38.926283Z",
+        "content_sha256": "8ffeb7953dcf04220e3728ab3ec6f98d3ef3287d9cce9b54076b6e01962f1ed2"
       },
       {
-        "name": "espn-calendar",
+        "name": "titan007-crown",
+        "url": "https://1x2.titan007.com/index_vip.aspx",
         "status": "ok",
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261124",
-        "captured_at": "2026-11-21T04:16:11.286453Z",
-        "content_sha256": "0e1ea63df5170b546aa068099abd33d21e60543ed14a6c2478fbc134e6f79d20"
+        "captured_at": "2026-11-21T09:41:41.464794Z",
+        "content_sha256": "78361bb39253689abacfd7929d85baddd0f5adfe6ae5c6e536ecaf08ac291e62"
       },
       {
-        "name": "espn-calendar",
+        "name": "titan007-crown",
+        "url": "https://1x2.titan007.com/TomorrowOdds.aspx",
         "status": "ok",
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261125",
-        "captured_at": "2026-11-21T04:16:11.364816Z",
-        "content_sha256": "0e1ea63df5170b546aa068099abd33d21e60543ed14a6c2478fbc134e6f79d20"
+        "captured_at": "2026-11-21T09:41:44.653636Z",
+        "content_sha256": "bc0abbc122c2771c05c02fd45c68b763b38eb9f4c277991291f071283cafbab9"
       },
       {
-        "name": "espn-calendar",
+        "name": "titan007-crown",
+        "url": "https://1x2d.titan007.com/3003956.js",
         "status": "ok",
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261126",
-        "captured_at": "2026-11-21T04:16:11.451257Z",
-        "content_sha256": "0e1ea63df5170b546aa068099abd33d21e60543ed14a6c2478fbc134e6f79d20"
-      },
-      {
-        "name": "espn-calendar",
-        "status": "ok",
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261127",
-        "captured_at": "2026-11-21T04:16:11.533220Z",
-        "content_sha256": "8349d28d4a94888c79bfc38bd58b25ba7815fd0d8e9a8d3017381f0ae3ba2159"
-      },
-      {
-        "name": "espn-calendar",
-        "status": "ok",
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261128",
-        "captured_at": "2026-11-21T04:16:11.674352Z",
-        "content_sha256": "319f3252b3f212c9fd606120bdd040e7f30e6f311458a70a37b4021d03f7e6e5"
+        "captured_at": "2026-11-21T09:41:46.792300Z",
+        "content_sha256": "6d99ba21eaae745464f7d40456f0313734ebad9a517824f5e5fd45dba3c645be"
       }
     ]
   },
-  "f2_problems": [],
+  "f2_problems": [
+    "f2 row 0 rejected: an explicit kickoff/decision time is required",
+    "f2 row 1 rejected: an explicit kickoff/decision time is required",
+    "f2 row 2 rejected: an explicit kickoff/decision time is required",
+    "f2 row 3 rejected: an explicit kickoff/decision time is required",
+    "f2 row 4 rejected: an explicit kickoff/decision time is required",
+    "f2 row 5 rejected: unknown or ambiguous source teams",
+    "f2 row 6 rejected: an explicit kickoff/decision time is required",
+    "f2 row 7 rejected: an explicit kickoff/decision time is required",
+    "f2 row 8 rejected: an explicit kickoff/decision time is required",
+    "f2 row 9 rejected: an explicit kickoff/decision time is required"
+  ],
   "automatic_promotion": false,
   "automatic_wagering": false,
   "asian_handicap": {
-    "new_valid": 0,
-    "new_attempts": 0,
-    "distinct_matches": 39,
+    "new_valid": 1,
+    "new_attempts": 1,
+    "distinct_matches": 40,
     "paired_matches": 39,
     "problems": [],
     "provider_faults": {
@@ -252,6 +242,6 @@
       "hkjc-direct": []
     },
     "fallback_matches": [],
-    "quote_availability": "not_tested_no_due_matches"
+    "quote_availability": "complete"
   }
 }
