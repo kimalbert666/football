@@ -1,66 +1,66 @@
 {
-  "checked_at": "2026-11-21T12:15:02.876290Z",
+  "checked_at": "2026-11-21T14:00:07.113732Z",
   "markets": {
-    "espn:401879233": {
-      "home_handicap": -1.25,
+    "espn:401878754": {
+      "home_handicap": -1.0,
       "odds": [
-        1.83,
-        2.06
+        1.99,
+        1.9
       ],
-      "published_at": "2026-11-21T12:11:58Z",
+      "published_at": "2026-11-21T13:58:58Z",
       "bookmaker": "crown",
       "market": "90min_asian_handicap",
-      "captured_at": "2026-11-21T12:15:02.315305Z",
-      "snapshot_at": "2026-11-21T12:14:48Z",
+      "captured_at": "2026-11-21T14:00:02.384025Z",
+      "snapshot_at": "2026-11-21T13:59:54Z",
       "source": "infersports-crown",
-      "url": "https://api.infersports.dev/v1/events/evt_M1EN3B7T/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
-      "content_sha256": "aea2dfb24f07f11f5c8908998ca7aa8532f0dbddc3e59661441bb1de14ce69f3",
-      "provider_event_id": "evt_M1EN3B7T",
-      "provider_kickoff_at": "2026-11-21T12:30:00Z",
+      "url": "https://api.infersports.dev/v1/events/evt_H8B4DK26/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "content_sha256": "245a511a7c9aa2444c85afc4fc777f6b7614199a5b6f63d90695d8001ad1bce4",
+      "provider_event_id": "evt_H8B4DK26",
+      "provider_kickoff_at": "2026-11-21T15:00:00Z",
       "market_status": "provider_reports_open",
       "lines": [
         {
-          "home_handicap": -1.75,
-          "odds": [
-            2.38,
-            1.61
-          ],
-          "published_at": "2026-11-21T11:57:42Z"
-        },
-        {
-          "home_handicap": -1.5,
-          "odds": [
-            2.08,
-            1.81
-          ],
-          "published_at": "2026-11-21T12:11:44Z"
-        },
-        {
           "home_handicap": -1.25,
           "odds": [
-            1.83,
-            2.06
+            2.25,
+            1.69
           ],
-          "published_at": "2026-11-21T12:11:58Z"
+          "published_at": "2026-11-21T13:58:58Z"
         },
         {
           "home_handicap": -1.0,
           "odds": [
-            1.57,
-            2.49
+            1.99,
+            1.9
           ],
-          "published_at": "2026-11-21T11:55:54Z"
+          "published_at": "2026-11-21T13:58:58Z"
+        },
+        {
+          "home_handicap": -0.75,
+          "odds": [
+            1.74,
+            2.17
+          ],
+          "published_at": "2026-11-21T13:58:58Z"
+        },
+        {
+          "home_handicap": -0.5,
+          "odds": [
+            1.6,
+            2.4
+          ],
+          "published_at": "2026-11-21T13:54:41Z"
         }
       ],
       "opening_lines": [
         {
-          "home_handicap": -1.25,
+          "home_handicap": -1.0,
           "odds": [
-            1.92,
-            1.96
+            1.8,
+            2.08
           ],
-          "published_at": "2026-11-05T04:04:35Z",
-          "captured_at": "2026-11-21T12:15:02.874807Z",
+          "published_at": "2026-11-05T04:03:56Z",
+          "captured_at": "2026-11-21T14:00:02.904543Z",
           "provenance": "provider-reported opening; not independently certified"
         }
       ],
@@ -69,21 +69,393 @@
         "bookmaker": "crown",
         "market": "90min_1x2",
         "odds": [
-          1.37,
-          5.5,
-          7.6
+          1.6,
+          4.5,
+          5.1
         ],
-        "captured_at": "2026-11-21T12:15:02.315305Z",
-        "published_at": "2026-11-21T11:59:04Z",
+        "captured_at": "2026-11-21T14:00:02.384025Z",
+        "published_at": "2026-11-21T13:58:58Z",
         "source": "infersports-crown",
-        "url": "https://api.infersports.dev/v1/events/evt_M1EN3B7T/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
-        "provider_event_id": "evt_M1EN3B7T",
-        "snapshot_at": "2026-11-21T12:14:48Z",
-        "content_sha256": "aea2dfb24f07f11f5c8908998ca7aa8532f0dbddc3e59661441bb1de14ce69f3",
-        "provider_kickoff_at": "2026-11-21T12:30:00Z"
+        "url": "https://api.infersports.dev/v1/events/evt_H8B4DK26/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+        "provider_event_id": "evt_H8B4DK26",
+        "snapshot_at": "2026-11-21T13:59:54Z",
+        "content_sha256": "245a511a7c9aa2444c85afc4fc777f6b7614199a5b6f63d90695d8001ad1bce4",
+        "provider_kickoff_at": "2026-11-21T15:00:00Z"
       },
       "source_delay_seconds": 90,
-      "snapshot_age_seconds": 14.315305,
+      "snapshot_age_seconds": 8.384025,
+      "freshness_evidence": "provider stale=false and fresh global feed health",
+      "provenance": "Third-party bookmaker attribution; unchanged prices not independently polled at bookmaker",
+      "bookmaker_priority": [
+        "crown",
+        "macau",
+        "hkjc",
+        "sbobet"
+      ],
+      "earlier_bookmaker_rejections": []
+    },
+    "espn:401878756": {
+      "home_handicap": -0.75,
+      "odds": [
+        2.05,
+        1.84
+      ],
+      "published_at": "2026-11-21T13:57:54Z",
+      "bookmaker": "crown",
+      "market": "90min_asian_handicap",
+      "captured_at": "2026-11-21T14:00:03.449555Z",
+      "snapshot_at": "2026-11-21T13:59:54Z",
+      "source": "infersports-crown",
+      "url": "https://api.infersports.dev/v1/events/evt_WB7KY0R6/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "content_sha256": "735529c687eb5940d452ce7db65236219caac0a2282267a43cfd6acf5fe17e42",
+      "provider_event_id": "evt_WB7KY0R6",
+      "provider_kickoff_at": "2026-11-21T15:00:00Z",
+      "market_status": "provider_reports_open",
+      "lines": [
+        {
+          "home_handicap": -1.0,
+          "odds": [
+            2.47,
+            1.58
+          ],
+          "published_at": "2026-11-21T13:57:54Z"
+        },
+        {
+          "home_handicap": -0.75,
+          "odds": [
+            2.05,
+            1.84
+          ],
+          "published_at": "2026-11-21T13:57:54Z"
+        },
+        {
+          "home_handicap": -0.5,
+          "odds": [
+            1.82,
+            2.07
+          ],
+          "published_at": "2026-11-21T13:57:54Z"
+        },
+        {
+          "home_handicap": -0.25,
+          "odds": [
+            1.6,
+            2.4
+          ],
+          "published_at": "2026-11-21T13:57:54Z"
+        }
+      ],
+      "opening_lines": [
+        {
+          "home_handicap": -0.75,
+          "odds": [
+            1.97,
+            1.91
+          ],
+          "published_at": "2026-11-05T04:03:49Z",
+          "captured_at": "2026-11-21T14:00:03.969456Z",
+          "provenance": "provider-reported opening; not independently certified"
+        }
+      ],
+      "line_selection": "closest_price_balance_not_provider_main",
+      "market_1x2": {
+        "bookmaker": "crown",
+        "market": "90min_1x2",
+        "odds": [
+          1.82,
+          3.85,
+          4.3
+        ],
+        "captured_at": "2026-11-21T14:00:03.449555Z",
+        "published_at": "2026-11-21T13:58:07Z",
+        "source": "infersports-crown",
+        "url": "https://api.infersports.dev/v1/events/evt_WB7KY0R6/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+        "provider_event_id": "evt_WB7KY0R6",
+        "snapshot_at": "2026-11-21T13:59:54Z",
+        "content_sha256": "735529c687eb5940d452ce7db65236219caac0a2282267a43cfd6acf5fe17e42",
+        "provider_kickoff_at": "2026-11-21T15:00:00Z"
+      },
+      "source_delay_seconds": 90,
+      "snapshot_age_seconds": 9.449555,
+      "freshness_evidence": "provider stale=false and fresh global feed health",
+      "provenance": "Third-party bookmaker attribution; unchanged prices not independently polled at bookmaker",
+      "bookmaker_priority": [
+        "crown",
+        "macau",
+        "hkjc",
+        "sbobet"
+      ],
+      "earlier_bookmaker_rejections": []
+    },
+    "espn:401879235": {
+      "home_handicap": 0.0,
+      "odds": [
+        1.89,
+        2.0
+      ],
+      "published_at": "2026-11-21T13:56:22Z",
+      "bookmaker": "crown",
+      "market": "90min_asian_handicap",
+      "captured_at": "2026-11-21T14:00:04.497460Z",
+      "snapshot_at": "2026-11-21T13:58:28Z",
+      "source": "infersports-crown",
+      "url": "https://api.infersports.dev/v1/events/evt_5KCMFSTH/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "content_sha256": "f9ad6d7f4180874b8193bf3c85e575d47e21de8453bcf9891669bd42442ab7df",
+      "provider_event_id": "evt_5KCMFSTH",
+      "provider_kickoff_at": "2026-11-21T15:00:00Z",
+      "market_status": "provider_reports_open",
+      "lines": [
+        {
+          "home_handicap": -0.5,
+          "odds": [
+            2.56,
+            1.54
+          ],
+          "published_at": "2026-11-21T13:49:49Z"
+        },
+        {
+          "home_handicap": -0.25,
+          "odds": [
+            2.2,
+            1.72
+          ],
+          "published_at": "2026-11-21T13:31:44Z"
+        },
+        {
+          "home_handicap": 0.0,
+          "odds": [
+            1.89,
+            2.0
+          ],
+          "published_at": "2026-11-21T13:56:22Z"
+        },
+        {
+          "home_handicap": 0.25,
+          "odds": [
+            1.64,
+            2.33
+          ],
+          "published_at": "2026-11-21T12:00:49Z"
+        }
+      ],
+      "opening_lines": [
+        {
+          "home_handicap": -0.25,
+          "odds": [
+            2.08,
+            1.8
+          ],
+          "published_at": "2026-11-05T04:04:07Z",
+          "captured_at": "2026-11-21T14:00:05.021083Z",
+          "provenance": "provider-reported opening; not independently certified"
+        }
+      ],
+      "line_selection": "closest_price_balance_not_provider_main",
+      "market_1x2": {
+        "bookmaker": "crown",
+        "market": "90min_1x2",
+        "odds": [
+          2.56,
+          3.55,
+          2.7
+        ],
+        "captured_at": "2026-11-21T14:00:04.497460Z",
+        "published_at": "2026-11-21T13:53:39Z",
+        "source": "infersports-crown",
+        "url": "https://api.infersports.dev/v1/events/evt_5KCMFSTH/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+        "provider_event_id": "evt_5KCMFSTH",
+        "snapshot_at": "2026-11-21T13:58:28Z",
+        "content_sha256": "f9ad6d7f4180874b8193bf3c85e575d47e21de8453bcf9891669bd42442ab7df",
+        "provider_kickoff_at": "2026-11-21T15:00:00Z"
+      },
+      "source_delay_seconds": 90,
+      "snapshot_age_seconds": 96.49746,
+      "freshness_evidence": "provider stale=false and fresh global feed health",
+      "provenance": "Third-party bookmaker attribution; unchanged prices not independently polled at bookmaker",
+      "bookmaker_priority": [
+        "crown",
+        "macau",
+        "hkjc",
+        "sbobet"
+      ],
+      "earlier_bookmaker_rejections": []
+    },
+    "espn:401879236": {
+      "home_handicap": -0.5,
+      "odds": [
+        2.03,
+        1.86
+      ],
+      "published_at": "2026-11-21T13:53:14Z",
+      "bookmaker": "crown",
+      "market": "90min_asian_handicap",
+      "captured_at": "2026-11-21T14:00:05.533756Z",
+      "snapshot_at": "2026-11-21T13:59:32Z",
+      "source": "infersports-crown",
+      "url": "https://api.infersports.dev/v1/events/evt_YT1A5YBW/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "content_sha256": "b16496f17e67355f7a038acb545cdc9124831b4f389475100029ffa0a1d62e9d",
+      "provider_event_id": "evt_YT1A5YBW",
+      "provider_kickoff_at": "2026-11-21T15:00:00Z",
+      "market_status": "provider_reports_open",
+      "lines": [
+        {
+          "home_handicap": -0.75,
+          "odds": [
+            2.33,
+            1.64
+          ],
+          "published_at": "2026-11-21T13:49:11Z"
+        },
+        {
+          "home_handicap": -0.5,
+          "odds": [
+            2.03,
+            1.86
+          ],
+          "published_at": "2026-11-21T13:53:14Z"
+        },
+        {
+          "home_handicap": -0.25,
+          "odds": [
+            1.76,
+            2.14
+          ],
+          "published_at": "2026-11-21T13:49:11Z"
+        },
+        {
+          "home_handicap": 0.0,
+          "odds": [
+            1.47,
+            2.72
+          ],
+          "published_at": "2026-11-21T13:45:30Z"
+        }
+      ],
+      "opening_lines": [
+        {
+          "home_handicap": -0.5,
+          "odds": [
+            1.83,
+            2.05
+          ],
+          "published_at": "2026-11-05T04:03:54Z",
+          "captured_at": "2026-11-21T14:00:06.069810Z",
+          "provenance": "provider-reported opening; not independently certified"
+        }
+      ],
+      "line_selection": "closest_price_balance_not_provider_main",
+      "market_1x2": {
+        "bookmaker": "crown",
+        "market": "90min_1x2",
+        "odds": [
+          2.03,
+          3.5,
+          3.8
+        ],
+        "captured_at": "2026-11-21T14:00:05.533756Z",
+        "published_at": "2026-11-21T13:53:27Z",
+        "source": "infersports-crown",
+        "url": "https://api.infersports.dev/v1/events/evt_YT1A5YBW/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+        "provider_event_id": "evt_YT1A5YBW",
+        "snapshot_at": "2026-11-21T13:59:32Z",
+        "content_sha256": "b16496f17e67355f7a038acb545cdc9124831b4f389475100029ffa0a1d62e9d",
+        "provider_kickoff_at": "2026-11-21T15:00:00Z"
+      },
+      "source_delay_seconds": 90,
+      "snapshot_age_seconds": 33.533756,
+      "freshness_evidence": "provider stale=false and fresh global feed health",
+      "provenance": "Third-party bookmaker attribution; unchanged prices not independently polled at bookmaker",
+      "bookmaker_priority": [
+        "crown",
+        "macau",
+        "hkjc",
+        "sbobet"
+      ],
+      "earlier_bookmaker_rejections": []
+    },
+    "espn:401879238": {
+      "home_handicap": -0.5,
+      "odds": [
+        2.02,
+        1.87
+      ],
+      "published_at": "2026-11-21T13:48:04Z",
+      "bookmaker": "crown",
+      "market": "90min_asian_handicap",
+      "captured_at": "2026-11-21T14:00:06.600351Z",
+      "snapshot_at": "2026-11-21T13:59:55Z",
+      "source": "infersports-crown",
+      "url": "https://api.infersports.dev/v1/events/evt_G532SQY6/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "content_sha256": "7afc5481e2f3c42de34dc6ea27ca4ed590d4d27929a33238e38ad0ea09bb550a",
+      "provider_event_id": "evt_G532SQY6",
+      "provider_kickoff_at": "2026-11-21T15:00:00Z",
+      "market_status": "provider_reports_open",
+      "lines": [
+        {
+          "home_handicap": -0.75,
+          "odds": [
+            2.33,
+            1.64
+          ],
+          "published_at": "2026-11-21T13:48:04Z"
+        },
+        {
+          "home_handicap": -0.5,
+          "odds": [
+            2.02,
+            1.87
+          ],
+          "published_at": "2026-11-21T13:48:04Z"
+        },
+        {
+          "home_handicap": -0.25,
+          "odds": [
+            1.73,
+            2.19
+          ],
+          "published_at": "2026-11-21T13:51:02Z"
+        },
+        {
+          "home_handicap": 0.0,
+          "odds": [
+            1.46,
+            2.75
+          ],
+          "published_at": "2026-11-21T13:45:22Z"
+        }
+      ],
+      "opening_lines": [
+        {
+          "home_handicap": -0.5,
+          "odds": [
+            2.05,
+            1.83
+          ],
+          "published_at": "2026-11-05T04:03:36Z",
+          "captured_at": "2026-11-21T14:00:07.112219Z",
+          "provenance": "provider-reported opening; not independently certified"
+        }
+      ],
+      "line_selection": "closest_price_balance_not_provider_main",
+      "market_1x2": {
+        "bookmaker": "crown",
+        "market": "90min_1x2",
+        "odds": [
+          2.02,
+          3.45,
+          3.85
+        ],
+        "captured_at": "2026-11-21T14:00:06.600351Z",
+        "published_at": "2026-11-21T13:48:04Z",
+        "source": "infersports-crown",
+        "url": "https://api.infersports.dev/v1/events/evt_G532SQY6/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+        "provider_event_id": "evt_G532SQY6",
+        "snapshot_at": "2026-11-21T13:59:55Z",
+        "content_sha256": "7afc5481e2f3c42de34dc6ea27ca4ed590d4d27929a33238e38ad0ea09bb550a",
+        "provider_kickoff_at": "2026-11-21T15:00:00Z"
+      },
+      "source_delay_seconds": 90,
+      "snapshot_age_seconds": 11.600351,
       "freshness_evidence": "provider stale=false and fresh global feed health",
       "provenance": "Third-party bookmaker attribution; unchanged prices not independently polled at bookmaker",
       "bookmaker_priority": [
@@ -100,36 +472,92 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-11-21T12:15:00.718344Z",
+      "captured_at": "2026-11-21T14:00:00.820819Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-11-21T12:15:01.265864Z",
-      "content_sha256": "c987f4638ad2d94665899bd7ea48cf3013abc53bc71e3e17ac329e6baf44627d"
+      "captured_at": "2026-11-21T14:00:01.348423Z",
+      "content_sha256": "dea8a3d3206eaaa09308fa7909ed53ea924d2b9510b626bbcc9ceff1cb2f3bdb"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/events?sport=football&league=lg_T9268DXK&status=scheduled&date=2026-11-21&limit=100",
       "status": "ok",
-      "captured_at": "2026-11-21T12:15:01.824486Z",
-      "content_sha256": "712faa8bf7d7f256a90320f44030c407f14cec95800064b92c7dba999bedd790"
+      "captured_at": "2026-11-21T14:00:01.848786Z",
+      "content_sha256": "ab7ea72717588caa97856ac939582bb20cf25002a04065a0ab368e841f5a00c8"
     },
     {
       "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events/evt_M1EN3B7T/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "url": "https://api.infersports.dev/v1/events/evt_H8B4DK26/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
       "status": "ok",
-      "captured_at": "2026-11-21T12:15:02.315305Z",
-      "content_sha256": "aea2dfb24f07f11f5c8908998ca7aa8532f0dbddc3e59661441bb1de14ce69f3"
+      "captured_at": "2026-11-21T14:00:02.384025Z",
+      "content_sha256": "245a511a7c9aa2444c85afc4fc777f6b7614199a5b6f63d90695d8001ad1bce4"
     },
     {
       "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events/evt_M1EN3B7T/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "url": "https://api.infersports.dev/v1/events/evt_H8B4DK26/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
       "status": "ok",
-      "captured_at": "2026-11-21T12:15:02.874807Z",
-      "content_sha256": "b182d85d52ad89f8e40b136011e84f1bd4c2902ec878f980c6398465b6e75b1f"
+      "captured_at": "2026-11-21T14:00:02.904543Z",
+      "content_sha256": "fa9d4315d788f70dd38f1287b9cc1b3d1e904c7ae7b9941b139384a82a58f940"
+    },
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events/evt_WB7KY0R6/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "status": "ok",
+      "captured_at": "2026-11-21T14:00:03.449555Z",
+      "content_sha256": "735529c687eb5940d452ce7db65236219caac0a2282267a43cfd6acf5fe17e42"
+    },
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events/evt_WB7KY0R6/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "status": "ok",
+      "captured_at": "2026-11-21T14:00:03.969456Z",
+      "content_sha256": "07c85547bdf6f34f7c4ee0cbc2f5a2cef228a3dd657a5f81182fd00f90b6883f"
+    },
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events/evt_5KCMFSTH/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "status": "ok",
+      "captured_at": "2026-11-21T14:00:04.497460Z",
+      "content_sha256": "f9ad6d7f4180874b8193bf3c85e575d47e21de8453bcf9891669bd42442ab7df"
+    },
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events/evt_5KCMFSTH/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "status": "ok",
+      "captured_at": "2026-11-21T14:00:05.021083Z",
+      "content_sha256": "f6bd807f4da4e565c6a8f449b359602bf41970058e45628637953bad2342e2c3"
+    },
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events/evt_YT1A5YBW/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "status": "ok",
+      "captured_at": "2026-11-21T14:00:05.533756Z",
+      "content_sha256": "b16496f17e67355f7a038acb545cdc9124831b4f389475100029ffa0a1d62e9d"
+    },
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events/evt_YT1A5YBW/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "status": "ok",
+      "captured_at": "2026-11-21T14:00:06.069810Z",
+      "content_sha256": "134d49bbec8602faddc38710609d59803765610855a1deb1fc49598ada5bf3fa"
+    },
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events/evt_G532SQY6/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "status": "ok",
+      "captured_at": "2026-11-21T14:00:06.600351Z",
+      "content_sha256": "7afc5481e2f3c42de34dc6ea27ca4ed590d4d27929a33238e38ad0ea09bb550a"
+    },
+    {
+      "name": "infersports-crown-ah",
+      "url": "https://api.infersports.dev/v1/events/evt_G532SQY6/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "status": "ok",
+      "captured_at": "2026-11-21T14:00:07.112219Z",
+      "content_sha256": "22f1e344d123ef18547f33c81974bfd8e6395d5bb4910da37d5f31749d8107b3"
     }
   ],
   "problems": [],
@@ -140,9 +568,9 @@
   "primary_provider_health": {
     "status": "ok",
     "feed_live": true,
-    "as_of": "2026-11-21T12:14:52Z",
+    "as_of": "2026-11-21T13:59:52Z",
     "as_of_stale": false,
-    "checked_at": "2026-11-21T12:15:01.265864Z"
+    "checked_at": "2026-11-21T14:00:01.348423Z"
   },
   "fallback_matches": [],
   "unresolved_matches": [],
