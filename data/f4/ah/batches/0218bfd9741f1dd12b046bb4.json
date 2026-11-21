@@ -1,6 +1,6 @@
 {
   "kickoff_at": "2026-11-21T17:30:00Z",
-  "updated_at": "2026-11-21T16:12:25.415260Z",
+  "updated_at": "2026-11-21T16:30:03.401260Z",
   "fixtures": [
     {
       "match_id": "espn:401879232",
@@ -18,12 +18,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-60m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-11-21T16:30:00Z",
           "closes_at": "2026-11-21T16:40:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "2a07d294d3818dc52017d4b2bfa863dab05b5ad32cf60313413f19806f0c1293",
+          "same_bookmaker_1x2_available": true
         },
         "T-15m": {
           "status": "awaiting_window",
