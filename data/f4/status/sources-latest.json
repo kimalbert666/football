@@ -1,19 +1,19 @@
 {
-  "captured_at": "2026-11-20T21:28:46.678551Z",
+  "captured_at": "2026-11-21T01:28:06.292099Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261120",
-      "captured_at": "2026-11-20T21:28:46.624399Z",
-      "content_sha256": "0e1ea63df5170b546aa068099abd33d21e60543ed14a6c2478fbc134e6f79d20"
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261121",
+      "captured_at": "2026-11-21T01:28:06.227486Z",
+      "content_sha256": "471d57382c2bc301cc19267ba5fbe90c203497654c0b98b36138a8377f7fc36a"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261121",
-      "captured_at": "2026-11-20T21:28:46.676720Z",
-      "content_sha256": "72504c2df107cee6ef4fac90812799ab3b11c8c372da3c95cc50ee56b331ba60"
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261122",
+      "captured_at": "2026-11-21T01:28:06.291531Z",
+      "content_sha256": "50b4ac04a93d3ef25a122753e7f4fa8aa61b9675c1c0db418228f7f3915ce73f"
     }
   ],
   "fixtures": [
@@ -121,14 +121,44 @@
       "score": null,
       "market": null,
       "problems": []
+    },
+    {
+      "match_id": "espn:401879234",
+      "source_event_id": "401879234",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "hull-city",
+      "away_id": "brighton",
+      "home": "Hull City",
+      "away": "Brighton & Hove Albion",
+      "kickoff_at": "2026-11-22T14:00:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401878755",
+      "source_event_id": "401878755",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "liverpool",
+      "away_id": "man-united",
+      "home": "Liverpool",
+      "away": "Manchester United",
+      "kickoff_at": "2026-11-22T16:30:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
     }
   ],
   "coverage": {
     "complete": true,
     "scope": {
       "league": "england-premier",
-      "from": "2026-11-20",
-      "through": "2026-11-21",
+      "from": "2026-11-21",
+      "through": "2026-11-22",
       "provider": "espn",
       "pending_lookup_limit": 20
     },
