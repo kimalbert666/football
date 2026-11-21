@@ -1,27 +1,13 @@
 {
-  "started_at": "2026-11-21T14:42:09.212206Z",
-  "run_id": "44915242382",
-  "captures": [
-    {
-      "requested_at": "2026-11-21T16:30:00.017427Z",
-      "target_at": "2026-11-21T16:30:00Z",
-      "delay_seconds": 0.017427,
-      "completed_at": "2026-11-21T16:30:15.331440Z"
-    },
-    {
-      "requested_at": "2026-11-21T17:15:00.017418Z",
-      "target_at": "2026-11-21T17:15:00Z",
-      "delay_seconds": 0.017418,
-      "completed_at": "2026-11-21T17:15:04.562486Z"
-    }
-  ],
+  "started_at": "2026-11-21T17:26:08.794999Z",
+  "run_id": "44929997747",
+  "captures": [],
   "mode": "bounded_match_window_worker",
   "timing_guaranteed": false,
   "max_minutes": 300,
   "arm_minutes": 300,
-  "previous_worker_started_at": "2026-11-21T09:41:32.677258Z",
+  "previous_worker_started_at": "2026-11-21T14:42:09.212206Z",
   "continuation_requested": false,
-  "state": "complete_or_no_nearby_window",
-  "checked_at": "2026-11-21T17:16:06.273096Z",
-  "next_window_at": "2026-11-21T17:15:00Z"
+  "state": "planning",
+  "checked_at": "2026-11-21T17:26:09.289541Z"
 }
