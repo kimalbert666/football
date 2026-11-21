@@ -1,45 +1,13 @@
 {
-  "started_at": "2026-11-21T09:41:32.677258Z",
-  "run_id": "44890738363",
-  "captures": [
-    {
-      "requested_at": "2026-11-21T11:30:00.012987Z",
-      "target_at": "2026-11-21T11:30:00Z",
-      "delay_seconds": 0.012987,
-      "completed_at": "2026-11-21T11:30:14.668108Z"
-    },
-    {
-      "requested_at": "2026-11-21T12:00:00.012923Z",
-      "target_at": "2026-11-21T12:00:00Z",
-      "delay_seconds": 0.012923,
-      "completed_at": "2026-11-21T12:00:27.832227Z"
-    },
-    {
-      "requested_at": "2026-11-21T12:15:00.013725Z",
-      "target_at": "2026-11-21T12:15:00Z",
-      "delay_seconds": 0.013725,
-      "completed_at": "2026-11-21T12:15:04.944748Z"
-    },
-    {
-      "requested_at": "2026-11-21T14:00:00.013463Z",
-      "target_at": "2026-11-21T14:00:00Z",
-      "delay_seconds": 0.013463,
-      "completed_at": "2026-11-21T14:00:47.682146Z"
-    },
-    {
-      "requested_at": "2026-11-21T14:30:00.014640Z",
-      "target_at": "2026-11-21T14:30:00Z",
-      "delay_seconds": 0.01464,
-      "completed_at": "2026-11-21T14:30:14.229150Z"
-    }
-  ],
+  "started_at": "2026-11-21T14:42:09.212206Z",
+  "run_id": "44915242382",
+  "captures": [],
   "mode": "bounded_match_window_worker",
   "timing_guaranteed": false,
   "max_minutes": 300,
   "arm_minutes": 300,
-  "previous_worker_started_at": "2026-11-21T03:21:40.859320Z",
-  "continuation_requested": true,
-  "state": "duration_limit",
-  "checked_at": "2026-11-21T14:41:36.044401Z",
-  "next_window_at": "2026-11-21T14:45:00Z"
+  "previous_worker_started_at": "2026-11-21T09:41:32.677258Z",
+  "continuation_requested": false,
+  "state": "ah_saved_legacy_pending",
+  "checked_at": "2026-11-21T14:42:16.046656Z"
 }

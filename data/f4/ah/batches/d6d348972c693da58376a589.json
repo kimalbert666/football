@@ -1,13 +1,13 @@
 {
   "kickoff_at": "2026-11-21T15:00:00Z",
-  "updated_at": "2026-11-21T14:30:02.715140Z",
+  "updated_at": "2026-11-21T14:42:16.035000Z",
   "fixtures": [
     {
       "match_id": "espn:401878754",
       "home": "Tottenham Hotspur",
       "away": "Ipswich Town",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "28b63d7861ee89ad410cff0666fab147a2ce1e732a71b94251d7ce54a18117b2",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -26,12 +26,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-11-21T14:45:00Z",
           "closes_at": "2026-11-21T14:50:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "28b63d7861ee89ad410cff0666fab147a2ce1e732a71b94251d7ce54a18117b2",
+          "same_bookmaker_1x2_available": true
         }
       }
     },
@@ -39,8 +39,8 @@
       "match_id": "espn:401878756",
       "home": "Aston Villa",
       "away": "Sunderland",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "3877a5e107291a99f9b246d62b93ae9efc8713e7f7d02ce6b478f4eac1e7610b",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -59,12 +59,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-11-21T14:45:00Z",
           "closes_at": "2026-11-21T14:50:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "3877a5e107291a99f9b246d62b93ae9efc8713e7f7d02ce6b478f4eac1e7610b",
+          "same_bookmaker_1x2_available": true
         }
       }
     },
@@ -72,8 +72,8 @@
       "match_id": "espn:401879235",
       "home": "Coventry City",
       "away": "Crystal Palace",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "bd0bf914454aa19197b1453950ab34110b028e373c2b1d5c2e4bee9c984e08ad",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -92,12 +92,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-11-21T14:45:00Z",
           "closes_at": "2026-11-21T14:50:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "bd0bf914454aa19197b1453950ab34110b028e373c2b1d5c2e4bee9c984e08ad",
+          "same_bookmaker_1x2_available": true
         }
       }
     },
@@ -105,8 +105,8 @@
       "match_id": "espn:401879236",
       "home": "Chelsea",
       "away": "Leeds United",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "a9549f89af81c5d55a9803e0cf54ca8b7bbd248d26c8dbf640b397d4f766a85c",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -125,12 +125,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-11-21T14:45:00Z",
           "closes_at": "2026-11-21T14:50:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "a9549f89af81c5d55a9803e0cf54ca8b7bbd248d26c8dbf640b397d4f766a85c",
+          "same_bookmaker_1x2_available": true
         }
       }
     },
@@ -138,8 +138,8 @@
       "match_id": "espn:401879238",
       "home": "AFC Bournemouth",
       "away": "Nottingham Forest",
-      "status": "awaiting_window",
-      "observation_id": null,
+      "status": "recorded_research_only",
+      "observation_id": "a48fc7f8ceb2aba8cfde26fbcb3f4fd24d9705bad2e8e4ae5910fd13966b165c",
       "windows": {
         "T-180m": {
           "status": "recorded_research_only",
@@ -158,12 +158,12 @@
           "same_bookmaker_1x2_available": true
         },
         "T-15m": {
-          "status": "awaiting_window",
+          "status": "recorded_research_only",
           "expected_at": "2026-11-21T14:45:00Z",
           "closes_at": "2026-11-21T14:50:00Z",
-          "attempts": 0,
-          "observation_id": null,
-          "same_bookmaker_1x2_available": false
+          "attempts": 1,
+          "observation_id": "a48fc7f8ceb2aba8cfde26fbcb3f4fd24d9705bad2e8e4ae5910fd13966b165c",
+          "same_bookmaker_1x2_available": true
         }
       }
     }
