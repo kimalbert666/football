@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluated_at": "2026-11-21T14:00:47.617794Z",
+  "evaluated_at": "2026-11-21T14:30:14.163569Z",
   "mode": "shadow",
   "candidate_weight": 0,
   "automatic_promotion": false,
@@ -24,12 +24,12 @@
     "log_loss_floor": 1e-15
   },
   "counts": {
-    "raw_snapshots": 112,
-    "effective_valid": 85,
+    "raw_snapshots": 113,
+    "effective_valid": 86,
     "missing_baseline": 27,
     "missing_baseline_groups": 0,
     "redundant_snapshots": 0,
-    "pending": 12,
+    "pending": 13,
     "settled": 73,
     "paired": 73,
     "missing_candidate": 0,
@@ -38,10 +38,10 @@
     "excluded_postponed": 0,
     "excluded_identity": 0,
     "excluded_future": 0,
-    "distinct_match_count": 44,
+    "distinct_match_count": 45,
     "known_tracked_fixtures": 73,
-    "closed_windows": 107,
-    "covered_windows": 80,
+    "closed_windows": 112,
+    "covered_windows": 85,
     "missing_windows": 27,
     "late_discovered_windows": 18
   },
@@ -80,7 +80,7 @@
     "accuracy": null
   },
   "pending_statuses": {
-    "unobserved": 12
+    "unobserved": 13
   },
   "groups": [
     {
@@ -89,12 +89,12 @@
       "candidate_version": "dc-shadow-18bae91698fd",
       "experiment_id": "f4-forward-epl-crown-v1",
       "counts": {
-        "raw_snapshots": 41,
-        "effective_valid": 41,
+        "raw_snapshots": 42,
+        "effective_valid": 42,
         "missing_baseline": 0,
         "missing_baseline_groups": 0,
         "redundant_snapshots": 0,
-        "pending": 6,
+        "pending": 7,
         "settled": 35,
         "paired": 35,
         "missing_candidate": 0,
@@ -139,7 +139,7 @@
         "accuracy": null
       },
       "pending_statuses": {
-        "unobserved": 6
+        "unobserved": 7
       }
     },
     {
@@ -209,8 +209,8 @@
     "scope": "locally discovered target fixtures only; source completeness is not established",
     "known_tracked_fixtures": 73,
     "unresolved_fixtures": 0,
-    "closed_windows": 107,
-    "covered_windows": 80,
+    "closed_windows": 112,
+    "covered_windows": 85,
     "missing_windows": 27,
     "missing_baseline_windows": 0,
     "late_discovered_windows": 18,
