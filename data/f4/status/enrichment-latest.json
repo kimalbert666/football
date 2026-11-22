@@ -1,19 +1,25 @@
 {
-  "checked_at": "2026-11-22T00:34:56.316023Z",
+  "checked_at": "2026-11-22T03:28:45.362222Z",
   "status": "checked",
   "sources": {
     "strength": {
-      "schema": "f4-strength-observed-v1",
-      "method": "verified-espn-season-results-elo-k20-ha60-v1",
-      "status": "ready",
-      "coverage_scope": "all_past_dates_in_espn_declared_current_season_calendar",
       "available_for_historical_decisions": false,
+      "coverage_scope": "all_past_dates_in_espn_declared_current_season_calendar",
+      "metadata_source": {
+        "captured_at": "2026-11-22T00:34:56.370368Z",
+        "content_sha256": "14f9766f107d23082e715e1b88bbb3286a64d1c7e7768a186477ffb526a0ffae",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261122"
+      },
+      "method": "verified-espn-season-results-elo-k20-ha60-v1",
+      "missing_dates": [],
+      "observed_at": "2026-11-22T00:34:56.444299Z",
       "problems": [],
+      "rated_requested_fixtures": 20,
+      "requested_dates": 34,
+      "requested_fixtures": 20,
+      "result_count": 107,
+      "schema": "f4-strength-observed-v1",
       "season": {
-        "year": 2026,
-        "start_at": "2026-06-01T04:00:00Z",
-        "end_at": "2027-06-01T03:59:00Z",
-        "name": "2026-27 English Premier League",
         "days": [
           "20260821",
           "20260822",
@@ -49,40 +55,32 @@
           "20261108",
           "20261121",
           "20261122"
-        ]
+        ],
+        "end_at": "2027-06-01T03:59:00Z",
+        "name": "2026-27 English Premier League",
+        "start_at": "2026-06-01T04:00:00Z",
+        "year": 2026
       },
-      "metadata_source": {
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261122",
-        "captured_at": "2026-11-22T00:34:56.370368Z",
-        "content_sha256": "14f9766f107d23082e715e1b88bbb3286a64d1c7e7768a186477ffb526a0ffae"
-      },
-      "observed_at": "2026-11-22T00:34:56.444299Z",
-      "requested_dates": 34,
-      "verified_dates": 34,
-      "missing_dates": [],
       "snapshot_path": "data/f4/strength/snapshots/cb822091cdec2812c1b5ad628527e39a3920ce8fb113ce97a3ae936d5c4b2e3a.json",
       "snapshot_sha256": "cb822091cdec2812c1b5ad628527e39a3920ce8fb113ce97a3ae936d5c4b2e3a",
-      "result_count": 107,
+      "status": "ready",
       "teams": 20,
       "teams_with_five_games": 20,
-      "requested_fixtures": 20,
-      "rated_requested_fixtures": 20
+      "verified_dates": 34,
+      "refresh": "cached_same_utc_day"
     },
     "context": {
-      "schema": "f4-prematch-context-observed-v1",
-      "status": "ready",
+      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3",
       "observed_at": "2026-11-22T00:34:57.336796Z",
-      "season_year": 2026,
-      "snapshot_sha256": "3f4acfde600b3c2e34965855639e062616ea2317f6260fdbcb563e8010b7965a",
-      "snapshot_path": "data/f4/context/snapshots/3f4acfde600b3c2e34965855639e062616ea2317f6260fdbcb563e8010b7965a.json",
-      "teams_xg": 0,
-      "teams_availability": 20,
-      "teams_club_schedule": 12,
+      "problems": [
+        "Understat lagged xG missing or unverified: Expecting value: line 1 column 1 (char 0)"
+      ],
       "requested_clubs": 12,
-      "unresolved_clubs": [],
+      "schema": "f4-prematch-context-observed-v1",
+      "season_year": 2026,
+      "snapshot_path": "data/f4/context/snapshots/3f4acfde600b3c2e34965855639e062616ea2317f6260fdbcb563e8010b7965a.json",
+      "snapshot_sha256": "3f4acfde600b3c2e34965855639e062616ea2317f6260fdbcb563e8010b7965a",
       "source_statuses": {
-        "fpl": "available",
-        "understat": "unavailable",
         "espn-rest:aston-villa": "available",
         "espn-rest:brentford": "available",
         "espn-rest:brighton": "available",
@@ -94,15 +92,19 @@
         "espn-rest:leeds": "available",
         "espn-rest:liverpool": "available",
         "espn-rest:man-united": "available",
-        "espn-rest:nottingham-forest": "available"
+        "espn-rest:nottingham-forest": "available",
+        "fpl": "available",
+        "understat": "unavailable"
       },
-      "problems": [
-        "Understat lagged xG missing or unverified: Expecting value: line 1 column 1 (char 0)"
-      ],
-      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3"
+      "status": "ready",
+      "teams_availability": 20,
+      "teams_club_schedule": 12,
+      "teams_xg": 0,
+      "unresolved_clubs": [],
+      "refresh": "cached_same_utc_day"
     },
     "first_observed_quotes": {
-      "status": "partial",
+      "status": "cached",
       "checked_at": "2026-11-22T00:34:58.061776Z",
       "due_fixtures": 10,
       "new_records": 0,
@@ -167,5 +169,5 @@
       "opening_certified": false
     }
   },
-  "completed_at": "2026-11-22T00:34:58.062254Z"
+  "completed_at": "2026-11-22T03:28:45.363804Z"
 }
