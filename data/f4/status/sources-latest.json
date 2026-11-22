@@ -1,18 +1,18 @@
 {
-  "captured_at": "2026-11-22T13:45:00.204263Z",
+  "captured_at": "2026-11-22T14:15:07.118595Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261122",
-      "captured_at": "2026-11-22T13:45:00.155893Z",
-      "content_sha256": "d8fa7861efd71c6f106c6c0716457b2cc80d0e767abbefba12813e37fdad0a80"
+      "captured_at": "2026-11-22T14:15:07.073231Z",
+      "content_sha256": "49d2f23fcedb437c3dfc2a6a9415a2f3d626e587cd77e5eb0169285403ce4ec8"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261123",
-      "captured_at": "2026-11-22T13:45:00.203920Z",
+      "captured_at": "2026-11-22T14:15:07.118243Z",
       "content_sha256": "3b03c2c1c60e81aab5e184890593db1ee127d22e35b8833c8976d3e10b1b1e2c"
     }
   ],
@@ -27,7 +27,7 @@
       "home": "Hull City",
       "away": "Brighton & Hove Albion",
       "kickoff_at": "2026-11-22T14:00:00Z",
-      "status": "scheduled",
+      "status": "live",
       "score": null,
       "market": null,
       "problems": []
