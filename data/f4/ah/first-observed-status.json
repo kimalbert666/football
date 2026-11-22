@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "checked_at": "2026-11-21T01:28:13.894035Z",
-  "due_fixtures": 4,
+  "checked_at": "2026-11-22T00:34:58.061776Z",
+  "due_fixtures": 10,
   "new_records": 0,
   "saved_matches": [],
   "stored_first_observations": 50,
@@ -21,6 +21,30 @@
     {
       "match_id": "espn:401878752",
       "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401879229",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401879224",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401879228",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401879230",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401879231",
+      "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401878753",
+      "reason": "missing Asian handicap quote"
     }
   ],
   "provider_faults": {},
@@ -28,7 +52,13 @@
     "espn:401879225: HKJC AH unavailable (unique EPL identity not published or not matched)",
     "espn:401879226: HKJC AH unavailable (unique EPL identity not published or not matched)",
     "espn:401879227: HKJC AH unavailable (unique EPL identity not published or not matched)",
-    "espn:401878752: HKJC AH unavailable (unique EPL identity not published or not matched)"
+    "espn:401878752: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879229: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879224: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879228: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879230: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879231: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401878753: HKJC AH unavailable (unique EPL identity not published or not matched)"
   ],
   "source_policy": "independent_bulk_scout_no_formal_primary_quota",
   "opening_certified": false
