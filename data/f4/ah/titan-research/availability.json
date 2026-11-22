@@ -1,8 +1,8 @@
 {
   "version": "f4-ah-titan-opening-v1",
   "experiment_id": "f4-epl-ah-research-v1",
-  "evaluated_at": "2026-11-21T07:41:30.432771Z",
-  "indexed_opening_archives": 95,
+  "evaluated_at": "2026-11-22T07:20:54.664064Z",
+  "indexed_opening_archives": 105,
   "archive_rejections": [
     {
       "archive_path": "data/f4/titan-history/observations/3003949/20261121T073821-85749aedf80cef7bdd0c.json",
@@ -29,13 +29,13 @@
       "reason": "opening archive not reconciled"
     }
   ],
-  "paired_t15_matches": 39,
-  "eligible_completed_matches": 1,
+  "paired_t15_matches": 46,
+  "eligible_completed_matches": 8,
   "pending_result_match_ids": [],
   "t15_opening_availability": {
     "no reconciled Titan opening archive for fixture": 28,
     "Titan opening unavailable at decision time": 10,
-    "available_before_decision": 1
+    "available_before_decision": 8
   },
   "pairing_issues": {},
   "rejected": [
@@ -192,21 +192,21 @@
       "reason": "Titan opening unavailable at decision time"
     }
   ],
-  "dataset_sha256": "256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2",
-  "dataset_path": "data/f4/ah/titan-research/datasets/256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2.json",
+  "dataset_sha256": "c0a76a86ac548558dd14bfbcf4b1f82854461cdc7a473887aef971872048c21e",
+  "dataset_path": "data/f4/ah/titan-research/datasets/c0a76a86ac548558dd14bfbcf4b1f82854461cdc7a473887aef971872048c21e.json",
   "model_status": "insufficient_data",
-  "model_evaluated_at": "2026-11-21T07:41:30.432771Z",
-  "model_dataset_sha256": "256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2",
-  "model_dataset_path": "data/f4/ah/titan-research/datasets/256c9400106947951010177a5da3ab83264c361285b59806b00d8e69293b9fb2.json",
+  "model_evaluated_at": "2026-11-22T07:20:54.664064Z",
+  "model_dataset_sha256": "c0a76a86ac548558dd14bfbcf4b1f82854461cdc7a473887aef971872048c21e",
+  "model_dataset_path": "data/f4/ah/titan-research/datasets/c0a76a86ac548558dd14bfbcf4b1f82854461cdc7a473887aef971872048c21e.json",
   "candidate_counts": {
     "M1": {
       "train": 1,
-      "validation": 0,
+      "validation": 7,
       "test": 0
     },
     "M4": {
       "train": 1,
-      "validation": 0,
+      "validation": 7,
       "test": 0
     }
   },
