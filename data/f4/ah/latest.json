@@ -1,11 +1,13 @@
 {
-  "evaluated_at": "2026-11-22T13:30:46.975245Z",
-  "new_valid": 0,
-  "new_attempts": 0,
-  "valid_observations": 136,
+  "evaluated_at": "2026-11-22T13:45:02.825089Z",
+  "new_valid": 1,
+  "new_attempts": 1,
+  "valid_observations": 137,
   "distinct_matches": 48,
   "paired_matches": 46,
-  "pairing_issues": {},
+  "pairing_issues": {
+    "awaiting_regulation_result": 1
+  },
   "titan_research": {
     "version": "f4-ah-titan-opening-v1",
     "experiment_id": "f4-epl-ah-research-v1",
@@ -5954,36 +5956,36 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-11-22T13:30:00.798063Z",
+      "captured_at": "2026-11-22T13:45:00.730208Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-11-22T13:30:01.450644Z",
-      "content_sha256": "1c79eba2a0815bab1b2aaa34a24de251526e0bae15d3cb5d728f6745872d3a2e"
+      "captured_at": "2026-11-22T13:45:01.226063Z",
+      "content_sha256": "7dcd379068a4233e244d50fdacd33e0c85ebc79587d0a25af1a12513d486034c"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/events?sport=football&league=lg_T9268DXK&status=scheduled&date=2026-11-22&limit=100",
       "status": "ok",
-      "captured_at": "2026-11-22T13:30:02.103212Z",
+      "captured_at": "2026-11-22T13:45:01.750019Z",
       "content_sha256": "0731d384c67a41745901975a8df3011bf713001490e9cb46af7bb45e2a367619"
     },
     {
       "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events/evt_CG8EGFP3/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "url": "https://api.infersports.dev/v1/events/evt_XZ5PZRDH/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
       "status": "ok",
-      "captured_at": "2026-11-22T13:30:02.779769Z",
-      "content_sha256": "5d4f526e49337fe437d4576a539bb76fc5b38b86f5140f8fbd0d4069f34b0cc0"
+      "captured_at": "2026-11-22T13:45:02.246088Z",
+      "content_sha256": "98c3f918a2ed7893a714e1344595785d93ce93931641f834b4245129706e0852"
     },
     {
       "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events/evt_CG8EGFP3/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "url": "https://api.infersports.dev/v1/events/evt_XZ5PZRDH/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
       "status": "ok",
-      "captured_at": "2026-11-22T13:30:03.432970Z",
-      "content_sha256": "c32ce651d37daf631b805d17201de2558912795fabc26963af044db5afd52c21"
+      "captured_at": "2026-11-22T13:45:02.744340Z",
+      "content_sha256": "f97e6cd781e031278777ed3725fb86bf891e0f239d59f47e097dfe3d1a440d0d"
     }
   ],
   "provider_faults": {
@@ -5993,9 +5995,9 @@
   "primary_provider_health": {
     "status": "ok",
     "feed_live": true,
-    "as_of": "2026-11-22T13:29:52Z",
+    "as_of": "2026-11-22T13:44:52Z",
     "as_of_stale": false,
-    "checked_at": "2026-11-22T13:30:01.450644Z"
+    "checked_at": "2026-11-22T13:45:01.226063Z"
   },
   "fallback_matches": [],
   "quote_availability": "complete",
@@ -6014,7 +6016,9 @@
         "awaiting_window": 2
       },
       "T-15m": {
-        "awaiting_window": 3
+        "recorded_research_only": 1,
+        "complete_joint_market": 1,
+        "awaiting_window": 2
       }
     }
   },
