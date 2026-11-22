@@ -26,8 +26,8 @@
   "max_minutes": 300,
   "arm_minutes": 300,
   "previous_worker_started_at": "2026-11-22T03:10:31.684874Z",
-  "continuation_requested": false,
-  "state": "checkpoint_before_handoff",
-  "checked_at": "2026-11-22T13:30:18.069389Z",
+  "continuation_requested": true,
+  "state": "duration_limit",
+  "checked_at": "2026-11-22T13:30:20.624590Z",
   "next_window_at": "2026-11-22T13:30:00Z"
 }
