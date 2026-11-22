@@ -1,18 +1,18 @@
 {
-  "captured_at": "2026-11-22T16:15:00.235693Z",
+  "captured_at": "2026-11-22T20:18:04.487859Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261122",
-      "captured_at": "2026-11-22T16:15:00.170883Z",
-      "content_sha256": "dc51ae8f859a1156ee25e93cf93e12998653dce4bff1ee4589c4c836997dfbf5"
+      "captured_at": "2026-11-22T20:18:04.448322Z",
+      "content_sha256": "61ccc63d6b18603fe58521207ec89a1e34fa57f0c5099c4144d783ac90383eae"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261123",
-      "captured_at": "2026-11-22T16:15:00.235327Z",
+      "captured_at": "2026-11-22T20:18:04.487506Z",
       "content_sha256": "3b03c2c1c60e81aab5e184890593db1ee127d22e35b8833c8976d3e10b1b1e2c"
     }
   ],
@@ -45,8 +45,11 @@
       "home": "Liverpool",
       "away": "Manchester United",
       "kickoff_at": "2026-11-22T16:30:00Z",
-      "status": "scheduled",
-      "score": null,
+      "status": "completed",
+      "score": [
+        4,
+        0
+      ],
       "market": null,
       "problems": []
     },
