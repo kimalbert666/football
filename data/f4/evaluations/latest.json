@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluated_at": "2026-11-22T15:15:19.583164Z",
+  "evaluated_at": "2026-11-22T15:30:14.476891Z",
   "mode": "shadow",
   "candidate_weight": 0,
   "automatic_promotion": false,
@@ -24,12 +24,12 @@
     "log_loss_floor": 1e-15
   },
   "counts": {
-    "raw_snapshots": 119,
-    "effective_valid": 90,
+    "raw_snapshots": 120,
+    "effective_valid": 91,
     "missing_baseline": 29,
-    "missing_baseline_groups": 1,
+    "missing_baseline_groups": 0,
     "redundant_snapshots": 0,
-    "pending": 3,
+    "pending": 4,
     "settled": 87,
     "paired": 87,
     "missing_candidate": 0,
@@ -80,7 +80,7 @@
     "accuracy": null
   },
   "pending_statuses": {
-    "unobserved": 3
+    "unobserved": 4
   },
   "groups": [
     {
@@ -148,12 +148,12 @@
       "candidate_version": "dc-shadow-18bae91698fd",
       "experiment_id": "f4-forward-epl-crown-v1",
       "counts": {
-        "raw_snapshots": 75,
-        "effective_valid": 46,
+        "raw_snapshots": 76,
+        "effective_valid": 47,
         "missing_baseline": 29,
-        "missing_baseline_groups": 1,
+        "missing_baseline_groups": 0,
         "redundant_snapshots": 0,
-        "pending": 1,
+        "pending": 2,
         "settled": 45,
         "paired": 45,
         "missing_candidate": 0,
@@ -198,7 +198,7 @@
         "accuracy": null
       },
       "pending_statuses": {
-        "unobserved": 1
+        "unobserved": 2
       }
     }
   ],
