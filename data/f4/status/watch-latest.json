@@ -1,33 +1,13 @@
 {
-  "started_at": "2026-11-22T08:30:17.332856Z",
-  "run_id": "45003076775",
-  "captures": [
-    {
-      "requested_at": "2026-11-22T11:00:00.021621Z",
-      "target_at": "2026-11-22T11:00:00Z",
-      "delay_seconds": 0.021621,
-      "completed_at": "2026-11-22T11:00:16.375258Z"
-    },
-    {
-      "requested_at": "2026-11-22T13:00:00.022747Z",
-      "target_at": "2026-11-22T13:00:00Z",
-      "delay_seconds": 0.022747,
-      "completed_at": "2026-11-22T13:00:17.944071Z"
-    },
-    {
-      "requested_at": "2026-11-22T13:30:00.023396Z",
-      "target_at": "2026-11-22T13:30:00Z",
-      "delay_seconds": 0.023396,
-      "completed_at": "2026-11-22T13:30:16.666417Z"
-    }
-  ],
+  "started_at": "2026-11-22T13:30:46.680626Z",
+  "run_id": "45027817666",
+  "captures": [],
   "mode": "bounded_match_window_worker",
   "timing_guaranteed": false,
   "max_minutes": 300,
   "arm_minutes": 300,
-  "previous_worker_started_at": "2026-11-22T03:10:31.684874Z",
-  "continuation_requested": true,
-  "state": "duration_limit",
-  "checked_at": "2026-11-22T13:30:20.624590Z",
-  "next_window_at": "2026-11-22T13:30:00Z"
+  "previous_worker_started_at": "2026-11-22T08:30:17.332856Z",
+  "continuation_requested": false,
+  "state": "planning",
+  "checked_at": "2026-11-22T13:30:47.063383Z"
 }
