@@ -1,18 +1,18 @@
 {
-  "captured_at": "2026-11-23T19:45:00.313551Z",
+  "captured_at": "2026-11-23T22:35:46.687419Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261123",
-      "captured_at": "2026-11-23T19:45:00.202402Z",
-      "content_sha256": "d0cc742f35bc649183b4c31e0dc3d13266e9ce38331078b21cd58e6c9e458866"
+      "captured_at": "2026-11-23T22:35:46.572169Z",
+      "content_sha256": "37c9701a9a2184042ff243bad3485afc7af084559a447316d88fb64896acbdbc"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
       "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261124",
-      "captured_at": "2026-11-23T19:45:00.313475Z",
+      "captured_at": "2026-11-23T22:35:46.687337Z",
       "content_sha256": "0e1ea63df5170b546aa068099abd33d21e60543ed14a6c2478fbc134e6f79d20"
     }
   ],
@@ -27,8 +27,11 @@
       "home": "Brentford",
       "away": "Everton",
       "kickoff_at": "2026-11-23T20:00:00Z",
-      "status": "scheduled",
-      "score": null,
+      "status": "completed",
+      "score": [
+        4,
+        0
+      ],
       "market": null,
       "problems": []
     }
