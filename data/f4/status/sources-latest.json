@@ -1,58 +1,22 @@
 {
-  "captured_at": "2026-11-22T22:41:00.822998Z",
+  "captured_at": "2026-11-23T01:37:54.679880Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261122",
-      "captured_at": "2026-11-22T22:41:00.673090Z",
-      "content_sha256": "3eddc1779bff32da535c131f5d7e8e96fca464af58eaf608ac1926f50249ca6e"
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261123",
+      "captured_at": "2026-11-23T01:37:54.630258Z",
+      "content_sha256": "3b03c2c1c60e81aab5e184890593db1ee127d22e35b8833c8976d3e10b1b1e2c"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261123",
-      "captured_at": "2026-11-22T22:41:00.822696Z",
-      "content_sha256": "3b03c2c1c60e81aab5e184890593db1ee127d22e35b8833c8976d3e10b1b1e2c"
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261124",
+      "captured_at": "2026-11-23T01:37:54.679796Z",
+      "content_sha256": "0e1ea63df5170b546aa068099abd33d21e60543ed14a6c2478fbc134e6f79d20"
     }
   ],
   "fixtures": [
-    {
-      "match_id": "espn:401879234",
-      "source_event_id": "401879234",
-      "provider": "espn",
-      "league": "england-premier",
-      "home_id": "hull-city",
-      "away_id": "brighton",
-      "home": "Hull City",
-      "away": "Brighton & Hove Albion",
-      "kickoff_at": "2026-11-22T14:00:00Z",
-      "status": "completed",
-      "score": [
-        2,
-        0
-      ],
-      "market": null,
-      "problems": []
-    },
-    {
-      "match_id": "espn:401878755",
-      "source_event_id": "401878755",
-      "provider": "espn",
-      "league": "england-premier",
-      "home_id": "liverpool",
-      "away_id": "man-united",
-      "home": "Liverpool",
-      "away": "Manchester United",
-      "kickoff_at": "2026-11-22T16:30:00Z",
-      "status": "completed",
-      "score": [
-        4,
-        0
-      ],
-      "market": null,
-      "problems": []
-    },
     {
       "match_id": "espn:401879237",
       "source_event_id": "401879237",
@@ -73,8 +37,8 @@
     "complete": true,
     "scope": {
       "league": "england-premier",
-      "from": "2026-11-22",
-      "through": "2026-11-23",
+      "from": "2026-11-23",
+      "through": "2026-11-24",
       "provider": "espn",
       "pending_lookup_limit": 20
     },
