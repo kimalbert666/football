@@ -1,0 +1,45 @@
+{
+  "captured_at_utc": "2026-11-23T08:04:45.922922+00:00",
+  "run_id": "45135406208",
+  "fixture": {
+    "provider_event_id": "3003961",
+    "home": "水晶宫",
+    "away": "赫尔城",
+    "kickoff_display": "2026-11-29 22:05",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401879230",
+    "home_id": "crystal-palace",
+    "away_id": "hull-city",
+    "independent_fixture_kickoff_at": "2026-11-29T14:05:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261129.htm",
+      "checked_at_utc": "2026-11-23T08:02:53.886429+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-23T08:02:57.710849+00:00",
+      "candidate_count": 6,
+      "content_sha256": "05205ebcb9868e9e13af97e48aa0b4b764970aa2ed825690c2f0628ca717e359"
+    },
+    "independent_fixture_last_seen_at": "2026-11-23T03:59:28.976831Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "summary_unavailable",
+  "histories": {},
+  "pages": [
+    {
+      "url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003961",
+      "checked_at_utc": "2026-11-23T08:03:58.021126+00:00",
+      "transport_ok": false,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 503,
+      "final_url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003961",
+      "captured_at_utc": "2026-11-23T08:04:11.173949+00:00",
+      "page_title": "IIS 10.0 详细错误 - 503.2 - Service Unavailable",
+      "visible_row_count": 0,
+      "error": "expected_quote_table_unavailable"
+    }
+  ]
+}
