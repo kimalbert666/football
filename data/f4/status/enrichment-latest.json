@@ -1,25 +1,19 @@
 {
-  "checked_at": "2026-11-22T03:28:45.362222Z",
+  "checked_at": "2026-11-23T01:38:00.120893Z",
   "status": "checked",
   "sources": {
     "strength": {
-      "available_for_historical_decisions": false,
-      "coverage_scope": "all_past_dates_in_espn_declared_current_season_calendar",
-      "metadata_source": {
-        "captured_at": "2026-11-22T00:34:56.370368Z",
-        "content_sha256": "14f9766f107d23082e715e1b88bbb3286a64d1c7e7768a186477ffb526a0ffae",
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261122"
-      },
-      "method": "verified-espn-season-results-elo-k20-ha60-v1",
-      "missing_dates": [],
-      "observed_at": "2026-11-22T00:34:56.444299Z",
-      "problems": [],
-      "rated_requested_fixtures": 20,
-      "requested_dates": 34,
-      "requested_fixtures": 20,
-      "result_count": 107,
       "schema": "f4-strength-observed-v1",
+      "method": "verified-espn-season-results-elo-k20-ha60-v1",
+      "status": "ready",
+      "coverage_scope": "all_past_dates_in_espn_declared_current_season_calendar",
+      "available_for_historical_decisions": false,
+      "problems": [],
       "season": {
+        "year": 2026,
+        "start_at": "2026-06-01T04:00:00Z",
+        "end_at": "2027-06-01T03:59:00Z",
+        "name": "2026-27 English Premier League",
         "days": [
           "20260821",
           "20260822",
@@ -54,58 +48,71 @@
           "20261107",
           "20261108",
           "20261121",
-          "20261122"
-        ],
-        "end_at": "2027-06-01T03:59:00Z",
-        "name": "2026-27 English Premier League",
-        "start_at": "2026-06-01T04:00:00Z",
-        "year": 2026
+          "20261122",
+          "20261123"
+        ]
       },
-      "snapshot_path": "data/f4/strength/snapshots/cb822091cdec2812c1b5ad628527e39a3920ce8fb113ce97a3ae936d5c4b2e3a.json",
-      "snapshot_sha256": "cb822091cdec2812c1b5ad628527e39a3920ce8fb113ce97a3ae936d5c4b2e3a",
-      "status": "ready",
+      "metadata_source": {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261123",
+        "captured_at": "2026-11-23T01:38:00.172809Z",
+        "content_sha256": "ef0563efd6d985984366cb286df5ada88a4c26a4988e18d89a5517a2e21273af"
+      },
+      "observed_at": "2026-11-23T01:38:00.335730Z",
+      "requested_dates": 35,
+      "verified_dates": 35,
+      "missing_dates": [],
+      "snapshot_path": "data/f4/strength/snapshots/f15cebc2558f2704b890e5944b51627745f650c878b1efedcb75128140dc6bc5.json",
+      "snapshot_sha256": "f15cebc2558f2704b890e5944b51627745f650c878b1efedcb75128140dc6bc5",
+      "result_count": 109,
       "teams": 20,
       "teams_with_five_games": 20,
-      "verified_dates": 34,
-      "refresh": "cached_same_utc_day"
+      "requested_fixtures": 13,
+      "rated_requested_fixtures": 13
     },
     "context": {
-      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3",
-      "observed_at": "2026-11-22T00:34:57.336796Z",
-      "problems": [
-        "Understat lagged xG missing or unverified: Expecting value: line 1 column 1 (char 0)"
-      ],
-      "requested_clubs": 12,
       "schema": "f4-prematch-context-observed-v1",
+      "status": "ready",
+      "observed_at": "2026-11-23T01:38:01.994781Z",
       "season_year": 2026,
-      "snapshot_path": "data/f4/context/snapshots/3f4acfde600b3c2e34965855639e062616ea2317f6260fdbcb563e8010b7965a.json",
-      "snapshot_sha256": "3f4acfde600b3c2e34965855639e062616ea2317f6260fdbcb563e8010b7965a",
+      "snapshot_sha256": "825d5229295ff09a679777110c34004da26a51bc5327ad839afd3391a18062d4",
+      "snapshot_path": "data/f4/context/snapshots/825d5229295ff09a679777110c34004da26a51bc5327ad839afd3391a18062d4.json",
+      "teams_xg": 0,
+      "teams_availability": 20,
+      "teams_club_schedule": 20,
+      "requested_clubs": 20,
+      "unresolved_clubs": [],
       "source_statuses": {
+        "fpl": "available",
+        "understat": "unavailable",
+        "espn-rest:arsenal": "available",
         "espn-rest:aston-villa": "available",
+        "espn-rest:bournemouth": "available",
         "espn-rest:brentford": "available",
         "espn-rest:brighton": "available",
         "espn-rest:chelsea": "available",
         "espn-rest:coventry": "available",
+        "espn-rest:crystal-palace": "available",
         "espn-rest:everton": "available",
+        "espn-rest:fulham": "available",
         "espn-rest:hull-city": "available",
         "espn-rest:ipswich": "available",
         "espn-rest:leeds": "available",
         "espn-rest:liverpool": "available",
+        "espn-rest:man-city": "available",
         "espn-rest:man-united": "available",
+        "espn-rest:newcastle": "available",
         "espn-rest:nottingham-forest": "available",
-        "fpl": "available",
-        "understat": "unavailable"
+        "espn-rest:sunderland": "available",
+        "espn-rest:tottenham": "available"
       },
-      "status": "ready",
-      "teams_availability": 20,
-      "teams_club_schedule": 12,
-      "teams_xg": 0,
-      "unresolved_clubs": [],
-      "refresh": "cached_same_utc_day"
+      "problems": [
+        "Understat lagged xG missing or unverified: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3"
     },
     "first_observed_quotes": {
-      "status": "cached",
-      "checked_at": "2026-11-22T00:34:58.061776Z",
+      "status": "partial",
+      "checked_at": "2026-11-23T01:38:02.366822Z",
       "due_fixtures": 10,
       "new_records": 0,
       "saved_matches": [],
@@ -169,5 +176,5 @@
       "opening_certified": false
     }
   },
-  "completed_at": "2026-11-22T03:28:45.363804Z"
+  "completed_at": "2026-11-23T01:38:02.367360Z"
 }

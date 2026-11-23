@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluated_at": "2026-11-23T01:37:54.786178Z",
+  "evaluated_at": "2026-11-23T01:38:02.367621Z",
   "mode": "shadow",
   "candidate_weight": 0,
   "automatic_promotion": false,
@@ -29,9 +29,9 @@
     "missing_baseline": 29,
     "missing_baseline_groups": 0,
     "redundant_snapshots": 0,
-    "pending": 4,
-    "settled": 87,
-    "paired": 87,
+    "pending": 0,
+    "settled": 91,
+    "paired": 91,
     "missing_candidate": 0,
     "excluded_rescheduled": 0,
     "excluded_cancelled": 0,
@@ -46,28 +46,28 @@
     "late_discovered_windows": 18
   },
   "baseline": {
-    "n": 87,
-    "correct": 43,
-    "accuracy": 0.4942528735632184,
-    "rps": 0.2080705852936028,
-    "brier": 0.6052042168228465,
-    "log_loss": 1.0070903671768041
+    "n": 91,
+    "correct": 45,
+    "accuracy": 0.4945054945054945,
+    "rps": 0.21416791738399968,
+    "brier": 0.6111797628845417,
+    "log_loss": 1.0176764969857688
   },
   "paired_baseline": {
-    "n": 87,
-    "correct": 43,
-    "accuracy": 0.4942528735632184,
-    "rps": 0.2080705852936028,
-    "brier": 0.6052042168228465,
-    "log_loss": 1.0070903671768041
+    "n": 91,
+    "correct": 45,
+    "accuracy": 0.4945054945054945,
+    "rps": 0.21416791738399968,
+    "brier": 0.6111797628845417,
+    "log_loss": 1.0176764969857688
   },
   "candidate": {
-    "n": 87,
-    "correct": 43,
-    "accuracy": 0.4942528735632184,
-    "rps": 0.25559515964357593,
-    "brier": 0.7010775208745083,
-    "log_loss": 1.2395616120212176
+    "n": 91,
+    "correct": 47,
+    "accuracy": 0.5164835164835165,
+    "rps": 0.2498589257483053,
+    "brier": 0.6854860455758336,
+    "log_loss": 1.2120911163728398
   },
   "f2": {
     "n": 0,
@@ -79,9 +79,7 @@
     "correct": 0,
     "accuracy": null
   },
-  "pending_statuses": {
-    "unobserved": 4
-  },
+  "pending_statuses": {},
   "groups": [
     {
       "league": "england-premier",
@@ -94,9 +92,9 @@
         "missing_baseline": 0,
         "missing_baseline_groups": 0,
         "redundant_snapshots": 0,
-        "pending": 2,
-        "settled": 42,
-        "paired": 42,
+        "pending": 0,
+        "settled": 44,
+        "paired": 44,
         "missing_candidate": 0,
         "excluded_rescheduled": 0,
         "excluded_cancelled": 0,
@@ -105,28 +103,28 @@
         "excluded_future": 0
       },
       "baseline": {
-        "n": 42,
-        "correct": 20,
-        "accuracy": 0.47619047619047616,
-        "rps": 0.20914568587700635,
-        "brier": 0.6115475983952748,
-        "log_loss": 1.015830766293903
+        "n": 44,
+        "correct": 21,
+        "accuracy": 0.4772727272727273,
+        "rps": 0.21541870185168327,
+        "brier": 0.6174821745892108,
+        "log_loss": 1.026707608824418
       },
       "paired_baseline": {
-        "n": 42,
-        "correct": 20,
-        "accuracy": 0.47619047619047616,
-        "rps": 0.20914568587700635,
-        "brier": 0.6115475983952748,
-        "log_loss": 1.015830766293903
+        "n": 44,
+        "correct": 21,
+        "accuracy": 0.4772727272727273,
+        "rps": 0.21541870185168327,
+        "brier": 0.6174821745892108,
+        "log_loss": 1.026707608824418
       },
       "candidate": {
-        "n": 42,
-        "correct": 20,
-        "accuracy": 0.47619047619047616,
-        "rps": 0.2610481939744994,
-        "brier": 0.7157361694813187,
-        "log_loss": 1.2640543684825065
+        "n": 44,
+        "correct": 22,
+        "accuracy": 0.5,
+        "rps": 0.25486854145412075,
+        "brier": 0.6989468644062433,
+        "log_loss": 1.2345340715524207
       },
       "f2": {
         "n": 0,
@@ -138,9 +136,7 @@
         "correct": 0,
         "accuracy": null
       },
-      "pending_statuses": {
-        "unobserved": 2
-      }
+      "pending_statuses": {}
     },
     {
       "league": "england-premier",
@@ -153,9 +149,9 @@
         "missing_baseline": 29,
         "missing_baseline_groups": 0,
         "redundant_snapshots": 0,
-        "pending": 2,
-        "settled": 45,
-        "paired": 45,
+        "pending": 0,
+        "settled": 47,
+        "paired": 47,
         "missing_candidate": 0,
         "excluded_rescheduled": 0,
         "excluded_cancelled": 0,
@@ -164,28 +160,28 @@
         "excluded_future": 0
       },
       "baseline": {
-        "n": 45,
-        "correct": 23,
-        "accuracy": 0.5111111111111111,
-        "rps": 0.20706715808242618,
-        "brier": 0.5992837273552467,
-        "log_loss": 0.9989326613341791
+        "n": 47,
+        "correct": 24,
+        "accuracy": 0.5106382978723404,
+        "rps": 0.212996970222764,
+        "brier": 0.6052796327780426,
+        "log_loss": 1.0092218390942673
       },
       "paired_baseline": {
-        "n": 45,
-        "correct": 23,
-        "accuracy": 0.5111111111111111,
-        "rps": 0.20706715808242618,
-        "brier": 0.5992837273552467,
-        "log_loss": 0.9989326613341791
+        "n": 47,
+        "correct": 24,
+        "accuracy": 0.5106382978723404,
+        "rps": 0.212996970222764,
+        "brier": 0.6052796327780426,
+        "log_loss": 1.0092218390942673
       },
       "candidate": {
-        "n": 45,
-        "correct": 23,
-        "accuracy": 0.5111111111111111,
-        "rps": 0.250505660934714,
-        "brier": 0.6873961155081526,
-        "log_loss": 1.216701705990681
+        "n": 47,
+        "correct": 25,
+        "accuracy": 0.5319148936170213,
+        "rps": 0.24516907274711636,
+        "brier": 0.6728844279473657,
+        "log_loss": 1.1910806902472744
       },
       "f2": {
         "n": 0,
@@ -197,9 +193,7 @@
         "correct": 0,
         "accuracy": null
       },
-      "pending_statuses": {
-        "unobserved": 2
-      }
+      "pending_statuses": {}
     }
   ],
   "training_evidence": [

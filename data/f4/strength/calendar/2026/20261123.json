@@ -1,0 +1,21 @@
+{
+  "day": "20261123",
+  "events_seen": 1,
+  "pending_results": [
+    {
+      "kickoff_at": "2026-11-23T20:00:00Z",
+      "match_id": "espn:401879237",
+      "status": "scheduled"
+    }
+  ],
+  "record_sha256": "aa7a6b421e398fe51ed47a57af89d9f228ebe088fee47962b847a77d40ca3ebe",
+  "results": [],
+  "schema": "f4-strength-observed-v1",
+  "season_year": 2026,
+  "source": {
+    "captured_at": "2026-11-23T01:38:00.249595Z",
+    "content_sha256": "ef0563efd6d985984366cb286df5ada88a4c26a4988e18d89a5517a2e21273af",
+    "name": "espn",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261123&limit=1000"
+  }
+}

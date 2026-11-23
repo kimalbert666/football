@@ -1,25 +1,43 @@
 {
   "day": "20261122",
   "events_seen": 2,
-  "pending_results": [
+  "pending_results": [],
+  "record_sha256": "041d47290a9194c96aba6c8ffee322aa75289710fdc8f994e6cf0d928d7b586c",
+  "results": [
     {
+      "away": "Brighton & Hove Albion",
+      "away_id": "brighton",
+      "away_provider_id": "331",
+      "home": "Hull City",
+      "home_id": "hull-city",
+      "home_provider_id": "306",
       "kickoff_at": "2026-11-22T14:00:00Z",
       "match_id": "espn:401879234",
-      "status": "scheduled"
+      "score": [
+        2,
+        0
+      ]
     },
     {
+      "away": "Manchester United",
+      "away_id": "man-united",
+      "away_provider_id": "360",
+      "home": "Liverpool",
+      "home_id": "liverpool",
+      "home_provider_id": "364",
       "kickoff_at": "2026-11-22T16:30:00Z",
       "match_id": "espn:401878755",
-      "status": "scheduled"
+      "score": [
+        4,
+        0
+      ]
     }
   ],
-  "record_sha256": "59576b5ce9ebeeb93929d0e552953b8212ce2cb96cdb6b572d59f34400fc9be7",
-  "results": [],
   "schema": "f4-strength-observed-v1",
   "season_year": 2026,
   "source": {
-    "captured_at": "2026-11-22T00:34:56.443211Z",
-    "content_sha256": "14f9766f107d23082e715e1b88bbb3286a64d1c7e7768a186477ffb526a0ffae",
+    "captured_at": "2026-11-23T01:38:00.334242Z",
+    "content_sha256": "e4be04d742822b65be08cb07af4ccda53e5e23b904cbf06b8e75d9017dc87387",
     "name": "espn",
     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261122&limit=1000"
   }
