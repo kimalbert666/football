@@ -1,47 +1,28 @@
 {
-  "captured_at": "2026-11-23T22:35:46.687419Z",
+  "captured_at": "2026-11-24T02:29:16.400377Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261123",
-      "captured_at": "2026-11-23T22:35:46.572169Z",
-      "content_sha256": "37c9701a9a2184042ff243bad3485afc7af084559a447316d88fb64896acbdbc"
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261124",
+      "captured_at": "2026-11-24T02:29:16.354571Z",
+      "content_sha256": "0e1ea63df5170b546aa068099abd33d21e60543ed14a6c2478fbc134e6f79d20"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261124",
-      "captured_at": "2026-11-23T22:35:46.687337Z",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261125",
+      "captured_at": "2026-11-24T02:29:16.400275Z",
       "content_sha256": "0e1ea63df5170b546aa068099abd33d21e60543ed14a6c2478fbc134e6f79d20"
     }
   ],
-  "fixtures": [
-    {
-      "match_id": "espn:401879237",
-      "source_event_id": "401879237",
-      "provider": "espn",
-      "league": "england-premier",
-      "home_id": "brentford",
-      "away_id": "everton",
-      "home": "Brentford",
-      "away": "Everton",
-      "kickoff_at": "2026-11-23T20:00:00Z",
-      "status": "completed",
-      "score": [
-        4,
-        0
-      ],
-      "market": null,
-      "problems": []
-    }
-  ],
+  "fixtures": [],
   "coverage": {
     "complete": true,
     "scope": {
       "league": "england-premier",
-      "from": "2026-11-23",
-      "through": "2026-11-24",
+      "from": "2026-11-24",
+      "through": "2026-11-25",
       "provider": "espn",
       "pending_lookup_limit": 20
     },
