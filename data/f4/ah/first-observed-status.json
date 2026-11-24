@@ -1,7 +1,7 @@
 {
   "status": "partial",
-  "checked_at": "2026-11-23T01:38:02.366822Z",
-  "due_fixtures": 10,
+  "checked_at": "2026-11-24T02:29:22.219278Z",
+  "due_fixtures": 11,
   "new_records": 0,
   "saved_matches": [],
   "stored_first_observations": 50,
@@ -45,6 +45,10 @@
     {
       "match_id": "espn:401878753",
       "reason": "missing Asian handicap quote"
+    },
+    {
+      "match_id": "espn:401879221",
+      "reason": "missing Asian handicap quote"
     }
   ],
   "provider_faults": {},
@@ -58,7 +62,8 @@
     "espn:401879228: HKJC AH unavailable (unique EPL identity not published or not matched)",
     "espn:401879230: HKJC AH unavailable (unique EPL identity not published or not matched)",
     "espn:401879231: HKJC AH unavailable (unique EPL identity not published or not matched)",
-    "espn:401878753: HKJC AH unavailable (unique EPL identity not published or not matched)"
+    "espn:401878753: HKJC AH unavailable (unique EPL identity not published or not matched)",
+    "espn:401879221: HKJC AH unavailable (unique EPL identity not published or not matched)"
   ],
   "source_policy": "independent_bulk_scout_no_formal_primary_quota",
   "opening_certified": false

@@ -1,13 +1,11 @@
 {
-  "evaluated_at": "2026-11-24T02:29:16.451269Z",
+  "evaluated_at": "2026-11-24T02:29:20.541794Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 142,
   "distinct_matches": 49,
-  "paired_matches": 48,
-  "pairing_issues": {
-    "awaiting_regulation_result": 1
-  },
+  "paired_matches": 49,
+  "pairing_issues": {},
   "titan_research": {
     "version": "f4-ah-titan-opening-v1",
     "experiment_id": "f4-epl-ah-research-v1",
@@ -307,17 +305,17 @@
       "away_profit": 1.04
     },
     "-0.25": {
-      "matches": 7,
+      "matches": 8,
       "home": {
         "full_loss": 3,
-        "full_win": 4
+        "full_win": 5
       },
       "away": {
         "full_win": 3,
-        "full_loss": 4
+        "full_loss": 5
       },
-      "home_profit": 0.27,
-      "away_profit": -1.2000000000000002
+      "home_profit": 1.15,
+      "away_profit": -2.2
     },
     "1.0": {
       "matches": 3,
@@ -699,9 +697,9 @@
       }
     ],
     "fixed_window": "T-15m, 10 to 20 minutes before kickoff",
-    "unique_fixtures": 48,
-    "accepted_pairs": 48,
-    "side_records": 96,
+    "unique_fixtures": 49,
+    "accepted_pairs": 49,
+    "side_records": 98,
     "duplicate_pairs_excluded": 0,
     "rejected_pairs": [],
     "rejection_counts": {},
@@ -996,15 +994,15 @@
         "venue": "away",
         "odds_band": "above_2_00",
         "odds_band_label": ">2.00",
-        "matches": 3,
+        "matches": 4,
         "settlement_counts": {
           "full_win": 1,
           "half_win": 0,
           "push": 0,
           "half_loss": 0,
-          "full_loss": 2
+          "full_loss": 3
         },
-        "unit_stake_net_profit": -0.99,
+        "unit_stake_net_profit": -1.99,
         "records": [
           {
             "match_id": "espn:401879249",
@@ -1056,12 +1054,29 @@
             ],
             "settlement": "full_loss",
             "unit_stake_net_profit": -1.0
+          },
+          {
+            "match_id": "espn:401879237",
+            "kickoff_at": "2026-11-23T20:00:00+00:00",
+            "observed_at": "2026-11-23T19:45:02.977567+00:00",
+            "home": "Brentford",
+            "away": "Everton",
+            "team": "Everton",
+            "home_handicap": -0.25,
+            "venue": "away",
+            "decimal_odds": 2.01,
+            "final_score": [
+              4,
+              0
+            ],
+            "settlement": "full_loss",
+            "unit_stake_net_profit": -1.0
           }
         ],
         "positive_returns": 1,
-        "positive_return_rate": 0.3333333333333333,
-        "full_win_rate": 0.3333333333333333,
-        "unit_stake_roi": -0.33
+        "positive_return_rate": 0.25,
+        "full_win_rate": 0.25,
+        "unit_stake_roi": -0.4975
       },
       {
         "experiment_id": "f4-epl-ah-research-v1",
@@ -1419,15 +1434,15 @@
         "venue": "home",
         "odds_band": "above_1_85_below_1_90",
         "odds_band_label": ">1.85且<1.90",
-        "matches": 1,
+        "matches": 2,
         "settlement_counts": {
-          "full_win": 0,
+          "full_win": 1,
           "half_win": 0,
           "push": 0,
           "half_loss": 0,
           "full_loss": 1
         },
-        "unit_stake_net_profit": -1.0,
+        "unit_stake_net_profit": -0.12,
         "records": [
           {
             "match_id": "espn:401878762",
@@ -1445,12 +1460,29 @@
             ],
             "settlement": "full_loss",
             "unit_stake_net_profit": -1.0
+          },
+          {
+            "match_id": "espn:401879237",
+            "kickoff_at": "2026-11-23T20:00:00+00:00",
+            "observed_at": "2026-11-23T19:45:02.977567+00:00",
+            "home": "Brentford",
+            "away": "Everton",
+            "team": "Brentford",
+            "home_handicap": -0.25,
+            "venue": "home",
+            "decimal_odds": 1.88,
+            "final_score": [
+              4,
+              0
+            ],
+            "settlement": "full_win",
+            "unit_stake_net_profit": 0.8799999999999999
           }
         ],
-        "positive_returns": 0,
-        "positive_return_rate": 0.0,
-        "full_win_rate": 0.0,
-        "unit_stake_roi": -1.0
+        "positive_returns": 1,
+        "positive_return_rate": 0.5,
+        "full_win_rate": 0.5,
+        "unit_stake_roi": -0.06
       },
       {
         "experiment_id": "f4-epl-ah-research-v1",
@@ -3881,7 +3913,7 @@
       {
         "experiment_id": "f4-epl-ah-research-v1",
         "bookmaker": "crown",
-        "paired_matches": 31,
+        "paired_matches": 32,
         "odds_band_groups": [
           {
             "side": "flat_away",
@@ -4460,15 +4492,15 @@
             "odds_band": "above_2_00",
             "odds_band_label": ">2.00",
             "aggregation": "all handicap sizes and venues within this experiment/bookmaker",
-            "matches": 9,
+            "matches": 10,
             "settlement_counts": {
               "full_win": 3,
               "half_win": 0,
               "push": 0,
               "half_loss": 0,
-              "full_loss": 6
+              "full_loss": 7
             },
-            "unit_stake_net_profit": -2.92,
+            "unit_stake_net_profit": -3.92,
             "records": [
               {
                 "match_id": "espn:401878768",
@@ -4622,12 +4654,29 @@
                 ],
                 "settlement": "full_loss",
                 "unit_stake_net_profit": -1.0
+              },
+              {
+                "match_id": "espn:401879237",
+                "kickoff_at": "2026-11-23T20:00:00+00:00",
+                "observed_at": "2026-11-23T19:45:02.977567+00:00",
+                "home": "Brentford",
+                "away": "Everton",
+                "team": "Everton",
+                "home_handicap": -0.25,
+                "venue": "away",
+                "decimal_odds": 2.01,
+                "final_score": [
+                  4,
+                  0
+                ],
+                "settlement": "full_loss",
+                "unit_stake_net_profit": -1.0
               }
             ],
             "positive_returns": 3,
-            "positive_return_rate": 0.3333333333333333,
-            "full_win_rate": 0.3333333333333333,
-            "unit_stake_roi": -0.3244444444444444
+            "positive_return_rate": 0.3,
+            "full_win_rate": 0.3,
+            "unit_stake_roi": -0.392
           },
           {
             "side": "upper",
@@ -4723,15 +4772,15 @@
             "odds_band": "above_1_85_below_1_90",
             "odds_band_label": ">1.85且<1.90",
             "aggregation": "all handicap sizes and venues within this experiment/bookmaker",
-            "matches": 7,
+            "matches": 8,
             "settlement_counts": {
-              "full_win": 4,
+              "full_win": 5,
               "half_win": 0,
               "push": 0,
               "half_loss": 0,
               "full_loss": 3
             },
-            "unit_stake_net_profit": 0.47,
+            "unit_stake_net_profit": 1.35,
             "records": [
               {
                 "match_id": "espn:401879257",
@@ -4851,12 +4900,29 @@
                 ],
                 "settlement": "full_win",
                 "unit_stake_net_profit": 0.8600000000000001
+              },
+              {
+                "match_id": "espn:401879237",
+                "kickoff_at": "2026-11-23T20:00:00+00:00",
+                "observed_at": "2026-11-23T19:45:02.977567+00:00",
+                "home": "Brentford",
+                "away": "Everton",
+                "team": "Brentford",
+                "home_handicap": -0.25,
+                "venue": "home",
+                "decimal_odds": 1.88,
+                "final_score": [
+                  4,
+                  0
+                ],
+                "settlement": "full_win",
+                "unit_stake_net_profit": 0.8799999999999999
               }
             ],
-            "positive_returns": 4,
-            "positive_return_rate": 0.5714285714285714,
-            "full_win_rate": 0.5714285714285714,
-            "unit_stake_roi": 0.06714285714285714
+            "positive_returns": 5,
+            "positive_return_rate": 0.625,
+            "full_win_rate": 0.625,
+            "unit_stake_roi": 0.16875
           },
           {
             "side": "upper",
@@ -6066,17 +6132,17 @@
         "away_profit": -1.0
       },
       "-0.25": {
-        "matches": 5,
+        "matches": 6,
         "home": {
           "full_loss": 2,
-          "full_win": 3
+          "full_win": 4
         },
         "away": {
           "full_win": 2,
-          "full_loss": 3
+          "full_loss": 4
         },
-        "home_profit": 0.6000000000000001,
-        "away_profit": -1.1900000000000002
+        "home_profit": 1.48,
+        "away_profit": -2.1900000000000004
       },
       "0.0": {
         "matches": 3,
@@ -6214,36 +6280,30 @@
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/v1/bookmakers",
       "status": "ok",
-      "captured_at": "2026-11-23T19:45:00.889763Z",
+      "captured_at": "2026-11-24T02:29:19.122807Z",
       "content_sha256": "fc8e1504c438752e17d383cd25144da69e6631b05dc6bd6ba5350ca0c57bd394"
     },
     {
       "name": "infersports-crown-ah",
       "url": "https://api.infersports.dev/health",
       "status": "ok",
-      "captured_at": "2026-11-23T19:45:01.385619Z",
-      "content_sha256": "3e5d9eb3650b052b6f378be8f3b8288e64038d4faf3f9df62938dfbb0682cb55"
+      "captured_at": "2026-11-24T02:29:19.775263Z",
+      "content_sha256": "deb7896f6585421d31ee39e8fb6205eb41399c6ecda4cdd03ed283b118bcdb3d"
     },
     {
-      "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events?sport=football&league=lg_T9268DXK&status=scheduled&date=2026-11-23&limit=100",
-      "status": "ok",
-      "captured_at": "2026-11-23T19:45:01.922656Z",
-      "content_sha256": "c3a5bc9ccec413285d74e5d6a5fa6a5ad9bacf0d9364b3c5e9ed6be250e5bc3f"
+      "name": "infersports-crown-ah-quotes",
+      "status": "not_requested",
+      "reason": "no confirmed EPL fixture in capture window"
     },
     {
-      "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events/evt_T9P79768/odds?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
+      "name": "hkjc-direct-ah",
+      "url": "https://info.cld.hkjc.com/graphql/base/",
       "status": "ok",
-      "captured_at": "2026-11-23T19:45:02.441881Z",
-      "content_sha256": "8bd3a19b8c14edd4bca563644f365cf8a54fa585c677f6bfb11e7c1af789519f"
-    },
-    {
-      "name": "infersports-crown-ah",
-      "url": "https://api.infersports.dev/v1/events/evt_T9P79768/opening?bookmakers=crown%2Cmacau%2Chkjc%2Csbobet&markets=asian_handicap%2C1x2&period=full_time&format=decimal",
-      "status": "ok",
-      "captured_at": "2026-11-23T19:45:02.943406Z",
-      "content_sha256": "a0c24db62b83e272bb17951b34e99a7007caf07a3cf51defa26833cbb2d67c17"
+      "captured_at": "2026-11-24T02:29:20.481904Z",
+      "response_at": "2026-11-24T02:29:20Z",
+      "content_sha256": "3d15ea11d1b5e74264aeae340a571fe43e94c51dc4dc4d511d78b939aa81b8ac",
+      "match_count": 83,
+      "epl_match_count": 0
     }
   ],
   "provider_faults": {
@@ -6253,19 +6313,31 @@
   "primary_provider_health": {
     "status": "ok",
     "feed_live": true,
-    "as_of": "2026-11-23T19:44:53Z",
+    "as_of": "2026-11-24T02:29:10Z",
     "as_of_stale": false,
-    "checked_at": "2026-11-23T19:45:01.385619Z"
+    "checked_at": "2026-11-24T02:29:19.775263Z"
   },
   "fallback_matches": [],
-  "quote_availability": "complete",
+  "quote_availability": "not_tested_no_due_matches",
   "window_coverage": {
     "scope": "fixtures_in_current_source_check",
-    "fixtures": 0,
+    "fixtures": 12,
     "windows": {
-      "T-180m": {},
-      "T-60m": {},
-      "T-15m": {}
+      "T-180m": {
+        "recorded_research_only": 1,
+        "complete_joint_market": 1,
+        "awaiting_window": 11
+      },
+      "T-60m": {
+        "recorded_research_only": 1,
+        "complete_joint_market": 1,
+        "awaiting_window": 11
+      },
+      "T-15m": {
+        "recorded_research_only": 1,
+        "complete_joint_market": 1,
+        "awaiting_window": 11
+      }
     }
   },
   "research_only": true,
