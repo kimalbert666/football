@@ -1,0 +1,60 @@
+{
+  "captured_at_utc": "2026-11-24T10:19:23.205204+00:00",
+  "run_id": "45373465484",
+  "fixture": {
+    "provider_event_id": "3003966",
+    "home": "曼彻斯特联",
+    "away": "布伦特福德",
+    "kickoff_display": "2026-11-28 23:00",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401879226",
+    "home_id": "man-united",
+    "away_id": "brentford",
+    "independent_fixture_kickoff_at": "2026-11-28T15:00:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261128.htm",
+      "checked_at_utc": "2026-11-24T10:19:06.112084+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-24T10:19:07.427505+00:00",
+      "candidate_count": 3,
+      "content_sha256": "524c3ebae2cdce736ddca97135044d4b542273b51bb3f83b7b0ccfcba3904bf2"
+    },
+    "independent_fixture_last_seen_at": "2026-11-24T07:05:59.952802Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "summary_identity_or_opening_failed",
+  "histories": {},
+  "pages": [
+    {
+      "url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003966",
+      "checked_at_utc": "2026-11-24T10:19:17.106618+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003966",
+      "captured_at_utc": "2026-11-24T10:19:17.665058+00:00",
+      "page_title": "曼彻斯特联VS布伦特福德(2026-2027赛季英超)-亚指指数-新球体育-球探体育",
+      "visible_row_count": 0,
+      "projection_truncated": false
+    }
+  ],
+  "summary": {
+    "parse_ok": false,
+    "event_id": "3003966",
+    "companies": {},
+    "issues": [
+      "missing_companies:3"
+    ],
+    "research_only": true,
+    "formal_signal_eligible": false,
+    "bookmaker_original_opening_certified": false,
+    "complete_tick_history_certified": false,
+    "timezone_verified": false,
+    "odds_format_verified": false,
+    "document_title": "曼彻斯特联VS布伦特福德(2026-2027赛季英超)-亚指指数-新球体育-球探体育"
+  }
+}

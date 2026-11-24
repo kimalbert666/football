@@ -1,14 +1,14 @@
 {
   "schema_version": "f4-ah-titan-opening-v1",
   "status": "insufficient_data",
-  "created_at": "2026-11-23T08:04:48.122450+00:00",
+  "created_at": "2026-11-24T10:19:25.149117+00:00",
   "weight": 0,
   "auto_promote": false,
-  "input_rows": 10,
-  "accepted_matches": 10,
+  "input_rows": 11,
+  "accepted_matches": 11,
   "rejected_rows": [],
   "duplicate_snapshots_removed": 0,
-  "data_sha256": "38f8d84f3df9bf7b9ee5b3a425cb332681bc056dca83d791065ab2f814345206",
+  "data_sha256": "678f64aa783797c6e11a32afa0665a10e00b7ea7ced5aaa126eb3eb32e5756e6",
   "minimum_samples": {
     "train": 120,
     "validation": 40,
@@ -44,10 +44,12 @@
       "kickoff_to": "2026-11-22T16:30:00Z"
     },
     "test": {
-      "count": 0,
-      "match_ids": [],
-      "kickoff_from": null,
-      "kickoff_to": null
+      "count": 1,
+      "match_ids": [
+        "espn:401879237"
+      ],
+      "kickoff_from": "2026-11-23T20:00:00Z",
+      "kickoff_to": "2026-11-23T20:00:00Z"
     }
   },
   "candidates": {
@@ -58,7 +60,7 @@
       "counts": {
         "train": 1,
         "validation": 9,
-        "test": 0
+        "test": 1
       },
       "feature_names": [
         "home_handicap",
@@ -93,7 +95,7 @@
       "counts": {
         "train": 1,
         "validation": 9,
-        "test": 0
+        "test": 1
       },
       "feature_names": [
         "home_handicap",
@@ -160,9 +162,9 @@
     "target_contract": "the original T15 quote and settlement from the paired row",
     "opening_movement_conversion": false
   },
-  "evaluated_at": "2026-11-23T08:04:48.122450Z",
+  "evaluated_at": "2026-11-24T10:19:25.149117Z",
   "research_month": "2026-11",
-  "dataset_path": "data/f4/ah/titan-research/datasets/258aa8cd1e096d4a1f6ba482ea37c2f1eb369c1f202fb96075d1880576426e72.json",
-  "dataset_sha256": "258aa8cd1e096d4a1f6ba482ea37c2f1eb369c1f202fb96075d1880576426e72",
+  "dataset_path": "data/f4/ah/titan-research/datasets/d64505e1b197a9238d1c36b141a9ed2fe19c0c46382a84281b9dc7f8724de779.json",
+  "dataset_sha256": "d64505e1b197a9238d1c36b141a9ed2fe19c0c46382a84281b9dc7f8724de779",
   "automatic_promotion": false
 }
