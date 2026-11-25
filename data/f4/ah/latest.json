@@ -1,5 +1,5 @@
 {
-  "evaluated_at": "2026-11-25T08:58:18.029791Z",
+  "evaluated_at": "2026-11-25T12:43:54.716393Z",
   "new_valid": 0,
   "new_attempts": 0,
   "valid_observations": 142,
@@ -9,7 +9,7 @@
   "titan_research": {
     "version": "f4-ah-titan-opening-v1",
     "experiment_id": "f4-epl-ah-research-v1",
-    "evaluated_at": "2026-11-24T10:19:25.149117Z",
+    "evaluated_at": "2026-11-25T09:01:04.944251Z",
     "indexed_opening_archives": 114,
     "archive_rejections": [
       {
@@ -22,6 +22,10 @@
       },
       {
         "archive_path": "data/f4/titan-history/observations/3003951/20261124T101857-4b30e896a191faae2f40.json",
+        "reason": "opening archive not reconciled"
+      },
+      {
+        "archive_path": "data/f4/titan-history/observations/3003951/20261125T090035-901bb1bc60b0101aabbb.json",
         "reason": "opening archive not reconciled"
       },
       {
@@ -41,7 +45,15 @@
         "reason": "opening archive not reconciled"
       },
       {
+        "archive_path": "data/f4/titan-history/observations/3003959/20261125T090035-a91f02261679bc4c05dd.json",
+        "reason": "opening archive not reconciled"
+      },
+      {
         "archive_path": "data/f4/titan-history/observations/3003960/20261124T101857-ce0bf0e7caea6b45cc8c.json",
+        "reason": "opening archive not reconciled"
+      },
+      {
+        "archive_path": "data/f4/titan-history/observations/3003960/20261125T090035-d736519a23eef6de8480.json",
         "reason": "opening archive not reconciled"
       },
       {
@@ -57,6 +69,10 @@
         "reason": "opening archive not reconciled"
       },
       {
+        "archive_path": "data/f4/titan-history/observations/3003962/20261125T090035-1b774dc2994cc4373087.json",
+        "reason": "opening archive not reconciled"
+      },
+      {
         "archive_path": "data/f4/titan-history/observations/3003963/20261124T101857-60c9c7586cb5608bbe4a.json",
         "reason": "opening archive not reconciled"
       },
@@ -65,7 +81,15 @@
         "reason": "opening archive not reconciled"
       },
       {
+        "archive_path": "data/f4/titan-history/observations/3003964/20261125T090035-deb8e65d8ccf307894d4.json",
+        "reason": "opening archive not reconciled"
+      },
+      {
         "archive_path": "data/f4/titan-history/observations/3003965/20261124T101857-35fcd8de8ce7f48712e1.json",
+        "reason": "opening archive not reconciled"
+      },
+      {
+        "archive_path": "data/f4/titan-history/observations/3003965/20261125T090035-a18b79b53a9bfdb09229.json",
         "reason": "opening archive not reconciled"
       },
       {
@@ -73,11 +97,27 @@
         "reason": "opening archive not reconciled"
       },
       {
+        "archive_path": "data/f4/titan-history/observations/3003966/20261125T090035-0c6e71778ae43c36cdc5.json",
+        "reason": "opening archive not reconciled"
+      },
+      {
         "archive_path": "data/f4/titan-history/observations/3003967/20261124T101857-1010c0e29204b6a4fafc.json",
         "reason": "opening archive not reconciled"
       },
       {
+        "archive_path": "data/f4/titan-history/observations/3003967/20261125T090035-0656b4bb9f4f9c17a892.json",
+        "reason": "opening archive not reconciled"
+      },
+      {
         "archive_path": "data/f4/titan-history/observations/3003968/20261124T101857-2b794345368170ae701f.json",
+        "reason": "opening archive not reconciled"
+      },
+      {
+        "archive_path": "data/f4/titan-history/observations/3003968/20261125T090035-470dbd18586969212fcb.json",
+        "reason": "opening archive not reconciled"
+      },
+      {
+        "archive_path": "data/f4/titan-history/observations/3003973/20261125T090035-067c80a91e51407c86f6.json",
         "reason": "opening archive not reconciled"
       }
     ],
@@ -247,7 +287,7 @@
     "dataset_sha256": "d64505e1b197a9238d1c36b141a9ed2fe19c0c46382a84281b9dc7f8724de779",
     "dataset_path": "data/f4/ah/titan-research/datasets/d64505e1b197a9238d1c36b141a9ed2fe19c0c46382a84281b9dc7f8724de779.json",
     "model_status": "insufficient_data",
-    "model_evaluated_at": "2026-11-24T10:19:25.149117Z",
+    "model_evaluated_at": "2026-11-25T09:01:04.944251Z",
     "model_dataset_sha256": "d64505e1b197a9238d1c36b141a9ed2fe19c0c46382a84281b9dc7f8724de779",
     "model_dataset_path": "data/f4/ah/titan-research/datasets/d64505e1b197a9238d1c36b141a9ed2fe19c0c46382a84281b9dc7f8724de779.json",
     "candidate_counts": {
