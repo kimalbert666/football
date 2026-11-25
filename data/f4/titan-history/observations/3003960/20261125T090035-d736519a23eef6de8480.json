@@ -1,0 +1,60 @@
+{
+  "captured_at_utc": "2026-11-25T09:01:02.919519+00:00",
+  "run_id": "45581199186",
+  "fixture": {
+    "provider_event_id": "3003960",
+    "home": "布莱顿",
+    "away": "纽卡斯尔联",
+    "kickoff_display": "2026-11-29 22:05",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401879231",
+    "home_id": "brighton",
+    "away_id": "newcastle",
+    "independent_fixture_kickoff_at": "2026-11-29T14:05:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261129.htm",
+      "checked_at_utc": "2026-11-25T09:00:45.575421+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-25T09:00:46.936618+00:00",
+      "candidate_count": 6,
+      "content_sha256": "b380e4c43da42cec5dc0f767c697e89ccf6855511a86521669ffdd5820aa419c"
+    },
+    "independent_fixture_last_seen_at": "2026-11-25T05:40:23.889664Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "summary_identity_or_opening_failed",
+  "histories": {},
+  "pages": [
+    {
+      "url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003960",
+      "checked_at_utc": "2026-11-25T09:01:01.525350+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003960",
+      "captured_at_utc": "2026-11-25T09:01:02.251497+00:00",
+      "page_title": "布莱顿VS纽卡斯尔联(2026-2027赛季英超)-亚指指数-新球体育-球探体育",
+      "visible_row_count": 0,
+      "projection_truncated": false
+    }
+  ],
+  "summary": {
+    "parse_ok": false,
+    "event_id": "3003960",
+    "companies": {},
+    "issues": [
+      "missing_companies:3"
+    ],
+    "research_only": true,
+    "formal_signal_eligible": false,
+    "bookmaker_original_opening_certified": false,
+    "complete_tick_history_certified": false,
+    "timezone_verified": false,
+    "odds_format_verified": false,
+    "document_title": "布莱顿VS纽卡斯尔联(2026-2027赛季英超)-亚指指数-新球体育-球探体育"
+  }
+}

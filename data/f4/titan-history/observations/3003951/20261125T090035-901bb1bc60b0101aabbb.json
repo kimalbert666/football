@@ -1,0 +1,60 @@
+{
+  "captured_at_utc": "2026-11-25T09:01:02.918540+00:00",
+  "run_id": "45581199186",
+  "fixture": {
+    "provider_event_id": "3003951",
+    "home": "布伦特福德",
+    "away": "埃弗顿",
+    "kickoff_display": "2026-11-24 04:00",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401879237",
+    "home_id": "brentford",
+    "away_id": "everton",
+    "independent_fixture_kickoff_at": "2026-11-23T20:00:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261123.htm",
+      "checked_at_utc": "2026-11-25T09:00:40.491227+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-25T09:00:41.407252+00:00",
+      "candidate_count": 1,
+      "content_sha256": "45f4aa49cb840e8df6255a960df73af49a78d334a7388fdff908f267565239b8"
+    },
+    "independent_fixture_last_seen_at": "2026-11-24T07:05:59.952802Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "summary_identity_or_opening_failed",
+  "histories": {},
+  "pages": [
+    {
+      "url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003951",
+      "checked_at_utc": "2026-11-25T09:00:59.986432+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003951",
+      "captured_at_utc": "2026-11-25T09:01:00.822834+00:00",
+      "page_title": "布伦特福德VS埃弗顿(2026-2027赛季英超)-亚指指数-新球体育-球探体育",
+      "visible_row_count": 0,
+      "projection_truncated": false
+    }
+  ],
+  "summary": {
+    "parse_ok": false,
+    "event_id": "3003951",
+    "companies": {},
+    "issues": [
+      "missing_companies:3"
+    ],
+    "research_only": true,
+    "formal_signal_eligible": false,
+    "bookmaker_original_opening_certified": false,
+    "complete_tick_history_certified": false,
+    "timezone_verified": false,
+    "odds_format_verified": false,
+    "document_title": "布伦特福德VS埃弗顿(2026-2027赛季英超)-亚指指数-新球体育-球探体育"
+  }
+}
