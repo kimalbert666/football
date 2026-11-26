@@ -1,0 +1,60 @@
+{
+  "captured_at_utc": "2026-11-26T08:48:56.076311+00:00",
+  "run_id": "45786099117",
+  "fixture": {
+    "provider_event_id": "3003972",
+    "home": "切尔西",
+    "away": "水晶宫",
+    "kickoff_display": "2026-12-03 03:30",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401879222",
+    "home_id": "chelsea",
+    "away_id": "crystal-palace",
+    "independent_fixture_kickoff_at": "2026-12-02T19:30:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261202.htm",
+      "checked_at_utc": "2026-11-26T08:48:42.148878+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-26T08:48:43.591427+00:00",
+      "candidate_count": 8,
+      "content_sha256": "1390d157835cbf0d86e7c379a18168ac1183060742b57cdc398eb534e35b463f"
+    },
+    "independent_fixture_last_seen_at": "2026-11-26T05:27:15.991880Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "summary_identity_or_opening_failed",
+  "histories": {},
+  "pages": [
+    {
+      "url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003972",
+      "checked_at_utc": "2026-11-26T08:48:52.270545+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003972",
+      "captured_at_utc": "2026-11-26T08:48:52.780356+00:00",
+      "page_title": "切尔西VS水晶宫(2026-2027赛季英超)-亚指指数-新球体育-球探体育",
+      "visible_row_count": 0,
+      "projection_truncated": false
+    }
+  ],
+  "summary": {
+    "parse_ok": false,
+    "event_id": "3003972",
+    "companies": {},
+    "issues": [
+      "missing_companies:3"
+    ],
+    "research_only": true,
+    "formal_signal_eligible": false,
+    "bookmaker_original_opening_certified": false,
+    "complete_tick_history_certified": false,
+    "timezone_verified": false,
+    "odds_format_verified": false,
+    "document_title": "切尔西VS水晶宫(2026-2027赛季英超)-亚指指数-新球体育-球探体育"
+  }
+}
