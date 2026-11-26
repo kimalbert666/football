@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-25T05:40:25.433647Z",
+  "checked_at": "2026-11-26T02:59:02.369228Z",
   "status": "checked",
   "sources": {
     "strength": {
@@ -53,29 +53,29 @@
         ]
       },
       "metadata_source": {
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261125",
-        "captured_at": "2026-11-25T05:40:25.485938Z",
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261126",
+        "captured_at": "2026-11-26T02:59:02.413621Z",
         "content_sha256": "61aba76fbe8272b01b69f2d9267f94b0ac830ef026280f3e883cbce7b52045ae"
       },
-      "observed_at": "2026-11-25T05:40:25.617695Z",
+      "observed_at": "2026-11-26T02:59:02.416684Z",
       "requested_dates": 35,
       "verified_dates": 35,
       "missing_dates": [],
-      "snapshot_path": "data/f4/strength/snapshots/55ae11eb8c1619ef57b3b7c055b276d8c8b6133e6d7da655cd334b7aa23f6db9.json",
-      "snapshot_sha256": "55ae11eb8c1619ef57b3b7c055b276d8c8b6133e6d7da655cd334b7aa23f6db9",
+      "snapshot_path": "data/f4/strength/snapshots/5918094ab568dc9221cd0d60eee1b8ca893d1b75a8ce337c0bc2bb3115f463cd.json",
+      "snapshot_sha256": "5918094ab568dc9221cd0d60eee1b8ca893d1b75a8ce337c0bc2bb3115f463cd",
       "result_count": 110,
       "teams": 20,
       "teams_with_five_games": 20,
-      "requested_fixtures": 19,
-      "rated_requested_fixtures": 19
+      "requested_fixtures": 20,
+      "rated_requested_fixtures": 20
     },
     "context": {
       "schema": "f4-prematch-context-observed-v1",
       "status": "ready",
-      "observed_at": "2026-11-25T05:40:27.321656Z",
+      "observed_at": "2026-11-26T02:59:04.337806Z",
       "season_year": 2026,
-      "snapshot_sha256": "c59c6ddf76db4e335253ca6ed7ed841650e7ab01e603ab810dd13e55c887bbfd",
-      "snapshot_path": "data/f4/context/snapshots/c59c6ddf76db4e335253ca6ed7ed841650e7ab01e603ab810dd13e55c887bbfd.json",
+      "snapshot_sha256": "8a5a570cef9d5214f0ba783f4875089f73b64ac7734edf9ac36bab9925ad2e64",
+      "snapshot_path": "data/f4/context/snapshots/8a5a570cef9d5214f0ba783f4875089f73b64ac7734edf9ac36bab9925ad2e64.json",
       "teams_xg": 0,
       "teams_availability": 20,
       "teams_club_schedule": 20,
@@ -112,8 +112,8 @@
     },
     "first_observed_quotes": {
       "status": "partial",
-      "checked_at": "2026-11-25T05:40:27.733116Z",
-      "due_fixtures": 19,
+      "checked_at": "2026-11-26T02:59:04.587224Z",
+      "due_fixtures": 20,
       "new_records": 0,
       "saved_matches": [],
       "stored_first_observations": 50,
@@ -193,6 +193,10 @@
         {
           "match_id": "espn:401879223",
           "reason": "missing Asian handicap quote"
+        },
+        {
+          "match_id": "espn:401878749",
+          "reason": "missing Asian handicap quote"
         }
       ],
       "provider_faults": {},
@@ -215,11 +219,12 @@
         "espn:401878750: HKJC AH unavailable (unique EPL identity not published or not matched)",
         "espn:401878751: HKJC AH unavailable (unique EPL identity not published or not matched)",
         "espn:401879217: HKJC AH unavailable (unique EPL identity not published or not matched)",
-        "espn:401879223: HKJC AH unavailable (unique EPL identity not published or not matched)"
+        "espn:401879223: HKJC AH unavailable (unique EPL identity not published or not matched)",
+        "espn:401878749: HKJC AH unavailable (unique EPL identity not published or not matched)"
       ],
       "source_policy": "independent_bulk_scout_no_formal_primary_quota",
       "opening_certified": false
     }
   },
-  "completed_at": "2026-11-25T05:40:27.733416Z"
+  "completed_at": "2026-11-26T02:59:04.587820Z"
 }
