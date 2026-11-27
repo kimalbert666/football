@@ -1,0 +1,60 @@
+{
+  "captured_at_utc": "2026-11-27T08:59:01.804447+00:00",
+  "run_id": "45969753839",
+  "fixture": {
+    "provider_event_id": "3003967",
+    "home": "诺丁汉森林",
+    "away": "切尔西",
+    "kickoff_display": "2026-11-28 04:00",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401879225",
+    "home_id": "nottingham-forest",
+    "away_id": "chelsea",
+    "independent_fixture_kickoff_at": "2026-11-27T20:00:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261127.htm",
+      "checked_at_utc": "2026-11-27T08:58:38.777334+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-27T08:58:40.059274+00:00",
+      "candidate_count": 1,
+      "content_sha256": "e4034f6a43924eca383473e58f9e6240a015606b439988e7fbaa8793df146424"
+    },
+    "independent_fixture_last_seen_at": "2026-11-27T08:17:12.275190Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "summary_identity_or_opening_failed",
+  "histories": {},
+  "pages": [
+    {
+      "url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003967",
+      "checked_at_utc": "2026-11-27T08:58:56.474916+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003967",
+      "captured_at_utc": "2026-11-27T08:58:57.081223+00:00",
+      "page_title": "诺丁汉森林VS切尔西(2026-2027赛季英超)-亚指指数-新球体育-球探体育",
+      "visible_row_count": 0,
+      "projection_truncated": false
+    }
+  ],
+  "summary": {
+    "parse_ok": false,
+    "event_id": "3003967",
+    "companies": {},
+    "issues": [
+      "missing_companies:3"
+    ],
+    "research_only": true,
+    "formal_signal_eligible": false,
+    "bookmaker_original_opening_certified": false,
+    "complete_tick_history_certified": false,
+    "timezone_verified": false,
+    "odds_format_verified": false,
+    "document_title": "诺丁汉森林VS切尔西(2026-2027赛季英超)-亚指指数-新球体育-球探体育"
+  }
+}

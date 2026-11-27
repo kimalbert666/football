@@ -1,0 +1,60 @@
+{
+  "captured_at_utc": "2026-11-27T08:59:01.805830+00:00",
+  "run_id": "45969753839",
+  "fixture": {
+    "provider_event_id": "3003973",
+    "home": "考文垂",
+    "away": "伊普斯维奇",
+    "kickoff_display": "2026-12-02 04:00",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401879221",
+    "home_id": "coventry",
+    "away_id": "ipswich",
+    "independent_fixture_kickoff_at": "2026-12-01T20:00:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261201.htm",
+      "checked_at_utc": "2026-11-27T08:58:44.051527+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-27T08:58:45.057134+00:00",
+      "candidate_count": 1,
+      "content_sha256": "98db9e2bdbb4e3e1e6a06458fabff5caafda5ece36f99ec204598b502a80de91"
+    },
+    "independent_fixture_last_seen_at": "2026-11-27T05:20:41.972038Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "summary_identity_or_opening_failed",
+  "histories": {},
+  "pages": [
+    {
+      "url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003973",
+      "checked_at_utc": "2026-11-27T08:58:58.431840+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003973",
+      "captured_at_utc": "2026-11-27T08:58:59.081241+00:00",
+      "page_title": "考文垂VS伊普斯维奇(2026-2027赛季英超)-亚指指数-新球体育-球探体育",
+      "visible_row_count": 0,
+      "projection_truncated": false
+    }
+  ],
+  "summary": {
+    "parse_ok": false,
+    "event_id": "3003973",
+    "companies": {},
+    "issues": [
+      "missing_companies:3"
+    ],
+    "research_only": true,
+    "formal_signal_eligible": false,
+    "bookmaker_original_opening_certified": false,
+    "complete_tick_history_certified": false,
+    "timezone_verified": false,
+    "odds_format_verified": false,
+    "document_title": "考文垂VS伊普斯维奇(2026-2027赛季英超)-亚指指数-新球体育-球探体育"
+  }
+}
