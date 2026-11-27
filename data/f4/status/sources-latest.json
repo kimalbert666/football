@@ -1,19 +1,19 @@
 {
-  "captured_at": "2026-11-26T23:49:17.661141Z",
+  "captured_at": "2026-11-27T05:14:53.047860Z",
   "sources": [
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261126",
-      "captured_at": "2026-11-26T23:49:17.586989Z",
-      "content_sha256": "0e1ea63df5170b546aa068099abd33d21e60543ed14a6c2478fbc134e6f79d20"
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261127",
+      "captured_at": "2026-11-27T05:14:53.016374Z",
+      "content_sha256": "876abd19eea48955a699d35fdb88360b549c5538f5e6c34e2de742a98cfc1964"
     },
     {
       "name": "espn-calendar",
       "status": "ok",
-      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261127",
-      "captured_at": "2026-11-26T23:49:17.660752Z",
-      "content_sha256": "0a86642c34f7876ec325ed471aba514e397c2f9a10829fb472e00b677cb8c1ed"
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261128",
+      "captured_at": "2026-11-27T05:14:53.047010Z",
+      "content_sha256": "1167751e4c9b7ff88affb8dbd5ab828705f2a7be8a0cc7b40cffdf4115e75210"
     }
   ],
   "fixtures": [
@@ -31,14 +31,59 @@
       "score": null,
       "market": null,
       "problems": []
+    },
+    {
+      "match_id": "espn:401879226",
+      "source_event_id": "401879226",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "man-united",
+      "away_id": "brentford",
+      "home": "Manchester United",
+      "away": "Brentford",
+      "kickoff_at": "2026-11-28T15:00:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401879227",
+      "source_event_id": "401879227",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "leeds",
+      "away_id": "coventry",
+      "home": "Leeds United",
+      "away": "Coventry City",
+      "kickoff_at": "2026-11-28T15:00:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
+    },
+    {
+      "match_id": "espn:401878752",
+      "source_event_id": "401878752",
+      "provider": "espn",
+      "league": "england-premier",
+      "home_id": "ipswich",
+      "away_id": "aston-villa",
+      "home": "Ipswich Town",
+      "away": "Aston Villa",
+      "kickoff_at": "2026-11-28T17:30:00Z",
+      "status": "scheduled",
+      "score": null,
+      "market": null,
+      "problems": []
     }
   ],
   "coverage": {
     "complete": true,
     "scope": {
       "league": "england-premier",
-      "from": "2026-11-26",
-      "through": "2026-11-27",
+      "from": "2026-11-27",
+      "through": "2026-11-28",
       "provider": "espn",
       "pending_lookup_limit": 20
     },
