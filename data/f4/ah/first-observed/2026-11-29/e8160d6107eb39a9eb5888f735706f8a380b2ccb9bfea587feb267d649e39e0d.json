@@ -1,0 +1,103 @@
+{
+  "match_id": "espn:401879231",
+  "provider": "espn",
+  "source_event_id": "401879231",
+  "home_id": "brighton",
+  "away_id": "newcastle",
+  "home": "Brighton & Hove Albion",
+  "away": "Newcastle United",
+  "kickoff_at": "2026-11-29T14:05:00Z",
+  "league": "england-premier",
+  "schema_version": 1,
+  "experiment_id": "f4-epl-ah-research-v1",
+  "observed_at": "2026-11-27T05:14:59.623764Z",
+  "generated_at": "2026-11-27T05:14:59.623790Z",
+  "horizon": "first-observed",
+  "quote": {
+    "bookmaker": "hkjc",
+    "captured_at": "2026-11-27T05:14:59.612166Z",
+    "snapshot_at": "2026-11-27T05:14:59Z",
+    "source": "hkjc-direct",
+    "url": "https://info.cld.hkjc.com/graphql/base/",
+    "content_sha256": "1f2ec954e815e3bd01aa68d19d27bbb1fa55981f0bcbe3348616a5b4530203d6",
+    "provider_event_id": "50080351",
+    "provider_kickoff_at": "2026-11-29T22:05:00.000+08:00",
+    "home_handicap": -1.0,
+    "odds": [
+      1.87,
+      1.89
+    ],
+    "published_at": "2026-11-27T04:00:05.152000Z",
+    "raw_condition": "-1.0",
+    "provider_main": true,
+    "market": "90min_asian_handicap",
+    "lines": [
+      {
+        "home_handicap": -1.0,
+        "odds": [
+          1.87,
+          1.89
+        ],
+        "published_at": "2026-11-27T04:00:05.152000Z",
+        "raw_condition": "-1.0",
+        "provider_main": true
+      }
+    ],
+    "line_selection": "provider_main",
+    "market_1x2": {
+      "bookmaker": "hkjc",
+      "captured_at": "2026-11-27T05:14:59.612166Z",
+      "snapshot_at": "2026-11-27T05:14:59Z",
+      "source": "hkjc-direct",
+      "url": "https://info.cld.hkjc.com/graphql/base/",
+      "content_sha256": "1f2ec954e815e3bd01aa68d19d27bbb1fa55981f0bcbe3348616a5b4530203d6",
+      "provider_event_id": "50080351",
+      "provider_kickoff_at": "2026-11-29T22:05:00.000+08:00",
+      "market": "90min_1x2",
+      "odds": [
+        1.44,
+        4.2,
+        5.1
+      ],
+      "published_at": "2026-11-27T04:00:05.152000Z"
+    },
+    "opening_lines": [],
+    "market_status": "official_provider_reports_selling",
+    "freshness_evidence": "current official HTTP response, cache <=60s, PREEVENT and selling pool status",
+    "provenance": "HKJC public website response; publication time is last pool change, no execution guarantee"
+  },
+  "bookmaker": "hkjc",
+  "p_1x2": [
+    0.6153050672182006,
+    0.2109617373319545,
+    0.17373319544984492
+  ],
+  "quote_1x2": {
+    "bookmaker": "hkjc",
+    "captured_at": "2026-11-27T05:14:59.612166Z",
+    "snapshot_at": "2026-11-27T05:14:59Z",
+    "source": "hkjc-direct",
+    "url": "https://info.cld.hkjc.com/graphql/base/",
+    "content_sha256": "1f2ec954e815e3bd01aa68d19d27bbb1fa55981f0bcbe3348616a5b4530203d6",
+    "provider_event_id": "50080351",
+    "provider_kickoff_at": "2026-11-29T22:05:00.000+08:00",
+    "market": "90min_1x2",
+    "odds": [
+      1.44,
+      4.2,
+      5.1
+    ],
+    "published_at": "2026-11-27T04:00:05.152000Z"
+  },
+  "actual_minutes": 3410.0062706000003,
+  "selected": false,
+  "candidate_weight": 0,
+  "opening_certified": false,
+  "provenance": {
+    "kind": "prospective_first_observed_quote",
+    "note": "First quote observed by this collector, not certified bookmaker opening",
+    "source": "https://info.cld.hkjc.com/graphql/base/",
+    "market": "90min_asian_handicap"
+  },
+  "observation_id": "e8160d6107eb39a9eb5888f735706f8a380b2ccb9bfea587feb267d649e39e0d"
+}
