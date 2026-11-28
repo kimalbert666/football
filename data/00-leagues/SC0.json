@@ -1,23 +1,23 @@
 {
   "league": "SC0",
   "season": "2026-27",
-  "generatedAt": "2026-11-21",
-  "roundsPlayed": 60,
+  "generatedAt": "2026-11-28",
+  "roundsPlayed": 62,
   "standings": [
     {
       "pos": 1,
       "team": "Celtic",
-      "played": 60,
-      "won": 44,
+      "played": 61,
+      "won": 45,
       "drawn": 8,
       "lost": 8,
-      "gf": 152,
-      "ga": 44,
-      "gd": 108,
-      "pts": 140,
-      "form": "WWDLW",
+      "gf": 156,
+      "ga": 45,
+      "gd": 111,
+      "pts": 143,
+      "form": "WDLWW",
       "homeRecord": {
-        "w": 24,
+        "w": 25,
         "d": 4,
         "l": 2
       },
@@ -30,22 +30,22 @@
     {
       "pos": 2,
       "team": "Rangers",
-      "played": 59,
-      "won": 32,
+      "played": 61,
+      "won": 34,
       "drawn": 18,
       "lost": 9,
-      "gf": 112,
-      "ga": 60,
-      "gd": 52,
-      "pts": 114,
-      "form": "WDWDW",
+      "gf": 117,
+      "ga": 63,
+      "gd": 54,
+      "pts": 120,
+      "form": "WDWWW",
       "homeRecord": {
-        "w": 19,
+        "w": 20,
         "d": 5,
         "l": 5
       },
       "awayRecord": {
-        "w": 13,
+        "w": 14,
         "d": 13,
         "l": 4
       }
@@ -53,22 +53,22 @@
     {
       "pos": 3,
       "team": "Hearts",
-      "played": 59,
-      "won": 29,
+      "played": 60,
+      "won": 30,
       "drawn": 10,
       "lost": 20,
-      "gf": 100,
+      "gf": 108,
       "ga": 76,
-      "gd": 24,
-      "pts": 97,
-      "form": "WLWDL",
+      "gd": 32,
+      "pts": 100,
+      "form": "LWDLW",
       "homeRecord": {
         "w": 17,
         "d": 5,
         "l": 8
       },
       "awayRecord": {
-        "w": 12,
+        "w": 13,
         "d": 5,
         "l": 12
       }
@@ -76,19 +76,19 @@
     {
       "pos": 4,
       "team": "Hibernian",
-      "played": 59,
-      "won": 21,
+      "played": 61,
+      "won": 22,
       "drawn": 20,
-      "lost": 18,
-      "gf": 93,
-      "ga": 78,
-      "gd": 15,
-      "pts": 83,
-      "form": "LLLDW",
+      "lost": 19,
+      "gf": 95,
+      "ga": 83,
+      "gd": 12,
+      "pts": 86,
+      "form": "LDWLW",
       "homeRecord": {
-        "w": 11,
+        "w": 12,
         "d": 10,
-        "l": 8
+        "l": 9
       },
       "awayRecord": {
         "w": 10,
@@ -99,110 +99,41 @@
     {
       "pos": 5,
       "team": "Dundee United",
-      "played": 59,
-      "won": 22,
+      "played": 60,
+      "won": 23,
       "drawn": 17,
       "lost": 20,
-      "gf": 79,
+      "gf": 83,
       "ga": 85,
-      "gd": -6,
-      "pts": 83,
-      "form": "WDWDD",
+      "gd": -2,
+      "pts": 86,
+      "form": "DWDDW",
       "homeRecord": {
         "w": 12,
         "d": 7,
         "l": 11
       },
       "awayRecord": {
-        "w": 10,
+        "w": 11,
         "d": 10,
         "l": 9
       }
     },
     {
       "pos": 6,
-      "team": "St Mirren",
-      "played": 60,
-      "won": 20,
-      "drawn": 13,
-      "lost": 27,
-      "gf": 71,
-      "ga": 91,
-      "gd": -20,
-      "pts": 73,
-      "form": "LWDLL",
-      "homeRecord": {
-        "w": 11,
-        "d": 9,
-        "l": 11
-      },
-      "awayRecord": {
-        "w": 9,
-        "d": 4,
-        "l": 16
-      }
-    },
-    {
-      "pos": 7,
-      "team": "Motherwell",
-      "played": 60,
-      "won": 19,
-      "drawn": 16,
-      "lost": 25,
-      "gf": 75,
-      "ga": 97,
-      "gd": -22,
-      "pts": 73,
-      "form": "LLDWD",
-      "homeRecord": {
-        "w": 11,
-        "d": 8,
-        "l": 9
-      },
-      "awayRecord": {
-        "w": 8,
-        "d": 8,
-        "l": 16
-      }
-    },
-    {
-      "pos": 8,
       "team": "Aberdeen",
-      "played": 59,
-      "won": 20,
+      "played": 61,
+      "won": 21,
       "drawn": 11,
-      "lost": 28,
-      "gf": 66,
-      "ga": 90,
-      "gd": -24,
-      "pts": 71,
-      "form": "LWLLL",
+      "lost": 29,
+      "gf": 72,
+      "ga": 95,
+      "gd": -23,
+      "pts": 74,
+      "form": "LLLWL",
       "homeRecord": {
         "w": 13,
         "d": 6,
-        "l": 12
-      },
-      "awayRecord": {
-        "w": 7,
-        "d": 5,
-        "l": 16
-      }
-    },
-    {
-      "pos": 9,
-      "team": "Dundee",
-      "played": 60,
-      "won": 18,
-      "drawn": 13,
-      "lost": 29,
-      "gf": 84,
-      "ga": 107,
-      "gd": -23,
-      "pts": 67,
-      "form": "WDLWL",
-      "homeRecord": {
-        "w": 10,
-        "d": 8,
         "l": 12
       },
       "awayRecord": {
@@ -212,21 +143,90 @@
       }
     },
     {
-      "pos": 10,
-      "team": "Kilmarnock",
-      "played": 60,
-      "won": 16,
-      "drawn": 15,
-      "lost": 29,
-      "gf": 70,
-      "ga": 107,
-      "gd": -37,
-      "pts": 63,
-      "form": "WLLDL",
+      "pos": 7,
+      "team": "Motherwell",
+      "played": 61,
+      "won": 19,
+      "drawn": 16,
+      "lost": 26,
+      "gf": 76,
+      "ga": 99,
+      "gd": -23,
+      "pts": 73,
+      "form": "LDWDL",
+      "homeRecord": {
+        "w": 11,
+        "d": 8,
+        "l": 10
+      },
+      "awayRecord": {
+        "w": 8,
+        "d": 8,
+        "l": 16
+      }
+    },
+    {
+      "pos": 8,
+      "team": "St Mirren",
+      "played": 61,
+      "won": 20,
+      "drawn": 13,
+      "lost": 28,
+      "gf": 72,
+      "ga": 95,
+      "gd": -23,
+      "pts": 73,
+      "form": "WDLLL",
       "homeRecord": {
         "w": 11,
         "d": 9,
-        "l": 10
+        "l": 11
+      },
+      "awayRecord": {
+        "w": 9,
+        "d": 4,
+        "l": 17
+      }
+    },
+    {
+      "pos": 9,
+      "team": "Dundee",
+      "played": 62,
+      "won": 18,
+      "drawn": 13,
+      "lost": 31,
+      "gf": 85,
+      "ga": 117,
+      "gd": -32,
+      "pts": 67,
+      "form": "LWLLL",
+      "homeRecord": {
+        "w": 10,
+        "d": 8,
+        "l": 13
+      },
+      "awayRecord": {
+        "w": 8,
+        "d": 5,
+        "l": 18
+      }
+    },
+    {
+      "pos": 10,
+      "team": "Kilmarnock",
+      "played": 61,
+      "won": 16,
+      "drawn": 15,
+      "lost": 30,
+      "gf": 72,
+      "ga": 111,
+      "gd": -39,
+      "pts": 63,
+      "form": "LLDLL",
+      "homeRecord": {
+        "w": 11,
+        "d": 9,
+        "l": 11
       },
       "awayRecord": {
         "w": 5,
@@ -237,15 +237,15 @@
     {
       "pos": 11,
       "team": "St Johnstone",
-      "played": 51,
+      "played": 52,
       "won": 13,
       "drawn": 10,
-      "lost": 28,
-      "gf": 55,
-      "ga": 88,
-      "gd": -33,
+      "lost": 29,
+      "gf": 56,
+      "ga": 90,
+      "gd": -34,
       "pts": 49,
-      "form": "DLDDW",
+      "form": "LDDWL",
       "homeRecord": {
         "w": 9,
         "d": 5,
@@ -254,7 +254,7 @@
       "awayRecord": {
         "w": 4,
         "d": 5,
-        "l": 16
+        "l": 17
       }
     },
     {
@@ -283,17 +283,17 @@
     {
       "pos": 13,
       "team": "Falkirk",
-      "played": 22,
-      "won": 9,
+      "played": 23,
+      "won": 10,
       "drawn": 6,
       "lost": 7,
-      "gf": 32,
-      "ga": 29,
-      "gd": 3,
-      "pts": 33,
+      "gf": 34,
+      "ga": 30,
+      "gd": 4,
+      "pts": 36,
       "form": "WWWWW",
       "homeRecord": {
-        "w": 4,
+        "w": 5,
         "d": 3,
         "l": 4
       },
@@ -328,14 +328,14 @@
     }
   ],
   "leagueStats": {
-    "avgGoals": 2.897,
-    "homeWinRate": 0.441,
-    "drawRate": 0.237,
-    "upsetRate": 0.291,
+    "avgGoals": 2.934,
+    "homeWinRate": 0.443,
+    "drawRate": 0.232,
+    "upsetRate": 0.29,
     "topScores": [
       {
         "score": "1-2",
-        "count": 36
+        "count": 37
       },
       {
         "score": "1-1",
@@ -343,11 +343,11 @@
       },
       {
         "score": "2-1",
-        "count": 29
+        "count": 31
       }
     ],
     "computedFrom": "fd",
-    "matchesUsed": 358,
+    "matchesUsed": 366,
     "seasonsMerged": [
       "2425",
       "2526",
@@ -357,7 +357,7 @@
   "context": {
     "titleRace": {
       "leader": "Celtic",
-      "gap": 26
+      "gap": 23
     },
     "relegationZone": [
       12,
