@@ -1,0 +1,60 @@
+{
+  "captured_at_utc": "2026-11-28T08:20:37.818681+00:00",
+  "run_id": "46125238630",
+  "fixture": {
+    "provider_event_id": "3003961",
+    "home": "水晶宫",
+    "away": "赫尔城",
+    "kickoff_display": "2026-11-29 22:05",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401879230",
+    "home_id": "crystal-palace",
+    "away_id": "hull-city",
+    "independent_fixture_kickoff_at": "2026-11-29T14:05:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261129.htm",
+      "checked_at_utc": "2026-11-28T08:20:18.180432+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-28T08:20:19.276374+00:00",
+      "candidate_count": 6,
+      "content_sha256": "d888e83e7f2ad3af1f11927acef75512a468da5ad1d58be260c85a8d159566e6"
+    },
+    "independent_fixture_last_seen_at": "2026-11-28T08:16:30.595277Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "summary_identity_or_opening_failed",
+  "histories": {},
+  "pages": [
+    {
+      "url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003961",
+      "checked_at_utc": "2026-11-28T08:20:33.289687+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003961",
+      "captured_at_utc": "2026-11-28T08:20:33.927347+00:00",
+      "page_title": "水晶宫VS赫尔城(2026-2027赛季英超)-亚指指数-新球体育-球探体育",
+      "visible_row_count": 0,
+      "projection_truncated": false
+    }
+  ],
+  "summary": {
+    "parse_ok": false,
+    "event_id": "3003961",
+    "companies": {},
+    "issues": [
+      "missing_companies:3"
+    ],
+    "research_only": true,
+    "formal_signal_eligible": false,
+    "bookmaker_original_opening_certified": false,
+    "complete_tick_history_certified": false,
+    "timezone_verified": false,
+    "odds_format_verified": false,
+    "document_title": "水晶宫VS赫尔城(2026-2027赛季英超)-亚指指数-新球体育-球探体育"
+  }
+}

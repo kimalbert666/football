@@ -1,0 +1,60 @@
+{
+  "captured_at_utc": "2026-11-28T08:20:37.819482+00:00",
+  "run_id": "46125238630",
+  "fixture": {
+    "provider_event_id": "3003964",
+    "home": "伊普斯维奇",
+    "away": "阿斯顿维拉",
+    "kickoff_display": "2026-11-29 01:30",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401878752",
+    "home_id": "ipswich",
+    "away_id": "aston-villa",
+    "independent_fixture_kickoff_at": "2026-11-28T17:30:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261128.htm",
+      "checked_at_utc": "2026-11-28T08:20:16.753431+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-28T08:20:18.179657+00:00",
+      "candidate_count": 3,
+      "content_sha256": "bbf050a1768d16ae361395a696040105d9bc2e4c67e4faf2dca2663f67990a14"
+    },
+    "independent_fixture_last_seen_at": "2026-11-28T08:16:30.595277Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "summary_identity_or_opening_failed",
+  "histories": {},
+  "pages": [
+    {
+      "url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003964",
+      "checked_at_utc": "2026-11-28T08:20:35.085567+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003964",
+      "captured_at_utc": "2026-11-28T08:20:35.559691+00:00",
+      "page_title": "伊普斯维奇VS阿斯顿维拉(2026-2027赛季英超)-亚指指数-新球体育-球探体育",
+      "visible_row_count": 0,
+      "projection_truncated": false
+    }
+  ],
+  "summary": {
+    "parse_ok": false,
+    "event_id": "3003964",
+    "companies": {},
+    "issues": [
+      "missing_companies:3"
+    ],
+    "research_only": true,
+    "formal_signal_eligible": false,
+    "bookmaker_original_opening_certified": false,
+    "complete_tick_history_certified": false,
+    "timezone_verified": false,
+    "odds_format_verified": false,
+    "document_title": "伊普斯维奇VS阿斯顿维拉(2026-2027赛季英超)-亚指指数-新球体育-球探体育"
+  }
+}

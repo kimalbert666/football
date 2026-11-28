@@ -1,0 +1,60 @@
+{
+  "captured_at_utc": "2026-11-28T08:20:37.820386+00:00",
+  "run_id": "46125238630",
+  "fixture": {
+    "provider_event_id": "3003975",
+    "home": "利物浦",
+    "away": "桑德兰",
+    "kickoff_display": "2026-12-03 03:30",
+    "company_ids": [
+      "3"
+    ],
+    "canonical_match_id": "espn:401879219",
+    "home_id": "liverpool",
+    "away_id": "sunderland",
+    "independent_fixture_kickoff_at": "2026-12-02T19:30:00Z",
+    "mapping_source_evidence": {
+      "url": "https://bf.titan007.com/football/Next_20261202.htm",
+      "checked_at_utc": "2026-11-28T08:20:22.100267+00:00",
+      "status": "ok",
+      "http_status": 200,
+      "captured_at_utc": "2026-11-28T08:20:23.875185+00:00",
+      "candidate_count": 8,
+      "content_sha256": "ff82588b918d1f6f0aef8ab022f25bdb9f3f6b3af11ca95734f6aeb92e2c4a71"
+    },
+    "independent_fixture_last_seen_at": "2026-11-28T04:56:51.053396Z",
+    "mapping_basis": "strict canonical sides and kickoff match to ESPN; odds timezone unverified"
+  },
+  "status": "summary_identity_or_opening_failed",
+  "histories": {},
+  "pages": [
+    {
+      "url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003975",
+      "checked_at_utc": "2026-11-28T08:20:37.228215+00:00",
+      "transport_ok": true,
+      "transport": "default_playwright_chromium",
+      "navigation_attempts": 1,
+      "http_status": 200,
+      "final_url": "https://vip.titan007.com/AsianOdds_n.aspx?id=3003975",
+      "captured_at_utc": "2026-11-28T08:20:37.780781+00:00",
+      "page_title": "利物浦VS桑德兰(2026-2027赛季英超)-亚指指数-新球体育-球探体育",
+      "visible_row_count": 0,
+      "projection_truncated": false
+    }
+  ],
+  "summary": {
+    "parse_ok": false,
+    "event_id": "3003975",
+    "companies": {},
+    "issues": [
+      "missing_companies:3"
+    ],
+    "research_only": true,
+    "formal_signal_eligible": false,
+    "bookmaker_original_opening_certified": false,
+    "complete_tick_history_certified": false,
+    "timezone_verified": false,
+    "odds_format_verified": false,
+    "document_title": "利物浦VS桑德兰(2026-2027赛季英超)-亚指指数-新球体育-球探体育"
+  }
+}
