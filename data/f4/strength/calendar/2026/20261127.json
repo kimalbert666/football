@@ -1,20 +1,29 @@
 {
   "day": "20261127",
   "events_seen": 1,
-  "pending_results": [
+  "pending_results": [],
+  "record_sha256": "e1e8e6cac6e1c1a640d1647ff0c114af2c6d0a23d609308e041b99b6daf8338e",
+  "results": [
     {
+      "away": "Chelsea",
+      "away_id": "chelsea",
+      "away_provider_id": "363",
+      "home": "Nottingham Forest",
+      "home_id": "nottingham-forest",
+      "home_provider_id": "393",
       "kickoff_at": "2026-11-27T20:00:00Z",
       "match_id": "espn:401879225",
-      "status": "scheduled"
+      "score": [
+        3,
+        2
+      ]
     }
   ],
-  "record_sha256": "4f16f52fe39d466c3c8aa4045ce40c111dcac9fbfcad675bae35a16b7fb4c60c",
-  "results": [],
   "schema": "f4-strength-observed-v1",
   "season_year": 2026,
   "source": {
-    "captured_at": "2026-11-27T05:14:57.915070Z",
-    "content_sha256": "fc17f9eaf7701a857bfebb9abc788a476bbc55b966626914ebabd7b8c2a23851",
+    "captured_at": "2026-11-28T01:56:01.758934Z",
+    "content_sha256": "2f37bfd60082d8d9b30796a7995a29469ea8668a0fb6d8b7e6330b0ca07b8589",
     "name": "espn",
     "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261127&limit=1000"
   }

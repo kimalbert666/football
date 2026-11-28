@@ -1,25 +1,19 @@
 {
-  "checked_at": "2026-11-27T05:20:44.398635Z",
+  "checked_at": "2026-11-28T01:56:01.624340Z",
   "status": "checked",
   "sources": {
     "strength": {
-      "available_for_historical_decisions": false,
-      "coverage_scope": "all_past_dates_in_espn_declared_current_season_calendar",
-      "metadata_source": {
-        "captured_at": "2026-11-27T05:14:57.830929Z",
-        "content_sha256": "fc17f9eaf7701a857bfebb9abc788a476bbc55b966626914ebabd7b8c2a23851",
-        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261127"
-      },
-      "method": "verified-espn-season-results-elo-k20-ha60-v1",
-      "missing_dates": [],
-      "observed_at": "2026-11-27T05:14:57.916037Z",
-      "problems": [],
-      "rated_requested_fixtures": 20,
-      "requested_dates": 36,
-      "requested_fixtures": 20,
-      "result_count": 110,
       "schema": "f4-strength-observed-v1",
+      "method": "verified-espn-season-results-elo-k20-ha60-v1",
+      "status": "ready",
+      "coverage_scope": "all_past_dates_in_espn_declared_current_season_calendar",
+      "available_for_historical_decisions": false,
+      "problems": [],
       "season": {
+        "year": 2026,
+        "start_at": "2026-06-01T04:00:00Z",
+        "end_at": "2027-06-01T03:59:00Z",
+        "name": "2026-27 English Premier League",
         "days": [
           "20260821",
           "20260822",
@@ -56,33 +50,42 @@
           "20261121",
           "20261122",
           "20261123",
-          "20261127"
-        ],
-        "end_at": "2027-06-01T03:59:00Z",
-        "name": "2026-27 English Premier League",
-        "start_at": "2026-06-01T04:00:00Z",
-        "year": 2026
+          "20261127",
+          "20261128"
+        ]
       },
-      "snapshot_path": "data/f4/strength/snapshots/bde6003725c45bb515a846445cb13808030c2819133332ee94b3371d86116eff.json",
-      "snapshot_sha256": "bde6003725c45bb515a846445cb13808030c2819133332ee94b3371d86116eff",
-      "status": "ready",
+      "metadata_source": {
+        "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261128",
+        "captured_at": "2026-11-28T01:56:01.667987Z",
+        "content_sha256": "1759d69038f48c68e340794cf2e670b6e12573d9d43272f2d1d80709db3265e0"
+      },
+      "observed_at": "2026-11-28T01:56:01.760187Z",
+      "requested_dates": 37,
+      "verified_dates": 37,
+      "missing_dates": [],
+      "snapshot_path": "data/f4/strength/snapshots/23b5db3656bcf31a6691bc2acd0bfdecd7363ad4ad5f0128291d66ec29da5719.json",
+      "snapshot_sha256": "23b5db3656bcf31a6691bc2acd0bfdecd7363ad4ad5f0128291d66ec29da5719",
+      "result_count": 111,
       "teams": 20,
       "teams_with_five_games": 20,
-      "verified_dates": 36,
-      "refresh": "cached_same_utc_day"
+      "requested_fixtures": 27,
+      "rated_requested_fixtures": 27
     },
     "context": {
-      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3",
-      "observed_at": "2026-11-27T05:14:59.386354Z",
-      "problems": [
-        "Understat lagged xG missing or unverified: Expecting value: line 1 column 1 (char 0)"
-      ],
-      "requested_clubs": 20,
       "schema": "f4-prematch-context-observed-v1",
+      "status": "ready",
+      "observed_at": "2026-11-28T01:56:04.426126Z",
       "season_year": 2026,
-      "snapshot_path": "data/f4/context/snapshots/73bc682036160a31d701b1f3cf6368a2b86077d503be4aa46ae4f94c5afa2c72.json",
-      "snapshot_sha256": "73bc682036160a31d701b1f3cf6368a2b86077d503be4aa46ae4f94c5afa2c72",
+      "snapshot_sha256": "31b1009d121b8dbcc26f957074e0b085b8c29dbd5b4c30520fe4070372ac568d",
+      "snapshot_path": "data/f4/context/snapshots/31b1009d121b8dbcc26f957074e0b085b8c29dbd5b4c30520fe4070372ac568d.json",
+      "teams_xg": 0,
+      "teams_availability": 20,
+      "teams_club_schedule": 20,
+      "requested_clubs": 20,
+      "unresolved_clubs": [],
       "source_statuses": {
+        "fpl": "available",
+        "understat": "unavailable",
         "espn-rest:arsenal": "available",
         "espn-rest:aston-villa": "available",
         "espn-rest:bournemouth": "available",
@@ -102,34 +105,19 @@
         "espn-rest:newcastle": "available",
         "espn-rest:nottingham-forest": "available",
         "espn-rest:sunderland": "available",
-        "espn-rest:tottenham": "available",
-        "fpl": "available",
-        "understat": "unavailable"
+        "espn-rest:tottenham": "available"
       },
-      "status": "ready",
-      "teams_availability": 20,
-      "teams_club_schedule": 20,
-      "teams_xg": 0,
-      "unresolved_clubs": [],
-      "refresh": "cached_same_utc_day"
+      "problems": [
+        "Understat lagged xG missing or unverified: Expecting value: line 1 column 1 (char 0)"
+      ],
+      "model_feature_status": "context_only_not_used_in_current_M1_M2_M3"
     },
     "first_observed_quotes": {
-      "status": "cached",
-      "checked_at": "2026-11-27T05:14:59.624287Z",
-      "due_fixtures": 20,
+      "status": "partial",
+      "checked_at": "2026-11-28T01:56:04.765977Z",
+      "due_fixtures": 17,
       "new_records": 0,
-      "saved_matches": [
-        "espn:401879225",
-        "espn:401879226",
-        "espn:401879227",
-        "espn:401878752",
-        "espn:401879229",
-        "espn:401879224",
-        "espn:401879228",
-        "espn:401879230",
-        "espn:401879231",
-        "espn:401878753"
-      ],
+      "saved_matches": [],
       "stored_first_observations": 60,
       "missing": [
         {
@@ -171,6 +159,34 @@
         {
           "match_id": "espn:401878749",
           "reason": "missing Asian handicap quote"
+        },
+        {
+          "match_id": "espn:401879213",
+          "reason": "missing Asian handicap quote"
+        },
+        {
+          "match_id": "espn:401879210",
+          "reason": "missing Asian handicap quote"
+        },
+        {
+          "match_id": "espn:401879211",
+          "reason": "missing Asian handicap quote"
+        },
+        {
+          "match_id": "espn:401879215",
+          "reason": "missing Asian handicap quote"
+        },
+        {
+          "match_id": "espn:401879216",
+          "reason": "missing Asian handicap quote"
+        },
+        {
+          "match_id": "espn:401878747",
+          "reason": "missing Asian handicap quote"
+        },
+        {
+          "match_id": "espn:401879214",
+          "reason": "missing Asian handicap quote"
         }
       ],
       "provider_faults": {},
@@ -184,11 +200,18 @@
         "espn:401878751: HKJC AH unavailable (unique EPL identity not published or not matched)",
         "espn:401879217: HKJC AH unavailable (unique EPL identity not published or not matched)",
         "espn:401879223: HKJC AH unavailable (unique EPL identity not published or not matched)",
-        "espn:401878749: HKJC AH unavailable (unique EPL identity not published or not matched)"
+        "espn:401878749: HKJC AH unavailable (unique EPL identity not published or not matched)",
+        "espn:401879213: HKJC AH unavailable (unique EPL identity not published or not matched)",
+        "espn:401879210: HKJC AH unavailable (unique EPL identity not published or not matched)",
+        "espn:401879211: HKJC AH unavailable (unique EPL identity not published or not matched)",
+        "espn:401879215: HKJC AH unavailable (unique EPL identity not published or not matched)",
+        "espn:401879216: HKJC AH unavailable (unique EPL identity not published or not matched)",
+        "espn:401878747: HKJC AH unavailable (unique EPL identity not published or not matched)",
+        "espn:401879214: HKJC AH unavailable (unique EPL identity not published or not matched)"
       ],
       "source_policy": "independent_bulk_scout_no_formal_primary_quota",
       "opening_certified": false
     }
   },
-  "completed_at": "2026-11-27T05:20:44.400889Z"
+  "completed_at": "2026-11-28T01:56:04.766436Z"
 }

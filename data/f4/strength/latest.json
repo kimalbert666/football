@@ -2,18 +2,18 @@
   "available_for_historical_decisions": false,
   "coverage_scope": "all_past_dates_in_espn_declared_current_season_calendar",
   "metadata_source": {
-    "captured_at": "2026-11-27T05:14:57.830929Z",
-    "content_sha256": "fc17f9eaf7701a857bfebb9abc788a476bbc55b966626914ebabd7b8c2a23851",
-    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261127"
+    "captured_at": "2026-11-28T01:56:01.667987Z",
+    "content_sha256": "1759d69038f48c68e340794cf2e670b6e12573d9d43272f2d1d80709db3265e0",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261128"
   },
   "method": "verified-espn-season-results-elo-k20-ha60-v1",
   "missing_dates": [],
-  "observed_at": "2026-11-27T05:14:57.916037Z",
+  "observed_at": "2026-11-28T01:56:01.760187Z",
   "problems": [],
-  "rated_requested_fixtures": 20,
-  "requested_dates": 36,
-  "requested_fixtures": 20,
-  "result_count": 110,
+  "rated_requested_fixtures": 27,
+  "requested_dates": 37,
+  "requested_fixtures": 27,
+  "result_count": 111,
   "schema": "f4-strength-observed-v1",
   "season": {
     "days": [
@@ -52,17 +52,18 @@
       "20261121",
       "20261122",
       "20261123",
-      "20261127"
+      "20261127",
+      "20261128"
     ],
     "end_at": "2027-06-01T03:59:00Z",
     "name": "2026-27 English Premier League",
     "start_at": "2026-06-01T04:00:00Z",
     "year": 2026
   },
-  "snapshot_path": "data/f4/strength/snapshots/bde6003725c45bb515a846445cb13808030c2819133332ee94b3371d86116eff.json",
-  "snapshot_sha256": "bde6003725c45bb515a846445cb13808030c2819133332ee94b3371d86116eff",
+  "snapshot_path": "data/f4/strength/snapshots/23b5db3656bcf31a6691bc2acd0bfdecd7363ad4ad5f0128291d66ec29da5719.json",
+  "snapshot_sha256": "23b5db3656bcf31a6691bc2acd0bfdecd7363ad4ad5f0128291d66ec29da5719",
   "status": "ready",
   "teams": 20,
   "teams_with_five_games": 20,
-  "verified_dates": 36
+  "verified_dates": 37
 }

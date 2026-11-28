@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "evaluated_at": "2026-11-28T01:55:56.273036Z",
+  "evaluated_at": "2026-11-28T01:56:04.766797Z",
   "mode": "shadow",
   "candidate_weight": 0,
   "automatic_promotion": false,
@@ -29,9 +29,9 @@
     "missing_baseline": 29,
     "missing_baseline_groups": 0,
     "redundant_snapshots": 0,
-    "pending": 2,
-    "settled": 93,
-    "paired": 93,
+    "pending": 0,
+    "settled": 95,
+    "paired": 95,
     "missing_candidate": 0,
     "excluded_rescheduled": 0,
     "excluded_cancelled": 0,
@@ -39,35 +39,35 @@
     "excluded_identity": 0,
     "excluded_future": 0,
     "distinct_match_count": 49,
-    "known_tracked_fixtures": 89,
+    "known_tracked_fixtures": 96,
     "closed_windows": 122,
     "covered_windows": 95,
     "missing_windows": 27,
     "late_discovered_windows": 18
   },
   "baseline": {
-    "n": 93,
-    "correct": 47,
-    "accuracy": 0.5053763440860215,
-    "rps": 0.21439631362909026,
-    "brier": 0.6093502720671397,
-    "log_loss": 1.0150604754374297
+    "n": 95,
+    "correct": 49,
+    "accuracy": 0.5157894736842106,
+    "rps": 0.21477362867430558,
+    "brier": 0.6079058147654596,
+    "log_loss": 1.0129685100708805
   },
   "paired_baseline": {
-    "n": 93,
-    "correct": 47,
-    "accuracy": 0.5053763440860215,
-    "rps": 0.21439631362909026,
-    "brier": 0.6093502720671397,
-    "log_loss": 1.0150604754374297
+    "n": 95,
+    "correct": 49,
+    "accuracy": 0.5157894736842106,
+    "rps": 0.21477362867430558,
+    "brier": 0.6079058147654596,
+    "log_loss": 1.0129685100708805
   },
   "candidate": {
-    "n": 93,
+    "n": 95,
     "correct": 49,
-    "accuracy": 0.5268817204301075,
-    "rps": 0.24780935620209374,
-    "brier": 0.6794175131117522,
-    "log_loss": 1.2016038443480006
+    "accuracy": 0.5157894736842106,
+    "rps": 0.2534831973867978,
+    "brier": 0.6882308773852108,
+    "log_loss": 1.2141195614787386
   },
   "f2": {
     "n": 0,
@@ -79,9 +79,7 @@
     "correct": 0,
     "accuracy": null
   },
-  "pending_statuses": {
-    "unobserved": 2
-  },
+  "pending_statuses": {},
   "groups": [
     {
       "league": "england-premier",
@@ -94,9 +92,9 @@
         "missing_baseline": 0,
         "missing_baseline_groups": 0,
         "redundant_snapshots": 0,
-        "pending": 1,
-        "settled": 45,
-        "paired": 45,
+        "pending": 0,
+        "settled": 46,
+        "paired": 46,
         "missing_candidate": 0,
         "excluded_rescheduled": 0,
         "excluded_cancelled": 0,
@@ -105,28 +103,28 @@
         "excluded_future": 0
       },
       "baseline": {
-        "n": 45,
-        "correct": 22,
-        "accuracy": 0.4888888888888889,
-        "rps": 0.2156418650137819,
-        "brier": 0.6155021932210138,
-        "log_loss": 1.0238758446596326
+        "n": 46,
+        "correct": 23,
+        "accuracy": 0.5,
+        "rps": 0.21594124003356222,
+        "brier": 0.6137739877194266,
+        "log_loss": 1.021390356339611
       },
       "paired_baseline": {
-        "n": 45,
-        "correct": 22,
-        "accuracy": 0.4888888888888889,
-        "rps": 0.2156418650137819,
-        "brier": 0.6155021932210138,
-        "log_loss": 1.0238758446596326
+        "n": 46,
+        "correct": 23,
+        "accuracy": 0.5,
+        "rps": 0.21594124003356222,
+        "brier": 0.6137739877194266,
+        "log_loss": 1.021390356339611
       },
       "candidate": {
-        "n": 45,
+        "n": 46,
         "correct": 23,
-        "accuracy": 0.5111111111111111,
-        "rps": 0.2526393281295729,
-        "brier": 0.6923769182193501,
-        "log_loss": 1.223198491456096
+        "accuracy": 0.5,
+        "rps": 0.25839318648492,
+        "brier": 0.7011959486080823,
+        "log_loss": 1.235652880947443
       },
       "f2": {
         "n": 0,
@@ -138,9 +136,7 @@
         "correct": 0,
         "accuracy": null
       },
-      "pending_statuses": {
-        "unobserved": 1
-      }
+      "pending_statuses": {}
     },
     {
       "league": "england-premier",
@@ -153,9 +149,9 @@
         "missing_baseline": 29,
         "missing_baseline_groups": 0,
         "redundant_snapshots": 0,
-        "pending": 1,
-        "settled": 48,
-        "paired": 48,
+        "pending": 0,
+        "settled": 49,
+        "paired": 49,
         "missing_candidate": 0,
         "excluded_rescheduled": 0,
         "excluded_cancelled": 0,
@@ -164,28 +160,28 @@
         "excluded_future": 0
       },
       "baseline": {
-        "n": 48,
-        "correct": 25,
-        "accuracy": 0.5208333333333334,
-        "rps": 0.21322860920594178,
-        "brier": 0.6035828459853825,
-        "log_loss": 1.0067960667916145
+        "n": 49,
+        "correct": 26,
+        "accuracy": 0.5306122448979592,
+        "rps": 0.2136775037247993,
+        "brier": 0.6023969177066333,
+        "log_loss": 1.005062287043093
       },
       "paired_baseline": {
-        "n": 48,
-        "correct": 25,
-        "accuracy": 0.5208333333333334,
-        "rps": 0.21322860920594178,
-        "brier": 0.6035828459853825,
-        "log_loss": 1.0067960667916145
+        "n": 49,
+        "correct": 26,
+        "accuracy": 0.5306122448979592,
+        "rps": 0.2136775037247993,
+        "brier": 0.6023969177066333,
+        "log_loss": 1.005062287043093
       },
       "candidate": {
-        "n": 48,
+        "n": 49,
         "correct": 26,
-        "accuracy": 0.5416666666666666,
-        "rps": 0.243281257520082,
-        "brier": 0.66726807082338,
-        "log_loss": 1.1813588626841605
+        "accuracy": 0.5306122448979592,
+        "rps": 0.24887381986611173,
+        "brier": 0.676059586033128,
+        "log_loss": 1.1939046085081175
       },
       "f2": {
         "n": 0,
@@ -197,9 +193,7 @@
         "correct": 0,
         "accuracy": null
       },
-      "pending_statuses": {
-        "unobserved": 1
-      }
+      "pending_statuses": {}
     }
   ],
   "training_evidence": [
@@ -207,7 +201,7 @@
   ],
   "coverage": {
     "scope": "locally discovered target fixtures only; source completeness is not established",
-    "known_tracked_fixtures": 89,
+    "known_tracked_fixtures": 96,
     "unresolved_fixtures": 0,
     "closed_windows": 122,
     "covered_windows": 95,
